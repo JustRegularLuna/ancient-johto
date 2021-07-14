@@ -12,6 +12,8 @@
 - Bug Catching Contest
 - Johto Safari Zone
 - Use HM moves by interacting with cut trees and such
+- Add headbutt as a field move
+- Add whirlpool and waterfall as HMs and field moves
 - Running Shoes and faster bike
 - Player Gender
   - Hiro or Kris
@@ -28,3 +30,6 @@
 - Remove all instances of IndexToPokedex and PokedexToIndex because everything is sorted the same now
 - Remove those routines to save space once the references are removed
 - Remove pointless junk data and messy code, see pokered-clean
+- Add roof loading for Johto tilesets
+- Port the tileset animation code from Gold
+- Just remove the spinner tile code since it isn't needed for Johto
