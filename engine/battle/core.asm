@@ -6812,13 +6812,6 @@ _LoadTrainerPic:
 	ld c, a
 	jp LoadUncompressedSpriteData
 
-; unreferenced
-ResetCryModifiers:
-	xor a
-;	ld [wFrequencyModifier], a
-;	ld [wTempoModifier], a
-	jp PlaySound
-
 ; animates the mon "growing" out of the pokeball
 AnimateSendingOutMon:
 	ld a, [wPredefRegisters]
