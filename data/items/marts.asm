@@ -13,9 +13,6 @@ PewterCashierText::
 CeruleanCashierText::
 	script_mart POKE_BALL, POTION, REPEL, ANTIDOTE, BURN_HEAL, AWAKENING, PARLYZ_HEAL
 
-; Bike shop
-	script_mart BICYCLE
-
 ; Vermilion
 VermilionCashierText::
 	script_mart POKE_BALL, SUPER_POTION, ICE_HEAL, AWAKENING, PARLYZ_HEAL, REPEL
@@ -47,9 +44,6 @@ CeladonMart5Clerk2Text::
 ; Fuchsia
 FuchsiaCashierText::
 	script_mart ULTRA_BALL, GREAT_BALL, SUPER_POTION, REVIVE, FULL_HEAL, SUPER_REPEL
-
-; unused?
-	script_mart GREAT_BALL, HYPER_POTION, SUPER_POTION, FULL_HEAL, REVIVE
 
 ; Cinnabar
 CinnabarCashierText::
