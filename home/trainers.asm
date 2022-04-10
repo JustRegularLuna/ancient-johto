@@ -349,7 +349,6 @@ PrintEndBattleText::
 	ldh [hLoadedROMBank], a
 	ld [MBC1RomBank], a
 	push hl
-	farcall SaveTrainerName
 	ld hl, TrainerEndBattleText
 	call PrintText
 	pop hl
