@@ -508,7 +508,7 @@ TOHJO FALLS
 
 
 ========
-ROUTE 28
+ROUTE 26
 ========
 - Generic Trainers
 - Itemballs
@@ -531,6 +531,13 @@ INDIGO PLATEAU
 - Bruno
 - Karen
 - Lance
+
+
+========
+ROUTE 28
+========
+- Pokecenter, not much else
+- Connects to badge check gate
 
 
 ==========
