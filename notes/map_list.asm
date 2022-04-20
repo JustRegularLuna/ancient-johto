@@ -97,6 +97,8 @@
 	mapconst GOLDENROD_HOUSE
 	mapconst GOLDENROD_UNDERGROUND ; entrances and hallway in one
 	mapconst TRAIN_STATION ; may not include
+	mapconst MUSEUM_1F
+	mapconst MUSEUM_2F
 	mapconst RADIO_TOWER_1F
 	mapconst RADIO_TOWER_2F
 	mapconst RADIO_TOWER_3F
