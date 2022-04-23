@@ -90,13 +90,13 @@
 	mapconst GOLDENROD_MART_ELEVATOR
 	mapconst GOLDENROD_GYM
 	mapconst GAME_CORNER
+	mapconst GAME_CORNER_PRIZE_ROOM
 	mapconst BIKE_SHOP
 	mapconst FLOWER_SHOP
 	mapconst NAME_RATERS_HOUSE
 	mapconst BILLS_HOUSE
 	mapconst GOLDENROD_HOUSE
 	mapconst GOLDENROD_UNDERGROUND ; entrances and hallway in one
-	mapconst TRAIN_STATION ; may not include
 	mapconst MUSEUM_1F
 	mapconst MUSEUM_2F
 	mapconst RADIO_TOWER_1F
