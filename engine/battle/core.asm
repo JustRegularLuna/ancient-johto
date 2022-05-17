@@ -1153,6 +1153,10 @@ HandlePlayerBlackOut:
 	call DelayFrames
 	ld hl, Rival1WinText
 	call PrintText
+	; TODO: Switch this around to Elm's Lab if needed
+	ld a, [wCurRegion]
+	and a ; Kanto?
+	jr nz, .notRival1Battle
 	ld a, [wCurMap]
 	cp OAKS_LAB
 	ret z            ; starter battle in oak's lab: don't black out
@@ -3294,6 +3298,10 @@ IsGhostBattle:
 	ld a, [wIsInBattle]
 	dec a
 	ret nz
+	ld a, [wCurRegion]
+	and a ; Kanto?
+	jr nz, .johtoChecks
+	; Kanto checks
 	ld a, [wCurMap]
 	cp POKEMON_TOWER_1F
 	jr c, .next
@@ -3302,6 +3310,8 @@ IsGhostBattle:
 	ld b, SILPH_SCOPE
 	call IsItemInBag
 	ret z
+.johtoChecks
+	; TODO: Johto ghost battle checks here
 .next
 	ld a, 1
 	and a
@@ -3874,7 +3884,7 @@ CheckForDisobedience:
 ; it was traded
 .monIsTraded
 ; what level might disobey?
-	ld hl, wObtainedBadges
+	ld hl, wObtainedKantoBadges
 	bit BIT_EARTHBADGE, [hl]
 	ld a, 101
 	jr nz, .next
@@ -6477,7 +6487,7 @@ ApplyBadgeStatBoosts:
 	ld a, [wLinkState]
 	cp LINK_STATE_BATTLING
 	ret z ; return if link battle
-	ld a, [wObtainedBadges]
+	ld a, [wObtainedKantoBadges]
 	ld b, a
 	ld hl, wBattleMonAttack
 	ld c, $4

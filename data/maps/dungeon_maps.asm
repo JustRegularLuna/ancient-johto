@@ -25,3 +25,12 @@ DungeonMaps2:
 	; CERULEAN_CAVE maps, except for SILPH_CO_1F
 	db SILPH_CO_2F, CERULEAN_CAVE_1F
 	db -1 ; end
+
+JohtoDungeonMaps1:
+	;db ILEX_FOREST
+	db -1 ; end
+
+JohtoDungeonMaps2:
+	; all Union Cave maps
+	;db UNION_CAVE_1F, UNION_CAVE_B2F
+	db -1 ; end

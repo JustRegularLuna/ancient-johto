@@ -114,6 +114,10 @@ MainMenu:
 	ld a, [wNumHoFTeams]
 	and a
 	jp z, SpecialEnterMap
+	ld a, [wCurRegion]
+	and a ; Kanto?
+	jp nz, SpecialEnterMap
+	; if we are in Kanto
 	ld a, [wCurMap] ; map ID
 	cp HALL_OF_FAME
 	jp nz, SpecialEnterMap
@@ -395,7 +399,7 @@ PrintSaveScreenText:
 
 PrintNumBadges:
 	push hl
-	ld hl, wObtainedBadges
+	ld hl, wObtainedKantoBadges
 	ld b, $1
 	call CountSetBits
 	pop hl

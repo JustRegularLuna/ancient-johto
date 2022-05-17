@@ -79,7 +79,7 @@ VermilionGymReceiveTM24:
 	ldh [hSpriteIndexOrTextID], a
 	call DisplayTextID
 .gymVictory
-	ld hl, wObtainedBadges
+	ld hl, wObtainedKantoBadges
 	set BIT_THUNDERBADGE, [hl]
 	ld hl, wBeatGymFlags
 	set BIT_THUNDERBADGE, [hl]

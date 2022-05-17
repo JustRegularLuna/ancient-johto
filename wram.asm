@@ -2250,10 +2250,11 @@ wOptions::
 ; 5: Slow
 	ds 1
 
-wObtainedBadges::
+wObtainedKantoBadges::
 	flag_array 8
 
-	ds 1
+wObtainedJohtoBadges::
+	flag_array 8
 
 wLetterPrintingDelayFlags::
 ; bit 0: If 0, limit the delay to 1 frame. Note that this has no effect if
@@ -2274,6 +2275,9 @@ wMapMusicROMBank::
 wMapPalOffset::
 ; offset subtracted from FadePal4 to get the background and object palettes for the current map
 ; normally, it is 0. it is 6 when Flash is needed, causing FadePal2 to be used instead of FadePal4
+	ds 1
+
+wCurRegion::
 	ds 1
 
 wCurMap::
@@ -2452,12 +2456,14 @@ wDestinationWarpID::
 ; if $ff, the player's coordinates are not updated when entering the map
 	ds 1
 
-UNION
-	ds 128
-NEXTU
+;UNION
+;	ds 128
+;NEXTU
 wChannel5:: channel_struct wChannel5
 wChannel6:: channel_struct wChannel6
-ENDU
+wChannel7:: channel_struct wChannel7
+wChannel8:: channel_struct wChannel8
+;ENDU
 
 wNumSigns::
 ; number of signs in the current map (up to 16)
@@ -2569,7 +2575,12 @@ wMissableObjectFlags::
 	ds 32
 wMissableObjectFlagsEnd::
 
-	ds 7
+wJohtoMissableObjectFlags::
+; bit array of missable objects. set = removed
+	ds 32
+wJohtoMissableObjectFlagsEnd::
+
+
 
 wd5cd:: ds 1 ; temp copy of SPRITESTATEDATA1_IMAGEINDEX (used for sprite facing/anim)
 
@@ -2581,23 +2592,20 @@ wMissableObjectList::
 	ds 17 * 2
 
 wGameProgressFlags::
-; $80 bytes
+
 wOaksLabCurScript::
 	ds 1
 wPalletTownCurScript::
-	ds 1
 	ds 1
 wBluesHouseCurScript::
 	ds 1
 wViridianCityCurScript::
 	ds 1
-	ds 2
 wPewterCityCurScript::
 	ds 1
 wRoute3CurScript::
 	ds 1
 wRoute4CurScript::
-	ds 1
 	ds 1
 wViridianGymCurScript::
 	ds 1
@@ -2631,7 +2639,6 @@ wSSAnne2FRoomsCurScript::
 	ds 1
 wRoute22CurScript::
 	ds 1
-	ds 1
 wRedsHouse2FCurScript::
 	ds 1
 wViridianMartCurScript::
@@ -2640,7 +2647,6 @@ wRoute22GateCurScript::
 	ds 1
 wCeruleanCityCurScript::
 	ds 1
-	ds 7
 wSSAnneBowCurScript::
 	ds 1
 wViridianForestCurScript::
@@ -2662,7 +2668,6 @@ wSafariZoneGateCurScript::
 wRockTunnelB1FCurScript::
 	ds 1
 wRockTunnel1FCurScript::
-	ds 1
 	ds 1
 wRoute11CurScript::
 	ds 1
@@ -2699,15 +2704,15 @@ wRocketHideoutB2FCurScript::
 wRocketHideoutB3FCurScript::
 	ds 1
 wRocketHideoutB4FCurScript::
-	ds 2
+	ds 1
 wRoute6GateCurScript::
 	ds 1
 wRoute8GateCurScript::
-	ds 2
+	ds 1
 wCinnabarIslandCurScript::
 	ds 1
 wPokemonMansion1FCurScript::
-	ds 2
+	ds 1
 wPokemonMansion2FCurScript::
 	ds 1
 wPokemonMansion3FCurScript::
@@ -2717,7 +2722,6 @@ wPokemonMansionB1FCurScript::
 wVictoryRoad2FCurScript::
 	ds 1
 wVictoryRoad3FCurScript::
-	ds 1
 	ds 1
 wFightingDojoCurScript::
 	ds 1
@@ -2751,19 +2755,15 @@ wCeruleanCaveB1FCurScript::
 	ds 1
 wVictoryRoad1FCurScript::
 	ds 1
-	ds 1
 wLancesRoomCurScript::
 	ds 1
-	ds 4
 wSilphCo10FCurScript::
 	ds 1
 wSilphCo11FCurScript::
 	ds 1
-	ds 1
 wFuchsiaGymCurScript::
 	ds 1
 wSaffronGymCurScript::
-	ds 1
 	ds 1
 wCinnabarGymCurScript::
 	ds 1
@@ -2776,9 +2776,8 @@ wBillsHouseCurScript::
 wRoute5GateCurScript::
 	ds 1
 wPowerPlantCurScript::
-wRoute7GateCurScript::
-; overload
 	ds 1
+wRoute7GateCurScript::
 	ds 1
 wSSAnne2FCurScript::
 	ds 1
@@ -2791,15 +2790,14 @@ wSeafoamIslandsB4FCurScript::
 wRoute18Gate1FCurScript::
 	ds 1
 
-	ds 6
+
+wPlayersHouse2FCurScript::
+	ds 1
+
 wGameProgressFlagsEnd::
 
-UNION
-	ds 128
-NEXTU
-wChannel7:: channel_struct wChannel7
-wChannel8:: channel_struct wChannel8
-ENDU
+	;ds 128
+
 
 wObtainedHiddenItemsFlags::
 	ds 14
@@ -2817,6 +2815,9 @@ wWalkBikeSurfState::
 
 wTownVisitedFlag::
 	flag_array NUM_CITY_MAPS
+
+wJohtoTownVisitedFlag::
+	ds 2
 
 wSafariSteps::
 ; starts at 502
@@ -2852,6 +2853,9 @@ wBoulderSpriteIndex::
 	ds 1
 
 wLastBlackoutMap::
+	ds 1
+
+wLastBlackoutRegion::
 	ds 1
 
 wDestinationMap::
@@ -2896,6 +2900,7 @@ wBeatGymFlags::
 ; used to determine whether to show name on statue and in two NPC text scripts
 	ds 1
 
+wJohtoBeatGymFlags::
 	ds 1
 
 wd72c::
@@ -2983,9 +2988,7 @@ wd736::
 	ds 1
 
 wCompletedInGameTradeFlags::
-	ds 2
-
-	ds 2
+	ds 4
 
 wWarpedFromWhichWarp::
 	ds 1

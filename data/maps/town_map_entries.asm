@@ -117,3 +117,18 @@ InternalMapEntries:
 	internal_map SILPH_CO_ELEVATOR,             10,  5, SilphCoName
 	internal_map AGATHAS_ROOM,                   0,  2, PokemonLeagueName
 	db -1 ; end
+
+
+; the appearance of towns and routes in the town map
+JohtoExternalMapEntries:
+	table_width 3, JohtoExternalMapEntries
+	; x, y, name
+	external_map 15, 11, NewBarkTownName
+	external_map 13, 11, Route29Name
+	assert_table_length FIRST_JOHTO_INDOOR_MAP
+
+; the appearance of buildings and dungeons in the town map
+JohtoInternalMapEntries:
+	; maximum map id subject to this rule, x, y, name
+	internal_map ELMS_LAB,                      15, 11, NewBarkTownName
+	db -1 ; end

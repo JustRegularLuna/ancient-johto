@@ -197,7 +197,7 @@ Route23Script_51346:
 	inc a
 	ld c, a
 	ld b, FLAG_TEST
-	ld hl, wObtainedBadges
+	ld hl, wObtainedKantoBadges
 	predef FlagActionPredef
 	ld a, c
 	and a

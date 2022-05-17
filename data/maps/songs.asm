@@ -1,3 +1,4 @@
+; KANTO
 MapSongBanks::
 	table_width 2, MapSongBanks
 	db MUSIC_PALLET_TOWN, 0 ; PALLET_TOWN
@@ -249,3 +250,16 @@ MapSongBanks::
 	db MUSIC_DUNGEON1, 0 ; BRUNOS_ROOM
 	db MUSIC_POKEMON_TOWER, 0 ; AGATHAS_ROOM
 	assert_table_length NUM_MAPS
+
+
+; JOHTO
+JohtoMapSongBanks::
+	table_width 2, JohtoMapSongBanks
+	db MUSIC_CINNABAR, 0 ; NEW_BARK_TOWN
+	db MUSIC_ROUTES1, 0 ; ROUTE_29
+	db MUSIC_CINNABAR, 0 ; PLAYERS_HOUSE_1F
+	db MUSIC_CINNABAR, 0 ; PLAYERS_HOUSE_2F
+	db MUSIC_CINNABAR, 0 ; NEW_BARK_HOUSE_1
+	db MUSIC_CINNABAR, 0 ; NEW_BARK_HOUSE_2
+	db MUSIC_CELADON, 0 ; ELMS_LAB
+	assert_table_length NUM_JOHTO_MAPS

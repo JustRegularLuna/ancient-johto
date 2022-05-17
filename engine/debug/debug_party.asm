@@ -47,7 +47,7 @@ IF DEF(_DEBUG)
 
 	; Get all badges except Earth Badge.
 	ld a, $ff ^ (1 << BIT_EARTHBADGE)
-	ld [wObtainedBadges], a
+	ld [wObtainedKantoBadges], a
 
 	call SetIshiharaTeam
 

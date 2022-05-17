@@ -60,7 +60,7 @@ CeruleanGymScript_5c70d:
 	ldh [hSpriteIndexOrTextID], a
 	call DisplayTextID
 .gymVictory
-	ld hl, wObtainedBadges
+	ld hl, wObtainedKantoBadges
 	set BIT_CASCADEBADGE, [hl]
 	ld hl, wBeatGymFlags
 	set BIT_CASCADEBADGE, [hl]

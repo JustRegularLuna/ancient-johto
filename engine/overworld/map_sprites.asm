@@ -254,10 +254,27 @@ ReadSpriteSheetData:
 ; Loads sprite set for outside maps (cities and routes) and sets VRAM slots.
 ; sets carry if the map is a city or route, unsets carry if not
 InitOutsideMapSprites:
+	ld a, [wCurRegion]
+	and a ; Kanto?
+	jr nz, .johtoCheck
+	; Kanto check
 	ld a, [wCurMap]
 	cp FIRST_INDOOR_MAP ; is the map a city or a route?
 	ret nc ; if not, return
+	jr .city
+.johtoCheck
+	ld a, [wCurMap]
+	cp FIRST_JOHTO_INDOOR_MAP
+	ret nc
+.city
+	push af
+	ld a, [wCurRegion]
+	and a ; Kanto?
 	ld hl, MapSpriteSets
+	jr z, .gotSpriteSetList
+	ld hl, JohtoMapSpriteSets
+.gotSpriteSetList
+	pop af
 	add l
 	ld l, a
 	jr nc, .noCarry
@@ -284,7 +301,15 @@ InitOutsideMapSprites:
 	sla a
 	add c
 	add b ; a = (spriteSetID - 1) * 11
+	push af
+	ld a, [wCurRegion]
+	and a ; Kanto?
 	ld de, SpriteSets
+	jr z, .gotRegionSpriteSets
+	; else Johto
+	ld de, JohtoSpriteSets
+.gotRegionSpriteSets
+	pop af
 ; add a to de to get offset of sprite set
 	add e
 	ld e, a
@@ -384,9 +409,20 @@ InitOutsideMapSprites:
 ; Chooses the correct sprite set ID depending on the player's position within
 ; the map for maps with two sprite sets.
 GetSplitMapSpriteSetID:
+	push af
+	ld a, [wCurRegion]
+	and a ; Kanto?
+	jr nz, .johto
+	; kanto
+	pop af
 	cp $f8
 	jr z, .route20
 	ld hl, SplitMapSpriteSets
+	jr .gotSplitMapSpriteSets
+.johto
+	pop af
+	ld hl, JohtoSplitMapSpriteSets
+.gotSplitMapSpriteSets
 	and $0f
 	dec a
 	sla a

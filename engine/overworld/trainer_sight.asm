@@ -291,9 +291,20 @@ CheckSpriteCanSeePlayer:
 
 ; tests if the player is in front of the sprite (rather than behind it)
 CheckPlayerIsInFrontOfSprite:
+	ld a, [wCurRegion]
+	and a ; Kanto?
+	jr nz, .johtoChecks
 	ld a, [wCurMap]
 	cp POWER_PLANT
 	jp z, .engage       ; bypass this for power plant to get voltorb fake items to work
+	jr .mapChecksDone
+.johtoChecks
+	; TODO: Check for any johto maps with voltorb fake items
+	; ld a, [wCurMap]
+	; cp SOME_MAP_ID_HERE
+	; jp z, .engage
+	; more checks if needed
+.mapChecksDone
 	ld a, [wTrainerSpriteOffset]
 	add SPRITESTATEDATA1_YPIXELS
 	ld d, $0

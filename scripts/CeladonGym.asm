@@ -60,7 +60,7 @@ CeladonGymText_48963:
 	ldh [hSpriteIndexOrTextID], a
 	call DisplayTextID
 .gymVictory
-	ld hl, wObtainedBadges
+	ld hl, wObtainedKantoBadges
 	set BIT_RAINBOWBADGE, [hl]
 	ld hl, wBeatGymFlags
 	set BIT_RAINBOWBADGE, [hl]

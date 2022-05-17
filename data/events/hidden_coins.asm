@@ -17,3 +17,6 @@ HiddenCoinCoords:
 	hidden_coin GAME_CORNER, 15,  8
 	hidden_coin GAME_CORNER, 12, 15
 	db -1 ; end
+
+JohtoHiddenCoinCoords:
+	db -1 ; end

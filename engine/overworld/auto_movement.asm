@@ -267,9 +267,13 @@ RLEList_PewterGymGuy:
 	db -1 ; end
 
 FreezeEnemyTrainerSprite::
+	ld a, [wCurRegion]
+	and a ; Kanto?
+	jr nz, .notPokemonTower7F
 	ld a, [wCurMap]
 	cp POKEMON_TOWER_7F
 	ret z ; the Rockets on Pokemon Tower 7F leave after battling, so don't freeze them
+.notPokemonTower7F
 	ld hl, RivalIDs
 	ld a, [wEngagedTrainerClass]
 	ld b, a

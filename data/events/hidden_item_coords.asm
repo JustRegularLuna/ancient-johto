@@ -59,3 +59,7 @@ HiddenItemCoords:
 	hidden_item CERULEAN_CITY,                 15,   8
 	hidden_item ROUTE_4,                       40,   3
 	db -1 ; end
+
+
+JohtoHiddenItemCoords:
+	db -1 ; end

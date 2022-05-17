@@ -1,4 +1,5 @@
 ; see also MapHeaderBanks
+; KANTO headers
 MapHeaderPointers::
 	table_width 2, MapHeaderPointers
 	dw PalletTown_h
@@ -250,3 +251,16 @@ MapHeaderPointers::
 	dw BrunosRoom_h
 	dw AgathasRoom_h
 	assert_table_length NUM_MAPS
+
+
+; JOHTO headers
+JohtoMapHeaderPointers::
+	table_width 2, JohtoMapHeaderPointers
+	dw NewBarkTown_h
+	dw Route29_h
+	dw PlayersHouse1F_h
+	dw PlayersHouse2F_h
+	dw NewBarkHouse1_h
+	dw NewBarkHouse2_h
+	dw ElmsLab_h
+	assert_table_length NUM_JOHTO_MAPS

@@ -14,6 +14,9 @@ ENDM
 ; - ExternalMapEntries (see data/maps/town_map_entries.asm)
 ; Each map also has associated data in maps.asm.
 ; Order: towns/cities, then routes, then indoor/dungeon maps
+; Johto and Kanto each have their own tables
+
+; Kanto Map Constants
 	const_def
 	mapconst PALLET_TOWN,                    9, 10 ; $00
 	mapconst VIRIDIAN_CITY,                 18, 20 ; $01
@@ -271,3 +274,19 @@ NUM_MAPS EQU const_value
 ; Indoor maps, such as houses, use this as the Map ID in their exit warps
 ; This map ID takes the player back to the last outdoor map they were on, stored in wLastMap
 LAST_MAP EQU -1
+
+
+
+; JOHTO Map Constants
+	const_def
+	mapconst NEW_BARK_TOWN,                  9, 10
+NUM_JOHTO_CITY_MAPS EQU const_value
+FIRST_JOHTO_ROUTE_MAP EQU const_value
+	mapconst ROUTE_29,                       9, 30
+FIRST_JOHTO_INDOOR_MAP EQU const_value
+	mapconst PLAYERS_HOUSE_1F,               4,  5
+	mapconst PLAYERS_HOUSE_2F,               3,  4
+	mapconst NEW_BARK_HOUSE_1,               4,  4
+	mapconst NEW_BARK_HOUSE_2,               4,  4
+	mapconst ELMS_LAB,                       6,  5
+NUM_JOHTO_MAPS EQU const_value

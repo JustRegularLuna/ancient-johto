@@ -26,8 +26,8 @@ TwoOptionMenuStrings:
 	next "NO@"
 
 .NorthWestMenu:
-	db   "NORTH"
-	next "WEST@"
+	db   "KANTO"
+	next "JOHTO@"
 
 .SouthEastMenu:
 	db   "SOUTH"

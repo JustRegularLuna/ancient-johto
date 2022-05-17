@@ -2,11 +2,17 @@ PrintBeginningBattleText:
 	ld a, [wIsInBattle]
 	dec a
 	jr nz, .trainerBattle
+	ld a, [wCurRegion]
+	and a ; Kanto?
+	jr nz, .johtoChecks
 	ld a, [wCurMap]
 	cp POKEMON_TOWER_3F
 	jr c, .notPokemonTower
 	cp POKEMON_TOWER_7F + 1
 	jr c, .pokemonTower
+	jr .notPokemonTower
+.johtoChecks
+	;TODO: Add checks for any ghost maps in Johto
 .notPokemonTower
 	ld a, [wEnemyMonSpecies2]
 	call PlayCry

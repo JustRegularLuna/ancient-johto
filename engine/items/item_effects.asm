@@ -166,6 +166,10 @@ ItemUseBall:
 .notOldManBattle
 ; If the player is fighting the ghost Marowak, set the value that indicates the
 ; Pokémon can't be caught and skip the capture calculations.
+	ld a, [wCurRegion]
+	and a ; Kanto?
+	jr nz, .johtoChecks
+	; Kanto
 	ld a, [wCurMap]
 	cp POKEMON_TOWER_6F
 	jr nz, .loop
@@ -173,6 +177,17 @@ ItemUseBall:
 	cp RESTLESS_SOUL
 	ld b, $10 ; can't be caught value
 	jp z, .setAnimData
+	jr .loop
+
+.johtoChecks
+	;TODO: If Johto needs any checks like the marowak
+	;ld a, [wCurMap]
+	;cp POKEMON_TOWER_6F
+	;jr nz, .loop
+	;ld a, [wEnemyMonSpecies2]
+	;cp RESTLESS_SOUL
+	;ld b, $10 ; can't be caught value
+	;jp z, .setAnimData
 
 ; Get the first random number. Let it be called Rand1.
 ; Rand1 must be within a certain range according the kind of ball being thrown.
@@ -1487,9 +1502,13 @@ ItemUseEscapeRope:
 	ld a, [wIsInBattle]
 	and a
 	jr nz, .notUsable
+	ld a, [wCurRegion]
+	and a ; Kanto?
+	jr nz, .notKanto
 	ld a, [wCurMap]
 	cp AGATHAS_ROOM
 	jr z, .notUsable
+.notKanto
 	ld a, [wCurMapTileset]
 	ld b, a
 	ld hl, EscapeRopeTilesets
@@ -1546,56 +1565,7 @@ ItemUseXAccuracy:
 ; This function is bugged and never works. It always jumps to ItemUseNotTime.
 ; The Card Key is handled in a different way.
 ItemUseCardKey:
-	xor a
-	ld [wUnusedD71F], a
-	call GetTileAndCoordsInFrontOfPlayer
-	ld a, [GetTileAndCoordsInFrontOfPlayer]
-	cp $18
-	jr nz, .next0
-	ld hl, CardKeyTable1
-	jr .next1
-.next0
-	cp $24
-	jr nz, .next2
-	ld hl, CardKeyTable2
-	jr .next1
-.next2
-	cp $5e
-	jp nz, ItemUseNotTime
-	ld hl, CardKeyTable3
-.next1
-	ld a, [wCurMap]
-	ld b, a
-.loop
-	ld a, [hli]
-	cp -1
-	jp z, ItemUseNotTime
-	cp b
-	jr nz, .nextEntry1
-	ld a, [hli]
-	cp d
-	jr nz, .nextEntry2
-	ld a, [hli]
-	cp e
-	jr nz, .nextEntry3
-	ld a, [hl]
-	ld [wUnusedD71F], a
-	jr .done
-.nextEntry1
-	inc hl
-.nextEntry2
-	inc hl
-.nextEntry3
-	inc hl
-	jr .loop
-.done
-	ld hl, ItemUseText00
-	call PrintText
-	ld hl, wd728
-	set 7, [hl]
-	ret
-
-INCLUDE "data/events/card_key_coords.asm"
+	jp ItemUseNotTime
 
 ItemUsePokedoll:
 	ld a, [wIsInBattle]
@@ -1668,6 +1638,9 @@ ItemUsePokeflute:
 	jr nz, .inBattle
 ; if not in battle
 	call ItemUseReloadOverworldData
+	ld a, [wCurRegion]
+	and a ; Kanto?
+	jr nz, .notKanto
 	ld a, [wCurMap]
 	cp ROUTE_12
 	jr nz, .notRoute12
@@ -1694,6 +1667,8 @@ ItemUsePokeflute:
 	call PrintText
 	SetEvent EVENT_FIGHT_ROUTE16_SNORLAX
 	ret
+.notKanto
+	; TODO: Johto Snorlax checks if they are needed
 .noSnorlaxToWakeUp
 	ld hl, PlayedFluteNoEffectText
 	jp PrintText
@@ -2841,9 +2816,15 @@ ReadSuperRodData:
 ; return e = 2 if no fish on this map
 ; return e = 1 if a bite, bc = level,species
 ; return e = 0 if no bite
+	ld a, [wCurRegion]
+	and a ; Kanto?
+	ld hl, SuperRodData
+	jr z, .gotSuperRodData
+	; Johto
+	ld hl, JohtoSuperRodData
+.gotSuperRodData
 	ld a, [wCurMap]
 	ld de, 3 ; each fishing group is three bytes wide
-	ld hl, SuperRodData
 	call IsInArray
 	jr c, .ReadFishingGroup
 	ld e, $2 ; $2 if no fishing groups found
@@ -2893,7 +2874,12 @@ ItemUseReloadOverworldData:
 ; creates a list at wBuffer of maps where the mon in [wd11e] can be found.
 ; this is used by the pokedex to display locations the mon can be found on the map.
 FindWildLocationsOfMon:
+	ld a, [wCurRegion]
+	and a ; Kanto?
 	ld hl, WildDataPointers
+	jr z, .gotWildDataPointers
+	ld hl, JohtoWildDataPointers
+.gotWildDataPointers
 	ld de, wBuffer
 	ld c, $0
 .loop

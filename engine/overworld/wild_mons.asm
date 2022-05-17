@@ -1,5 +1,11 @@
 LoadWildData::
+	ld a, [wCurRegion]
+	and a ; Kanto?
 	ld hl, WildDataPointers
+	jr z, .gotWildPointers
+	; else Johto
+	ld hl, JohtoWildDataPointers
+.gotWildPointers
 	ld a, [wCurMap]
 
 	; get wild data for current map

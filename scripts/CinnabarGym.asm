@@ -159,7 +159,7 @@ CinnabarGymScript3_75857:
 	ldh [hSpriteIndexOrTextID], a
 	call DisplayTextID
 .gymVictory
-	ld hl, wObtainedBadges
+	ld hl, wObtainedKantoBadges
 	set BIT_VOLCANOBADGE, [hl]
 	ld hl, wBeatGymFlags
 	set BIT_VOLCANOBADGE, [hl]

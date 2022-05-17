@@ -1,3 +1,6 @@
+; TODO: A lot of these really should have been signs...
+; Gamefreak just didn't code signs to override bookshelf tiles originally
+
 HiddenObjectMaps:
 	db REDS_HOUSE_2F
 	db BLUES_HOUSE
@@ -665,4 +668,21 @@ CeruleanCityHiddenObjects:
 
 Route4HiddenObjects:
 	hidden_object 40,  3, GREAT_BALL, HiddenItems
+	db -1 ; end
+
+;
+; JOHTO STUFF
+;
+
+JohtoHiddenObjectMaps:
+	db PLAYERS_HOUSE_2F
+	db -1 ; end
+
+JohtoHiddenObjectPointers:
+	dw PlayersHouse2FHiddenObjects
+
+
+PlayersHouse2FHiddenObjects:
+	hidden_object  0,  1, SPRITE_FACING_UP, OpenRedsPC
+	hidden_object  3,  3, ANY_FACING, PrintRedSNESText
 	db -1 ; end

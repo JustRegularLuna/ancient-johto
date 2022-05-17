@@ -54,7 +54,12 @@ LoadSpecialWarpData:
 	jr nz, .notFirstMap
 	bit 2, a
 	jr nz, .notFirstMap
+	ld a, [wCurRegion]
+	and a ; Kanto?
 	ld hl, FirstMapSpec
+	jr z, .copyWarpData
+	; else Johto
+	ld hl, JohtoFirstMapSpec
 .copyWarpData
 	ld de, wCurMap
 	ld c, $7
@@ -67,7 +72,7 @@ LoadSpecialWarpData:
 	ld a, [hli]
 	ld [wCurMapTileset], a
 	xor a
-	jr .done
+	jp .done
 .notFirstMap
 	ld a, [wLastMap] ; this value is overwritten before it's ever read
 	ld hl, wd732
@@ -77,6 +82,8 @@ LoadSpecialWarpData:
 	res 6, [hl]
 	jr z, .otherDestination
 ; return to last pokemon center or player's house
+	ld a, [wLastBlackoutRegion]
+	ld [wCurRegion], a
 	ld a, [wLastBlackoutMap]
 	jr .usedFlyWarp
 .usedDunegonWarp
@@ -87,7 +94,13 @@ LoadSpecialWarpData:
 	ld [wCurMap], a
 	ld a, [wWhichDungeonWarp]
 	ld c, a
+	ld a, [wCurRegion]
+	and a ; are we in kanto?
 	ld hl, DungeonWarpList
+	jr z, .gotDungeonWarpList
+	; if not kanto, then Johto
+	ld hl, JohtoDungeonWarpList
+.gotDungeonWarpList
 	ld de, 0
 	ld a, 6
 	ld [wDungeonWarpDataEntrySize], a
@@ -107,7 +120,13 @@ LoadSpecialWarpData:
 	ld e, a
 	jr .dungeonWarpListLoop
 .matchedDungeonWarpID
+	ld a, [wCurRegion]
+	and a
 	ld hl, DungeonWarpData
+	jr z, .gotDungeonWarpData
+	; else Johto
+	ld hl, JohtoDungeonWarpData
+.gotDungeonWarpData
 	add hl, de
 	jr .copyWarpData2
 .otherDestination
@@ -115,7 +134,12 @@ LoadSpecialWarpData:
 .usedFlyWarp
 	ld b, a
 	ld [wCurMap], a
+	ld a, [wCurRegion]
+	and a ; kanto or johto?
 	ld hl, FlyWarpDataPtr
+	jr z, .flyWarpDataPtrLoop
+	; else Johto
+	ld hl, JohtoFlyWarpDataPtr
 .flyWarpDataPtrLoop
 	ld a, [hli]
 	inc hl

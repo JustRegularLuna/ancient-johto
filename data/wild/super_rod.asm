@@ -99,3 +99,19 @@ SuperRodData:
 	db 15, KRABBY
 	db 15, GOLDEEN
 	db 15, MAGIKARP
+
+
+
+
+JohtoSuperRodData:
+	; map, fishing group
+	dbw NEW_BARK_TOWN,       .Group1
+	db -1 ; end
+
+; fishing groups
+; number of monsters, followed by level/monster pairs
+
+.Group1:
+	db 2
+	db 15, TENTACOOL
+	db 15, POLIWAG

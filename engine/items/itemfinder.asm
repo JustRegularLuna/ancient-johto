@@ -1,5 +1,11 @@
 HiddenItemNear:
+	ld a, [wCurRegion]
+	and a ; Kanto?
 	ld hl, HiddenItemCoords
+	jr z, .gotItemCoordList
+	; else Johto
+	ld hl, JohtoHiddenItemCoords
+.gotItemCoordList
 	ld b, 0
 .loop
 	ld de, 3

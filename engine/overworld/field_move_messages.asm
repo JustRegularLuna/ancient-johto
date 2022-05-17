@@ -27,6 +27,9 @@ IsSurfingAllowed:
 	ld a, [wd732]
 	bit 5, a
 	jr nz, .forcedToRideBike
+	ld a, [wCurRegion]
+	and a ; Are we in Kanto?
+	ret nz
 	ld a, [wCurMap]
 	cp SEAFOAM_ISLANDS_B4F
 	ret nz

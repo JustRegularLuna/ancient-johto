@@ -18,3 +18,6 @@ BenchGuyTextPointers:
 	bench_guy_text MT_MOON_POKECENTER,     SPRITE_FACING_LEFT, MtMoonPokecenterBenchGuyText
 	bench_guy_text ROCK_TUNNEL_POKECENTER, SPRITE_FACING_LEFT, RockTunnelPokecenterBenchGuyText
 	db -1 ; end
+
+JohtoBenchGuyTextPointers:
+	db -1 ; end

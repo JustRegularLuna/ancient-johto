@@ -1,4 +1,8 @@
 MarkTownVisitedAndLoadMissableObjects::
+	ld a, [wCurRegion]
+	and a
+	jr nz, .Johto
+	; kanto
 	ld a, [wCurMap]
 	cp FIRST_ROUTE_MAP
 	jr nc, .notInTown
@@ -6,8 +10,23 @@ MarkTownVisitedAndLoadMissableObjects::
 	ld b, FLAG_SET
 	ld hl, wTownVisitedFlag   ; mark town as visited (for flying)
 	predef FlagActionPredef
+	jr .notInTown
+.Johto
+	ld a, [wCurMap]
+	cp FIRST_JOHTO_ROUTE_MAP
+	jr nc, .notInTown
+	ld c, a
+	ld b, FLAG_SET
+	ld hl, wJohtoTownVisitedFlag
+	predef FlagActionPredef
 .notInTown
+	ld a, [wCurRegion]
+	and a ; Kanto?
 	ld hl, MapHSPointers
+	jr z, .gotHSPointers
+	; else Johto
+	ld hl, JohtoMapHSPointers
+.gotHSPointers
 	ld a, [wCurMap]
 	ld b, $0
 	ld c, a
@@ -20,7 +39,14 @@ MarkTownVisitedAndLoadMissableObjects::
 LoadMissableObjects:
 	ld l, a
 	push hl
+	ld a, [wCurRegion]
+	and a
+	jr nz, .Johto
 	ld de, MissableObjects     ; calculate difference between out pointer and the base pointer
+	jr .gotList
+.Johto
+	ld de, JohtoMissableObjects
+.gotList
 	ld a, l
 	sub e
 	jr nc, .asm_f13c
@@ -72,13 +98,17 @@ InitializeMissableObjectsFlags:
 	ld bc, wMissableObjectFlagsEnd - wMissableObjectFlags
 	xor a
 	call FillMemory ; clear missable objects flags
+	ld hl, wJohtoMissableObjectFlags
+	ld bc, wJohtoMissableObjectFlagsEnd - wJohtoMissableObjectFlags
+	xor a
+	call FillMemory ; clear missable objects flags
 	ld hl, MissableObjects
 	xor a
 	ld [wMissableObjectCounter], a
 .missableObjectsLoop
 	ld a, [hli]
 	cp -1           ; end of list
-	ret z
+	jr z, .JohtoObjects
 	push hl
 	inc hl
 	ld a, [hl]
@@ -97,6 +127,32 @@ InitializeMissableObjectsFlags:
 	inc hl
 	jr .missableObjectsLoop
 
+.JohtoObjects
+	ld hl, JohtoMissableObjects
+	xor a
+	ld [wMissableObjectCounter], a
+.missableObjectsLoop2
+	ld a, [hli]
+	cp -1           ; end of list
+	ret z
+	push hl
+	inc hl
+	ld a, [hl]
+	cp HIDE
+	jr nz, .skip2
+	ld hl, wJohtoMissableObjectFlags
+	ld a, [wMissableObjectCounter]
+	ld c, a
+	ld b, FLAG_SET
+	call MissableObjectFlagAction ; set flag if Item is hidden
+.skip2
+	ld hl, wMissableObjectCounter
+	inc [hl]
+	pop hl
+	inc hl
+	inc hl
+	jr .missableObjectsLoop2
+
 ; tests if current sprite is a missable object that is hidden/has been removed
 IsObjectHidden:
 	ldh a, [hCurrentSpriteOffset]
@@ -112,7 +168,12 @@ IsObjectHidden:
 	jr nz, .loop
 	ld c, a
 	ld b, FLAG_TEST
+	ld a, [wCurRegion]
+	and a ; Kanto?
 	ld hl, wMissableObjectFlags
+	jr z, .gotList
+	ld hl, wJohtoMissableObjectFlags
+.gotList
 	call MissableObjectFlagAction
 	ld a, c
 	and a
@@ -127,7 +188,12 @@ IsObjectHidden:
 ; [wMissableObjectIndex]: index of the missable object to be added (global index)
 ShowObject:
 ShowObject2:
+	ld a, [wCurRegion]
+	and a ; Kanto?
 	ld hl, wMissableObjectFlags
+	jr z, .gotList
+	ld hl, wJohtoMissableObjectFlags
+.gotList
 	ld a, [wMissableObjectIndex]
 	ld c, a
 	ld b, FLAG_RESET
@@ -137,7 +203,12 @@ ShowObject2:
 ; removes missable object (items, leg. pokemon, etc.) from the map
 ; [wMissableObjectIndex]: index of the missable object to be removed (global index)
 HideObject:
+	ld a, [wCurRegion]
+	and a ; Kanto?
 	ld hl, wMissableObjectFlags
+	jr z, .gotList
+	ld hl, wJohtoMissableObjectFlags
+.gotList
 	ld a, [wMissableObjectIndex]
 	ld c, a
 	ld b, FLAG_SET

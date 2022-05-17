@@ -333,6 +333,9 @@ OverworldLoopLessDelay::
 	set 6, [hl]
 	xor a
 	ldh [hJoyHeld], a
+	ld a, [wCurRegion]
+	and a
+	jr nz, .notCinnabarGym
 	ld a, [wCurMap]
 	cp CINNABAR_GYM
 	jr nz, .notCinnabarGym
@@ -340,9 +343,13 @@ OverworldLoopLessDelay::
 .notCinnabarGym
 	ld hl, wd72e
 	set 5, [hl]
+	ld a, [wCurRegion]
+	and a
+	jr nz, .notOaksLab
 	ld a, [wCurMap]
 	cp OAKS_LAB
 	jp z, .noFaintCheck ; no blacking out if the player lost to the rival in Oak's lab
+.notOaksLab
 	callfar AnyPartyAlive
 	ld a, d
 	and a
@@ -378,6 +385,9 @@ DoBikeSpeedup::
 	ld a, [wNPCMovementScriptPointerTableNum]
 	and a
 	ret nz
+	ld a, [wCurRegion]
+	and a ; Are we in Kanto?
+	jr nz, .goFaster
 	ld a, [wCurMap]
 	cp ROUTE_17 ; Cycling Road
 	jr nz, .goFaster
@@ -494,18 +504,41 @@ WarpFound2::
 	ld [wUnusedD366], a ; not read
 	ldh a, [hWarpDestinationMap]
 	ld [wCurMap], a
+	ld a, [wCurRegion]
+	and a ; In Kanto?
+	jr nz, .notRockTunnel
 	cp ROCK_TUNNEL_1F
 	jr nz, .notRockTunnel
 	ld a, $06
 	ld [wMapPalOffset], a
 	call GBFadeOutToBlack
 .notRockTunnel
+	; add a similar check for Dark Cave and stuff later
 	call PlayMapChangeSound
 	jr .done
 
 ; for maps that can have the 0xFF destination map, which means to return to the outside map
 ; not all these maps are necessarily indoors, though
 .indoorMaps
+; added check for Tohjo Falls, once it exists
+	;ld a, [wCurRegion]
+	;and a ; Kanto?
+	;jr z, .continue
+	;ld a, [wCurMap]
+	;cp TOHJO_FALLS
+	;jr nz, .continue
+	;ld a, [wXCoord] ; which side of the map are we trying to leave on?
+	;cp WHATEVER_COORD_IS_THE_MIDDLE_OF_THE_MAP
+	;jr c, .JohtoSide
+	; kanto side
+	;xor a ; kanto
+	;ld [wCurRegion], a
+	;jr .continue
+;.JohtoSide
+	;ld a, 1 ; johto
+	;ld [wCurRegion], a
+;.continue
+; original code for following a warp continues here
 	ldh a, [hWarpDestinationMap] ; destination map
 	cp LAST_MAP
 	jr z, .goBackOutside
@@ -708,6 +741,10 @@ CheckIfInOutsideMap::
 	and a ; most towns/routes have tileset 0 (OVERWORLD)
 	ret z
 	cp PLATEAU ; Route 23 / Indigo Plateau
+	;ret z
+	;cp JOHTO_TRADITIONAL
+	;ret z
+	;cp JOHTO_MODERN
 	ret
 
 ; this function is an extra check that sometimes has to pass in order to warp, beyond just standing on a warp
@@ -717,6 +754,9 @@ CheckIfInOutsideMap::
 ; "function 2" passes when the the tile in front of the player is among a certain set
 ; sets carry if the check passes, otherwise clears carry
 ExtraWarpCheck::
+	ld a, [wCurRegion]
+	and a ; Kanto?
+	jr nz, .notKanto
 	ld a, [wCurMap]
 	cp SS_ANNE_3F
 	jr z, .useFunction1
@@ -728,6 +768,7 @@ ExtraWarpCheck::
 	jr z, .useFunction2
 	cp ROCK_TUNNEL_1F
 	jr z, .useFunction2
+.notKanto
 	ld a, [wCurMapTileset]
 	and a ; outside tileset (OVERWORLD)
 	jr z, .useFunction2
@@ -840,16 +881,8 @@ LoadPlayerSpriteGraphics::
 	jp LoadWalkingPlayerSpriteGraphics
 
 IsBikeRidingAllowed::
-; The bike can be used on Route 23 and Indigo Plateau,
-; or maps with tilesets in BikeRidingTilesets.
+; The bike can be used on maps with tilesets in BikeRidingTilesets.
 ; Return carry if biking is allowed.
-
-	ld a, [wCurMap]
-	cp ROUTE_23
-	jr z, .allowed
-	cp INDIGO_PLATEAU
-	jr z, .allowed
-
 	ld a, [wCurMapTileset]
 	ld b, a
 	ld hl, BikeRidingTilesets
@@ -1835,6 +1868,9 @@ JoypadOverworld::
 	ld a, [wFlags_D733]
 	bit 3, a ; check if a trainer wants a challenge
 	jr nz, .notForcedDownwards
+	ld a, [wCurRegion]
+	and a ; Kanto?
+	jr nz, .notForcedDownwards
 	ld a, [wCurMap]
 	cp ROUTE_17 ; Cycling Road
 	jr nz, .notForcedDownwards
@@ -2034,7 +2070,13 @@ LoadMapHeader::
 	ldh [hPreviousTileset], a
 	bit 7, b
 	ret nz
+	ld a, [wCurRegion]
+	and a
 	ld hl, MapHeaderPointers
+	jr z, .gotRegion
+	; if not Kanto, then load Johto
+	ld hl, JohtoMapHeaderPointers
+.gotRegion
 	ld a, [wCurMap]
 	sla a
 	jr nc, .noCarry1
@@ -2286,7 +2328,13 @@ LoadMapHeader::
 	ld a, BANK(MapSongBanks)
 	ldh [hLoadedROMBank], a
 	ld [MBC1RomBank], a
+	ld a, [wCurRegion]
+	and a ; Kanto?
 	ld hl, MapSongBanks
+	jr z, .gotSongTable
+	; else Johto
+	ld hl, JohtoMapSongBanks
+.gotSongTable
 	add hl, bc
 	add hl, bc
 	ld a, [hli]
@@ -2384,7 +2432,13 @@ SwitchToMapRomBank::
 	ld b, $00
 	ld a, BANK(MapHeaderBanks)
 	call BankswitchHome
+	ld a, [wCurRegion]
+	and a
 	ld hl, MapHeaderBanks
+	jr z, .gotRegion
+	; if not Kanto, then Johto
+	ld hl, JohtoMapHeaderBanks
+.gotRegion
 	add hl, bc
 	ld a, [hl]
 	ldh [hMapROMBank], a

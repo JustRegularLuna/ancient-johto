@@ -251,6 +251,20 @@ WildDataPointers:
 	assert_table_length NUM_MAPS
 	dw -1 ; end
 
+
+JohtoWildDataPointers:
+	table_width 2, JohtoWildDataPointers
+	dw NoMons      ; NEW_BARK_TOWN
+	dw Route29Mons ; ROUTE_29
+	dw NoMons      ; PLAYERS_HOUSE_1F
+	dw NoMons      ; PLAYERS_HOUSE_2F
+	dw NoMons      ; NEW_BARK_HOUSE_1
+	dw NoMons      ; NEW_BARK_HOUSE_2
+	dw NoMons      ; ELMS_LAB
+	assert_table_length NUM_JOHTO_MAPS
+	dw -1 ; end
+
+
 ; wild pokemon data is divided into two parts.
 ; first part:  pokemon found in grass
 ; second part: pokemon found while surfing
@@ -321,3 +335,5 @@ INCLUDE "data/wild/maps/VictoryRoad2F.asm"
 INCLUDE "data/wild/maps/VictoryRoad3F.asm"
 INCLUDE "data/wild/maps/VictoryRoad1F.asm"
 INCLUDE "data/wild/maps/DiglettsCave.asm"
+
+INCLUDE "data/wild/maps/Route29.asm"

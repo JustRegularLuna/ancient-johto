@@ -47,3 +47,8 @@ TownMapOrder:
 	db INDIGO_PLATEAU
 	db POWER_PLANT
 TownMapOrderEnd:
+
+JohtoTownMapOrder:
+	db NEW_BARK_TOWN
+	db ROUTE_29
+JohtoTownMapOrderEnd:

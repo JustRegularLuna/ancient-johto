@@ -20,7 +20,7 @@ DrawBadges:
 ; Alter these based on owned badges.
 	ld de, wTempObtainedBadgesBooleans
 	ld hl, wBadgeOrFaceTiles
-	ld a, [wObtainedBadges]
+	ld a, [wObtainedKantoBadges]
 	ld b, a
 	ld c, NUM_BADGES
 .CheckBadge

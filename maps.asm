@@ -1222,3 +1222,35 @@ INCLUDE "data/maps/headers/AgathasRoom.asm"
 INCLUDE "scripts/AgathasRoom.asm"
 INCLUDE "data/maps/objects/AgathasRoom.asm"
 AgathasRoom_Blocks: INCBIN "maps/AgathasRoom.blk"
+
+
+
+SECTION "Johto Maps 1", ROMX
+
+INCLUDE "data/maps/headers/NewBarkTown.asm"
+INCLUDE "data/maps/objects/NewBarkTown.asm"
+NewBarkTown_Blocks: INCBIN "maps/NewBarkTown.blk"
+
+INCLUDE "data/maps/headers/Route29.asm"
+INCLUDE "data/maps/objects/Route29.asm"
+Route29_Blocks: INCBIN "maps/Route29.blk"
+
+INCLUDE "data/maps/headers/PlayersHouse1F.asm"
+INCLUDE "data/maps/objects/PlayersHouse1F.asm"
+PlayersHouse1F_Blocks: INCBIN "maps/PlayersHouse1F.blk"
+
+INCLUDE "data/maps/headers/PlayersHouse2F.asm"
+INCLUDE "data/maps/objects/PlayersHouse2F.asm"
+PlayersHouse2F_Blocks: INCBIN "maps/PlayersHouse2F.blk"
+
+INCLUDE "data/maps/headers/NewBarkHouse1.asm"
+INCLUDE "data/maps/objects/NewBarkHouse1.asm"
+NewBarkHouse1_Blocks: INCBIN "maps/NewBarkHouse1.blk"
+
+INCLUDE "data/maps/headers/NewBarkHouse2.asm"
+INCLUDE "data/maps/objects/NewBarkHouse2.asm"
+NewBarkHouse2_Blocks: INCBIN "maps/NewBarkHouse2.blk"
+
+INCLUDE "data/maps/headers/ElmsLab.asm"
+INCLUDE "data/maps/objects/ElmsLab.asm"
+ElmsLab_Blocks: INCBIN "maps/ElmsLab.blk"

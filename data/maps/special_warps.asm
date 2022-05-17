@@ -16,6 +16,9 @@ DungeonWarpList:
 	db POKEMON_MANSION_2F,  3
 	db -1 ; end
 
+JohtoDungeonWarpList:
+	db -1 ; end
+
 
 fly_warp: MACRO
 	event_displacement \1_WIDTH, \2, \3
@@ -37,6 +40,9 @@ DungeonWarpData:
 	fly_warp POKEMON_MANSION_1F,  16, 14
 	fly_warp POKEMON_MANSION_2F,  18, 14
 
+JohtoDungeonWarpData:
+	;fly_warp SEAFOAM_ISLANDS_B1F, 18,  7
+
 
 special_warp_spec: MACRO
 	db \1
@@ -44,6 +50,8 @@ special_warp_spec: MACRO
 	db \4
 ENDM
 
+JohtoFirstMapSpec:
+	special_warp_spec PLAYERS_HOUSE_2F, 3, 4, REDS_HOUSE_2
 FirstMapSpec:
 	special_warp_spec REDS_HOUSE_2F, 3, 6, REDS_HOUSE_2
 TradeCenterSpec1:
@@ -89,3 +97,9 @@ FlyWarpDataPtr:
 .SaffronCity:    fly_warp SAFFRON_CITY,     9, 30
 .Route4:         fly_warp ROUTE_4,         11,  6
 .Route10:        fly_warp ROUTE_10,        11, 20
+
+
+JohtoFlyWarpDataPtr:
+	fly_warp_spec NEW_BARK_TOWN, .NewBarkTown
+
+.NewBarkTown:    fly_warp NEW_BARK_TOWN,   13, 6

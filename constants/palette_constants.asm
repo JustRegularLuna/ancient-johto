@@ -46,6 +46,18 @@ SET_PAL_DEFAULT EQU $ff
 	const PAL_INDIGO    ; $0A
 	const PAL_SAFFRON   ; $0B
 	const PAL_TOWNMAP   ; $0C
+	const PAL_NEW_BARK
+	const PAL_CHERRYGROVE
+	const PAL_VIOLET
+	const PAL_AZALEA
+	const PAL_GOLDENROD
+	const PAL_ECRUTEAK
+	const PAL_OLIVINE
+	const PAL_CIANWOOD
+	const PAL_MAHOGANY
+	const PAL_BLACKTHORN
+	const PAL_LAKE_OF_RAGE
+	const PAL_SILVER_CAVE
 	const PAL_LOGO1     ; $0D
 	const PAL_LOGO2     ; $0E
 	const PAL_0F        ; $0F

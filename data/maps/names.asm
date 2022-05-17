@@ -51,3 +51,8 @@ PokemonMansionName:  db "<PKMN> MANSION@"
 SafariZoneName:      db "SAFARI ZONE@"
 CeruleanCaveName:    db "CERULEAN CAVE@"
 PowerPlantName:      db "POWER PLANT@"
+
+; Johto Names
+NewBarkTownName:     db "NEW BARK TOWN@"
+
+Route29Name:         db "ROUTE 29@"

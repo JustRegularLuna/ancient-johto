@@ -117,7 +117,7 @@ StartMenu_Pokemon::
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
-	ld a, [wObtainedBadges] ; badges obtained
+	ld a, [wObtainedKantoBadges] ; badges obtained
 	jp hl
 .outOfBattleMovePointers
 	dw .cut

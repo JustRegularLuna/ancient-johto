@@ -32,6 +32,11 @@ IsPlayerStandingOnWarp::
 	ret
 
 CheckForceBikeOrSurf::
+; Johto does not have forced biking or surfing
+	ld a, [wCurRegion]
+	and a
+	ret nz
+; In Kanto, Check the original places
 	ld hl, wd732
 	bit 5, [hl]
 	ret nz
@@ -155,9 +160,13 @@ IsWarpTileInFrontOfPlayer::
 	push de
 	push bc
 	call _GetTileAndCoordsInFrontOfPlayer
+	ld a, [wCurRegion]
+	and a
+	jr nz, .notSSAnne
 	ld a, [wCurMap]
 	cp SS_ANNE_BOW
 	jr z, IsSSAnneBowWarpTileInFrontOfPlayer
+.notSSAnne
 	ld a, [wSpritePlayerStateData1FacingDirection]
 	srl a
 	ld c, a
@@ -218,11 +227,18 @@ IsPlayerStandingOnDoorTileOrWarpTile::
 INCLUDE "data/tilesets/warp_tile_ids.asm"
 
 PrintSafariZoneSteps::
+	ld a, [wCurRegion]
+	and a
+	jr nz, .johtoSafariCheck
 	ld a, [wCurMap]
 	cp SAFARI_ZONE_EAST
 	ret c
 	cp CERULEAN_CAVE_2F
 	ret nc
+	jr .inTheZone
+.johtoSafariCheck
+	ret ; TODO: Check for safari zone map(s) later
+.inTheZone
 	hlcoord 0, 0
 	ld b, 3
 	ld c, 7

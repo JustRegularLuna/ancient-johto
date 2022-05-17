@@ -23,7 +23,12 @@ CheckForHiddenObject::
 	ld [hli], a ; [hSavedMapTextPtr + 1]
 	ld [hl], a  ; [hDidntFindAnyHiddenObject]
 	ld de, $0
+	ld a, [wCurRegion]
+	and a ; Kanto?
 	ld hl, HiddenObjectMaps
+	jr z, .hiddenMapLoop
+	; else Johto
+	ld hl, JohtoHiddenObjectMaps
 .hiddenMapLoop
 	ld a, [hli]
 	ld b, a
@@ -36,7 +41,13 @@ CheckForHiddenObject::
 	inc de
 	jr .hiddenMapLoop
 .foundMatchingMap
+	ld a, [wCurRegion]
+	and a ; Kanto?
 	ld hl, HiddenObjectPointers
+	jr z, .gotHiddenObjectPointers
+	; else Johto
+	ld hl, JohtoHiddenObjectPointers
+.gotHiddenObjectPointers
 	add hl, de
 	ld a, [hli]
 	ld h, [hl]

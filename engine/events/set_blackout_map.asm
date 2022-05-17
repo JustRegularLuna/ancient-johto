@@ -4,6 +4,10 @@ SetLastBlackoutMap:
 ; Safari rest houses don't count.
 
 	push hl
+	ld a, [wCurRegion]
+	and a ; Kanto?
+	jr nz, .notresthouse
+
 	ld hl, SafariZoneRestHouses
 	ld a, [wCurMap]
 	ld b, a
@@ -16,6 +20,8 @@ SetLastBlackoutMap:
 	jr .done
 
 .notresthouse
+	ld a, [wCurRegion]
+	ld [wLastBlackoutRegion], a
 	ld a, [wLastMap]
 	ld [wLastBlackoutMap], a
 .done

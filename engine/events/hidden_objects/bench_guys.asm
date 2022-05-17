@@ -1,6 +1,13 @@
+; TODO: Remove this whole thing and make them normal events
 PrintBenchGuyText:
 	call EnableAutoTextBoxDrawing
+	ld a, [wCurRegion]
+	and a ; Kanto?
 	ld hl, BenchGuyTextPointers
+	jr z, .gotBenchGuyList
+	;else Johto
+	ld hl, JohtoBenchGuyTextPointers
+.gotBenchGuyList
 	ld a, [wCurMap]
 	ld b, a
 .loop

@@ -58,7 +58,7 @@ Route22Gate_TextPointers:
 
 Route22GateText1:
 	text_asm
-	ld a, [wObtainedBadges]
+	ld a, [wObtainedKantoBadges]
 	bit BIT_BOULDERBADGE, a
 	jr nz, .asm_1e6f6
 	ld hl, Route22GateText_1e704

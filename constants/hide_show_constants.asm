@@ -238,3 +238,11 @@ SHOW EQU $15
 	const HS_SEAFOAM_ISLANDS_B4F_BOULDER_2 ; E2
 	const HS_ARTICUNO                      ; E3 X
 NUM_HS_OBJECTS EQU const_value
+
+
+; Johto flags
+	const_def
+	const HS_NEW_BARK_RIVAL                ; 00
+	const HS_ROUTE_29_POTION               ; 01
+	
+NUM_JOHTO_HS_OBJECTS EQU const_value

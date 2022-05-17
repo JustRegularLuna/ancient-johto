@@ -6,7 +6,13 @@ GymStatues:
 	ld a, [wSpritePlayerStateData1FacingDirection]
 	cp SPRITE_FACING_UP
 	ret nz
+	ld a, [wCurRegion]
+	and a ; Kanto?
 	ld hl, MapBadgeFlags
+	jr z, .gotBadgeMaps
+	; else Johto
+	ld hl, JohtoMapBadgeFlags
+.gotBadgeMaps
 	ld a, [wCurMap]
 	ld b, a
 .loop
@@ -19,7 +25,13 @@ GymStatues:
 	jr .loop
 .match
 	ld b, [hl]
+	ld a, [wCurRegion]
+	and a ; Kanto?
 	ld a, [wBeatGymFlags]
+	jr z, .gotRegion
+	; Johto
+	ld a, [wJohtoBeatGymFlags]
+.gotRegion
 	and b
 	cp b
 	tx_pre_id GymStatueText2

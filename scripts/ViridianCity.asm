@@ -17,7 +17,7 @@ ViridianCityScript0:
 ViridianCityScript_1900b:
 	CheckEvent EVENT_VIRIDIAN_GYM_OPEN
 	ret nz
-	ld a, [wObtainedBadges]
+	ld a, [wObtainedKantoBadges]
 	cp $ff ^ (1 << BIT_EARTHBADGE)
 	jr nz, .gym_closed
 	SetEvent EVENT_VIRIDIAN_GYM_OPEN
@@ -147,7 +147,7 @@ ViridianCityText1:
 
 ViridianCityText2:
 	text_asm
-	ld a, [wObtainedBadges]
+	ld a, [wObtainedKantoBadges]
 	cp $ff ^ (1 << BIT_EARTHBADGE)
 	ld hl, ViridianCityText_19127
 	jr z, .done

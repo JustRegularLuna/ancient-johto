@@ -1,5 +1,11 @@
 HiddenItems:
+	ld a, [wCurRegion]
+	and a ; Kanto?
 	ld hl, HiddenItemCoords
+	jr z, .gotHiddenItemCoordList
+	; else Johto
+	ld hl, JohtoHiddenItemCoords
+.gotHiddenItemCoordList
 	call FindHiddenItemOrCoinsIndex
 	ld [wHiddenItemOrCoinsIndex], a
 	ld hl, wObtainedHiddenItemsFlags
@@ -55,7 +61,13 @@ HiddenCoins:
 	ld a, b
 	and a
 	ret z
+	ld a, [wCurRegion]
+	and a ; Kanto?
 	ld hl, HiddenCoinCoords
+	jr z, .gotHiddenCoinCoordList
+	; else Johto
+	ld hl, JohtoHiddenCoinCoords
+.gotHiddenCoinCoordList
 	call FindHiddenItemOrCoinsIndex
 	ld [wHiddenItemOrCoinsIndex], a
 	ld hl, wObtainedHiddenCoinsFlags
@@ -77,7 +89,7 @@ HiddenCoins:
 	cp 20
 	jr z, .bcd20
 	cp 40
-	jr z, .bcd20 ; should be bcd40
+	jr z, .bcd40
 	jr .bcd100
 .bcd10
 	ld a, $10
@@ -87,7 +99,7 @@ HiddenCoins:
 	ld a, $20
 	ldh [hCoins + 1], a
 	jr .bcdDone
-.bcd40 ; due to a typo, this is never used
+.bcd40
 	ld a, $40
 	ldh [hCoins + 1], a
 	jr .bcdDone

@@ -61,7 +61,7 @@ FuchsiaGymScript3_75497:
 	ldh [hSpriteIndexOrTextID], a
 	call DisplayTextID
 .gymVictory
-	ld hl, wObtainedBadges
+	ld hl, wObtainedKantoBadges
 	set BIT_SOULBADGE, [hl]
 	ld hl, wBeatGymFlags
 	set BIT_SOULBADGE, [hl]

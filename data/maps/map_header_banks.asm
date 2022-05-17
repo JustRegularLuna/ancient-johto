@@ -1,4 +1,5 @@
 ; see also MapHeaderPointers
+; KANTO header banks
 MapHeaderBanks::
 	table_width 1, MapHeaderBanks
 	db BANK(PalletTown_h)
@@ -250,3 +251,16 @@ MapHeaderBanks::
 	db BANK(BrunosRoom_h)
 	db BANK(AgathasRoom_h)
 	assert_table_length NUM_MAPS
+
+
+; JOHTO header banks
+JohtoMapHeaderBanks::
+	table_width 1, JohtoMapHeaderBanks
+	db BANK(NewBarkTown_h)
+	db BANK(Route29_h)
+	db BANK(PlayersHouse1F_h)
+	db BANK(PlayersHouse2F_h)
+	db BANK(NewBarkHouse1_h)
+	db BANK(NewBarkHouse2_h)
+	db BANK(ElmsLab_h)
+	assert_table_length NUM_JOHTO_MAPS

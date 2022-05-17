@@ -32,7 +32,7 @@ START_MONEY EQU $3000
 
 	ld [wMonDataLocation], a
 
-	ld hl, wObtainedBadges
+	ld hl, wObtainedKantoBadges
 	ld [hli], a
 
 	ld [hl], a

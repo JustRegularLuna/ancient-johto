@@ -26,6 +26,9 @@ InitBattleVariables:
 	jr nz, .loop
 	inc a ; POUND
 	ld [wTestBattlePlayerSelectedMove], a
+	ld a, [wCurRegion]
+	and a ; Kanto?
+	jr nz, .johtoChecks
 	ld a, [wCurMap]
 	cp SAFARI_ZONE_EAST
 	jr c, .notSafariBattle
@@ -33,5 +36,8 @@ InitBattleVariables:
 	jr nc, .notSafariBattle
 	ld a, BATTLE_TYPE_SAFARI
 	ld [wBattleType], a
+	jr .notSafariBattle
+.johtoChecks
+	; TODO: check for johto safari zone maps
 .notSafariBattle
 	jpfar PlayBattleMusic

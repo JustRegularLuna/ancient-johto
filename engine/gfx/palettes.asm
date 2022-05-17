@@ -144,6 +144,10 @@ SetPal_Overworld:
 	jr z, .PokemonTowerOrAgatha
 	cp CAVERN
 	jr z, .caveOrBruno
+	ld a, [wCurRegion]
+	and a ; Kanto or Johto?
+	jr nz, .johtoChecks
+	; Kanto
 	ld a, [wCurMap]
 	cp FIRST_INDOOR_MAP
 	jr c, .townOrRoute
@@ -161,6 +165,22 @@ SetPal_Overworld:
 	cp NUM_CITY_MAPS
 	jr c, .town
 	ld a, PAL_ROUTE - 1
+	jr .town
+.johtoChecks
+	ld a, [wCurMap]
+	cp FIRST_JOHTO_INDOOR_MAP
+	jr c, .johtoTownOrRoute
+	; additional checks go here later
+.johtoNormalDungeonOrBuilding
+	ld a, [wLastMap]
+.johtoTownOrRoute
+	cp FIRST_JOHTO_ROUTE_MAP
+	jr c, .johtoTown
+	ld a, PAL_ROUTE - 1
+	jr .town
+.johtoTown
+	add PAL_NEW_BARK - 1; adjust the city ID to the johto palette block
+	; fallthrough
 .town
 	inc a ; a town's palette ID is its map ID + 1
 	ld hl, wPalPacket + 1
@@ -207,7 +227,7 @@ SetPal_TrainerCard:
 	call CopyData
 	ld de, BadgeBlkDataLengths
 	ld hl, wTrainerCardBlkPacket + 2
-	ld a, [wObtainedBadges]
+	ld a, [wObtainedKantoBadges]
 	ld c, NUM_BADGES
 .badgeLoop
 	srl a

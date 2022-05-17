@@ -1,3 +1,7 @@
+;
+; KANTO STUFF
+;
+
 MapSpriteSets:
 	table_width 1, MapSpriteSets
 	db $01 ; PALLET_TOWN
@@ -214,4 +218,38 @@ SPRITE_SET_LENGTH EQU 9 + 2
 	db SPRITE_YOUNGSTER
 	db SPRITE_POKE_BALL
 	db SPRITE_FOSSIL
+	assert_table_length SPRITE_SET_LENGTH
+
+
+;
+; JOHTO STUFF
+;
+
+
+JohtoMapSpriteSets:
+	table_width 1, JohtoMapSpriteSets
+	db $01 ; NEW_BARK_TOWN
+	db $01 ; ROUTE_29
+	assert_table_length FIRST_JOHTO_INDOOR_MAP
+
+
+JohtoSplitMapSpriteSets:
+	db NORTH_SOUTH, 37, $02, $01 ; $f1 **Placeholder
+
+
+JohtoSpriteSets:
+
+; sprite set $01
+	table_width 1
+	db SPRITE_BLUE ; SPRITE_SILVER
+	db SPRITE_GIRL ; SPRITE_TEACHER
+	db SPRITE_FISHER
+	db SPRITE_COOLTRAINER_M
+	db SPRITE_YOUNGSTER
+	db SPRITE_MONSTER
+	db SPRITE_GRAMPS
+	db SPRITE_YOUNGSTER
+	db SPRITE_COOLTRAINER_F
+	db SPRITE_POKE_BALL
+	db SPRITE_GAMBLER_ASLEEP ; SPRITE_FRUIT_TREE
 	assert_table_length SPRITE_SET_LENGTH

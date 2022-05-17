@@ -33,7 +33,13 @@ DisplayTownMap:
 	hlcoord 0, 0
 	lb bc, 1, 20
 	call ClearScreenArea
+	ld a, [wCurRegion]
+	and a ; Kanto?
 	ld hl, TownMapOrder
+	jr z, .gotRegionOrder
+	; else Johto
+	ld hl, JohtoTownMapOrder
+.gotRegionOrder
 	ld a, [wWhichTownMapLocation]
 	ld c, a
 	ld b, 0
@@ -87,20 +93,40 @@ DisplayTownMap:
 	ld [hl], a
 	ret
 .pressedUp
+	ld a, [wCurRegion]
+	and a ; Kanto?
+	jr nz, .pressedUpJohto
 	ld a, [wWhichTownMapLocation]
 	inc a
 	cp TownMapOrderEnd - TownMapOrder ; number of list items + 1
+	jr nz, .noOverflow
+	xor a
+	jr .noOverflow
+.pressedUpJohto
+	ld a, [wWhichTownMapLocation]
+	inc a
+	cp JohtoTownMapOrderEnd - JohtoTownMapOrder
 	jr nz, .noOverflow
 	xor a
 .noOverflow
 	ld [wWhichTownMapLocation], a
 	jp .townMapLoop
 .pressedDown
+	ld a, [wCurRegion]
+	and a ; Kanto?
+	jr nz, .pressedDownJohto
 	ld a, [wWhichTownMapLocation]
 	dec a
 	cp -1
 	jr nz, .noUnderflow
 	ld a, TownMapOrderEnd - TownMapOrder - 1 ; number of list items
+	jr .noUnderflow
+.pressedDownJohto
+	ld a, [wWhichTownMapLocation]
+	dec a
+	cp -1
+	jr nz, .noUnderflow
+	ld a, JohtoTownMapOrderEnd - JohtoTownMapOrder
 .noUnderflow
 	ld [wWhichTownMapLocation], a
 	jp .townMapLoop
@@ -252,11 +278,21 @@ BuildFlyLocationsList:
 	ld hl, wFlyLocationsList - 1
 	ld [hl], $ff
 	inc hl
+	ld a, [wCurRegion]
+	and a ; Kanto?
+	jr nz, .johto
 	ld a, [wTownVisitedFlag]
 	ld e, a
 	ld a, [wTownVisitedFlag + 1]
 	ld d, a
 	lb bc, 0, NUM_CITY_MAPS
+	jr .loop
+.johto
+	ld a, [wJohtoTownVisitedFlag]
+	ld e, a
+	ld a, [wJohtoTownVisitedFlag + 1]
+	ld d, a
+	lb bc, 0, NUM_JOHTO_CITY_MAPS
 .loop
 	srl d
 	rr e
@@ -296,7 +332,11 @@ LoadTownMap:
 	ld a, BANK(MonNestIcon)
 	call FarCopyDataDouble
 	hlcoord 0, 0
+	ld a, [wCurRegion]
+	and a ; Kanto?
 	ld de, CompressedMap
+	jr z, .nextTile
+	ld de, JohtoCompressedMap
 .nextTile
 	ld a, [de]
 	and a
@@ -327,7 +367,10 @@ LoadTownMap:
 	ret
 
 CompressedMap:
-	INCBIN "gfx/town_map/town_map.rle"
+	INCBIN "gfx/town_map/kanto_map.rle"
+
+JohtoCompressedMap:
+	INCBIN "gfx/town_map/johto_map.rle"
 
 ExitTownMap:
 ; clear town map graphics data and load usual graphics data
@@ -381,9 +424,9 @@ DisplayWildLocations:
 	push hl
 	call LoadTownMapEntry
 	pop hl
-	ld a, [de]
-	cp $19 ; Cerulean Cave's coordinates
-	jr z, .nextEntry ; skip Cerulean Cave
+	;ld a, [de]
+	;cp $19 ; Cerulean Cave's coordinates
+	;jr z, .nextEntry ; skip Cerulean Cave
 	call TownMapCoordsToOAMCoords
 	ld a, $4 ; nest icon tile no.
 	ld [hli], a
@@ -556,6 +599,12 @@ ZeroOutDuplicatesInList:
 LoadTownMapEntry:
 ; in: a = map number
 ; out: lower nybble of [de] = x, upper nybble of [de] = y, hl = address of name
+	push af
+	ld a, [wCurRegion]
+	and a
+	jr nz, .johto
+	; Kanto
+	pop af
 	cp FIRST_INDOOR_MAP
 	jr c, .external
 	ld bc, 4
@@ -570,6 +619,28 @@ LoadTownMapEntry:
 	jr .readEntry
 .external
 	ld hl, ExternalMapEntries
+	ld c, a
+	ld b, 0
+	add hl, bc
+	add hl, bc
+	add hl, bc
+	jr .readEntry
+.johto
+	pop af
+	cp FIRST_JOHTO_INDOOR_MAP
+	jr c, .johtoExternal
+	ld bc, 4
+	ld hl, JohtoInternalMapEntries
+.johtoLoop
+	cp [hl]
+	jr c, .johtoFoundEntry
+	add hl, bc
+	jr .johtoLoop
+.johtoFoundEntry
+	inc hl
+	jr .readEntry
+.johtoExternal
+	ld hl, JohtoExternalMapEntries
 	ld c, a
 	ld b, 0
 	add hl, bc
