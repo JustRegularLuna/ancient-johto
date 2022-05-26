@@ -1,7 +1,7 @@
 AnimateHealingMachine:
 	ld de, PokeCenterFlashingMonitorAndHealBall
-	ld hl, vChars0 tile $7c
-	lb bc, BANK(PokeCenterFlashingMonitorAndHealBall), 3 ; should be 2
+	ld hl, vChars0 tile $fc
+	lb bc, BANK(PokeCenterFlashingMonitorAndHealBall), 2
 	call CopyVideoData
 	ld hl, wUpdateSpritesEnabled
 	ld a, [hl]
@@ -72,14 +72,14 @@ PokeCenterFlashingMonitorAndHealBall:
 
 PokeCenterOAMData:
 	; heal machine monitor
-	dbsprite  6,  4,  4,  4, $7c, OAM_OBP1
+	dbsprite  6,  4,  4,  4, $fc, OAM_OBP1
 	; poke balls 1-6
-	dbsprite  6,  5,  0,  3, $7d, OAM_OBP1
-	dbsprite  7,  5,  0,  3, $7d, OAM_OBP1 | OAM_HFLIP
-	dbsprite  6,  6,  0,  0, $7d, OAM_OBP1
-	dbsprite  7,  6,  0,  0, $7d, OAM_OBP1 | OAM_HFLIP
-	dbsprite  6,  6,  0,  5, $7d, OAM_OBP1
-	dbsprite  7,  6,  0,  5, $7d, OAM_OBP1 | OAM_HFLIP
+	dbsprite  6,  5,  0,  3, $fd, OAM_OBP1
+	dbsprite  7,  5,  0,  3, $fd, OAM_OBP1 | OAM_HFLIP
+	dbsprite  6,  6,  0,  0, $fd, OAM_OBP1
+	dbsprite  7,  6,  0,  0, $fd, OAM_OBP1 | OAM_HFLIP
+	dbsprite  6,  6,  0,  5, $fd, OAM_OBP1
+	dbsprite  7,  6,  0,  5, $fd, OAM_OBP1 | OAM_HFLIP
 
 ; d = value to xor with palette
 FlashSprite8Times:
