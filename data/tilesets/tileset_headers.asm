@@ -33,4 +33,5 @@ Tilesets:
 	tileset Club_Block,        Club_GFX,        Club_Coll,        $07,$17,$FF, $FF, TILEANIM_NONE
 	tileset Facility_Block,    Facility_GFX,    Facility_Coll,    $12,$FF,$FF, $FF, TILEANIM_WATER
 	tileset Plateau_Block,     Plateau_GFX,     Plateau_Coll,     $FF,$FF,$FF, $45, TILEANIM_WATER
+	tileset Johto_Block,       Johto_GFX,       Johto_Coll,       $FF,$FF,$FF, $04, TILEANIM_WATER_FLOWER
 	assert_table_length NUM_TILESETS

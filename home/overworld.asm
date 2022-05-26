@@ -741,8 +741,8 @@ CheckIfInOutsideMap::
 	and a ; most towns/routes have tileset 0 (OVERWORLD)
 	ret z
 	cp PLATEAU ; Route 23 / Indigo Plateau
-	;ret z
-	;cp JOHTO_TRADITIONAL
+	ret z
+	cp JOHTO
 	;ret z
 	;cp JOHTO_MODERN
 	ret
@@ -777,6 +777,8 @@ ExtraWarpCheck::
 	cp SHIP_PORT ; Vermilion Port tileset
 	jr z, .useFunction2
 	cp PLATEAU ; Indigo Plateau tileset
+	jr z, .useFunction2
+	cp JOHTO
 	jr z, .useFunction2
 .useFunction1
 	ld hl, IsPlayerFacingEdgeOfMap
@@ -910,7 +912,8 @@ LoadTilesetTilePatternData::
 	ld de, vTileset
 	ld bc, $790
 	ld a, [wTilesetBank]
-	jp FarCopyData2
+	call FarCopyData2
+	farjp LoadRoofTilePatterns
 
 ; this loads the current maps complete tile map (which references blocks, not individual tiles) to C6E8
 ; it can also load partial tile maps of connected maps into a border of length 3 around the current map
@@ -1952,6 +1955,8 @@ CollisionCheckOnWater::
 	cp $32 ; either the left tile of the S.S. Anne boarding platform or the tile on eastern coastlines (depending on the current tileset)
 	jr z, .checkIfVermilionDockTileset
 	cp $48 ; tile on right on coast lines in Safari Zone
+	jr z, .noCollision ; keep surfing
+	cp $62 ; shoreline in johto
 	jr z, .noCollision ; keep surfing
 ; check if the [land] tile in front of the player is passable
 .checkIfNextTileIsPassable

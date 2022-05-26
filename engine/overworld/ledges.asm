@@ -3,8 +3,14 @@ HandleLedges::
 	bit 6, a ; already jumping down ledge
 	ret nz
 	ld a, [wCurMapTileset]
-	and a ; OVERWORLD
-	ret nz
+	ld hl, LedgeTiles
+	ld de, $3
+	call IsInArray
+	ret nc
+	inc hl
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
 	predef GetTileAndCoordsInFrontOfPlayer
 	ld a, [wSpritePlayerStateData1FacingDirection]
 	ld b, a
@@ -12,7 +18,6 @@ HandleLedges::
 	ld c, a
 	ld a, [wTileInFrontOfPlayer]
 	ld d, a
-	ld hl, LedgeTiles
 .loop
 	ld a, [hli]
 	cp $ff

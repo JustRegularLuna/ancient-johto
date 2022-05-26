@@ -4,12 +4,21 @@ UsedCut:
 	ld a, [wCurMapTileset]
 	and a ; OVERWORLD
 	jr z, .overworld
+	cp JOHTO
+	jr z, .johto
 	cp GYM
 	jr nz, .nothingToCut
 	ld a, [wTileInFrontOfPlayer]
 	cp $50 ; gym cut tree
 	jr nz, .nothingToCut
 	jr .canCut
+.johto
+	ld a, [wTileInFrontOfPlayer]
+	cp $04 ; johto grass
+	jr z, .canCut
+	cp $45 ; johto cut tree
+	jr z, .canCut
+	jr .nothingToCut
 .overworld
 	dec a
 	ld a, [wTileInFrontOfPlayer]

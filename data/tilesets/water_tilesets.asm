@@ -9,4 +9,5 @@ WaterTilesets:
 	db CAVERN
 	db FACILITY
 	db PLATEAU
+	db JOHTO
 	db -1 ; end

@@ -1,5 +1,5 @@
 Route29_Object:
-	db $f ; border block
+	db $5 ; border block
 
 	def_warps
 

@@ -1,6 +1,8 @@
 AnimCut:
 	ld a, [wCutTile]
-	cp $52
+	cp $52 ; OVERWORLD grass
+	jr z, .grass
+	cp $04 ; JOHTO grass
 	jr z, .grass
 	ld c, $8
 .cutTreeLoop

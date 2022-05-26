@@ -24,6 +24,7 @@ WarpTileIDPointers:
 	dw .ClubWarpTileIDs
 	dw .FacilityWarpTileIDs
 	dw .PlateauWarpTileIDs
+	dw .JohtoWarpTileIDs
 	assert_table_length NUM_TILESETS
 
 warp_tiles: MACRO
@@ -93,3 +94,6 @@ ENDM
 .ShipPortWarpTileIDs:
 .ClubWarpTileIDs:
 	warp_tiles ; end
+
+.JohtoWarpTileIDs:
+	warp_tiles $29, $39, $56

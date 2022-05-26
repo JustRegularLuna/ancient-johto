@@ -1,5 +1,5 @@
 NewBarkTown_Object:
-	db $f ; border block
+	db $5 ; border block
 
 	def_warps
 	warp 13,  5, 1, PLAYERS_HOUSE_1F
@@ -8,7 +8,7 @@ NewBarkTown_Object:
 	warp  6,  3, 0, ELMS_LAB
 
 	def_signs
-	sign  9,  9, 4
+	sign  8,  8, 4
 	sign 11,  5, 5
 	sign  9, 13, 6
 	sign  3,  3, 7

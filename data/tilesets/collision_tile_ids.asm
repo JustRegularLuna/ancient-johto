@@ -50,8 +50,6 @@ Interior_Coll::
 Cavern_Coll::
 	coll_tiles $05, $15, $18, $1a, $20, $21, $22, $2a, $2d, $30
 
-	coll_tiles ; unused
-
 Lobby_Coll::
 	coll_tiles $14, $17, $1a, $1c, $20, $38, $45
 
@@ -69,3 +67,6 @@ Facility_Coll::
 
 Plateau_Coll::
 	coll_tiles $1b, $23, $2c, $2d, $3b, $45
+
+Johto_Coll::
+	coll_tiles $04, $05, $06, $29, $39, $40, $56, $5b, $64

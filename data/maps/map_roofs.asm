@@ -1,0 +1,33 @@
+; Roofs indexes
+	const_def
+	const ROOF_NEW_BARK  ; 0
+	const ROOF_VIOLET    ; 1
+	const ROOF_AZALEA    ; 2
+	const ROOF_OLIVINE   ; 3
+	const ROOF_GOLDENROD ; 4
+
+MapRoofSets:
+	db ROOF_NEW_BARK  ; NEW_BARK_TOWN
+
+	db ROOF_NEW_BARK  ; ROUTE_29
+
+; Format:
+; 00: determines whether the map is split East/West or North/South
+; 01: coordinate of dividing line
+; 02: roof set ID if in the West or North side
+; 03: roof set ID if in the East or South side
+SplitMapRoofSets:
+	db NORTH_SOUTH, 37, ROOF_AZALEA,    ROOF_NEW_BARK  ; $f1 **placeholder
+
+
+TilesetsWithRoofs:
+	db OVERWORLD
+	db -1
+
+
+Roofs:
+	INCBIN "gfx/tilesets/roofs/new_bark.2bpp"
+	INCBIN "gfx/tilesets/roofs/violet.2bpp"
+	INCBIN "gfx/tilesets/roofs/azalea.2bpp"
+	INCBIN "gfx/tilesets/roofs/olivine.2bpp"
+	INCBIN "gfx/tilesets/roofs/goldenrod.2bpp"
