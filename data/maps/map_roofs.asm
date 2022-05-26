@@ -21,7 +21,7 @@ SplitMapRoofSets:
 
 
 TilesetsWithRoofs:
-	db OVERWORLD
+	db JOHTO
 	db -1
 
 
