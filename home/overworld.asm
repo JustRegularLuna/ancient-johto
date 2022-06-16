@@ -502,11 +502,16 @@ WarpFound2::
 	ld [wLastMap], a
 	ld a, [wCurMapWidth]
 	ld [wUnusedD366], a ; not read
-	ldh a, [hWarpDestinationMap]
-	ld [wCurMap], a
+	; check the region so we can use it later
 	ld a, [wCurRegion]
 	and a ; In Kanto?
+	; the jump is below this next part
+	ldh a, [hWarpDestinationMap]
+	ld [wCurMap], a
+	; if not in kanto, skip rock tunnel check
+	; z flag will still be set from the region check above
 	jr nz, .notRockTunnel
+	; a still has the destination map now, so check for rock tunnel if in kanto
 	cp ROCK_TUNNEL_1F
 	jr nz, .notRockTunnel
 	ld a, $06
