@@ -84,6 +84,7 @@ LoadSpecialWarpData:
 ; return to last pokemon center or player's house
 	ld a, [wLastBlackoutRegion]
 	ld [wCurRegion], a
+	ld [wDestinationRegion], a
 	ld a, [wLastBlackoutMap]
 	jr .usedFlyWarp
 .usedDunegonWarp

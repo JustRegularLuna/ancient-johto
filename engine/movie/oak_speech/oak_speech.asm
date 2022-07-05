@@ -54,6 +54,7 @@ OakSpeech:
 	call DebugRegionChoice
 	ld a, [wCurrentMenuItem]
 	ld [wCurRegion], a
+	ld [wDestinationRegion], a
 
 	ld a, [wDefaultMap]
 	ld [wDestinationMap], a

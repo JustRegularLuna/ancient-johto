@@ -4,6 +4,10 @@ HandleMidJump::
 	farjp _HandleMidJump
 
 EnterMap::
+; handle potential region-swapping
+	ld a, [wDestinationRegion]
+	ld [wCurRegion], a
+; original code resumes here
 ; Load a new map.
 	ld a, $ff
 	ld [wJoyIgnore], a
@@ -537,11 +541,11 @@ WarpFound2::
 	;jr c, .JohtoSide
 	; kanto side
 	;xor a ; kanto
-	;ld [wCurRegion], a
+	;ld [wDestinationRegion], a
 	;jr .continue
 ;.JohtoSide
 	;ld a, 1 ; johto
-	;ld [wCurRegion], a
+	;ld [wDestinationRegion], a
 ;.continue
 ; original code for following a warp continues here
 	ldh a, [hWarpDestinationMap] ; destination map

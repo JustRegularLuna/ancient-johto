@@ -2881,7 +2881,12 @@ wWhichDungeonWarp::
 wUnusedD71F::
 	ds 1
 
-	ds 8
+wDestinationRegion::
+; usually matches wCurRegion until changed during a script
+; change this when you want to warp to a different region
+	ds 1
+
+	ds 7
 
 wd728::
 ; bit 0: using Strength outside of battle
