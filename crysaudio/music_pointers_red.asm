@@ -45,6 +45,12 @@ Music:
 	dba Music_CinnabarMansion ; X
 	dba Music_PokemonTower ; X
 	dba Music_SilphCo ; X
+	dba Music_LookBeauty
 	dba Music_LookHiker
+	dba Music_LookKimonoGirl
 	dba Music_LookLass
 	dba Music_LookOfficer
+	dba Music_LookPokemaniac
+	dba Music_LookRocket
+	dba Music_LookSage
+	dba Music_LookYoungster

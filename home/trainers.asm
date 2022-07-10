@@ -412,30 +412,12 @@ PlayTrainerMusic::
 ;	ld [wAudioROMBank], a
 ;	ld [wAudioSavedROMBank], a
 	ld a, [wEngagedTrainerClass]
-	ld b, a
-	ld hl, EvilTrainerList
-.evilTrainerListLoop
-	ld a, [hli]
-	cp $ff
-	jr z, .noEvilTrainer
-	cp b
-	jr nz, .evilTrainerListLoop
-	ld a, MUSIC_MEET_EVIL_TRAINER
-	jr .PlaySound
-.noEvilTrainer
-	ld hl, FemaleTrainerList
-.femaleTrainerListLoop
-	ld a, [hli]
-	cp $ff
-	jr z, .maleTrainer
-	cp b
-	jr nz, .femaleTrainerListLoop
-	ld a, MUSIC_MEET_FEMALE_TRAINER
-	jr .PlaySound
-.maleTrainer
-	ld a, MUSIC_MEET_MALE_TRAINER
-.PlaySound
-;	ld [wNewSoundID], a
+	sub OPP_YOUNGSTER
+	ld c, a
+	ld b, 0
+	ld hl, TrainerEncounterMusicTable
+	add hl, bc
+	ld a, [hl]
 	jp PlayMusic
 
 INCLUDE "data/trainers/encounter_types.asm"
