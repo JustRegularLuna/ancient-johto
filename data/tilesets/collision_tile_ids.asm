@@ -19,6 +19,8 @@ PlayersRoom_Coll::
 	coll_tiles $01, $0d, $1d, $2d, $3d, $4d, $50, $5d
 
 Mart_Coll::
+	coll_tiles $11, $1a, $1c, $3c, $5e
+
 Pokecenter_Coll::
 	coll_tiles $11, $1a, $1c, $3c, $5e
 
@@ -32,6 +34,8 @@ House_Coll::
 	coll_tiles $01, $12, $14, $28, $32, $37, $44, $54, $5c
 
 Museum_Coll::
+	coll_tiles $01, $12, $14, $1a, $1c, $37, $38, $3b, $3c, $5e
+
 Gate_Coll::
 	coll_tiles $01, $12, $14, $1a, $1c, $37, $38, $3b, $3c, $5e
 
