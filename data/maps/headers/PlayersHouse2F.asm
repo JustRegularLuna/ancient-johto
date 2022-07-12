@@ -1,3 +1,3 @@
 
-	map_header PlayersHouse2F, PLAYERS_HOUSE_2F, REDS_HOUSE_2, 0
+	map_header PlayersHouse2F, PLAYERS_HOUSE_2F, PLAYERS_ROOM, 0
 	end_map_header

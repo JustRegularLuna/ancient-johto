@@ -1,13 +1,13 @@
 PlayersHouse1F_Object:
-	db $a ; border block
+	db $0 ; border block
 
 	def_warps
-	warp 9, 1, 0, PLAYERS_HOUSE_2F
+	warp  9,  0, 0, PLAYERS_HOUSE_2F
 	warp 6, 7, 0, LAST_MAP
 	warp 7, 7, 0, LAST_MAP
 
 	def_signs
-	sign  7,  1, 2 ; TV
+	sign  4,  1, 2 ; TV
 
 	def_objects
 	object SPRITE_MOM,  7,  4, STAY, LEFT, 1 ; Mom

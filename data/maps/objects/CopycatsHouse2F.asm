@@ -1,8 +1,8 @@
 CopycatsHouse2F_Object:
-	db $a ; border block
+	db $0 ; border block
 
 	def_warps
-	warp  7,  1, 2, COPYCATS_HOUSE_1F
+	warp  7,  0, 2, COPYCATS_HOUSE_1F
 
 	def_signs
 	sign  3,  5, 6 ; CopycatsHouse2FText6

@@ -12,9 +12,11 @@ Underground_Coll::
 Overworld_Coll::
 	coll_tiles $00, $10, $1b, $20, $21, $23, $2c, $2d, $2e, $30, $31, $33, $39, $3c, $3e, $52, $54, $58, $5b
 
-RedsHouse1_Coll::
-RedsHouse2_Coll::
-	coll_tiles $01, $02, $03, $11, $12, $13, $14, $1c, $1a
+PlayersHouse_Coll::
+	coll_tiles $01, $05, $10, $12, $14, $5c, $5e
+
+PlayersRoom_Coll::
+	coll_tiles $01, $0d, $1d, $2d, $3d, $4d, $50, $5d
 
 Mart_Coll::
 Pokecenter_Coll::

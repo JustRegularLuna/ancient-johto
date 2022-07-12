@@ -1,8 +1,8 @@
 PlayersHouse2F_Object:
-	db $a ; border block
+	db $0 ; border block
 
 	def_warps
-	warp 7, 1, 0, PLAYERS_HOUSE_1F
+	warp  7,  0, 0, PLAYERS_HOUSE_1F
 
 	def_signs
 
@@ -22,12 +22,6 @@ PlayersHouse2F_ScriptPointers:
 	dw PlayersHouse2FScript1
 
 PlayersHouse2FScript0:
-; start out facing the nintendo
-	xor a
-	ldh [hJoyHeld], a
-	ld a, PLAYER_DIR_UP
-	ld [wPlayerMovingDirection], a
-
 ; debug event to silently add an eevee to your party
 	ld a,$80
 	ld [wMonDataLocation],a

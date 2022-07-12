@@ -3,11 +3,6 @@ SECTION "Tilesets 1", ROMX
 Overworld_GFX::     INCBIN "gfx/tilesets/overworld.2bpp"
 Overworld_Block::   INCBIN "gfx/blocksets/overworld.bst"
 
-RedsHouse1_GFX::
-RedsHouse2_GFX::    INCBIN "gfx/tilesets/reds_house.2bpp"
-RedsHouse1_Block::
-RedsHouse2_Block::  INCBIN "gfx/blocksets/reds_house.bst"
-
 House_GFX::         INCBIN "gfx/tilesets/house.2bpp"
 House_Block::       INCBIN "gfx/blocksets/house.bst"
 Mansion_GFX::       INCBIN "gfx/tilesets/mansion.2bpp"
@@ -67,3 +62,8 @@ SECTION "Tilesets 4", ROMX
 
 Johto_GFX::         INCBIN "gfx/tilesets/johto.2bpp"
 Johto_Block::       INCBIN "gfx/blocksets/johto.bst"
+
+PlayersHouse_GFX::   INCBIN "gfx/tilesets/players_house.2bpp"
+PlayersRoom_GFX::    INCBIN "gfx/tilesets/players_room.2bpp"
+PlayersHouse_Block:: INCBIN "gfx/blocksets/players_house.bst"
+PlayersRoom_Block::  INCBIN "gfx/blocksets/players_room.bst"

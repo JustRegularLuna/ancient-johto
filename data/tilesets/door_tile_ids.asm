@@ -1,18 +1,20 @@
 DoorTileIDPointers:
-	dbw OVERWORLD,   .OverworldDoorTileIDs
-	dbw FOREST,      .ForestDoorTileIDs
-	dbw MART,        .MartDoorTileIDs
-	dbw HOUSE,       .HouseDoorTileIDs
-	dbw FOREST_GATE, .TilesetMuseumDoorTileIDs
-	dbw MUSEUM,      .TilesetMuseumDoorTileIDs
-	dbw GATE,        .TilesetMuseumDoorTileIDs
-	dbw SHIP,        .ShipDoorTileIDs
-	dbw LOBBY,       .LobbyDoorTileIDs
-	dbw MANSION,     .MansionDoorTileIDs
-	dbw LAB,         .LabDoorTileIDs
-	dbw FACILITY,    .FacilityDoorTileIDs
-	dbw PLATEAU,     .PlateauDoorTileIDs
-	dbw JOHTO,       .JohtoDoorTileIDs
+	dbw OVERWORLD,     .OverworldDoorTileIDs
+	dbw FOREST,        .ForestDoorTileIDs
+	dbw MART,          .MartDoorTileIDs
+	dbw HOUSE,         .HouseDoorTileIDs
+	dbw FOREST_GATE,   .TilesetMuseumDoorTileIDs
+	dbw MUSEUM,        .TilesetMuseumDoorTileIDs
+	dbw GATE,          .TilesetMuseumDoorTileIDs
+	dbw SHIP,          .ShipDoorTileIDs
+	dbw LOBBY,         .LobbyDoorTileIDs
+	dbw MANSION,       .MansionDoorTileIDs
+	dbw LAB,           .LabDoorTileIDs
+	dbw FACILITY,      .FacilityDoorTileIDs
+	dbw PLATEAU,       .PlateauDoorTileIDs
+	dbw JOHTO,         .JohtoDoorTileIDs
+	dbw PLAYERS_HOUSE, .PlayersHouseDoorTileIDs
+	dbw PLAYERS_ROOM,  .PlayersRoomDoorTileIDs
 	db -1 ; end
 
 door_tiles: MACRO
@@ -58,3 +60,9 @@ ENDM
 
 .JohtoDoorTileIDs:
 	door_tiles $29, $39, $56
+
+.PlayersHouseDoorTileIDs:
+	door_tiles $5c, $5e
+
+.PlayersRoomDoorTileIDs:
+	door_tiles $50
