@@ -36,9 +36,7 @@ Plateau_Block::     INCBIN "gfx/blocksets/plateau.bst"
 
 SECTION "Gym Tileset", ROMX
 
-Dojo_GFX::
 Gym_GFX::           INCBIN "gfx/tilesets/gym.2bpp"
-Dojo_Block::
 Gym_Block::         INCBIN "gfx/blocksets/gym.bst"
 
 
