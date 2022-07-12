@@ -42,10 +42,14 @@ Gym_Block::         INCBIN "gfx/blocksets/gym.bst"
 
 SECTION "Pokecenter Tileset", ROMX
 
-Mart_GFX::
 Pokecenter_GFX::    INCBIN "gfx/tilesets/pokecenter.2bpp"
-Mart_Block::
 Pokecenter_Block::  INCBIN "gfx/blocksets/pokecenter.bst"
+
+
+SECTION "Mart Tileset", ROMX
+
+Mart_GFX::          INCBIN "gfx/tilesets/mart.2bpp"
+Mart_Block::        INCBIN "gfx/blocksets/mart.bst"
 
 
 SECTION "Gate Tileset", ROMX
