@@ -128,12 +128,12 @@ ROMX $18
 	"Maps 18"
 	"Hidden Objects 4"
 ROMX $19
-	"Tilesets 1"
+;	"Tilesets 1"
 ROMX $1A
 	"Battle Engine 11"
-	"Tilesets 2"
+;	"Tilesets 2"
 ROMX $1B
-	"Tilesets 3"
+;	"Tilesets 3"
 ROMX $1C
 	"bank1C"
 ROMX $1D
