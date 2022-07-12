@@ -9,7 +9,6 @@
 	const POKECENTER
 	const GYM
 	const HOUSE
-	const FOREST_GATE
 	const MUSEUM
 	const UNDERGROUND
 	const GATE

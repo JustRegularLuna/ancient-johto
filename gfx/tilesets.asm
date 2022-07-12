@@ -54,10 +54,8 @@ Mart_Block::        INCBIN "gfx/blocksets/mart.bst"
 
 SECTION "Gate Tileset", ROMX
 
-ForestGate_GFX::
 Museum_GFX::
 Gate_GFX::          INCBIN "gfx/tilesets/gate.2bpp"
-ForestGate_Block::
 Museum_Block::
 Gate_Block::        INCBIN "gfx/blocksets/gate.bst"
 
