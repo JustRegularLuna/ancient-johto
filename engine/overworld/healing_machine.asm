@@ -15,6 +15,7 @@ AnimateHealingMachine:
 	ld hl, wOAMBuffer + $84
 	ld de, PokeCenterOAMData
 	call CopyHealingMachineOAM
+	call CopyHealingMachineOAM
 
 	ld a, 4
 	ld [wMusicFade], a
@@ -72,14 +73,15 @@ PokeCenterFlashingMonitorAndHealBall:
 
 PokeCenterOAMData:
 	; heal machine monitor
-	dbsprite  6,  4,  4,  4, $fc, OAM_OBP1
+	dbsprite   4,   4, 2, 0, $fc, OAM_OBP1
+	dbsprite   4,   4, 6, 0, $fc, OAM_OBP1
 	; poke balls 1-6
-	dbsprite  6,  5,  0,  3, $fd, OAM_OBP1
-	dbsprite  7,  5,  0,  3, $fd, OAM_OBP1 | OAM_HFLIP
-	dbsprite  6,  6,  0,  0, $fd, OAM_OBP1
-	dbsprite  7,  6,  0,  0, $fd, OAM_OBP1 | OAM_HFLIP
-	dbsprite  6,  6,  0,  5, $fd, OAM_OBP1
-	dbsprite  7,  6,  0,  5, $fd, OAM_OBP1 | OAM_HFLIP
+	dbsprite   4,   4, 0, 6, $fd, OAM_OBP1
+	dbsprite   5,   4, 0, 6, $fd, OAM_OBP1 | OAM_HFLIP
+	dbsprite   4,   5, 0, 3, $fd, OAM_OBP1
+	dbsprite   5,   5, 0, 3, $fd, OAM_OBP1 | OAM_HFLIP
+	dbsprite   4,   6, 0, 0, $fd, OAM_OBP1
+	dbsprite   5,   6, 0, 0, $fd, OAM_OBP1 | OAM_HFLIP
 
 ; d = value to xor with palette
 FlashSprite8Times:

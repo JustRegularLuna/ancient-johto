@@ -52,7 +52,7 @@ ENDM
 	warp_tiles $5E
 
 .PokecenterWarpTileIDs:
-	warp_tiles $5E
+	warp_tiles $32, $52, $54
 
 .ForestWarpTileIDs:
 	warp_tiles $5A, $5C, $3A

@@ -22,7 +22,7 @@ Mart_Coll::
 	coll_tiles $11, $1a, $1c, $3c, $5e
 
 Pokecenter_Coll::
-	coll_tiles $11, $1a, $1c, $3c, $5e
+	coll_tiles $11, $32, $50, $52, $54, $58, $5b, $69, $76
 
 Gym_Coll::
 	coll_tiles $11, $16, $19, $2b, $3c, $3d, $3f, $4a, $4c, $4d, $03

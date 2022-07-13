@@ -14,7 +14,7 @@ Tilesets:
 	tileset Mart_Block,         Mart_GFX,         Mart_Coll,        $18,$19,$1E, $FF, TILEANIM_NONE
 	tileset Forest_Block,       Forest_GFX,       Forest_Coll,      $FF,$FF,$FF, $20, TILEANIM_WATER
 	tileset PlayersRoom_Block,  PlayersRoom_GFX,  PlayersRoom_Coll, $FF,$FF,$FF, $FF, TILEANIM_NONE
-	tileset Pokecenter_Block,   Pokecenter_GFX,   Pokecenter_Coll,  $18,$19,$1E, $FF, TILEANIM_NONE
+	tileset Pokecenter_Block,   Pokecenter_GFX,   Pokecenter_Coll,  $24,$FF,$FF, $FF, TILEANIM_NONE
 	tileset Gym_Block,          Gym_GFX,          Gym_Coll,         $3A,$FF,$FF, $FF, TILEANIM_WATER_FLOWER
 	tileset House_Block,        House_GFX,        House_Coll,       $FF,$FF,$FF, $FF, TILEANIM_NONE
 	tileset Museum_Block,       Museum_GFX,       Museum_Coll,      $17,$32,$FF, $FF, TILEANIM_NONE

@@ -14,6 +14,7 @@ DoorTileIDPointers:
 	dbw JOHTO,         .JohtoDoorTileIDs
 	dbw PLAYERS_HOUSE, .PlayersHouseDoorTileIDs
 	dbw PLAYERS_ROOM,  .PlayersRoomDoorTileIDs
+	dbw POKECENTER,    .PokecenterDoorTileIDs
 	db -1 ; end
 
 door_tiles: MACRO
@@ -32,6 +33,9 @@ ENDM
 
 .MartDoorTileIDs:
 	door_tiles $5e
+
+.PokecenterDoorTileIDs:
+	door_tiles $32
 
 .HouseDoorTileIDs:
 	door_tiles $54
