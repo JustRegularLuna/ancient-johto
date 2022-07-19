@@ -778,8 +778,6 @@ INCLUDE "data/maps/headers/Route18.asm"
 INCLUDE "data/maps/objects/Route18.asm"
 Route18_Blocks: INCBIN "maps/kanto/Route18.blk"
 
-	INCBIN "maps/kanto/UnusedPokecenterCopy.blk"
-
 
 SECTION "Maps 14", ROMX
 
@@ -981,9 +979,6 @@ SECTION "Maps 17", ROMX
 ViridianForest_Blocks: INCBIN "maps/kanto/ViridianForest.blk"
 UndergroundPathNorthSouth_Blocks: INCBIN "maps/kanto/UndergroundPathNorthSouth.blk"
 UndergroundPathWestEast_Blocks: INCBIN "maps/kanto/UndergroundPathWestEast.blk"
-
-	INCBIN "maps/kanto/UnusedDiglettsCaveCopy.blk"
-
 SSAnneB1FRooms_Blocks:
 SSAnne2FRooms_Blocks: INCBIN "maps/kanto/SSAnne2FRooms.blk"
 
@@ -1016,8 +1011,6 @@ INCLUDE "data/maps/headers/PokemonTower6F.asm"
 INCLUDE "scripts/PokemonTower6F.asm"
 INCLUDE "data/maps/objects/PokemonTower6F.asm"
 PokemonTower6F_Blocks: INCBIN "maps/kanto/PokemonTower6F.blk"
-
-	INCBIN "maps/kanto/UnusedEmptyMap.blk"
 
 INCLUDE "data/maps/headers/PokemonTower7F.asm"
 INCLUDE "scripts/PokemonTower7F.asm"
