@@ -61,13 +61,13 @@ CheckForceBikeOrSurf::
 	jr nz, .loop ; incorrect x-coord, check next item
 	ld a, [wCurMap]
 	cp SEAFOAM_ISLANDS_B3F
-	ld a, $2
-	ld [wSeafoamIslandsB3FCurScript], a
+	;ld a, $2
+	;ld [wSeafoamIslandsB3FCurScript], a
 	jr z, .forceSurfing
 	ld a, [wCurMap]
 	cp SEAFOAM_ISLANDS_B4F
-	ld a, $2
-	ld [wSeafoamIslandsB4FCurScript], a
+	;ld a, $2
+	;ld [wSeafoamIslandsB4FCurScript], a
 	jr z, .forceSurfing
 	;force bike riding
 	ld hl, wd732

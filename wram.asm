@@ -2592,211 +2592,31 @@ wMissableObjectList::
 	ds 17 * 2
 
 wGameProgressFlags::
+; Used by generic route/dungeon maps that only need to track stages in trainer encounters
+wGenericTrainersCurScript::
+	ds 1
 
-wOaksLabCurScript::
+; Used to track script stage on other maps
+wPlayersHouse2FCurScript::
 	ds 1
-wPalletTownCurScript::
-	ds 1
-wBluesHouseCurScript::
-	ds 1
-wViridianCityCurScript::
-	ds 1
-wPewterCityCurScript::
-	ds 1
-wRoute3CurScript::
-	ds 1
-wRoute4CurScript::
-	ds 1
-wViridianGymCurScript::
-	ds 1
-wPewterGymCurScript::
-	ds 1
-wCeruleanGymCurScript::
-	ds 1
-wVermilionGymCurScript::
-	ds 1
-wCeladonGymCurScript::
-	ds 1
-wRoute6CurScript::
-	ds 1
-wRoute8CurScript::
-	ds 1
-wRoute24CurScript::
-	ds 1
-wRoute25CurScript::
-	ds 1
-wRoute9CurScript::
-	ds 1
-wRoute10CurScript::
-	ds 1
-wMtMoon1FCurScript::
-	ds 1
-wMtMoonB2FCurScript::
-	ds 1
-wSSAnne1FRoomsCurScript::
-	ds 1
-wSSAnne2FRoomsCurScript::
-	ds 1
-wRoute22CurScript::
-	ds 1
-wRedsHouse2FCurScript::
-	ds 1
-wViridianMartCurScript::
-	ds 1
-wRoute22GateCurScript::
-	ds 1
-wCeruleanCityCurScript::
-	ds 1
-wSSAnneBowCurScript::
-	ds 1
-wViridianForestCurScript::
-	ds 1
-wMuseum1FCurScript::
-	ds 1
-wRoute13CurScript::
-	ds 1
-wRoute14CurScript::
-	ds 1
-wRoute17CurScript::
-	ds 1
-wRoute19CurScript::
-	ds 1
-wRoute21CurScript::
-	ds 1
+
 wSafariZoneGateCurScript::
 	ds 1
-wRockTunnelB1FCurScript::
-	ds 1
-wRockTunnel1FCurScript::
-	ds 1
-wRoute11CurScript::
-	ds 1
-wRoute12CurScript::
-	ds 1
-wRoute15CurScript::
-	ds 1
-wRoute16CurScript::
-	ds 1
-wRoute18CurScript::
-	ds 1
-wRoute20CurScript::
-	ds 1
-wSSAnneB1FRoomsCurScript::
-	ds 1
-wVermilionCityCurScript::
-	ds 1
-wPokemonTower2FCurScript::
-	ds 1
-wPokemonTower3FCurScript::
-	ds 1
-wPokemonTower4FCurScript::
-	ds 1
-wPokemonTower5FCurScript::
-	ds 1
-wPokemonTower6FCurScript::
-	ds 1
-wPokemonTower7FCurScript::
-	ds 1
-wRocketHideoutB1FCurScript::
-	ds 1
-wRocketHideoutB2FCurScript::
-	ds 1
-wRocketHideoutB3FCurScript::
-	ds 1
-wRocketHideoutB4FCurScript::
-	ds 1
-wRoute6GateCurScript::
-	ds 1
-wRoute8GateCurScript::
-	ds 1
-wCinnabarIslandCurScript::
-	ds 1
-wPokemonMansion1FCurScript::
-	ds 1
-wPokemonMansion2FCurScript::
-	ds 1
-wPokemonMansion3FCurScript::
-	ds 1
-wPokemonMansionB1FCurScript::
-	ds 1
-wVictoryRoad2FCurScript::
-	ds 1
-wVictoryRoad3FCurScript::
-	ds 1
-wFightingDojoCurScript::
-	ds 1
-wSilphCo2FCurScript::
-	ds 1
-wSilphCo3FCurScript::
-	ds 1
-wSilphCo4FCurScript::
-	ds 1
-wSilphCo5FCurScript::
-	ds 1
-wSilphCo6FCurScript::
-	ds 1
-wSilphCo7FCurScript::
-	ds 1
-wSilphCo8FCurScript::
-	ds 1
-wSilphCo9FCurScript::
-	ds 1
-wHallOfFameCurScript::
-	ds 1
-wChampionsRoomCurScript::
-	ds 1
+
 wLoreleisRoomCurScript::
 	ds 1
 wBrunosRoomCurScript::
 	ds 1
 wAgathasRoomCurScript::
 	ds 1
-wCeruleanCaveB1FCurScript::
-	ds 1
-wVictoryRoad1FCurScript::
-	ds 1
 wLancesRoomCurScript::
 	ds 1
-wSilphCo10FCurScript::
+wChampionsRoomCurScript::
 	ds 1
-wSilphCo11FCurScript::
-	ds 1
-wFuchsiaGymCurScript::
-	ds 1
-wSaffronGymCurScript::
-	ds 1
-wCinnabarGymCurScript::
-	ds 1
-wGameCornerCurScript::
-	ds 1
-wRoute16Gate1FCurScript::
-	ds 1
-wBillsHouseCurScript::
-	ds 1
-wRoute5GateCurScript::
-	ds 1
-wPowerPlantCurScript::
-	ds 1
-wRoute7GateCurScript::
-	ds 1
-wSSAnne2FCurScript::
-	ds 1
-wSeafoamIslandsB3FCurScript::
-	ds 1
-wRoute23CurScript::
-	ds 1
-wSeafoamIslandsB4FCurScript::
-	ds 1
-wRoute18Gate1FCurScript::
-	ds 1
-
-
-wPlayersHouse2FCurScript::
+wHallOfFameCurScript::
 	ds 1
 
 wGameProgressFlagsEnd::
-
-	;ds 128
 
 
 wObtainedHiddenItemsFlags::
