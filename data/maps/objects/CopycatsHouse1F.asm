@@ -9,8 +9,11 @@ CopycatsHouse1F_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_MIDDLE_AGED_WOMAN, 2, 2, STAY, DOWN, 1 ; person
-	object SPRITE_MIDDLE_AGED_MAN, 5, 4, STAY, LEFT, 2 ; person
-	object SPRITE_FAIRY, 1, 4, WALK, UP_DOWN, 3 ; person
 
 	def_warps_to COPYCATS_HOUSE_1F
+
+CopycatsHouse1F_Script:
+	jp EnableAutoTextBoxDrawing
+
+CopycatsHouse1F_TextPointers:
+	dw -1

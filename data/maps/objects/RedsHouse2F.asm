@@ -9,3 +9,9 @@ RedsHouse2F_Object:
 	def_objects
 
 	def_warps_to REDS_HOUSE_2F
+
+RedsHouse2F_Script:
+	jp EnableAutoTextBoxDrawing
+
+RedsHouse2F_TextPointers:
+	dw -1

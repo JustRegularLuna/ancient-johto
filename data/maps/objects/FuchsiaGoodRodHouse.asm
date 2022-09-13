@@ -9,6 +9,11 @@ FuchsiaGoodRodHouse_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_FISHING_GURU, 5, 3, STAY, RIGHT, 1 ; person
 
 	def_warps_to FUCHSIA_GOOD_ROD_HOUSE
+
+FuchsiaGoodRodHouse_Script:
+	jp EnableAutoTextBoxDrawing
+
+FuchsiaGoodRodHouse_TextPointers:
+	dw -1

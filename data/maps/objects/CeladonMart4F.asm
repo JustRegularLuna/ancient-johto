@@ -7,11 +7,14 @@ CeladonMart4F_Object:
 	warp  1,  1, 0, CELADON_MART_ELEVATOR
 
 	def_signs
-	sign 14,  1, 4 ; CeladonMart4Text4
 
 	def_objects
 	object SPRITE_CLERK, 5, 7, STAY, NONE, 1 ; person
-	object SPRITE_SUPER_NERD, 15, 5, WALK, LEFT_RIGHT, 2 ; person
-	object SPRITE_YOUNGSTER, 5, 2, WALK, LEFT_RIGHT, 3 ; person
 
 	def_warps_to CELADON_MART_4F
+
+CeladonMart4F_Script:
+	jp EnableAutoTextBoxDrawing
+
+CeladonMart4F_TextPointers:
+	dw CeladonMart4ClerkText

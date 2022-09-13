@@ -8,6 +8,11 @@ SafariZoneSecretHouse_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_FISHING_GURU, 3, 3, STAY, DOWN, 1 ; person
 
 	def_warps_to SAFARI_ZONE_SECRET_HOUSE
+
+SafariZoneSecretHouse_Script:
+	jp EnableAutoTextBoxDrawing
+
+SafariZoneSecretHouse_TextPointers:
+	dw -1

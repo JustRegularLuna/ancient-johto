@@ -11,3 +11,9 @@ MrPsychicsHouse_Object:
 	object SPRITE_FISHING_GURU, 5, 3, STAY, LEFT, 1 ; person
 
 	def_warps_to MR_PSYCHICS_HOUSE
+
+MrPsychicsHouse_Script:
+	jp EnableAutoTextBoxDrawing
+
+MrPsychicsHouse_TextPointers:
+	dw -1

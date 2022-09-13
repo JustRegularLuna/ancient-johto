@@ -11,10 +11,11 @@ RocketHideoutB2F_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_ROCKET, 20, 12, STAY, DOWN, 1, OPP_ROCKET, 13
-	object SPRITE_POKE_BALL, 1, 11, STAY, NONE, 2, MOON_STONE
-	object SPRITE_POKE_BALL, 16, 8, STAY, NONE, 3, NUGGET
-	object SPRITE_POKE_BALL, 6, 12, STAY, NONE, 4, TM_HORN_DRILL
-	object SPRITE_POKE_BALL, 3, 21, STAY, NONE, 5, SUPER_POTION
 
 	def_warps_to ROCKET_HIDEOUT_B2F
+
+RocketHideoutB2F_Script:
+	jp EnableAutoTextBoxDrawing
+
+RocketHideoutB2F_TextPointers:
+	dw -1

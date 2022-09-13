@@ -9,8 +9,13 @@ Route5_Object:
 	warp 10, 21, 0, DAYCARE
 
 	def_signs
-	sign 17, 29, 1 ; Route5Text1
 
 	def_objects
 
 	def_warps_to ROUTE_5
+
+Route5_Script:
+	jp EnableAutoTextBoxDrawing
+
+Route5_TextPointers:
+	dw -1

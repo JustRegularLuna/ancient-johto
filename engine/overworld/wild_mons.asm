@@ -1,4 +1,13 @@
 LoadWildData::
+	; ignore wild encounters if you have no pokemon
+	xor a
+	ld [wGrassRate], a
+	ld [wWaterRate], a
+	ld a, [wPartyCount]
+	and a
+	ret z
+
+	; load the appropriate table for the current region
 	ld a, [wCurRegion]
 	and a ; Kanto?
 	ld hl, WildDataPointers

@@ -10,3 +10,9 @@ VermilionDock_Object:
 	def_objects
 
 	def_warps_to VERMILION_DOCK
+
+VermilionDock_Script:
+	jp EnableAutoTextBoxDrawing
+
+VermilionDock_TextPointers:
+	dw -1

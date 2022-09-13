@@ -18,21 +18,6 @@ TextPredefs::
 	add_tx_pre GymStatueText1                       ; 0C
 	add_tx_pre GymStatueText2                       ; 0D
 	add_tx_pre BookcaseText                         ; 0E
-	add_tx_pre ViridianCityPokecenterBenchGuyText   ; 0F
-	add_tx_pre PewterCityPokecenterBenchGuyText     ; 10
-	add_tx_pre CeruleanCityPokecenterBenchGuyText   ; 11
-	add_tx_pre LavenderCityPokecenterBenchGuyText   ; 12
-	add_tx_pre VermilionCityPokecenterBenchGuyText  ; 13
-	add_tx_pre CeladonCityPokecenterBenchGuyText    ; 14
-	add_tx_pre CeladonCityHotelText                 ; 15
-	add_tx_pre FuchsiaCityPokecenterBenchGuyText    ; 16
-	add_tx_pre CinnabarIslandPokecenterBenchGuyText ; 17
-	add_tx_pre SaffronCityPokecenterBenchGuyText    ; 18
-	add_tx_pre MtMoonPokecenterBenchGuyText         ; 19
-	add_tx_pre RockTunnelPokecenterBenchGuyText     ; 1A
-	add_tx_pre UnusedBenchGuyText1                  ; 1B XXX unused
-	add_tx_pre UnusedBenchGuyText2                  ; 1C XXX unused
-	add_tx_pre UnusedBenchGuyText3                  ; 1D XXX unused
 	add_tx_pre UnusedPredefText                     ; 1E XXX unused
 	add_tx_pre PokemonCenterPCText                  ; 1F
 	add_tx_pre ViridianSchoolNotebook               ; 20

@@ -9,6 +9,11 @@ CeruleanBadgeHouse_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_MIDDLE_AGED_MAN, 5, 3, STAY, RIGHT, 1 ; person
 
 	def_warps_to CERULEAN_BADGE_HOUSE
+
+CeruleanBadgeHouse_Script:
+	jp EnableAutoTextBoxDrawing
+
+CeruleanBadgeHouse_TextPointers:
+	dw -1

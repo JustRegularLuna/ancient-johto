@@ -13,12 +13,11 @@ SilphCo4F_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_SILPH_WORKER, 6, 2, STAY, NONE, 1 ; person
-	object SPRITE_ROCKET, 9, 14, STAY, RIGHT, 2, OPP_ROCKET, 26
-	object SPRITE_SCIENTIST, 14, 6, STAY, LEFT, 3, OPP_SCIENTIST, 5
-	object SPRITE_ROCKET, 26, 10, STAY, UP, 4, OPP_ROCKET, 27
-	object SPRITE_POKE_BALL, 3, 9, STAY, NONE, 5, FULL_HEAL
-	object SPRITE_POKE_BALL, 4, 7, STAY, NONE, 6, MAX_REVIVE
-	object SPRITE_POKE_BALL, 5, 8, STAY, NONE, 7, ESCAPE_ROPE
 
 	def_warps_to SILPH_CO_4F
+
+SilphCo4F_Script:
+	jp EnableAutoTextBoxDrawing
+
+SilphCo4F_TextPointers:
+	dw -1

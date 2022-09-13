@@ -14,8 +14,11 @@ PokemonMansion1F_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_SCIENTIST, 17, 17, STAY, LEFT, 1, OPP_SCIENTIST, 4
-	object SPRITE_POKE_BALL, 14, 3, STAY, NONE, 2, ESCAPE_ROPE
-	object SPRITE_POKE_BALL, 18, 21, STAY, NONE, 3, CARBOS
 
 	def_warps_to POKEMON_MANSION_1F
+
+PokemonMansion1F_Script:
+	jp EnableAutoTextBoxDrawing
+
+PokemonMansion1F_TextPointers:
+	dw -1

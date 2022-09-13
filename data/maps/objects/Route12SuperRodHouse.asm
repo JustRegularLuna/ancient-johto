@@ -8,6 +8,11 @@ Route12SuperRodHouse_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_FISHING_GURU, 2, 4, STAY, RIGHT, 1 ; person
 
 	def_warps_to ROUTE_12_SUPER_ROD_HOUSE
+
+Route12SuperRodHouse_Script:
+	jp EnableAutoTextBoxDrawing
+
+Route12SuperRodHouse_TextPointers:
+	dw -1

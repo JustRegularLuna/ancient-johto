@@ -10,7 +10,11 @@ ViridianForestNorthGate_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_SUPER_NERD, 3, 2, STAY, NONE, 1 ; person
-	object SPRITE_GRAMPS, 2, 5, STAY, NONE, 2 ; person
 
 	def_warps_to VIRIDIAN_FOREST_NORTH_GATE
+
+ViridianForestNorthGate_Script:
+	jp EnableAutoTextBoxDrawing
+
+ViridianForestNorthGate_TextPointers:
+	dw -1

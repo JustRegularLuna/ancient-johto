@@ -11,6 +11,11 @@ SilphCo1F_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_LINK_RECEPTIONIST, 4, 2, STAY, DOWN, 1 ; person
 
 	def_warps_to SILPH_CO_1F
+
+SilphCo1F_Script:
+	jp EnableAutoTextBoxDrawing
+
+SilphCo1F_TextPointers:
+	dw -1

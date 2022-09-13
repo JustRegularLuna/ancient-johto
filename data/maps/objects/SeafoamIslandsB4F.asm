@@ -8,12 +8,13 @@ SeafoamIslandsB4F_Object:
 	warp 25,  4, 2, SEAFOAM_ISLANDS_B3F
 
 	def_signs
-	sign  9, 15, 4 ; SeafoamIslands5Text4
-	sign 23,  1, 5 ; SeafoamIslands5Text5
 
 	def_objects
-	object SPRITE_BOULDER, 4, 15, STAY, NONE, 1 ; person
-	object SPRITE_BOULDER, 5, 15, STAY, NONE, 2 ; person
-	object SPRITE_BIRD, 6, 1, STAY, DOWN, 3, ARTICUNO, 50
 
 	def_warps_to SEAFOAM_ISLANDS_B4F
+
+SeafoamIslandsB4F_Script:
+	jp EnableAutoTextBoxDrawing
+
+SeafoamIslandsB4F_TextPointers:
+	dw -1

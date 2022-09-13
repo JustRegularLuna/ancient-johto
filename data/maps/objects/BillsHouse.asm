@@ -8,8 +8,11 @@ BillsHouse_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_MONSTER, 6, 5, STAY, NONE, 1 ; person
-	object SPRITE_SUPER_NERD, 4, 4, STAY, NONE, 2 ; person
-	object SPRITE_SUPER_NERD, 6, 5, STAY, NONE, 3 ; person
 
 	def_warps_to BILLS_HOUSE
+
+BillsHouse_Script:
+	jp EnableAutoTextBoxDrawing
+
+BillsHouse_TextPointers:
+	dw -1

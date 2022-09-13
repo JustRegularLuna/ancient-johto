@@ -9,10 +9,20 @@ MtMoonPokecenter_Object:
 
 	def_objects
 	object SPRITE_NURSE, 3, 1, STAY, DOWN, 1 ; person
-	object SPRITE_YOUNGSTER, 4, 3, STAY, UP, 2 ; person
-	object SPRITE_GENTLEMAN, 7, 3, STAY, UP, 3 ; person
-	object SPRITE_MIDDLE_AGED_MAN, 10, 6, WALK, LEFT_RIGHT, 4 ; person
-	object SPRITE_CLIPBOARD, 7, 2, STAY, NONE, 5 ; person
-	object SPRITE_LINK_RECEPTIONIST, 11, 2, STAY, DOWN, 6 ; person
+	object SPRITE_LINK_RECEPTIONIST, 11, 2, STAY, DOWN, 2 ; person
 
 	def_warps_to MT_MOON_POKECENTER
+
+MtMoonPokecenter_Script:
+	call Serial_TryEstablishingExternallyClockedConnection
+	jp EnableAutoTextBoxDrawing
+
+MtMoonPokecenter_TextPointers:
+	dw MtMoonHealNurseText
+	dw MtMoonTradeNurseText
+
+MtMoonHealNurseText:
+	script_pokecenter_nurse
+
+MtMoonTradeNurseText:
+	script_cable_club_receptionist

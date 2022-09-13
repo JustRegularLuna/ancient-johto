@@ -9,7 +9,11 @@ CinnabarMart_Object:
 
 	def_objects
 	object SPRITE_CLERK, 0, 5, STAY, RIGHT, 1 ; person
-	object SPRITE_ERIKA, 6, 2, STAY, NONE, 2 ; person
-	object SPRITE_SCIENTIST, 3, 4, STAY, NONE, 3 ; person
 
 	def_warps_to CINNABAR_MART
+
+CinnabarMart_Script:
+	jp EnableAutoTextBoxDrawing
+
+CinnabarMart_TextPointers:
+	dw CinnabarCashierText

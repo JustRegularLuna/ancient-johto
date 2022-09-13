@@ -11,9 +11,11 @@ SilphCo9F_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_NURSE, 3, 14, STAY, DOWN, 1 ; person
-	object SPRITE_ROCKET, 2, 4, STAY, UP, 2, OPP_ROCKET, 37
-	object SPRITE_SCIENTIST, 21, 13, STAY, DOWN, 3, OPP_SCIENTIST, 10
-	object SPRITE_ROCKET, 13, 16, STAY, UP, 4, OPP_ROCKET, 38
 
 	def_warps_to SILPH_CO_9F
+
+SilphCo9F_Script:
+	jp EnableAutoTextBoxDrawing
+
+SilphCo9F_TextPointers:
+	dw -1

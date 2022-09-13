@@ -13,14 +13,13 @@ SafariZoneNorth_Object:
 	warp 35,  3, 0, SAFARI_ZONE_NORTH_REST_HOUSE
 
 	def_signs
-	sign 36,  4, 3 ; SafariZoneNorthText3
-	sign  4, 25, 4 ; SafariZoneNorthText4
-	sign 13, 31, 5 ; SafariZoneNorthText5
-	sign 19, 33, 6 ; SafariZoneNorthText6
-	sign 26, 28, 7 ; SafariZoneNorthText7
 
 	def_objects
-	object SPRITE_POKE_BALL, 25, 1, STAY, NONE, 1, PROTEIN
-	object SPRITE_POKE_BALL, 19, 7, STAY, NONE, 2, TM_SKULL_BASH
 
 	def_warps_to SAFARI_ZONE_NORTH
+
+SafariZoneNorth_Script:
+	jp EnableAutoTextBoxDrawing
+
+SafariZoneNorth_TextPointers:
+	dw -1

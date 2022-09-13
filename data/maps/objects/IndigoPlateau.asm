@@ -10,3 +10,9 @@ IndigoPlateau_Object:
 	def_objects
 
 	def_warps_to INDIGO_PLATEAU
+
+IndigoPlateau_Script:
+	call EnableAutoTextBoxDrawing
+
+IndigoPlateau_TextPointers:
+	dw -1

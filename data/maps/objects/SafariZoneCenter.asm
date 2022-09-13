@@ -13,10 +13,13 @@ SafariZoneCenter_Object:
 	warp 17, 19, 0, SAFARI_ZONE_CENTER_REST_HOUSE
 
 	def_signs
-	sign 18, 20, 2 ; SafariZoneCenterText2
-	sign 14, 22, 3 ; SafariZoneCenterText3
 
 	def_objects
-	object SPRITE_POKE_BALL, 14, 10, STAY, NONE, 1, NUGGET
 
 	def_warps_to SAFARI_ZONE_CENTER
+
+SafariZoneCenter_Script:
+	jp EnableAutoTextBoxDrawing
+
+SafariZoneCenter_TextPointers:
+	dw -1

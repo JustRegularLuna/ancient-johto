@@ -8,7 +8,11 @@ PokemonTower2F_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_BLUE, 14, 5, STAY, NONE, 1 ; person
-	object SPRITE_CHANNELER, 3, 7, STAY, RIGHT, 2 ; person
 
 	def_warps_to POKEMON_TOWER_2F
+
+PokemonTower2F_Script:
+	jp EnableAutoTextBoxDrawing
+
+PokemonTower2F_TextPointers:
+	dw -1

@@ -11,6 +11,11 @@ Route18Gate1F_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_GUARD, 4, 1, STAY, DOWN, 1 ; person
 
 	def_warps_to ROUTE_18_GATE_1F
+
+Route18Gate1F_Script:
+	jp EnableAutoTextBoxDrawing
+
+Route18Gate1F_TextPointers:
+	dw -1

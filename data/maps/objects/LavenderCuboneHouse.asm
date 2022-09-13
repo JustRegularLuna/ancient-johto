@@ -8,7 +8,11 @@ LavenderCuboneHouse_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_MONSTER, 3, 5, STAY, UP, 1 ; person
-	object SPRITE_BRUNETTE_GIRL, 2, 4, STAY, RIGHT, 2 ; person
 
 	def_warps_to LAVENDER_CUBONE_HOUSE
+
+LavenderCuboneHouse_Script:
+	jp EnableAutoTextBoxDrawing
+
+LavenderCuboneHouse_TextPointers:
+	dw -1

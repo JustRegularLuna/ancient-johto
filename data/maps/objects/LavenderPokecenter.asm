@@ -9,8 +9,20 @@ LavenderPokecenter_Object:
 
 	def_objects
 	object SPRITE_NURSE, 3, 1, STAY, DOWN, 1 ; person
-	object SPRITE_GENTLEMAN, 5, 3, STAY, NONE, 2 ; person
-	object SPRITE_LITTLE_GIRL, 2, 6, WALK, UP_DOWN, 3 ; person
-	object SPRITE_LINK_RECEPTIONIST, 11, 2, STAY, DOWN, 4 ; person
+	object SPRITE_LINK_RECEPTIONIST, 11, 2, STAY, DOWN, 2 ; person
 
 	def_warps_to LAVENDER_POKECENTER
+
+LavenderPokecenter_Script:
+	call Serial_TryEstablishingExternallyClockedConnection
+	jp EnableAutoTextBoxDrawing
+
+LavenderPokecenter_TextPointers:
+	dw LavenderHealNurseText
+	dw LavenderTradeNurseText
+
+LavenderHealNurseText:
+	script_pokecenter_nurse
+
+LavenderTradeNurseText:
+	script_cable_club_receptionist

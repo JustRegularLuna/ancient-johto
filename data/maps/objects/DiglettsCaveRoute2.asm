@@ -9,6 +9,13 @@ DiglettsCaveRoute2_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_FISHING_GURU, 3, 3, STAY, NONE, 1 ; person
 
 	def_warps_to DIGLETTS_CAVE_ROUTE_2
+
+DiglettsCaveRoute2_Script:
+	ld a, ROUTE_2
+	ld [wLastMap], a
+	jp EnableAutoTextBoxDrawing
+
+DiglettsCaveRoute2_TextPointers:
+	dw -1

@@ -10,3 +10,9 @@ DiglettsCave_Object:
 	def_objects
 
 	def_warps_to DIGLETTS_CAVE
+
+DiglettsCave_Script:
+	jp EnableAutoTextBoxDrawing
+
+DiglettsCave_TextPointers:
+	dw -1

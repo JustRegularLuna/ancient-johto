@@ -10,3 +10,9 @@ UndergroundPathWestEast_Object:
 	def_objects
 
 	def_warps_to UNDERGROUND_PATH_WEST_EAST
+
+UndergroundPathWestEast_Script:
+	jp EnableAutoTextBoxDrawing
+
+UndergroundPathWestEast_TextPointers:
+	dw -1

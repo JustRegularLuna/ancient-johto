@@ -8,6 +8,11 @@ Daycare_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_GENTLEMAN, 2, 3, STAY, RIGHT, 1 ; person
 
 	def_warps_to DAYCARE
+
+Daycare_Script:
+	jp EnableAutoTextBoxDrawing
+
+Daycare_TextPointers:
+	dw -1

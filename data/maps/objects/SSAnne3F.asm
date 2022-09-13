@@ -8,6 +8,11 @@ SSAnne3F_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_SAILOR, 9, 3, WALK, LEFT_RIGHT, 1 ; person
 
 	def_warps_to SS_ANNE_3F
+
+SSAnne3F_Script:
+	jp EnableAutoTextBoxDrawing
+
+SSAnne3F_TextPointers:
+	dw -1

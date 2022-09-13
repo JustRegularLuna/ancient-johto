@@ -8,8 +8,11 @@ PewterNidoranHouse_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_MONSTER, 4, 5, STAY, LEFT, 1 ; person
-	object SPRITE_LITTLE_BOY, 3, 5, STAY, RIGHT, 2 ; person
-	object SPRITE_MIDDLE_AGED_MAN, 1, 2, STAY, NONE, 3 ; person
 
 	def_warps_to PEWTER_NIDORAN_HOUSE
+
+PewterNidoranHouse_Script:
+	jp EnableAutoTextBoxDrawing
+
+PewterNidoranHouse_TextPointers:
+	dw -1

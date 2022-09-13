@@ -13,11 +13,15 @@ SeafoamIslands1F_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_BOULDER, 18, 10, STAY, BOULDER_MOVEMENT_BYTE_2, 1 ; person
-	object SPRITE_BOULDER, 26, 7, STAY, BOULDER_MOVEMENT_BYTE_2, 2 ; person
 
 	def_warps_to SEAFOAM_ISLANDS_1F
 
 	; holes
 	warp_to 17, 6, SEAFOAM_ISLANDS_1F_WIDTH
 	warp_to 24, 6, SEAFOAM_ISLANDS_1F_WIDTH
+
+SeafoamIslands1F_Script:
+	jp EnableAutoTextBoxDrawing
+
+SeafoamIslands1F_TextPointers:
+	dw -1

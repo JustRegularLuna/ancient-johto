@@ -9,6 +9,13 @@ UndergroundPathRoute8_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_GIRL, 3, 4, STAY, NONE, 1 ; person
 
 	def_warps_to UNDERGROUND_PATH_ROUTE_8
+
+UndergroundPathRoute8_Script:
+	ld a, ROUTE_8
+	ld [wLastMap], a
+	jp EnableAutoTextBoxDrawing
+
+UndergroundPathRoute8_TextPointers:
+	dw -1

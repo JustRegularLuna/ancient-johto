@@ -16,3 +16,9 @@ MtMoonB1F_Object:
 	def_objects
 
 	def_warps_to MT_MOON_B1F
+
+MtMoonB1F_Script:
+	jp EnableAutoTextBoxDrawing
+
+MtMoonB1F_TextPointers:
+	dw -1

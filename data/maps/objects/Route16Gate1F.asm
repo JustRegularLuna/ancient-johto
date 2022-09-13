@@ -15,7 +15,11 @@ Route16Gate1F_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_GUARD, 4, 5, STAY, DOWN, 1 ; person
-	object SPRITE_GAMBLER, 4, 3, STAY, NONE, 2 ; person
 
 	def_warps_to ROUTE_16_GATE_1F
+
+Route16Gate1F_Script:
+	jp EnableAutoTextBoxDrawing
+
+Route16Gate1F_TextPointers:
+	dw -1

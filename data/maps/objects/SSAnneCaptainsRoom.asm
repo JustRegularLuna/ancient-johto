@@ -9,6 +9,11 @@ SSAnneCaptainsRoom_Object:
 	sign  1,  2, 3 ; SSAnne7Text3
 
 	def_objects
-	object SPRITE_CAPTAIN, 4, 2, STAY, UP, 1 ; person
 
 	def_warps_to SS_ANNE_CAPTAINS_ROOM
+
+SSAnneCaptainsRoom_Script:
+	jp EnableAutoTextBoxDrawing
+
+SSAnneCaptainsRoom_TextPointers:
+	dw -1

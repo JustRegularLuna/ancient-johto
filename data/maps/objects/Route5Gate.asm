@@ -10,6 +10,11 @@ Route5Gate_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_GUARD, 1, 3, STAY, RIGHT, 1 ; person
 
 	def_warps_to ROUTE_5_GATE
+
+Route5Gate_Script:
+	jp EnableAutoTextBoxDrawing
+
+Route5Gate_TextPointers:
+	dw -1

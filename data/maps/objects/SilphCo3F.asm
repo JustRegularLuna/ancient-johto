@@ -16,9 +16,11 @@ SilphCo3F_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_SILPH_WORKER, 24, 8, STAY, NONE, 1 ; person
-	object SPRITE_ROCKET, 20, 7, STAY, LEFT, 2, OPP_ROCKET, 25
-	object SPRITE_SCIENTIST, 7, 9, STAY, DOWN, 3, OPP_SCIENTIST, 4
-	object SPRITE_POKE_BALL, 8, 5, STAY, NONE, 4, HYPER_POTION
 
 	def_warps_to SILPH_CO_3F
+
+SilphCo3F_Script:
+	jp EnableAutoTextBoxDrawing
+
+SilphCo3F_TextPointers:
+	dw -1

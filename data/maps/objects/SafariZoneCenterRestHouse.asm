@@ -8,7 +8,11 @@ SafariZoneCenterRestHouse_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_GIRL, 3, 2, STAY, DOWN, 1 ; person
-	object SPRITE_SCIENTIST, 1, 4, WALK, UP_DOWN, 2 ; person
 
 	def_warps_to SAFARI_ZONE_CENTER_REST_HOUSE
+
+SafariZoneCenterRestHouse_Script:
+	jp EnableAutoTextBoxDrawing
+
+SafariZoneCenterRestHouse_TextPointers:
+	dw -1

@@ -9,7 +9,11 @@ SaffronMart_Object:
 
 	def_objects
 	object SPRITE_CLERK, 0, 5, STAY, RIGHT, 1 ; person
-	object SPRITE_SUPER_NERD, 4, 2, STAY, NONE, 2 ; person
-	object SPRITE_COOLTRAINER_F, 6, 5, WALK, ANY_DIR, 3 ; person
 
 	def_warps_to SAFFRON_MART
+
+SaffronMart_Script:
+	jp EnableAutoTextBoxDrawing
+
+SaffronMart_TextPointers:
+	dw SaffronCashierText

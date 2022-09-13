@@ -9,7 +9,13 @@ UndergroundPathRoute7Copy_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_GIRL, 3, 2, STAY, NONE, 1 ; person
-	object SPRITE_MIDDLE_AGED_MAN, 2, 4, STAY, NONE, 2 ; person
 
 	def_warps_to UNDERGROUND_PATH_ROUTE_7_COPY
+
+UndergroundPathRoute7Copy_Script:
+	ld a, ROUTE_7
+	ld [wLastMap], a
+	ret
+
+UndergroundPathRoute7Copy_TextPointers:
+	dw -1

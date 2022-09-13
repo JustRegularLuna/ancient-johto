@@ -10,6 +10,11 @@ Route8Gate_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_GUARD, 2, 1, STAY, DOWN, 1 ; person
 
 	def_warps_to ROUTE_8_GATE
+
+Route8Gate_Script:
+	jp EnableAutoTextBoxDrawing
+
+Route8Gate_TextPointers:
+	dw -1

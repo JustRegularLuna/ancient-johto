@@ -10,6 +10,11 @@ Route22Gate_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_GUARD, 6, 2, STAY, LEFT, 1 ; person
 
 	def_warps_to ROUTE_22_GATE
+
+Route22Gate_Script:
+	jp EnableAutoTextBoxDrawing
+
+Route22Gate_TextPointers:
+	dw -1

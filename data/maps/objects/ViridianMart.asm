@@ -9,7 +9,11 @@ ViridianMart_Object:
 
 	def_objects
 	object SPRITE_CLERK, 0, 5, STAY, RIGHT, 1 ; person
-	object SPRITE_YOUNGSTER, 5, 5, WALK, UP_DOWN, 2 ; person
-	object SPRITE_COOLTRAINER_M, 3, 3, STAY, NONE, 3 ; person
 
 	def_warps_to VIRIDIAN_MART
+
+ViridianMart_Script:
+	jp EnableAutoTextBoxDrawing
+
+ViridianMart_TextPointers:
+	dw ViridianCashierText

@@ -17,25 +17,13 @@ CeladonCity_Object:
 	warp 43, 27, 0, CELADON_HOTEL
 
 	def_signs
-	sign 27, 15, 10 ; CeladonCityText10
-	sign 19, 15, 11 ; CeladonCityText11
-	sign 42,  9, 12 ; PokeCenterSignText
-	sign 13, 29, 13 ; CeladonCityText13
-	sign 21,  9, 14 ; CeladonCityText14
-	sign 12, 13, 15 ; CeladonCityText15
-	sign 39, 21, 16 ; CeladonCityText16
-	sign 33, 21, 17 ; CeladonCityText17
-	sign 27, 21, 18 ; CeladonCityText18
 
 	def_objects
-	object SPRITE_LITTLE_GIRL, 8, 17, WALK, ANY_DIR, 1 ; person
-	object SPRITE_GRAMPS, 11, 28, STAY, UP, 2 ; person
-	object SPRITE_GIRL, 14, 19, WALK, UP_DOWN, 3 ; person
-	object SPRITE_GRAMPS, 25, 22, STAY, DOWN, 4 ; person
-	object SPRITE_GRAMPS, 22, 16, STAY, DOWN, 5 ; person
-	object SPRITE_FISHER, 32, 12, STAY, LEFT, 6 ; person
-	object SPRITE_MONSTER, 30, 12, STAY, RIGHT, 7 ; person
-	object SPRITE_ROCKET, 32, 29, WALK, LEFT_RIGHT, 8 ; person
-	object SPRITE_ROCKET, 42, 14, WALK, LEFT_RIGHT, 9 ; person
 
 	def_warps_to CELADON_CITY
+
+CeladonCity_Script:
+	jp EnableAutoTextBoxDrawing
+
+CeladonCity_TextPointers:
+	dw -1

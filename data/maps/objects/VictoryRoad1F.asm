@@ -9,12 +9,11 @@ VictoryRoad1F_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_COOLTRAINER_F, 7, 5, STAY, RIGHT, 1, OPP_COOLTRAINER_F, 5
-	object SPRITE_COOLTRAINER_M, 3, 2, STAY, DOWN, 2, OPP_COOLTRAINER_M, 5
-	object SPRITE_POKE_BALL, 11, 0, STAY, NONE, 3, TM_SKY_ATTACK
-	object SPRITE_POKE_BALL, 9, 2, STAY, NONE, 4, RARE_CANDY
-	object SPRITE_BOULDER, 5, 15, STAY, BOULDER_MOVEMENT_BYTE_2, 5 ; person
-	object SPRITE_BOULDER, 14, 2, STAY, BOULDER_MOVEMENT_BYTE_2, 6 ; person
-	object SPRITE_BOULDER, 2, 10, STAY, BOULDER_MOVEMENT_BYTE_2, 7 ; person
 
 	def_warps_to VICTORY_ROAD_1F
+
+VictoryRoad1F_Script:
+	jp EnableAutoTextBoxDrawing
+
+VictoryRoad1F_TextPointers:
+	dw -1

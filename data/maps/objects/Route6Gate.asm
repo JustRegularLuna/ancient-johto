@@ -10,6 +10,11 @@ Route6Gate_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_GUARD, 6, 2, STAY, LEFT, 1 ; person
 
 	def_warps_to ROUTE_6_GATE
+
+Route6Gate_Script:
+	jp EnableAutoTextBoxDrawing
+
+Route6Gate_TextPointers:
+	dw -1

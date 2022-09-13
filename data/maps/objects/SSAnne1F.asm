@@ -17,7 +17,11 @@ SSAnne1F_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_WAITER, 12, 6, WALK, LEFT_RIGHT, 1 ; person
-	object SPRITE_SAILOR, 27, 5, STAY, NONE, 2 ; person
 
 	def_warps_to SS_ANNE_1F
+
+SSAnne1F_Script:
+	jp EnableAutoTextBoxDrawing
+
+SSAnne1F_TextPointers:
+	dw -1

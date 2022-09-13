@@ -10,6 +10,11 @@ Route7Gate_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_GUARD, 3, 1, STAY, DOWN, 1 ; person
 
 	def_warps_to ROUTE_7_GATE
+
+Route7Gate_Script:
+	jp EnableAutoTextBoxDrawing
+
+Route7Gate_TextPointers:
+	dw -1

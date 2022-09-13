@@ -14,3 +14,9 @@ SSAnneB1F_Object:
 	def_objects
 
 	def_warps_to SS_ANNE_B1F
+
+SSAnneB1F_Script:
+	jp EnableAutoTextBoxDrawing
+
+SSAnneB1F_TextPointers:
+	dw -1

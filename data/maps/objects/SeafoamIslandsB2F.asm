@@ -13,7 +13,11 @@ SeafoamIslandsB2F_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_BOULDER, 18, 6, STAY, BOULDER_MOVEMENT_BYTE_2, 1 ; person
-	object SPRITE_BOULDER, 23, 6, STAY, BOULDER_MOVEMENT_BYTE_2, 2 ; person
 
 	def_warps_to SEAFOAM_ISLANDS_B2F
+
+SeafoamIslandsB2F_Script:
+	jp EnableAutoTextBoxDrawing
+
+SeafoamIslandsB2F_TextPointers:
+	dw -1

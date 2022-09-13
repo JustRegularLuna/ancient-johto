@@ -9,7 +9,11 @@ PewterMart_Object:
 
 	def_objects
 	object SPRITE_CLERK, 0, 5, STAY, RIGHT, 1 ; person
-	object SPRITE_YOUNGSTER, 3, 3, WALK, UP_DOWN, 2 ; person
-	object SPRITE_SUPER_NERD, 5, 5, STAY, NONE, 3 ; person
 
 	def_warps_to PEWTER_MART
+
+PewterMart_Script:
+	jp EnableAutoTextBoxDrawing
+
+PewterMart_TextPointers:
+	dw PewterCashierText

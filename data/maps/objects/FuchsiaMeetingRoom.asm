@@ -8,8 +8,11 @@ FuchsiaMeetingRoom_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_SAFARI_ZONE_WORKER, 4, 1, STAY, DOWN, 1 ; person
-	object SPRITE_SAFARI_ZONE_WORKER, 0, 2, STAY, UP, 2 ; person
-	object SPRITE_SAFARI_ZONE_WORKER, 10, 1, STAY, DOWN, 3 ; person
 
 	def_warps_to FUCHSIA_MEETING_ROOM
+
+FuchsiaMeetingRoom_Script:
+	jp EnableAutoTextBoxDrawing
+
+FuchsiaMeetingRoom_TextPointers:
+	dw -1

@@ -9,7 +9,11 @@ VermilionMart_Object:
 
 	def_objects
 	object SPRITE_CLERK, 0, 5, STAY, RIGHT, 1 ; person
-	object SPRITE_COOLTRAINER_M, 5, 6, STAY, NONE, 2 ; person
-	object SPRITE_COOLTRAINER_F, 3, 3, WALK, LEFT_RIGHT, 3 ; person
 
 	def_warps_to VERMILION_MART
+
+VermilionMart_Script:
+	jp EnableAutoTextBoxDrawing
+
+VermilionMart_TextPointers:
+	dw VermilionCashierText

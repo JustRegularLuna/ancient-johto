@@ -9,6 +9,14 @@ DiglettsCaveRoute11_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_GAMBLER, 2, 3, STAY, NONE, 1 ; person
 
 	def_warps_to DIGLETTS_CAVE_ROUTE_11
+
+DiglettsCaveRoute11_Script:
+	call EnableAutoTextBoxDrawing
+	ld a, ROUTE_11
+	ld [wLastMap], a
+	ret
+
+DiglettsCaveRoute11_TextPointers:
+	dw -1

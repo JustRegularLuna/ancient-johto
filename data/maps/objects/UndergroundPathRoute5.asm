@@ -9,6 +9,13 @@ UndergroundPathRoute5_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_LITTLE_GIRL, 2, 3, STAY, NONE, 1 ; person
 
 	def_warps_to UNDERGROUND_PATH_ROUTE_5
+
+UndergroundPathRoute5_Script:
+	ld a, ROUTE_5
+	ld [wLastMap], a
+	ret
+
+UndergroundPathRoute5_TextPointers:
+	dw -1

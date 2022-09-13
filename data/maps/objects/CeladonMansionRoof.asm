@@ -7,8 +7,13 @@ CeladonMansionRoof_Object:
 	warp  2,  7, 0, CELADON_MANSION_ROOF_HOUSE
 
 	def_signs
-	sign  3,  7, 1 ; CeladonMansion4Text1
 
 	def_objects
 
 	def_warps_to CELADON_MANSION_ROOF
+
+CeladonMansionRoof_Script:
+	jp EnableAutoTextBoxDrawing
+
+CeladonMansionRoof_TextPointers:
+	dw -1

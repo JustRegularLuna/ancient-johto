@@ -9,6 +9,13 @@ UndergroundPathRoute7_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_MIDDLE_AGED_MAN, 2, 4, STAY, NONE, 1 ; person
 
 	def_warps_to UNDERGROUND_PATH_ROUTE_7
+
+UndergroundPathRoute7_Script:
+	ld a, ROUTE_7
+	ld [wLastMap], a
+	jp EnableAutoTextBoxDrawing
+
+UndergroundPathRoute7_TextPointers:
+	dw -1

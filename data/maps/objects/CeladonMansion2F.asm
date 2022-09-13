@@ -8,8 +8,13 @@ CeladonMansion2F_Object:
 	warp  4,  1, 3, CELADON_MANSION_3F
 
 	def_signs
-	sign  4,  9, 1 ; CeladonMansion2Text1
 
 	def_objects
 
 	def_warps_to CELADON_MANSION_2F
+
+CeladonMansion2F_Script:
+	jp EnableAutoTextBoxDrawing
+
+CeladonMansion2F_TextPointers:
+	dw -1

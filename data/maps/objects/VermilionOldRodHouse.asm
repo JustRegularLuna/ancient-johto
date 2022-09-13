@@ -8,6 +8,11 @@ VermilionOldRodHouse_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_FISHING_GURU, 2, 4, STAY, RIGHT, 1 ; person
 
 	def_warps_to VERMILION_OLD_ROD_HOUSE
+
+VermilionOldRodHouse_Script:
+	jp EnableAutoTextBoxDrawing
+
+VermilionOldRodHouse_TextPointers:
+	dw -1

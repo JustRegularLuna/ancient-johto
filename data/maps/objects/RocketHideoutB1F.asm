@@ -11,12 +11,11 @@ RocketHideoutB1F_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_ROCKET, 26, 8, STAY, LEFT, 1, OPP_ROCKET, 8
-	object SPRITE_ROCKET, 12, 6, STAY, RIGHT, 2, OPP_ROCKET, 9
-	object SPRITE_ROCKET, 18, 17, STAY, DOWN, 3, OPP_ROCKET, 10
-	object SPRITE_ROCKET, 15, 25, STAY, RIGHT, 4, OPP_ROCKET, 11
-	object SPRITE_ROCKET, 28, 18, STAY, LEFT, 5, OPP_ROCKET, 12
-	object SPRITE_POKE_BALL, 11, 14, STAY, NONE, 6, ESCAPE_ROPE
-	object SPRITE_POKE_BALL, 9, 17, STAY, NONE, 7, HYPER_POTION
 
 	def_warps_to ROCKET_HIDEOUT_B1F
+
+RocketHideoutB1F_Script:
+	jp EnableAutoTextBoxDrawing
+
+RocketHideoutB1F_TextPointers:
+	dw -1
