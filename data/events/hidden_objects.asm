@@ -56,5 +56,5 @@ JohtoHiddenObjectPointers:
 
 
 PlayersHouse2FHiddenObjects:
-	hidden_object  0,  1, SPRITE_FACING_UP, OpenRedsPC
+	hidden_object  2,  1, SPRITE_FACING_UP, OpenRedsPC
 	db -1 ; end
