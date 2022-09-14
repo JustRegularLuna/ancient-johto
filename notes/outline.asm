@@ -1,27 +1,33 @@
 =============
 GENERAL STUFF
 =============
-- There is no pokegear or phone calls
-- Pokemon Centers use a cross between Gen 1 and 2 layout
-  - 2 floors on one map
-  - Gen 1 style link area with the one receptionist
-  - Still has a bench guy
-- Pokemarts use the Gen 2 design
-- Most map layouts will be basically the same as Gold
+- There is no pokegear, and no phone calls
+- Kanto Pokecenters will use the Gen 1 layout but with Gen 2 tiles
+- Johto Pokecenters will use the Gen 2 layout, except with a bench guy and only one link nurse upstairs
+- Kanto Marts will use the Gen 1 layout with Gen 2 tiles
+- Johto Marts will use the Gen 2 layout
+- Most Kanto maps will be the same layout as Gen 1
+  - Some maps will be adjusted due to the passage of time
+  - No maps will be shrunken down like vanilla GSC did
+  - Safari Zone will still exist, etc
+- Most Johto map layouts will be basically the same as Gold
   - Some map layouts may be adjusted if I have to for technical reasons
   - Rocket Hideout may be adjusted to have spinner tile puzzles
   - Some areas may be expanded to flesh them out better
-- There is no Kanto
 - Some things will be adjusted to force a certain order in the mid game, to help plan the level curve
 - Need to look into adding custom pokeballs, and decide if Apricorns will exist, or only Berries
+- All GSC and RBY trainer classes should be present
+- Use GSC overworld sprites, with any unique Gen 1 sprites that are needed included as well
 
 
 =====
 INTRO
 =====
-- Are you a boy or a girl?
+- Are you a boy or a girl? (Hiro or Kris)
 - New text similar to GS but different
 - Keep naming your rival in the intro
+- Like RPP3, make it so you can press OK without typing a name, and it defaults to GOLD or SILVER
+  - Also add an "Is it <PLAYER>?" confirmation after putting in name, like RPP3
 
 
 =============
@@ -32,11 +38,13 @@ NEW BARK TOWN
 - Generic NPC houses for the other houses
 - Silver is in Oak's lab waiting for a pokemon, not in the city
 - Elm drags you to his lab the way Oak did in RBY, but with new movement data of course
+- Alternatively, Silver walks up and bothers you as soon as you leave the house, and takes you to the lab
 - Elm's Lab works like Oak's lab
   - You and Silver get your starter at the same time
   - Battle Silver in the lab
   - Deliver Mystery Egg, get Pokedex, and 5 Pokeballs (like RPP3)
   - Maybe add a healing machine like GSC?
+  - Heal Machine would not be needed if Mom still heals you like RBY
 
 
 ========
@@ -194,7 +202,7 @@ ILEX FOREST
 - Charcoal guy is there with Farfetch'd
   - Gives the Cut HM
   - You need Hive Badge to use it
-- Maybe add wild Pikachu to the forest, because Viridian had them, and there is no Kanto here.
+- Maybe add wild Pikachu to the forest, because Viridian had them.
 
 
 ========
@@ -213,11 +221,6 @@ ROUTE 34
 ==============
 GOLDENROD CITY
 ==============
-- Add a museum
-  - Fossil lab inside
-  - Fossil sprites on the displays here
-- Magnet Train does not work, you cannot go to Kanto
-  - Maybe remove the door to the building?
 - Whitney gives the badge right away, instead of you having to try and leave first
 - Bill is already in his house and gives the Eevee without having to go to Ecruteak
   - I guess reference the Lapras giver in Silph Co's script
@@ -265,6 +268,7 @@ ROUTE 35 & 36
 NATIONAL PARK
 =============
 - No bug catching contest, probably
+  - Might be worth looking into, but not a requirement imo
 - Generic trainers and wild pokemon
   - Bug Catchers, Youngsters, Lasses, Schoolkids, Teachers, Pokefans
 - itemballs
@@ -344,23 +348,14 @@ ROUTE 39
 ============
 OLIVINE CITY
 ============
-- No trips to Kanto later
 - Gym is closed at first
   - Probably say the door is locked, like Viridian Gym, while Jasmine is away
     - As screwy as hide/show is, I can see it being a headache trying to hide and unhide jasmine a lot
-- SS Aqua reuses scripts from the SS Anne events
-  - TODO: Decide where to give the SS Ticket
-  - Rival battle here instead of in Olivine City itself
-  - Obviously the captain gives something besides CUT HM
-  - Have to do this before the lighthouse
-    - "We're stuck in port because the lighthouse isn't shining"
-	- Person moves aside letting you in, like how the guard moves in Cerulean City at the burgled house
 - Try to still do the Lighthouse quest
   - Maybe have Team Rocket at the lighthouse?
     - Trying to keep the ship in port so that they can steal something it is carrying?
   - Jasmine at the top with Amphy (and rockets? like with Mr Fuji at Pokemon Tower?)
   - Need to give her Secretpotion for Amphy
-  - "The ship set sail" after you fix the lighthouse
 
 
 ========
@@ -394,8 +389,6 @@ CIANWOOD CITY
 - Maybe another one of Elm's aides here
 - Gym can keep the same basic strength puzzle, but leave out Chuck throwing stuff around
 - Maybe have a move tutor who can teach Pikachu to surf?
-- Add a Safari Zone here
-  - Not required to progress like RBY, just a side area
 
 
 ========
@@ -488,9 +481,6 @@ ROUTE 45 & 46
 - Generic Trainers
 - Itemballs
 - Berry Trees
-- Add another connection going to Mt. Silver
-  - Gatehouse with a badge check
-  - Simplified check for all badges at once like GSC
 
 
 ========

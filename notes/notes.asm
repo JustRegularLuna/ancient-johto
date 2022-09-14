@@ -2,6 +2,7 @@
   - Hiro or Kris
 - All trainer classes from Gen 1 and 2, for variety
 - 251 Pokemon (keep ghost and fossils)
+- Look into porting following pokemon from Yellow, but apply to all mons
 - Gen 2 party sprites
 - Version Based sprites
 - Shared SGB palettes
@@ -38,3 +39,4 @@
 - Just remove the spinner tile code since it isn't needed for Johto
   - Alternately, redesign rocket hideout to have spinner tiles
 - Add ice sliding puzzles like Maize
+- Look into porting the surfing pikachu minigame maybe
