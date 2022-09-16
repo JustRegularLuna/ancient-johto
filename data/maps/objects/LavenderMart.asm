@@ -17,3 +17,5 @@ LavenderMart_Script:
 
 LavenderMart_TextPointers:
 	dw LavenderCashierText
+
+INCLUDE "data/items/marts/lavender.asm"

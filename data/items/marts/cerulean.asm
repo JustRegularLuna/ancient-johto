@@ -1,0 +1,2 @@
+CeruleanCashierText::
+	script_mart POKE_BALL, POTION, REPEL, ANTIDOTE, BURN_HEAL, AWAKENING, PARLYZ_HEAL

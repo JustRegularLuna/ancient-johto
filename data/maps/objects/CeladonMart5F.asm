@@ -20,3 +20,5 @@ CeladonMart5F_Script:
 CeladonMart5F_TextPointers:
 	dw CeladonMart5Clerk1Text
 	dw CeladonMart5Clerk2Text
+
+INCLUDE "data/items/marts/celadon_5f.asm"

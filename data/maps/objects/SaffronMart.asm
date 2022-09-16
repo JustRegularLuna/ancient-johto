@@ -17,3 +17,5 @@ SaffronMart_Script:
 
 SaffronMart_TextPointers:
 	dw SaffronCashierText
+
+INCLUDE "data/items/marts/saffron.asm"

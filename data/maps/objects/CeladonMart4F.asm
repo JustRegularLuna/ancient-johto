@@ -18,3 +18,5 @@ CeladonMart4F_Script:
 
 CeladonMart4F_TextPointers:
 	dw CeladonMart4ClerkText
+
+INCLUDE "data/items/marts/celadon_4f.asm"

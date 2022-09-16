@@ -17,3 +17,5 @@ VermilionMart_Script:
 
 VermilionMart_TextPointers:
 	dw VermilionCashierText
+
+INCLUDE "data/items/marts/vermilion.asm"

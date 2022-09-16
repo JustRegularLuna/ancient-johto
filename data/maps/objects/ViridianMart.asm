@@ -17,3 +17,5 @@ ViridianMart_Script:
 
 ViridianMart_TextPointers:
 	dw ViridianCashierText
+
+INCLUDE "data/items/marts/viridian.asm"

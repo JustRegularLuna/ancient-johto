@@ -41,3 +41,5 @@ IndigoHealNurseText:
 
 IndigoTradeNurseText:
 	script_cable_club_receptionist
+
+INCLUDE "data/items/marts/indigo.asm"

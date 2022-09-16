@@ -17,3 +17,5 @@ FuchsiaMart_Script:
 
 FuchsiaMart_TextPointers:
 	dw FuchsiaCashierText
+
+INCLUDE "data/items/marts/fuchsia.asm"

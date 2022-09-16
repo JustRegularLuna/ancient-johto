@@ -17,3 +17,5 @@ CeruleanMart_Script:
 
 CeruleanMart_TextPointers:
 	dw CeruleanCashierText
+
+INCLUDE "data/items/marts/cerulean.asm"

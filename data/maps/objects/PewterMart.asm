@@ -17,3 +17,5 @@ PewterMart_Script:
 
 PewterMart_TextPointers:
 	dw PewterCashierText
+
+INCLUDE "data/items/marts/pewter.asm"

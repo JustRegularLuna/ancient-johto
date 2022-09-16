@@ -17,3 +17,5 @@ CinnabarMart_Script:
 
 CinnabarMart_TextPointers:
 	dw CinnabarCashierText
+
+INCLUDE "data/items/marts/cinnabar.asm"

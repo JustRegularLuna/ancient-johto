@@ -1,0 +1,2 @@
+FuchsiaCashierText::
+	script_mart ULTRA_BALL, GREAT_BALL, SUPER_POTION, REVIVE, FULL_HEAL, SUPER_REPEL
