@@ -795,3 +795,8 @@ SECTION "bank2F", ROMX, BANK[$2F]
 
 INCLUDE "data/sgb/sgb_palettes.asm"
 INCLUDE "engine/mon_gender.asm"
+
+
+SECTION "Trainer Encounter Music", ROMX
+
+INCLUDE "data/trainers/encounter_types.asm"

@@ -413,6 +413,8 @@ PlayTrainerMusic::
 ;	ld a, 0 ; BANK(Music_MeetEvilTrainer)
 ;	ld [wAudioROMBank], a
 ;	ld [wAudioSavedROMBank], a
+	ld a, BANK(TrainerEncounterMusicTable)
+	call BankswitchHome
 	ld a, [wEngagedTrainerClass]
 	sub OPP_YOUNGSTER
 	ld c, a
@@ -420,6 +422,7 @@ PlayTrainerMusic::
 	ld hl, TrainerEncounterMusicTable
 	add hl, bc
 	ld a, [hl]
+	push af
+	call BankswitchBack
+	pop af
 	jp PlayMusic
-
-INCLUDE "data/trainers/encounter_types.asm"
