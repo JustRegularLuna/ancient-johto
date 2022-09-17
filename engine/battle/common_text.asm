@@ -190,6 +190,7 @@ PlayerMon2Text:
 	ld b, [hl]
 	ld a, [de]
 	sbc b
+	jr c, .gainedHP ; if we underflow, print default text
 	ldh [hMultiplicand + 1], a
 	ld a, 25
 	ldh [hMultiplier], a
@@ -208,11 +209,6 @@ PlayerMon2Text:
 	pop bc
 	pop de
 	ldh a, [hQuotient + 3] ; a = ((LastSwitchInEnemyMonHP - CurrentEnemyMonHP) / 25) / (EnemyMonMaxHP / 4)
-; Assuming that the enemy mon hasn't gained HP since the last switch in,
-; a approximates the percentage that the enemy mon's total HP has decreased
-; since the last switch in.
-; If the enemy mon has gained HP, then a is garbage due to wrap-around and
-; can fall in any of the ranges below.
 	ld hl, EnoughText ; HP stayed the same
 	and a
 	ret z
@@ -223,6 +219,11 @@ PlayerMon2Text:
 	cp 70
 	ret c
 	ld hl, GoodText ; HP went down 70% or more
+	ret
+.gainedHP
+	pop bc
+	pop de
+	ld hl, EnoughText ; default text, a custom message can be used here for this
 	ret
 
 EnoughText:
