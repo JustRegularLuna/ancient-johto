@@ -44,6 +44,13 @@ DisplayMonFrontSpriteInBox:
 	ldh [hStartTileID], a
 	hlcoord 10, 11
 	predef AnimateSendingOutMon
+	ld a, [wcf91]
+	cp FOSSIL_KABUTOPS
+	jr z, .skipCry
+	cp FOSSIL_AERODACTYL
+	jr z, .skipCry
+	call PlayCry
+.skipCry
 	call WaitForTextScrollButtonPress
 	call LoadScreenTilesFromBuffer1
 	call Delay3
