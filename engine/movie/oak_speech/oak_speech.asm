@@ -50,10 +50,16 @@ OakSpeech:
 	call AddItemToInventory  ; give one potion
 
 	; set starting region
+IF DEF(_DEBUG)
+	ld hl, DebugChooseRegionText
+	call PrintText
+	call DebugRegionChoice
+	ld a, [wCurrentMenuItem]
+ELSE
 	ld a, 1 ; JOHTO
+ENDC
 	ld [wCurRegion], a
 	ld [wDestinationRegion], a
-
 	ld a, [wDefaultMap]
 	ld [wDestinationMap], a
 	call SpecialWarpIn
@@ -238,3 +244,21 @@ IntroDisplayPicCenteredOrUpperRight:
 	xor a
 	ldh [hStartTileID], a
 	predef_jump CopyUncompressedPicToTilemap
+
+IF DEF(_DEBUG)
+DebugRegionChoice::
+	call SaveScreenTilesToBuffer1
+	ld a, KANTO_JOHTO_MENU
+	ld [wTwoOptionMenuID], a
+	coord hl, 12, 7 
+	lb bc, 8, 13
+	ld a, TWO_OPTION_MENU
+	ld [wTextBoxID], a
+	call DisplayTextBoxID
+	jp LoadScreenTilesFromBuffer1
+
+DebugChooseRegionText:
+	text "DEBUG: Which"
+	line "region?"
+	done
+ENDC
