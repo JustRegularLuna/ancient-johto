@@ -33,7 +33,9 @@ HiddenItemNear:
 	ld a, [wYCoord]
 	call Sub5ClampTo0
 	cp d
+	jr z, .y_zflag
 	jr nc, .loop
+.y_zflag
 	ld a, [wYCoord]
 	add 4
 	cp d
@@ -41,7 +43,9 @@ HiddenItemNear:
 	ld a, [wXCoord]
 	call Sub5ClampTo0
 	cp e
+	jr z, .x_zflag
 	jr nc, .loop
+.x_zflag
 	ld a, [wXCoord]
 	add 5
 	cp e
