@@ -4555,7 +4555,7 @@ CriticalHitTest:
 	ld b, $ff                    ; cap at 255/256
 .noFocusEnergyUsed
 	cp $ff
-	jr z, . guaranteedCriticalHit
+	jr z, .guaranteedCriticalHit
 	call BattleRandom            ; generates a random value, in "a"
 	rlc a
 	rlc a
