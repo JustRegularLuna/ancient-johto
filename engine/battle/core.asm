@@ -5299,8 +5299,7 @@ MoveHitTest:
 	ret z ; Swift never misses (interestingly, Azure Heights lists this is a myth, but it appears to be true)
 	call CheckTargetSubstitute ; substitute check (note that this overwrites a)
 	jr z, .checkForDigOrFlyStatus
-; This code is buggy. It's supposed to prevent HP draining moves from working on substitutes.
-; Since CheckTargetSubstitute overwrites a with either $00 or $01, it never works.
+	ld a, [de]
 	cp DRAIN_HP_EFFECT
 	jp z, .moveMissed
 	cp DREAM_EATER_EFFECT
