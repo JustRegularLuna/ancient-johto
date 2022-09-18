@@ -2621,6 +2621,12 @@ wHallOfFameCurScript::
 
 wGameProgressFlagsEnd::
 
+; variable sprites can be changed with scripts
+; useful in the same way it was in Gen 2
+; sprites don't update until the map is reloaded
+; see "data/sprites/default_var_sprites.asm"
+wVarSprites::
+	ds $100 - SPRITE_VARS
 
 wObtainedHiddenItemsFlags::
 	ds 14

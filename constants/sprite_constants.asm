@@ -76,3 +76,14 @@ FIRST_STILL_SPRITE EQU const_value
 	const SPRITE_UNUSED_GAMBLER_ASLEEP_2 ; $47
 	const SPRITE_GAMBLER_ASLEEP          ; $48
 NUM_SPRITES EQU const_value - 1
+
+; wVarSprites indexes (see wram.asm)
+	const_next $f0
+SPRITE_VARS EQU const_value
+	const VAR_SPRITE_1 ; f0
+	const VAR_SPRITE_2 ; f1
+	const VAR_SPRITE_3 ; f2
+	const VAR_SPRITE_4 ; f3
+	const VAR_SPRITE_5 ; f4
+	const VAR_SPRITE_6 ; f5
+SPRITE_VARS_END EQU const_value - 1

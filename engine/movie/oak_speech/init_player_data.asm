@@ -45,7 +45,14 @@ START_MONEY EQU $3000
 	ld bc, wGameProgressFlagsEnd - wGameProgressFlags
 	call FillMemory ; clear all game progress flags
 
+	ld hl, VarSpriteTable
+	ld de, wVarSprites
+	ld bc, VarSpriteTableEnd - VarSpriteTable
+	call CopyData
+
 	jp InitializeMissableObjectsFlags
+
+INCLUDE "data/sprites/default_var_sprites.asm"
 
 InitializeEmptyList:
 	xor a ; count

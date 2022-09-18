@@ -98,6 +98,11 @@ LoadMapSpriteTilePatterns:
 	push af
 	ld a, [hl] ; [x#SPRITESTATEDATA2_IMAGEBASEOFFSET]
 	ld b, a ; b = current sprite picture ID
+; is the sprite a Var Sprite?
+	cp SPRITE_VARS
+	jr c, .notVarSprite
+	call GetVarSpriteIDs
+.notVarSprite
 	cp FIRST_STILL_SPRITE ; is it a 4-tile sprite?
 	jr c, .notFourTileSprite
 	pop af
@@ -472,6 +477,22 @@ GetSplitMapSpriteSetID:
 	ld a, $0a
 	ret c
 	ld a, $01
+	ret
+
+; For variable sprites, check to see which sprite ID that slot currently uses before loading it.
+; These are used for various things, ie your rival being May or Brendan, or to get around spriteset limits.
+GetVarSpriteIDs:
+	push hl
+	push bc
+	sub SPRITE_VARS
+	ld c, a
+	ld b, 0
+	ld hl, wVarSprites
+	add hl, bc
+	ld a, [hl]
+	pop bc
+	pop hl
+	ld b, a
 	ret
 
 INCLUDE "data/maps/sprite_sets.asm"

@@ -82,3 +82,10 @@ dbbw: MACRO
 	db \1, \2
 	dw \3
 ENDM
+
+; store_var_sprite VAR_SPRITE_ID, SPRITE_TO_STORE
+change_var_sprite: MACRO
+var_sprite_number = (\1 - SPRITE_VARS)
+	ld a, \2
+	ld[wVarSprites + var_sprite_number], a
+ENDM
