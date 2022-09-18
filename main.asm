@@ -800,3 +800,9 @@ INCLUDE "engine/mon_gender.asm"
 SECTION "Trainer Encounter Music", ROMX
 
 INCLUDE "data/trainers/encounter_types.asm"
+
+
+SECTION "Trainer Party Data", ROMX
+
+INCLUDE "engine/battle/read_trainer_party.asm"
+INCLUDE "data/trainers/parties.asm"
