@@ -1,36 +1,7 @@
 EvolveTradeMon:
-; Verify the TradeMon's species name before
-; attempting to initiate a trade evolution.
-
-; The names of the trade evolutions in Blue (JP)
-; are checked. In that version, TradeMons that
-; can evolve are Graveler and Haunter.
-
-; In localization, this check was translated
-; before monster names were finalized.
-; Then, Haunter's name was "Spectre".
-; Since its name no longer starts with
-; "SP", it is prevented from evolving.
-
-; This may have been why Red/Green's trades
-; were used instead, where none can evolve.
-
-; This was fixed in Yellow.
-
-	ld a, [wInGameTradeReceiveMonName]
-
-	; GRAVELER
-	cp "G"
-	jr z, .ok
-
-	; "SPECTRE" (HAUNTER)
-	cp "S"
-	ret nz
-	ld a, [wInGameTradeReceiveMonName + 1]
-	cp "P"
-	ret nz
-
-.ok
+	; originally had incorrectly translated checks for the first letters of the mon name
+	; these were not necessary in the first place and were removed
+	; any trade evo mon should be able to evolve correctly via NPC trade now
 	ld a, [wPartyCount]
 	dec a
 	ld [wWhichPokemon], a
