@@ -111,19 +111,17 @@ LoadMapSpriteTilePatterns:
 	ldh [hVRAMSlot], a ; used to determine if it's 4-tile sprite later
 	ld a, b ; a = current sprite picture ID
 	dec a
-	add a
-	add a
 	push bc
 	push hl
 	ld hl, SpriteSheetPointerTable
-	jr nc, .noCarry
-	inc h
-.noCarry
-	add l
-	ld l, a
-	jr nc, .noCarry2
-	inc h
-.noCarry2
+	push bc
+	ld c, a
+	ld b, 0
+	add hl, bc
+	add hl, bc
+	add hl, bc
+	add hl, bc
+	pop bc
 	push hl
 	call ReadSpriteSheetData
 	push af
