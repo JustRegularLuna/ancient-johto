@@ -1506,6 +1506,7 @@ wTrainerPicBank::
 wTrainerPicPointer::
 	ds 2
 
+wTempLevel::
 	ds 1
 
 wTempMoveNameBuffer::

@@ -6134,18 +6134,14 @@ LoadEnemyMonData:
 	call CopyData
 	jr .loadMovePPs
 .copyStandardMoves
-; for a wild mon, first copy default moves from the mon header
-	ld hl, wMonHMoves
-	ld a, [hli]
+; for a wild mon, first clear the moves before copying
+	xor a
 	ld [de], a
 	inc de
-	ld a, [hli]
 	ld [de], a
 	inc de
-	ld a, [hli]
 	ld [de], a
 	inc de
-	ld a, [hl]
 	ld [de], a
 	dec de
 	dec de

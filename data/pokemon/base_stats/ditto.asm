@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/ditto.pic", 0, 1 ; sprite dimensions
 	dw DittoPicFront, DittoPicBack
 
-	db TRANSFORM, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset
+	ds 4 ; old level 1 learnset
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset

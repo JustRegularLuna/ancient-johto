@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/primeape.pic", 0, 1 ; sprite dimensions
 	dw PrimeapePicFront, PrimeapePicBack
 
-	db SCRATCH, LEER, KARATE_CHOP, FURY_SWIPES ; level 1 learnset
+	ds 4 ; old level 1 learnset
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset

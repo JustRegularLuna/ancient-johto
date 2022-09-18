@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/gyarados.pic", 0, 1 ; sprite dimensions
 	dw GyaradosPicFront, GyaradosPicBack
 
-	db BITE, DRAGON_RAGE, LEER, HYDRO_PUMP ; level 1 learnset
+	ds 4 ; old level 1 learnset
 	db GROWTH_SLOW ; growth rate
 
 	; tm/hm learnset
