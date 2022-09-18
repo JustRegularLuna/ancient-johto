@@ -63,3 +63,10 @@ ENDM
 	trainer_const AGATHA         ; $2E
 	trainer_const LANCE          ; $2F
 NUM_TRAINERS EQU const_value - 1
+
+
+; trainer type constants
+; used in data/trainers/parties.asm to define trainer party info
+const_value = 0
+	const TRAINERTYPE_NORMAL
+	const TRAINERTYPE_MOVES
