@@ -8,9 +8,12 @@ GetTrainerInformation::
 	ld a, [wTrainerClass]
 	dec a
 	ld hl, TrainerPicAndMoneyPointers
-	ld bc, $5
+	ld bc, $6
 	call AddNTimes
-	ld de, wTrainerPicPointer
+	ld de, wTrainerPicBank
+	ld a, [hli]
+	ld [de], a
+	inc de ; ld de, wTrainerPicPointer
 	ld a, [hli]
 	ld [de], a
 	inc de
@@ -24,6 +27,8 @@ GetTrainerInformation::
 	ld [de], a
 	jp BankswitchBack
 .linkBattle
+	ld a, BANK(RedPicFront)
+	ld [wTrainerPicBank], a
 	ld hl, wTrainerPicPointer
 	ld de, RedPicFront
 	ld [hl], e

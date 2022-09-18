@@ -1500,10 +1500,12 @@ wBattleMon:: battle_struct wBattleMon
 wTrainerClass::
 	ds 1
 
+wTrainerPicBank::
 	ds 1
 
 wTrainerPicPointer::
 	ds 2
+
 	ds 1
 
 wTempMoveNameBuffer::
