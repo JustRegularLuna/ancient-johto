@@ -13,6 +13,8 @@
 
 NPC_CHANGE_FACING EQU $E0
 
+OW_POKEMON EQU $80
+
 ; player direction constants
 	const_def
 	const PLAYER_DIR_BIT_RIGHT ; 0

@@ -2183,7 +2183,11 @@ wPseudoItemID::
 wUnusedD153::
 	ds 1
 
-	ds 2
+wIsTrainerBattle::
+	ds 1
+
+wWasTrainerBattle::
+	ds 1
 
 wEvoStoneItemID::
 	ds 1

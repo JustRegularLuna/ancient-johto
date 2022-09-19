@@ -10,7 +10,7 @@ BrunosRoom_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_BRUNO, 5, 2, STAY, DOWN, 1, OPP_BRUNO, 1
+	object SPRITE_BRUNO, 5, 2, STAY, DOWN, 1, BRUNO, 1
 
 	def_warps_to BRUNOS_ROOM
 

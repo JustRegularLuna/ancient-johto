@@ -10,7 +10,7 @@ AgathasRoom_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_AGATHA, 5, 2, STAY, DOWN, 1, OPP_AGATHA, 1
+	object SPRITE_AGATHA, 5, 2, STAY, DOWN, 1, AGATHA, 1
 
 	def_warps_to AGATHAS_ROOM
 

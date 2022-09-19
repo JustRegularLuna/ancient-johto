@@ -9,7 +9,7 @@ LancesRoom_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_LANCE, 6, 1, STAY, DOWN, 1, OPP_LANCE, 1
+	object SPRITE_LANCE, 6, 1, STAY, DOWN, 1, LANCE, 1
 
 	def_warps_to LANCES_ROOM
 

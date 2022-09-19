@@ -274,8 +274,11 @@ CableClub_DoBattleOrTradeAgain:
 	jr nz, .trading
 	ld a, LINK_STATE_BATTLING
 	ld [wLinkState], a
-	ld a, OPP_RIVAL1
+	ld a, RIVAL1
 	ld [wCurOpponent], a
+	; TODO: Make sure this works
+	ld a, 1
+	ld [wIsTrainerBattle], a
 	call ClearScreen
 	call Delay3
 	ld hl, wOptions
