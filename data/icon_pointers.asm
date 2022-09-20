@@ -1,37 +1,43 @@
-mon_icon_header: MACRO
-	dw \1 tile \2
-	db \3
-	db BANK(\1)
-	dw vSprites tile (\4)
-ENDM
-
-MonPartySpritePointers:
-	; gfx pointer, gfx tile offset, # tiles, vSprites tile offset
-	mon_icon_header MonsterSprite,       12, 4, ICON_MON << 2
-	mon_icon_header PokeBallSprite,       0, 8, ICON_BALL << 2
-	mon_icon_header FairySprite,         12, 4, ICON_FAIRY << 2
-	mon_icon_header BirdSprite,          12, 4, ICON_BIRD << 2
-	mon_icon_header SeelSprite,           0, 4, ICON_WATER << 2
-	mon_icon_header BugIconFrame2,        0, 1, ICON_BUG << 2
-	mon_icon_header BugIconFrame2,        1, 1, ICON_BUG << 2 + 2
-	mon_icon_header PlantIconFrame2,      0, 1, ICON_GRASS << 2
-	mon_icon_header PlantIconFrame2,      1, 1, ICON_GRASS << 2 + 2
-	mon_icon_header SnakeIconFrame1,      0, 1, ICON_SNAKE << 2
-	mon_icon_header SnakeIconFrame1,      1, 1, ICON_SNAKE << 2 + 2
-	mon_icon_header QuadrupedIconFrame1,  0, 1, ICON_QUADRUPED << 2
-	mon_icon_header QuadrupedIconFrame1,  1, 1, ICON_QUADRUPED << 2 + 2
-	mon_icon_header TradeBubbleIconGFX,   0, 4, ICON_TRADEBUBBLE << 2
-	mon_icon_header MonsterSprite,        0, 4, ICONOFFSET + ICON_MON << 2
-	mon_icon_header PokeBallSprite,       0, 8, ICONOFFSET + ICON_BALL << 2
-	mon_icon_header FairySprite,          0, 4, ICONOFFSET + ICON_FAIRY << 2
-	mon_icon_header BirdSprite,           0, 4, ICONOFFSET + ICON_BIRD << 2
-	mon_icon_header SeelSprite,          12, 4, ICONOFFSET + ICON_WATER << 2
-	mon_icon_header BugIconFrame1,        0, 1, ICONOFFSET + ICON_BUG << 2
-	mon_icon_header BugIconFrame1,        1, 1, ICONOFFSET + ICON_BUG << 2 + 2
-	mon_icon_header PlantIconFrame1,      0, 1, ICONOFFSET + ICON_GRASS << 2
-	mon_icon_header PlantIconFrame1,      1, 1, ICONOFFSET + ICON_GRASS << 2 + 2
-	mon_icon_header SnakeIconFrame2,      0, 1, ICONOFFSET + ICON_SNAKE << 2
-	mon_icon_header SnakeIconFrame2,      1, 1, ICONOFFSET + ICON_SNAKE << 2 + 2
-	mon_icon_header QuadrupedIconFrame2,  0, 1, ICONOFFSET + ICON_QUADRUPED << 2
-	mon_icon_header QuadrupedIconFrame2,  1, 1, ICONOFFSET + ICON_QUADRUPED << 2 + 2
-	mon_icon_header TradeBubbleIconGFX,   4, 4, ICONOFFSET + ICON_TRADEBUBBLE << 2
+MonIcons: ; used only for BANK(Icons)
+; ASSUMPTION: These are included in the same order as the icon constants
+NullIcon:         INCBIN "gfx/icons/null.2bpp"
+PoliwagIcon:      INCBIN "gfx/icons/poliwag.2bpp"
+JigglypuffIcon:   INCBIN "gfx/icons/jigglypuff.2bpp"
+DiglettIcon:      INCBIN "gfx/icons/diglett.2bpp"
+PikachuIcon:      INCBIN "gfx/icons/pikachu.2bpp"
+StaryuIcon:       INCBIN "gfx/icons/staryu.2bpp"
+FishIcon:         INCBIN "gfx/icons/fish.2bpp"
+BirdIcon:         INCBIN "gfx/icons/bird.2bpp"
+MonsterIcon:      INCBIN "gfx/icons/monster.2bpp"
+ClefairyIcon:     INCBIN "gfx/icons/clefairy.2bpp"
+OddishIcon:       INCBIN "gfx/icons/oddish.2bpp"
+BugIcon:          INCBIN "gfx/icons/bug.2bpp"
+GhostIcon:        INCBIN "gfx/icons/ghost.2bpp"
+LaprasIcon:       INCBIN "gfx/icons/lapras.2bpp"
+HumanshapeIcon:   INCBIN "gfx/icons/humanshape.2bpp"
+FoxIcon:          INCBIN "gfx/icons/fox.2bpp"
+EquineIcon:       INCBIN "gfx/icons/equine.2bpp"
+ShellIcon:        INCBIN "gfx/icons/shell.2bpp"
+BlobIcon:         INCBIN "gfx/icons/blob.2bpp"
+SerpentIcon:      INCBIN "gfx/icons/serpent.2bpp"
+VoltorbIcon:      INCBIN "gfx/icons/voltorb.2bpp"
+SquirtleIcon:     INCBIN "gfx/icons/squirtle.2bpp"
+BulbasaurIcon:    INCBIN "gfx/icons/bulbasaur.2bpp"
+CharmanderIcon:   INCBIN "gfx/icons/charmander.2bpp"
+CaterpillarIcon:  INCBIN "gfx/icons/caterpillar.2bpp"
+UnownIcon:        INCBIN "gfx/icons/unown.2bpp"
+GeodudeIcon:      INCBIN "gfx/icons/geodude.2bpp"
+FighterIcon:      INCBIN "gfx/icons/fighter.2bpp"
+EggIcon:          INCBIN "gfx/icons/egg.2bpp"
+JellyfishIcon:    INCBIN "gfx/icons/jellyfish.2bpp"
+MothIcon:         INCBIN "gfx/icons/moth.2bpp"
+BatIcon:          INCBIN "gfx/icons/bat.2bpp"
+SnorlaxIcon:      INCBIN "gfx/icons/snorlax.2bpp"
+HoOhIcon:         INCBIN "gfx/icons/ho_oh.2bpp"
+LugiaIcon:        INCBIN "gfx/icons/lugia.2bpp"
+GyaradosIcon:     INCBIN "gfx/icons/gyarados.2bpp"
+SlowpokeIcon:     INCBIN "gfx/icons/slowpoke.2bpp"
+SudowoodoIcon:    INCBIN "gfx/icons/sudowoodo.2bpp"
+BigmonIcon:       INCBIN "gfx/icons/bigmon.2bpp"
+MewtwoIcon:       INCBIN "gfx/icons/mewtwo.2bpp"
+MewIcon:          INCBIN "gfx/icons/mew.2bpp"

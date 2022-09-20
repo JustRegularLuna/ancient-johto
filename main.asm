@@ -806,3 +806,8 @@ SECTION "Trainer Party Data", ROMX
 
 INCLUDE "engine/battle/read_trainer_party.asm"
 INCLUDE "data/trainers/parties.asm"
+
+
+SECTION "Mon Party Icons", ROMX
+
+INCLUDE "data/icon_pointers.asm"

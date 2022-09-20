@@ -1,16 +1,46 @@
-; party menu icons
-; used in MonPartySpritePointers (see data/icon_pointers.asm)
-	const_def
-	const ICON_MON       ; $0
-	const ICON_BALL      ; $1
-	const ICON_HELIX     ; $2
-	const ICON_FAIRY     ; $3
-	const ICON_BIRD      ; $4
-	const ICON_WATER     ; $5
-	const ICON_BUG       ; $6
-	const ICON_GRASS     ; $7
-	const ICON_SNAKE     ; $8
-	const ICON_QUADRUPED ; $9
+; pokemon's overworld sprites, taken from GSC
+const_value = 0
+	const ICON_NULL
+	const ICON_POLIWAG
+	const ICON_JIGGLYPUFF
+	const ICON_DIGLETT
+	const ICON_PIKACHU
+	const ICON_STARYU
+	const ICON_FISH
+	const ICON_BIRD
+	const ICON_MONSTER
+	const ICON_CLEFAIRY
+	const ICON_ODDISH
+	const ICON_BUG
+	const ICON_GHOST
+	const ICON_LAPRAS
+	const ICON_HUMANSHAPE
+	const ICON_FOX
+	const ICON_EQUINE
+	const ICON_SHELL
+	const ICON_BLOB
+	const ICON_SERPENT
+	const ICON_VOLTORB
+	const ICON_SQUIRTLE
+	const ICON_BULBASAUR
+	const ICON_CHARMANDER
+	const ICON_CATERPILLAR
+	const ICON_UNOWN
+	const ICON_GEODUDE
+	const ICON_FIGHTER
+	const ICON_EGG
+	const ICON_JELLYFISH
+	const ICON_MOTH
+	const ICON_BAT
+	const ICON_SNORLAX
+	const ICON_HO_OH
+	const ICON_LUGIA
+	const ICON_GYARADOS
+	const ICON_SLOWPOKE
+	const ICON_SUDOWOODO
+	const ICON_BIGMON
+	const ICON_MEWTWO
+	const ICON_MEW
 
 ICON_TRADEBUBBLE EQU $e
 
