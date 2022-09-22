@@ -18,14 +18,6 @@ FEMALE_ONLY       EQU $FE
 NO_GENDER         EQU $FF
 
 ; Used to display version number on Continue/New Game/Options screen
-VERSION_MAJOR: macro
-	db "0"
-ENDM
-
-VERSION_MINOR: macro
-	db "0"
-ENDM
-
-VERSION_PATCH: macro
-	db "1"
-ENDM
+VERSION_MAJOR EQU 0
+VERSION_MINOR EQU 0
+VERSION_PATCH EQU 1
