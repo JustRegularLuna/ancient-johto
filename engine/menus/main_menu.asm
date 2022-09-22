@@ -27,6 +27,11 @@ MainMenu:
 	call RunDefaultPaletteCommand
 	call LoadTextBoxTilePatterns
 	call LoadFontTilePatterns
+; place version info text
+	hlcoord 1, 17
+	ld de, VersionNumberText
+	call PlaceString
+; check for a save file or not and place options accordingly
 	ld hl, wd730
 	set 6, [hl]
 	ld a, [wSaveFileStatus]
@@ -333,6 +338,9 @@ SpecialEnterMap::
 	ret nz
 	jp EnterMap
 
+VersionNumberText:
+	db "Version: ", VERSION_MAJOR,".",VERSION_MINOR,".",VERSION_PATCH, "@"
+
 ContinueText:
 	db "CONTINUE"
 	next ""
@@ -434,6 +442,7 @@ SaveScreenInfoText:
 	next "TIME@"
 
 DisplayOptionMenu:
+	call ClearScreen
 	hlcoord 0, 0
 	ld b, 3
 	ld c, 18

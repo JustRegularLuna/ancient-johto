@@ -16,3 +16,8 @@ SAME_BOTH_GENDERS EQU $7F
 FEMALE_75_PERCENT EQU $BF
 FEMALE_ONLY       EQU $FE
 NO_GENDER         EQU $FF
+
+; Used to display version number on Continue/New Game/Options screen
+VERSION_MAJOR EQU "0"
+VERSION_MINOR EQU "0"
+VERSION_PATCH EQU "1"
