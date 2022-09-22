@@ -339,7 +339,13 @@ SpecialEnterMap::
 	jp EnterMap
 
 VersionNumberText:
-	db "Version: ", VERSION_MAJOR,".",VERSION_MINOR,".",VERSION_PATCH, "@"
+	db "Version: "
+	VERSION_MAJOR
+	db "."
+	VERSION_MINOR
+	db "."
+	VERSION_PATCH
+	db "@"
 
 ContinueText:
 	db "CONTINUE"
