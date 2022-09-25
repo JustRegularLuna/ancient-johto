@@ -167,10 +167,10 @@ _PewterCityPokecenterGuyText::
 
 	para "When JIGGLYPUFF"
 	line "sings, #MON"
-	cont "get drowsy..."
+	cont "get drowsy…"
 
-	para "...Me too..."
-	line "Snore..."
+	para "…Me too…"
+	line "Snore…"
 	done
 
 _CeruleanPokecenterGuyText::
@@ -209,7 +209,7 @@ _UnusedBenchGuyText1::
 
 _UnusedBenchGuyText2::
 	text "I'm tired from"
-	line "all the fun..."
+	line "all the fun…"
 	done
 
 _UnusedBenchGuyText3::
@@ -222,7 +222,7 @@ _VermilionPokecenterGuyText::
 	text "It is true that a"
 	line "higher level"
 	cont "#MON will be"
-	cont "more powerful..."
+	cont "more powerful…"
 
 	para "But, all #MON"
 	line "will have weak"
@@ -331,7 +331,7 @@ _CinnabarGymQuizIntroText::
 	para "If you want to"
 	line "conserve your"
 	cont "#MON for the"
-	cont "GYM LEADER..."
+	cont "GYM LEADER…"
 
 	para "Then get it right!"
 	line "Here we go!"
@@ -417,7 +417,7 @@ _OakLabEmailText::
 	text "There's an e-mail"
 	line "message here!"
 
-	para "..."
+	para "…"
 
 	para "Calling all"
 	line "#MON trainers!"
@@ -437,7 +437,7 @@ _OakLabEmailText::
 
 	para "PS: PROF.OAK,"
 	line "please visit us!"
-	cont "..."
+	cont "…"
 	done
 
 _GameCornerCoinCaseText::
@@ -473,7 +473,7 @@ TMNotebookText::
 	text "It's a pamphlet"
 	line "on TMs."
 
-	para "..."
+	para "…"
 
 	para "There are 50 TMs"
 	line "in all."
@@ -498,7 +498,7 @@ _ViridianSchoolNotebookText1::
 	text "Looked at the"
 	line "notebook!"
 
-	para "First page..."
+	para "First page…"
 
 	para "# BALLs are"
 	line "used to catch"
@@ -514,7 +514,7 @@ _ViridianSchoolNotebookText1::
 	prompt
 
 _ViridianSchoolNotebookText2::
-	text "Second page..."
+	text "Second page…"
 
 	para "A healthy #MON"
 	line "may be hard to"
@@ -527,7 +527,7 @@ _ViridianSchoolNotebookText2::
 	prompt
 
 _ViridianSchoolNotebookText3::
-	text "Third page..."
+	text "Third page…"
 
 	para "#MON trainers"
 	line "seek others to"
@@ -540,7 +540,7 @@ _ViridianSchoolNotebookText3::
 	prompt
 
 _ViridianSchoolNotebookText4::
-	text "Fourth page..."
+	text "Fourth page…"
 
 	para "The goal for"
 	line "#MON trainers"
@@ -549,7 +549,7 @@ _ViridianSchoolNotebookText4::
 	cont "GYM LEADERs."
 
 	para "Do so to earn the"
-	line "right to face..."
+	line "right to face…"
 
 	para "The ELITE FOUR of"
 	line "#MON LEAGUE!"
@@ -577,13 +577,13 @@ _IndigoPlateauHQText::
 _RedBedroomSNESText::
 	text "<PLAYER> is"
 	line "playing the SNES!"
-	cont "...Okay!"
+	cont "…Okay!"
 	cont "It's time to go!"
 	done
 
 _Route15UpstairsBinocularsText::
 	text "Looked into the"
-	line "binoculars..."
+	line "binoculars…"
 
 	para "A large, shining"
 	line "bird is flying"
@@ -988,8 +988,8 @@ _ScaredText::
 	prompt
 
 _GetOutText::
-	text "GHOST: Get out..."
-	line "Get out..."
+	text "GHOST: Get out…"
+	line "Get out…"
 	prompt
 
 _FastAsleepText::
@@ -1298,7 +1298,7 @@ _SuperEffectiveText::
 
 _NotVeryEffectiveText::
 	text "It's not very"
-	line "effective..."
+	line "effective…"
 	prompt
 
 _SafariZoneEatingText::
@@ -1672,31 +1672,39 @@ _LinkCanceledText::
 	done
 
 _OakSpeechText1::
-	text "Hello there!"
-	line "Welcome to the"
-	cont "world of #MON!"
+	text "Hello! Sorry to"
+	line "keep you waiting…"
+	
+	para "Welcome to the"
+	line "world of #MON!"
 
-	para "My name is OAK!"
-	line "People call me"
-	cont "the #MON PROF!"
+	para "My name is OAK,"
+	line "I'm a professor"
+	cont "from KANTO."
 	prompt
 
 _OakSpeechText2A::
-	text "This world is"
-	line "inhabited by"
-	cont "creatures called"
-	cont "#MON!@"
+	text "As you surely"
+	line "already know,"
+	cont "this world is"
+	cont "inhabited far and"
+	cont "wide by #MON.@"
 	text_end
 
 _OakSpeechText2B::
 	text_start
 
+	para "People and #MON"
+	line "live together by"
+	cont "supporting each"
+	cont "other."
+
 	para "For some people,"
 	line "#MON are"
 	cont "pets. Others use"
-	cont "them for fights."
+	cont "them for battles."
 
-	para "Myself..."
+	para "Myself…"
 
 	para "I study #MON"
 	line "as a profession."
@@ -1708,12 +1716,12 @@ _IntroducePlayerText::
 	prompt
 
 _IntroduceRivalText::
-	text "This is my grand-"
-	line "son. He's been"
+	text "Then there's this"
+	line "boy. He's been"
 	cont "your rival since"
-	cont "you were a baby."
+	cont "you were little."
 
-	para "...Erm, what is"
+	para "…Erm, what is"
 	line "his name again?"
 	prompt
 

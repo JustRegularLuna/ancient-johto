@@ -93,7 +93,7 @@ _OaksAideHiText::
 	done
 
 _OaksAideUhOhText::
-	text "Let's see..."
+	text "Let's see…"
 	line "Uh-oh! You have"
 	cont "caught only @"
 	text_decimal hOaksAideNumMonsOwned, 1, 3

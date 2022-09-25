@@ -132,7 +132,7 @@ _TryingToLearnText::
 	done
 
 _OneTwoAndText::
-	text "1, 2 and...@"
+	text "1, 2 and…@"
 	text_end
 
 _PoofText::
@@ -148,7 +148,7 @@ _ForgotAndText::
 	text_ram wcd6d
 	text "!"
 
-	para "And..."
+	para "And…"
 	prompt
 
 _HMCantDeleteText::
