@@ -1,11 +1,25 @@
 ChoosePlayerName:
 	call OakSpeechSlidePicRight
+	ld a, [wPlayerGender]
+	and a
+	jr nz, .areKris1
 	ld de, DefaultNamesPlayer
 	call DisplayIntroNameTextBox
 	ld a, [wCurrentMenuItem]
 	and a
 	jr z, .customName
 	ld hl, DefaultNamesPlayerList
+	call GetDefaultName
+	ld de, wPlayerName
+	call OakSpeechSlidePicLeft
+	jr .done
+.areKris1
+	ld de, DefaultNamesGirl
+	call DisplayIntroNameTextBox
+	ld a, [wCurrentMenuItem]
+	and a
+	jr z, .customName
+	ld hl, DefaultNamesGirlList
 	call GetDefaultName
 	ld de, wPlayerName
 	call OakSpeechSlidePicLeft
@@ -20,8 +34,14 @@ ChoosePlayerName:
 	jr z, .customName
 	call GetRedPalID
 	call Delay3
-	ld de, RedPicFront
-	ld b, BANK(RedPicFront)
+	ld de, ChrisPicFront
+	ld b, BANK(ChrisPicFront)
+	ld a, [wPlayerGender]
+	and a
+	jr z, .notKris1
+	ld de, KrisPicFront
+	ld b, BANK(KrisPicFront)
+.notKris1
 	call IntroDisplayPicCenteredOrUpperRight
 .done
 	ld hl, YourNameIsText
@@ -180,6 +200,7 @@ DisplayIntroNameTextBox:
 	ld [wMenuWatchedKeys], a ; A_BUTTON
 	inc a
 	ld [wTopMenuItemY], a
+	inc a
 	inc a
 	ld [wMaxMenuItem], a
 	jp HandleMenuInput

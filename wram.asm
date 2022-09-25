@@ -2625,6 +2625,11 @@ wHallOfFameCurScript::
 
 wGameProgressFlagsEnd::
 
+wPlayerGender::
+; $00 = Chris
+; $01 = Kris
+	ds 1
+
 ; variable sprites can be changed with scripts
 ; useful in the same way it was in Gen 2
 ; sprites don't update until the map is reloaded

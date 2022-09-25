@@ -641,9 +641,8 @@ DeterminePaletteIDFront:
 DeterminePaletteIDOutOfBattle:
 	ld [wd11e], a
 	and a
-	ld a, [wTrainerClass]
-	ld hl, TrainerPalettes
-	jr z, GetTrainerPalID
+	ld a, PAL_MEWMON ; trainers
+	ret z
 	jr GetMonPalID
 
 DeterminePaletteIDBack:
@@ -657,7 +656,7 @@ DeterminePaletteIDBack:
 	ld a, [hl]
 	ld [wd11e], a
 	and a
-	ld a, PAL_HERO
+	ld a, PAL_MEWMON ; player
 	ret z
 GetMonPalID:
 	push bc
@@ -665,7 +664,6 @@ GetMonPalID:
 	pop bc
 	ld a, [wd11e]
 	ld hl, MonsterPalettes
-GetTrainerPalID:
 	ld e, a
 	ld d, $00
 	add hl, de

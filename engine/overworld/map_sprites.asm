@@ -320,7 +320,7 @@ InitOutsideMapSprites:
 	inc d
 .noCarry2
 	ld hl, wSpritePlayerStateData2PictureID
-	ld a, SPRITE_RED
+	ld a, SPRITE_PLAYER
 	ld [hl], a
 	ld bc, wSpriteSet
 ; Load the sprite set into RAM.

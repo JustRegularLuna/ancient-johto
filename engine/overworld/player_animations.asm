@@ -45,11 +45,11 @@ EnterMapAnim::
 	jr .done
 .flyAnimation
 	pop hl
-	ld de, BirdSprite
+	ld de, SpriteBird
 	ld hl, vNPCSprites
-	lb bc, BANK(BirdSprite), $0c
+	lb bc, BANK(SpriteBird), $0c
 	call CopyVideoData
-	call LoadBirdSpriteGraphics
+	call LoadSpriteBirdGraphics
 	ld a, SFX_FLY
 	call PlaySound
 	ld hl, wFlyAnimUsingCoordList
@@ -140,7 +140,7 @@ _LeaveMapAnim::
 	call PlayerSpinInPlace
 	jr .spinWhileMovingUp
 .flyAnimation
-	call LoadBirdSpriteGraphics
+	call LoadSpriteBirdGraphics
 	ld hl, wFlyAnimUsingCoordList
 	ld a, $ff ; is not using coord list (flap in place)
 	ld [hli], a ; wFlyAnimUsingCoordList
@@ -249,14 +249,14 @@ DoFlyAnimation:
 	jr nz, DoFlyAnimation
 	ret
 
-LoadBirdSpriteGraphics:
-	ld de, BirdSprite
+LoadSpriteBirdGraphics:
+	ld de, SpriteBird
 	ld hl, vNPCSprites
-	lb bc, BANK(BirdSprite), 12
+	lb bc, BANK(SpriteBird), 12
 	call CopyVideoData
-	ld de, BirdSprite tile 12 ; moving animation sprite
+	ld de, SpriteBird tile 12 ; moving animation sprite
 	ld hl, vNPCSprites2
-	lb bc, BANK(BirdSprite), 12
+	lb bc, BANK(SpriteBird), 12
 	jp CopyVideoData
 
 InitFacingDirectionList:
@@ -382,12 +382,29 @@ FishingAnim:
 	call DelayFrames
 	ld hl, wd736
 	set 6, [hl] ; reserve the last 4 OAM entries
-	ld de, RedSprite
+	ld a, [wPlayerGender]
+	and a
+	jr z, .boySpriteLoad
+	ld de, SpriteKris
 	ld hl, vNPCSprites tile $00
-	lb bc, BANK(RedSprite), 12
+	lb bc, BANK(SpriteKris), 12
+	jr .gotSprite
+.boySpriteLoad
+	ld de, SpriteChris
+	ld hl, vNPCSprites tile $00
+	lb bc, BANK(SpriteChris), 12
+.gotSprite
 	call CopyVideoData
+	ld a, [wPlayerGender]
+	and a
+	jr z, .boyTiles
 	ld a, $4
-	ld hl, RedFishingTiles
+	ld hl, KrisFishingFrames
+	jr .gotFrames
+.boyTiles
+	ld a, $4
+	ld hl, ChrisFishingFrames
+.gotFrames
 	call LoadAnimSpriteGfx
 	ld a, [wSpritePlayerStateData1ImageIndex]
 	ld c, a
@@ -484,11 +501,17 @@ fishing_gfx: MACRO
 	dw vNPCSprites tile \3
 ENDM
 
-RedFishingTiles:
-	fishing_gfx RedFishingTilesFront, 2, $02
-	fishing_gfx RedFishingTilesBack,  2, $06
-	fishing_gfx RedFishingTilesSide,  2, $0a
-	fishing_gfx RedFishingRodTiles,   3, $fd
+ChrisFishingFrames:
+	fishing_gfx ChrisFishingTilesFront,  2, $02
+	fishing_gfx ChrisFishingTilesBack,   2, $06
+	fishing_gfx ChrisFishingTilesSide,   2, $0a
+	fishing_gfx FishingRodTiles,         3, $fd
+
+KrisFishingFrames:
+	fishing_gfx KrisFishingTilesFront,   2, $02
+	fishing_gfx KrisFishingTilesBack,    2, $06
+	fishing_gfx KrisFishingTilesSide,    2, $0a
+	fishing_gfx FishingRodTiles,         3, $fd
 
 _HandleMidJump::
 	ld a, [wPlayerJumpingYScreenCoordsIndex]

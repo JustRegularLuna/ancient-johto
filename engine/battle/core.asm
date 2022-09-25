@@ -6314,11 +6314,15 @@ SwapPlayerAndEnemyLevels:
 LoadPlayerBackPic:
 	ld a, [wBattleType]
 	dec a ; is it the old man tutorial?
-	ld de, RedPicBack
-	jr nz, .next
 	ld de, OldManPicBack
+	jr z, .next
+	ld de, ChrisPicBack
+	ld a, [wPlayerGender]
+	and a
+	jr z, .next
+	ld de, KrisPicBack
 .next
-	ld a, BANK(RedPicBack)
+	ld a, BANK(ChrisPicBack)
 	call UncompressSpriteFromDE
 	call LoadBackSpriteUnzoomed
 	nop
@@ -6900,7 +6904,7 @@ _LoadTrainerPic:
 	and a
 	ld a, BANK(TrainerPics) ; this is where all the trainer pics are (not counting Red's)
 	jr z, .loadSprite
-	ld a, BANK(RedPicFront)
+	ld a, BANK(ChrisPicFront)
 .loadSprite
 	call UncompressSpriteFromDE
 	ld de, vFrontPic

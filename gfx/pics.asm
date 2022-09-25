@@ -53,8 +53,6 @@ PikachuPicBack::      INCBIN "gfx/pokemon/back/pikachub.pic"
 RaichuPicFront::      INCBIN "gfx/pokemon/front/raichu.pic"
 RaichuPicBack::       INCBIN "gfx/pokemon/back/raichub.pic"
 
-	ds $a3
-
 
 SECTION "Pics 2", ROMX
 
@@ -109,8 +107,6 @@ DiglettPicBack::      INCBIN "gfx/pokemon/back/diglettb.pic"
 DugtrioPicFront::     INCBIN "gfx/pokemon/front/dugtrio.pic"
 DugtrioPicBack::      INCBIN "gfx/pokemon/back/dugtriob.pic"
 
-	ds $233
-
 
 SECTION "Pics 3", ROMX
 
@@ -160,8 +156,6 @@ TentacruelPicFront::  INCBIN "gfx/pokemon/front/tentacruel.pic"
 TentacruelPicBack::   INCBIN "gfx/pokemon/back/tentacruelb.pic"
 GeodudePicFront::     INCBIN "gfx/pokemon/front/geodude.pic"
 GeodudePicBack::      INCBIN "gfx/pokemon/back/geodudeb.pic"
-
-	ds $2c
 
 
 SECTION "Pics 4", ROMX
@@ -215,11 +209,6 @@ HypnoPicBack::       INCBIN "gfx/pokemon/back/hypnob.pic"
 KrabbyPicFront::     INCBIN "gfx/pokemon/front/krabby.pic"
 KrabbyPicBack::      INCBIN "gfx/pokemon/back/krabbyb.pic"
 
-	ds $19d
-
-RedPicBack::           INCBIN "gfx/player/redb.pic"
-OldManPicBack::        INCBIN "gfx/battle/oldmanb.pic"
-
 
 SECTION "Pics 5", ROMX
 
@@ -262,8 +251,6 @@ HorseaPicBack::        INCBIN "gfx/pokemon/back/horseab.pic"
 FossilKabutopsPic::    INCBIN "gfx/pokemon/front/fossilkabutops.pic"
 FossilAerodactylPic::  INCBIN "gfx/pokemon/front/fossilaerodactyl.pic"
 GhostPic::             INCBIN "gfx/battle/ghost.pic"
-
-	ds $42
 
 
 SECTION "Pics 6", ROMX
@@ -316,4 +303,9 @@ ChannelerPic::     INCBIN "gfx/trainers/channeler.pic"
 AgathaPic::        INCBIN "gfx/trainers/agatha.pic"
 LancePic::         INCBIN "gfx/trainers/lance.pic"
 
-	ds $355
+
+SECTION "Player Backs", ROMX
+
+ChrisPicBack::         INCBIN "gfx/player/chris_back.pic"
+KrisPicBack::          INCBIN "gfx/player/kris_back.pic"
+OldManPicBack::        INCBIN "gfx/battle/oldmanb.pic"

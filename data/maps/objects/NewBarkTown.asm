@@ -14,8 +14,8 @@ NewBarkTown_Object:
 	sign  3,  3, 7
 
 	def_objects
-	object SPRITE_BLUE,  3,  2, STAY, RIGHT, 1 ; person
-	object SPRITE_GIRL,  6,  8, STAY, NONE, 2 ; person
+	object SPRITE_RIVAL,  3,  2, STAY, RIGHT, 1 ; person
+	object SPRITE_TEACHER,  6,  8, STAY, NONE, 2 ; person
 	object SPRITE_FISHER, 12,  9, WALK, ANY_DIR, 3 ; person
 
 	def_warps_to NEW_BARK_TOWN

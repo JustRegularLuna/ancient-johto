@@ -27,10 +27,10 @@ GetTrainerInformation::
 	ld [de], a
 	jp BankswitchBack
 .linkBattle
-	ld a, BANK(RedPicFront)
+	ld a, BANK(ChrisPicFront)
 	ld [wTrainerPicBank], a
 	ld hl, wTrainerPicPointer
-	ld de, RedPicFront
+	ld de, ChrisPicFront
 	ld [hl], e
 	inc hl
 	ld [hl], d

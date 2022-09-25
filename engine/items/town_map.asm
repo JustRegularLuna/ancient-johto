@@ -12,7 +12,7 @@ DisplayTownMap:
 	ld a, [wCurMap]
 	push af
 	ld b, $0
-	call DrawPlayerOrBirdSprite ; player sprite
+	call DrawPlayerOrSpriteBird ; player sprite
 	hlcoord 1, 0
 	ld de, wcd6d
 	call PlaceString
@@ -167,9 +167,9 @@ LoadTownMap_Fly::
 	call LoadTownMap
 	call LoadPlayerSpriteGraphics
 	call LoadFontTilePatterns
-	ld de, BirdSprite
+	ld de, SpriteBird
 	ld hl, vSprites tile $04
-	lb bc, BANK(BirdSprite), 12
+	lb bc, BANK(SpriteBird), 12
 	call CopyVideoData
 	ld de, TownMapUpArrow
 	ld hl, vChars1 tile $6d
@@ -186,7 +186,7 @@ LoadTownMap_Fly::
 	call PlaceString
 	ld a, [wCurMap]
 	ld b, $0
-	call DrawPlayerOrBirdSprite
+	call DrawPlayerOrSpriteBird
 	ld hl, wFlyLocationsList
 	decoord 18, 0
 .townMapFlyLoop
@@ -200,7 +200,7 @@ LoadTownMap_Fly::
 	pop hl
 	ld a, [hl]
 	ld b, $4
-	call DrawPlayerOrBirdSprite ; draw bird sprite
+	call DrawPlayerOrSpriteBird ; draw bird sprite
 	hlcoord 3, 0
 	ld de, wcd6d
 	call PlaceString
@@ -384,7 +384,7 @@ ExitTownMap:
 	call UpdateSprites
 	jp RunDefaultPaletteCommand
 
-DrawPlayerOrBirdSprite:
+DrawPlayerOrSpriteBird:
 ; a = map number
 ; b = OAM base tile
 	push af
@@ -396,7 +396,7 @@ DrawPlayerOrBirdSprite:
 	ld a, [de]
 	push hl
 	call TownMapCoordsToOAMCoords
-	call WritePlayerOrBirdSpriteOAM
+	call WritePlayerOrSpriteBirdOAM
 	pop hl
 	ld de, wcd6d
 .loop
@@ -451,7 +451,7 @@ DisplayWildLocations:
 .drawPlayerSprite
 	ld a, [wCurMap]
 	ld b, $0
-	call DrawPlayerOrBirdSprite
+	call DrawPlayerOrSpriteBird
 .done
 	ld hl, wOAMBuffer
 	ld de, wTileMapBackup
@@ -479,7 +479,7 @@ TownMapCoordsToOAMCoords:
 	ld [hli], a
 	ret
 
-WritePlayerOrBirdSpriteOAM:
+WritePlayerOrSpriteBirdOAM:
 	ld a, [wOAMBaseTile]
 	and a
 	ld hl, wOAMBuffer + $90 ; for player sprite

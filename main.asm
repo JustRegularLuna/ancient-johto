@@ -43,15 +43,15 @@ INCLUDE "engine/pokemon/remove_mon.asm"
 INCLUDE "engine/events/display_pokedex.asm"
 
 GetNidoPalID:
-	ld a, PAL_NIDORINO
+	ld a, PAL_PURPLEMON
 	jr GotPaletteID
 GetRedPalID:
 	call ClearScreen
-	ld a, PAL_HERO
+	ld a, PAL_MEWMON
 	jr GotPaletteID
 GetRivalPalID:
 	call ClearScreen
-	ld a, PAL_GARY1
+	ld a, PAL_MEWMON
 GotPaletteID:
 	push af
 	ld hl, SendIntroPal
@@ -679,6 +679,7 @@ INCLUDE "engine/gfx/mon_icons.asm"
 INCLUDE "engine/events/in_game_trades.asm"
 INCLUDE "engine/gfx/palettes.asm"
 INCLUDE "engine/menus/save.asm"
+INCLUDE "engine/items/tm_prices.asm"
 
 
 SECTION "Itemfinder 1", ROMX
@@ -710,7 +711,6 @@ INCLUDE "data/battle_anims/subanimations.asm"
 INCLUDE "data/battle_anims/frame_blocks.asm"
 INCLUDE "engine/movie/evolution.asm"
 INCLUDE "engine/overworld/elevator.asm"
-INCLUDE "engine/items/tm_prices.asm"
 
 
 SECTION "bank2D", ROMX, BANK[$2D]

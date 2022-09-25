@@ -53,6 +53,14 @@ OakSpeech:
 	ld [wItemQuantity], a
 	call AddItemToInventory  ; give one potion
 
+	; choose Hiro or Kris
+	ld hl, BoyOrGirlText
+	call PrintText
+	call BoyGirlChoice
+	ld a, [wCurrentMenuItem]
+	ld [wPlayerGender], a
+	call ClearScreen
+
 	; set starting region
 IF DEF(_DEBUG)
 	ld hl, DebugChooseRegionText
@@ -69,7 +77,7 @@ ENDC
 	call SpecialWarpIn
 	xor a
 	ldh [hTileAnimations], a
-	ld a, PAL_OAK
+	ld a, PAL_MEWMON
 	call GotPaletteID
 	ld de, ProfOakPic
 	lb bc, BANK(ProfOakPic), $00
@@ -91,8 +99,14 @@ ENDC
 	call PrintText
 	call GBFadeOutToWhite
 	call GetRedPalID
-	ld de, RedPicFront
-	lb bc, BANK(RedPicFront), $00
+	ld de, ChrisPicFront
+	lb bc, BANK(ChrisPicFront), $00
+	ld a, [wPlayerGender]
+	and a
+	jr z, .notKris1
+	ld de, KrisPicFront
+	lb bc, BANK(KrisPicFront), $00
+.notKris1
 	call IntroDisplayPicCenteredOrUpperRight
 	call MovePicLeft
 	ld hl, IntroducePlayerText
@@ -110,8 +124,14 @@ ENDC
 .skipChoosingNames
 	call GBFadeOutToWhite
 	call GetRedPalID
-	ld de, RedPicFront
-	lb bc, BANK(RedPicFront), $00
+	ld de, ChrisPicFront
+	lb bc, BANK(ChrisPicFront), $00
+	ld a, [wPlayerGender]
+	and a
+	jr z, .notKris2
+	ld de, KrisPicFront
+	lb bc, BANK(KrisPicFront), $00
+.notKris2
 	call IntroDisplayPicCenteredOrUpperRight
 	call GBFadeInFromWhite
 	ld a, [wd72d]
@@ -129,9 +149,15 @@ ENDC
 	ld [MBC1RomBank], a
 	ld c, 4
 	call DelayFrames
-	ld de, RedSprite
+	ld de, SpriteChris
+	lb bc, BANK(SpriteChris), $0C
+	ld a, [wPlayerGender]
+	and a
+	jr z, .notKris3
+	ld de, SpriteKris
+	lb bc, BANK(SpriteKris), $0C
+.notKris3
 	ld hl, vSprites
-	lb bc, BANK(RedSprite), $0C
 	call CopyVideoData
 	ld de, ShrinkPic1
 	lb bc, BANK(ShrinkPic1), $00
@@ -248,6 +274,22 @@ IntroDisplayPicCenteredOrUpperRight:
 	xor a
 	ldh [hStartTileID], a
 	predef_jump CopyUncompressedPicToTilemap
+
+BoyGirlChoice::
+	call SaveScreenTilesToBuffer1
+	ld a, BOY_GIRL_MENU
+	ld [wTwoOptionMenuID], a
+	coord hl, 13, 7 
+	lb bc, 8, 14
+	ld a, TWO_OPTION_MENU
+	ld [wTextBoxID], a
+	call DisplayTextBoxID
+	jp LoadScreenTilesFromBuffer1
+
+BoyOrGirlText:
+	text "Are you a boy,"
+	line "or a girl?"
+	done
 
 IF DEF(_DEBUG)
 DebugRegionChoice::

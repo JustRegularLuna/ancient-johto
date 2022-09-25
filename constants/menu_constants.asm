@@ -36,7 +36,7 @@ PC_ITEM_CAPACITY  EQU 50
 	const_def
 	const YES_NO_MENU       ; 0
 	const KANTO_JOHTO_MENU  ; 1
-	const SOUTH_EAST_MENU   ; 2
+	const BOY_GIRL_MENU     ; 2
 	const WIDE_YES_NO_MENU  ; 3
 	const NORTH_EAST_MENU   ; 4
 	const TRADE_CANCEL_MENU ; 5

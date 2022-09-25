@@ -1,80 +1,160 @@
 ; overworld sprites
 ; SpriteSheetPointerTable indexes (see data/sprites/sprites.asm)
 	const_def
-	const SPRITE_NONE                    ; $00
-	const SPRITE_RED                     ; $01
-	const SPRITE_BLUE                    ; $02
-	const SPRITE_OAK                     ; $03
-	const SPRITE_YOUNGSTER               ; $04
-	const SPRITE_MONSTER                 ; $05
-	const SPRITE_COOLTRAINER_F           ; $06
-	const SPRITE_COOLTRAINER_M           ; $07
-	const SPRITE_LITTLE_GIRL             ; $08
-	const SPRITE_BIRD                    ; $09
-	const SPRITE_MIDDLE_AGED_MAN         ; $0a
-	const SPRITE_GAMBLER                 ; $0b
-	const SPRITE_SUPER_NERD              ; $0c
-	const SPRITE_GIRL                    ; $0d
-	const SPRITE_HIKER                   ; $0e
-	const SPRITE_BEAUTY                  ; $0f
-	const SPRITE_GENTLEMAN               ; $10
-	const SPRITE_DAISY                   ; $11
-	const SPRITE_BIKER                   ; $12
-	const SPRITE_SAILOR                  ; $13
-	const SPRITE_COOK                    ; $14
-	const SPRITE_BIKE_SHOP_CLERK         ; $15
-	const SPRITE_MR_FUJI                 ; $16
-	const SPRITE_GIOVANNI                ; $17
-	const SPRITE_ROCKET                  ; $18
-	const SPRITE_CHANNELER               ; $19
-	const SPRITE_WAITER                  ; $1a
-	const SPRITE_ERIKA                   ; $1b
-	const SPRITE_MIDDLE_AGED_WOMAN       ; $1c
-	const SPRITE_BRUNETTE_GIRL           ; $1d
-	const SPRITE_LANCE                   ; $1e
-	const SPRITE_UNUSED_SCIENTIST        ; $1f
-	const SPRITE_SCIENTIST               ; $20
-	const SPRITE_ROCKER                  ; $21
-	const SPRITE_SWIMMER                 ; $22
-	const SPRITE_SAFARI_ZONE_WORKER      ; $23
-	const SPRITE_GYM_GUIDE               ; $24
-	const SPRITE_GRAMPS                  ; $25
-	const SPRITE_CLERK                   ; $26
-	const SPRITE_FISHING_GURU            ; $27
-	const SPRITE_GRANNY                  ; $28
-	const SPRITE_NURSE                   ; $29
-	const SPRITE_LINK_RECEPTIONIST       ; $2a
-	const SPRITE_SILPH_PRESIDENT         ; $2b
-	const SPRITE_SILPH_WORKER            ; $2c
-	const SPRITE_WARDEN                  ; $2d
-	const SPRITE_CAPTAIN                 ; $2e
-	const SPRITE_FISHER                  ; $2f
-	const SPRITE_KOGA                    ; $30
-	const SPRITE_GUARD                   ; $31
-	const SPRITE_UNUSED_GUARD            ; $32
-	const SPRITE_MOM                     ; $33
-	const SPRITE_BALDING_GUY             ; $34
-	const SPRITE_LITTLE_BOY              ; $35
-	const SPRITE_UNUSED_GAMEBOY_KID      ; $36
-	const SPRITE_GAMEBOY_KID             ; $37
-	const SPRITE_FAIRY                   ; $38
-	const SPRITE_AGATHA                  ; $39
-	const SPRITE_BRUNO                   ; $3a
-	const SPRITE_LORELEI                 ; $3b
-	const SPRITE_SEEL                    ; $3c
+	const SPRITE_NONE
+	const SPRITE_PLAYER
+	const SPRITE_MOM
+	const SPRITE_RIVAL
+	const SPRITE_ELM
+	const SPRITE_BILL
+	const SPRITE_KURT
+	const SPRITE_GYM_GUIDE
+	const SPRITE_FALKNER
+	const SPRITE_BUGSY
+	const SPRITE_WHITNEY
+	const SPRITE_MORTY
+	const SPRITE_CHUCK
+	const SPRITE_JASMINE
+	const SPRITE_PRYCE
+	const SPRITE_CLAIR
+	const SPRITE_WILL
+	const SPRITE_KOGA
+	const SPRITE_BRUNO
+	const SPRITE_KAREN
+	const SPRITE_LANCE
+	const SPRITE_REDS_MOM
+	const SPRITE_OAK
+	const SPRITE_RED
+	const SPRITE_BLUE
+	const SPRITE_DAISY
+	const SPRITE_BROCK
+	const SPRITE_MISTY
+	const SPRITE_SURGE
+	const SPRITE_ERIKA
+	const SPRITE_SABRINA
+	const SPRITE_JANINE
+	const SPRITE_BLAINE
+	const SPRITE_LORELEI
+	const SPRITE_AGATHA
+	const SPRITE_GIOVANNI
+	const SPRITE_ROCKET
+	const SPRITE_ROCKET_GIRL
+	const SPRITE_JESSIE
+	const SPRITE_JAMES
+	const SPRITE_COOLTRAINER_M
+	const SPRITE_COOLTRAINER_F
+	const SPRITE_BUG_CATCHER
+	const SPRITE_TWIN
+	const SPRITE_YOUNGSTER
+	const SPRITE_LASS
+	const SPRITE_TEACHER
+	const SPRITE_BEAUTY
+	const SPRITE_SUPER_NERD
+	const SPRITE_ROCKER
+	const SPRITE_POKEFAN_M
+	const SPRITE_POKEFAN_F
+	const SPRITE_GRAMPS
+	const SPRITE_GRANNY
+	const SPRITE_SWIMMER_GUY
+	const SPRITE_SWIMMER_GIRL
+	const SPRITE_NURSE
+	const SPRITE_LINK_RECEPTIONIST
+	const SPRITE_CLERK 
+	const SPRITE_PHARMACIST
+	const SPRITE_INN_KEEPER
+	const SPRITE_GIRL
+	const SPRITE_BALDING_GUY
+	const SPRITE_FISHER
+	const SPRITE_FISHING_GURU
+	const SPRITE_SCIENTIST
+	const SPRITE_KIMONO_GIRL
+	const SPRITE_ELDER
+	const SPRITE_SAGE
+	const SPRITE_CHANNELER
+	const SPRITE_MEDIUM
+	const SPRITE_SAFARI_ZONE_WORKER
+	const SPRITE_WARDEN
+	const SPRITE_RECEPTIONIST
+	const SPRITE_SILPH_GUY
+	const SPRITE_SILPH_GIRL
+	const SPRITE_SILPH_PRESIDENT
+	const SPRITE_GENTLEMAN
+	const SPRITE_BLACK_BELT
+	const SPRITE_OFFICER
+	const SPRITE_OFFICER_JENNY
+	const SPRITE_COOK
+	const SPRITE_SAILOR
+	const SPRITE_CAPTAIN
+	const SPRITE_FROWNING_MAN
+	const SPRITE_BIKER
+	const SPRITE_GAMBLER
+	const SPRITE_GAMEBOY_KID
+	const SPRITE_MONSTER
+	const SPRITE_FAIRY
+	const SPRITE_BIRD
+	const SPRITE_DRAGON
+	const SPRITE_CHANSEY
+	const SPRITE_SEEL
+	const SPRITE_LAPRAS
+	const SPRITE_SURFING_PIKACHU
+
 FIRST_STILL_SPRITE EQU const_value
-	const SPRITE_POKE_BALL               ; $3d
-	const SPRITE_FOSSIL                  ; $3e
-	const SPRITE_BOULDER                 ; $3f
-	const SPRITE_PAPER                   ; $40
-	const SPRITE_POKEDEX                 ; $41
-	const SPRITE_CLIPBOARD               ; $42
-	const SPRITE_SNORLAX                 ; $43
-	const SPRITE_UNUSED_OLD_AMBER        ; $44
-	const SPRITE_OLD_AMBER               ; $45
-	const SPRITE_UNUSED_GAMBLER_ASLEEP_1 ; $46
-	const SPRITE_UNUSED_GAMBLER_ASLEEP_2 ; $47
-	const SPRITE_GAMBLER_ASLEEP          ; $48
+	const SPRITE_POKE_BALL
+	const SPRITE_BOOK
+	const SPRITE_PAPER
+	const SPRITE_CLIPBOARD
+	const SPRITE_ROCK
+	const SPRITE_BOULDER
+	const SPRITE_FOSSIL
+	const SPRITE_OLD_AMBER
+	const SPRITE_FRUIT_TREE
+	const SPRITE_GAMBLER_ASLEEP
+	const SPRITE_BENCH_GUY
+	const SPRITE_BENCH_LASS
+	const SPRITE_BENCH_COOLTRAINER
+
+; Sprites for overworld pokemon Icons
+	const SPRITE_ICON_NULL
+	const SPRITE_ICON_POLIWAG
+	const SPRITE_ICON_JIGGLYPUFF
+	const SPRITE_ICON_DIGLETT
+	const SPRITE_ICON_PIKACHU
+	const SPRITE_ICON_STARYU
+	const SPRITE_ICON_FISH
+	const SPRITE_ICON_BIRD
+	const SPRITE_ICON_MONSTER
+	const SPRITE_ICON_CLEFAIRY
+	const SPRITE_ICON_ODDISH
+	const SPRITE_ICON_BUG
+	const SPRITE_ICON_GHOST
+	const SPRITE_ICON_LAPRAS
+	const SPRITE_ICON_HUMANSHAPE
+	const SPRITE_ICON_FOX
+	const SPRITE_ICON_EQUINE
+	const SPRITE_ICON_SHELL
+	const SPRITE_ICON_BLOB
+	const SPRITE_ICON_SERPENT
+	const SPRITE_ICON_VOLTORB
+	const SPRITE_ICON_SQUIRTLE
+	const SPRITE_ICON_BULBASAUR
+	const SPRITE_ICON_CHARMANDER
+	const SPRITE_ICON_CATERPILLAR
+	const SPRITE_ICON_UNOWN
+	const SPRITE_ICON_GEODUDE
+	const SPRITE_ICON_FIGHTER
+	const SPRITE_ICON_EGG
+	const SPRITE_ICON_JELLYFISH
+	const SPRITE_ICON_MOTH
+	const SPRITE_ICON_BAT
+	const SPRITE_ICON_SNORLAX
+	const SPRITE_ICON_HO_OH
+	const SPRITE_ICON_LUGIA
+	const SPRITE_ICON_GYARADOS
+	const SPRITE_ICON_SLOWPOKE
+	const SPRITE_ICON_SUDOWOODO
+	const SPRITE_ICON_BIGMON
+	const SPRITE_ICON_MEWTWO
+	const SPRITE_ICON_MEW
 NUM_SPRITES EQU const_value - 1
 
 ; wVarSprites indexes (see wram.asm)
