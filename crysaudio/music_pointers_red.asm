@@ -54,3 +54,27 @@ Music:
 	dba Music_LookRocket
 	dba Music_LookSage
 	dba Music_LookYoungster
+	dba Music_NewBarkTown
+	dba Music_CherrygroveCity
+	dba Music_VioletCity
+	dba Music_AzaleaTown
+	dba Music_GoldenrodCity
+	dba Music_EcruteakCity
+	dba Music_LakeOfRage
+	dba Music_Route29
+	dba Music_Route30
+	dba Music_Route36
+	dba Music_Route37
+	dba Music_Route26
+	dba Music_ElmsLab
+	dba Music_BurnedTower
+	dba Music_DancingHall
+	dba Music_DarkCave
+	dba Music_DragonsDen
+	dba Music_Lighthouse
+	dba Music_MtMoonSquare
+	dba Music_NationalPark
+	dba Music_RuinsOfAlphInterior
+	dba Music_SproutTower
+	dba Music_TinTower
+	dba Music_UnionCave
