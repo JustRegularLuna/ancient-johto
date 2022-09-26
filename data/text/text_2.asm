@@ -1700,9 +1700,9 @@ _OakSpeechText2B::
 	cont "other."
 
 	para "For some people,"
-	line "#MON are"
-	cont "pets. Others use"
-	cont "them for battles."
+	line "#MON are pets."
+	cont "Others use them"
+	cont "for battles."
 
 	para "Myself…"
 
