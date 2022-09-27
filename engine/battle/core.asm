@@ -922,7 +922,7 @@ TrainerBattleVictory:
 	ld b, MUSIC_DEFEATED_TRAINER
 .gymleader
 	ld a, [wTrainerClass]
-	cp RIVAL3 ; final battle against rival
+	cp CHAMPION ; final battle
 	jr nz, .notrival
 	ld b, MUSIC_DEFEATED_GYM_LEADER
 	ld hl, wFlags_D733

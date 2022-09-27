@@ -422,8 +422,6 @@ PlayTrainerMusic::
 	ret z
 	cp RIVAL2
 	ret z
-	cp RIVAL3
-	ret z
 	ld a, [wGymLeaderNo]
 	and a
 	ret nz

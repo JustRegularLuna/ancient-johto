@@ -1,60 +1,88 @@
 ; trainer class ids
 ; indexes for:
 ; - TrainerNames (see data/trainers/names.asm)
-; - TrainerNamePointers (see data/trainers/name_pointers.asm)
+; - TrainerEncounterMusicTable (see data/trainers/encounter_types.asm)
 ; - TrainerDataPointers (see data/trainers/parties.asm)
 ; - TrainerPicAndMoneyPointers (see data/trainers/pic_pointers_money.asm)
 ; - TrainerAIPointers (see data/trainers/ai_pointers.asm)
 ; - TrainerClassMoveChoiceModifications (see data/trainers/move_choices.asm)
 	const_def
 	const NOBODY         ; $00
-	const YOUNGSTER      ; $01
-	const BUG_CATCHER    ; $02
-	const LASS           ; $03
-	const SAILOR         ; $04
-	const JR_TRAINER_M   ; $05
-	const JR_TRAINER_F   ; $06
-	const POKEMANIAC     ; $07
-	const SUPER_NERD     ; $08
-	const HIKER          ; $09
-	const BIKER          ; $0A
-	const BURGLAR        ; $0B
-	const ENGINEER       ; $0C
-	const UNUSED_JUGGLER ; $0D
-	const FISHER         ; $0E
-	const SWIMMER        ; $0F
-	const CUE_BALL       ; $10
-	const GAMBLER        ; $11
-	const BEAUTY         ; $12
-	const PSYCHIC_TR     ; $13
-	const ROCKER         ; $14
-	const JUGGLER        ; $15
-	const TAMER          ; $16
-	const BIRD_KEEPER    ; $17
-	const BLACKBELT      ; $18
-	const RIVAL1         ; $19
-	const PROF_OAK       ; $1A
-	const CHIEF          ; $1B
-	const SCIENTIST      ; $1C
-	const GIOVANNI       ; $1D
-	const ROCKET         ; $1E
-	const COOLTRAINER_M  ; $1F
-	const COOLTRAINER_F  ; $20
-	const BRUNO          ; $21
-	const BROCK          ; $22
-	const MISTY          ; $23
-	const LT_SURGE       ; $24
-	const ERIKA          ; $25
-	const KOGA           ; $26
-	const BLAINE         ; $27
-	const SABRINA        ; $28
-	const GENTLEMAN      ; $29
-	const RIVAL2         ; $2A
-	const RIVAL3         ; $2B
-	const LORELEI        ; $2C
-	const CHANNELER      ; $2D
-	const AGATHA         ; $2E
-	const LANCE          ; $2F
+	const PROF_OAK
+	const RIVAL1
+	const RIVAL2
+	const FALKNER
+	const BUGSY
+	const WHITNEY
+	const MORTY
+	const PRYCE
+	const JASMINE
+	const CHUCK
+	const CLAIR
+	const WILL
+	const KOGA
+	const BRUNO
+	const KAREN
+	const CHAMPION
+	const LORELEI
+	const AGATHA
+	const RED
+	const BLUE
+	const BROCK
+	const MISTY
+	const LT_SURGE
+	const ERIKA
+	const JANINE
+	const SABRINA
+	const BLAINE
+	const GIOVANNI
+	const EXECUTIVEM
+	const EXECUTIVEF
+	const GRUNTM
+	const GRUNTF
+	const JESSIE_JAMES
+	const SCIENTIST
+	const BURGLAR
+	const YOUNGSTER
+	const BUG_CATCHER
+	const SCHOOLBOY
+	const BIRD_KEEPER
+	const TWINS
+	const LASS
+	const BEAUTY
+	const PICNICKER
+	const CAMPER
+	const COOLTRAINERM
+	const COOLTRAINERF
+	const POKEMANIAC
+	const SUPER_NERD
+	const GENTLEMAN
+	const SKIER
+	const BOARDER
+	const TEACHER
+	const FISHER
+	const SWIMMERM
+	const SWIMMERF
+	const SAILOR
+	const ROCKER
+	const GUITARIST
+	const HIKER
+	const BIKER
+	const CUE_BALL
+	const GAMBLER
+	const TAMER
+	const FIREBREATHER
+	const JUGGLER
+	const BLACKBELT
+	const PSYCHIC_TR
+	const ENGINEER
+	const SAGE
+	const MEDIUM
+	const CHANNELER
+	const KIMONO_GIRL
+	const POKEFANF
+	const POKEFANM
+	const OFFICER
 NUM_TRAINERS EQU const_value - 1
 
 

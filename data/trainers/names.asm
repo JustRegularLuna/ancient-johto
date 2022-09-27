@@ -1,48 +1,76 @@
 TrainerNames::
-	db "YOUNGSTER@"
-	db "BUG CATCHER@"
-	db "LASS@"
-	db "SAILOR@"
-	db "JR.TRAINER♂@"
-	db "JR.TRAINER♀@"
-	db "POKéMANIAC@"
-	db "SUPER NERD@"
-	db "HIKER@"
-	db "BIKER@"
-	db "BURGLAR@"
-	db "ENGINEER@"
-	db "JUGGLER@"
-	db "FISHERMAN@"
-	db "SWIMMER@"
-	db "CUE BALL@"
-	db "GAMBLER@"
-	db "BEAUTY@"
-	db "PSYCHIC@"
-	db "ROCKER@"
-	db "JUGGLER@"
-	db "TAMER@"
-	db "BIRD KEEPER@"
-	db "BLACKBELT@"
-	db "RIVAL1@"
-	db "PROF.OAK@"
-	db "CHIEF@"
-	db "SCIENTIST@"
-	db "GIOVANNI@"
-	db "ROCKET@"
-	db "COOLTRAINER♂@"
-	db "COOLTRAINER♀@"
-	db "BRUNO@"
-	db "BROCK@"
-	db "MISTY@"
-	db "LT.SURGE@"
-	db "ERIKA@"
-	db "KOGA@"
-	db "BLAINE@"
-	db "SABRINA@"
-	db "GENTLEMAN@"
-	db "RIVAL2@"
-	db "RIVAL3@"
-	db "LORELEI@"
-	db "CHANNELER@"
-	db "AGATHA@"
-	db "LANCE@"
+	db "PROF.OAK@" ; PROF_OAK
+	db "RIVAL1@" ; RIVAL1
+	db "RIVAL2@" ; RIVAL2
+	db "FALKNER@" ; FALKNER
+	db "BUGSY@" ; BUGSY
+	db "WHITNEY@" ; WHITNEY
+	db "MORTY@" ; MORTY
+	db "PRYCE@" ; PRYCE
+	db "JASMINE@" ; JASMINE
+	db "CHUCK@" ; CHUCK
+	db "CLAIR@" ; CLAIR
+	db "WILL@" ; WILL
+	db "KOGA@" ; KOGA
+	db "BRUNO@" ; BRUNO
+	db "KAREN@" ; KAREN
+	db "LANCE@" ; CHAMPION
+	db "LORELEI@" ; LORELEI
+	db "AGATHA@" ; AGATHA
+	db "RED@" ; RED
+	db "BLUE@" ; BLUE
+	db "BROCK@" ; BROCK
+	db "MISTY@" ; MISTY
+	db "LT.SURGE@" ; LT_SURGE
+	db "ERIKA@" ; ERIKA
+	db "JANINE@" ; JANINE
+	db "SABRINA@" ; SABRINA
+	db "BLAINE@" ; BLAINE
+	db "GIOVANNI@" ; GIOVANNI
+	db "EXECUTIVE♂@" ; EXECUTIVEM
+	db "EXECUTIVE♀@" ; EXECUTIVEF
+	db "ROCKET♂@" ; GRUNTM
+	db "ROCKET♀@" ; GRUNTF
+	db "ROCKET DUO@" ; JESSIE_JAMES
+	db "SCIENTIST@" ; SCIENTIST
+	db "BURGLAR@" ; BURGLAR
+	db "YOUNGSTER@" ; YOUNGSTER
+	db "BUG CATCHER@" ; BUG_CATCHER
+	db "SCHOOLBOY@" ; SCHOOLBOY
+	db "BIRD KEEPER@" ; BIRD_KEEPER
+	db "TWINS@" ; TWINS
+	db "LASS@" ; LASS
+	db "BEAUTY@" ; BEAUTY
+	db "PICNICKER@" ; PICNICKER
+	db "CAMPER@" ; CAMPER
+	db "COOLTRAINER♂@" ; COOLTRAINERM
+	db "COOLTRAINER♀@" ; COOLTRAINERF
+	db "POKéMANIAC@" ; POKEMANIAC
+	db "SUPER NERD@" ; SUPER_NERD
+	db "GENTLEMAN@" ; GENTLEMAN
+	db "SKIER@" ; SKIER
+	db "BOARDER@" ; BOARDER
+	db "TEACHER@" ; TEACHER
+	db "FISHERMAN@" ; FISHER
+	db "SWIMMER♂@" ; SWIMMERM
+	db "SWIMMER♀@" ; SWIMMERF
+	db "SAILOR@" ; SAILOR
+	db "ROCKER@" ; ROCKER
+	db "GUITARIST@" ; GUITARIST
+	db "HIKER@" ; HIKER
+	db "BIKER@" ; BIKER
+	db "CUE BALL@" ; CUE_BALL
+	db "GAMBLER@" ; GAMBLER
+	db "TAMER@" ; TAMER
+	db "FIREBREATHER@" ; FIREBREATHER
+	db "JUGGLER@" ; JUGGLER
+	db "BLACKBELT@" ; BLACKBELT
+	db "PSYCHIC@" ; PSYCHIC_TR
+	db "ENGINEER@" ; ENGINEER
+	db "SAGE@" ; SAGE
+	db "MEDIUM@" ; MEDIUM
+	db "CHANNELER@" ; CHANNELER
+	db "KIMONO GIRL@" ; KIMONO_GIRL
+	db "POKéFAN♀@" ; POKEFANF
+	db "POKéFAN♂@" ; POKEFANM
+	db "OFFICER@" ; OFFICER

@@ -292,5 +292,4 @@ FreezeEnemyTrainerSprite::
 RivalIDs:
 	db RIVAL1
 	db RIVAL2
-	db RIVAL3
 	db -1 ; end

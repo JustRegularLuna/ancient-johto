@@ -81,7 +81,7 @@ ChampionScript2:
 	ld hl, ChampionDefeatedText
 	ld de, ChampionVictoryText
 	call SaveEndBattleTextPointers
-	ld a, RIVAL3
+	ld a, CHAMPION
 	ld [wCurOpponent], a
 
 	; select which team to use during the encounter
