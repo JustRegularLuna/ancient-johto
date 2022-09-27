@@ -1,3 +1,15 @@
+; text constants
+	const_def 1
+	; NPCs
+	const NEWBARK_RIVAL
+	const NEWBARK_GIRL
+	const NEWBARK_FISHER
+	; Signs
+	const NEWBARK_TOWN_SIGN
+	const NEWBARK_PLAYERS_HOUSE_SIGN
+	const NEWBARK_ELMS_HOUSE_SIGN
+	const NEWBARK_ELMS_LAB_SIGN
+
 NewBarkTown_Object:
 	db $5 ; border block
 
@@ -8,15 +20,15 @@ NewBarkTown_Object:
 	warp  6,  3, 0, ELMS_LAB
 
 	def_signs
-	sign  8,  8, 4
-	sign 11,  5, 5
-	sign  9, 13, 6
-	sign  3,  3, 7
+	sign  8,  8, NEWBARK_TOWN_SIGN
+	sign 11,  5, NEWBARK_PLAYERS_HOUSE_SIGN
+	sign  9, 13, NEWBARK_ELMS_HOUSE_SIGN
+	sign  3,  3, NEWBARK_ELMS_LAB_SIGN
 
 	def_objects
-	object SPRITE_RIVAL,  3,  2, STAY, RIGHT, 1 ; person
-	object SPRITE_TEACHER,  6,  8, STAY, NONE, 2 ; person
-	object SPRITE_FISHER, 12,  9, WALK, ANY_DIR, 3 ; person
+	object SPRITE_RIVAL,  3,  2, STAY, RIGHT, NEWBARK_RIVAL ; person
+	object SPRITE_GIRL,  6,  8, STAY, NONE, NEWBARK_GIRL ; person
+	object SPRITE_FISHER, 12,  9, WALK, ANY_DIR, NEWBARK_FISHER ; person
 
 	def_warps_to NEW_BARK_TOWN
 

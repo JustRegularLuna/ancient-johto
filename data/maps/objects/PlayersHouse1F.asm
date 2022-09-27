@@ -1,3 +1,10 @@
+; text constants
+	const_def 1
+	; NPCs
+	const PLAYERSHOUSE_MOM
+	; Signs
+	const PLAYERSHOUSE_TV
+
 PlayersHouse1F_Object:
 	db $0 ; border block
 
@@ -7,10 +14,10 @@ PlayersHouse1F_Object:
 	warp 7, 7, 0, LAST_MAP
 
 	def_signs
-	sign  4,  1, 2 ; TV
+	sign  4,  1, PLAYERSHOUSE_TV ; TV
 
 	def_objects
-	object SPRITE_MOM,  7,  4, STAY, LEFT, 1 ; Mom
+	object SPRITE_MOM,  7,  4, STAY, LEFT, PLAYERSHOUSE_MOM ; Mom
 
 	def_warps_to PLAYERS_HOUSE_1F
 
