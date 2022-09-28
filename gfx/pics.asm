@@ -271,7 +271,7 @@ WillPic::              INCBIN "gfx/trainers/will.pic" ; WILL
 KogaPic::              INCBIN "gfx/trainers/koga.pic" ; KOGA
 BrunoPic::             INCBIN "gfx/trainers/bruno.pic" ; BRUNO
 KarenPic::             INCBIN "gfx/trainers/karen.pic" ; KAREN
-ChampionPic::          INCBIN "gfx/trainers/lance.pic" ; CHAMPION
+ChampionPic::          INCBIN "gfx/trainers/champion.pic" ; CHAMPION
 LoreleiPic::           INCBIN "gfx/trainers/lorelei.pic" ; LORELEI
 AgathaPic::            INCBIN "gfx/trainers/agatha.pic" ; AGATHA
 RedPic::               INCBIN "gfx/trainers/red.pic" ; RED
@@ -305,11 +305,11 @@ CooltrainerFPic::      INCBIN "gfx/trainers/cooltrainerf.pic" ; COOLTRAINERF
 PokemaniacPic::        INCBIN "gfx/trainers/pokemaniac.pic" ; POKEMANIAC
 SuperNerdPic::         INCBIN "gfx/trainers/supernerd.pic" ; SUPER_NERD
 GentlemanPic::         INCBIN "gfx/trainers/gentleman.pic" ; GENTLEMAN
-SkierPic::             INCBIN "gfx/trainers/skier.pic" ; SKIER
 
 
 SECTION "Pics 7", ROMX
 
+SkierPic::             INCBIN "gfx/trainers/skier.pic" ; SKIER
 BoarderPic::           INCBIN "gfx/trainers/boarder.pic" ; BOARDER
 TeacherPic::           INCBIN "gfx/trainers/teacher.pic" ; TEACHER
 FisherPic::            INCBIN "gfx/trainers/fisher.pic" ; FISHER
