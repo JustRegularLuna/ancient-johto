@@ -320,6 +320,15 @@ OverworldLoopLessDelay::
 ; step counting
 	ld hl, wStepCounter
 	dec [hl]
+; berry tree steps
+	ld hl, wBerryStepCounter
+	inc [hl]
+	ld a, [hli]
+	and a
+	jr nz, .berryDone
+	inc [hl]
+	farcall BerryReset
+.berryDone
 	ld a, [wd72c]
 	bit 0, a
 	jr z, .doneStepCounting

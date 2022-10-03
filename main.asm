@@ -5,7 +5,6 @@ SECTION "bank1", ROMX
 
 INCLUDE "data/sprites/facings.asm"
 INCLUDE "engine/events/black_out.asm"
-	ds $149
 INCLUDE "data/pokemon/mew.asm"
 INCLUDE "engine/battle/safari_zone.asm"
 INCLUDE "engine/movie/title.asm"
@@ -811,3 +810,8 @@ INCLUDE "data/trainers/parties.asm"
 SECTION "Mon Party Icons", ROMX
 
 INCLUDE "data/icon_pointers.asm"
+
+
+SECTION "Berry Trees", ROMX
+
+INCLUDE "engine/overworld/fruit_trees.asm"

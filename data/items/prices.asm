@@ -83,6 +83,23 @@ ItemPrices::
 	money 0     ; MAX_ETHER
 	money 0     ; ELIXER
 	money 0     ; MAX_ELIXER
+	money 10    ; BERRY
+	money 10    ; GOLD_BERRY
+	money 10    ; MYSTERYBERRY
+	money 10    ; PSNCUREBERRY
+	money 10    ; ICE_BERRY
+	money 10    ; BURNT_BERRY
+	money 10    ; MINT_BERRY
+	money 10    ; PRZCUREBERRY
+	money 10    ; MIRACLEBERRY
+	money 10    ; BITTER_BERRY
+	money 10    ; RED_APRICORN
+	money 10    ; YLW_APRICORN
+	money 10    ; BLU_APRICORN
+	money 10    ; GRN_APRICORN
+	money 10    ; PNK_APRICORN
+	money 10    ; WHT_APRICORN
+	money 10    ; BLK_APRICORN
 	assert_table_length NUM_ITEMS
 	money 0     ; FLOOR_B2F
 	money 0     ; FLOOR_B1F

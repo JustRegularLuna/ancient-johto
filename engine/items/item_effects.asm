@@ -100,6 +100,23 @@ ItemUsePtrTable:
 	dw ItemUsePPRestore  ; MAX_ETHER
 	dw ItemUsePPRestore  ; ELIXER
 	dw ItemUsePPRestore  ; MAX_ELIXER
+	dw ItemUseMedicine   ; BERRY
+	dw ItemUseMedicine   ; GOLD_BERRY
+	dw ItemUsePPRestore  ; MYSTERYBERRY
+	dw ItemUseMedicine   ; PSNCUREBERRY
+	dw ItemUseMedicine   ; ICE_BERRY
+	dw ItemUseMedicine   ; BURNT_BERRY
+	dw ItemUseMedicine   ; MINT_BERRY
+	dw ItemUseMedicine   ; PRZCUREBERRY
+	dw ItemUseMedicine   ; MIRACLEBERRY
+	dw ItemUseMedicine   ; BITTER_BERRY
+	dw UnusableItem      ; RED_APRICORN
+	dw UnusableItem      ; YLW_APRICORN
+	dw UnusableItem      ; BLU_APRICORN
+	dw UnusableItem      ; GRN_APRICORN
+	dw UnusableItem      ; PNK_APRICORN
+	dw UnusableItem      ; WHT_APRICORN
+	dw UnusableItem      ; BLK_APRICORN
 
 ItemUseBall:
 
@@ -866,13 +883,19 @@ ItemUseMedicine:
 .checkItemType
 	ld a, [wcf91]
 	cp REVIVE
-	jr nc, .healHP ; if it's a Revive or Max Revive
+	jp nc, .healHP ; if it's a Revive or Max Revive
 	cp FULL_HEAL
 	jr z, .cureStatusAilment ; if it's a Full Heal
+	cp MIRACLEBERRY
+	jr z, .cureStatusAilment
 	cp HP_UP
 	jp nc, .useVitamin ; if it's a vitamin or Rare Candy
+	cp BERRY
+	jp z, .healHP
+	cp GOLD_BERRY
+	jp z, .healHP
 	cp FULL_RESTORE
-	jr nc, .healHP ; if it's a Full Restore or one of the potions
+	jp nc, .healHP ; if it's a Full Restore or one of the potions
 ; fall through if it's one of the status-specific healing items
 .cureStatusAilment
 	ld bc, wPartyMon1Status - wPartyMon1
@@ -881,17 +904,27 @@ ItemUseMedicine:
 	lb bc, ANTIDOTE_MSG, 1 << PSN
 	cp ANTIDOTE
 	jr z, .checkMonStatus
+	cp PSNCUREBERRY
+	jr z, .checkMonStatus
 	lb bc, BURN_HEAL_MSG, 1 << BRN
 	cp BURN_HEAL
+	jr z, .checkMonStatus
+	cp ICE_BERRY
 	jr z, .checkMonStatus
 	lb bc, ICE_HEAL_MSG, 1 << FRZ
 	cp ICE_HEAL
 	jr z, .checkMonStatus
+	cp BURNT_BERRY
+	jr z, .checkMonStatus
 	lb bc, AWAKENING_MSG, SLP
 	cp AWAKENING
 	jr z, .checkMonStatus
+	cp MINT_BERRY
+	jr z, .checkMonStatus
 	lb bc, PARALYZ_HEAL_MSG, 1 << PAR
 	cp PARLYZ_HEAL
+	jr z, .checkMonStatus
+	cp PRZCUREBERRY
 	jr z, .checkMonStatus
 	lb bc, FULL_HEAL_MSG, $ff ; Full Heal
 .checkMonStatus
@@ -1086,6 +1119,12 @@ ItemUseMedicine:
 	jr .addHealAmount
 .notUsingSoftboiled2
 	ld a, [wcf91]
+	cp BERRY
+	ld b, 10 ; Berry amount
+	jr z, .addHealAmount
+	cp GOLD_BERRY
+	ld b, 30 ; Gold Berry amount
+	jr z, .addHealAmount
 	cp SODA_POP
 	ld b, 60 ; Soda Pop heal amount
 	jr z, .addHealAmount

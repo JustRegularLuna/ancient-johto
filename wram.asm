@@ -2937,6 +2937,13 @@ wSafariZoneGameOver::
 wNumSafariBalls::
 	ds 1
 
+; a flag array for the amount of berry trees you have
+wBerryTreeFlags::
+	ds 2
+
+; used so we can reset berry trees based on steps, since there is no RTC
+wBerryStepCounter::
+	ds 2
 
 wDayCareInUse::
 ; 0 if no pokemon is in the daycare

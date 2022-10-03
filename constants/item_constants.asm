@@ -92,23 +92,41 @@ SAFARI_ROCK           EQU $16 ; overload
 	const MAX_ETHER     ; $51
 	const ELIXER        ; $52
 	const MAX_ELIXER    ; $53
+	const BERRY         ; $54 - 10HP
+	const GOLD_BERRY    ; $55 - 30HP
+	const MYSTERYBERRY  ; $56 - 5PP
+	const PSNCUREBERRY  ; $57 - Cure PSN
+	const ICE_BERRY     ; $58 - Cure BRN
+	const BURNT_BERRY   ; $59 - Cure FRZ
+	const MINT_BERRY    ; $5A - Cure SLP
+	const PRZCUREBERRY  ; $5B - Cure PRZ
+	const MIRACLEBERRY  ; $5C - Cure everything
+	const BITTER_BERRY  ; $5D - Cure Confusion
+	const RED_APRICORN  ; $5E - Level Ball
+	const YLW_APRICORN  ; $5F - Moon Ball
+	const BLU_APRICORN  ; $60 - Lure Ball
+	const GRN_APRICORN  ; $61 - Friend Ball
+	const PNK_APRICORN  ; $62 - Love Ball
+	const WHT_APRICORN  ; $63 - Fast Ball
+	const BLK_APRICORN  ; $64 - Heavy Ball
+
 NUM_ITEMS EQU const_value - 1
 
 ; elevator floors use item IDs
-	const FLOOR_B2F     ; $54
-	const FLOOR_B1F     ; $55
-	const FLOOR_1F      ; $56
-	const FLOOR_2F      ; $57
-	const FLOOR_3F      ; $58
-	const FLOOR_4F      ; $59
-	const FLOOR_5F      ; $5A
-	const FLOOR_6F      ; $5B
-	const FLOOR_7F      ; $5C
-	const FLOOR_8F      ; $5D
-	const FLOOR_9F      ; $5E
-	const FLOOR_10F     ; $5F
-	const FLOOR_11F     ; $60
-	const FLOOR_B4F     ; $61
+	const FLOOR_B2F
+	const FLOOR_B1F
+	const FLOOR_1F
+	const FLOOR_2F
+	const FLOOR_3F
+	const FLOOR_4F
+	const FLOOR_5F 
+	const FLOOR_6F
+	const FLOOR_7F
+	const FLOOR_8F
+	const FLOOR_9F
+	const FLOOR_10F
+	const FLOOR_11F
+	const FLOOR_B4F
 NUM_FLOORS EQU const_value - 1 - NUM_ITEMS
 
 	const_next $C4
