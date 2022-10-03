@@ -6,9 +6,9 @@ UseItem_::
 	jp nc, ItemUseTMHM
 	ld hl, ItemUsePtrTable
 	dec a
-	add a
 	ld c, a
 	ld b, 0
+	add hl, bc
 	add hl, bc
 	ld a, [hli]
 	ld h, [hl]
@@ -882,6 +882,10 @@ ItemUseMedicine:
 	jr z, ItemUseMedicine ; if so, force another choice
 .checkItemType
 	ld a, [wcf91]
+	cp PSNCUREBERRY
+	jr nc, .cureStatusAilment
+	cp BERRY
+	jp nc, .healHP
 	cp REVIVE
 	jp nc, .healHP ; if it's a Revive or Max Revive
 	cp FULL_HEAL
@@ -890,10 +894,6 @@ ItemUseMedicine:
 	jr z, .cureStatusAilment
 	cp HP_UP
 	jp nc, .useVitamin ; if it's a vitamin or Rare Candy
-	cp BERRY
-	jp z, .healHP
-	cp GOLD_BERRY
-	jp z, .healHP
 	cp FULL_RESTORE
 	jp nc, .healHP ; if it's a Full Restore or one of the potions
 ; fall through if it's one of the status-specific healing items
