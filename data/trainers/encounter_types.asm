@@ -75,4 +75,5 @@ TrainerEncounterMusicTable::
 	db MUSIC_BEAUTY_ENCOUNTER      ; POKEFANF
 	db MUSIC_HIKER_ENCOUNTER       ; POKEFANM
 	db MUSIC_OFFICER_ENCOUNTER     ; OFFICER
+	db MUSIC_SAGE_ENCOUNTER        ; REI
 	assert_table_length NUM_TRAINERS

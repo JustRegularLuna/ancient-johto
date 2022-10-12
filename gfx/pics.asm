@@ -335,6 +335,7 @@ KimonoGirlPic::        INCBIN "gfx/trainers/kimonogirl.pic" ; KIMONO_GIRL
 PokefanFPic::          INCBIN "gfx/trainers/pokefanf.pic" ; POKEFANF
 PokefanMPic::          INCBIN "gfx/trainers/pokefanm.pic" ; POKEFANM
 OfficerPic::           INCBIN "gfx/trainers/officer.pic" ; OFFICER
+ReiPic::               INCBIN "gfx/trainers/rei.pic" ; REI
 
 
 SECTION "Player Backs", ROMX

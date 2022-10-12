@@ -83,6 +83,7 @@
 	const POKEFANF
 	const POKEFANM
 	const OFFICER
+	const REI
 NUM_TRAINERS EQU const_value - 1
 
 

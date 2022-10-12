@@ -74,3 +74,4 @@ TrainerNames::
 	db "POKéFAN♀@" ; POKEFANF
 	db "POKéFAN♂@" ; POKEFANM
 	db "OFFICER@" ; OFFICER
+	db "REI@"

@@ -79,4 +79,5 @@ TrainerAIPointers:
 	dbw 3, GenericAI      ;  POKEFANF
 	dbw 3, GenericAI      ;  POKEFANM
 	dbw 3, GenericAI      ;  OFFICER
+	dbw 3, GenericAI      ;  REI
 	assert_table_length NUM_TRAINERS

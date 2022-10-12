@@ -74,6 +74,7 @@ TrainerDataPointers:
 	dw PokefanFData     ; POKEFANF
 	dw PokefanMData     ; POKEFANM
 	dw OfficerData      ; OFFICER
+	dw ReiData          ; REI
 
 ; Trainer data structure:
 ; - db TRAINERTYPE_* dw ;ant
@@ -539,6 +540,12 @@ PokefanMData:     ; POKEFANM
 	db -1 ; end
 
 OfficerData:      ; OFFICER
+; 01 - placeholder party
+	db TRAINERTYPE_NORMAL
+	db 5, RATTATA
+	db -1 ; end
+
+ReiData:          ; REI
 ; 01 - placeholder party
 	db TRAINERTYPE_NORMAL
 	db 5, RATTATA

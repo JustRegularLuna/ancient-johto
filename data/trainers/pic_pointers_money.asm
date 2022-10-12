@@ -82,4 +82,5 @@ TrainerPicAndMoneyPointers::
 	pic_money PokefanFPic,     1500 ; POKEFANF
 	pic_money PokefanMPic,     1500 ; POKEFANM
 	pic_money OfficerPic,      1500 ; OFFICER
+	pic_money ReiPic,          1500 ; REI
 	assert_table_length NUM_TRAINERS

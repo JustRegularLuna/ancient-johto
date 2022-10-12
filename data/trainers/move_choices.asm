@@ -85,4 +85,5 @@ TrainerClassMoveChoiceModifications:
 	move_choices 1, 2, 3 ; POKEFANF
 	move_choices 1, 2, 3 ; POKEFANM
 	move_choices 1, 2, 3 ; OFFICER
+	move_choices 1, 2, 3 ; REI
 	assert_list_length NUM_TRAINERS
