@@ -119,7 +119,7 @@ NUM_ITEMS EQU const_value - 1
 	const FLOOR_2F
 	const FLOOR_3F
 	const FLOOR_4F
-	const FLOOR_5F 
+	const FLOOR_5F
 	const FLOOR_6F
 	const FLOOR_7F
 	const FLOOR_8F

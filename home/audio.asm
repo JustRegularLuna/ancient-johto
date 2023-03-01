@@ -279,7 +279,7 @@ endr
 	pop af
 	ldh [hLoadedROMBank], a
 	ld [MBC1RomBank], a
-	
+
 	call WaitForSoundToFinish
 
 	pop af

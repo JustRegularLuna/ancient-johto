@@ -279,7 +279,7 @@ BoyGirlChoice::
 	call SaveScreenTilesToBuffer1
 	ld a, BOY_GIRL_MENU
 	ld [wTwoOptionMenuID], a
-	coord hl, 13, 7 
+	coord hl, 13, 7
 	lb bc, 8, 14
 	ld a, TWO_OPTION_MENU
 	ld [wTextBoxID], a
@@ -296,7 +296,7 @@ DebugRegionChoice::
 	call SaveScreenTilesToBuffer1
 	ld a, KANTO_JOHTO_MENU
 	ld [wTwoOptionMenuID], a
-	coord hl, 12, 7 
+	coord hl, 12, 7
 	lb bc, 8, 13
 	ld a, TWO_OPTION_MENU
 	ld [wTextBoxID], a

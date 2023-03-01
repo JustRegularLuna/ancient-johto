@@ -97,7 +97,7 @@ ENDM
 	warp_tiles
 
 .ClubWarpTileIDs:
-	warp_tiles 
+	warp_tiles
 
 .JohtoWarpTileIDs:
 	warp_tiles $29, $39, $56
