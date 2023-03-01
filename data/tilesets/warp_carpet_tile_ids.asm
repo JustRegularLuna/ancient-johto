@@ -4,7 +4,7 @@ WarpTileListPointers:
 	dw .FacingLeftWarpTiles
 	dw .FacingRightWarpTiles
 
-warp_carpet_tiles: MACRO
+MACRO warp_carpet_tiles
 REPT _NARG
 	db \1
 	shift
@@ -19,7 +19,7 @@ ENDM
 	warp_carpet_tiles $01, $5C
 
 .FacingLeftWarpTiles:
-	warp_carpet_tiles $1A, $4B, $1B, $02 
+	warp_carpet_tiles $1A, $4B, $1B, $02
 
 .FacingRightWarpTiles:
 	warp_carpet_tiles $0F, $4E, $01, $1A

@@ -18,5 +18,5 @@ NUM_HS_OBJECTS EQU const_value
 	const_def
 	const HS_NEW_BARK_RIVAL                ; 00
 	const HS_ROUTE_29_POTION               ; 01
-	
+
 NUM_JOHTO_HS_OBJECTS EQU const_value

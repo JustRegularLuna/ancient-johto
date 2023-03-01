@@ -1,4 +1,4 @@
-overworld_sprite: MACRO
+MACRO overworld_sprite
 	dw \1
 	db \2 tiles
 	db BANK(\1)
@@ -65,7 +65,7 @@ SpriteSheetPointerTable:
 	overworld_sprite SpriteSwimmerGirl, 12 ; SPRITE_SWIMMER_GIRL
 	overworld_sprite SpriteNurse, 12 ; SPRITE_NURSE
 	overworld_sprite SpriteLinkReceptionist, 12 ; SPRITE_LINK_RECEPTIONIST
-	overworld_sprite SpriteClerk, 12 ; SPRITE_CLERK 
+	overworld_sprite SpriteClerk, 12 ; SPRITE_CLERK
 	overworld_sprite SpritePharmacist, 12 ; SPRITE_PHARMACIST
 	overworld_sprite SpriteInnKeeper, 12 ; SPRITE_INN_KEEPER
 	overworld_sprite SpriteGirl, 12 ; SPRITE_GIRL

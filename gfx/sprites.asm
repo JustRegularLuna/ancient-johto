@@ -71,7 +71,7 @@ SpriteSwimmerGuy::       INCBIN "gfx/sprites/swimmer_guy.2bpp" ; SPRITE_SWIMMER_
 SpriteSwimmerGirl::      INCBIN "gfx/sprites/swimmer_girl.2bpp" ; SPRITE_SWIMMER_GIRL
 SpriteNurse::            INCBIN "gfx/sprites/nurse.2bpp" ; SPRITE_NURSE
 SpriteLinkReceptionist:: INCBIN "gfx/sprites/link_receptionist.2bpp" ; SPRITE_LINK_RECEPTIONIST
-SpriteClerk::            INCBIN "gfx/sprites/clerk.2bpp" ; SPRITE_CLERK 
+SpriteClerk::            INCBIN "gfx/sprites/clerk.2bpp" ; SPRITE_CLERK
 SpritePharmacist::       INCBIN "gfx/sprites/pharmacist.2bpp" ; SPRITE_PHARMACIST
 SpriteInnKeeper::        INCBIN "gfx/sprites/inn_keeper.2bpp" ; SPRITE_INN_KEEPER
 SpriteGirl::             INCBIN "gfx/sprites/girl.2bpp" ; SPRITE_GIRL

@@ -1674,7 +1674,7 @@ _LinkCanceledText::
 _OakSpeechText1::
 	text "Hello! Sorry to"
 	line "keep you waiting…"
-	
+
 	para "Welcome to the"
 	line "world of #MON!"
 
