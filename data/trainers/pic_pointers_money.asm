@@ -1,4 +1,4 @@
-pic_money: MACRO
+MACRO pic_money
 	dba \1
 	money \2
 ENDM
