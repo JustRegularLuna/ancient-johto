@@ -2833,6 +2833,8 @@ IsNextTileShoreOrWater:
 	jr z, .shoreOrWater
 	cp $32 ; usual eastern shore tile
 	jr z, .shoreOrWater
+	cp $62 ; johto shore tile
+	jr z, .shoreOrWater
 .skipShoreTiles
 	cp $14 ; water tile
 	jr z, .shoreOrWater

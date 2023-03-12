@@ -39,6 +39,7 @@ MapHeaderPointers::
 	dw Route23_h
 	dw Route24_h
 	dw Route25_h
+	dw KantoRoute27_h
 	dw RedsHouse1F_h
 	dw RedsHouse2F_h
 	dw BluesHouse_h
@@ -257,10 +258,13 @@ MapHeaderPointers::
 JohtoMapHeaderPointers::
 	table_width 2, JohtoMapHeaderPointers
 	dw NewBarkTown_h
+	dw CherrygroveCity_h
 	dw Route29_h
+	dw JohtoRoute27_h
 	dw PlayersHouse1F_h
 	dw PlayersHouse2F_h
 	dw NewBarkHouse1_h
 	dw NewBarkHouse2_h
 	dw ElmsLab_h
+	dw TohjoFalls_h
 	assert_table_length NUM_JOHTO_MAPS

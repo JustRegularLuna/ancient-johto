@@ -54,5 +54,9 @@ PowerPlantName:      db "POWER PLANT@"
 
 ; Johto Names
 NewBarkTownName:     db "NEW BARK TOWN@"
+CherrygroveCityName: db "CHERRYGROVE CITY@"
 
 Route29Name:         db "ROUTE 29@"
+Route27Name:         db "ROUTE 27@"
+
+TohjoFallsName:      db "TOHJO FALLS@"

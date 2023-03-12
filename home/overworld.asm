@@ -536,7 +536,20 @@ WarpFound2::
 	ld [wLastMap], a
 	ld a, [wCurMapWidth]
 	ld [wUnusedD366], a ; not read
-	; check the region so we can use it later
+	; check region to know if this is the Kanto Route 27 Tohjo Falls entrance
+	ld a, [wCurRegion]
+	and a ; In Kanto?
+	jr nz, .notRoute27
+	ld a, [wCurMap]
+	cp KANTO_ROUTE_27
+	jr nz, .notRoute27
+	ld a, [wYCoord]
+	cp 5
+	jr nz, .notRoute27
+	ld a, 1 ; johto
+	ld [wDestinationRegion], a
+.notRoute27
+	; check region to know if this is Rock Tunnel or not
 	ld a, [wCurRegion]
 	and a ; In Kanto?
 	; the jump is below this next part
@@ -560,23 +573,23 @@ WarpFound2::
 ; not all these maps are necessarily indoors, though
 .indoorMaps
 ; added check for Tohjo Falls, once it exists
-	;ld a, [wCurRegion]
-	;and a ; Kanto?
-	;jr z, .continue
-	;ld a, [wCurMap]
-	;cp TOHJO_FALLS
-	;jr nz, .continue
-	;ld a, [wXCoord] ; which side of the map are we trying to leave on?
-	;cp WHATEVER_COORD_IS_THE_MIDDLE_OF_THE_MAP
-	;jr c, .JohtoSide
+	ld a, [wCurRegion]
+	and a ; Kanto?
+	jr z, .continue
+	ld a, [wCurMap]
+	cp TOHJO_FALLS
+	jr nz, .continue
+	ld a, [wXCoord] ; which side of the map are we trying to leave on?
+	cp 16
+	jr c, .JohtoSide
 	; kanto side
-	;xor a ; kanto
-	;ld [wDestinationRegion], a
-	;jr .continue
-;.JohtoSide
-	;ld a, 1 ; johto
-	;ld [wDestinationRegion], a
-;.continue
+	xor a ; kanto
+	ld [wDestinationRegion], a
+	jr .continue
+.JohtoSide
+	ld a, 1 ; johto
+	ld [wDestinationRegion], a
+.continue
 ; original code for following a warp continues here
 	ldh a, [hWarpDestinationMap] ; destination map
 	cp LAST_MAP
@@ -818,6 +831,8 @@ ExtraWarpCheck::
 	cp PLATEAU ; Indigo Plateau tileset
 	jr z, .useFunction2
 	cp JOHTO
+	jr z, .useFunction2
+	cp JOHTO_CAVE
 	jr z, .useFunction2
 .useFunction1
 	ld hl, IsPlayerFacingEdgeOfMap

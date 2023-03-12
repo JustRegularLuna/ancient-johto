@@ -24,4 +24,5 @@
 	const FACILITY
 	const PLATEAU
 	const JOHTO
+	const JOHTO_CAVE
 NUM_TILESETS EQU const_value

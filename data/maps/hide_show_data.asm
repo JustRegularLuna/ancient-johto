@@ -123,6 +123,7 @@ MapHSPointers:
 	dw NoHS
 	dw NoHS
 	dw NoHS
+	dw NoHS
 	dw ChampionsRoomHS
 	dw NoHS
 	dw NoHS
@@ -273,12 +274,15 @@ JohtoMapHSPointers:
 ; entries correspond to map ids
 	table_width 2, JohtoMapHSPointers
 	dw NewBarkTownHS ; New Bark
+	dw JohtoNoHS     ; Cherrygrove
 	dw Route29HS ; Route 29
+	dw JohtoNoHS ; Johto Route 27
 	dw JohtoNoHS ; Players House 1F
 	dw JohtoNoHS ; Players House 2f
 	dw JohtoNoHS ; New Bark House 1
 	dw JohtoNoHS ; New Bark House 2
 	dw JohtoNoHS ; Elm's Lab
+	dw JohtoNoHS ; Tohjo Falls
 	assert_table_length NUM_JOHTO_MAPS
 	dw -1 ; end
 

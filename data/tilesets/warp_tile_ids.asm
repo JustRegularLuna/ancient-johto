@@ -23,6 +23,7 @@ WarpTileIDPointers:
 	dw .FacilityWarpTileIDs
 	dw .PlateauWarpTileIDs
 	dw .JohtoWarpTileIDs
+	dw .JohtoCaveWarpTileIDs
 	assert_table_length NUM_TILESETS
 
 MACRO warp_tiles
@@ -101,3 +102,6 @@ ENDM
 
 .JohtoWarpTileIDs:
 	warp_tiles $29, $39, $56
+
+.JohtoCaveWarpTileIDs:
+	warp_tiles $1E, $30, $32, $38, $3A

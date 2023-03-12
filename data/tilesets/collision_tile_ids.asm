@@ -74,3 +74,6 @@ Plateau_Coll::
 
 Johto_Coll::
 	coll_tiles $04, $05, $06, $29, $39, $40, $56, $5b, $64
+
+JohtoCave_Coll::
+	coll_tiles $01, $04, $16, $18, $1E, $30, $32, $34, $36, $37, $38, $3A, 

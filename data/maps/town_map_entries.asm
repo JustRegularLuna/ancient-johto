@@ -44,6 +44,7 @@ ExternalMapEntries:
 	external_map  0,  6, Route23Name
 	external_map 10,  1, Route24Name
 	external_map 11,  0, Route25Name
+	external_map  0,  9, Route27Name
 	assert_table_length FIRST_INDOOR_MAP
 
 
@@ -124,11 +125,14 @@ JohtoExternalMapEntries:
 	table_width 3, JohtoExternalMapEntries
 	; x, y, name
 	external_map 15, 11, NewBarkTownName
+	external_map 10, 11, CherrygroveCityName
 	external_map 13, 11, Route29Name
+	external_map 15, 11, Route27Name
 	assert_table_length FIRST_JOHTO_INDOOR_MAP
 
 ; the appearance of buildings and dungeons in the town map
 JohtoInternalMapEntries:
 	; maximum map id subject to this rule, x, y, name
 	internal_map ELMS_LAB,                      15, 11, NewBarkTownName
+	internal_map TOHJO_FALLS,                   15, 11, TohjoFallsName
 	db -1 ; end

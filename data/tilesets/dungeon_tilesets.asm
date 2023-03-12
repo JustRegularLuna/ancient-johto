@@ -11,4 +11,5 @@ DungeonTilesets:
 	db CEMETERY
 	db GYM
 	db PLAYERS_HOUSE
+	db JOHTO_CAVE
 	db -1 ; end

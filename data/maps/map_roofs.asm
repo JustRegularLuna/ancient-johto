@@ -7,9 +7,12 @@
 	const ROOF_GOLDENROD ; 4
 
 MapRoofSets:
+	table_width 1, MapRoofSets
 	db ROOF_NEW_BARK  ; NEW_BARK_TOWN
-
+	db ROOF_NEW_BARK  ; CHERRYGROVE_CITY
 	db ROOF_NEW_BARK  ; ROUTE_29
+	db ROOF_NEW_BARK  ; JOHTO_ROUTE_27
+	assert_table_length FIRST_JOHTO_INDOOR_MAP
 
 ; Format:
 ; 00: determines whether the map is split East/West or North/South

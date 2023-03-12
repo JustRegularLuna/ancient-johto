@@ -51,4 +51,7 @@ TownMapOrderEnd:
 JohtoTownMapOrder:
 	db NEW_BARK_TOWN
 	db ROUTE_29
+	db CHERRYGROVE_CITY
+	db JOHTO_ROUTE_27
+	db TOHJO_FALLS
 JohtoTownMapOrderEnd:

@@ -57,6 +57,7 @@ FIRST_ROUTE_MAP EQU const_value
 	mapconst ROUTE_23,                      72, 10 ; $22
 	mapconst ROUTE_24,                      18, 10 ; $23
 	mapconst ROUTE_25,                       9, 30 ; $24
+	mapconst KANTO_ROUTE_27,                 9, 40
 FIRST_INDOOR_MAP EQU const_value
 	mapconst REDS_HOUSE_1F,                  4,  4 ; $25
 	mapconst REDS_HOUSE_2F,                  4,  4 ; $26
@@ -280,13 +281,16 @@ LAST_MAP EQU -1
 ; JOHTO Map Constants
 	const_def
 	mapconst NEW_BARK_TOWN,                  9, 10
+	mapconst CHERRYGROVE_CITY,               9, 20
 NUM_JOHTO_CITY_MAPS EQU const_value
 FIRST_JOHTO_ROUTE_MAP EQU const_value
 	mapconst ROUTE_29,                       9, 30
+	mapconst JOHTO_ROUTE_27,                 9, 40
 FIRST_JOHTO_INDOOR_MAP EQU const_value
 	mapconst PLAYERS_HOUSE_1F,               4,  5
 	mapconst PLAYERS_HOUSE_2F,               3,  4
 	mapconst NEW_BARK_HOUSE_1,               4,  4
 	mapconst NEW_BARK_HOUSE_2,               4,  4
 	mapconst ELMS_LAB,                       6,  5
+	mapconst TOHJO_FALLS,                    9, 15
 NUM_JOHTO_MAPS EQU const_value

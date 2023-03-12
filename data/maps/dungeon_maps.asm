@@ -27,7 +27,7 @@ DungeonMaps2:
 	db -1 ; end
 
 JohtoDungeonMaps1:
-	;db ILEX_FOREST
+	db TOHJO_FALLS
 	db -1 ; end
 
 JohtoDungeonMaps2:

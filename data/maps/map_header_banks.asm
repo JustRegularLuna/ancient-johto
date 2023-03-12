@@ -39,6 +39,7 @@ MapHeaderBanks::
 	db BANK(Route23_h)
 	db BANK(Route24_h)
 	db BANK(Route25_h)
+	db BANK(KantoRoute27_h)
 	db BANK(RedsHouse1F_h)
 	db BANK(RedsHouse2F_h)
 	db BANK(BluesHouse_h)
@@ -257,10 +258,13 @@ MapHeaderBanks::
 JohtoMapHeaderBanks::
 	table_width 1, JohtoMapHeaderBanks
 	db BANK(NewBarkTown_h)
+	db BANK(CherrygroveCity_h)
 	db BANK(Route29_h)
+	db BANK(JohtoRoute27_h)
 	db BANK(PlayersHouse1F_h)
 	db BANK(PlayersHouse2F_h)
 	db BANK(NewBarkHouse1_h)
 	db BANK(NewBarkHouse2_h)
 	db BANK(ElmsLab_h)
+	db BANK(TohjoFalls_h)
 	assert_table_length NUM_JOHTO_MAPS
