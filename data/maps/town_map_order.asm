@@ -55,5 +55,4 @@ JohtoTownMapOrder:
 	db ROUTE_30
 	db ROUTE_31
 	db JOHTO_ROUTE_27
-	db TOHJO_FALLS
 JohtoTownMapOrderEnd:
