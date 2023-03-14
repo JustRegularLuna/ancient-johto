@@ -57,7 +57,7 @@ ENDM
 	door_tiles $1a, $1c, $53
 
 .LabDoorTileIDs:
-	door_tiles $34
+	door_tiles $34, $43
 
 .FacilityDoorTileIDs:
 	door_tiles $43, $58, $1b

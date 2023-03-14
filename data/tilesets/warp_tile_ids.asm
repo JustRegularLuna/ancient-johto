@@ -80,7 +80,7 @@ ENDM
 	warp_tiles $1A, $1C, $53
 
 .LabWarpTileIDs:
-	warp_tiles $34
+	warp_tiles $34, $43, $70, $72
 
 .FacilityWarpTileIDs:
 	warp_tiles $13, $1B, $43, $58, $20
