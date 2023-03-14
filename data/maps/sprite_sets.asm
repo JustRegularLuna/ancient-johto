@@ -98,6 +98,8 @@ JohtoMapSpriteSets:
 	db $01 ; NEW_BARK_TOWN
 	db $01 ; CHERRYGROVE_CITY
 	db $01 ; ROUTE_29
+	db $01 ; ROUTE_30
+	db $01 ; ROUTE_31
 	db $01 ; JOHTO_ROUTE_27
 	assert_table_length FIRST_JOHTO_INDOOR_MAP
 

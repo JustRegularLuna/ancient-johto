@@ -276,12 +276,21 @@ JohtoMapHSPointers:
 	dw NewBarkTownHS ; New Bark
 	dw JohtoNoHS     ; Cherrygrove
 	dw Route29HS ; Route 29
+	dw JohtoNoHS ; Route 30
+	dw JohtoNoHS ; Route 31
 	dw JohtoNoHS ; Johto Route 27
 	dw JohtoNoHS ; Players House 1F
 	dw JohtoNoHS ; Players House 2f
 	dw JohtoNoHS ; New Bark House 1
 	dw JohtoNoHS ; New Bark House 2
 	dw JohtoNoHS ; Elm's Lab
+	dw JohtoNoHS ; Cherrygrove Pokecenter
+	dw JohtoNoHS ; Cherrygrove Mart
+	dw JohtoNoHS ; Cherrygrove House 1
+	dw JohtoNoHS ; Cherrygrove House 2
+	dw JohtoNoHS ; Cherrygrove House 3
+	dw JohtoNoHS ; Route 30 Berry House
+	dw JohtoNoHS ; Mr. Pokemon's House
 	dw JohtoNoHS ; Tohjo Falls
 	assert_table_length NUM_JOHTO_MAPS
 	dw -1 ; end

@@ -49,12 +49,19 @@ ColosseumHiddenObjects:
 
 JohtoHiddenObjectMaps:
 	db PLAYERS_HOUSE_2F
+	db CHERRYGROVE_POKECENTER
 	db -1 ; end
 
 JohtoHiddenObjectPointers:
 	dw PlayersHouse2FHiddenObjects
+	dw JohtoPokecenterHiddenObjects
 
 
 PlayersHouse2FHiddenObjects:
 	hidden_object  2,  1, SPRITE_FACING_UP, OpenRedsPC
+	db -1 ; end
+
+JohtoPokecenterHiddenObjects:
+	hidden_object  9, 13, SPRITE_FACING_UP, OpenPokemonCenterPC
+	hidden_object  8,  2, SPRITE_FACING_UP, OpenPokemonCenterPC
 	db -1 ; end

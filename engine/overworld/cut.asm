@@ -6,12 +6,8 @@ UsedCut:
 	jr z, .overworld
 	cp JOHTO
 	jr z, .johto
-	cp GYM
-	jr nz, .nothingToCut
-	ld a, [wTileInFrontOfPlayer]
-	cp $50 ; gym cut tree
-	jr nz, .nothingToCut
-	jr .canCut
+	; if all checks fail
+	jr .nothingToCut
 .johto
 	ld a, [wTileInFrontOfPlayer]
 	cp $04 ; johto grass

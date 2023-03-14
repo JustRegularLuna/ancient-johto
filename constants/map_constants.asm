@@ -285,6 +285,8 @@ LAST_MAP EQU -1
 NUM_JOHTO_CITY_MAPS EQU const_value
 FIRST_JOHTO_ROUTE_MAP EQU const_value
 	mapconst ROUTE_29,                       9, 30
+	mapconst ROUTE_30,                      27, 10
+	mapconst ROUTE_31,                       9, 20
 	mapconst JOHTO_ROUTE_27,                 9, 40
 FIRST_JOHTO_INDOOR_MAP EQU const_value
 	mapconst PLAYERS_HOUSE_1F,               4,  5
@@ -292,5 +294,12 @@ FIRST_JOHTO_INDOOR_MAP EQU const_value
 	mapconst NEW_BARK_HOUSE_1,               4,  4
 	mapconst NEW_BARK_HOUSE_2,               4,  4
 	mapconst ELMS_LAB,                       6,  5
+	mapconst CHERRYGROVE_POKECENTER,        10,  5
+	mapconst CHERRYGROVE_MART,               4,  6
+	mapconst CHERRYGROVE_HOUSE_1,            4,  4
+	mapconst CHERRYGROVE_HOUSE_2,            4,  4
+	mapconst CHERRYGROVE_HOUSE_3,            4,  4
+	mapconst ROUTE_30_BERRY_HOUSE,           4,  4
+	mapconst MR_POKEMONS_HOUSE,              4,  4
 	mapconst TOHJO_FALLS,                    9, 15
 NUM_JOHTO_MAPS EQU const_value

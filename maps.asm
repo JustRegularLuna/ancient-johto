@@ -1002,14 +1002,6 @@ INCLUDE "data/maps/headers/PlayersHouse2F.asm"
 INCLUDE "data/maps/objects/PlayersHouse2F.asm"
 PlayersHouse2F_Blocks: INCBIN "maps/johto/PlayersHouse2F.blk"
 
-INCLUDE "data/maps/headers/NewBarkHouse1.asm"
-INCLUDE "data/maps/objects/NewBarkHouse1.asm"
-NewBarkHouse1_Blocks: INCBIN "maps/johto/NewBarkHouse1.blk"
-
-INCLUDE "data/maps/headers/NewBarkHouse2.asm"
-INCLUDE "data/maps/objects/NewBarkHouse2.asm"
-NewBarkHouse2_Blocks: INCBIN "maps/johto/NewBarkHouse2.blk"
-
 INCLUDE "data/maps/headers/ElmsLab.asm"
 INCLUDE "data/maps/objects/ElmsLab.asm"
 ElmsLab_Blocks: INCBIN "maps/johto/ElmsLab.blk"
@@ -1017,6 +1009,48 @@ ElmsLab_Blocks: INCBIN "maps/johto/ElmsLab.blk"
 INCLUDE "data/maps/headers/CherrygroveCity.asm"
 INCLUDE "data/maps/objects/CherrygroveCity.asm"
 CherrygroveCity_Blocks: INCBIN "maps/johto/CherrygroveCity.blk"
+
+INCLUDE "data/maps/headers/Route30.asm"
+INCLUDE "data/maps/objects/Route30.asm"
+Route30_Blocks: INCBIN "maps/johto/Route30.blk"
+
+INCLUDE "data/maps/headers/Route31.asm"
+INCLUDE "data/maps/objects/Route31.asm"
+Route31_Blocks: INCBIN "maps/johto/Route31.blk"
+
+INCLUDE "data/maps/headers/MrPokemonsHouse.asm"
+INCLUDE "data/maps/objects/MrPokemonsHouse.asm"
+MrPokemonsHouse_Blocks: INCBIN "maps/johto/MrPokemonsHouse.blk"
+
+
+
+SECTION "Johto Generic Houses 1", ROMX
+
+INCLUDE "data/maps/headers/NewBarkHouse1.asm"
+INCLUDE "data/maps/objects/NewBarkHouse1.asm"
+
+INCLUDE "data/maps/headers/NewBarkHouse2.asm"
+INCLUDE "data/maps/objects/NewBarkHouse2.asm"
+
+INCLUDE "data/maps/headers/CherrygroveHouse1.asm"
+INCLUDE "data/maps/objects/CherrygroveHouse1.asm"
+
+INCLUDE "data/maps/headers/CherrygroveHouse2.asm"
+INCLUDE "data/maps/objects/CherrygroveHouse2.asm"
+
+INCLUDE "data/maps/headers/CherrygroveHouse3.asm"
+INCLUDE "data/maps/objects/CherrygroveHouse3.asm"
+
+INCLUDE "data/maps/headers/Route30BerryHouse.asm"
+INCLUDE "data/maps/objects/Route30BerryHouse.asm"
+
+NewBarkHouse1_Blocks:
+NewBarkHouse2_Blocks:
+CherrygroveHouse1_Blocks:
+CherrygroveHouse2_Blocks:
+CherrygroveHouse3_Blocks:
+Route30BerryHouse_Blocks:
+	INCBIN "maps/johto/NewBarkHouse1.blk"
 
 
 
@@ -1037,3 +1071,23 @@ INCLUDE "data/maps/headers/JohtoRoute27.asm"
 INCLUDE "data/maps/objects/JohtoRoute27.asm"
 KantoRoute27_Blocks: ; INCBIN "maps/kanto/KantoRoute27.blk"
 JohtoRoute27_Blocks: INCBIN "maps/johto/JohtoRoute27.blk"
+
+
+
+SECTION "Johto Pokecenters", ROMX
+
+INCLUDE "data/maps/headers/CherrygrovePokecenter.asm"
+INCLUDE "data/maps/objects/CherrygrovePokecenter.asm"
+
+CherrygrovePokecenter_Blocks:
+	INCBIN "maps/johto/CherrygrovePokecenter.blk"
+
+
+
+SECTION "Johto Marts", ROMX
+
+INCLUDE "data/maps/headers/CherrygroveMart.asm"
+INCLUDE "data/maps/objects/CherrygroveMart.asm"
+
+CherrygroveMart_Blocks:
+	INCBIN "maps/johto/CherrygroveMart.blk"

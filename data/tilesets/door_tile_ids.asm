@@ -33,7 +33,7 @@ ENDM
 	door_tiles $3a
 
 .MartDoorTileIDs:
-	door_tiles $5e
+	door_tiles $5A, $5C, $5E
 
 .PokecenterDoorTileIDs:
 	door_tiles $32

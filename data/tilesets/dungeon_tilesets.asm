@@ -12,4 +12,6 @@ DungeonTilesets:
 	db GYM
 	db PLAYERS_HOUSE
 	db JOHTO_CAVE
+	db POKECENTER
+	db MART
 	db -1 ; end

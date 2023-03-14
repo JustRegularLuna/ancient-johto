@@ -19,7 +19,7 @@ PlayersRoom_Coll::
 	coll_tiles $01, $0d, $1d, $2d, $3d, $4d, $50, $5d
 
 Mart_Coll::
-	coll_tiles $11, $1a, $1c, $3c, $5e
+	coll_tiles $11, $1A, $23, $5A, $5C, $5E
 
 Pokecenter_Coll::
 	coll_tiles $01, $11, $32, $50, $52, $54, $58, $5b, $69, $76

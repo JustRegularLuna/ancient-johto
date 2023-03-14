@@ -127,6 +127,8 @@ JohtoExternalMapEntries:
 	external_map 15, 11, NewBarkTownName
 	external_map 10, 11, CherrygroveCityName
 	external_map 13, 11, Route29Name
+	external_map 12, 10, Route30Name
+	external_map 11,  7, Route31Name
 	external_map 15, 11, Route27Name
 	assert_table_length FIRST_JOHTO_INDOOR_MAP
 
@@ -134,5 +136,8 @@ JohtoExternalMapEntries:
 JohtoInternalMapEntries:
 	; maximum map id subject to this rule, x, y, name
 	internal_map ELMS_LAB,                      15, 11, NewBarkTownName
+	internal_map CHERRYGROVE_HOUSE_3,           10, 11, CherrygroveCityName
+	internal_map ROUTE_30_BERRY_HOUSE,          12, 10, Route30Name
+	internal_map MR_POKEMONS_HOUSE,             11,  7, Route31Name
 	internal_map TOHJO_FALLS,                   15, 11, TohjoFallsName
 	db -1 ; end

@@ -1,5 +1,5 @@
 CeladonMart3F_Object:
-	db $f ; border block
+	db $0 ; border block
 
 	def_warps
 	warp 12,  1, 0, CELADON_MART_4F

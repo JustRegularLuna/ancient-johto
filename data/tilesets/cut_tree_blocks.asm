@@ -8,10 +8,6 @@ CutTreeBlockSwaps:
 	db $35, $4C
 	db $60, $6E
 	db $0B, $0A
-; GYM
-	db $3C, $35
-	db $3F, $35
-	db $3D, $36
 ; JOHTO
 	db $03, $02
 	db $5B, $3C

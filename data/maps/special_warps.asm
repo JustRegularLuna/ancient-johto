@@ -100,6 +100,8 @@ FlyWarpDataPtr:
 
 
 JohtoFlyWarpDataPtr:
-	fly_warp_spec NEW_BARK_TOWN, .NewBarkTown
+	fly_warp_spec NEW_BARK_TOWN,    .NewBarkTown
+	fly_warp_spec CHERRYGROVE_CITY, .CherrygroveCity
 
-.NewBarkTown:    fly_warp NEW_BARK_TOWN,   13, 6
+.NewBarkTown:     fly_warp NEW_BARK_TOWN,    13, 6
+.CherrygroveCity: fly_warp CHERRYGROVE_CITY, 29, 4

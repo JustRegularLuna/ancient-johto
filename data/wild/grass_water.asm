@@ -258,12 +258,21 @@ JohtoWildDataPointers:
 	dw NoMons      ; NEW_BARK_TOWN
 	dw NoMons      ; CHERRYGROVE_CITY
 	dw Route29Mons ; ROUTE_29
+	dw NoMons      ; ROUTE_30
+	dw NoMons      ; ROUTE_31
 	dw NoMons      ; JOHTO_ROUTE_27
 	dw NoMons      ; PLAYERS_HOUSE_1F
 	dw NoMons      ; PLAYERS_HOUSE_2F
 	dw NoMons      ; NEW_BARK_HOUSE_1
 	dw NoMons      ; NEW_BARK_HOUSE_2
 	dw NoMons      ; ELMS_LAB
+	dw NoMons      ; CHERRYGROVE_POKECENTER
+	dw NoMons      ; CHERRYGROVE_MART
+	dw NoMons      ; CHERRYGROVE_HOUSE_1
+	dw NoMons      ; CHERRYGROVE_HOUSE_2
+	dw NoMons      ; CHERRYGROVE_HOUSE_3
+	dw NoMons      ; ROUTE_30_BERRY_HOUSE
+	dw NoMons      ; MR_POKEMONS_HOUSE
 	dw NoMons      ; TOHJO_FALLS
 	assert_table_length NUM_JOHTO_MAPS
 	dw -1 ; end

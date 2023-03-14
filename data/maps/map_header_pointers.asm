@@ -260,11 +260,20 @@ JohtoMapHeaderPointers::
 	dw NewBarkTown_h
 	dw CherrygroveCity_h
 	dw Route29_h
+	dw Route30_h
+	dw Route31_h
 	dw JohtoRoute27_h
 	dw PlayersHouse1F_h
 	dw PlayersHouse2F_h
 	dw NewBarkHouse1_h
 	dw NewBarkHouse2_h
 	dw ElmsLab_h
+	dw CherrygrovePokecenter_h
+	dw CherrygroveMart_h
+	dw CherrygroveHouse1_h
+	dw CherrygroveHouse2_h
+	dw CherrygroveHouse3_h
+	dw Route30BerryHouse_h
+	dw MrPokemonsHouse_h
 	dw TohjoFalls_h
 	assert_table_length NUM_JOHTO_MAPS

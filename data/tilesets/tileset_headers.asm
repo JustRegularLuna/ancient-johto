@@ -11,7 +11,7 @@ Tilesets:
 	; block, gfx, coll, 3 counter tiles, grass tile, animations
 	tileset Overworld_Block,    Overworld_GFX,    Overworld_Coll,   $FF,$FF,$FF, $52, TILEANIM_WATER_FLOWER
 	tileset PlayersHouse_Block, PlayersHouse_GFX, PlayersHouse_Coll,$FF,$FF,$FF, $FF, TILEANIM_NONE
-	tileset Mart_Block,         Mart_GFX,         Mart_Coll,        $18,$19,$1E, $FF, TILEANIM_NONE
+	tileset Mart_Block,         Mart_GFX,         Mart_Coll,        $12,$14,$25, $FF, TILEANIM_NONE
 	tileset Forest_Block,       Forest_GFX,       Forest_Coll,      $FF,$FF,$FF, $20, TILEANIM_WATER
 	tileset PlayersRoom_Block,  PlayersRoom_GFX,  PlayersRoom_Coll, $FF,$FF,$FF, $FF, TILEANIM_NONE
 	tileset Pokecenter_Block,   Pokecenter_GFX,   Pokecenter_Coll,  $24,$FF,$FF, $FF, TILEANIM_NONE

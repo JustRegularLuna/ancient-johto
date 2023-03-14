@@ -57,6 +57,8 @@ NewBarkTownName:     db "NEW BARK TOWN@"
 CherrygroveCityName: db "CHERRYGROVE CITY@"
 
 Route29Name:         db "ROUTE 29@"
+Route30Name:         db "ROUTE 30@"
+Route31Name:         db "ROUTE 31@"
 Route27Name:         db "ROUTE 27@"
 
 TohjoFallsName:      db "TOHJO FALLS@"
