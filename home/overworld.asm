@@ -2139,6 +2139,8 @@ LoadMapHeader::
 	ldh [hPreviousTileset], a
 	bit 7, b
 	ret nz
+	ld a, BANK(MapHeaderPointers)
+	call BankswitchHome
 	ld a, [wCurRegion]
 	and a
 	ld hl, MapHeaderPointers
@@ -2159,6 +2161,7 @@ LoadMapHeader::
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a ; hl = base of map header
+	call BankswitchBack
 ; copy the first 10 bytes (the fixed area) of the map data to D367-D370
 	ld de, wCurMapTileset
 	ld c, $0a

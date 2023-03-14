@@ -19,7 +19,7 @@ SECTION "Home", ROM0
 INCLUDE "home/start.asm"
 INCLUDE "home/joypad.asm"
 
-INCLUDE "data/maps/map_header_pointers.asm"
+;INCLUDE "data/maps/map_header_pointers.asm"
 
 INCLUDE "home/overworld.asm"
 INCLUDE "home/pokemon.asm"

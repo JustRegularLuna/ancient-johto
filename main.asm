@@ -815,3 +815,8 @@ INCLUDE "data/icon_pointers.asm"
 SECTION "Berry Trees", ROMX
 
 INCLUDE "engine/overworld/fruit_trees.asm"
+
+
+SECTION "Map Header Pointers", ROMX
+
+INCLUDE "data/maps/map_header_pointers.asm"
