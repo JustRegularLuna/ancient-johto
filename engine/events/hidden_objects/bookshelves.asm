@@ -1,5 +1,9 @@
 ; prints text for bookshelves in buildings without sign events
 PrintBookshelfText::
+	call IsSpriteOrSignInFrontOfPlayer
+	ld a, [hSpriteIndexOrTextID]
+	and a
+	jr nz, .noMatch
 	ld a, [wSpritePlayerStateData1FacingDirection]
 	cp SPRITE_FACING_UP
 	jr nz, .noMatch
@@ -20,6 +24,7 @@ PrintBookshelfText::
 	jr nz, .nextBookshelfEntry2
 	ld a, [hl]
 	push af
+	call SaveScreenTilesToBuffer2
 	call EnableAutoTextBoxDrawing
 	pop af
 	call PrintPredefTextID

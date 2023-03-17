@@ -92,6 +92,7 @@ INCLUDE "engine/events/hidden_objects/book_or_sculpture.asm"
 INCLUDE "engine/events/hidden_objects/elevator.asm"
 INCLUDE "engine/events/hidden_objects/town_map.asm"
 INCLUDE "engine/events/hidden_objects/pokemon_stuff.asm"
+INCLUDE "engine/events/hidden_objects/pokecenter_pc.asm"
 
 
 SECTION "Font Graphics", ROMX
@@ -656,7 +657,6 @@ SECTION "Hidden Objects 4", ROMX
 
 INCLUDE "engine/events/hidden_objects/gym_statues.asm"
 INCLUDE "engine/events/hidden_objects/blues_room.asm"
-INCLUDE "engine/events/hidden_objects/pokecenter_pc.asm"
 
 
 SECTION "Battle Engine 11", ROMX

@@ -1,5 +1,4 @@
 ActivatePC::
-	call SaveScreenTilesToBuffer2
 	ld a, SFX_TURN_ON_PC
 	call PlaySound
 	ld hl, TurnedOnPC1Text

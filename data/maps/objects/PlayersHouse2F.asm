@@ -1,3 +1,11 @@
+; text constants
+	const_def 1
+	; npcs
+
+	; signs
+	const PLAYERS_HOUSE_2F_PC
+	const PLAYERS_HOUSE_2F_N64
+
 PlayersHouse2F_Object:
 	db $0 ; border block
 
@@ -5,6 +13,8 @@ PlayersHouse2F_Object:
 	warp  7,  0, 0, PLAYERS_HOUSE_1F
 
 	def_signs
+	sign  2,  1, PLAYERS_HOUSE_2F_PC
+	sign  4,  2, PLAYERS_HOUSE_2F_N64
 
 	def_objects
 
@@ -48,8 +58,15 @@ EeveesName:
 	db "MEME@@@@@@@"
 
 PlayersHouse2F_TextPointers:
-	dw PlayersHouse2FText1
+	dw PlayersHouse2FPCText
+	dw PlayersHouse2FN64Text
 
-PlayersHouse2FText1:
-	text "Hello world!"
+PlayersHouse2FPCText:
+	script_players_pc
+
+PlayersHouse2FN64Text:
+	text "<PLAYER> is playing"
+	line "the N64!"
+
+	para "Okay! Time to go!"
 	done
