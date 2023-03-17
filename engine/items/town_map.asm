@@ -124,7 +124,7 @@ DisplayTownMap:
 	dec a
 	cp -1
 	jr nz, .noUnderflow
-	ld a, JohtoTownMapOrderEnd - JohtoTownMapOrder
+	ld a, JohtoTownMapOrderEnd - JohtoTownMapOrder - 1 ; number of list items
 .noUnderflow
 	ld [wWhichTownMapLocation], a
 	jp .townMapLoop
