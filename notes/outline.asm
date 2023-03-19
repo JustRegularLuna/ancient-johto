@@ -34,17 +34,15 @@ INTRO
 NEW BARK TOWN
 =============
 - Player's House looks like G/S, but just has RB events with new text
-  - Maybe keep it so Mom heals you like RBY?
+  - Keep it so Mom heals you like RBY
 - Generic NPC houses for the other houses
-- Silver is in Oak's lab waiting for a pokemon, not in the city
-- Elm drags you to his lab the way Oak did in RBY, but with new movement data of course
-- Alternatively, Silver walks up and bothers you as soon as you leave the house, and takes you to the lab
+- Silver walks up and bothers you as soon as you leave the house, and takes you to the lab
 - Elm's Lab works like Oak's lab
   - You and Silver get your starter at the same time
   - Battle Silver in the lab
-  - Deliver Mystery Egg, get Pokedex, and 5 Pokeballs (like RPP3)
-  - Maybe add a healing machine like GSC?
+  - Deliver Mystery Egg, get 5 Pokeballs before you leave
   - Heal Machine would not be needed if Mom still heals you like RBY
+- Alternately, remove the Rival battle in the lab
 
 
 ========
@@ -60,7 +58,7 @@ CHERRYGROVE CITY
 ================
 - Guide Gent in his house, giving the Town Map
   - Reuse scripts from Daisy's house with new text
-- Mart checks if you have a pokedex or not to know which mart inventory to load
+- Mart checks if you have delivered parcel or not to know which mart inventory to load
   - Look at Viridian Mart as an example of loading different event text lists
 - Don't forget the Mystic Water guy, although he may need to give something else
   - Can base his code on the TM guy in Viridian or any gift NPC
@@ -74,6 +72,7 @@ ROUTE 30 & 31
   - Change it so Elm's Lab script hides him, the same way it hid the old man
 - Mr. Pokemon's house script based on the Viridian Mart
   - Elm's Parcel instead of Oaks Parcel
+  - Oak gives pokedex here
 - Trainer Battles start here
   - Keep one as a Youngster and his Top Percentage Rattata
   - Other can be bugcatchers, lasses, etc. early game stuff
@@ -102,6 +101,8 @@ VIOLET CITY
 - Maybe the Jigglypuff event from Pewter's pokecenter?
 - Elm's Aide in the pokecenter (no eggs this time around, so no Togepi side plot)
   - If you've caught 10 kinds of Pokemon, gives something
+- Reference one of the Pewter City guys to walk you to the School if you say you don't know stuff
+- NPC stops you from leaving early
 
 
 ============

@@ -4,7 +4,7 @@
 - 251 Pokemon (keep ghost and fossils)
 - Look into porting following pokemon from Yellow, but apply to all mons
 - Gen 2 party sprites
-- Version Based sprites
+- R/B shaded sprites with Gen 2 quality
 - Shared SGB palettes
 - Shininess
 - Pokemon Gender
@@ -18,7 +18,7 @@
 - Use HM moves by interacting with cut trees and such like RPP3
 - Add headbutt as a field move like RPP3
 - Add whirlpool and waterfall as HMs and field moves
-  - Look at Cut as a reference for adding Whirlpool as a fiel move
+  - Look at Cut as a reference for adding Whirlpool as a field move
 - Running Shoes and faster bike
 - Multiple bugfixes. Look at Shin Pokemon Red, pokered-clean, and red++ repos
 - A mixture of Gen 2 moves and custom moves added?
@@ -36,7 +36,6 @@
 - Remove pointless junk data and messy code, see pokered-clean
 - Add roof loading for Johto tilesets
 - Port the tileset animation code from Gold
-- Just remove the spinner tile code since it isn't needed for Johto
-  - Alternately, redesign rocket hideout to have spinner tiles
+- Possibly redesign rocket hideout to have spinner tiles
 - Add ice sliding puzzles like Maize
-- Look into porting the surfing pikachu minigame maybe
+- Look into porting the surfing pikachu minigame (maybe)
