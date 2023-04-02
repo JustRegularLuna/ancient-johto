@@ -11,244 +11,244 @@ WildDataPointers:
 	dw NoMons      ; CINNABAR_ISLAND
 	dw NoMons      ; INDIGO_PLATEAU
 	dw NoMons      ; SAFFRON_CITY
-	dw NoMons      ; unused
-	dw Route1Mons  ; ROUTE_1
-	dw Route2Mons  ; ROUTE_2
-	dw Route3Mons  ; ROUTE_3
-	dw Route4Mons  ; ROUTE_4
-	dw Route5Mons  ; ROUTE_5
-	dw Route6Mons  ; ROUTE_6
-	dw Route7Mons  ; ROUTE_7
-	dw Route8Mons  ; ROUTE_8
-	dw Route9Mons  ; ROUTE_9
-	dw Route10Mons ; ROUTE_10
-	dw Route11Mons ; ROUTE_11
-	dw Route12Mons ; ROUTE_12
-	dw Route13Mons ; ROUTE_13
-	dw Route14Mons ; ROUTE_14
-	dw Route15Mons ; ROUTE_15
-	dw Route16Mons ; ROUTE_16
-	dw Route17Mons ; ROUTE_17
-	dw Route18Mons ; ROUTE_18
-	dw WaterMons   ; ROUTE_19
-	dw WaterMons   ; ROUTE_20
-	dw Route21Mons ; ROUTE_21
-	dw Route22Mons ; ROUTE_22
-	dw Route23Mons ; ROUTE_23
-	dw Route24Mons ; ROUTE_24
-	dw Route25Mons ; ROUTE_25
+	dw NoMons      ; UNUSED_MAP_0B
+	dw NoMons      ; ROUTE_1
+	dw NoMons      ; ROUTE_2
+	dw NoMons      ; ROUTE_3
+	dw NoMons      ; ROUTE_4
+	dw NoMons      ; ROUTE_5
+	dw NoMons      ; ROUTE_6
+	dw NoMons      ; ROUTE_7
+	dw NoMons      ; ROUTE_8
+	dw NoMons      ; ROUTE_9
+	dw NoMons      ; ROUTE_10
+	dw NoMons      ; ROUTE_11
+	dw NoMons      ; ROUTE_12
+	dw NoMons      ; ROUTE_13
+	dw NoMons      ; ROUTE_14
+	dw NoMons      ; ROUTE_15
+	dw NoMons      ; ROUTE_16
+	dw NoMons      ; ROUTE_17
+	dw NoMons      ; ROUTE_18
+	dw NoMons      ; ROUTE_19
+	dw NoMons      ; ROUTE_20
+	dw NoMons      ; ROUTE_21
+	dw NoMons      ; ROUTE_22
+	dw NoMons      ; ROUTE_23
+	dw NoMons      ; ROUTE_24
+	dw NoMons      ; ROUTE_25
 	dw NoMons      ; KANTO_ROUTE_27
 	dw NoMons      ; REDS_HOUSE_1F
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw ForestMons ; ViridianForest
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw MoonMons1
-	dw MoonMonsB1
-	dw MoonMonsB2
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw TunnelMonsB1
-	dw PowerPlantMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw PlateauMons1
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw TowerMons1
-	dw TowerMons2
-	dw TowerMons3
-	dw TowerMons4
-	dw TowerMons5
-	dw TowerMons6
-	dw TowerMons7
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw IslandMonsB1
-	dw IslandMonsB2
-	dw IslandMonsB3
-	dw IslandMonsB4
-	dw NoMons
-	dw NoMons
-	dw MansionMons1
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw IslandMons1
-	dw NoMons
-	dw PlateauMons2
-	dw NoMons
-	dw NoMons
-	dw CaveMons
-	dw PlateauMons3
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw MansionMons2
-	dw MansionMons3
-	dw MansionMonsB1
-	dw ZoneMons1
-	dw ZoneMons2
-	dw ZoneMons3
-	dw ZoneMonsCenter
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw DungeonMons2
-	dw DungeonMonsB1
-	dw DungeonMons1
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw TunnelMonsB2
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
+	dw NoMons      ; REDS_HOUSE_2F
+	dw NoMons      ; BLUES_HOUSE
+	dw NoMons      ; OAKS_LAB
+	dw NoMons      ; VIRIDIAN_POKECENTER
+	dw NoMons      ; VIRIDIAN_MART
+	dw NoMons      ; VIRIDIAN_SCHOOL_HOUSE
+	dw NoMons      ; VIRIDIAN_NICKNAME_HOUSE
+	dw NoMons      ; VIRIDIAN_GYM
+	dw NoMons      ; DIGLETTS_CAVE_ROUTE_2
+	dw NoMons      ; VIRIDIAN_FOREST_NORTH_GATE
+	dw NoMons      ; ROUTE_2_TRADE_HOUSE
+	dw NoMons      ; ROUTE_2_GATE
+	dw NoMons      ; VIRIDIAN_FOREST_SOUTH_GATE
+	dw NoMons      ; VIRIDIAN_FOREST
+	dw NoMons      ; MUSEUM_1F
+	dw NoMons      ; MUSEUM_2F
+	dw NoMons      ; PEWTER_GYM
+	dw NoMons      ; PEWTER_NIDORAN_HOUSE
+	dw NoMons      ; PEWTER_MART
+	dw NoMons      ; PEWTER_SPEECH_HOUSE
+	dw NoMons      ; PEWTER_POKECENTER
+	dw NoMons      ; MT_MOON_1F
+	dw NoMons      ; MT_MOON_B1F
+	dw NoMons      ; MT_MOON_B2F
+	dw NoMons      ; CERULEAN_TRASHED_HOUSE
+	dw NoMons      ; CERULEAN_TRADE_HOUSE
+	dw NoMons      ; CERULEAN_POKECENTER
+	dw NoMons      ; CERULEAN_GYM
+	dw NoMons      ; BIKE_SHOP
+	dw NoMons      ; CERULEAN_MART
+	dw NoMons      ; MT_MOON_POKECENTER
+	dw NoMons      ; CERULEAN_TRASHED_HOUSE_COPY
+	dw NoMons      ; ROUTE_5_GATE
+	dw NoMons      ; UNDERGROUND_PATH_ROUTE_5
+	dw NoMons      ; DAYCARE
+	dw NoMons      ; ROUTE_6_GATE
+	dw NoMons      ; UNDERGROUND_PATH_ROUTE_6
+	dw NoMons      ; UNDERGROUND_PATH_ROUTE_6_COPY
+	dw NoMons      ; ROUTE_7_GATE
+	dw NoMons      ; UNDERGROUND_PATH_ROUTE_7
+	dw NoMons      ; UNDERGROUND_PATH_ROUTE_7_COPY
+	dw NoMons      ; ROUTE_8_GATE
+	dw NoMons      ; UNDERGROUND_PATH_ROUTE_8
+	dw NoMons      ; ROCK_TUNNEL_POKECENTER
+	dw NoMons      ; ROCK_TUNNEL_1F
+	dw NoMons      ; POWER_PLANT
+	dw NoMons      ; ROUTE_11_GATE_1F
+	dw NoMons      ; DIGLETTS_CAVE_ROUTE_11
+	dw NoMons      ; ROUTE_11_GATE_2F
+	dw NoMons      ; ROUTE_12_GATE_1F
+	dw NoMons      ; BILLS_HOUSE
+	dw NoMons      ; VERMILION_POKECENTER
+	dw NoMons      ; POKEMON_FAN_CLUB
+	dw NoMons      ; VERMILION_MART
+	dw NoMons      ; VERMILION_GYM
+	dw NoMons      ; VERMILION_PIDGEY_HOUSE
+	dw NoMons      ; VERMILION_DOCK
+	dw NoMons      ; SS_ANNE_1F
+	dw NoMons      ; SS_ANNE_2F
+	dw NoMons      ; SS_ANNE_3F
+	dw NoMons      ; SS_ANNE_B1F
+	dw NoMons      ; SS_ANNE_BOW
+	dw NoMons      ; SS_ANNE_KITCHEN
+	dw NoMons      ; SS_ANNE_CAPTAINS_ROOM
+	dw NoMons      ; SS_ANNE_1F_ROOMS
+	dw NoMons      ; SS_ANNE_2F_ROOMS
+	dw NoMons      ; SS_ANNE_B1F_ROOMS
+	dw NoMons      ; UNUSED_MAP_69
+	dw NoMons      ; UNUSED_MAP_6A
+	dw NoMons      ; UNUSED_MAP_6B
+	dw NoMons      ; VICTORY_ROAD_1F
+	dw NoMons      ; UNUSED_MAP_6D
+	dw NoMons      ; UNUSED_MAP_6E
+	dw NoMons      ; UNUSED_MAP_6F
+	dw NoMons      ; UNUSED_MAP_70
+	dw NoMons      ; LANCES_ROOM
+	dw NoMons      ; UNUSED_MAP_72
+	dw NoMons      ; UNUSED_MAP_73
+	dw NoMons      ; UNUSED_MAP_74
+	dw NoMons      ; UNUSED_MAP_75
+	dw NoMons      ; HALL_OF_FAME
+	dw NoMons      ; UNDERGROUND_PATH_NORTH_SOUTH
+	dw NoMons      ; CHAMPIONS_ROOM
+	dw NoMons      ; UNDERGROUND_PATH_WEST_EAST
+	dw NoMons      ; CELADON_MART_1F
+	dw NoMons      ; CELADON_MART_2F
+	dw NoMons      ; CELADON_MART_3F
+	dw NoMons      ; CELADON_MART_4F
+	dw NoMons      ; CELADON_MART_ROOF
+	dw NoMons      ; CELADON_MART_ELEVATOR
+	dw NoMons      ; CELADON_MANSION_1F
+	dw NoMons      ; CELADON_MANSION_2F
+	dw NoMons      ; CELADON_MANSION_3F
+	dw NoMons      ; CELADON_MANSION_ROOF
+	dw NoMons      ; CELADON_MANSION_ROOF_HOUSE
+	dw NoMons      ; CELADON_POKECENTER
+	dw NoMons      ; CELADON_GYM
+	dw NoMons      ; GAME_CORNER
+	dw NoMons      ; CELADON_MART_5F
+	dw NoMons      ; GAME_CORNER_PRIZE_ROOM
+	dw NoMons      ; CELADON_DINER
+	dw NoMons      ; CELADON_CHIEF_HOUSE
+	dw NoMons      ; CELADON_HOTEL
+	dw NoMons      ; LAVENDER_POKECENTER
+	dw NoMons      ; POKEMON_TOWER_1F
+	dw NoMons      ; POKEMON_TOWER_2F
+	dw NoMons      ; POKEMON_TOWER_3F
+	dw NoMons      ; POKEMON_TOWER_4F
+	dw NoMons      ; POKEMON_TOWER_5F
+	dw NoMons      ; POKEMON_TOWER_6F
+	dw NoMons      ; POKEMON_TOWER_7F
+	dw NoMons      ; MR_FUJIS_HOUSE
+	dw NoMons      ; LAVENDER_MART
+	dw NoMons      ; LAVENDER_CUBONE_HOUSE
+	dw NoMons      ; FUCHSIA_MART
+	dw NoMons      ; FUCHSIA_BILLS_GRANDPAS_HOUSE
+	dw NoMons      ; FUCHSIA_POKECENTER
+	dw NoMons      ; WARDENS_HOUSE
+	dw NoMons      ; SAFARI_ZONE_GATE
+	dw NoMons      ; FUCHSIA_GYM
+	dw NoMons      ; FUCHSIA_MEETING_ROOM
+	dw NoMons      ; SEAFOAM_ISLANDS_B1F
+	dw NoMons      ; SEAFOAM_ISLANDS_B2F
+	dw NoMons      ; SEAFOAM_ISLANDS_B3F
+	dw NoMons      ; SEAFOAM_ISLANDS_B4F
+	dw NoMons      ; VERMILION_OLD_ROD_HOUSE
+	dw NoMons      ; FUCHSIA_GOOD_ROD_HOUSE
+	dw NoMons      ; POKEMON_MANSION_1F
+	dw NoMons      ; CINNABAR_GYM
+	dw NoMons      ; CINNABAR_LAB
+	dw NoMons      ; CINNABAR_LAB_TRADE_ROOM
+	dw NoMons      ; CINNABAR_LAB_METRONOME_ROOM
+	dw NoMons      ; CINNABAR_LAB_FOSSIL_ROOM
+	dw NoMons      ; CINNABAR_POKECENTER
+	dw NoMons      ; CINNABAR_MART
+	dw NoMons      ; TOHJO_FALLS
+	dw NoMons      ; INDIGO_PLATEAU_LOBBY
+	dw NoMons      ; COPYCATS_HOUSE_1F
+	dw NoMons      ; COPYCATS_HOUSE_2F
+	dw NoMons      ; FIGHTING_DOJO
+	dw NoMons      ; SAFFRON_GYM
+	dw NoMons      ; SAFFRON_PIDGEY_HOUSE
+	dw NoMons      ; SAFFRON_MART
+	dw NoMons      ; SILPH_CO_1F
+	dw NoMons      ; SAFFRON_POKECENTER
+	dw NoMons      ; MR_PSYCHICS_HOUSE
+	dw NoMons      ; ROUTE_15_GATE_1F
+	dw NoMons      ; ROUTE_15_GATE_2F
+	dw NoMons      ; ROUTE_16_GATE_1F
+	dw NoMons      ; ROUTE_16_GATE_2F
+	dw NoMons      ; ROUTE_16_FLY_HOUSE
+	dw NoMons      ; ROUTE_12_SUPER_ROD_HOUSE
+	dw NoMons      ; ROUTE_18_GATE_1F
+	dw NoMons      ; ROUTE_18_GATE_2F
+	dw NoMons      ; SEAFOAM_ISLANDS_1F
+	dw NoMons      ; ROUTE_22_GATE
+	dw NoMons      ; VICTORY_ROAD_2F
+	dw NoMons      ; ROUTE_12_GATE_2F
+	dw NoMons      ; VERMILION_TRADE_HOUSE
+	dw NoMons      ; DIGLETTS_CAVE
+	dw NoMons      ; VICTORY_ROAD_3F
+	dw NoMons      ; ROCKET_HIDEOUT_B1F
+	dw NoMons      ; ROCKET_HIDEOUT_B2F
+	dw NoMons      ; ROCKET_HIDEOUT_B3F
+	dw NoMons      ; ROCKET_HIDEOUT_B4F
+	dw NoMons      ; ROCKET_HIDEOUT_ELEVATOR
+	dw NoMons      ; UNUSED_MAP_CC
+	dw NoMons      ; UNUSED_MAP_CD
+	dw NoMons      ; UNUSED_MAP_CE
+	dw NoMons      ; SILPH_CO_2F
+	dw NoMons      ; SILPH_CO_3F
+	dw NoMons      ; SILPH_CO_4F
+	dw NoMons      ; SILPH_CO_5F
+	dw NoMons      ; SILPH_CO_6F
+	dw NoMons      ; SILPH_CO_7F
+	dw NoMons      ; SILPH_CO_8F
+	dw NoMons      ; POKEMON_MANSION_2F
+	dw NoMons      ; POKEMON_MANSION_3F
+	dw NoMons      ; POKEMON_MANSION_B1F
+	dw NoMons      ; SAFARI_ZONE_EAST
+	dw NoMons      ; SAFARI_ZONE_NORTH
+	dw NoMons      ; SAFARI_ZONE_WEST
+	dw NoMons      ; SAFARI_ZONE_CENTER
+	dw NoMons      ; SAFARI_ZONE_CENTER_REST_HOUSE
+	dw NoMons      ; SAFARI_ZONE_SECRET_HOUSE
+	dw NoMons      ; SAFARI_ZONE_WEST_REST_HOUSE
+	dw NoMons      ; SAFARI_ZONE_EAST_REST_HOUSE
+	dw NoMons      ; SAFARI_ZONE_NORTH_REST_HOUSE
+	dw NoMons      ; CERULEAN_CAVE_2F
+	dw NoMons      ; CERULEAN_CAVE_B1F
+	dw NoMons      ; CERULEAN_CAVE_1F
+	dw NoMons      ; NAME_RATERS_HOUSE
+	dw NoMons      ; CERULEAN_BADGE_HOUSE
+	dw NoMons      ; UNUSED_MAP_E7
+	dw NoMons      ; ROCK_TUNNEL_B1F
+	dw NoMons      ; SILPH_CO_9F
+	dw NoMons      ; SILPH_CO_10F
+	dw NoMons      ; SILPH_CO_11F
+	dw NoMons      ; SILPH_CO_ELEVATOR
+	dw NoMons      ; UNUSED_MAP_ED
+	dw NoMons      ; UNUSED_MAP_EE
+	dw NoMons      ; TRADE_CENTER
+	dw NoMons      ; COLOSSEUM
+	dw NoMons      ; UNUSED_MAP_F1
+	dw NoMons      ; UNUSED_MAP_F2
+	dw NoMons      ; UNUSED_MAP_F3
+	dw NoMons      ; UNUSED_MAP_F4
+	dw NoMons      ; LORELEIS_ROOM
+	dw NoMons      ; BRUNOS_ROOM
+	dw NoMons      ; AGATHAS_ROOM
 	assert_table_length NUM_MAPS
 	dw -1 ; end
 
@@ -276,76 +276,4 @@ JohtoWildDataPointers:
 	assert_table_length NUM_JOHTO_MAPS
 	dw -1 ; end
 
-
-; wild pokemon data is divided into two parts.
-; first part:  pokemon found in grass
-; second part: pokemon found while surfing
-; each part goes as follows:
-    ; if first byte == 0, then
-        ; no wild pokemon on this map
-    ; if first byte != 0, then
-        ; first byte is encounter rate
-        ; followed by 20 bytes:
-        ; level, species (ten times)
-
-INCLUDE "data/wild/maps/nothing.asm"
-INCLUDE "data/wild/maps/Route1.asm"
-INCLUDE "data/wild/maps/Route2.asm"
-INCLUDE "data/wild/maps/Route22.asm"
-INCLUDE "data/wild/maps/ViridianForest.asm"
-INCLUDE "data/wild/maps/Route3.asm"
-INCLUDE "data/wild/maps/MtMoon1F.asm"
-INCLUDE "data/wild/maps/MtMoonB1F.asm"
-INCLUDE "data/wild/maps/MtMoonB2F.asm"
-INCLUDE "data/wild/maps/Route4.asm"
-INCLUDE "data/wild/maps/Route24.asm"
-INCLUDE "data/wild/maps/Route25.asm"
-INCLUDE "data/wild/maps/Route9.asm"
-INCLUDE "data/wild/maps/Route5.asm"
-INCLUDE "data/wild/maps/Route6.asm"
-INCLUDE "data/wild/maps/Route11.asm"
-INCLUDE "data/wild/maps/RockTunnel1F.asm"
-INCLUDE "data/wild/maps/RockTunnelB1F.asm"
-INCLUDE "data/wild/maps/Route10.asm"
-INCLUDE "data/wild/maps/Route12.asm"
-INCLUDE "data/wild/maps/Route8.asm"
-INCLUDE "data/wild/maps/Route7.asm"
-INCLUDE "data/wild/maps/PokemonTower1F.asm"
-INCLUDE "data/wild/maps/PokemonTower2F.asm"
-INCLUDE "data/wild/maps/PokemonTower3F.asm"
-INCLUDE "data/wild/maps/PokemonTower4F.asm"
-INCLUDE "data/wild/maps/PokemonTower5F.asm"
-INCLUDE "data/wild/maps/PokemonTower6F.asm"
-INCLUDE "data/wild/maps/PokemonTower7F.asm"
-INCLUDE "data/wild/maps/Route13.asm"
-INCLUDE "data/wild/maps/Route14.asm"
-INCLUDE "data/wild/maps/Route15.asm"
-INCLUDE "data/wild/maps/Route16.asm"
-INCLUDE "data/wild/maps/Route17.asm"
-INCLUDE "data/wild/maps/Route18.asm"
-INCLUDE "data/wild/maps/SafariZoneCenter.asm"
-INCLUDE "data/wild/maps/SafariZoneEast.asm"
-INCLUDE "data/wild/maps/SafariZoneNorth.asm"
-INCLUDE "data/wild/maps/SafariZoneWest.asm"
-INCLUDE "data/wild/maps/SeaRoutes.asm"
-INCLUDE "data/wild/maps/SeafoamIslands1F.asm"
-INCLUDE "data/wild/maps/SeafoamIslandsB1F.asm"
-INCLUDE "data/wild/maps/SeafoamIslandsB2F.asm"
-INCLUDE "data/wild/maps/SeafoamIslandsB3F.asm"
-INCLUDE "data/wild/maps/SeafoamIslandsB4F.asm"
-INCLUDE "data/wild/maps/PokemonMansion1F.asm"
-INCLUDE "data/wild/maps/PokemonMansion2F.asm"
-INCLUDE "data/wild/maps/PokemonMansion3F.asm"
-INCLUDE "data/wild/maps/PokemonMansionB1F.asm"
-INCLUDE "data/wild/maps/Route21.asm"
-INCLUDE "data/wild/maps/CeruleanCave1F.asm"
-INCLUDE "data/wild/maps/CeruleanCave2F.asm"
-INCLUDE "data/wild/maps/CeruleanCaveB1F.asm"
-INCLUDE "data/wild/maps/PowerPlant.asm"
-INCLUDE "data/wild/maps/Route23.asm"
-INCLUDE "data/wild/maps/VictoryRoad2F.asm"
-INCLUDE "data/wild/maps/VictoryRoad3F.asm"
-INCLUDE "data/wild/maps/VictoryRoad1F.asm"
-INCLUDE "data/wild/maps/DiglettsCave.asm"
-
-INCLUDE "data/wild/maps/Route29.asm"
+INCLUDE "data/wild/wildmons.asm"
