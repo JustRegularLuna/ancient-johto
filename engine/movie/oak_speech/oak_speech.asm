@@ -47,7 +47,11 @@ OakSpeech:
 	call SetDefaultNames
 	predef InitPlayerData2
 	ld hl, wNumBoxItems
+IF DEF(_DEBUG)
+	ld a, SURFBOARD
+ELSE
 	ld a, POTION
+ENDC
 	ld [wcf91], a
 	ld a, 1
 	ld [wItemQuantity], a
