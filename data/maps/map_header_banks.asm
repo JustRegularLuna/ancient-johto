@@ -176,7 +176,7 @@ MapHeaderBanks::
 	db BANK(CinnabarLabFossilRoom_h)
 	db BANK(CinnabarPokecenter_h)
 	db BANK(CinnabarMart_h)
-	db BANK(CinnabarMart_h)
+	db BANK(TohjoFalls_h)
 	db BANK(IndigoPlateauLobby_h)
 	db BANK(CopycatsHouse1F_h)
 	db BANK(CopycatsHouse2F_h)
@@ -275,5 +275,4 @@ JohtoMapHeaderBanks::
 	db BANK(CherrygroveHouse3_h)
 	db BANK(Route30BerryHouse_h)
 	db BANK(MrPokemonsHouse_h)
-	db BANK(TohjoFalls_h)
 	assert_table_length NUM_JOHTO_MAPS

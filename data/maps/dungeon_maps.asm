@@ -10,6 +10,7 @@ DungeonMaps1:
 	db ROCK_TUNNEL_1F
 	db SEAFOAM_ISLANDS_1F
 	db ROCK_TUNNEL_B1F
+	db TOHJO_FALLS
 	db -1 ; end
 
 ; GetBattleTransitionID_IsDungeonMap checks if wCurMap
@@ -27,7 +28,7 @@ DungeonMaps2:
 	db -1 ; end
 
 JohtoDungeonMaps1:
-	db TOHJO_FALLS
+	;db ILEX_FOREST
 	db -1 ; end
 
 JohtoDungeonMaps2:

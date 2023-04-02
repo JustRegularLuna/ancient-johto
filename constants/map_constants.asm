@@ -195,7 +195,7 @@ FIRST_INDOOR_MAP EQU const_value
 	mapconst CINNABAR_LAB_FOSSIL_ROOM,       4,  4 ; $AA
 	mapconst CINNABAR_POKECENTER,            4,  7 ; $AB
 	mapconst CINNABAR_MART,                  4,  4 ; $AC
-	mapconst CINNABAR_MART_COPY,             4,  4 ; $AD
+	mapconst TOHJO_FALLS,                    9, 15 ; $AD
 	mapconst INDIGO_PLATEAU_LOBBY,           6,  8 ; $AE
 	mapconst COPYCATS_HOUSE_1F,              4,  4 ; $AF
 	mapconst COPYCATS_HOUSE_2F,              4,  4 ; $B0
@@ -301,5 +301,4 @@ FIRST_JOHTO_INDOOR_MAP EQU const_value
 	mapconst CHERRYGROVE_HOUSE_3,            4,  4
 	mapconst ROUTE_30_BERRY_HOUSE,           4,  4
 	mapconst MR_POKEMONS_HOUSE,              4,  4
-	mapconst TOHJO_FALLS,                    9, 15
 NUM_JOHTO_MAPS EQU const_value

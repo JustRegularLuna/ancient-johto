@@ -273,7 +273,6 @@ JohtoWildDataPointers:
 	dw NoMons      ; CHERRYGROVE_HOUSE_3
 	dw NoMons      ; ROUTE_30_BERRY_HOUSE
 	dw NoMons      ; MR_POKEMONS_HOUSE
-	dw NoMons      ; TOHJO_FALLS
 	assert_table_length NUM_JOHTO_MAPS
 	dw -1 ; end
 

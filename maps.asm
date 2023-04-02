@@ -1054,14 +1054,6 @@ Route30BerryHouse_Blocks:
 
 
 
-SECTION "Johto Caves 1", ROMX
-
-INCLUDE "data/maps/headers/TohjoFalls.asm"
-INCLUDE "data/maps/objects/TohjoFalls.asm"
-TohjoFalls_Blocks: INCBIN "maps/johto/TohjoFalls.blk"
-
-
-
 SECTION "Route 27", ROMX
 ; Johto and Kanto each have a Route 27 map, that reuse the same blk
 
@@ -1071,6 +1063,10 @@ INCLUDE "data/maps/headers/JohtoRoute27.asm"
 INCLUDE "data/maps/objects/JohtoRoute27.asm"
 KantoRoute27_Blocks: ; INCBIN "maps/kanto/KantoRoute27.blk"
 JohtoRoute27_Blocks: INCBIN "maps/johto/JohtoRoute27.blk"
+
+INCLUDE "data/maps/headers/TohjoFalls.asm"
+INCLUDE "data/maps/objects/TohjoFalls.asm"
+TohjoFalls_Blocks: INCBIN "maps/kanto/TohjoFalls.blk"
 
 
 

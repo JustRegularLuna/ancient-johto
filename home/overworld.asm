@@ -536,17 +536,17 @@ WarpFound2::
 	ld [wLastMap], a
 	ld a, [wCurMapWidth]
 	ld [wUnusedD366], a ; not read
-	; check region to know if this is the Kanto Route 27 Tohjo Falls entrance
+	; check region to know if this is the Johto Route 27 Tohjo Falls entrance
 	ld a, [wCurRegion]
 	and a ; In Kanto?
-	jr nz, .notRoute27
+	jr z, .notRoute27
 	ld a, [wCurMap]
-	cp KANTO_ROUTE_27
+	cp JOHTO_ROUTE_27
 	jr nz, .notRoute27
 	ld a, [wYCoord]
 	cp 5
 	jr nz, .notRoute27
-	ld a, 1 ; johto
+	xor a ; kanto
 	ld [wDestinationRegion], a
 .notRoute27
 	; check region to know if this is Rock Tunnel or not
@@ -575,7 +575,7 @@ WarpFound2::
 ; added check for Tohjo Falls, once it exists
 	ld a, [wCurRegion]
 	and a ; Kanto?
-	jr z, .continue
+	jr nz, .continue
 	ld a, [wCurMap]
 	cp TOHJO_FALLS
 	jr nz, .continue

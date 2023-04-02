@@ -93,7 +93,8 @@ InternalMapEntries:
 	internal_map VERMILION_OLD_ROD_HOUSE,       100,  84, VermilionCityName
 	internal_map FUCHSIA_GOOD_ROD_HOUSE,         92, 116, FuchsiaCityName
 	internal_map POKEMON_MANSION_1F,             52, 132, PokemonMansionName
-	internal_map CINNABAR_MART_COPY,             52, 132, CinnabarIslandName
+	internal_map CINNABAR_MART,                  52, 132, CinnabarIslandName
+	internal_map TOHJO_FALLS,                    12, 100, TohjoFallsName
 	internal_map INDIGO_PLATEAU_LOBBY,           28,  36, IndigoPlateauName
 	internal_map MR_PSYCHICS_HOUSE,             100,  68, SaffronCityName
 	internal_map ROUTE_15_GATE_2F,              104, 116, Route15Name
@@ -138,5 +139,4 @@ JohtoInternalMapEntries:
 	internal_map ELMS_LAB,                      140, 100, NewBarkTownName
 	internal_map CHERRYGROVE_HOUSE_3,           100, 100, CherrygroveCityName
 	internal_map MR_POKEMONS_HOUSE,             100,  80, Route30Name
-	internal_map TOHJO_FALLS,                   148, 100, TohjoFallsName
 	db -1 ; end

@@ -176,7 +176,7 @@ MapHeaderPointers::
 	dw CinnabarLabFossilRoom_h
 	dw CinnabarPokecenter_h
 	dw CinnabarMart_h
-	dw CinnabarMart_h ; CINNABAR_MART_COPY
+	dw TohjoFalls_h
 	dw IndigoPlateauLobby_h
 	dw CopycatsHouse1F_h
 	dw CopycatsHouse2F_h
@@ -275,5 +275,4 @@ JohtoMapHeaderPointers::
 	dw CherrygroveHouse3_h
 	dw Route30BerryHouse_h
 	dw MrPokemonsHouse_h
-	dw TohjoFalls_h
 	assert_table_length NUM_JOHTO_MAPS

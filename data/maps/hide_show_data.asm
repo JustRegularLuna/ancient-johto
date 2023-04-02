@@ -177,7 +177,7 @@ MapHSPointers:
 	dw NoHS ; CINNABAR_LAB_FOSSIL_ROOM
 	dw NoHS ; CINNABAR_POKECENTER
 	dw NoHS ; CINNABAR_MART
-	dw NoHS ; CINNABAR_MART_COPY
+	dw NoHS ; TOHJO_FALLS
 	dw NoHS ; INDIGO_PLATEAU_LOBBY
 	dw NoHS ; COPYCATS_HOUSE_1F
 	dw NoHS ; COPYCATS_HOUSE_2F
@@ -291,7 +291,6 @@ JohtoMapHSPointers:
 	dw JohtoNoHS ; Cherrygrove House 3
 	dw JohtoNoHS ; Route 30 Berry House
 	dw JohtoNoHS ; Mr. Pokemon's House
-	dw JohtoNoHS ; Tohjo Falls
 	assert_table_length NUM_JOHTO_MAPS
 	dw -1 ; end
 
