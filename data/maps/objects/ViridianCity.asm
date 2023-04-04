@@ -4,7 +4,7 @@ ViridianCity_Object:
 	def_warps
 	warp 23, 25, 0, VIRIDIAN_POKECENTER
 	warp 29, 19, 0, VIRIDIAN_MART
-	warp 21, 15, 0, VIRIDIAN_SCHOOL_HOUSE
+	warp 21,  3, 0, VIRIDIAN_SCHOOL_HOUSE
 	warp 21,  9, 0, VIRIDIAN_NICKNAME_HOUSE
 	warp 32,  7, 0, VIRIDIAN_GYM
 
