@@ -179,9 +179,6 @@ LoadTownMap_Fly::
 	push af
 	ld [hl], $ff
 	push hl
-	hlcoord 0, 0
-	ld de, ToText
-	call PlaceString
 	ld a, [wCurMap]
 	ld b, $0
 	call DrawPlayerOrSpriteBird
@@ -192,22 +189,18 @@ LoadTownMap_Fly::
 	ld [de], a
 	push hl
 	push hl
-	hlcoord 3, 0
-	lb bc, 1, 15
+	hlcoord 1, 0
+	lb bc, 2, 11
 	call ClearScreenArea
 	pop hl
 	ld a, [hl]
 	ld b, $4
 	call DrawPlayerOrSpriteBird ; draw bird sprite
-	hlcoord 3, 0
+	hlcoord 1, 0
 	ld de, wcd6d
 	call PlaceString
 	ld c, 15
 	call DelayFrames
-	hlcoord 18, 0
-	ld [hl], "▲"
-	hlcoord 19, 0
-	ld [hl], "▼"
 	pop hl
 .inputLoop
 	push hl
@@ -266,11 +259,13 @@ LoadTownMap_Fly::
 	jr z, .pressedDown ; skip past unvisited towns
 	jp .townMapFlyLoop
 .wrapToEndOfList
+	ld a, [wCurRegion]
+	and a ; in Kanto?
 	ld hl, wFlyLocationsList + NUM_CITY_MAPS
+	jr z, .pressedDown
+	; else Johto
+	ld hl, wFlyLocationsList + NUM_JOHTO_CITY_MAPS
 	jr .pressedDown
-
-ToText:
-	db "To@"
 
 BuildFlyLocationsList:
 	ld hl, wFlyLocationsList - 1
