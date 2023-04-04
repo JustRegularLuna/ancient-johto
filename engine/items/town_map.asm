@@ -30,8 +30,8 @@ DisplayTownMap:
 	jr .enterLoop
 
 .townMapLoop
-	hlcoord 0, 0
-	lb bc, 1, 20
+	hlcoord 1, 0
+	lb bc, 1, 19
 	call ClearScreenArea
 	ld a, [wCurRegion]
 	and a ; Kanto?
