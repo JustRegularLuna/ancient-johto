@@ -77,3 +77,6 @@ Johto_Coll::
 
 JohtoCave_Coll::
 	coll_tiles $01, $04, $16, $18, $1E, $30, $32, $34, $36, $37, $38, $3A, 
+
+TraditionalHouse_Coll::
+	coll_tiles $01, $12, $14, $50, $54, $55, $5F

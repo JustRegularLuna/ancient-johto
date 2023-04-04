@@ -2,6 +2,8 @@ LedgeTiles:
 	dbw OVERWORLD, .overworld
 	dbw JOHTO, .johto
 	dbw JOHTO_CAVE, .johto_cave
+	dbw TRADITIONAL_HOUSE, .traditional_house
+	db -1
 
 	; player direction, tile player standing on, ledge tile, input required
 .overworld
@@ -28,4 +30,8 @@ LedgeTiles:
 	db SPRITE_FACING_DOWN,  $01, $26, D_DOWN
 	db SPRITE_FACING_LEFT,  $01, $15, D_LEFT
 	db SPRITE_FACING_RIGHT, $01, $41, D_RIGHT
+	db -1 ; end
+
+.traditional_house
+	db SPRITE_FACING_DOWN,  $50, $0F, D_DOWN
 	db -1 ; end

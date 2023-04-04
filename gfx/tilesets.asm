@@ -135,7 +135,14 @@ SECTION "Players Room Tileset", ROMX
 PlayersRoom_GFX::    INCBIN "gfx/tilesets/players_room.2bpp"
 PlayersRoom_Block::  INCBIN "gfx/blocksets/players_room.bst"
 
+
 SECTION "Johto Cave Tileset", ROMX
 
 JohtoCave_GFX::    INCBIN "gfx/tilesets/johto_cave.2bpp"
 JohtoCave_Block::  INCBIN "gfx/blocksets/johto_cave.bst"
+
+
+SECTION "Traditional House Tileset", ROMX
+
+TraditionalHouse_GFX::   INCBIN "gfx/tilesets/traditional_house.2bpp"
+TraditionalHouse_Block:: INCBIN "gfx/blocksets/traditional_house.bst"

@@ -14,4 +14,5 @@ DungeonTilesets:
 	db JOHTO_CAVE
 	db POKECENTER
 	db MART
+	db TRADITIONAL_HOUSE
 	db -1 ; end

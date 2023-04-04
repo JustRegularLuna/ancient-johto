@@ -25,4 +25,5 @@
 	const PLATEAU
 	const JOHTO
 	const JOHTO_CAVE
+	const TRADITIONAL_HOUSE
 NUM_TILESETS EQU const_value
