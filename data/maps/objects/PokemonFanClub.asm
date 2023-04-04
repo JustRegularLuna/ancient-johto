@@ -1,5 +1,5 @@
 PokemonFanClub_Object:
-	db $d ; border block
+	db $a ; border block
 
 	def_warps
 	warp  2,  7, 1, LAST_MAP

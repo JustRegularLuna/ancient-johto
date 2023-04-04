@@ -113,7 +113,7 @@ FIRST_INDOOR_MAP EQU const_value
 	mapconst ROUTE_12_GATE_1F,               4,  5 ; $57
 	mapconst BILLS_HOUSE,                    4,  4 ; $58
 	mapconst VERMILION_POKECENTER,           4,  7 ; $59
-	mapconst POKEMON_FAN_CLUB,               4,  4 ; $5A
+	mapconst POKEMON_FAN_CLUB,               4,  5 ; $5A
 	mapconst VERMILION_MART,                 4,  4 ; $5B
 	mapconst VERMILION_GYM,                  9,  5 ; $5C
 	mapconst VERMILION_PIDGEY_HOUSE,         4,  4 ; $5D
