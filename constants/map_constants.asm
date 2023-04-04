@@ -57,6 +57,7 @@ FIRST_ROUTE_MAP EQU const_value
 	mapconst ROUTE_23,                      72, 10 ; $22
 	mapconst ROUTE_24,                      18, 10 ; $23
 	mapconst ROUTE_25,                       9, 30 ; $24
+	mapconst ROUTE_26,                      54, 10
 	mapconst KANTO_ROUTE_27,                 9, 40
 FIRST_INDOOR_MAP EQU const_value
 	mapconst REDS_HOUSE_1F,                  4,  4 ; $25

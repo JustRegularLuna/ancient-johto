@@ -40,6 +40,7 @@ MapHSPointers:
 	dw NoHS ; ROUTE_23
 	dw NoHS ; ROUTE_24
 	dw NoHS ; ROUTE_25
+	dw NoHS ; ROUTE_26
 	dw NoHS ; KANTO_ROUTE_27
 	dw NoHS ; REDS_HOUSE_1F
 	dw NoHS ; REDS_HOUSE_2F

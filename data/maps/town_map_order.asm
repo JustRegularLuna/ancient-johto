@@ -46,6 +46,7 @@ TownMapOrder:
 	db VICTORY_ROAD_3F
 	db INDIGO_PLATEAU
 	db POWER_PLANT
+	db ROUTE_26
 	db KANTO_ROUTE_27
 	db TOHJO_FALLS
 TownMapOrderEnd:

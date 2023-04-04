@@ -37,6 +37,7 @@ WildDataPointers:
 	dw NoMons      ; ROUTE_23
 	dw NoMons      ; ROUTE_24
 	dw NoMons      ; ROUTE_25
+	dw NoMons      ; ROUTE_26
 	dw NoMons      ; KANTO_ROUTE_27
 	dw NoMons      ; REDS_HOUSE_1F
 	dw NoMons      ; REDS_HOUSE_2F

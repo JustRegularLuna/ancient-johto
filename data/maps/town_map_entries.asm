@@ -44,6 +44,7 @@ ExternalMapEntries:
 	external_map  28,  44, Route23Name
 	external_map 100,  44, Route24Name
 	external_map 108,  36, Route25Name
+	external_map  28,  92, Route26Name
 	external_map  20, 100, Route27Name
 	assert_table_length FIRST_INDOOR_MAP
 

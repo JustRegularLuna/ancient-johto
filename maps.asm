@@ -1068,6 +1068,10 @@ INCLUDE "data/maps/headers/TohjoFalls.asm"
 INCLUDE "data/maps/objects/TohjoFalls.asm"
 TohjoFalls_Blocks: INCBIN "maps/kanto/TohjoFalls.blk"
 
+INCLUDE "data/maps/headers/Route26.asm"
+INCLUDE "data/maps/objects/Route26.asm"
+Route26_Blocks : INCBIN "maps/kanto/Route26.blk"
+
 
 
 SECTION "Johto Pokecenters", ROMX

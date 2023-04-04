@@ -41,6 +41,7 @@ MapSpriteSets:
 	db $01 ; ROUTE_23
 	db $01 ; ROUTE_24
 	db $01 ; ROUTE_25
+	db $01 ; ROUTE_26
 	db $01 ; KANTO_ROUTE_27
 	assert_table_length FIRST_INDOOR_MAP
 
