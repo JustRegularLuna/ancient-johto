@@ -1,4 +1,4 @@
-	db DEX_MAGIKARP ; pokedex id
+	db MAGIKARP ; pokedex id
 
 	db  20,  10,  55,  80,  20
 	;   hp  atk  def  spd  spc

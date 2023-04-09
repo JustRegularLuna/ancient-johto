@@ -1,4 +1,4 @@
-	db DEX_BULBASAUR ; pokedex id
+	db BULBASAUR ; pokedex id
 
 	db  45,  49,  49,  45,  65
 	;   hp  atk  def  spd  spc

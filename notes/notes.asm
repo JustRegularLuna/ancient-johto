@@ -31,8 +31,6 @@
 - Keep up with enemy pokemon move PP
 - Improve trainer AI like RPP3
 - Add pockets to the bag
-- Remove all instances of IndexToPokedex and PokedexToIndex because everything is sorted the same now
-- Remove those routines to save space once the references are removed
 - Remove pointless junk data and messy code, see pokered-clean
 - Add roof loading for Johto tilesets
 - Port the tileset animation code from Gold

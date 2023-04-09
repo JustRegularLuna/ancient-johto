@@ -1,4 +1,4 @@
-	db DEX_SPEAROW ; pokedex id
+	db SPEAROW ; pokedex id
 
 	db  40,  60,  30,  70,  31
 	;   hp  atk  def  spd  spc

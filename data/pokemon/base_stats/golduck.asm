@@ -1,4 +1,4 @@
-	db DEX_GOLDUCK ; pokedex id
+	db GOLDUCK ; pokedex id
 
 	db  80,  82,  78,  85,  80
 	;   hp  atk  def  spd  spc

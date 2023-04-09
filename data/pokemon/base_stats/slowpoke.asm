@@ -1,4 +1,4 @@
-	db DEX_SLOWPOKE ; pokedex id
+	db SLOWPOKE ; pokedex id
 
 	db  90,  65,  65,  15,  40
 	;   hp  atk  def  spd  spc

@@ -1,4 +1,4 @@
-	db DEX_DODRIO ; pokedex id
+	db DODRIO ; pokedex id
 
 	db  60, 110,  70, 100,  60
 	;   hp  atk  def  spd  spc

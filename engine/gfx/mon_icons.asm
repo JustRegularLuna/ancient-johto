@@ -121,9 +121,9 @@ LoadMonPartySpriteGfx: ; nickname screen, etc
 	call DisableLCD
 	ld a, [wcf91] ; contains mon id
 
-	ld [wd11e], a
-	predef IndexToPokedex
-	ld a, [wd11e]
+	;ld [wd11e], a
+	;predef IndexToPokedex
+	;ld a, [wd11e]
 
 	dec a
 	ld hl, MonPartyData
@@ -159,9 +159,9 @@ LoadMonPartySpriteGfxWithLCDDisabled: ; party menu
 	ld a, [hli] ; a contains mon id
 	push hl
 
-	ld [wd11e], a
-	predef IndexToPokedex
-	ld a, [wd11e]
+	;ld [wd11e], a
+	;predef IndexToPokedex
+	;ld a, [wd11e]
 
 	dec a
 	ld hl, MonPartyData

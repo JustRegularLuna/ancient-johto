@@ -70,7 +70,7 @@ SetPal_StatusScreen:
 	ld bc, $10
 	call CopyData
 	ld a, [wcf91]
-	cp NUM_POKEMON_INDEXES + 1
+	cp NUM_POKEMON + 1
 	jr c, .pokemon
 	ld a, $1 ; not pokemon
 .pokemon
@@ -660,7 +660,7 @@ DeterminePaletteIDBack:
 	ret z
 GetMonPalID:
 	push bc
-	predef IndexToPokedex
+	;predef IndexToPokedex
 	pop bc
 	ld a, [wd11e]
 	ld hl, MonsterPalettes

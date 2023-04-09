@@ -1,4 +1,4 @@
-	db DEX_SANDSHREW ; pokedex id
+	db SANDSHREW ; pokedex id
 
 	db  50,  75,  85,  40,  30
 	;   hp  atk  def  spd  spc

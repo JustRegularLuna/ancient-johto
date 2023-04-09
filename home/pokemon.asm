@@ -103,7 +103,7 @@ LoadFrontSpriteByMonIndex::
 	push af
 	ld a, [wcf91]
 	ld [wd11e], a
-	predef IndexToPokedex
+	;predef IndexToPokedex
 	ld hl, wd11e
 	ld a, [hl]
 	pop bc
@@ -359,9 +359,7 @@ GetMonHeader::
 	ld b, $77 ; size of Aerodactyl fossil sprite
 	cp FOSSIL_AERODACTYL ; Aerodactyl fossil
 	jr z, .specialID
-	cp MEW
-	jr z, .mew
-	predef IndexToPokedex   ; convert pokemon ID in [wd11e] to pokedex number
+	;predef IndexToPokedex   ; convert pokemon ID in [wd11e] to pokedex number
 	ld a, [wd11e]
 	dec a
 	ld bc, BASE_DATA_SIZE
@@ -378,13 +376,6 @@ GetMonHeader::
 	ld [hl], e ; write front sprite pointer
 	inc hl
 	ld [hl], d
-	jr .done
-.mew
-	ld hl, MewBaseStats
-	ld de, wMonHeader
-	ld bc, BASE_DATA_SIZE
-	ld a, BANK(MewBaseStats)
-	call FarCopyData
 .done
 	ld a, [wd0b5]
 	ld [wMonHIndex], a

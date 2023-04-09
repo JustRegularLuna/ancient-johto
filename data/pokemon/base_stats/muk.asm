@@ -1,4 +1,4 @@
-	db DEX_MUK ; pokedex id
+	db MUK ; pokedex id
 
 	db 105, 105,  75,  50,  65
 	;   hp  atk  def  spd  spc

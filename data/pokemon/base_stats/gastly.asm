@@ -1,4 +1,4 @@
-	db DEX_GASTLY ; pokedex id
+	db GASTLY ; pokedex id
 
 	db  30,  35,  30,  80, 100
 	;   hp  atk  def  spd  spc

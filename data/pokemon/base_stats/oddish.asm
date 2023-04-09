@@ -1,4 +1,4 @@
-	db DEX_ODDISH ; pokedex id
+	db ODDISH ; pokedex id
 
 	db  45,  50,  55,  30,  75
 	;   hp  atk  def  spd  spc

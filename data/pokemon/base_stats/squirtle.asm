@@ -1,4 +1,4 @@
-	db DEX_SQUIRTLE ; pokedex id
+	db SQUIRTLE ; pokedex id
 
 	db  44,  48,  65,  43,  50
 	;   hp  atk  def  spd  spc

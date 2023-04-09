@@ -1,4 +1,4 @@
-	db DEX_CATERPIE ; pokedex id
+	db CATERPIE ; pokedex id
 
 	db  45,  30,  35,  45,  20
 	;   hp  atk  def  spd  spc

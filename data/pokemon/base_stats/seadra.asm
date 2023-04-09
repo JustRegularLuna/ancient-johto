@@ -1,4 +1,4 @@
-	db DEX_SEADRA ; pokedex id
+	db SEADRA ; pokedex id
 
 	db  55,  65,  95,  85,  95
 	;   hp  atk  def  spd  spc

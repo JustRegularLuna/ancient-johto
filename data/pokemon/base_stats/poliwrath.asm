@@ -1,4 +1,4 @@
-	db DEX_POLIWRATH ; pokedex id
+	db POLIWRATH ; pokedex id
 
 	db  90,  85,  95,  70,  70
 	;   hp  atk  def  spd  spc

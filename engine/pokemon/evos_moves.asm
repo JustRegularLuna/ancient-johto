@@ -159,9 +159,9 @@ Evolution_PartyMonLoop: ; loop over party mons
 	ld a, [wd11e]
 	push af
 	ld a, [wd0b5]
-	ld [wd11e], a
-	predef IndexToPokedex
-	ld a, [wd11e]
+	;ld [wd11e], a
+	;predef IndexToPokedex
+	;ld a, [wd11e]
 	dec a
 	ld hl, BaseStats
 	ld bc, BASE_DATA_SIZE
@@ -216,7 +216,7 @@ Evolution_PartyMonLoop: ; loop over party mons
 	ld a, [wIsInBattle]
 	and a
 	call z, Evolution_ReloadTilesetTilePatterns
-	predef IndexToPokedex
+	;predef IndexToPokedex
 	ld a, [wd11e]
 	dec a
 	ld c, a

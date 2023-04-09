@@ -236,9 +236,9 @@ PlayCry::
 	push bc
 	push af
 
-	ld [wd11e], a
-	predef IndexToPokedex
-	ld a, [wd11e]
+	;ld [wd11e], a
+	;predef IndexToPokedex
+	;ld a, [wd11e]
 	dec a
 	ld e, a
 	ld d, 0

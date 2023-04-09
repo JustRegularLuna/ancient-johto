@@ -1,4 +1,4 @@
-	db DEX_JYNX ; pokedex id
+	db JYNX ; pokedex id
 
 	db  65,  50,  35,  95,  95
 	;   hp  atk  def  spd  spc

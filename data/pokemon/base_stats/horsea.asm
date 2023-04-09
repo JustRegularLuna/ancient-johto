@@ -1,4 +1,4 @@
-	db DEX_HORSEA ; pokedex id
+	db HORSEA ; pokedex id
 
 	db  30,  40,  70,  60,  70
 	;   hp  atk  def  spd  spc

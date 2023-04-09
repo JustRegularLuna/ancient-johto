@@ -1,4 +1,4 @@
-	db DEX_KRABBY ; pokedex id
+	db KRABBY ; pokedex id
 
 	db  30, 105,  90,  50,  25
 	;   hp  atk  def  spd  spc

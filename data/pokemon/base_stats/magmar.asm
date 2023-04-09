@@ -1,4 +1,4 @@
-	db DEX_MAGMAR ; pokedex id
+	db MAGMAR ; pokedex id
 
 	db  65,  95,  57,  93,  85
 	;   hp  atk  def  spd  spc

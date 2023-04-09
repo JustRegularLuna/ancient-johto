@@ -1,4 +1,4 @@
-	db DEX_BELLSPROUT ; pokedex id
+	db BELLSPROUT ; pokedex id
 
 	db  50,  75,  35,  40,  70
 	;   hp  atk  def  spd  spc

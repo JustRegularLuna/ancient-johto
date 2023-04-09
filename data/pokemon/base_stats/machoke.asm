@@ -1,4 +1,4 @@
-	db DEX_MACHOKE ; pokedex id
+	db MACHOKE ; pokedex id
 
 	db  80, 100,  70,  45,  50
 	;   hp  atk  def  spd  spc

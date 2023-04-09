@@ -1,4 +1,4 @@
-	db DEX_VENOMOTH ; pokedex id
+	db VENOMOTH ; pokedex id
 
 	db  70,  65,  60,  90,  90
 	;   hp  atk  def  spd  spc

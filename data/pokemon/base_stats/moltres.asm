@@ -1,4 +1,4 @@
-	db DEX_MOLTRES ; pokedex id
+	db MOLTRES ; pokedex id
 
 	db  90, 100,  90,  90, 125
 	;   hp  atk  def  spd  spc

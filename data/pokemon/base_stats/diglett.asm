@@ -1,4 +1,4 @@
-	db DEX_DIGLETT ; pokedex id
+	db DIGLETT ; pokedex id
 
 	db  10,  55,  25,  95,  45
 	;   hp  atk  def  spd  spc

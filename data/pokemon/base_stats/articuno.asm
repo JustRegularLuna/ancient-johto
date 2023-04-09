@@ -1,4 +1,4 @@
-	db DEX_ARTICUNO ; pokedex id
+	db ARTICUNO ; pokedex id
 
 	db  90,  85, 100,  85, 125
 	;   hp  atk  def  spd  spc

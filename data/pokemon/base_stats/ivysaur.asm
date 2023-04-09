@@ -1,4 +1,4 @@
-	db DEX_IVYSAUR ; pokedex id
+	db IVYSAUR ; pokedex id
 
 	db  60,  62,  63,  60,  80
 	;   hp  atk  def  spd  spc

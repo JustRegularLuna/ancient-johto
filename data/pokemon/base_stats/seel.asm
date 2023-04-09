@@ -1,4 +1,4 @@
-	db DEX_SEEL ; pokedex id
+	db SEEL ; pokedex id
 
 	db  65,  45,  55,  45,  70
 	;   hp  atk  def  spd  spc

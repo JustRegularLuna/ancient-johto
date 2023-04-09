@@ -1,4 +1,4 @@
-	db DEX_NIDORINA ; pokedex id
+	db NIDORINA ; pokedex id
 
 	db  70,  62,  67,  56,  55
 	;   hp  atk  def  spd  spc

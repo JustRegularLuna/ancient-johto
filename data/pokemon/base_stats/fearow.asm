@@ -1,4 +1,4 @@
-	db DEX_FEAROW ; pokedex id
+	db FEAROW ; pokedex id
 
 	db  65,  90,  65, 100,  61
 	;   hp  atk  def  spd  spc

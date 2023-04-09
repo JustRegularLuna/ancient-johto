@@ -1,4 +1,4 @@
-	db DEX_GENGAR ; pokedex id
+	db GENGAR ; pokedex id
 
 	db  60,  65,  60, 110, 130
 	;   hp  atk  def  spd  spc

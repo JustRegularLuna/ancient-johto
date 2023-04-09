@@ -1,4 +1,4 @@
-	db DEX_MAGNEMITE ; pokedex id
+	db MAGNEMITE ; pokedex id
 
 	db  25,  35,  70,  45,  95
 	;   hp  atk  def  spd  spc

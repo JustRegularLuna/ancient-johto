@@ -1,4 +1,4 @@
-	db DEX_MEW ; pokedex id
+	db MEW ; pokedex id
 
 	db 100, 100, 100, 100, 100
 	;   hp  atk  def  spd  spc

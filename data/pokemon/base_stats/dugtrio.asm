@@ -1,4 +1,4 @@
-	db DEX_DUGTRIO ; pokedex id
+	db DUGTRIO ; pokedex id
 
 	db  35,  80,  50, 120,  70
 	;   hp  atk  def  spd  spc

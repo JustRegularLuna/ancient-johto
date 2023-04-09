@@ -54,9 +54,9 @@ _GivePokemon::
 SetPokedexOwnedFlag:
 	ld a, [wcf91]
 	push af
-	ld [wd11e], a
-	predef IndexToPokedex
-	ld a, [wd11e]
+	;ld [wd11e], a
+	;predef IndexToPokedex
+	;ld a, [wd11e]
 	dec a
 	ld c, a
 	ld hl, wPokedexOwned

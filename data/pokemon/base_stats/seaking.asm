@@ -1,4 +1,4 @@
-	db DEX_SEAKING ; pokedex id
+	db SEAKING ; pokedex id
 
 	db  80,  92,  65,  68,  80
 	;   hp  atk  def  spd  spc

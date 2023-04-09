@@ -1,4 +1,4 @@
-	db DEX_CLEFABLE ; pokedex id
+	db CLEFABLE ; pokedex id
 
 	db  95,  70,  73,  60,  85
 	;   hp  atk  def  spd  spc

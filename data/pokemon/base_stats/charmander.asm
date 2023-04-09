@@ -1,4 +1,4 @@
-	db DEX_CHARMANDER ; pokedex id
+	db CHARMANDER ; pokedex id
 
 	db  39,  52,  43,  65,  50
 	;   hp  atk  def  spd  spc

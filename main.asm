@@ -5,7 +5,6 @@ SECTION "bank1", ROMX
 
 INCLUDE "data/sprites/facings.asm"
 INCLUDE "engine/events/black_out.asm"
-INCLUDE "data/pokemon/mew.asm"
 INCLUDE "engine/battle/safari_zone.asm"
 INCLUDE "engine/movie/title.asm"
 INCLUDE "engine/pokemon/load_mon_data.asm"
@@ -241,11 +240,11 @@ EnemyHealthBarUpdated:
 	jr  nz, .noBattle
 	push hl
 	ld a, [wEnemyMonSpecies2]
-	ld [wd11e], a
-	ld hl, IndexToPokedex
-	ld b, BANK(IndexToPokedex)
-	call Bankswitch
-	ld a, [wd11e]
+	;ld [wd11e], a
+	;ld hl, IndexToPokedex
+	;ld b, BANK(IndexToPokedex)
+	;call Bankswitch
+	;ld a, [wd11e]
 	dec a
 	ld c, a
 	ld b, $2

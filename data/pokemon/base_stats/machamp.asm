@@ -1,4 +1,4 @@
-	db DEX_MACHAMP ; pokedex id
+	db MACHAMP ; pokedex id
 
 	db  90, 130,  80,  55,  65
 	;   hp  atk  def  spd  spc

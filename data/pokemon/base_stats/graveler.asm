@@ -1,4 +1,4 @@
-	db DEX_GRAVELER ; pokedex id
+	db GRAVELER ; pokedex id
 
 	db  55,  95, 115,  35,  45
 	;   hp  atk  def  spd  spc

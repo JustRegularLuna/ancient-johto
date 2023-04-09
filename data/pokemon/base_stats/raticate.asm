@@ -1,4 +1,4 @@
-	db DEX_RATICATE ; pokedex id
+	db RATICATE ; pokedex id
 
 	db  55,  81,  60,  97,  50
 	;   hp  atk  def  spd  spc

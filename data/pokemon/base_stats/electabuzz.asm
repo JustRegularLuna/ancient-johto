@@ -1,4 +1,4 @@
-	db DEX_ELECTABUZZ ; pokedex id
+	db ELECTABUZZ ; pokedex id
 
 	db  65,  83,  57, 105,  85
 	;   hp  atk  def  spd  spc

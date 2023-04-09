@@ -1,4 +1,4 @@
-	db DEX_MANKEY ; pokedex id
+	db MANKEY ; pokedex id
 
 	db  40,  80,  35,  70,  35
 	;   hp  atk  def  spd  spc

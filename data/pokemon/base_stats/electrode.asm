@@ -1,4 +1,4 @@
-	db DEX_ELECTRODE ; pokedex id
+	db ELECTRODE ; pokedex id
 
 	db  60,  50,  70, 140,  80
 	;   hp  atk  def  spd  spc

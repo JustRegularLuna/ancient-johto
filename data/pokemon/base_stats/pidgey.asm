@@ -1,4 +1,4 @@
-	db DEX_PIDGEY ; pokedex id
+	db PIDGEY ; pokedex id
 
 	db  40,  45,  40,  56,  35
 	;   hp  atk  def  spd  spc

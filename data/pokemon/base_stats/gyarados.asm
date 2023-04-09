@@ -1,4 +1,4 @@
-	db DEX_GYARADOS ; pokedex id
+	db GYARADOS ; pokedex id
 
 	db  95, 125,  79,  81, 100
 	;   hp  atk  def  spd  spc

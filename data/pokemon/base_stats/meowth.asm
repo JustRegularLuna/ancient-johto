@@ -1,4 +1,4 @@
-	db DEX_MEOWTH ; pokedex id
+	db MEOWTH ; pokedex id
 
 	db  40,  45,  35,  90,  40
 	;   hp  atk  def  spd  spc

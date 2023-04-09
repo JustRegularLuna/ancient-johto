@@ -1,4 +1,4 @@
-	db DEX_GOLEM ; pokedex id
+	db GOLEM ; pokedex id
 
 	db  80, 110, 130,  45,  55
 	;   hp  atk  def  spd  spc

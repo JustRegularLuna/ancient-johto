@@ -1,4 +1,4 @@
-	db DEX_PINSIR ; pokedex id
+	db PINSIR ; pokedex id
 
 	db  65, 125, 100,  85,  55
 	;   hp  atk  def  spd  spc

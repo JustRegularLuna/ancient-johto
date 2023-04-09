@@ -3,9 +3,9 @@
 ; INPUTS - Mon DVs in de, species in wd11e
 ; OUTPUT - Mon's gender in wd11e
 GetMonGender::
-	push de
-	predef IndexToPokedex
-	pop de
+	;push de
+	;predef IndexToPokedex
+	;pop de
 	ld a, [wd11e]
 	dec a
 	ld c, a

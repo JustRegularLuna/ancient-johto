@@ -1,4 +1,4 @@
-	db DEX_GEODUDE ; pokedex id
+	db GEODUDE ; pokedex id
 
 	db  40,  80, 100,  20,  30
 	;   hp  atk  def  spd  spc

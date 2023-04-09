@@ -1,4 +1,4 @@
-	db DEX_PONYTA ; pokedex id
+	db PONYTA ; pokedex id
 
 	db  50,  85,  55,  90,  65
 	;   hp  atk  def  spd  spc

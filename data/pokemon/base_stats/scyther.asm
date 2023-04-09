@@ -1,4 +1,4 @@
-	db DEX_SCYTHER ; pokedex id
+	db SCYTHER ; pokedex id
 
 	db  70, 110,  80, 105,  55
 	;   hp  atk  def  spd  spc

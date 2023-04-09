@@ -1,4 +1,4 @@
-	db DEX_VENUSAUR ; pokedex id
+	db VENUSAUR ; pokedex id
 
 	db  80,  82,  83,  80, 100
 	;   hp  atk  def  spd  spc

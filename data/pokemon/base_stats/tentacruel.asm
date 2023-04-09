@@ -1,4 +1,4 @@
-	db DEX_TENTACRUEL ; pokedex id
+	db TENTACRUEL ; pokedex id
 
 	db  80,  70,  65, 100, 120
 	;   hp  atk  def  spd  spc

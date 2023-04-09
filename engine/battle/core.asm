@@ -6239,9 +6239,9 @@ LoadEnemyMonData:
 	ld bc, NAME_LENGTH
 	call CopyData
 	ld a, [wEnemyMonSpecies2]
-	ld [wd11e], a
-	predef IndexToPokedex
-	ld a, [wd11e]
+	;ld [wd11e], a
+	;predef IndexToPokedex
+	;ld a, [wd11e]
 	dec a
 	ld c, a
 	ld b, FLAG_SET

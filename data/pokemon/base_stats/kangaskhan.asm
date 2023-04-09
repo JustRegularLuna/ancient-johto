@@ -1,4 +1,4 @@
-	db DEX_KANGASKHAN ; pokedex id
+	db KANGASKHAN ; pokedex id
 
 	db 105,  95,  80,  90,  40
 	;   hp  atk  def  spd  spc

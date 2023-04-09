@@ -1,4 +1,4 @@
-	db DEX_MR_MIME ; pokedex id
+	db MR_MIME ; pokedex id
 
 	db  40,  45,  65,  90, 100
 	;   hp  atk  def  spd  spc

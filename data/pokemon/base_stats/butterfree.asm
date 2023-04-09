@@ -1,4 +1,4 @@
-	db DEX_BUTTERFREE ; pokedex id
+	db BUTTERFREE ; pokedex id
 
 	db  60,  45,  50,  70,  80
 	;   hp  atk  def  spd  spc

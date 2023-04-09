@@ -1,4 +1,4 @@
-	db DEX_KABUTO ; pokedex id
+	db KABUTO ; pokedex id
 
 	db  30,  80,  90,  55,  45
 	;   hp  atk  def  spd  spc

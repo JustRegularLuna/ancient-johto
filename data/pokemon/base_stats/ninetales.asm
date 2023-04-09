@@ -1,4 +1,4 @@
-	db DEX_NINETALES ; pokedex id
+	db NINETALES ; pokedex id
 
 	db  73,  76,  75, 100, 100
 	;   hp  atk  def  spd  spc

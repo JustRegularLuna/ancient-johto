@@ -1,4 +1,4 @@
-	db DEX_ZUBAT ; pokedex id
+	db ZUBAT ; pokedex id
 
 	db  40,  45,  35,  55,  40
 	;   hp  atk  def  spd  spc
