@@ -3,6 +3,9 @@
 	; NPCs
 	const PLAYERSHOUSE_MOM
 	; Signs
+	const PLAYERSHOUSE_STOVE
+	const PLAYERSHOUSE_SINK
+	const PLAYERSHOUSE_FRIDGE
 	const PLAYERSHOUSE_TV
 
 PlayersHouse1F_Object:
@@ -10,14 +13,17 @@ PlayersHouse1F_Object:
 
 	def_warps
 	warp  9,  0, 0, PLAYERS_HOUSE_2F
-	warp 6, 7, 0, LAST_MAP
-	warp 7, 7, 0, LAST_MAP
+	warp  6,  7, 0, LAST_MAP
+	warp  7,  7, 0, LAST_MAP
 
 	def_signs
-	sign  4,  1, PLAYERSHOUSE_TV ; TV
+	sign  0,  1, PLAYERSHOUSE_STOVE
+	sign  1,  1, PLAYERSHOUSE_SINK
+	sign  2,  1, PLAYERSHOUSE_FRIDGE
+	sign  4,  1, PLAYERSHOUSE_TV
 
 	def_objects
-	object SPRITE_MOM,  7,  4, STAY, LEFT, PLAYERSHOUSE_MOM ; Mom
+	object SPRITE_MOM,  7,  4, STAY, LEFT, PLAYERSHOUSE_MOM
 
 	def_warps_to PLAYERS_HOUSE_1F
 
@@ -27,12 +33,15 @@ PlayersHouse1F_Script:
 
 PlayersHouse1F_TextPointers:
 	dw PlayersHouse1FMomText
+	dw PlayersHouse1FStoveText
+	dw PlayersHouse1FSinkText
+	dw PlayersHouse1FFridgeText
 	dw PlayersHouse1FTVText
 
 PlayersHouse1FMomText:
 	text_asm
-	ld a, [wd72e]
-	bit 3, a ; received a Pokémon from Oak?
+	ld a, [wPartyCount]
+	and a ; Does the player have a Pokémon?
 	jr nz, .heal
 	ld hl, PlayersHouseMomWakeUpText
 	call PrintText
@@ -57,26 +66,23 @@ PlayersHouseMomHealPokemon:
 	call ReloadMapData
 	predef HealParty
 	ld a, MUSIC_PKMN_HEALED
-;	ld [wNewSoundID], a
 	call PlayMusic
-
 	call WaitForSongToFinish
-;.next
-;	ld a, [wChannelSoundIDs]
-;	cp MUSIC_PKMN_HEALED
-;	jr z, .next
-
 	ld a, [wMapMusicSoundID]
-;	ld [wNewSoundID], a
 	call PlayMusic
 	call GBFadeInFromWhite
 	ld hl, PlayersHouseMomHealText2
 	jp PrintText
 
 PlayersHouseMomHealText1:
-	text "MOM: <PLAYER>!"
-	line "You should take a"
-	cont "quick rest."
+	text "MOM: PROF. ELM"
+	line "tells me you're"
+	cont "going on a long"
+	cont "trip…"
+
+	para "You should take a"
+	line "quick rest while"
+	cont "you're at home."
 	prompt
 
 PlayersHouseMomHealText2:
@@ -84,7 +90,31 @@ PlayersHouseMomHealText2:
 	line "You and your"
 	cont "#MON are"
 	cont "looking great!"
-	cont "Take care now!"
+
+	para "Take care now,"
+	line "and remember to"
+	cont "come back and"
+	cont "visit me."
+	done
+
+PlayersHouse1FStoveText:
+	text "Someone has been"
+	line "cooking here…"
+
+	para "It smells yummy!"
+	done
+
+PlayersHouse1FSinkText:
+	text "The sink is shiny"
+	line "and clean."
+	done
+
+PlayersHouse1FFridgeText:
+	text "Let's see what's"
+	line "in the fridge…"
+
+	para "SODA POP and fresh"
+	line "LEMONADE!"
 	done
 
 PlayersHouse1FTVText:
@@ -98,15 +128,21 @@ PlayersHouse1FTVText:
 	call PrintText
 	jp TextScriptEnd
 
-PlayersHouseMovieText:
+PlayersHouseMovieText: ; Back to the Future
 	text "There's a movie on"
-	line "TV: Stars dot the"
+	line "TV: A modified"
 
-	para "sky as two boys"
-	line "ride on a train…"
+	para "sports car races"
+	line "down an empty"
+
+	para "city street, and"
+	line "vanishes in a"
+
+	para "blinding flash of"
+	line "light…"
 
 	para "I'd better get"
-	line "rolling too!"
+	line "going too!"
 	done
 
 PlayersHouseTVWrongSideText:

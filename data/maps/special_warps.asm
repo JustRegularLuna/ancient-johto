@@ -51,7 +51,7 @@ MACRO special_warp_spec
 ENDM
 
 JohtoFirstMapSpec:
-	special_warp_spec PLAYERS_HOUSE_2F, 3, 3, PLAYERS_ROOM
+	special_warp_spec PLAYERS_HOUSE_2F, 4, 3, PLAYERS_ROOM
 FirstMapSpec:
 	special_warp_spec REDS_HOUSE_2F, 3, 6, PLAYERS_HOUSE
 TradeCenterSpec1:

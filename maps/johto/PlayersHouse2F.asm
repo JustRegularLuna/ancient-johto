@@ -32,25 +32,29 @@ PlayersHouse2F_ScriptPointers:
 	dw PlayersHouse2FScript1
 
 PlayersHouse2FScript0:
+; turn to face your N64
+	xor a
+	ldh [hJoyHeld], a
+	ld a, PLAYER_DIR_UP
+	ld [wPlayerMovingDirection], a
+
 ; debug event to silently add an eevee to your party
-	ld a,$80
-	ld [wMonDataLocation],a
+	ld a, $80 ; prevent the player from naming the mon
+	ld [wMonDataLocation], a
 	ld a, EEVEE
 	ld [wcf91], a
 	ld a, 10
 	ld [wCurEnemyLVL], a
 	call AddPartyMon
-
 	ld de, wPartyMonNicks
 	ld hl, EeveesName
-	ld bc, $b
+	ld bc, NAME_LENGTH
 	call CopyData
 
 ; move on to next script
 	ld a, 1
 	ld [wPlayersHouse2FCurScript], a
-	ret
-
+	; fallthrough
 PlayersHouse2FScript1:
 	ret
 
