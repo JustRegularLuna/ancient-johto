@@ -740,3 +740,8 @@ INCLUDE "engine/overworld/fruit_trees.asm"
 SECTION "Map Header Pointers", ROMX
 
 INCLUDE "data/maps/map_header_pointers.asm"
+
+
+SECTION "Tileset Animations", ROMX
+
+INCLUDE "engine/gfx/tileset_anim.asm"
