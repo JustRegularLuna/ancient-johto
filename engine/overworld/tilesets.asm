@@ -25,7 +25,7 @@ LoadTilesetHeader:
 	ld a, [hl]
 	ldh [hTileAnimations], a
 	xor a
-	ldh [hMovingBGTilesCounter1], a
+	ldh [hTileAnimFrame], a
 	pop hl
 	ld a, [wCurMapTileset]
 	push hl

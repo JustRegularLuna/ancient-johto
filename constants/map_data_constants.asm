@@ -12,5 +12,4 @@ MAP_BORDER EQU 3
 ; flower and water tile animations
 	const_def
 	const TILEANIM_NONE          ; 0
-	const TILEANIM_WATER         ; 1
-	const TILEANIM_WATER_FLOWER  ; 2
+	const TILEANIM_LIST          ; 1

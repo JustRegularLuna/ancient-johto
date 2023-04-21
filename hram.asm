@@ -277,13 +277,12 @@ hFrameCounter:: db ; decremented every V-blank (used for delays)
 ; you can detect that the V-blank handler has run since then.
 hVBlankOccurred:: db
 
-; Controls which tiles are animated.
+; Controls tile animations being loaded.
 ; 0 = no animations (breaks Surf)
-; 1 = water tile $14 is animated
-; 2 = water tile $14 and flower tile $03 are animated
+; 1 = has animations
 hTileAnimations:: db
 
-hMovingBGTilesCounter1:: db
+hTileAnimFrame:: db
 
 	ds 1
 

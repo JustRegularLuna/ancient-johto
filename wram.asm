@@ -1730,8 +1730,11 @@ wFBTileCounter::
 ; counts how many tiles of the current frame block have been drawn
 	ds 1
 
-wMovingBGTilesCounter2::
+wTileAnimationTimer::
 	ds 1
+
+wTileAnimBuffer::
+	ds 1 tiles
 
 wSubAnimFrameDelay::
 ; duration of each frame of the current subanimation in terms of screen refreshes
@@ -2648,8 +2651,6 @@ wWalkBikeSurfState::
 ; $01 = biking
 ; $02 = surfing
 	ds 1
-
-	ds 10
 
 wTownVisitedFlag::
 	flag_array NUM_CITY_MAPS
