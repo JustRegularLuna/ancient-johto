@@ -1,6 +1,6 @@
 	db EKANS ; pokedex id
 
-	db  35,  60,  44,  55,  40
+	db  35,  60,  44,  55,  54
 	;   hp  atk  def  spd  spc
 
 	db POISON, POISON ; type

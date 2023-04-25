@@ -1,6 +1,6 @@
 	db GOLDUCK ; pokedex id
 
-	db  80,  82,  78,  85,  80
+	db  80,  82,  78,  85,  95
 	;   hp  atk  def  spd  spc
 
 	db WATER, WATER ; type

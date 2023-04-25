@@ -1,6 +1,6 @@
 	db MANKEY ; pokedex id
 
-	db  40,  80,  35,  70,  35
+	db  40,  80,  35,  70,  45
 	;   hp  atk  def  spd  spc
 
 	db FIGHTING, FIGHTING ; type

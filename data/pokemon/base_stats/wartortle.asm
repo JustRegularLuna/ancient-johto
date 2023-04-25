@@ -1,6 +1,6 @@
 	db WARTORTLE ; pokedex id
 
-	db  59,  63,  80,  58,  65
+	db  59,  63,  80,  58,  80
 	;   hp  atk  def  spd  spc
 
 	db WATER, WATER ; type

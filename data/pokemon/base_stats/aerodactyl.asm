@@ -1,6 +1,6 @@
 	db AERODACTYL ; pokedex id
 
-	db  80, 105,  65, 130,  60
+	db  80, 105,  65, 130,  75
 	;   hp  atk  def  spd  spc
 
 	db ROCK, FLYING ; type
