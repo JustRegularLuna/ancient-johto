@@ -17,6 +17,7 @@ UseItem_::
 
 ItemUsePtrTable:
 ; entries correspond to item ids
+	table_width 2, ItemUsePtrTable
 	dw ItemUseBall       ; MASTER_BALL
 	dw ItemUseBall       ; ULTRA_BALL
 	dw ItemUseBall       ; GREAT_BALL
@@ -117,6 +118,7 @@ ItemUsePtrTable:
 	dw UnusableItem      ; PNK_APRICORN
 	dw UnusableItem      ; WHT_APRICORN
 	dw UnusableItem      ; BLK_APRICORN
+	assert_table_length NUM_ITEMS
 
 ItemUseBall:
 
