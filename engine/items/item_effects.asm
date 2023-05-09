@@ -26,7 +26,7 @@ ItemUsePtrTable:
 	dw ItemUseBicycle    ; BICYCLE
 	dw ItemUseSurfboard  ; out-of-battle Surf effect
 	dw ItemUseBall       ; SAFARI_BALL
-	dw ItemUsePokedex    ; POKEDEX
+	dw ItemUseEvoStone   ; LINK_CABLE
 	dw ItemUseEvoStone   ; MOON_STONE
 	dw ItemUseMedicine   ; ANTIDOTE
 	dw ItemUseMedicine   ; BURN_HEAL
@@ -38,14 +38,14 @@ ItemUsePtrTable:
 	dw ItemUseMedicine   ; HYPER_POTION
 	dw ItemUseMedicine   ; SUPER_POTION
 	dw ItemUseMedicine   ; POTION
-	dw ItemUseBait       ; BOULDERBADGE
-	dw ItemUseRock       ; CASCADEBADGE
-	dw UnusableItem      ; THUNDERBADGE
-	dw UnusableItem      ; RAINBOWBADGE
-	dw UnusableItem      ; SOULBADGE
-	dw UnusableItem      ; MARSHBADGE
-	dw UnusableItem      ; VOLCANOBADGE
-	dw UnusableItem      ; EARTHBADGE
+	dw ItemUseBait       ; SAFARI_BAIT
+	dw ItemUseRock       ; SAFARI_ROCK
+	dw ItemUseEvoStone   ; SUN_STONE
+	dw ItemUseEvoStone   ; DRAGON_SCALE
+	dw ItemUseEvoStone   ; UP_GRADE
+	dw ItemUseEvoStone   ; KINGS_ROCK
+	dw ItemUseEvoStone   ; METAL_COAT
+	dw ItemUseEvoStone   ; HAPPY_CHARM
 	dw ItemUseEscapeRope ; ESCAPE_ROPE
 	dw ItemUseRepel      ; REPEL
 	dw UnusableItem      ; OLD_AMBER

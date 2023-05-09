@@ -15,7 +15,7 @@
 	const BICYCLE       ; $06
 	const SURFBOARD     ; $07 buggy?
 	const SAFARI_BALL   ; $08
-	const POKEDEX       ; $09
+	const LINK_CABLE    ; $09
 	const MOON_STONE    ; $0A
 	const ANTIDOTE      ; $0B
 	const BURN_HEAL     ; $0C
@@ -27,16 +27,14 @@
 	const HYPER_POTION  ; $12
 	const SUPER_POTION  ; $13
 	const POTION        ; $14
-	const BOULDERBADGE  ; $15
-	const CASCADEBADGE  ; $16
-SAFARI_BAIT           EQU $15 ; overload
-SAFARI_ROCK           EQU $16 ; overload
-	const THUNDERBADGE  ; $17
-	const RAINBOWBADGE  ; $18
-	const SOULBADGE     ; $19
-	const MARSHBADGE    ; $1A
-	const VOLCANOBADGE  ; $1B
-	const EARTHBADGE    ; $1C
+	const SAFARI_BAIT   ; $15
+	const SAFARI_ROCK   ; $16
+	const SUN_STONE     ; $17
+	const DRAGON_SCALE  ; $18
+	const UP_GRADE      ; $19
+	const KINGS_ROCK    ; $1A
+	const METAL_COAT    ; $1B
+	const HAPPY_CHARM   ; $1C
 	const ESCAPE_ROPE   ; $1D
 	const REPEL         ; $1E
 	const OLD_AMBER     ; $1F

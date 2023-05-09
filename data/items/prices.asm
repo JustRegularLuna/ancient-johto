@@ -8,8 +8,8 @@ ItemPrices::
 	money 0     ; BICYCLE
 	money 0     ; SURFBOARD
 	money 1000  ; SAFARI_BALL
-	money 0     ; POKEDEX
-	money 0     ; MOON_STONE
+	money 2100  ; LINK_CABLE
+	money 2100  ; MOON_STONE
 	money 100   ; ANTIDOTE
 	money 250   ; BURN_HEAL
 	money 250   ; ICE_HEAL
@@ -20,14 +20,14 @@ ItemPrices::
 	money 1500  ; HYPER_POTION
 	money 700   ; SUPER_POTION
 	money 300   ; POTION
-	money 0     ; BOULDERBADGE
-	money 0     ; CASCADEBADGE
-	money 0     ; THUNDERBADGE
-	money 0     ; RAINBOWBADGE
-	money 0     ; SOULBADGE
-	money 0     ; MARSHBADGE
-	money 0     ; VOLCANOBADGE
-	money 0     ; EARTHBADGE
+	money 0     ; SAFARI_BAIT
+	money 0     ; SAFARI_ROCK
+	money 2100  ; SUN_STONE
+	money 2100  ; DRAGON_SCALE
+	money 2100  ; UP_GRADE
+	money 2100  ; KINGS_ROCK
+	money 2100  ; METAL_COAT
+	money 2100  ; HAPPY_CHARM
 	money 550   ; ESCAPE_ROPE
 	money 350   ; REPEL
 	money 0     ; OLD_AMBER

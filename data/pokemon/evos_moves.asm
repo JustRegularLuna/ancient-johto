@@ -512,7 +512,7 @@ AbraEvosAttacks:
 	db 0 ; no more level-up moves
 
 KadabraEvosAttacks:
-	db EV_TRADE, 1, ALAKAZAM
+	db EV_ITEM, LINK_CABLE, 1, ALAKAZAM
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 0 ; no more level-up moves
@@ -529,7 +529,7 @@ MachopEvosAttacks:
 	db 0 ; no more level-up moves
 
 MachokeEvosAttacks:
-	db EV_TRADE, 1, MACHAMP
+	db EV_ITEM, LINK_CABLE, 1, MACHAMP
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 0 ; no more level-up moves
@@ -574,7 +574,7 @@ GeodudeEvosAttacks:
 	db 0 ; no more level-up moves
 
 GravelerEvosAttacks:
-	db EV_TRADE, 1, GOLEM
+	db EV_ITEM, LINK_CABLE, 1, GOLEM
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 0 ; no more level-up moves
@@ -674,7 +674,7 @@ GastlyEvosAttacks:
 	db 0 ; no more level-up moves
 
 HaunterEvosAttacks:
-	db EV_TRADE, 1, GENGAR
+	db EV_ITEM, LINK_CABLE, 1, GENGAR
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 0 ; no more level-up moves
