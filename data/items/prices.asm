@@ -4,25 +4,14 @@ ItemPrices::
 	money 1200  ; ULTRA_BALL
 	money 600   ; GREAT_BALL
 	money 200   ; POKE_BALL
-	money 0     ; TOWN_MAP
-	money 0     ; BICYCLE
-	money 0     ; SURFBOARD
-	money 1000  ; SAFARI_BALL
+	money 0     ; SAFARI_BALL
 	money 2100  ; LINK_CABLE
 	money 2100  ; MOON_STONE
-	money 100   ; ANTIDOTE
-	money 250   ; BURN_HEAL
-	money 250   ; ICE_HEAL
-	money 200   ; AWAKENING
-	money 200   ; PARLYZ_HEAL
-	money 3000  ; FULL_RESTORE
-	money 2500  ; MAX_POTION
-	money 1500  ; HYPER_POTION
-	money 700   ; SUPER_POTION
-	money 300   ; POTION
-	money 0     ; SAFARI_BAIT
-	money 0     ; SAFARI_ROCK
 	money 2100  ; SUN_STONE
+	money 2100  ; FIRE_STONE
+	money 2100  ; THUNDER_STONE
+	money 2100  ; WATER_STONE
+	money 2100  ; LEAF_STONE
 	money 2100  ; DRAGON_SCALE
 	money 2100  ; UP_GRADE
 	money 2100  ; KINGS_ROCK
@@ -30,59 +19,54 @@ ItemPrices::
 	money 2100  ; HAPPY_CHARM
 	money 550   ; ESCAPE_ROPE
 	money 350   ; REPEL
-	money 0     ; OLD_AMBER
-	money 2100  ; FIRE_STONE
-	money 2100  ; THUNDER_STONE
-	money 2100  ; WATER_STONE
+	money 500   ; SUPER_REPEL
+	money 700   ; MAX_REPEL
+	money 1000  ; OLD_AMBER
+	money 1000  ; DOME_FOSSIL
+	money 1000  ; HELIX_FOSSIL
+	money 10000 ; NUGGET
+	money 30000 ; BIG_NUGGET
+	money 1400  ; PEARL
+	money 7500  ; BIG_PEARL
+	money 2000  ; STARDUST
+	money 9800  ; STAR_PIECE
+	money 1000  ; POKE_DOLL
+	money 100   ; ANTIDOTE
+	money 250   ; BURN_HEAL
+	money 250   ; ICE_HEAL
+	money 200   ; AWAKENING
+	money 200   ; PARLYZ_HEAL
+	money 600   ; FULL_HEAL
+	money 3000  ; FULL_RESTORE
+	money 1500  ; REVIVE
+	money 4000  ; MAX_REVIVE
+	money 2500  ; MAX_POTION
+	money 1500  ; HYPER_POTION
+	money 700   ; SUPER_POTION
+	money 300   ; POTION
 	money 9800  ; HP_UP
 	money 9800  ; PROTEIN
 	money 9800  ; IRON
-	money 9800  ; CARBOS
+	money 9800  ; CARBOS 
 	money 9800  ; CALCIUM
 	money 4800  ; RARE_CANDY
-	money 0     ; DOME_FOSSIL
-	money 0     ; HELIX_FOSSIL
-	money 0     ; SECRET_KEY
-	money 0     ; XXX
-	money 0     ; BIKE_VOUCHER
-	money 950   ; X_ACCURACY
-	money 2100  ; LEAF_STONE
-	money 0     ; CARD_KEY
-	money 10000 ; NUGGET
-	money 9800  ; XXX PP_UP
-	money 1000  ; POKE_DOLL
-	money 600   ; FULL_HEAL
-	money 1500  ; REVIVE
-	money 4000  ; MAX_REVIVE
 	money 700   ; GUARD_SPEC
-	money 500   ; SUPER_REPEL
-	money 700   ; MAX_REPEL
 	money 650   ; DIRE_HIT
-	money 10    ; COIN
-	money 200   ; FRESH_WATER
-	money 300   ; SODA_POP
-	money 350   ; LEMONADE
-	money 0     ; S_S_TICKET
-	money 0     ; GOLD_TEETH
+	money 950   ; X_ACCURACY
 	money 500   ; X_ATTACK
 	money 550   ; X_DEFEND
 	money 350   ; X_SPEED
 	money 350   ; X_SPECIAL
-	money 0     ; COIN_CASE
-	money 0     ; OAKS_PARCEL
-	money 0     ; ITEMFINDER
-	money 0     ; SILPH_SCOPE
-	money 0     ; POKE_FLUTE
-	money 0     ; LIFT_KEY
-	money 0     ; EXP_ALL
-	money 0     ; OLD_ROD
-	money 0     ; GOOD_ROD
-	money 0     ; SUPER_ROD
-	money 0     ; PP_UP
-	money 0     ; ETHER
-	money 0     ; MAX_ETHER
-	money 0     ; ELIXER
-	money 0     ; MAX_ELIXER
+	money 9800  ; PP_UP
+	money 1200  ; ETHER
+	money 2000  ; MAX_ETHER
+	money 3000  ; ELIXER
+	money 4500  ; MAX_ELIXER
+	money 200   ; FRESH_WATER
+	money 300   ; SODA_POP
+	money 350   ; LEMONADE
+	money 500   ; MOOMOO_MILK
+	money 300   ; CAKE_OF_RAGE
 	money 10    ; BERRY
 	money 10    ; GOLD_BERRY
 	money 10    ; MYSTERYBERRY
@@ -100,6 +84,33 @@ ItemPrices::
 	money 10    ; PNK_APRICORN
 	money 10    ; WHT_APRICORN
 	money 10    ; BLK_APRICORN
+	money 0     ; TOWN_MAP
+	money 0     ; BICYCLE
+	money 0     ; PASS
+	money 0     ; SQUIRTBOTTLE
+	money 0     ; CARD_KEY
+	money 0     ; S_S_TICKET
+	money 0     ; LOST_ITEM
+	money 0     ; COIN_CASE
+	money 0     ; MYSTERY_EGG
+	money 0     ; ITEMFINDER
+	money 0     ; SILPH_SCOPE
+	money 0     ; POKE_FLUTE
+	money 0     ; BASEMENT_KEY
+	money 0     ; EXP_ALL
+	money 0     ; OLD_ROD
+	money 0     ; GOOD_ROD
+	money 0     ; SUPER_ROD
+	money 0     ; MACHINE_PART
+	money 0     ; SECRETPOTION
+	money 0     ; RED_SCALE
+	money 0     ; SILVER_WING
+	money 0     ; RAINBOW_WING
+	money 0     ; GS_BALL
+	money 0     ; SURFBOARD
+	money 0     ; SAFARI_BAIT
+	money 0     ; SAFARI_ROCK
+	money 0     ; COIN
 	assert_table_length NUM_ITEMS
 	money 0     ; FLOOR_B2F
 	money 0     ; FLOOR_B1F

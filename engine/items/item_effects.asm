@@ -22,25 +22,14 @@ ItemUsePtrTable:
 	dw ItemUseBall       ; ULTRA_BALL
 	dw ItemUseBall       ; GREAT_BALL
 	dw ItemUseBall       ; POKE_BALL
-	dw ItemUseTownMap    ; TOWN_MAP
-	dw ItemUseBicycle    ; BICYCLE
-	dw ItemUseSurfboard  ; out-of-battle Surf effect
 	dw ItemUseBall       ; SAFARI_BALL
 	dw ItemUseEvoStone   ; LINK_CABLE
 	dw ItemUseEvoStone   ; MOON_STONE
-	dw ItemUseMedicine   ; ANTIDOTE
-	dw ItemUseMedicine   ; BURN_HEAL
-	dw ItemUseMedicine   ; ICE_HEAL
-	dw ItemUseMedicine   ; AWAKENING
-	dw ItemUseMedicine   ; PARLYZ_HEAL
-	dw ItemUseMedicine   ; FULL_RESTORE
-	dw ItemUseMedicine   ; MAX_POTION
-	dw ItemUseMedicine   ; HYPER_POTION
-	dw ItemUseMedicine   ; SUPER_POTION
-	dw ItemUseMedicine   ; POTION
-	dw ItemUseBait       ; SAFARI_BAIT
-	dw ItemUseRock       ; SAFARI_ROCK
 	dw ItemUseEvoStone   ; SUN_STONE
+	dw ItemUseEvoStone   ; FIRE_STONE
+	dw ItemUseEvoStone   ; THUNDER_STONE
+	dw ItemUseEvoStone   ; WATER_STONE
+	dw ItemUseEvoStone   ; LEAF_STONE
 	dw ItemUseEvoStone   ; DRAGON_SCALE
 	dw ItemUseEvoStone   ; UP_GRADE
 	dw ItemUseEvoStone   ; KINGS_ROCK
@@ -48,59 +37,54 @@ ItemUsePtrTable:
 	dw ItemUseEvoStone   ; HAPPY_CHARM
 	dw ItemUseEscapeRope ; ESCAPE_ROPE
 	dw ItemUseRepel      ; REPEL
+	dw ItemUseSuperRepel ; SUPER_REPEL
+	dw ItemUseMaxRepel   ; MAX_REPEL
 	dw UnusableItem      ; OLD_AMBER
-	dw ItemUseEvoStone   ; FIRE_STONE
-	dw ItemUseEvoStone   ; THUNDER_STONE
-	dw ItemUseEvoStone   ; WATER_STONE
+	dw UnusableItem      ; DOME_FOSSIL
+	dw UnusableItem      ; HELIX_FOSSIL
+	dw UnusableItem      ; NUGGET
+	dw UnusableItem      ; BIG_NUGGET
+	dw UnusableItem      ; PEARL
+	dw UnusableItem      ; BIG_PEARL
+	dw UnusableItem      ; STARDUST
+	dw UnusableItem      ; STAR_PIECE
+	dw ItemUsePokedoll   ; POKE_DOLL
+	dw ItemUseMedicine   ; ANTIDOTE
+	dw ItemUseMedicine   ; BURN_HEAL
+	dw ItemUseMedicine   ; ICE_HEAL
+	dw ItemUseMedicine   ; AWAKENING
+	dw ItemUseMedicine   ; PARLYZ_HEAL
+	dw ItemUseMedicine   ; FULL_HEAL
+	dw ItemUseMedicine   ; FULL_RESTORE
+	dw ItemUseMedicine   ; REVIVE
+	dw ItemUseMedicine   ; MAX_REVIVE
+	dw ItemUseMedicine   ; MAX_POTION
+	dw ItemUseMedicine   ; HYPER_POTION
+	dw ItemUseMedicine   ; SUPER_POTION
+	dw ItemUseMedicine   ; POTION
 	dw ItemUseVitamin    ; HP_UP
 	dw ItemUseVitamin    ; PROTEIN
 	dw ItemUseVitamin    ; IRON
-	dw ItemUseVitamin    ; CARBOS
+	dw ItemUseVitamin    ; CARBOS 
 	dw ItemUseVitamin    ; CALCIUM
 	dw ItemUseVitamin    ; RARE_CANDY
-	dw UnusableItem      ; DOME_FOSSIL
-	dw UnusableItem      ; HELIX_FOSSIL
-	dw UnusableItem      ; SECRET_KEY
-	dw UnusableItem
-	dw UnusableItem      ; BIKE_VOUCHER
-	dw ItemUseXAccuracy  ; X_ACCURACY
-	dw ItemUseEvoStone   ; LEAF_STONE
-	dw ItemUseCardKey    ; CARD_KEY
-	dw UnusableItem      ; NUGGET
-	dw UnusableItem      ; ??? PP_UP
-	dw ItemUsePokedoll   ; POKE_DOLL
-	dw ItemUseMedicine   ; FULL_HEAL
-	dw ItemUseMedicine   ; REVIVE
-	dw ItemUseMedicine   ; MAX_REVIVE
 	dw ItemUseGuardSpec  ; GUARD_SPEC
-	dw ItemUseSuperRepel ; SUPER_REPL
-	dw ItemUseMaxRepel   ; MAX_REPEL
 	dw ItemUseDireHit    ; DIRE_HIT
-	dw UnusableItem      ; COIN
-	dw ItemUseMedicine   ; FRESH_WATER
-	dw ItemUseMedicine   ; SODA_POP
-	dw ItemUseMedicine   ; LEMONADE
-	dw UnusableItem      ; S_S_TICKET
-	dw UnusableItem      ; GOLD_TEETH
+	dw ItemUseXAccuracy  ; X_ACCURACY
 	dw ItemUseXStat      ; X_ATTACK
 	dw ItemUseXStat      ; X_DEFEND
 	dw ItemUseXStat      ; X_SPEED
 	dw ItemUseXStat      ; X_SPECIAL
-	dw ItemUseCoinCase   ; COIN_CASE
-	dw ItemUseOaksParcel ; OAKS_PARCEL
-	dw ItemUseItemfinder ; ITEMFINDER
-	dw UnusableItem      ; SILPH_SCOPE
-	dw ItemUsePokeflute  ; POKE_FLUTE
-	dw UnusableItem      ; LIFT_KEY
-	dw UnusableItem      ; EXP_ALL
-	dw ItemUseOldRod     ; OLD_ROD
-	dw ItemUseGoodRod    ; GOOD_ROD
-	dw ItemUseSuperRod   ; SUPER_ROD
-	dw ItemUsePPUp       ; PP_UP (real one)
+	dw ItemUsePPUp       ; PP_UP
 	dw ItemUsePPRestore  ; ETHER
 	dw ItemUsePPRestore  ; MAX_ETHER
 	dw ItemUsePPRestore  ; ELIXER
 	dw ItemUsePPRestore  ; MAX_ELIXER
+	dw ItemUseMedicine   ; FRESH_WATER
+	dw ItemUseMedicine   ; SODA_POP
+	dw ItemUseMedicine   ; LEMONADE
+	dw ItemUseMedicine   ; MOOMOO_MILK
+	dw ItemUseMedicine   ; CAKE_OF_RAGE
 	dw ItemUseMedicine   ; BERRY
 	dw ItemUseMedicine   ; GOLD_BERRY
 	dw ItemUsePPRestore  ; MYSTERYBERRY
@@ -118,6 +102,33 @@ ItemUsePtrTable:
 	dw UnusableItem      ; PNK_APRICORN
 	dw UnusableItem      ; WHT_APRICORN
 	dw UnusableItem      ; BLK_APRICORN
+	dw ItemUseTownMap    ; TOWN_MAP
+	dw ItemUseBicycle    ; BICYCLE
+	dw UnusableItem      ; PASS
+	dw UnusableItem      ; SQUIRTBOTTLE * TODO: Effect
+	dw UnusableItem      ; CARD_KEY
+	dw UnusableItem      ; S_S_TICKET
+	dw UnusableItem      ; LOST_ITEM
+	dw ItemUseCoinCase   ; COIN_CASE
+	dw UnusableItem      ; MYSTERY_EGG
+	dw ItemUseItemfinder ; ITEMFINDER
+	dw UnusableItem      ; SILPH_SCOPE
+	dw ItemUsePokeflute  ; POKE_FLUTE
+	dw UnusableItem      ; BASEMENT_KEY
+	dw UnusableItem      ; EXP_ALL
+	dw ItemUseOldRod     ; OLD_ROD
+	dw ItemUseGoodRod    ; GOOD_ROD
+	dw ItemUseSuperRod   ; SUPER_ROD
+	dw UnusableItem      ; MACHINE_PART
+	dw UnusableItem      ; SECRETPOTION
+	dw UnusableItem      ; RED_SCALE
+	dw UnusableItem      ; SILVER_WING
+	dw UnusableItem      ; RAINBOW_WING
+	dw UnusableItem      ; GS_BALL
+	dw ItemUseSurfboard  ; SURFBOARD
+	dw ItemUseBait       ; SAFARI_BAIT
+	dw ItemUseRock       ; SAFARI_ROCK
+	dw UnusableItem      ; COIN
 	assert_table_length NUM_ITEMS
 
 ItemUseBall:

@@ -79,7 +79,7 @@ RocketHideoutElevator_TextPointers:
 
 RocketHideoutElevatorText1:
 	text_asm
-	ld b, LIFT_KEY
+	ld b, BASEMENT_KEY
 	call IsItemInBag
 	jr z, .asm_45782
 	call RocketHideoutElevatorScript_45741

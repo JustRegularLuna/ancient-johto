@@ -7,106 +7,130 @@
 ; - ItemUsePtrTable (see engine/items/item_effects.asm)
 	const_def
 	const NO_ITEM       ; $00
-	const MASTER_BALL   ; $01
-	const ULTRA_BALL    ; $02
-	const GREAT_BALL    ; $03
-	const POKE_BALL     ; $04
-	const TOWN_MAP      ; $05
-	const BICYCLE       ; $06
-	const SURFBOARD     ; $07 buggy?
-	const SAFARI_BALL   ; $08
-	const LINK_CABLE    ; $09
-	const MOON_STONE    ; $0A
-	const ANTIDOTE      ; $0B
-	const BURN_HEAL     ; $0C
-	const ICE_HEAL      ; $0D
-	const AWAKENING     ; $0E
-	const PARLYZ_HEAL   ; $0F
-	const FULL_RESTORE  ; $10
-	const MAX_POTION    ; $11
-	const HYPER_POTION  ; $12
-	const SUPER_POTION  ; $13
-	const POTION        ; $14
-	const SAFARI_BAIT   ; $15
-	const SAFARI_ROCK   ; $16
-	const SUN_STONE     ; $17
-	const DRAGON_SCALE  ; $18
-	const UP_GRADE      ; $19
-	const KINGS_ROCK    ; $1A
-	const METAL_COAT    ; $1B
-	const HAPPY_CHARM   ; $1C
-	const ESCAPE_ROPE   ; $1D
-	const REPEL         ; $1E
-	const OLD_AMBER     ; $1F
-	const FIRE_STONE    ; $20
-	const THUNDER_STONE ; $21
-	const WATER_STONE   ; $22
-	const HP_UP         ; $23
-	const PROTEIN       ; $24
-	const IRON          ; $25
-	const CARBOS        ; $26
-	const CALCIUM       ; $27
-	const RARE_CANDY    ; $28
-	const DOME_FOSSIL   ; $29
-	const HELIX_FOSSIL  ; $2A
-	const SECRET_KEY    ; $2B
-	const UNUSED_ITEM   ; $2C "?????"
-	const BIKE_VOUCHER  ; $2D
-	const X_ACCURACY    ; $2E
-	const LEAF_STONE    ; $2F
-	const CARD_KEY      ; $30
-	const NUGGET        ; $31
-	const PP_UP_2       ; $32
-	const POKE_DOLL     ; $33
-	const FULL_HEAL     ; $34
-	const REVIVE        ; $35
-	const MAX_REVIVE    ; $36
-	const GUARD_SPEC    ; $37
-	const SUPER_REPEL   ; $38
-	const MAX_REPEL     ; $39
-	const DIRE_HIT      ; $3A
-	const COIN          ; $3B
-	const FRESH_WATER   ; $3C
-	const SODA_POP      ; $3D
-	const LEMONADE      ; $3E
-	const S_S_TICKET    ; $3F
-	const GOLD_TEETH    ; $40
-	const X_ATTACK      ; $41
-	const X_DEFEND      ; $42
-	const X_SPEED       ; $43
-	const X_SPECIAL     ; $44
-	const COIN_CASE     ; $45
-	const OAKS_PARCEL   ; $46
-	const ITEMFINDER    ; $47
-	const SILPH_SCOPE   ; $48
-	const POKE_FLUTE    ; $49
-	const LIFT_KEY      ; $4A
-	const EXP_ALL       ; $4B
-	const OLD_ROD       ; $4C
-	const GOOD_ROD      ; $4D
-	const SUPER_ROD     ; $4E
-	const PP_UP         ; $4F
-	const ETHER         ; $50
-	const MAX_ETHER     ; $51
-	const ELIXER        ; $52
-	const MAX_ELIXER    ; $53
-	const BERRY         ; $54 - 10HP
-	const GOLD_BERRY    ; $55 - 30HP
-	const MYSTERYBERRY  ; $56 - 5PP
-	const PSNCUREBERRY  ; $57 - Cure PSN
-	const ICE_BERRY     ; $58 - Cure BRN
-	const BURNT_BERRY   ; $59 - Cure FRZ
-	const MINT_BERRY    ; $5A - Cure SLP
-	const PRZCUREBERRY  ; $5B - Cure PRZ
-	const MIRACLEBERRY  ; $5C - Cure everything
-	const BITTER_BERRY  ; $5D - Cure Confusion
-	const RED_APRICORN  ; $5E - Level Ball
-	const YLW_APRICORN  ; $5F - Moon Ball
-	const BLU_APRICORN  ; $60 - Lure Ball
-	const GRN_APRICORN  ; $61 - Friend Ball
-	const PNK_APRICORN  ; $62 - Love Ball
-	const WHT_APRICORN  ; $63 - Fast Ball
-	const BLK_APRICORN  ; $64 - Heavy Ball
+
+; Pokéballs
+	const MASTER_BALL   ;
+	const ULTRA_BALL    ;
+	const GREAT_BALL    ;
+	const POKE_BALL     ;
+	const SAFARI_BALL   ;
+	; TODO: Port the apricorn balls
+
+; Normal Items
+	const LINK_CABLE    ;
+	const MOON_STONE    ;
+	const SUN_STONE     ;
+	const FIRE_STONE    ;
+	const THUNDER_STONE ;
+	const WATER_STONE   ;
+	const LEAF_STONE    ;
+	const DRAGON_SCALE  ;
+	const UP_GRADE      ;
+	const KINGS_ROCK    ;
+	const METAL_COAT    ;
+	const HAPPY_CHARM   ;
+	const ESCAPE_ROPE   ;
+	const REPEL         ;
+	const SUPER_REPEL   ;
+	const MAX_REPEL     ;
+	const OLD_AMBER     ;
+	const DOME_FOSSIL   ;
+	const HELIX_FOSSIL  ;
+	const NUGGET        ;
+	const BIG_NUGGET    ;
+	const PEARL         ;
+	const BIG_PEARL     ;
+	const STARDUST      ;
+	const STAR_PIECE    ;
+	const POKE_DOLL     ;
+
+; Medicine/Vitamins
+	const ANTIDOTE      ;
+	const BURN_HEAL     ;
+	const ICE_HEAL      ;
+	const AWAKENING     ;
+	const PARLYZ_HEAL   ;
+	const FULL_HEAL     ;
+	const FULL_RESTORE  ;
+	const REVIVE        ;
+	const MAX_REVIVE    ;
+	const MAX_POTION    ;
+	const HYPER_POTION  ;
+	const SUPER_POTION  ;
+	const POTION        ;
+	const HP_UP         ;
+	const PROTEIN       ;
+	const IRON          ;
+	const CARBOS        ;
+	const CALCIUM       ;
+	const RARE_CANDY    ;
+	const GUARD_SPEC    ;
+	const DIRE_HIT      ;
+	const X_ACCURACY    ;
+	const X_ATTACK      ;
+	const X_DEFEND      ;
+	const X_SPEED       ;
+	const X_SPECIAL     ;
+	const PP_UP         ;
+	const ETHER         ;
+	const MAX_ETHER     ;
+	const ELIXER        ;
+	const MAX_ELIXER    ;
+	const FRESH_WATER   ;
+	const SODA_POP      ;
+	const LEMONADE      ;
+	const MOOMOO_MILK   ;
+	const CAKE_OF_RAGE  ;
+
+; Berries
+	const BERRY         ; -> 10HP
+	const GOLD_BERRY    ; -> 30HP
+	const MYSTERYBERRY  ; -> 5PP
+	const PSNCUREBERRY  ; -> Cure PSN
+	const ICE_BERRY     ; -> Cure BRN
+	const BURNT_BERRY   ; -> Cure FRZ
+	const MINT_BERRY    ; -> Cure SLP
+	const PRZCUREBERRY  ; -> Cure PRZ
+	const MIRACLEBERRY  ; -> Cure everything
+	const BITTER_BERRY  ; -> Cure Confusion
+	const RED_APRICORN  ; -> Craft Level Ball
+	const YLW_APRICORN  ; -> Craft Moon Ball
+	const BLU_APRICORN  ; -> Craft Lure Ball
+	const GRN_APRICORN  ; -> Craft Friend Ball
+	const PNK_APRICORN  ; -> Craft Love Ball
+	const WHT_APRICORN  ; -> Craft Fast Ball
+	const BLK_APRICORN  ; -> Craft Heavy Ball
+
+; Key Items
+	const TOWN_MAP      ;
+	const BICYCLE       ;
+	const PASS          ;
+	const SQUIRTBOTTLE  ;
+	const CARD_KEY      ;
+	const S_S_TICKET    ;
+	const LOST_ITEM     ;
+	const COIN_CASE     ;
+	const MYSTERY_EGG   ;
+	const ITEMFINDER    ;
+	const SILPH_SCOPE   ;
+	const POKE_FLUTE    ;
+	const BASEMENT_KEY  ;
+	const EXP_ALL       ;
+	const OLD_ROD       ;
+	const GOOD_ROD      ;
+	const SUPER_ROD     ;
+	const MACHINE_PART  ;
+	const SECRETPOTION  ;
+	const RED_SCALE     ;
+	const SILVER_WING   ;
+	const RAINBOW_WING  ;
+	const GS_BALL       ;
+
+; Abnormal Items
+	const SURFBOARD     ; * Part of the SURF field effect, and in your PC in debug rom
+	const SAFARI_BAIT   ; * Used in Safari Battle mode
+	const SAFARI_ROCK   ; * Used in Safari Battle mode
+	const COIN          ; * Used for the Hidden Items that are coins
 
 NUM_ITEMS EQU const_value - 1
 
