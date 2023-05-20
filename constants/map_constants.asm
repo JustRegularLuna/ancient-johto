@@ -142,7 +142,7 @@ FIRST_INDOOR_MAP EQU const_value
 	mapconst UNUSED_MAP_74,                  0,  0 ; $74
 	mapconst UNUSED_MAP_75,                  0,  0 ; $75
 	mapconst HALL_OF_FAME,                   4,  5 ; $76
-	mapconst UNDERGROUND_PATH_NORTH_SOUTH,  24,  4 ; $77
+	mapconst UNDERGROUND_PATH_NORTH_SOUTH,  23,  4 ; $77
 	mapconst CHAMPIONS_ROOM,                 4,  4 ; $78
 	mapconst UNDERGROUND_PATH_WEST_EAST,     4, 25 ; $79
 	mapconst CELADON_MART_1F,                4, 10 ; $7A

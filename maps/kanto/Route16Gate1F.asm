@@ -10,7 +10,7 @@ Route16Gate1F_Object:
 	warp  0,  3, 5, LAST_MAP
 	warp  7,  2, 6, LAST_MAP
 	warp  7,  3, 7, LAST_MAP
-	warp  6, 12, 0, ROUTE_16_GATE_2F
+	warp  7, 13, 0, ROUTE_16_GATE_2F
 
 	def_signs
 
