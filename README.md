@@ -1,23 +1,18 @@
-# Pokémon Red and Blue [![Build Status][travis-badge]][travis]
+# Pokémon RedGold & BlueSilver
 
-This is a disassembly of Pokémon Red and Blue.
-
-It builds the following ROMs:
-
-- Pokemon Red (UE) [S][!].gb `sha1: ea9bcae617fdf159b045185467ae58b2e4a48b9a`
-- Pokemon Blue (UE) [S][!].gb `sha1: d7037c83e1ae5b39bde3c30787637ba1d4c48ce2`
-- BLUEMONS.GB (debug build) `sha1: 5b1456177671b79b263c614ea0e7cc9ac542e9c4`
+In spite of its flaws, Gen 2 was (and still is) my favorite Pokémon generation. But, since I grew up in the 90s, that first adventure through Kanto still has a special nostalgic place in my heart too. While thinking back on those old adventures and various old romhacks from back in the day, I started to wonder what it would be like to reimagine Gen 2 in the style and feeling of Gen 1, and that thought grew into RedGold & BlueSilver. I know a hack like this probably won't appeal to everyone, and that's alright. But I hope the people that it does appeal to will enjoy it.
 
 To set up the repository, see [**INSTALL.md**](INSTALL.md).
 
 
-## See also
+## See also (PRET stuff)
 
 - **Discord:** [pret][discord]
 - **IRC:** [freenode#pret][irc]
 
-Other disassembly projects:
+PRET's disassembly projects:
 
+- [**Pokémon Red/Blue**][pokered]
 - [**Pokémon Yellow**][pokeyellow]
 - [**Pokémon Gold/Silver**][pokegold]
 - [**Pokémon Crystal**][pokecrystal]
@@ -27,6 +22,7 @@ Other disassembly projects:
 - [**Pokémon FireRed**][pokefirered]
 - [**Pokémon Emerald**][pokeemerald]
 
+[pokered]: https://github.com/pret/pokered
 [pokeyellow]: https://github.com/pret/pokeyellow
 [pokegold]: https://github.com/pret/pokegold
 [pokecrystal]: https://github.com/pret/pokecrystal
@@ -37,5 +33,3 @@ Other disassembly projects:
 [pokeemerald]: https://github.com/pret/pokeemerald
 [discord]: https://discord.gg/d5dubZ3
 [irc]: https://kiwiirc.com/client/irc.freenode.net/?#pret
-[travis]: https://travis-ci.org/pret/pokered
-[travis-badge]: https://travis-ci.org/pret/pokered.svg?branch=master
