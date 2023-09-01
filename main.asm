@@ -40,8 +40,8 @@ INCLUDE "engine/menus/players_pc.asm"
 INCLUDE "engine/pokemon/remove_mon.asm"
 INCLUDE "engine/events/display_pokedex.asm"
 
-GetNidoPalID:
-	ld a, PAL_PURPLEMON
+GetMarillPalID:
+	ld a, PAL_BLUEMON
 	jr GotPaletteID
 GetRedPalID:
 	call ClearScreen

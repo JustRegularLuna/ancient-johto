@@ -91,8 +91,8 @@ ENDC
 	call PrintText
 	call GBFadeOutToWhite
 	call ClearScreen
-	call GetNidoPalID
-	ld a, NIDORINO
+	call GetMarillPalID
+	ld a, MARILL
 	ld [wd0b5], a
 	ld [wcf91], a
 	call GetMonHeader
@@ -204,7 +204,7 @@ OakSpeechText1:
 	text_end
 OakSpeechText2:
 	text_far _OakSpeechText2A
-	sound_cry_nidorina
+	sound_cry_marill
 	text_far _OakSpeechText2B
 	text_end
 IntroducePlayerText:
