@@ -67,21 +67,24 @@ Evolution_PartyMonLoop: ; loop over party mons
 	and a ; have we reached the end of the evolution data?
 	jr z, Evolution_PartyMonLoop
 	ld b, a ; evolution type
-	cp EV_TRADE
+	cp EVOLVE_TRADE
 	jr z, .checkTradeEvo
 ; not trade evolution
 	ld a, [wLinkState]
 	cp LINK_STATE_TRADING
 	jr z, Evolution_PartyMonLoop ; if trading, go the next mon
 	ld a, b
-	cp EV_ITEM
+	cp EVOLVE_ITEM
 	jr z, .checkItemEvo
 	ld a, [wForceEvolution]
 	and a
 	jr nz, Evolution_PartyMonLoop
 	ld a, b
-	cp EV_LEVEL
+	cp EVOLVE_LEVEL
 	jr z, .checkLevel
+	cp EVOLVE_STAT
+	jp z, .checkTyrogueEvo
+
 .checkTradeEvo
 	ld a, [wLinkState]
 	cp LINK_STATE_TRADING
@@ -92,6 +95,43 @@ Evolution_PartyMonLoop: ; loop over party mons
 	cp b ; is the mon's level greater than the evolution requirement?
 	jp c, Evolution_PartyMonLoop ; if so, go the next mon
 	jr .doEvolution
+
+.checkTyrogueEvo
+	ld a, [hli] ; level to evolve
+	ld b, a
+	ld a, [wLoadedMonLevel] ; current level
+	cp b
+	jp c, .nextEvoEntry1 ; if too low, go to next evo
+	ld a, [hli] ; which method is this?
+	cp ATK_GT_DEF
+	jp z, .AtkHigher
+	cp ATK_EQ_DEF
+	jp z, .AtkDefEqual
+	cp ATK_LT_DEF
+	jp z, .DefHigher
+.AtkHigher
+	push hl ; Don't lose your place in the evolution data
+	call GetTyrogueAtkDef
+	pop hl ; Get our place back
+	jp c, .nextEvoEntry2
+	jp z, .nextEvoEntry2
+	jr .TyrogueDone
+.AtkDefEqual
+	push hl ; Don't lose your place in the evolution data
+	call GetTyrogueAtkDef
+	pop hl ; Get our place back
+	jp nz, .nextEvoEntry2
+	jr .TyrogueDone
+.DefHigher
+	push hl ; Don't lose your place in the evolution data
+	call GetTyrogueAtkDef
+	pop hl ; Get our place back
+	jp z, .nextEvoEntry2
+	jp nc, .nextEvoEntry2
+.TyrogueDone
+	ld a, [wLoadedMonLevel]
+	jr .doEvolution
+
 .checkItemEvo
 	ld a, [hli]
 	ld b, a ; evolution item
@@ -101,12 +141,14 @@ Evolution_PartyMonLoop: ; loop over party mons
 	ld a, [wIsInBattle] ; Are we in a battle?
 	and a
 	jp nz, .nextEvoEntry1 ; If we're in a battle, do not continue trying to evolve
+
 .checkLevel
 	ld a, [hli] ; level requirement
 	ld b, a
 	ld a, [wLoadedMonLevel]
 	cp b ; is the mon's level greater than the evolution requirement?
 	jp c, .nextEvoEntry2 ; if so, go the next evolution entry
+
 .doEvolution
 	ld [wCurEnemyLVL], a
 	ld a, 1
@@ -167,7 +209,8 @@ Evolution_PartyMonLoop: ; loop over party mons
 	ld bc, BASE_DATA_SIZE
 	call AddNTimes
 	ld de, wMonHeader
-	call CopyData
+	ld a, BANK(BaseStats)
+	call FarCopyData
 	ld a, [wd0b5]
 	ld [wMonHIndex], a
 	pop af
@@ -332,25 +375,30 @@ LearnMoveFromLevelUp:
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
+
 .skipEvolutionDataLoop ; loop to skip past the evolution data, which comes before the move data
 	ld a, [hli]
 	and a ; have we reached the end of the evolution data?
 	jr nz, .skipEvolutionDataLoop ; if not, jump back up
+
 .learnSetLoop ; loop over the learn set until we reach a move that is learnt at the current level or the end of the list
 	ld a, [hli]
 	and a ; have we reached the end of the learn set?
 	jr z, .done ; if we've reached the end of the learn set, jump
+
 	ld b, a ; level the move is learnt at
 	ld a, [wCurEnemyLVL]
 	cp b ; is the move learnt at the mon's current level?
 	ld a, [hli] ; move ID
 	jr nz, .learnSetLoop
+
 	push hl
 	ld d, a ; ID of move to learn
 	ld hl, wPartyMon1Moves
 	ld a, [wWhichPokemon]
 	ld bc, wPartyMon2 - wPartyMon1
 	call AddNTimes
+
 	ld b, NUM_MOVES
 .checkCurrentMovesLoop ; check if the move to learn is already known
 	ld a, [hli]
@@ -358,6 +406,7 @@ LearnMoveFromLevelUp:
 	jr z, .hasMove ; if already known, jump
 	dec b
 	jr nz, .checkCurrentMovesLoop
+; learn move
 	ld a, d
 	ld [wMoveNum], a
 	ld [wd11e], a
@@ -367,6 +416,7 @@ LearnMoveFromLevelUp:
 .hasMove
 	pop hl
 	jr .learnSetLoop
+
 .done
 	ld a, [wcf91]
 	ld [wd11e], a
@@ -507,4 +557,22 @@ WriteMonMoves_ShiftMoveData:
 Evolution_FlagAction:
 	predef_jump FlagActionPredef
 
-INCLUDE "data/pokemon/evos_moves.asm"
+GetTyrogueAtkDef:
+; new routine for Tyrogue evolution
+; stores his Atk location in de
+; stores his Def location in hl
+	ld a, [wWhichPokemon]
+	ld hl, wPartyMon1Attack
+	ld bc, wPartyMon2 - wPartyMon1
+	call AddNTimes
+	ld d,h
+	ld e,l
+; de now points to his Atk
+	inc hl
+	inc hl
+; hl now points to his Def
+	ld c, $2 ; data length
+	call StringCmp ; compare his attack and defense
+	ret
+
+INCLUDE "data/pokemon/evos_attacks.asm"

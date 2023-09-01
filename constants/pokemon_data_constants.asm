@@ -48,11 +48,18 @@ HOF_TEAM_CAPACITY EQU 50
 
 ; Evolution types
 	const_def 1
-	const EV_LEVEL ; 1
-	const EV_ITEM  ; 2
-	const EV_TRADE ; 3
+	const EVOLVE_LEVEL ; 1
+	const EVOLVE_ITEM  ; 2
+	const EVOLVE_TRADE ; 3
+	const EVOLVE_STAT  ; 4
 
-MAX_EVOLUTIONS EQU 3
+; EV_STAT triggers
+	const_def 1
+	const ATK_GT_DEF
+	const ATK_LT_DEF
+	const ATK_EQ_DEF
+
+MAX_EVOLUTIONS EQU 5
 EVOLUTION_SIZE EQU 4
 
 
