@@ -40,22 +40,6 @@ INCLUDE "engine/menus/players_pc.asm"
 INCLUDE "engine/pokemon/remove_mon.asm"
 INCLUDE "engine/events/display_pokedex.asm"
 
-GetMarillPalID:
-	ld a, PAL_BLUEMON
-	jr GotPaletteID
-GetRedPalID:
-	call ClearScreen
-	ld a, PAL_MEWMON
-	jr GotPaletteID
-GetRivalPalID:
-	call ClearScreen
-	ld a, PAL_MEWMON
-GotPaletteID:
-	push af
-	ld hl, SendIntroPal
-	ld b, BANK(SendIntroPal)
-	jp Bankswitch
-
 
 SECTION "bank3", ROMX
 
@@ -745,3 +729,8 @@ INCLUDE "data/maps/map_header_pointers.asm"
 SECTION "Tileset Animations", ROMX
 
 INCLUDE "engine/gfx/tileset_anim.asm"
+
+
+SECTION "Custom Splash Screens", ROMX
+
+INCLUDE "engine/movie/pikachu_text_screens.asm"

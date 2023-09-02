@@ -57,6 +57,10 @@ ENDC
 	ld [wItemQuantity], a
 	call AddItemToInventory  ; give one potion
 
+	ld a, PAL_MEWMON
+	call GotPaletteID
+	farcall ShowPikachuTextScreens
+
 	; choose Hiro or Kris
 	ld hl, BoyOrGirlText
 	call PrintText
@@ -312,3 +316,19 @@ DebugChooseRegionText:
 	line "region?"
 	done
 ENDC
+
+GetMarillPalID:
+	ld a, PAL_BLUEMON
+	jr GotPaletteID
+GetRedPalID:
+	call ClearScreen
+	ld a, PAL_MEWMON
+	jr GotPaletteID
+GetRivalPalID:
+	call ClearScreen
+	ld a, PAL_MEWMON
+GotPaletteID:
+	push af
+	ld hl, SendIntroPal
+	ld b, BANK(SendIntroPal)
+	jp Bankswitch
