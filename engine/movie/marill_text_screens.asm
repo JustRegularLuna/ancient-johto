@@ -1,4 +1,4 @@
-ShowPikachuTextScreens::
+ShowMarillTextScreens::
 ; Displays the welcome screen with difficulty and version number info
 ; Start by clearing and turning off the screen
 	call ClearScreen
@@ -9,7 +9,7 @@ ShowPikachuTextScreens::
 	ld bc, VersionScreenTilesEnd - VersionScreenTiles
 	call CopyData	
 ; load the tilemap for the screen
-	call CleanPikachuScreen
+	call CleanMarillScreen
 ; turn the screen back on
 	call EnableLCD
 	call Delay3
@@ -21,7 +21,7 @@ ShowPikachuTextScreens::
 ; wait for the player to press A
 	call WaitForTextScrollButtonPress
 ; load the tilemap for the screen again
-	call CleanPikachuScreen
+	call CleanMarillScreen
 ; display the second page
 	coord hl, 2, 2
 	ld de, VersionScreenText2
@@ -29,7 +29,7 @@ ShowPikachuTextScreens::
 	; wait for the player to press A
 	call WaitForTextScrollButtonPress
 ; load the tilemap for the screen again
-	call CleanPikachuScreen
+	call CleanMarillScreen
 ; display the third page
 	coord hl, 2, 2
 	ld de, VersionScreenText3
@@ -37,7 +37,7 @@ ShowPikachuTextScreens::
 	; wait for the player to press A
 	call WaitForTextScrollButtonPress
 ; load the tilemap for the screen again
-	call CleanPikachuScreen
+	call CleanMarillScreen
 ; display the fourth page
 	coord hl, 2, 2
 	ld de, VersionScreenText4
@@ -48,7 +48,7 @@ ShowPikachuTextScreens::
 	call ClearScreen
 	ret
 
-CleanPikachuScreen:
+CleanMarillScreen:
 	ld hl, VersionScreenTilemap
 	ld de, wTileMap
 	ld bc, VersionScreenTilemapEnd - VersionScreenTilemap

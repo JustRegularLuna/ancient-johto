@@ -733,4 +733,4 @@ INCLUDE "engine/gfx/tileset_anim.asm"
 
 SECTION "Custom Splash Screens", ROMX
 
-INCLUDE "engine/movie/pikachu_text_screens.asm"
+INCLUDE "engine/movie/marill_text_screens.asm"

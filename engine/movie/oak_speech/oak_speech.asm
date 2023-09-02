@@ -57,9 +57,9 @@ ENDC
 	ld [wItemQuantity], a
 	call AddItemToInventory  ; give one potion
 
-	ld a, PAL_MEWMON
+	ld a, PAL_BLUEMON
 	call GotPaletteID
-	farcall ShowPikachuTextScreens
+	farcall ShowMarillTextScreens
 
 	; choose Hiro or Kris
 	ld hl, BoyOrGirlText
