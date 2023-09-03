@@ -42,26 +42,26 @@ Route30Mons: ; ROUTE_30
 	def_grass_wildmons 25 ; encounter rate
 IF DEF(_RED)
 	db  3, CATERPIE
+	db  5, CATERPIE
 	db  5, METAPOD
 	db  3, SPINARAK
-	db  3, PIDGEY
 	db  4, PIDGEY
 	db  3, RATTATA
+	db  4, SENTRET
 	db  4, HOPPIP
-	db  4, HOOTHOOT
-	db  3, WEEDLE
-	db  3, LEDYBA
+	db  3, HOOTHOOT
+	db  3, POLIWAG
 ELSE
 	db  3, WEEDLE
+	db  5, WEEDLE
 	db  5, KAKUNA
 	db  3, LEDYBA
-	db  3, PIDGEY
 	db  4, PIDGEY
 	db  3, RATTATA
+	db  4, SENTRET
 	db  4, HOPPIP
-	db  4, HOOTHOOT
-	db  3, CATERPIE
-	db  3, SPINARAK
+	db  3, HOOTHOOT
+	db  3, POLIWAG
 ENDC
 	end_grass_wildmons
 
@@ -89,7 +89,7 @@ IF DEF(_RED)
 	db  4, BELLSPROUT
 	db  3, PIDGEY
 	db  4, RATTATA
-	db  4, WEEDLE
+	db  4, HOPPIP
 	db  4, ZUBAT
 	db  5, GASTLY
 ELSE
@@ -100,7 +100,7 @@ ELSE
 	db  4, BELLSPROUT
 	db  3, PIDGEY
 	db  4, RATTATA
-	db  4, CATERPIE
+	db  4, HOPPIP
 	db  4, ZUBAT
 	db  5, GASTLY
 ENDC
