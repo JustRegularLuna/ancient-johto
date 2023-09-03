@@ -45,24 +45,18 @@ IF DEF(_RED)
 	db  5, CATERPIE
 	db  5, METAPOD
 	db  3, SPINARAK
-	db  4, PIDGEY
-	db  3, RATTATA
-	db  4, SENTRET
-	db  4, HOPPIP
-	db  3, HOOTHOOT
-	db  3, POLIWAG
 ELSE
 	db  3, WEEDLE
 	db  5, WEEDLE
 	db  5, KAKUNA
 	db  3, LEDYBA
+ENDC
 	db  4, PIDGEY
 	db  3, RATTATA
 	db  4, SENTRET
 	db  4, HOPPIP
 	db  3, HOOTHOOT
 	db  3, POLIWAG
-ENDC
 	end_grass_wildmons
 
 	def_water_wildmons 15 ; encounter rate
@@ -85,17 +79,11 @@ IF DEF(_RED)
 	db  4, CATERPIE
 	db  5, METAPOD
 	db  4, SPINARAK
-	db  3, BELLSPROUT
-	db  4, BELLSPROUT
-	db  3, PIDGEY
-	db  4, RATTATA
-	db  4, HOPPIP
-	db  4, ZUBAT
-	db  5, GASTLY
 ELSE
 	db  4, WEEDLE
 	db  5, KAKUNA
 	db  4, LEDYBA
+ENDC
 	db  3, BELLSPROUT
 	db  4, BELLSPROUT
 	db  3, PIDGEY
@@ -103,7 +91,6 @@ ELSE
 	db  4, HOPPIP
 	db  4, ZUBAT
 	db  5, GASTLY
-ENDC
 	end_grass_wildmons
 
 	def_water_wildmons 15 ; encounter rate
