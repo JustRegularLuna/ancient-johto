@@ -259,8 +259,8 @@ JohtoWildDataPointers:
 	dw NoMons      ; NEW_BARK_TOWN
 	dw NoMons      ; CHERRYGROVE_CITY
 	dw Route29Mons ; ROUTE_29
-	dw NoMons      ; ROUTE_30
-	dw NoMons      ; ROUTE_31
+	dw Route30Mons ; ROUTE_30
+	dw Route31Mons ; ROUTE_31
 	dw NoMons      ; JOHTO_ROUTE_27
 	dw NoMons      ; PLAYERS_HOUSE_1F
 	dw NoMons      ; PLAYERS_HOUSE_2F
