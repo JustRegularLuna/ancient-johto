@@ -7,7 +7,7 @@
 	db 90 ; catch rate
 	db 134 ; base exp
 
-	INCBIN "gfx/pokemon/front/ledian.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/ledian.pic", 0, 1 ; sprite dimensions
 	dw LedianPicFront, LedianPicBack
 
 	ds 4 ; old level 1 learnset

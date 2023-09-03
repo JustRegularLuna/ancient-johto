@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 168 ; base exp
 
-	INCBIN "gfx/pokemon/front/mantine.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/mantine.pic", 0, 1 ; sprite dimensions
 	dw MantinePicFront, MantinePicBack
 
 	ds 4 ; old level 1 learnset

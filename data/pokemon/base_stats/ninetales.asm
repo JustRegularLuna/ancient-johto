@@ -7,7 +7,7 @@
 	db 75 ; catch rate
 	db 178 ; base exp
 
-	INCBIN "gfx/pokemon/front/ninetales.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/ninetales.pic", 0, 1 ; sprite dimensions
 	dw NinetalesPicFront, NinetalesPicBack
 
 	ds 4 ; old level 1 learnset

@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 196 ; base exp
 
-	INCBIN "gfx/pokemon/front/espeon.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/espeon.pic", 0, 1 ; sprite dimensions
 	dw EspeonPicFront, EspeonPicBack
 
 	ds 4 ; old level 1 learnset

@@ -7,7 +7,7 @@
 	db 75 ; catch rate
 	db 200 ; base exp
 
-	INCBIN "gfx/pokemon/front/heracross.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/heracross.pic", 0, 1 ; sprite dimensions
 	dw HeracrossPicFront, HeracrossPicBack
 
 	ds 4 ; old level 1 learnset

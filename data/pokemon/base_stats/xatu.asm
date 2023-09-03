@@ -7,7 +7,7 @@
 	db 75 ; catch rate
 	db 171 ; base exp
 
-	INCBIN "gfx/pokemon/front/xatu.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/xatu.pic", 0, 1 ; sprite dimensions
 	dw XatuPicFront, XatuPicBack
 
 	ds 4 ; old level 1 learnset

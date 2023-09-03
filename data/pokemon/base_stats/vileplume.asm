@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 184 ; base exp
 
-	INCBIN "gfx/pokemon/front/vileplume.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/vileplume.pic", 0, 1 ; sprite dimensions
 	dw VileplumePicFront, VileplumePicBack
 
 	ds 4 ; old level 1 learnset

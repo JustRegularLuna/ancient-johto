@@ -7,7 +7,7 @@
 	db 3 ; catch rate
 	db 216 ; base exp
 
-	INCBIN "gfx/pokemon/front/raikou.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/raikou.pic", 0, 1 ; sprite dimensions
 	dw RaikouPicFront, RaikouPicBack
 
 	ds 4 ; old level 1 learnset

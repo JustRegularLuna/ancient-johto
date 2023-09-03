@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 177 ; base exp
 
-	INCBIN "gfx/pokemon/front/wobbuffet.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/wobbuffet.pic", 0, 1 ; sprite dimensions
 	dw WobbuffetPicFront, WobbuffetPicBack
 
 	ds 4 ; old level 1 learnset

@@ -7,7 +7,7 @@
 	db 75 ; catch rate
 	db 160 ; base exp
 
-	INCBIN "gfx/pokemon/front/piloswine.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/piloswine.pic", 0, 1 ; sprite dimensions
 	dw PiloswinePicFront, PiloswinePicBack
 
 	ds 4 ; old level 1 learnset

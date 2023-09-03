@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 176 ; base exp
 
-	INCBIN "gfx/pokemon/front/jumpluff.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/jumpluff.pic", 0, 1 ; sprite dimensions
 	dw JumpluffPicFront, JumpluffPicBack
 
 	ds 4 ; old level 1 learnset

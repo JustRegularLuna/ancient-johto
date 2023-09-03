@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 180 ; base exp
 
-	INCBIN "gfx/pokemon/front/porygon2.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/porygon2.pic", 0, 1 ; sprite dimensions
 	dw Porygon2PicFront, Porygon2PicBack
 
 	ds 4 ; old level 1 learnset

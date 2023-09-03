@@ -7,7 +7,7 @@
 	db 150 ; catch rate
 	db 68 ; base exp
 
-	INCBIN "gfx/pokemon/front/cleffa.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/cleffa.pic", 0, 1 ; sprite dimensions
 	dw CleffaPicFront, CleffaPicBack
 
 	ds 4 ; old level 1 learnset

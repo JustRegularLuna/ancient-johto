@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 147 ; base exp
 
-	INCBIN "gfx/pokemon/front/misdreavus.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/misdreavus.pic", 0, 1 ; sprite dimensions
 	dw MisdreavusPicFront, MisdreavusPicBack
 
 	ds 4 ; old level 1 learnset

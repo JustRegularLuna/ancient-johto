@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 141 ; base exp
 
-	INCBIN "gfx/pokemon/front/ivysaur.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/ivysaur.pic", 0, 1 ; sprite dimensions
 	dw IvysaurPicFront, IvysaurPicBack
 
 	ds 4 ; old level 1 learnset

@@ -7,7 +7,7 @@
 	db 90 ; catch rate
 	db 162 ; base exp
 
-	INCBIN "gfx/pokemon/front/noctowl.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/noctowl.pic", 0, 1 ; sprite dimensions
 	dw NoctowlPicFront, NoctowlPicBack
 
 	ds 4 ; old level 1 learnset

@@ -7,7 +7,7 @@
 	db 25 ; catch rate
 	db 200 ; base exp
 
-	INCBIN "gfx/pokemon/front/scizor.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/scizor.pic", 0, 1 ; sprite dimensions
 	dw ScizorPicFront, ScizorPicBack
 
 	ds 4 ; old level 1 learnset

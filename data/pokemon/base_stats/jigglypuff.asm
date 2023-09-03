@@ -7,7 +7,7 @@
 	db 170 ; catch rate
 	db 76 ; base exp
 
-	INCBIN "gfx/pokemon/front/jigglypuff.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/jigglypuff.pic", 0, 1 ; sprite dimensions
 	dw JigglypuffPicFront, JigglypuffPicBack
 
 	ds 4 ; old level 1 learnset

@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 65 ; base exp
 
-	INCBIN "gfx/pokemon/front/cyndaquil.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/cyndaquil.pic", 0, 1 ; sprite dimensions
 	dw CyndaquilPicFront, CyndaquilPicBack
 
 	ds 4 ; old level 1 learnset

@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 167 ; base exp
 
-	INCBIN "gfx/pokemon/front/magby.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/magby.pic", 0, 1 ; sprite dimensions
 	dw MagbyPicFront, MagbyPicBack
 
 	ds 4 ; old level 1 learnset

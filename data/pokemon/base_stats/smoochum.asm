@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 137 ; base exp
 
-	INCBIN "gfx/pokemon/front/smoochum.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/smoochum.pic", 0, 1 ; sprite dimensions
 	dw SmoochumPicFront, SmoochumPicBack
 
 	ds 4 ; old level 1 learnset

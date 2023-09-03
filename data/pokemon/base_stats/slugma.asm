@@ -7,7 +7,7 @@
 	db 190 ; catch rate
 	db 78 ; base exp
 
-	INCBIN "gfx/pokemon/front/slugma.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/slugma.pic", 0, 1 ; sprite dimensions
 	dw SlugmaPicFront, SlugmaPicBack
 
 	ds 4 ; old level 1 learnset

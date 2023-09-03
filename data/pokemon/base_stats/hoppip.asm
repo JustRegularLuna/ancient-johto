@@ -7,7 +7,7 @@
 	db 255 ; catch rate
 	db 74 ; base exp
 
-	INCBIN "gfx/pokemon/front/hoppip.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/hoppip.pic", 0, 1 ; sprite dimensions
 	dw HoppipPicFront, HoppipPicBack
 
 	ds 4 ; old level 1 learnset

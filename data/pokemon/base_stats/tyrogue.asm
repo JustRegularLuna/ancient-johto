@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 91 ; base exp
 
-	INCBIN "gfx/pokemon/front/tyrogue.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/tyrogue.pic", 0, 1 ; sprite dimensions
 	dw TyroguePicFront, TyroguePicBack
 
 	ds 4 ; old level 1 learnset

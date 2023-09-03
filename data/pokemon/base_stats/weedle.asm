@@ -7,7 +7,7 @@
 	db 255 ; catch rate
 	db 52 ; base exp
 
-	INCBIN "gfx/pokemon/front/weedle.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/weedle.pic", 0, 1 ; sprite dimensions
 	dw WeedlePicFront, WeedlePicBack
 
 	ds 4 ; old level 1 learnset

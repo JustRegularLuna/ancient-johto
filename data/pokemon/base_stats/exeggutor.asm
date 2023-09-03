@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 212 ; base exp
 
-	INCBIN "gfx/pokemon/front/exeggutor.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/exeggutor.pic", 0, 1 ; sprite dimensions
 	dw ExeggutorPicFront, ExeggutorPicBack
 
 	ds 4 ; old level 1 learnset

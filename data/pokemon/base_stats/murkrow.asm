@@ -7,7 +7,7 @@
 	db 30 ; catch rate
 	db 81 ; base exp
 
-	INCBIN "gfx/pokemon/front/murkrow.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/murkrow.pic", 0, 1 ; sprite dimensions
 	dw MurkrowPicFront, MurkrowPicBack
 
 	ds 4 ; old level 1 learnset

@@ -7,7 +7,7 @@
 	db 60 ; catch rate
 	db 108 ; base exp
 
-	INCBIN "gfx/pokemon/front/gligar.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/gligar.pic", 0, 1 ; sprite dimensions
 	dw GligarPicFront, GligarPicBack
 
 	ds 4 ; old level 1 learnset

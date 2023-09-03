@@ -7,7 +7,7 @@
 	db 75 ; catch rate
 	db 213 ; base exp
 
-	INCBIN "gfx/pokemon/front/houndoom.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/houndoom.pic", 0, 1 ; sprite dimensions
 	dw HoundoomPicFront, HoundoomPicBack
 
 	ds 4 ; old level 1 learnset

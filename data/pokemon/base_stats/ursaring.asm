@@ -7,7 +7,7 @@
 	db 60 ; catch rate
 	db 189 ; base exp
 
-	INCBIN "gfx/pokemon/front/ursaring.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/ursaring.pic", 0, 1 ; sprite dimensions
 	dw UrsaringPicFront, UrsaringPicBack
 
 	ds 4 ; old level 1 learnset

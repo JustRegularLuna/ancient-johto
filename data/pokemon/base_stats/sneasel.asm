@@ -7,7 +7,7 @@
 	db 60 ; catch rate
 	db 132 ; base exp
 
-	INCBIN "gfx/pokemon/front/sneasel.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/sneasel.pic", 0, 1 ; sprite dimensions
 	dw SneaselPicFront, SneaselPicBack
 
 	ds 4 ; old level 1 learnset

@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 177 ; base exp
 
-	INCBIN "gfx/pokemon/front/golem.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/golem.pic", 0, 1 ; sprite dimensions
 	dw GolemPicFront, GolemPicBack
 
 	ds 4 ; old level 1 learnset

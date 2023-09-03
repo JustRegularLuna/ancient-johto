@@ -7,7 +7,6 @@ main.o \
 maps.o \
 text.o \
 wram.o \
-gfx/pics.o \
 gfx/sprites.o \
 gfx/tilesets.o
 

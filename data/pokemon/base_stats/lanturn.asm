@@ -7,7 +7,7 @@
 	db 75 ; catch rate
 	db 161 ; base exp
 
-	INCBIN "gfx/pokemon/front/lanturn.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/lanturn.pic", 0, 1 ; sprite dimensions
 	dw LanturnPicFront, LanturnPicBack
 
 	ds 4 ; old level 1 learnset

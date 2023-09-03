@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 142 ; base exp
 
-	INCBIN "gfx/pokemon/front/charmeleon.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/charmeleon.pic", 0, 1 ; sprite dimensions
 	dw CharmeleonPicFront, CharmeleonPicBack
 
 	ds 4 ; old level 1 learnset

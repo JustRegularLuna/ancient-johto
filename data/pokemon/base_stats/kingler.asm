@@ -7,7 +7,7 @@
 	db 60 ; catch rate
 	db 206 ; base exp
 
-	INCBIN "gfx/pokemon/front/kingler.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/kingler.pic", 0, 1 ; sprite dimensions
 	dw KinglerPicFront, KinglerPicBack
 
 	ds 4 ; old level 1 learnset

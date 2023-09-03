@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 198 ; base exp
 
-	INCBIN "gfx/pokemon/front/flareon.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/flareon.pic", 0, 1 ; sprite dimensions
 	dw FlareonPicFront, FlareonPicBack
 
 	ds 4 ; old level 1 learnset

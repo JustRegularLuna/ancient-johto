@@ -7,7 +7,7 @@
 	db 60 ; catch rate
 	db 113 ; base exp
 
-	INCBIN "gfx/pokemon/front/corsola.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/corsola.pic", 0, 1 ; sprite dimensions
 	dw CorsolaPicFront, CorsolaPicBack
 
 	ds 4 ; old level 1 learnset

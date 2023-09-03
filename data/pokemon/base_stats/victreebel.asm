@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 191 ; base exp
 
-	INCBIN "gfx/pokemon/front/victreebel.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/victreebel.pic", 0, 1 ; sprite dimensions
 	dw VictreebelPicFront, VictreebelPicBack
 
 	ds 4 ; old level 1 learnset

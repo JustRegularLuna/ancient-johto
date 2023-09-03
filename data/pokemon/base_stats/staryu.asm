@@ -7,7 +7,7 @@
 	db 225 ; catch rate
 	db 106 ; base exp
 
-	INCBIN "gfx/pokemon/front/staryu.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/staryu.pic", 0, 1 ; sprite dimensions
 	dw StaryuPicFront, StaryuPicBack
 
 	ds 4 ; old level 1 learnset

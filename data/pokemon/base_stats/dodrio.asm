@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 158 ; base exp
 
-	INCBIN "gfx/pokemon/front/dodrio.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/dodrio.pic", 0, 1 ; sprite dimensions
 	dw DodrioPicFront, DodrioPicBack
 
 	ds 4 ; old level 1 learnset

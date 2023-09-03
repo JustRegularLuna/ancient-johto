@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 143 ; base exp
 
-	INCBIN "gfx/pokemon/front/croconaw.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/croconaw.pic", 0, 1 ; sprite dimensions
 	dw CroconawPicFront, CroconawPicBack
 
 	ds 4 ; old level 1 learnset

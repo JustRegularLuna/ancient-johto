@@ -7,7 +7,7 @@
 	db 90 ; catch rate
 	db 134 ; base exp
 
-	INCBIN "gfx/pokemon/front/ariados.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/ariados.pic", 0, 1 ; sprite dimensions
 	dw AriadosPicFront, AriadosPicBack
 
 	ds 4 ; old level 1 learnset

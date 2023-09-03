@@ -7,7 +7,7 @@
 	db 75 ; catch rate
 	db 155 ; base exp
 
-	INCBIN "gfx/pokemon/front/seadra.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/seadra.pic", 0, 1 ; sprite dimensions
 	dw SeadraPicFront, SeadraPicBack
 
 	ds 4 ; old level 1 learnset

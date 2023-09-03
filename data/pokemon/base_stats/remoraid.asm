@@ -7,7 +7,7 @@
 	db 190 ; catch rate
 	db 78 ; base exp
 
-	INCBIN "gfx/pokemon/front/remoraid.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/remoraid.pic", 0, 1 ; sprite dimensions
 	dw RemoraidPicFront, RemoraidPicBack
 
 	ds 4 ; old level 1 learnset

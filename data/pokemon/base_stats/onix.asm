@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 108 ; base exp
 
-	INCBIN "gfx/pokemon/front/onix.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/onix.pic", 0, 1 ; sprite dimensions
 	dw OnixPicFront, OnixPicBack
 
 	ds 4 ; old level 1 learnset

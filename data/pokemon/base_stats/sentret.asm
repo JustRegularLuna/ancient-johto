@@ -7,7 +7,7 @@
 	db 255 ; catch rate
 	db 57 ; base exp
 
-	INCBIN "gfx/pokemon/front/sentret.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/sentret.pic", 0, 1 ; sprite dimensions
 	dw SentretPicFront, SentretPicBack
 
 	ds 4 ; old level 1 learnset

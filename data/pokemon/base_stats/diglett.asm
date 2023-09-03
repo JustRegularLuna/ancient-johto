@@ -7,7 +7,7 @@
 	db 255 ; catch rate
 	db 81 ; base exp
 
-	INCBIN "gfx/pokemon/front/diglett.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/diglett.pic", 0, 1 ; sprite dimensions
 	dw DiglettPicFront, DiglettPicBack
 
 	ds 4 ; old level 1 learnset

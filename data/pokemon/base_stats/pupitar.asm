@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 144 ; base exp
 
-	INCBIN "gfx/pokemon/front/pupitar.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/pupitar.pic", 0, 1 ; sprite dimensions
 	dw PupitarPicFront, PupitarPicBack
 
 	ds 4 ; old level 1 learnset

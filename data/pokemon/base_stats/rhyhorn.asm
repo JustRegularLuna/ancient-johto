@@ -7,7 +7,7 @@
 	db 120 ; catch rate
 	db 135 ; base exp
 
-	INCBIN "gfx/pokemon/front/rhyhorn.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/rhyhorn.pic", 0, 1 ; sprite dimensions
 	dw RhyhornPicFront, RhyhornPicBack
 
 	ds 4 ; old level 1 learnset

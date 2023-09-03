@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 66 ; base exp
 
-	INCBIN "gfx/pokemon/front/totodile.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/totodile.pic", 0, 1 ; sprite dimensions
 	dw TotodilePicFront, TotodilePicBack
 
 	ds 4 ; old level 1 learnset

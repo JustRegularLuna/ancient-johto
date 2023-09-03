@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 137 ; base exp
 
-	INCBIN "gfx/pokemon/front/jynx.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/jynx.pic", 0, 1 ; sprite dimensions
 	dw JynxPicFront, JynxPicBack
 
 	ds 4 ; old level 1 learnset

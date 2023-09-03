@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 94 ; base exp
 
-	INCBIN "gfx/pokemon/front/aipom.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/aipom.pic", 0, 1 ; sprite dimensions
 	dw AipomPicFront, AipomPicBack
 
 	ds 4 ; old level 1 learnset

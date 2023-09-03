@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 64 ; base exp
 
-	INCBIN "gfx/pokemon/front/celebi.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/celebi.pic", 0, 1 ; sprite dimensions
 	dw CelebiPicFront, CelebiPicBack
 
 	ds 4 ; old level 1 learnset

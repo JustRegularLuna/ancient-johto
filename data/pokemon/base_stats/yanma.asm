@@ -7,7 +7,7 @@
 	db 75 ; catch rate
 	db 147 ; base exp
 
-	INCBIN "gfx/pokemon/front/yanma.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/yanma.pic", 0, 1 ; sprite dimensions
 	dw YanmaPicFront, YanmaPicBack
 
 	ds 4 ; old level 1 learnset

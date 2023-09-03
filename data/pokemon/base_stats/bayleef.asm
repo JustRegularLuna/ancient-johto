@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 141 ; base exp
 
-	INCBIN "gfx/pokemon/front/bayleef.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/bayleef.pic", 0, 1 ; sprite dimensions
 	dw BayleefPicFront, BayleefPicBack
 
 	ds 4 ; old level 1 learnset

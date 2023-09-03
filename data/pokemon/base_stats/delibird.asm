@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 183 ; base exp
 
-	INCBIN "gfx/pokemon/front/delibird.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/delibird.pic", 0, 1 ; sprite dimensions
 	dw DelibirdPicFront, DelibirdPicBack
 
 	ds 4 ; old level 1 learnset

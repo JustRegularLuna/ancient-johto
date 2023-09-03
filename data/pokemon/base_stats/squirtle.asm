@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 66 ; base exp
 
-	INCBIN "gfx/pokemon/front/squirtle.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/squirtle.pic", 0, 1 ; sprite dimensions
 	dw SquirtlePicFront, SquirtlePicBack
 
 	ds 4 ; old level 1 learnset

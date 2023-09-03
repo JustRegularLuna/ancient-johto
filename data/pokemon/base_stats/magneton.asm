@@ -7,7 +7,7 @@
 	db 60 ; catch rate
 	db 161 ; base exp
 
-	INCBIN "gfx/pokemon/front/magneton.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/magneton.pic", 0, 1 ; sprite dimensions
 	dw MagnetonPicFront, MagnetonPicBack
 
 	ds 4 ; old level 1 learnset

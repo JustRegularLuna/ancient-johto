@@ -7,7 +7,7 @@
 	db 90 ; catch rate
 	db 171 ; base exp
 
-	INCBIN "gfx/pokemon/front/golbat.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/golbat.pic", 0, 1 ; sprite dimensions
 	dw GolbatPicFront, GolbatPicBack
 
 	ds 4 ; old level 1 learnset

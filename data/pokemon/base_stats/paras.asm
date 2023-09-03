@@ -7,7 +7,7 @@
 	db 190 ; catch rate
 	db 70 ; base exp
 
-	INCBIN "gfx/pokemon/front/paras.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/paras.pic", 0, 1 ; sprite dimensions
 	dw ParasPicFront, ParasPicBack
 
 	ds 4 ; old level 1 learnset

@@ -7,7 +7,7 @@
 	db 30 ; catch rate
 	db 255 ; base exp
 
-	INCBIN "gfx/pokemon/front/blissey.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/blissey.pic", 0, 1 ; sprite dimensions
 	dw BlisseyPicFront, BlisseyPicBack
 
 	ds 4 ; old level 1 learnset

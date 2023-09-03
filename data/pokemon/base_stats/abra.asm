@@ -7,7 +7,7 @@
 	db 200 ; catch rate
 	db 73 ; base exp
 
-	INCBIN "gfx/pokemon/front/abra.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/abra.pic", 0, 1 ; sprite dimensions
 	dw AbraPicFront, AbraPicBack
 
 	ds 4 ; old level 1 learnset

@@ -7,7 +7,7 @@
 	db 190 ; catch rate
 	db 90 ; base exp
 
-	INCBIN "gfx/pokemon/front/grimer.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/grimer.pic", 0, 1 ; sprite dimensions
 	dw GrimerPicFront, GrimerPicBack
 
 	ds 4 ; old level 1 learnset

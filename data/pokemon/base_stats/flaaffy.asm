@@ -7,7 +7,7 @@
 	db 120 ; catch rate
 	db 117 ; base exp
 
-	INCBIN "gfx/pokemon/front/flaaffy.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/flaaffy.pic", 0, 1 ; sprite dimensions
 	dw FlaaffyPicFront, FlaaffyPicBack
 
 	ds 4 ; old level 1 learnset

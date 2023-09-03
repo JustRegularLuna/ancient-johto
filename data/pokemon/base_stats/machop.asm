@@ -7,7 +7,7 @@
 	db 180 ; catch rate
 	db 88 ; base exp
 
-	INCBIN "gfx/pokemon/front/machop.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/machop.pic", 0, 1 ; sprite dimensions
 	dw MachopPicFront, MachopPicBack
 
 	ds 4 ; old level 1 learnset

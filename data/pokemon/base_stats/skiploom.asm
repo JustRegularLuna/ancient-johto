@@ -7,7 +7,7 @@
 	db 120 ; catch rate
 	db 136 ; base exp
 
-	INCBIN "gfx/pokemon/front/skiploom.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/skiploom.pic", 0, 1 ; sprite dimensions
 	dw SkiploomPicFront, SkiploomPicBack
 
 	ds 4 ; old level 1 learnset

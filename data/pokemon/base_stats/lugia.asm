@@ -7,7 +7,7 @@
 	db 3 ; catch rate
 	db 64 ; base exp
 
-	INCBIN "gfx/pokemon/front/lugia.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/lugia.pic", 0, 1 ; sprite dimensions
 	dw LugiaPicFront, LugiaPicBack
 
 	ds 4 ; old level 1 learnset

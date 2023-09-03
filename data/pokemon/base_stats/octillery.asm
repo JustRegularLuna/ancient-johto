@@ -7,7 +7,7 @@
 	db 75 ; catch rate
 	db 164 ; base exp
 
-	INCBIN "gfx/pokemon/front/octillery.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/octillery.pic", 0, 1 ; sprite dimensions
 	dw OctilleryPicFront, OctilleryPicBack
 
 	ds 4 ; old level 1 learnset

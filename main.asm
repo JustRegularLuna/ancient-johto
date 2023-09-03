@@ -734,3 +734,11 @@ INCLUDE "engine/gfx/tileset_anim.asm"
 SECTION "Custom Splash Screens", ROMX
 
 INCLUDE "engine/movie/marill_text_screens.asm"
+
+
+; Pic Includes
+IF DEF(_RED)
+	INCLUDE "gfx/pics_red.asm"
+ELSE
+	INCLUDE "gfx/pics_blue.asm"
+ENDC

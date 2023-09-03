@@ -7,7 +7,7 @@
 	db 190 ; catch rate
 	db 75 ; base exp
 
-	INCBIN "gfx/pokemon/front/venonat.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/venonat.pic", 0, 1 ; sprite dimensions
 	dw VenonatPicFront, VenonatPicBack
 
 	ds 4 ; old level 1 learnset

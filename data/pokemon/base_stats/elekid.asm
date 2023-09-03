@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 156 ; base exp
 
-	INCBIN "gfx/pokemon/front/elekid.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/elekid.pic", 0, 1 ; sprite dimensions
 	dw ElekidPicFront, ElekidPicBack
 
 	ds 4 ; old level 1 learnset

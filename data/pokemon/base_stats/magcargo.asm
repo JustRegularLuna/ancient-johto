@@ -7,7 +7,7 @@
 	db 75 ; catch rate
 	db 154 ; base exp
 
-	INCBIN "gfx/pokemon/front/magcargo.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/magcargo.pic", 0, 1 ; sprite dimensions
 	dw MagcargoPicFront, MagcargoPicBack
 
 	ds 4 ; old level 1 learnset

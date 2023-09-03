@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 199 ; base exp
 
-	INCBIN "gfx/pokemon/front/omastar.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/omastar.pic", 0, 1 ; sprite dimensions
 	dw OmastarPicFront, OmastarPicBack
 
 	ds 4 ; old level 1 learnset

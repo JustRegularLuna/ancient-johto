@@ -7,7 +7,7 @@
 	db 190 ; catch rate
 	db 91 ; base exp
 
-	INCBIN "gfx/pokemon/front/growlithe.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/growlithe.pic", 0, 1 ; sprite dimensions
 	dw GrowlithePicFront, GrowlithePicBack
 
 	ds 4 ; old level 1 learnset

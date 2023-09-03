@@ -7,7 +7,7 @@
 	db 225 ; catch rate
 	db 61 ; base exp
 
-	INCBIN "gfx/pokemon/front/unown.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/unown.pic", 0, 1 ; sprite dimensions
 	dw UnownPicFront, UnownPicBack
 
 	ds 4 ; old level 1 learnset

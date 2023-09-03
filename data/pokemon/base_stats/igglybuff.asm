@@ -7,7 +7,7 @@
 	db 170 ; catch rate
 	db 76 ; base exp
 
-	INCBIN "gfx/pokemon/front/igglybuff.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/igglybuff.pic", 0, 1 ; sprite dimensions
 	dw IgglybuffPicFront, IgglybuffPicBack
 
 	ds 4 ; old level 1 learnset

@@ -7,7 +7,7 @@
 	db 225 ; catch rate
 	db 115 ; base exp
 
-	INCBIN "gfx/pokemon/front/krabby.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/krabby.pic", 0, 1 ; sprite dimensions
 	dw KrabbyPicFront, KrabbyPicBack
 
 	ds 4 ; old level 1 learnset

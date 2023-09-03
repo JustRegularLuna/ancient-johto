@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 194 ; base exp
 
-	INCBIN "gfx/pokemon/front/ampharos.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/ampharos.pic", 0, 1 ; sprite dimensions
 	dw AmpharosPicFront, AmpharosPicBack
 
 	ds 4 ; old level 1 learnset

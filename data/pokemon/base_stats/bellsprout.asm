@@ -7,7 +7,7 @@
 	db 255 ; catch rate
 	db 84 ; base exp
 
-	INCBIN "gfx/pokemon/front/bellsprout.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/bellsprout.pic", 0, 1 ; sprite dimensions
 	dw BellsproutPicFront, BellsproutPicBack
 
 	ds 4 ; old level 1 learnset

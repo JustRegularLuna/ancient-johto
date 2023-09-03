@@ -7,7 +7,7 @@
 	db 60 ; catch rate
 	db 204 ; base exp
 
-	INCBIN "gfx/pokemon/front/rhydon.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/rhydon.pic", 0, 1 ; sprite dimensions
 	dw RhydonPicFront, RhydonPicBack
 
 	ds 4 ; old level 1 learnset

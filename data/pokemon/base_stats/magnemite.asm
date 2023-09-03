@@ -7,7 +7,7 @@
 	db 190 ; catch rate
 	db 89 ; base exp
 
-	INCBIN "gfx/pokemon/front/magnemite.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/magnemite.pic", 0, 1 ; sprite dimensions
 	dw MagnemitePicFront, MagnemitePicBack
 
 	ds 4 ; old level 1 learnset

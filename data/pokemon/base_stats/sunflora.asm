@@ -7,7 +7,7 @@
 	db 120 ; catch rate
 	db 146 ; base exp
 
-	INCBIN "gfx/pokemon/front/sunflora.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/sunflora.pic", 0, 1 ; sprite dimensions
 	dw SunfloraPicFront, SunfloraPicBack
 
 	ds 4 ; old level 1 learnset

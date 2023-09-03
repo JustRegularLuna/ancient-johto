@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 196 ; base exp
 
-	INCBIN "gfx/pokemon/front/vaporeon.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/vaporeon.pic", 0, 1 ; sprite dimensions
 	dw VaporeonPicFront, VaporeonPicBack
 
 	ds 4 ; old level 1 learnset

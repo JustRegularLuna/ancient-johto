@@ -7,7 +7,7 @@
 	db 3 ; catch rate
 	db 220 ; base exp
 
-	INCBIN "gfx/pokemon/front/hooh.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/gmon/hooh.pic", 0, 1 ; sprite dimensions
 	dw HoohPicFront, HoohPicBack
 
 	ds 4 ; old level 1 learnset
