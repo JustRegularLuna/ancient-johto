@@ -231,6 +231,11 @@ ItemUseBall:
 	call Random
 	ld b, a
 
+; Add cheat for B + Down
+	ld a, [hJoyInput]
+	cp B_BUTTON | D_DOWN
+	jp z, .captured
+
 ; Get the item ID.
 	ld hl, wcf91
 	ld a, [hl]
