@@ -66,10 +66,10 @@ VersionScreenText:
 	db   " !! WARNING !!"
 	next "CHEAT CODES FOR"
 	next "VANILLA GAMES DO"
-	next "NOT WORK HERE!"
+	next "NOT WORK ANYMORE"
 	next ""
-	next "Too much has"
-	next "been changed.@"
+	next "Working codes"
+	next "are in F.A.Q.@"
 
 VersionScreenText2:
 	db   "This is a free,"
