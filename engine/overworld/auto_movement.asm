@@ -44,25 +44,20 @@ _EndNPCMovementScript::
 	ld [wSimulatedJoypadStatesEnd], a
 	ret
 
-PalletMovementScriptPointerTable::
-	dw PalletMovementScript_OakMoveLeft
-	dw PalletMovementScript_PlayerMoveLeft
-	dw PalletMovementScript_WaitAndWalkToLab
-	dw PalletMovementScript_WalkToLab
-	dw PalletMovementScript_Done
+NewBarkMovementScriptPointerTable::
+	dw NewBarkMovementScript_LadyMoveOver
+	dw NewBarkMovementScript_PlayerMoveOver
+	dw NewBarkMovementScript_WaitAndWalkBack
+	dw NewBarkMovementScript_WalkBack
+	dw NewBarkMovementScript_Done
 
-PalletMovementScript_OakMoveLeft:
-	ld a, [wXCoord]
-	sub $a
+NewBarkMovementScript_LadyMoveOver:
+	ld a, 1
 	ld [wNumStepsToTake], a
-	jr z, .playerOnLeftTile
-; The player is on the right tile of the northern path out of Pallet Town and
-; Prof. Oak is below.
-; Make Prof. Oak step to the left.
 	ld b, 0
 	ld c, a
 	ld hl, wNPCMovementDirections2
-	ld a, NPC_MOVEMENT_LEFT
+	ld a, NPC_MOVEMENT_RIGHT
 	call FillMemory
 	ld [hl], $ff
 	ld a, [wSpriteIndex]
@@ -71,24 +66,14 @@ PalletMovementScript_OakMoveLeft:
 	call MoveSprite
 	ld a, $1
 	ld [wNPCMovementScriptFunctionNum], a
-	jr .done
-; The player is on the left tile of the northern path out of Pallet Town and
-; Prof. Oak is below.
-; Prof. Oak is already where he needs to be.
-.playerOnLeftTile
-	ld a, $3
-	ld [wNPCMovementScriptFunctionNum], a
-.done
-	ld hl, wFlags_D733
-	set 1, [hl]
 	ld a, $fc
 	ld [wJoyIgnore], a
 	ret
 
-PalletMovementScript_PlayerMoveLeft:
+NewBarkMovementScript_PlayerMoveOver:
 	ld a, [wd730]
 	bit 0, a ; is an NPC being moved by a script?
-	ret nz ; return if Oak is still moving
+	ret nz ; return if Lady is still moving
 	ld a, [wNumStepsToTake]
 	ld [wSimulatedJoypadStatesIndex], a
 	ldh [hNPCMovementDirections2Index], a
@@ -98,12 +83,12 @@ PalletMovementScript_PlayerMoveLeft:
 	ld [wNPCMovementScriptFunctionNum], a
 	ret
 
-PalletMovementScript_WaitAndWalkToLab:
+NewBarkMovementScript_WaitAndWalkBack:
 	ld a, [wSimulatedJoypadStatesIndex]
 	and a ; is the player done moving left yet?
 	ret nz
 
-PalletMovementScript_WalkToLab:
+NewBarkMovementScript_WalkBack:
 	xor a
 	ld [wOverrideSimulatedJoypadStatesMask], a
 	ld a, [wSpriteIndex]
@@ -112,12 +97,22 @@ PalletMovementScript_WalkToLab:
 	xor a
 	ld [wSpritePlayerStateData2MovementByte1], a
 	ld hl, wSimulatedJoypadStatesEnd
-	ld de, RLEList_PlayerWalkToLab
+	ld a, [wYCoord]
+	cp 8
+	ld de, RLEList_PlayerFollowLady
+	jr z, .gotCoord
+	ld de, RLEList_PlayerFollowLady2
+.gotCoord
 	call DecodeRLEList
 	dec a
 	ld [wSimulatedJoypadStatesIndex], a
 	ld hl, wNPCMovementDirections2
-	ld de, RLEList_ProfOakWalkToLab
+	ld a, [wYCoord]
+	cp 8
+	ld de, RLEList_LadyWalkBack
+	jr z, .gotCoord2
+	ld de, RLEList_LadyWalkBack2
+.gotCoord2
 	call DecodeRLEList
 	ld hl, wd72e
 	res 7, [hl]
@@ -127,30 +122,28 @@ PalletMovementScript_WalkToLab:
 	ld [wNPCMovementScriptFunctionNum], a
 	ret
 
-RLEList_ProfOakWalkToLab:
-	db NPC_MOVEMENT_DOWN, 5
-	db NPC_MOVEMENT_LEFT, 1
-	db NPC_MOVEMENT_DOWN, 5
-	db NPC_MOVEMENT_RIGHT, 3
-	db NPC_MOVEMENT_UP, 1
-	db NPC_CHANGE_FACING, 1
+RLEList_LadyWalkBack:
+	db NPC_MOVEMENT_RIGHT, 5
 	db -1 ; end
 
-RLEList_PlayerWalkToLab:
-	db D_UP, 2
-	db D_RIGHT, 3
-	db D_DOWN, 5
-	db D_LEFT, 1
-	db D_DOWN, 6
+RLEList_LadyWalkBack2:
+	db NPC_MOVEMENT_RIGHT, 4
 	db -1 ; end
 
-PalletMovementScript_Done:
+RLEList_PlayerFollowLady:
+	db D_RIGHT, 4
+	db NO_INPUT, 1
+	db -1 ; end
+
+RLEList_PlayerFollowLady2:
+	db D_RIGHT, 4
+	db D_UP, 1
+	db -1 ; end
+
+NewBarkMovementScript_Done:
 	ld a, [wSimulatedJoypadStatesIndex]
 	and a
 	ret nz
-	;ld a, HS_PALLET_TOWN_OAK
-	;ld [wMissableObjectIndex], a
-	;predef HideObject
 	ld hl, wd730
 	res 7, [hl]
 	ld hl, wd72e

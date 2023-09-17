@@ -16,7 +16,10 @@ NUM_HS_OBJECTS EQU const_value
 
 ; Johto flags
 	const_def
-	const HS_NEW_BARK_RIVAL                ; 00
-	const HS_ROUTE_29_POTION               ; 01
+	const HS_ROUTE_29_POTION
+	const HS_ELMS_LAB_RIVAL
+	const HS_STARTER_BALL_1
+	const HS_STARTER_BALL_2
+	const HS_STARTER_BALL_3
 
 NUM_JOHTO_HS_OBJECTS EQU const_value

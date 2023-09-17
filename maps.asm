@@ -984,15 +984,31 @@ AgathasRoom_Blocks: INCBIN "maps/kanto/AgathasRoom.blk"
 
 
 
-SECTION "Johto Maps 1", ROMX
+SECTION "Johto Cities 1", ROMX
 
 INCLUDE "data/maps/headers/NewBarkTown.asm"
 INCLUDE "maps/johto/NewBarkTown.asm"
 NewBarkTown_Blocks: INCBIN "maps/johto/NewBarkTown.blk"
 
+INCLUDE "data/maps/headers/CherrygroveCity.asm"
+INCLUDE "maps/johto/CherrygroveCity.asm"
+CherrygroveCity_Blocks: INCBIN "maps/johto/CherrygroveCity.blk"
+
 INCLUDE "data/maps/headers/Route29.asm"
 INCLUDE "maps/johto/Route29.asm"
 Route29_Blocks: INCBIN "maps/johto/Route29.blk"
+
+INCLUDE "data/maps/headers/Route30.asm"
+INCLUDE "maps/johto/Route30.asm"
+Route30_Blocks: INCBIN "maps/johto/Route30.blk"
+
+INCLUDE "data/maps/headers/Route31.asm"
+INCLUDE "maps/johto/Route31.asm"
+Route31_Blocks: INCBIN "maps/johto/Route31.blk"
+
+
+
+SECTION "Johto Maps 1", ROMX
 
 INCLUDE "data/maps/headers/PlayersHouse1F.asm"
 INCLUDE "maps/johto/PlayersHouse1F.asm"
@@ -1005,18 +1021,6 @@ PlayersHouse2F_Blocks: INCBIN "maps/johto/PlayersHouse2F.blk"
 INCLUDE "data/maps/headers/ElmsLab.asm"
 INCLUDE "maps/johto/ElmsLab.asm"
 ElmsLab_Blocks: INCBIN "maps/johto/ElmsLab.blk"
-
-INCLUDE "data/maps/headers/CherrygroveCity.asm"
-INCLUDE "maps/johto/CherrygroveCity.asm"
-CherrygroveCity_Blocks: INCBIN "maps/johto/CherrygroveCity.blk"
-
-INCLUDE "data/maps/headers/Route30.asm"
-INCLUDE "maps/johto/Route30.asm"
-Route30_Blocks: INCBIN "maps/johto/Route30.blk"
-
-INCLUDE "data/maps/headers/Route31.asm"
-INCLUDE "maps/johto/Route31.asm"
-Route31_Blocks: INCBIN "maps/johto/Route31.blk"
 
 INCLUDE "data/maps/headers/MrPokemonsHouse.asm"
 INCLUDE "maps/johto/MrPokemonsHouse.asm"

@@ -51,9 +51,8 @@ ROMX $5
 ;	"NPC Sprites 2"
 	"Battle Engine 2"
 ROMX $6
-	"Maps 1"
+	"Johto Cities 1"
 	"Play Time"
-	"Maps 2"
 	"Doors and Ledges"
 ROMX $7
 	"Maps 3"

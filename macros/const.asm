@@ -39,6 +39,11 @@ const_value = \1
 endc
 ENDM
 
+MACRO dw_const
+	dw \1
+	const \2
+ENDM
+
 MACRO rb_skip
 IF _NARG == 1
 rsset _RS + \1

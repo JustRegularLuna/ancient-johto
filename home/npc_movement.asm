@@ -41,7 +41,7 @@ RunNPCMovementScript::
 	ret
 
 .NPCMovementScriptPointerTables
-	dw PalletMovementScriptPointerTable
+	dw NewBarkMovementScriptPointerTable
 	dw PewterMuseumGuyMovementScriptPointerTable
 	dw PewterGymGuyMovementScriptPointerTable
 .playerStepOutFromDoor

@@ -2610,19 +2610,30 @@ wGenericTrainersCurScript::
 wPlayersHouse2FCurScript::
 	ds 1
 
+wNewBarkTownCurScript::
+	ds 1
+
+wElmsLabCurScript::
+	ds 1
+
 wSafariZoneGateCurScript::
 	ds 1
 
 wLoreleisRoomCurScript::
 	ds 1
+
 wBrunosRoomCurScript::
 	ds 1
+
 wAgathasRoomCurScript::
 	ds 1
+
 wLancesRoomCurScript::
 	ds 1
+
 wChampionsRoomCurScript::
 	ds 1
+
 wHallOfFameCurScript::
 	ds 1
 
@@ -2670,8 +2681,6 @@ wFossilMon::
 ; mon that will result from the item
 	ds 1
 
-	ds 2
-
 wEnemyMonOrTrainerClass::
 ; trainer classes start at OPP_ID_OFFSET
 	ds 1
@@ -2680,8 +2689,6 @@ wPlayerJumpingYScreenCoordsIndex::
 	ds 1
 
 wRivalStarter::
-	ds 1
-
 	ds 1
 
 wPlayerStarter::

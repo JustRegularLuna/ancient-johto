@@ -40,10 +40,9 @@ PlayersHouse1F_TextPointers:
 
 PlayersHouse1FMomText:
 	text_asm
-	ld a, [wPartyCount]
-	and a ; Does the player have a Pokémon?
+	CheckEvent EVENT_GOT_STARTER
 	jr nz, .heal
-	ld hl, PlayersHouseMomWakeUpText
+	ld hl, PlayersHouseMomGoSeeElmText
 	call PrintText
 	jr .done
 .heal
@@ -51,7 +50,7 @@ PlayersHouse1FMomText:
 .done
 	jp TextScriptEnd
 
-PlayersHouseMomWakeUpText:
+PlayersHouseMomGoSeeElmText:
 	text "MOM: <PLAYER>!"
 	line "PROF.ELM is wait-"
 	cont "ing for you."
@@ -97,9 +96,10 @@ PlayersHouseMomHealText2:
 	cont "visit me."
 	done
 
-PlayersHouse1FStoveText:
-	text "Someone has been"
-	line "cooking here…"
+PlayersHouse1FStoveText: ; Bell Beefer? Sloppy José? VOLCANO BAKEMEAT?
+	text "Spicy sloppy joes,"
+	line "made with taco"
+	cont "meat!"
 
 	para "It smells yummy!"
 	done
@@ -113,8 +113,9 @@ PlayersHouse1FFridgeText:
 	text "Let's see what's"
 	line "in the fridge…"
 
-	para "SODA POP and fresh"
-	line "LEMONADE!"
+	para "FRESH WATER and my"
+	line "favorite flavors"
+	cont "of SODA POP!"
 	done
 
 PlayersHouse1FTVText:
