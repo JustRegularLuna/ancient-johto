@@ -1716,13 +1716,13 @@ _IntroducePlayerText::
 	prompt
 
 _IntroduceRivalText::
-	text "Then there's this"
-	line "boy. He's been"
-	cont "your rival since"
-	cont "you were little."
+	text "Also, there's this"
+	line "shady guy I've"
+	cont "seen around…"
 
-	para "…Erm, what is"
-	line "his name again?"
+	para "You don't happen"
+	line "to know his name,"
+	cont "do you?"
 	prompt
 
 _OakSpeechText3::
@@ -1752,9 +1752,11 @@ _YourNameIsText::
 	prompt
 
 _HisNameIsText::
-	text "That's right! I"
-	line "remember now! His"
-	cont "name is <RIVAL>!"
+	text "I see, so his name"
+	line "is <RIVAL>…"
+
+	para "I'll keep that in"
+	line "mind…"
 	prompt
 
 _WillBeTradedText::

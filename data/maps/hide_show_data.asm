@@ -308,7 +308,6 @@ ElmsLabHS:
 	db ELMS_LAB, $01, SHOW
 	db ELMS_LAB, $02, SHOW
 	db ELMS_LAB, $03, SHOW
-	db ELMS_LAB, $04, SHOW
 ;end of list
 	db $FF, $01, SHOW ; end
 	assert_table_length NUM_JOHTO_HS_OBJECTS + 1

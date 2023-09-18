@@ -38,32 +38,12 @@ PlayersHouse2FScript0:
 	ld a, PLAYER_DIR_UP
 	ld [wPlayerMovingDirection], a
 
-IF DEF(_DEBUG)
-; debug event to silently add an eevee to your party
-	ld a, $80 ; prevent the player from naming the mon
-	ld [wMonDataLocation], a
-	ld a, EEVEE
-	ld [wcf91], a
-	ld a, 10
-	ld [wCurEnemyLVL], a
-	call AddPartyMon
-	ld de, wPartyMonNicks
-	ld hl, EeveesName
-	ld bc, NAME_LENGTH
-	call CopyData
-ENDC
-
 ; move on to next script
 	ld a, 1
 	ld [wPlayersHouse2FCurScript], a
 	; fallthrough
 PlayersHouse2FScript1:
 	ret
-
-IF DEF(_DEBUG)
-EeveesName:
-	db "MEME@@@@@@@"
-ENDC
 
 PlayersHouse2F_TextPointers:
 	dw PlayersHouse2FPCText
