@@ -16,6 +16,8 @@ NUM_HS_OBJECTS EQU const_value
 
 ; Johto flags
 	const_def
+	const HS_NEWBARK_RIVAL
+	const HS_CHERRYGROVE_RIVAL
 	const HS_ROUTE_29_POTION
 	const HS_STARTER_BALL_1
 	const HS_STARTER_BALL_2

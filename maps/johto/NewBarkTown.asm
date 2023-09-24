@@ -3,6 +3,7 @@
 	; NPCs
 	const NEWBARK_GIRL
 	const NEWBARK_FISHER
+	const NEWBARK_RIVAL
 	; Signs
 	const NEWBARK_TOWN_SIGN
 	const NEWBARK_PLAYERS_HOUSE_SIGN
@@ -29,6 +30,7 @@ NewBarkTown_Object:
 	def_objects
 	object SPRITE_GIRL,  6,  8, STAY, NONE, NEWBARK_GIRL
 	object SPRITE_FISHER, 12,  9, WALK, ANY_DIR, NEWBARK_FISHER
+	object SPRITE_RIVAL,  3,  2, STAY, RIGHT, NEWBARK_RIVAL
 
 	def_warps_to NEW_BARK_TOWN
 
@@ -211,6 +213,7 @@ NewBarkTownNoopScript:
 NewBarkTown_TextPointers:
 	dw NewBarkGirlText
 	dw NewBarkFatManText
+	dw NewBarkRivalText
 	dw NewBarkTownSignText
 	dw NewBarkPlayerHouseSignText
 	dw NewBarkElmsHouseSignText
@@ -251,6 +254,18 @@ NewBarkFatManText:
 	para "I hear PROF.ELM"
 	line "discovered some"
 	cont "new #MON."
+	done
+
+NewBarkRivalText:
+	text "…"
+
+	para "So, this is PROF."
+	line "ELM's lab…"
+
+	para "…"
+
+	para "What are you look-"
+	line "ing at, wimp?"
 	done
 
 NewBarkTownSignText:

@@ -274,8 +274,8 @@ ChampionsRoomHS:
 JohtoMapHSPointers:
 ; entries correspond to map ids
 	table_width 2, JohtoMapHSPointers
-	dw JohtoNoHS     ; New Bark
-	dw JohtoNoHS     ; Cherrygrove
+	dw NewBarkTownHS ; New Bark
+	dw CherrygroveHS ; Cherrygrove
 	dw Route29HS ; Route 29
 	dw JohtoNoHS ; Route 30
 	dw JohtoNoHS ; Route 31
@@ -302,6 +302,10 @@ JohtoMissableObjects:
 ; entries correspond to HS_* constants (see constants/hide_show_constants)
 	table_width 3, JohtoMissableObjects
 ; format: map id, object id, HIDE/SHOW
+NewBarkTownHS:
+	db NEW_BARK_TOWN, $03, SHOW
+CherrygroveHS:
+	db CHERRYGROVE_CITY, $01, HIDE
 Route29HS:
 	db ROUTE_29, $01, SHOW
 ElmsLabHS:

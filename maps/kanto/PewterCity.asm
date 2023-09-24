@@ -17,7 +17,7 @@ PewterCity_Object:
 	def_warps_to PEWTER_CITY
 
 PewterCity_Script:
-	call EnableAutoTextBoxDrawing
+	jp EnableAutoTextBoxDrawing
 
 PewterCity_TextPointers:
 	dw -1

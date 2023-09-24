@@ -1,3 +1,9 @@
+; text constants
+	const_def 1
+	; NPCs
+	const CHERRYGROVE_HOUSE3_GAMBLER
+	; signs
+
 CherrygroveHouse3_Object:
 	db $a ; border block
 
@@ -8,6 +14,7 @@ CherrygroveHouse3_Object:
 	def_signs
 
 	def_objects
+	object SPRITE_GAMBLER,  2,  3, STAY, RIGHT, CHERRYGROVE_HOUSE3_GAMBLER
 
 	def_warps_to CHERRYGROVE_HOUSE_3
 
@@ -16,8 +23,15 @@ CherrygroveHouse3_Script:
 	jp EnableAutoTextBoxDrawing
 
 CherrygroveHouse3_TextPointers:
-	dw CherrygroveHouse1Text3
+	dw CherrygroveHouse3GamblerText
 
-CherrygroveHouse1Text3:
-	text "Hello world!"
+CherrygroveHouse3GamblerText:
+	text "CHERRYGROVE CITY"
+	line "is a nice place"
+	cont "to live."
+
+	para "There were too"
+	line "many slackers"
+	cont "where I used to"
+	cont "live…"
 	done
