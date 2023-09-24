@@ -80,6 +80,7 @@ ELSE
 ENDC
 	ld [wCurRegion], a
 	ld [wDestinationRegion], a
+	ld [wLastBlackoutRegion], a
 	ld a, [wDefaultMap]
 	ld [wDestinationMap], a
 	call SpecialWarpIn
