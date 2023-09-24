@@ -17,7 +17,7 @@ UsableItems_PartyMenu:
 	db UP_GRADE
 	db KINGS_ROCK
 	db METAL_COAT
-	db HAPPY_CHARM
+	db SOOTHE_BELL
 	db FIRE_STONE
 	db THUNDER_STONE
 	db WATER_STONE

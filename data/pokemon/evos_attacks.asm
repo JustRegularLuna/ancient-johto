@@ -245,7 +245,7 @@ ZubatEvosAttacks:
 	db 0 ; no more level-up moves
 
 GolbatEvosAttacks:
-	db EVOLVE_ITEM, HAPPY_CHARM, 1, CROBAT
+	db EVOLVE_ITEM, SOOTHE_BELL, 1, CROBAT
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 0 ; no more level-up moves
@@ -641,7 +641,7 @@ RhydonEvosAttacks:
 	db 0 ; no more level-up moves
 
 ChanseyEvosAttacks:
-	db EVOLVE_ITEM, HAPPY_CHARM, 1, BLISSEY
+	db EVOLVE_ITEM, SOOTHE_BELL, 1, BLISSEY
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 0 ; no more level-up moves
@@ -964,25 +964,25 @@ LanturnEvosAttacks:
 	db 0 ; no more level-up moves
 
 PichuEvosAttacks:
-	db EVOLVE_ITEM, HAPPY_CHARM, 1, PIKACHU
+	db EVOLVE_ITEM, SOOTHE_BELL, 1, PIKACHU
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 0 ; no more level-up moves
 
 CleffaEvosAttacks:
-	db EVOLVE_ITEM, HAPPY_CHARM, 1, CLEFAIRY
+	db EVOLVE_ITEM, SOOTHE_BELL, 1, CLEFAIRY
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 0 ; no more level-up moves
 
 IgglybuffEvosAttacks:
-	db EVOLVE_ITEM, HAPPY_CHARM, 1, JIGGLYPUFF
+	db EVOLVE_ITEM, SOOTHE_BELL, 1, JIGGLYPUFF
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 0 ; no more level-up moves
 
 TogepiEvosAttacks:
-	db EVOLVE_ITEM, HAPPY_CHARM, 1, TOGETIC
+	db EVOLVE_ITEM, SOOTHE_BELL, 1, TOGETIC
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 0 ; no more level-up moves

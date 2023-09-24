@@ -16,7 +16,7 @@ ItemNames::
 	li "UP-GRADE"
 	li "KINGS ROCK"
 	li "METAL COAT"
-	li "HAPPY CHARM"
+	li "SOOTHE BELL"
 	li "ESCAPE ROPE"
 	li "REPEL"
 	li "SUPER REPEL"

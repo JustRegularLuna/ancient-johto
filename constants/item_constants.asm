@@ -28,7 +28,7 @@
 	const UP_GRADE      ;
 	const KINGS_ROCK    ;
 	const METAL_COAT    ;
-	const HAPPY_CHARM   ;
+	const SOOTHE_BELL   ;
 	const ESCAPE_ROPE   ;
 	const REPEL         ;
 	const SUPER_REPEL   ;
