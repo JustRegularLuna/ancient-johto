@@ -36,13 +36,14 @@ NEW BARK TOWN
 - Player's House looks like G/S, but just has RB events with new text
   - Keep it so Mom heals you like RBY
 - Generic NPC houses for the other houses
-- Silver walks up and bothers you as soon as you leave the house, and takes you to the lab
-- Elm's Lab works like Oak's lab
-  - You and Silver get your starter at the same time
-  - Battle Silver in the lab
-  - Deliver Mystery Egg, get 5 Pokeballs before you leave
-  - Heal Machine would not be needed if Mom still heals you like RBY
-- Alternately, remove the Rival battle in the lab
+- Dress lady catches you at the exit and drags you back to her spot
+- Elm's lab works similar to Gen 2
+  - No heal machine, just talk to your mom
+  - Choose a starter, see pokedex data like Gen 1
+  - Rival will steal a starter while you are picking up the thing from Mr. Pokemon
+  - No cop event
+  - Receive pokeballs from Aide after delivering parcel
+  - Receive SS Ticket after E4
 
 
 ========
@@ -57,12 +58,9 @@ ROUTE 29
 CHERRYGROVE CITY
 ================
 - Guide Gent in his house, giving the Town Map
-  - Reuse scripts from Daisy's house with new text
 - Mart checks if you have delivered parcel or not to know which mart inventory to load
   - Look at Viridian Mart as an example of loading different event text lists
-- Don't forget the Mystic Water guy, although he may need to give something else
-  - Can base his code on the TM guy in Viridian or any gift NPC
-  - Maybe a Water Stone?
+- Mystic Water NPC gives a Kings Rock instead
 
 
 =============
@@ -78,6 +76,7 @@ ROUTE 30 & 31
   - Other can be bugcatchers, lasses, etc. early game stuff
 - Berry Trees and a house talking about Berries
   - Based on the Badge info house from Cerulean, and the way I edited it in RPP3
+  - Put text on his TV so he is watching Fast Times at Ridgemont High lol
 
 
 =========
