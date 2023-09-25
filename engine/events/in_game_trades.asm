@@ -3,13 +3,9 @@ DoInGameTradeDialogue:
 	call SaveScreenTilesToBuffer2
 	ld hl, TradeMons
 	ld a, [wWhichTrade]
-	ld b, a
-	swap a
-	sub b
-	sub b
-	ld c, a
 	ld b, 0
-	add hl, bc
+	ld c, 3 + NAME_LENGTH + NAME_LENGTH
+	call AddNTimes
 	ld a, [hli]
 	ld [wInGameTradeGiveMonSpecies], a
 	ld a, [hli]
@@ -17,6 +13,9 @@ DoInGameTradeDialogue:
 	ld a, [hli]
 	push af
 	ld de, wInGameTradeMonNick
+	ld bc, NAME_LENGTH
+	call CopyData
+	ld de, wTrainerName
 	ld bc, NAME_LENGTH
 	call CopyData
 	pop af
@@ -35,6 +34,7 @@ DoInGameTradeDialogue:
 	ld a, [wInGameTradeReceiveMonSpecies]
 	ld de, wInGameTradeReceiveMonName
 	call InGameTrade_GetMonName
+	
 	ld hl, wCompletedInGameTradeFlags
 	ld a, [wWhichTrade]
 	ld c, a
@@ -174,7 +174,7 @@ InGameTrade_PrepareTradeData:
 	ld de, wTradedPlayerMonOT
 	ld bc, NAME_LENGTH
 	call InGameTrade_CopyData
-	ld hl, InGameTrade_TrainerString
+	ld hl, wTrainerName
 	ld de, wTradedEnemyMonOT
 	call InGameTrade_CopyData
 	ld de, wLinkEnemyTrainerName
@@ -209,7 +209,7 @@ InGameTrade_CopyDataToReceivedMon:
 	ld hl, wPartyMonOT
 	ld bc, NAME_LENGTH
 	call InGameTrade_GetReceivedMonPointer
-	ld hl, InGameTrade_TrainerString
+	ld hl, wTrainerName
 	ld bc, NAME_LENGTH
 	call CopyData
 	ld hl, wPartyMon1OTID
@@ -228,9 +228,6 @@ InGameTrade_GetReceivedMonPointer:
 	ld e, l
 	ld d, h
 	ret
-
-InGameTrade_TrainerString:
-	db "<TRAINER>@@@@@@@@@@"
 
 InGameTradeTextPointers:
 ; entries correspond to TRADE_DIALOGSET_* constants
