@@ -3,6 +3,7 @@
 	; NPCs
 	const CHERRYGROVE_POKECENTER_NURSE
 	const CHERRYGROVE_POKECENTER_LINK_RECEPTIONIST
+	const CHERRYGROVE_POKECENTER_WONDER_TRADE_RECEPTIONIST
 	const CHERRYGROVE_POKECENTER_BENCH_GUY
 	const CHERRYGROVE_POKECENTER_GENTLEMAN
 	; signs
@@ -21,6 +22,7 @@ CherrygrovePokecenter_Object:
 	def_objects
 	object SPRITE_NURSE,  3, 13, STAY, DOWN, CHERRYGROVE_POKECENTER_NURSE
 	object SPRITE_LINK_RECEPTIONIST,  5,  2, STAY, DOWN, CHERRYGROVE_POKECENTER_LINK_RECEPTIONIST
+	object SPRITE_LINK_RECEPTIONIST,  1,  1, STAY, DOWN, CHERRYGROVE_POKECENTER_WONDER_TRADE_RECEPTIONIST
 	object SPRITE_BENCH_GUY,  0, 16, STAY, NONE, CHERRYGROVE_POKECENTER_BENCH_GUY
 	object SPRITE_GENTLEMAN,  6, 14, STAY, DOWN, CHERRYGROVE_POKECENTER_GENTLEMAN
 
@@ -33,6 +35,7 @@ CherrygrovePokecenter_Script:
 CherrygrovePokecenter_TextPointers:
 	dw CherrygroveHealNurseText
 	dw CherrygroveTradeNurseText
+	dw CherrygroveWonderTradeNurseText
 	dw CherrygroveBenchGuyText
 	dw CherrygrovePokecenterGentlemanText
 
@@ -41,6 +44,11 @@ CherrygroveHealNurseText:
 
 CherrygroveTradeNurseText:
 	script_cable_club_receptionist
+
+CherrygroveWonderTradeNurseText:
+	text_asm
+	farcall DoWonderTradeDialogue
+	jp TextScriptEnd
 
 CherrygroveBenchGuyText:
 	text "Have you ever met"

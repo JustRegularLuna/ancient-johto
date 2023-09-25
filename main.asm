@@ -742,3 +742,7 @@ IF DEF(_RED)
 ELSE
 	INCLUDE "gfx/pics_blue.asm"
 ENDC
+
+SECTION "Wonder Trade", ROMX
+
+INCLUDE "engine/events/wonder_trade.asm"
