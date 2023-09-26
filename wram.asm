@@ -1562,8 +1562,6 @@ wDamageMultipliers::
 ; bit 7: STAB
 	ds 1
 
-wLoneAttackNo::
-; which entry in LoneAttacks to use
 wGymLeaderNo::
 ; it's actually the same thing as ^
 	ds 1
@@ -1961,8 +1959,8 @@ wMonHFrontSprite::
 wMonHBackSprite::
 	ds 2
 
-wMonHMoves::
-	ds NUM_MOVES
+wMonHPadding::
+	ds 4 ; originally was moves known at lv 1
 
 wMonHGrowthRate::
 	ds 1
