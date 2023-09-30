@@ -373,7 +373,7 @@ OverworldLoopLessDelay::
 	ld a, [wCurMap]
 	cp CINNABAR_GYM
 	jr nz, .notCinnabarGym
-	SetEvent EVENT_2A7
+	;SetEvent EVENT_2A7 ; *** What was this for?
 .notCinnabarGym
 	ld hl, wd72e
 	set 5, [hl]

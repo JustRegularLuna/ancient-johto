@@ -1,6 +1,3 @@
-UpdateCinnabarGymGateTileBlocks::
-	farjp UpdateCinnabarGymGateTileBlocks_
-
 CheckForHiddenObjectOrBookshelfOrCardKeyDoor::
 	ldh a, [hLoadedROMBank]
 	push af
