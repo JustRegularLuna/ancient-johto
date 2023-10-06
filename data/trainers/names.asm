@@ -1,77 +1,79 @@
 TrainerNames::
-	db "PROF.OAK@" ; PROF_OAK
-	db "RIVAL1@" ; RIVAL1
-	db "RIVAL2@" ; RIVAL2
-	db "FALKNER@" ; FALKNER
-	db "BUGSY@" ; BUGSY
-	db "WHITNEY@" ; WHITNEY
-	db "MORTY@" ; MORTY
-	db "PRYCE@" ; PRYCE
-	db "JASMINE@" ; JASMINE
-	db "CHUCK@" ; CHUCK
-	db "CLAIR@" ; CLAIR
-	db "WILL@" ; WILL
-	db "KOGA@" ; KOGA
-	db "BRUNO@" ; BRUNO
-	db "KAREN@" ; KAREN
-	db "LANCE@" ; CHAMPION
-	db "LORELEI@" ; LORELEI
-	db "AGATHA@" ; AGATHA
-	db "RED@" ; RED
-	db "BLUE@" ; BLUE
-	db "BROCK@" ; BROCK
-	db "MISTY@" ; MISTY
-	db "LT.SURGE@" ; LT_SURGE
-	db "ERIKA@" ; ERIKA
-	db "JANINE@" ; JANINE
-	db "SABRINA@" ; SABRINA
-	db "BLAINE@" ; BLAINE
-	db "GIOVANNI@" ; GIOVANNI
-	db "EXECUTIVE♂@" ; EXECUTIVEM
-	db "EXECUTIVE♀@" ; EXECUTIVEF
-	db "ROCKET♂@" ; GRUNTM
-	db "ROCKET♀@" ; GRUNTF
-	db "ROCKET DUO@" ; JESSIE_JAMES
-	db "SCIENTIST@" ; SCIENTIST
-	db "BURGLAR@" ; BURGLAR
-	db "YOUNGSTER@" ; YOUNGSTER
-	db "BUG CATCHER@" ; BUG_CATCHER
-	db "SCHOOLBOY@" ; SCHOOLBOY
-	db "BIRD KEEPER@" ; BIRD_KEEPER
-	db "TWINS@" ; TWINS
-	db "LASS@" ; LASS
-	db "BEAUTY@" ; BEAUTY
-	db "PICNICKER@" ; PICNICKER
-	db "CAMPER@" ; CAMPER
-	db "COOLTRAINER♂@" ; COOLTRAINERM
-	db "COOLTRAINER♀@" ; COOLTRAINERF
-	db "POKéMANIAC@" ; POKEMANIAC
-	db "SUPER NERD@" ; SUPER_NERD
-	db "GENTLEMAN@" ; GENTLEMAN
-	db "SKIER@" ; SKIER
-	db "BOARDER@" ; BOARDER
-	db "TEACHER@" ; TEACHER
-	db "FISHERMAN@" ; FISHER
-	db "SWIMMER♂@" ; SWIMMERM
-	db "SWIMMER♀@" ; SWIMMERF
-	db "SAILOR@" ; SAILOR
-	db "ROCKER@" ; ROCKER
-	db "GUITARIST@" ; GUITARIST
-	db "HIKER@" ; HIKER
-	db "BIKER@" ; BIKER
-	db "CUE BALL@" ; CUE_BALL
-	db "GAMBLER@" ; GAMBLER
-	db "TAMER@" ; TAMER
-	db "FIREBREATHER@" ; FIREBREATHER
-	db "JUGGLER@" ; JUGGLER
-	db "BLACKBELT@" ; BLACKBELT
-	db "PSYCHIC@" ; PSYCHIC_TR
-	db "ENGINEER@" ; ENGINEER
-	db "SAGE@" ; SAGE
-	db "MEDIUM@" ; MEDIUM
-	db "CHANNELER@" ; CHANNELER
-	db "KIMONO GIRL@" ; KIMONO_GIRL
-	db "POKéFAN♀@" ; POKEFANF
-	db "POKéFAN♂@" ; POKEFANM
-	db "OFFICER@" ; OFFICER
-	db "REI@"
+	list_start TrainerNames
+	li "PROF.OAK"
+	li "RIVAL1"
+	li "RIVAL2"
+	li "FALKNER"
+	li "BUGSY"
+	li "WHITNEY"
+	li "MORTY"
+	li "PRYCE"
+	li "JASMINE"
+	li "CHUCK"
+	li "CLAIR"
+	li "WILL"
+	li "KOGA"
+	li "BRUNO"
+	li "KAREN"
+	li "LANCE"
+	li "LORELEI"
+	li "AGATHA"
+	li "RED"
+	li "BLUE"
+	li "BROCK"
+	li "MISTY"
+	li "LT.SURGE"
+	li "ERIKA"
+	li "JANINE"
+	li "SABRINA"
+	li "BLAINE"
+	li "GIOVANNI"
+	li "EXECUTIVE♂"
+	li "EXECUTIVE♀"
+	li "ROCKET♂"
+	li "ROCKET♀"
+	li "ROCKET DUO"
+	li "SCIENTIST"
+	li "BURGLAR"
+	li "YOUNGSTER"
+	li "BUG CATCHER"
+	li "SCHOOLBOY"
+	li "BIRD KEEPER"
+	li "TWINS"
+	li "LASS"
+	li "BEAUTY"
+	li "PICNICKER"
+	li "CAMPER"
+	li "COOLTRAINER♂"
+	li "COOLTRAINER♀"
+	li "POKéMANIAC"
+	li "SUPER NERD"
+	li "GENTLEMAN"
+	li "SKIER"
+	li "BOARDER"
+	li "TEACHER"
+	li "FISHERMAN"
+	li "SWIMMER♂"
+	li "SWIMMER♀"
+	li "SAILOR"
+	li "ROCKER"
+	li "GUITARIST"
+	li "HIKER"
+	li "BIKER"
+	li "CUE BALL"
+	li "GAMBLER"
+	li "TAMER"
+	li "FIREBREATHER"
+	li "JUGGLER"
+	li "BLACKBELT"
+	li "PSYCHIC"
+	li "ENGINEER"
+	li "SAGE"
+	li "MEDIUM"
+	li "CHANNELER"
+	li "KIMONO GIRL"
+	li "POKéFAN♀"
+	li "POKéFAN♂"
+	li "OFFICER"
+	li "REI"
+	assert_list_length NUM_TRAINERS
