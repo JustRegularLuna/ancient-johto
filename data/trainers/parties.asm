@@ -1,4 +1,5 @@
 TrainerDataPointers:
+	table_width 2, TrainerDataPointers
 	dw ProfOakData      ; PROF_OAK
 	dw Rival1Data       ; RIVAL1
 	dw Rival2Data       ; RIVAL2
@@ -75,6 +76,7 @@ TrainerDataPointers:
 	dw PokefanMData     ; POKEFANM
 	dw OfficerData      ; OFFICER
 	dw ReiData          ; REI
+	assert_table_length NUM_TRAINERS
 
 ; Trainer data structure:
 ; - db TRAINERTYPE_* dw ;ant
