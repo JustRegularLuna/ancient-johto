@@ -5,12 +5,7 @@ In spite of its flaws, Gen 2 was (and still is) my favorite Pokémon generation.
 To set up the repository, see [**INSTALL.md**](INSTALL.md).
 
 
-## See also (PRET stuff)
-
-- **Discord:** [pret][discord]
-- **IRC:** [freenode#pret][irc]
-
-PRET's disassembly projects:
+## pret's disassembly projects:
 
 - [**Pokémon Red/Blue**][pokered]
 - [**Pokémon Yellow**][pokeyellow]
@@ -31,5 +26,3 @@ PRET's disassembly projects:
 [pokeruby]: https://github.com/pret/pokeruby
 [pokefirered]: https://github.com/pret/pokefirered
 [pokeemerald]: https://github.com/pret/pokeemerald
-[discord]: https://discord.gg/d5dubZ3
-[irc]: https://kiwiirc.com/client/irc.freenode.net/?#pret
