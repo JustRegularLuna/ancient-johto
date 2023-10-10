@@ -9,20 +9,14 @@ UncompressMonSprite::
 	ld a, [hl]
 	ld [wSpriteInputPtr+1], a
 	ld a, [wcf91] ; XXX name for this ram location
-	cp FOSSIL_KABUTOPS
-	jr z, .RecallBank
-	cp FOSSIL_AERODACTYL
-	jr z, .RecallBank
 	cp MON_GHOST
 	jr z, .RecallBank
 	ld a, [wMonHPicBank]
 	jr .GotBank
 .RecallBank
-	ld a, BANK(FossilKabutopsPic)
+	ld a, BANK(GhostPic)
 .GotBank
 	jp UncompressSpriteData
-
-	ds $19
 
 ; de: destination location
 LoadMonFrontSprite::
