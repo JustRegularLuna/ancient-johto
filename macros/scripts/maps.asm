@@ -92,23 +92,30 @@ MACRO warp_to
 ENDM
 
 
+;\1 first bit offset / first object id
+MACRO def_trainers
+	IF _NARG == 1
+		DEF CURRENT_TRAINER_BIT = \1
+	ELSE
+		DEF CURRENT_TRAINER_BIT = 1
+	ENDC
+ENDM
+
 ;\1 event flag
 ;\2 view range
 ;\3 TextBeforeBattle
 ;\4 TextAfterBattle
 ;\5 TextEndBattle
 MACRO trainer
-	IF _NARG > 5
-		dbEventFlagBit \1, \2
-		db (\3 << 4)
-		dwEventFlagAddress \1, \2
-		SHIFT
-	ELSE
-		dbEventFlagBit \1
-		db (\2 << 4)
-		dwEventFlagAddress \1
-	ENDC
+	DEF _ev_bit = \1 % 8
+	DEF _cur_bit = CURRENT_TRAINER_BIT % 8
+	ASSERT _ev_bit == _cur_bit, \
+		"Expected \1 to be bit {d:_cur_bit}, got {d:_ev_bit}"
+	db CURRENT_TRAINER_BIT
+	db \2 << 4
+	dw wEventFlags + (\1 - CURRENT_TRAINER_BIT) / 8
 	dw \3, \5, \4, \4
+	DEF CURRENT_TRAINER_BIT += 1
 ENDM
 
 ;\1 x position

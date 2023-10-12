@@ -17,7 +17,7 @@ AgathasRoom_Object:
 AgathasRoom_Script:
 	call AgathaShowOrHideExitBlock
 	call EnableAutoTextBoxDrawing
-	ld hl, AgathaTrainerHeader0
+	ld hl, AgathasRoomTrainerHeaders
 	ld de, AgathasRoom_ScriptPointers
 	ld a, [wAgathasRoomCurScript]
 	call ExecuteCurMapScriptInTable
@@ -136,6 +136,8 @@ AgathasRoom_TextPointers:
 	dw AgathaText1
 	dw AgathaDontRunAwayText
 
+AgathasRoomTrainerHeaders:
+	def_trainers
 AgathaTrainerHeader0:
 	trainer EVENT_BEAT_AGATHAS_ROOM_TRAINER_0, 0, AgathaBeforeBattleText, AgathaEndBattleText, AgathaAfterBattleText
 	db -1 ; end
