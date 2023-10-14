@@ -1,8 +1,8 @@
 ; text constants
 	const_def 1
 	; NPCs
-	const ELMSHOUSE_ELMS_WIFE
-	const ELMSHOUSE_ELMS_SON
+	const_export ELMSHOUSE_ELMS_WIFE
+	const_export ELMSHOUSE_ELMS_SON
 
 NewBarkHouse2_Object:
 	db $a ; border block

@@ -1,3 +1,8 @@
+; text constants
+	const_def 1
+	; NPCs
+	const_export CHERRYGROVE_MART_CLERK
+
 CherrygroveMart_Object:
 	db $0 ; border block
 
@@ -8,7 +13,7 @@ CherrygroveMart_Object:
 	def_signs
 
 	def_objects
-	object SPRITE_CLERK,  1,  3, STAY, RIGHT, 1 ; person
+	object SPRITE_CLERK,  1,  3, STAY, RIGHT, CHERRYGROVE_MART_CLERK
 
 	def_warps_to CHERRYGROVE_MART
 

@@ -1,8 +1,8 @@
 ; text constants
 	const_def 1
 	; NPCs
-	const CHERRYGROVE_HOUSE1_TEACHER
-	const CHERRYGROVE_HOUSE1_EEVEE
+	const_export CHERRYGROVE_HOUSE1_TEACHER
+	const_export CHERRYGROVE_HOUSE1_EEVEE
 	; signs
 
 CherrygroveHouse1_Object:

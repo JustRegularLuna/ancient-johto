@@ -1,9 +1,9 @@
 ; text constants
 	const_def 1
 	; NPCs
-	const NEWBARK_GIRL
-	const NEWBARK_FISHER
-	const NEWBARK_RIVAL
+	const_export NEWBARK_GIRL
+	const_export NEWBARK_FISHER
+	const_export NEWBARK_RIVAL
 	; Signs
 	const NEWBARK_TOWN_SIGN
 	const NEWBARK_PLAYERS_HOUSE_SIGN

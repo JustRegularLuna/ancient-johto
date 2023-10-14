@@ -1,3 +1,9 @@
+; Text Constants
+	const_def 1
+	; NPCs
+	const_export CHAMPIONS_ROOM_CHAMPION
+	const_export CHAMPIONS_ROOM_OAK
+
 ChampionsRoom_Object:
 	db $3 ; border block
 

@@ -18,6 +18,11 @@ MACRO const
 const_value = const_value + const_inc
 ENDM
 
+MACRO const_export
+	const \1
+	EXPORT \1
+ENDM
+
 MACRO shift_const
 \1 EQU (1 << const_value)
 const_value = const_value + const_inc

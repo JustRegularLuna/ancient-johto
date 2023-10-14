@@ -1,7 +1,7 @@
 ; text constants
 	const_def 1
 	; NPCs
-	const CHERRYGROVE_HOUSE2_GENT
+	const_export CHERRYGROVE_HOUSE2_GENT
 	; signs
 
 CherrygroveHouse2_Object:

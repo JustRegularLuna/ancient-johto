@@ -1,3 +1,8 @@
+; Text Constants
+	const_def 1
+	; NPCs
+	const_export LORELEIS_ROOM_LORELEI
+
 LoreleisRoom_Object:
 	db $3 ; border block
 

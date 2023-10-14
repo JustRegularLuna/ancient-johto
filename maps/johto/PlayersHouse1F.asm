@@ -1,7 +1,7 @@
 ; text constants
 	const_def 1
 	; NPCs
-	const PLAYERSHOUSE_MOM
+	const_export PLAYERSHOUSE_MOM
 	; Signs
 	const PLAYERSHOUSE_STOVE
 	const PLAYERSHOUSE_SINK

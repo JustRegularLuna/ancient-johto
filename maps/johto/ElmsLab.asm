@@ -1,11 +1,11 @@
 ; text constants
 	const_def 1
 	; NPCs
-	const ELMSLAB_STARTER_BALL_1
-	const ELMSLAB_STARTER_BALL_2
-	const ELMSLAB_STARTER_BALL_3
-	const ELMSLAB_ELM
-	const ELMSLAB_AIDE
+	const_export ELMSLAB_STARTER_BALL_1
+	const_export ELMSLAB_STARTER_BALL_2
+	const_export ELMSLAB_STARTER_BALL_3
+	const_export ELMSLAB_ELM
+	const_export ELMSLAB_AIDE
 	; Signs
 	const ELMSLAB_BIN
 	const ELMSLAB_PC

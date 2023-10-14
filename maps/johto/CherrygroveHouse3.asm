@@ -1,7 +1,7 @@
 ; text constants
 	const_def 1
 	; NPCs
-	const CHERRYGROVE_HOUSE3_GAMBLER
+	const_export CHERRYGROVE_HOUSE3_GAMBLER
 	; signs
 
 CherrygroveHouse3_Object:

@@ -1,11 +1,11 @@
 ; text constants
 	const_def 1
 	; NPCs
-	const ROUTE29_ITEMBALL
-	const ROUTE29_BERRYTREE_1
-	const ROUTE29_DUDE
-	const ROUTE29_GIRL
-	const ROUTE29_PERSON
+	const_export ROUTE29_ITEMBALL
+	const_export ROUTE29_BERRYTREE_1
+	const_export ROUTE29_DUDE
+	const_export ROUTE29_GIRL
+	const_export ROUTE29_PERSON
 	; Signs
 	const ROUTE29_EAST_SIGN
 	const ROUTE29_WEST_SIGN

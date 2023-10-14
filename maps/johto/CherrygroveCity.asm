@@ -1,10 +1,10 @@
 ; text constants
 	const_def 1
 	; NPCs
-	const CHERRYGROVE_RIVAL
-	const CHERRYGROVE_ISLAND_GUY
-	const CHERRYGROVE_LASS
-	const CHERRYGROVE_GUY
+	const_export CHERRYGROVE_RIVAL
+	const_export CHERRYGROVE_ISLAND_GUY
+	const_export CHERRYGROVE_LASS
+	const_export CHERRYGROVE_GUY
 	; Signs
 	const CHERRYGROVE_CITY_SIGN
 	const CHERRYGROVE_GUIDE_GENT_SIGN

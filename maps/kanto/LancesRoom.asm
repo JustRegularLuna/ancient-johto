@@ -1,3 +1,8 @@
+; Text Constants
+	const_def 1
+	; NPCs
+	const_export LANCES_ROOM_LANCE
+
 LancesRoom_Object:
 	db $3 ; border block
 

@@ -1,7 +1,7 @@
 ; text constants
 	const_def 1
 	; NPCs
-	const NEWBARK_HOUSE1_GIRL
+	const_export NEWBARK_HOUSE1_GIRL
 
 NewBarkHouse1_Object:
 	db $a ; border block

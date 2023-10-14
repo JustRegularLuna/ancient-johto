@@ -1,3 +1,8 @@
+; Text Constants
+	const_def 1
+	; NPCS
+	const_export BRUNOS_ROOM_BRUNO
+
 BrunosRoom_Object:
 	db $3 ; border block
 

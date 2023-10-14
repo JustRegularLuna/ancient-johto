@@ -265,7 +265,7 @@ MissableObjects:
 ; format: map id, object id, HIDE/SHOW
 
 ChampionsRoomHS:
-	db CHAMPIONS_ROOM, $02, HIDE
+	db CHAMPIONS_ROOM, CHAMPIONS_ROOM_OAK, HIDE
 
 	db $FF, $01, SHOW ; end
 	assert_table_length NUM_HS_OBJECTS + 1
@@ -303,15 +303,15 @@ JohtoMissableObjects:
 	table_width 3, JohtoMissableObjects
 ; format: map id, object id, HIDE/SHOW
 NewBarkTownHS:
-	db NEW_BARK_TOWN, $03, SHOW
+	db NEW_BARK_TOWN, NEWBARK_RIVAL, SHOW
 CherrygroveHS:
-	db CHERRYGROVE_CITY, $01, HIDE
+	db CHERRYGROVE_CITY, CHERRYGROVE_RIVAL, HIDE
 Route29HS:
-	db ROUTE_29, $01, SHOW
+	db ROUTE_29, ROUTE29_ITEMBALL, SHOW
 ElmsLabHS:
-	db ELMS_LAB, $01, SHOW
-	db ELMS_LAB, $02, SHOW
-	db ELMS_LAB, $03, SHOW
+	db ELMS_LAB, ELMSLAB_STARTER_BALL_1, SHOW
+	db ELMS_LAB, ELMSLAB_STARTER_BALL_2, SHOW
+	db ELMS_LAB, ELMSLAB_STARTER_BALL_3, SHOW
 ;end of list
 	db $FF, $01, SHOW ; end
 	assert_table_length NUM_JOHTO_HS_OBJECTS + 1

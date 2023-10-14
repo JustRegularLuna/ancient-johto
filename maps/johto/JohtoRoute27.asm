@@ -1,7 +1,7 @@
 ; text constants
 	const_def 1
 	; NPCs
-	const JOHTO_ROUTE27_FISHER
+	const_export JOHTO_ROUTE27_FISHER
 	; Signs
 	const JOHTO_ROUTE27_SIGN
 

@@ -1,3 +1,8 @@
+; Text Constants
+	const_def 1
+	; NPCS
+	const_export AGATHAS_ROOM_AGATHA
+
 AgathasRoom_Object:
 	db $0 ; border block
 
