@@ -51,6 +51,10 @@ NewBarkTown_ScriptPointers:
 	dw_const NewBarkTownNoopScript,         SCRIPT_NEWBARK_NOOP
 
 NewBarkTownBlockExitScript:
+	ld a, [wYCoord]
+	cp 10 ; is the player in the top half of the map?
+	ret nc
+
 	ld a, [wXCoord]
 	cp 1 ; is player trying to leave?
 	ret nz
