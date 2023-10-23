@@ -1,6 +1,7 @@
 IF DEF(_RED)
 DefaultNamesPlayerList:
 	db "NEW NAME@"
+BoyDefaultName:
 	db "GOLD@"
 	db "HIRO@"
 	db "TAYLOR@"
@@ -8,6 +9,7 @@ DefaultNamesPlayerList:
 
 DefaultNamesGirlList:
 	db "NEW NAME@"
+GirlDefaultName:
 	db "GOLD@"
 	db "KRIS@"
 	db "AMANDA@"
@@ -15,6 +17,7 @@ DefaultNamesGirlList:
 
 DefaultNamesRivalList:
 	db "NEW NAME@"
+RivalDefaultName:
 	db "SILVER@"
 	db "KAMON@"
 	db "OSCAR@"
@@ -24,6 +27,7 @@ ENDC
 IF DEF(_BLUE)
 DefaultNamesPlayerList:
 	db "NEW NAME@"
+BoyDefaultName:
 	db "SILVER@"
 	db "KAMON@"
 	db "OSCAR@"
@@ -31,6 +35,7 @@ DefaultNamesPlayerList:
 
 DefaultNamesGirlList:
 	db "NEW NAME@"
+GirlDefaultName:
 	db "SILVER@"
 	db "KRIS@"
 	db "AMANDA@"
@@ -38,6 +43,7 @@ DefaultNamesGirlList:
 
 DefaultNamesRivalList:
 	db "NEW NAME@"
+RivalDefaultName:
 	db "GOLD@"
 	db "HIRO@"
 	db "TAYLOR@"

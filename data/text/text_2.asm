@@ -1725,6 +1725,13 @@ _IntroduceRivalText::
 	cont "do you?"
 	prompt
 
+_IntroduceRivalText2::
+	text "You don't happen"
+	line "to know his name,"
+	cont "do you?"
+	prompt
+
+
 _OakSpeechText3::
 	text "<PLAYER>!"
 
@@ -1736,6 +1743,14 @@ _OakSpeechText3::
 	line "and adventures"
 	cont "with #MON"
 	cont "awaits! Let's go!"
+	done
+
+_YourNameIsText2::
+	text "Is it <PLAYER>?"
+	done
+
+_HisNameIsText2::
+	text "Was it <RIVAL>?"
 	done
 
 _DoYouWantToNicknameText::
