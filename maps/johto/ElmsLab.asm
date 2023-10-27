@@ -337,14 +337,61 @@ ItContainsAPokemonText:
 ElmsLabElmScript:
 	text_asm
 	; TODO: Additional checks later on
+	CheckEvent EVENT_DELIVERED_MYSTERY_EGG
+	ld hl, ElmTalksAboutResearchingEggText
+	jr nz, .ShowText
+	CheckEvent EVENT_GOT_MYSTERY_EGG
+	jr nz, .TryDeliverMysteryEgg
 	CheckEvent EVENT_GOT_STARTER
 	ld hl, ElmDescribesMrPokemonText
 	jr nz, .ShowText
-	; Else, it must be first time here
+	; If no events are set, it must be the first time
 	ld hl, ElmDontBeShyText
 .ShowText
 	call PrintText
 	jp TextScriptEnd
+
+.TryDeliverMysteryEgg
+	ld hl, ElmTalksAboutBreakInText
+	call PrintText
+	ld b, MYSTERY_EGG
+	call IsItemInBag
+	jr nz, .gotMysteryEgg
+	; ELSE the player talked to Mr Pokemon, but does not have Mystery Egg in their pack
+	ld hl, ElmAsksWhyYouDontHaveEggText
+	call PrintText
+	jr .done
+.gotMysteryEgg
+	call ElmsLabScript_RemoveMysteryEgg
+	ld hl, ElmReactsToMysteryEggText
+	call PrintText
+	lb bc, POKE_BALL, 5
+	call GiveItem
+	SetEvent EVENT_DELIVERED_MYSTERY_EGG
+	ld hl, ElmTalksAboutResearchingEggText
+	call PrintText
+.done
+	jp TextScriptEnd
+
+ElmsLabScript_RemoveMysteryEgg:
+	ld hl, wBagItems
+	ld bc, 0
+.loop
+	ld a, [hli]
+	cp $ff
+	ret z
+	cp MYSTERY_EGG
+	jr z, .foundEgg
+	inc hl
+	inc c
+	jr .loop
+.foundEgg
+	ld hl, wNumBagItems
+	ld a, c
+	ld [wWhichPokemon], a
+	ld a, 1
+	ld [wItemQuantity], a
+	jp RemoveItemFromInventory
 
 ElmDontBeShyText:
 	text "Now, <PLAYER>,"
@@ -369,9 +416,72 @@ ElmDescribesMrPokemonText:
 	done
 
 ElmsLabAideScript:
+	text_asm
+	CheckEvent EVENT_DELIVERED_MYSTERY_EGG
+	ld hl, .TalkAboutHoaxes
+	jr nz, .done
+	CheckEvent EVENT_GOT_MYSTERY_EGG
+	ld hl, .TalkAboutBreakIn
+	jr nz, .done
+	; If nothing has happened yet
+	ld hl, .AlwaysBusyText
+.done
+	call PrintText
+	jp TextScriptEnd
+
+.AlwaysBusyText
 	text "There's only two"
 	line "of us, so we're"
 	cont "always busy."
+	done
+
+.TalkAboutBreakIn
+	text "This is horrible…"
+
+	para "That poor stolen"
+	line "#MON…"
+
+	para "I hope it's ok…"
+	done
+
+.TalkAboutHoaxes
+	text "I'll be helping"
+	line "PROF.ELM study"
+
+	para "the EGG that you"
+	line "brought us."
+
+	para "Sometimes, things"
+	line "like this aren't"
+	cont "what they seem."
+
+	para "Like a few years"
+	line "ago, some guys in"
+
+	para "KANTO claimed to"
+	line "have discovered"
+
+	para "evolved forms of"
+	line "RAICHU…"
+
+	para "That didn't turn"
+	line "out to be true."
+
+	para "One was an old"
+	line "man who didn't"
+
+	para "understand how"
+	line "trading worked."
+
+	para "The other, though…"
+
+	para "That turned out"
+	line "to be a new, but"
+
+	para "unrelated, kind"
+	line "of #MON!"
+
+	para "So you never know!"
 	done
 
 ElmsLabBinText:
@@ -502,4 +612,130 @@ ElmsLabTalkAboutPokemonText:
 
 	para "Have a safe trip,"
 	line "<PLAYER>."
+	done
+
+ElmTalksAboutBreakInText:
+	text "ELM: <PLAYER>!"
+	line "This is terrible…"
+
+	para "While you were"
+	line "away, someone"
+
+	para "broke in through"
+	line "the back window,"
+
+	para "and stole one of"
+	line "the #MON from"
+	cont "the table there…"
+
+	para "He escaped, but I"
+	line "got a look at his"
+	cont "face…"
+
+	para "It was <RIVAL>,"
+	line "that shady guy"
+
+	para "who has been in"
+	line "town lately!"
+
+	para "The police only"
+	line "left minutes ago."
+
+	para "But… let's have"
+	line "some good news!"
+
+	para "What was this big"
+	line "discovery that"
+
+	para "MR.#MON wanted"
+	line "us to see?"
+	prompt
+
+ElmAsksWhyYouDontHaveEggText:
+	text "Erm… You don't"
+	line "have it on you?"
+
+	para "I'm sure you were"
+	line "only trying to"
+	cont "keep it safe…"
+
+	para "Please bring it"
+	line "to me, <PLAYER>."
+	done
+
+ElmReactsToMysteryEggText:
+	text "<PLAYER> handed"
+	line "over the MYSTERY"
+	cont "EGG."
+
+	para "ELM: THIS?! Why…"
+	line "Could it be?"
+
+	para "Could this really"
+	line "be a #MON EGG?"
+
+	para "If so, this is a"
+	line "major discovery…"
+
+	para "But we can't jump"
+	line "to conclusions."
+
+	para "That isn't how"
+	line "science works."
+
+	para "We have to study"
+	line "this seriously to"
+
+	para "make sure it isn't"
+	line "just a hoax."
+
+	para "Yes, unfortunately"
+	line "those happen from"
+	cont "time to time."
+
+	para "Hopefully this"
+	line "won't be one of"
+	cont "those times."
+
+	para "Thank you for"
+	line "bringing this to"
+	cont "me to study."
+
+	para "Oh! I almost"
+	line "forgot."
+
+	para "PROF.OAK told me"
+	line "that he gave you"
+	cont "a #DEX!"
+
+	para "That's great news,"
+	line "<PLAYER>."
+
+	para "A #DEX will"
+	line "help a lot during"
+	cont "your travels."
+
+	para "Here. Before you"
+	line "leave town again,"
+
+	para "let me give you"
+	line "something to help"
+
+	para "you complete that"
+	line "#DEX."
+
+	para "<PLAYER> received"
+	line "5 #BALLs!@"
+	sound_get_key_item
+	text_waitbutton
+	text_end
+
+ElmTalksAboutResearchingEggText:
+	text "ELM: Thanks again"
+	line "for helping with"
+	cont "my research."
+
+	para "I'll keep you in"
+	line "the loop as we"
+	cont "learn more!"
 	done

@@ -2614,6 +2614,9 @@ wNewBarkTownCurScript::
 wElmsLabCurScript::
 	ds 1
 
+wMrPokemonsHouseCurScript::
+	ds 1
+
 wSafariZoneGateCurScript::
 	ds 1
 

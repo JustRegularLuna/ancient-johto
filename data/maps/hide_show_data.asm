@@ -291,7 +291,7 @@ JohtoMapHSPointers:
 	dw JohtoNoHS ; Cherrygrove House 2
 	dw JohtoNoHS ; Cherrygrove House 3
 	dw JohtoNoHS ; Route 30 Berry House
-	dw JohtoNoHS ; Mr. Pokemon's House
+	dw MrPokemonsHouseHS ; Mr. Pokemon's House
 	assert_table_length NUM_JOHTO_MAPS
 	dw -1 ; end
 
@@ -312,6 +312,8 @@ ElmsLabHS:
 	db ELMS_LAB, ELMSLAB_STARTER_BALL_1, SHOW
 	db ELMS_LAB, ELMSLAB_STARTER_BALL_2, SHOW
 	db ELMS_LAB, ELMSLAB_STARTER_BALL_3, SHOW
+MrPokemonsHouseHS:
+	db MR_POKEMONS_HOUSE, MR_POKEMONS_HOUSE_OAK, SHOW
 ;end of list
 	db $FF, $01, SHOW ; end
 	assert_table_length NUM_JOHTO_HS_OBJECTS + 1

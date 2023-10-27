@@ -17,8 +17,8 @@
 	const_skip
 
 ; New Bark Town events
-	const_skip
-	const_skip
+	const EVENT_GOT_MYSTERY_EGG
+	const EVENT_DELIVERED_MYSTERY_EGG
 	const_skip
 	const_skip
 	const_skip
