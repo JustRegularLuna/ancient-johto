@@ -583,11 +583,11 @@ WarpFound2::
 	cp 16
 	jr c, .JohtoSide
 	; kanto side
-	xor a ; kanto
+	ld a, KANTO_REGION
 	ld [wDestinationRegion], a
 	jr .continue
 .JohtoSide
-	ld a, 1 ; johto
+	ld a, JOHTO_REGION
 	ld [wDestinationRegion], a
 .continue
 ; original code for following a warp continues here

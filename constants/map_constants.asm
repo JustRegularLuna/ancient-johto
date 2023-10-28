@@ -16,6 +16,8 @@ ENDM
 ; Order: towns/cities, then routes, then indoor/dungeon maps
 ; Johto and Kanto each have their own tables
 
+DEF KANTO_REGION EQU 0
+
 ; Kanto Map Constants
 	const_def
 	map_const PALLET_TOWN,                   10,  9 ; $00
@@ -278,6 +280,7 @@ DEF NUM_MAPS EQU const_value
 DEF LAST_MAP EQU -1
 
 
+DEF JOHTO_REGION EQU 1
 
 ; JOHTO Map Constants
 	const_def

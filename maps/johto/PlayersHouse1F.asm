@@ -61,6 +61,8 @@ PlayersHouseMomGoSeeElmText:
 PlayersHouseMomHealPokemon:
 	ld a, NEW_BARK_TOWN
 	ld [wLastBlackoutMap], a
+	ld a, JOHTO_REGION
+	ld [wLastBlackoutRegion], a
 	ld hl, PlayersHouseMomHealText1
 	call PrintText
 	call GBFadeOutToWhite
