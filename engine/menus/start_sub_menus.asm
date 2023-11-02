@@ -460,11 +460,30 @@ StartMenu_TrainerInfo::
 	xor a
 	ldh [hTileAnimations], a
 	call DrawTrainerInfo
+	; draw Johto badges by default
 	predef DrawBadges ; draw badges
 	ld b, SET_PAL_TRAINER_CARD
 	call RunPaletteCommand
 	call GBPalNormal
 	call WaitForTextScrollButtonPress ; wait for button press
+	; only show the second page if you have any Kanto badges
+	ld a, [wObtainedKantoBadges]
+	and a
+	jr z, .noKantoBadges
+	call GBPalWhiteOut
+	call DisableLCD
+	ld hl, KantoGymLeaderFaceAndBadgeTileGraphics  ; gym leader face and badge tile patterns
+	ld de, vChars2 tile $20
+	ld bc, 8 * 8 tiles
+	ld a, BANK(KantoGymLeaderFaceAndBadgeTileGraphics)
+	call FarCopyData2
+	call EnableLCD
+	predef DrawKantoBadges
+	ld b, SET_PAL_TRAINER_CARD
+	call RunPaletteCommand
+	call GBPalNormal
+	call WaitForTextScrollButtonPress ; wait for button press
+.noKantoBadges
 	call GBPalWhiteOut
 	call LoadFontTilePatterns
 	call LoadScreenTilesFromBuffer2 ; restore saved screen
@@ -509,10 +528,10 @@ DrawTrainerInfo:
 	ld hl, BadgeNumbersTileGraphics  ; badge number tile patterns
 	ld de, vChars1 tile $58
 	call TrainerInfo_FarCopyData
-	ld hl, GymLeaderFaceAndBadgeTileGraphics  ; gym leader face and badge tile patterns
+	ld hl, JohtoGymLeaderFaceAndBadgeTileGraphics  ; gym leader face and badge tile patterns
 	ld de, vChars2 tile $20
 	ld bc, 8 * 8 tiles
-	ld a, BANK(GymLeaderFaceAndBadgeTileGraphics)
+	ld a, BANK(JohtoGymLeaderFaceAndBadgeTileGraphics)
 	call FarCopyData2
 	ld hl, TextBoxGraphics
 	ld de, 13 tiles

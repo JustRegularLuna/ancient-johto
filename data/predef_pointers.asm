@@ -57,6 +57,7 @@ PredefPointers::
 	add_predef InitOpponent
 	add_predef CableClub_Run
 	add_predef DrawBadges
+	add_predef DrawKantoBadges
 	add_predef ExternalClockTradeAnim
 	add_predef BattleTransition
 	add_predef CopyTileIDsFromList
