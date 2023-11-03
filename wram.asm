@@ -1526,7 +1526,13 @@ wMissableObjectCounter::
 	ds 1
 
 wTrainerName::
-; 13 bytes for the letters of the opposing trainer
+; 13 bytes for the opposing trainer's class name
+; the name is terminated with $50 with possible
+; unused trailing letters
+	ds 13
+
+wCurTrainerName::
+; 13 bytes for the opposing trainer's individual name
 ; the name is terminated with $50 with possible
 ; unused trailing letters
 	ds 13

@@ -39,9 +39,22 @@ ReadTrainer:
 	jr .outer
 
 .IterateTrainer
+; Start by storing the trainer's name
+	ld de, wCurTrainerName
+.loop
+	ld a, [hli]
+	ld [de], a
+	inc de
+	cp "@"
+	jr z, .getTrainerType
+	jr .loop
+
+.getTrainerType
+; Determine which type of trainer this is
 	ld a, [hli]
 	cp TRAINERTYPE_MOVES ; does the trainer use custom moves?
-	jr z,.SpecialTrainer ; if so, use the correct loop
+	jr z, .SpecialTrainer ; if so, use the correct loop
+
 .NormalTrainer
 ; if this code is being run:
 ; - each pokemon has a specific level

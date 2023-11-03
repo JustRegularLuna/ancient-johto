@@ -87,7 +87,7 @@ TrainerDataPointers:
 
 ProfOakData:      ; PROF_OAK
 ; 01 - (placeholder) unused Gen 1 party
-	db TRAINERTYPE_NORMAL
+	db "OAK@", TRAINERTYPE_NORMAL
 	db 66, TAUROS
 	db 67, EXEGGUTOR
 	db 68, ARCANINE
@@ -97,458 +97,458 @@ ProfOakData:      ; PROF_OAK
 
 Rival1Data:       ; RIVAL1
 ; First Battle Parties
-	db TRAINERTYPE_NORMAL
+	db "<RIVAL>@", TRAINERTYPE_NORMAL
 	db 5, STARTER2 ; Totodile (Player chose Cyndaquil)
 	db -1 ; end
 
-	db TRAINERTYPE_NORMAL
+	db "<RIVAL>@", TRAINERTYPE_NORMAL
 	db 5, STARTER3 ; Chikorita (Player chose Totodile)
 	db -1 ; end
 
-	db TRAINERTYPE_NORMAL
+	db "<RIVAL>@", TRAINERTYPE_NORMAL
 	db 5, STARTER1 ; Cyndaquil (Player chose Chikorita)
 	db -1 ; end
 
 Rival2Data:       ; RIVAL2
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "<RIVAL>@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 FalknerData:      ; FALKNER
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "FALKNER@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 BugsyData:        ; BUGSY
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "BUGSY@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 WhitneyData:      ; WHITNEY
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "WHITNEY@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 MortyData:        ; MORTY
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "MORTY@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 PryceData:        ; PRYCE
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "PRYCE@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 JasmineData:      ; JASMINE
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "JASMINE@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 ChuckData:        ; CHUCK
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "CHUCK@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 ClairData:        ; CLAIR
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "CLAIR@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 WillData:         ; WILL
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "WILL@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 KogaData:         ; KOGA
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "KOGA@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 BrunoData:        ; BRUNO
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "BRUNO@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 KarenData:        ; KAREN
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "KAREN@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 ChampionData:     ; CHAMPION
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "LANCE@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 LoreleiData:      ; LORELEI
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "LORELEI@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 AgathaData:       ; AGATHA
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "AGATHA@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 RedData:          ; RED
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "RED@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 BlueData:         ; BLUE
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "BLUE@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 BrockData:        ; BROCK
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "BROCK@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 MistyData:        ; MISTY
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "MISTY@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 LtSurgeData:      ; LT_SURGE
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "LT.SURGE@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 ErikaData:        ; ERIKA
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "ERIKA@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 JanineData:       ; JANINE
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "JANINE@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 SabrinaData:      ; SABRINA
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "SABRINA@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 BlaineData:       ; BLAINE
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "BLAINE@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 GiovanniData:     ; GIOVANNI
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "GIOVANNI@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 ExecutiveMData:   ; EXECUTIVEM
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "EXECUTIVE@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 ExecutiveFData:   ; EXECUTIVEF
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "EXECUTIVE@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 GruntMData:       ; GRUNTM
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 GruntFData:       ; GRUNTF
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 JessieJamesData:  ; JESSIE_JAMES
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "DUO@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 ScientistData:    ; SCIENTIST
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 BurglarData:      ; BURGLAR
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 YoungsterData:    ; YOUNGSTER
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 BugCatcherData:   ; BUG_CATCHER
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 SchoolboyData:    ; SCHOOLBOY
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 BirdKeeperData:   ; BIRD_KEEPER
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 TwinsData:        ; TWINS
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 LassData:         ; LASS
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 BeautyData:       ; BEAUTY
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 PicnickerData:    ; PICNICKER
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 CamperData:       ; CAMPER
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 CooltrainerMData: ; COOLTRAINERM
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 CooltrainerFData: ; COOLTRAINERF
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 PokemaniacData:   ; POKEMANIAC
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 SuperNerdData:    ; SUPER_NERD
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 GentlemanData:    ; GENTLEMAN
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 SkierData:        ; SKIER
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 BoarderData:      ; BOARDER
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 TeacherData:      ; TEACHER
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 FisherData:       ; FISHER
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 SwimmerMData:     ; SWIMMERM
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 SwimmerFData:     ; SWIMMERF
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 SailorData:       ; SAILOR
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 RockerData:       ; ROCKER
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 GuitaristData:    ; GUITARIST
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 HikerData:        ; HIKER
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 BikerData:        ; BIKER
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 CueBallData:      ; CUE_BALL
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 GamblerData:      ; GAMBLER
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 TamerData:        ; TAMER
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 FirebreatherData: ; FIREBREATHER
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 JugglerData:      ; JUGGLER
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 BlackbeltData:    ; BLACKBELT
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 PsychicData:      ; PSYCHIC_TR
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 EngineerData:     ; ENGINEER
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 SageData:         ; SAGE
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 MediumData:       ; MEDIUM
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 ChannelerData:    ; CHANNELER
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 KimonoGirlData:   ; KIMONO_GIRL
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 PokefanFData:     ; POKEFANF
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 PokefanMData:     ; POKEFANM
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 OfficerData:      ; OFFICER
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 ReiData:          ; REI
 ; 01 - placeholder party
-	db TRAINERTYPE_NORMAL
+	db "REI@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
