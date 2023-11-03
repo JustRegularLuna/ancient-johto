@@ -170,7 +170,19 @@ BlkPacket_PartyMenu:
 	db $03, 12,10, 18,11, $00
 	db $00
 
-BlkPacket_TrainerCard:
+BlkPacket_TrainerCard: ; Johto Badges
+	ATTR_BLK 8
+	ATTR_BLK_DATA %010, 0,0,0, 03,12, 04,13 ; Zephyr Badge
+	ATTR_BLK_DATA %010, 2,2,0, 07,12, 08,13 ; Hive Badge
+	ATTR_BLK_DATA %010, 3,3,0, 11,12, 12,13 ; Plain Badge
+	ATTR_BLK_DATA %010, 1,1,0, 15,12, 16,13 ; Fog Badge
+	ATTR_BLK_DATA %010, 0,0,0, 03,15, 04,16 ; Mineral Badge
+	ATTR_BLK_DATA %010, 2,2,0, 07,15, 08,16 ; Storm Badge
+	ATTR_BLK_DATA %010, 1,1,0, 11,15, 12,16 ; Glacier Badge
+	ATTR_BLK_DATA %010, 1,1,0, 15,15, 16,16 ; Rising Badge
+	ds 2, 0
+
+BlkPacket_TrainerCard2: ; Kanto Badges
 	ATTR_BLK 10
 	ATTR_BLK_DATA %010, 0,0,0, 03,12, 04,13 ; Boulder Badge
 	ATTR_BLK_DATA %010, 1,1,0, 07,12, 08,13 ; Cascade Badge
@@ -183,19 +195,6 @@ BlkPacket_TrainerCard:
 	ATTR_BLK_DATA %010, 2,2,0, 11,15, 12,16 ; Volcano Badge
 	ATTR_BLK_DATA %010, 1,1,0, 15,15, 16,16 ; Earth Badge
 	ds 2, 0
-
-; unused
-	db $03, 03,12, 04,13, $00
-	db $03, 07,12, 08,13, $01
-	db $03, 11,12, 12,13, $03
-	db $03, 16,11, 17,12, $02
-	db $03, 14,13, 15,14, $01
-	db $03, 16,13, 17,14, $03
-	db $03, 03,15, 04,16, $02
-	db $03, 07,15, 08,16, $03
-	db $03, 11,15, 12,16, $02
-	db $03, 15,15, 16,16, $01
-	db $00
 
 BlkPacket_GameFreakIntro:
 	ATTR_BLK 3

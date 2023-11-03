@@ -479,7 +479,7 @@ StartMenu_TrainerInfo::
 	call FarCopyData2
 	call EnableLCD
 	predef DrawKantoBadges
-	ld b, SET_PAL_TRAINER_CARD
+	ld b, SET_PAL_TRAINER_CARD_2
 	call RunPaletteCommand
 	call GBPalNormal
 	call WaitForTextScrollButtonPress ; wait for button press

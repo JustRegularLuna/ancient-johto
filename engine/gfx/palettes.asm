@@ -227,6 +227,46 @@ SetPal_TrainerCard:
 	call CopyData
 	ld de, BadgeBlkDataLengths
 	ld hl, wTrainerCardBlkPacket + 2
+	ld a, [wObtainedJohtoBadges]
+	ld c, NUM_BADGES
+.badgeLoop
+	srl a
+	push af
+	jr c, .haveBadge
+; The player doens't have the badge, so zero the badge's blk data.
+	push bc
+	ld a, [de]
+	ld c, a
+	xor a
+.zeroBadgeDataLoop
+	ld [hli], a
+	dec c
+	jr nz, .zeroBadgeDataLoop
+	pop bc
+	jr .nextBadge
+.haveBadge
+; The player does have the badge, so skip past the badge's blk data.
+	ld a, [de]
+.skipBadgeDataLoop
+	inc hl
+	dec a
+	jr nz, .skipBadgeDataLoop
+.nextBadge
+	pop af
+	inc de
+	dec c
+	jr nz, .badgeLoop
+	ld hl, PalPacket_TrainerCard
+	ld de, wTrainerCardBlkPacket
+	ret
+
+SetPal_TrainerCard2:
+	ld hl, BlkPacket_TrainerCard2
+	ld de, wTrainerCardBlkPacket
+	ld bc, $40
+	call CopyData
+	ld de, BadgeBlkDataLengths
+	ld hl, wTrainerCardBlkPacket + 2
 	ld a, [wObtainedKantoBadges]
 	ld c, NUM_BADGES
 .badgeLoop
@@ -276,6 +316,7 @@ SetPalFunctions:
 	dw SetPal_PokemonWholeScreen
 	dw SetPal_GameFreakIntro
 	dw SetPal_TrainerCard
+	dw SetPal_TrainerCard2
 
 ; The length of the blk data of each badge on the Trainer Card.
 ; The Rainbow Badge has 3 entries because of its many colors.
