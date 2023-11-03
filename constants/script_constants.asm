@@ -40,7 +40,7 @@ NUM_NPC_TRADES EQU const_value
 	const TRADE_DIALOGSET_HAPPY
 
 ; badges
-; wObtainedBadges and wBeatGymFlags bits
+; wObtainedKantoBadges and wBeatGymFlags bits
 	const_def
 	const BIT_BOULDERBADGE ; 0
 	const BIT_CASCADEBADGE ; 1
@@ -51,6 +51,18 @@ NUM_NPC_TRADES EQU const_value
 	const BIT_VOLCANOBADGE ; 6
 	const BIT_EARTHBADGE   ; 7
 NUM_BADGES EQU const_value
+
+; wObtainedJohtoBadges bits
+	const_def
+	const BIT_ZEPHYRBADGE  ; 0
+	const BIT_HIVEBADGE    ; 1
+	const BIT_PLAINBADGE   ; 2
+	const BIT_FOGBADGE     ; 3
+	const BIT_MINERALBADGE ; 4
+	const BIT_STORMBADGE   ; 5
+	const BIT_GLACIERBADGE ; 6
+	const BIT_RISINGBADGE  ; 7
+NUM_TOTAL_BADGES EQU const_value + NUM_BADGES
 
 ; OaksAideScript results
 OAKS_AIDE_BAG_FULL        EQU $00

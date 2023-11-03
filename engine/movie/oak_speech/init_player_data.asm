@@ -33,9 +33,10 @@ START_MONEY EQU $3000
 	ld [wMonDataLocation], a
 
 	ld hl, wObtainedKantoBadges
-	ld [hli], a
+	ld [hli], a ; Kanto Badges
+	ld [hli], a ; Johto Badges
 
-	ld [hl], a
+	ld [hl], a ; Letter Printing Delay Flags
 
 	ld hl, wPlayerCoins
 	ld [hli], a
