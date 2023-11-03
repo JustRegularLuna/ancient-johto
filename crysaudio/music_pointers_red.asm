@@ -60,6 +60,7 @@ Music:
 	dba Music_LookRocket
 	dba Music_LookSage
 	dba Music_LookYoungster
+	dba Music_MeetJessieJames
 	dba Music_NewBarkTown
 	dba Music_CherrygroveCity
 	dba Music_VioletCity
@@ -84,3 +85,4 @@ Music:
 	dba Music_SproutTower
 	dba Music_TinTower
 	dba Music_UnionCave
+	dba Music_MobileCenter
