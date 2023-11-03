@@ -157,6 +157,8 @@
 	charmap "'t",        $be
 	charmap "'v",        $bf
 
+	charmap "&",         $de
+	charmap "<SHINY>",   $df
 	charmap "'",         $e0
 	charmap "<PK>",      $e1
 	charmap "<MN>",      $e2
