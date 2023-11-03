@@ -422,7 +422,7 @@ PlayTrainerMusic::
 	ret z
 	cp RIVAL2
 	ret z
-	ld a, [wGymLeaderNo]
+	ld a, [wGymLeaderBattle]
 	and a
 	ret nz
 	xor a

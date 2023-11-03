@@ -1568,9 +1568,10 @@ wDamageMultipliers::
 ; bit 7: STAB
 	ds 1
 
-wGymLeaderNo::
-; it's actually the same thing as ^
+wGymLeaderBattle::
+; 1 for a Gym Battle, 0 otherwise
 	ds 1
+
 wTrainerNo::
 ; which instance of [youngster, lass, etc] is this?
 	ds 1

@@ -23,9 +23,13 @@ Music:
 	dba Music_Route3
 	dba Music_Route12
 	dba Music_IndigoPlateau
+	dba Music_JohtoGymBattle
+	dba Music_JohtoTrainerBattle
+	dba Music_JohtoWildBattle
 	dba Music_KantoGymBattle
 	dba Music_KantoTrainerBattle
 	dba Music_KantoWildBattle
+	dba Music_RocketBattle
 	dba Music_ChampionBattle
 	dba Music_TrainerVictory
 	dba Music_WildPokemonVictory

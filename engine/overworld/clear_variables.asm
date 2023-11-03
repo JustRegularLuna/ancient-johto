@@ -5,7 +5,7 @@ ClearVariablesOnEnterMap::
 	xor a
 	ldh [hAutoBGTransferEnabled], a
 	ld [wStepCounter], a
-	ld [wGymLeaderNo], a
+	ld [wGymLeaderBattle], a
 	ldh [hJoyPressed], a
 	ldh [hJoyReleased], a
 	ldh [hJoyHeld], a

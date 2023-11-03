@@ -944,7 +944,7 @@ ReplaceFaintedEnemyMon:
 TrainerBattleVictory:
 	call EndLowHealthAlarm
 	ld b, MUSIC_DEFEATED_GYM_LEADER
-	ld a, [wGymLeaderNo]
+	ld a, [wGymLeaderBattle]
 	and a
 	jr nz, .gymleader
 	ld b, MUSIC_DEFEATED_TRAINER

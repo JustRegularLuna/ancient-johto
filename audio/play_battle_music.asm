@@ -7,29 +7,57 @@ PlayBattleMusic::
 	call PlaySound
 	call DelayFrame
 	ld c, 0 ; BANK(Music_GymLeaderBattle)
-	ld a, [wGymLeaderNo]
+	ld a, [wGymLeaderBattle]
 	and a
-	jr z, .notGymLeaderBattle
-	ld a, MUSIC_GYM_LEADER_BATTLE
-	jr .playSong
-.notGymLeaderBattle
+	jr nz, .gymLeaderBattle
 	ld a, [wIsTrainerBattle]
 	and a
 	jr z, .wildBattle
 	ld a, [wCurOpponent]
 	cp CHAMPION
 	jr z, .finalBattle
-	;cp LANCE
-	;jr nz, .normalTrainerBattle
-	;ld a, MUSIC_GYM_LEADER_BATTLE ; lance also plays gym leader theme
-	;jr .playSong
+	cp GIOVANNI
+	jr z, .rocketBattle
+	cp EXECUTIVEM
+	jr z, .rocketBattle
+	cp EXECUTIVEF
+	jr z, .rocketBattle
+	cp GRUNTM
+	jr z, .rocketBattle
+	cp GRUNTF
+	jr z, .rocketBattle
+	cp JESSIE_JAMES
+	jr z, .rocketBattle
+	cp SCIENTIST
+	jr z, .rocketBattle
 .normalTrainerBattle
-	ld a, MUSIC_TRAINER_BATTLE
+	ld a, [wCurRegion]
+	and a ; Kanto?
+	ld a, MUSIC_KANTO_TRAINER_BATTLE
+	jr z, .playSong
+	; Else Johto
+	ld a, MUSIC_JOHTO_TRAINER_BATTLE
+	jr .playSong
+.gymLeaderBattle
+	ld a, [wCurRegion]
+	and a ; Kanto?
+	ld a, MUSIC_KANTO_GYM_LEADER_BATTLE
+	jr z, .playSong
+	; Else Johto
+	ld a, MUSIC_JOHTO_GYM_LEADER_BATTLE
+	jr .playSong
+.wildBattle
+	ld a, [wCurRegion]
+	and a ; Kanto?
+	ld a, MUSIC_KANTO_WILD_BATTLE
+	jr z, .playSong
+	; Else Johto
+	ld a, MUSIC_JOHTO_WILD_BATTLE
+	jr .playSong
+.rocketBattle
+	ld a, MUSIC_ROCKET_BATTLE
 	jr .playSong
 .finalBattle
 	ld a, MUSIC_FINAL_BATTLE
-	jr .playSong
-.wildBattle
-	ld a, MUSIC_WILD_BATTLE
 .playSong
 	jp PlayMusic
