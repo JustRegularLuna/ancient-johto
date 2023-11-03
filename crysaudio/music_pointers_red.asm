@@ -30,6 +30,7 @@ Music:
 	dba Music_KantoTrainerBattle
 	dba Music_KantoWildBattle
 	dba Music_RocketBattle
+	dba Music_TrainerBattle
 	dba Music_ChampionBattle
 	dba Music_TrainerVictory
 	dba Music_WildPokemonVictory

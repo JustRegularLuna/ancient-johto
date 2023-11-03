@@ -30,6 +30,8 @@ PlayBattleMusic::
 	jr z, .rocketBattle
 	cp SCIENTIST
 	jr z, .rocketBattle
+	cp RED
+	jr z, .retroBattle
 .normalTrainerBattle
 	ld a, [wCurRegion]
 	and a ; Kanto?
@@ -56,6 +58,9 @@ PlayBattleMusic::
 	jr .playSong
 .rocketBattle
 	ld a, MUSIC_ROCKET_BATTLE
+	jr .playSong
+.retroBattle
+	ld a, MUSIC_RETRO_BATTLE
 	jr .playSong
 .finalBattle
 	ld a, MUSIC_FINAL_BATTLE
