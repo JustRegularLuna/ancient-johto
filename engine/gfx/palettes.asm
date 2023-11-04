@@ -228,7 +228,7 @@ SetPal_TrainerCard:
 	ld de, BadgeBlkDataLengths
 	ld hl, wTrainerCardBlkPacket + 2
 	ld a, [wJohtoBadges]
-	ld c, NUM_BADGES
+	ld c, NUM_JOHTO_BADGES
 .badgeLoop
 	srl a
 	push af
@@ -268,7 +268,7 @@ SetPal_TrainerCard2:
 	ld de, BadgeBlkDataLengths
 	ld hl, wTrainerCardBlkPacket + 2
 	ld a, [wKantoBadges]
-	ld c, NUM_BADGES
+	ld c, NUM_KANTO_BADGES
 .badgeLoop
 	srl a
 	push af

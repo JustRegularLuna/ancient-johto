@@ -8,12 +8,12 @@ DrawBadges:
 ; Tile ids for face/badge graphics.
 	ld de, wBadgeOrFaceTiles
 	ld hl, .FaceBadgeTiles
-	ld bc, NUM_BADGES
+	ld bc, NUM_JOHTO_BADGES
 	call CopyData
 
 ; Booleans for each badge.
 	ld hl, wTempObtainedBadgesBooleans
-	ld bc, NUM_BADGES
+	ld bc, NUM_JOHTO_BADGES
 	xor a
 	call FillMemory
 
@@ -22,7 +22,7 @@ DrawBadges:
 	ld hl, wBadgeOrFaceTiles
 	ld a, [wJohtoBadges]
 	ld b, a
-	ld c, NUM_BADGES
+	ld c, NUM_JOHTO_BADGES
 .CheckBadge
 	srl b
 	jr nc, .NextBadge
@@ -91,7 +91,7 @@ DrawBadges:
 	push bc
 	ld hl, wBadgeOrFaceTiles + 1
 	ld de, wBadgeOrFaceTiles
-	ld bc, NUM_BADGES
+	ld bc, NUM_JOHTO_BADGES
 	call CopyData
 	pop bc
 
@@ -125,12 +125,12 @@ DrawKantoBadges:
 ; Tile ids for face/badge graphics.
 	ld de, wBadgeOrFaceTiles
 	ld hl, .FaceBadgeTiles
-	ld bc, NUM_BADGES
+	ld bc, NUM_KANTO_BADGES
 	call CopyData
 
 ; Booleans for each badge.
 	ld hl, wTempObtainedBadgesBooleans
-	ld bc, NUM_BADGES
+	ld bc, NUM_KANTO_BADGES
 	xor a
 	call FillMemory
 
@@ -139,7 +139,7 @@ DrawKantoBadges:
 	ld hl, wBadgeOrFaceTiles
 	ld a, [wKantoBadges]
 	ld b, a
-	ld c, NUM_BADGES
+	ld c, NUM_KANTO_BADGES
 .CheckBadge
 	srl b
 	jr nc, .NextBadge
@@ -208,7 +208,7 @@ DrawKantoBadges:
 	push bc
 	ld hl, wBadgeOrFaceTiles + 1
 	ld de, wBadgeOrFaceTiles
-	ld bc, NUM_BADGES
+	ld bc, NUM_KANTO_BADGES
 	call CopyData
 	pop bc
 

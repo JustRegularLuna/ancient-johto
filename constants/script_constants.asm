@@ -49,7 +49,7 @@ NUM_NPC_TRADES EQU const_value
 	const BIT_MARSHBADGE   ; 5
 	const BIT_VOLCANOBADGE ; 6
 	const BIT_EARTHBADGE   ; 7
-NUM_BADGES EQU const_value
+NUM_KANTO_BADGES EQU const_value
 
 ; wJohtoBadges bits
 	const_def
@@ -61,7 +61,7 @@ NUM_BADGES EQU const_value
 	const BIT_STORMBADGE   ; 5
 	const BIT_GLACIERBADGE ; 6
 	const BIT_RISINGBADGE  ; 7
-NUM_TOTAL_BADGES EQU const_value + NUM_BADGES
+NUM_JOHTO_BADGES EQU const_value
 
 ; OaksAideScript results
 OAKS_AIDE_BAG_FULL        EQU $00
