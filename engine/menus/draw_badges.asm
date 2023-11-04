@@ -20,7 +20,7 @@ DrawBadges:
 ; Alter these based on owned badges.
 	ld de, wTempObtainedBadgesBooleans
 	ld hl, wBadgeOrFaceTiles
-	ld a, [wObtainedJohtoBadges]
+	ld a, [wJohtoBadges]
 	ld b, a
 	ld c, NUM_BADGES
 .CheckBadge
@@ -137,7 +137,7 @@ DrawKantoBadges:
 ; Alter these based on owned badges.
 	ld de, wTempObtainedBadgesBooleans
 	ld hl, wBadgeOrFaceTiles
-	ld a, [wObtainedKantoBadges]
+	ld a, [wKantoBadges]
 	ld b, a
 	ld c, NUM_BADGES
 .CheckBadge

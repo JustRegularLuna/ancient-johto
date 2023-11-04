@@ -2265,10 +2265,10 @@ wOptions::
 ; 5: Slow
 	ds 1
 
-wObtainedKantoBadges::
+wKantoBadges::
 	flag_array 8
 
-wObtainedJohtoBadges::
+wJohtoBadges::
 	flag_array 8
 
 wLetterPrintingDelayFlags::
@@ -2752,14 +2752,13 @@ wd728::
 ; bit 7: set by ItemUseCardKey, which is leftover code from a previous implementation of the Card Key
 	ds 1
 
+; unused
 	ds 1
 
-wBeatGymFlags::
-; redundant because it matches wObtainedBadges
-; used to determine whether to show name on statue and in two NPC text scripts
+; unused
 	ds 1
 
-wJohtoBeatGymFlags::
+; unused
 	ds 1
 
 wd72c::

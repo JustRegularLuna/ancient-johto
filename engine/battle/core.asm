@@ -3921,7 +3921,7 @@ CheckForDisobedience:
 ; it was traded
 .monIsTraded
 ; what level might disobey?
-	ld hl, wObtainedJohtoBadges
+	ld hl, wJohtoBadges
 	bit BIT_RISINGBADGE, [hl]
 	ld a, 101
 	jr nz, .next
@@ -6604,7 +6604,7 @@ ApplyBadgeStatBoosts:
 	ld a, [wLinkState]
 	cp LINK_STATE_BATTLING
 	ret z ; return if link battle
-	ld a, [wObtainedJohtoBadges]
+	ld a, [wJohtoBadges]
 ; swap Plain Badge and Mineral Badge.
 ; copied from pokegold
 	ld d, a

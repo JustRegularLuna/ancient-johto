@@ -118,7 +118,7 @@ StartMenu_Pokemon::
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
-	ld a, [wObtainedJohtoBadges] ; badges obtained
+	ld a, [wJohtoBadges] ; badges obtained
 	jp hl
 .outOfBattleMovePointers
 	dw .cut
@@ -467,7 +467,7 @@ StartMenu_TrainerInfo::
 	call GBPalNormal
 	call WaitForTextScrollButtonPress ; wait for button press
 	; only show the second page if you have any Kanto badges
-	ld a, [wObtainedKantoBadges]
+	ld a, [wKantoBadges]
 	and a
 	jr z, .noKantoBadges
 	call GBPalWhiteOut

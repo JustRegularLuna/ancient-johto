@@ -77,7 +77,7 @@ TestBattle:
 	; Don't mess around
 	; with obedience.
 	ld a, 1 << BIT_RISINGBADGE
-	ld [wObtainedJohtoBadges], a
+	ld [wJohtoBadges], a
 
 	ld hl, wFlags_D733
 	set BIT_TEST_BATTLE, [hl]

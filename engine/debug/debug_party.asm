@@ -47,7 +47,7 @@ IF DEF(_DEBUG)
 
 	; Get all badges except Rising Badge.
 	ld a, $ff ^ (1 << BIT_RISINGBADGE)
-	ld [wObtainedJohtoBadges], a
+	ld [wJohtoBadges], a
 
 	call SetIshiharaTeam
 

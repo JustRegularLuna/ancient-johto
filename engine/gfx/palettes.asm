@@ -227,7 +227,7 @@ SetPal_TrainerCard:
 	call CopyData
 	ld de, BadgeBlkDataLengths
 	ld hl, wTrainerCardBlkPacket + 2
-	ld a, [wObtainedJohtoBadges]
+	ld a, [wJohtoBadges]
 	ld c, NUM_BADGES
 .badgeLoop
 	srl a
@@ -267,7 +267,7 @@ SetPal_TrainerCard2:
 	call CopyData
 	ld de, BadgeBlkDataLengths
 	ld hl, wTrainerCardBlkPacket + 2
-	ld a, [wObtainedKantoBadges]
+	ld a, [wKantoBadges]
 	ld c, NUM_BADGES
 .badgeLoop
 	srl a

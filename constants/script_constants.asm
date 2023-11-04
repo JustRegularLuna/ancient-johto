@@ -39,8 +39,7 @@ NUM_NPC_TRADES EQU const_value
 	const TRADE_DIALOGSET_EVOLUTION
 	const TRADE_DIALOGSET_HAPPY
 
-; badges
-; wObtainedKantoBadges and wBeatGymFlags bits
+; wKantoBadges bits
 	const_def
 	const BIT_BOULDERBADGE ; 0
 	const BIT_CASCADEBADGE ; 1
@@ -52,7 +51,7 @@ NUM_NPC_TRADES EQU const_value
 	const BIT_EARTHBADGE   ; 7
 NUM_BADGES EQU const_value
 
-; wObtainedJohtoBadges bits
+; wJohtoBadges bits
 	const_def
 	const BIT_ZEPHYRBADGE  ; 0
 	const BIT_HIVEBADGE    ; 1

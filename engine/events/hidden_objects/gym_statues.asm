@@ -27,10 +27,10 @@ GymStatues:
 	ld b, [hl]
 	ld a, [wCurRegion]
 	and a ; Kanto?
-	ld a, [wBeatGymFlags]
+	ld a, [wKantoBadges]
 	jr z, .gotRegion
 	; Johto
-	ld a, [wJohtoBeatGymFlags]
+	ld a, [wJohtoBadges]
 .gotRegion
 	and b
 	cp b
