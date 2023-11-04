@@ -96,7 +96,7 @@ ProfOakData:      ; PROF_OAK
 	db -1 ; end
 
 Rival1Data:       ; RIVAL1
-; First Battle Parties
+; First Battle Parties (Cherrygrove)
 	db "<RIVAL>@", TRAINERTYPE_NORMAL
 	db 5, STARTER2 ; Totodile (Player chose Cyndaquil)
 	db -1 ; end

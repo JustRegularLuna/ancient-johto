@@ -1,3 +1,12 @@
+; trainerclass macro taken from pokegold
+DEF __trainer_class__ = 0
+
+MACRO trainerclass
+	DEF \1 EQU __trainer_class__
+	DEF __trainer_class__ += 1
+	const_def 1
+ENDM
+
 ; trainer class ids
 ; indexes for:
 ; - TrainerNames (see data/trainers/names.asm)
@@ -6,89 +15,170 @@
 ; - TrainerPicAndMoneyPointers (see data/trainers/pic_pointers_money.asm)
 ; - TrainerAIPointers (see data/trainers/ai_pointers.asm)
 ; - TrainerClassMoveChoiceModifications (see data/trainers/move_choices.asm)
-	const_def
-	const NOBODY         ; $00
-	const PROF_OAK
-	const RIVAL1
-	const RIVAL2
-	const FALKNER
-	const BUGSY
-	const WHITNEY
-	const MORTY
-	const PRYCE
-	const JASMINE
-	const CHUCK
-	const CLAIR
-	const WILL
-	const KOGA
-	const BRUNO
-	const KAREN
-	const CHAMPION
-	const LORELEI
-	const AGATHA
-	const RED
-	const BLUE
-	const BROCK
-	const MISTY
-	const LT_SURGE
-	const ERIKA
-	const JANINE
-	const SABRINA
-	const BLAINE
-	const GIOVANNI
-	const EXECUTIVEM
-	const EXECUTIVEF
-	const GRUNTM
-	const GRUNTF
-	const JESSIE_JAMES
-	const SCIENTIST
-	const BURGLAR
-	const YOUNGSTER
-	const BUG_CATCHER
-	const SCHOOLBOY
-	const BIRD_KEEPER
-	const TWINS
-	const LASS
-	const BEAUTY
-	const PICNICKER
-	const CAMPER
-	const COOLTRAINERM
-	const COOLTRAINERF
-	const POKEMANIAC
-	const SUPER_NERD
-	const GENTLEMAN
-	const SKIER
-	const BOARDER
-	const TEACHER
-	const FISHER
-	const SWIMMERM
-	const SWIMMERF
-	const SAILOR
-	const ROCKER
-	const GUITARIST
-	const HIKER
-	const BIKER
-	const CUE_BALL
-	const GAMBLER
-	const TAMER
-	const FIREBREATHER
-	const JUGGLER
-	const BLACKBELT
-	const PSYCHIC_TR
-	const ENGINEER
-	const SAGE
-	const MEDIUM
-	const CHANNELER
-	const KIMONO_GIRL
-	const POKEFANF
-	const POKEFANM
-	const OFFICER
-	const REI
-NUM_TRAINERS EQU const_value - 1
+
+	trainerclass TRAINER_NONE ; 0
+
+	trainerclass PROF_OAK
+	const OAK1
+
+	trainerclass RIVAL1
+	const RIVAL1_1_TOTODILE
+	const RIVAL1_1_CHIKORITA
+	const RIVAL1_1_CYNDAQUIL
+
+	trainerclass RIVAL2
+
+	trainerclass FALKNER
+
+	trainerclass BUGSY
+
+	trainerclass WHITNEY
+
+	trainerclass MORTY
+
+	trainerclass PRYCE
+
+	trainerclass JASMINE
+
+	trainerclass CHUCK
+
+	trainerclass CLAIR
+
+	trainerclass WILL
+
+	trainerclass KOGA
+
+	trainerclass BRUNO
+
+	trainerclass KAREN
+
+	trainerclass CHAMPION
+
+	trainerclass LORELEI
+
+	trainerclass AGATHA
+
+	trainerclass RED
+
+	trainerclass BLUE
+
+	trainerclass BROCK
+
+	trainerclass MISTY
+
+	trainerclass LT_SURGE
+
+	trainerclass ERIKA
+
+	trainerclass JANINE
+
+	trainerclass SABRINA
+
+	trainerclass BLAINE
+
+	trainerclass GIOVANNI
+
+	trainerclass EXECUTIVEM
+
+	trainerclass EXECUTIVEF
+
+	trainerclass GRUNTM
+
+	trainerclass GRUNTF
+
+	trainerclass JESSIE_JAMES
+
+	trainerclass SCIENTIST
+
+	trainerclass BURGLAR
+
+	trainerclass YOUNGSTER
+
+	trainerclass BUG_CATCHER
+
+	trainerclass SCHOOLBOY
+
+	trainerclass BIRD_KEEPER
+
+	trainerclass TWINS
+
+	trainerclass LASS
+
+	trainerclass BEAUTY
+
+	trainerclass PICNICKER
+
+	trainerclass CAMPER
+
+	trainerclass COOLTRAINERM
+
+	trainerclass COOLTRAINERF
+
+	trainerclass POKEMANIAC
+
+	trainerclass SUPER_NERD
+
+	trainerclass GENTLEMAN
+
+	trainerclass SKIER
+
+	trainerclass BOARDER
+
+	trainerclass TEACHER
+
+	trainerclass FISHER
+
+	trainerclass SWIMMERM
+
+	trainerclass SWIMMERF
+
+	trainerclass SAILOR
+
+	trainerclass ROCKER
+
+	trainerclass GUITARIST
+
+	trainerclass HIKER
+
+	trainerclass BIKER
+
+	trainerclass CUE_BALL
+
+	trainerclass GAMBLER
+
+	trainerclass TAMER
+
+	trainerclass FIREBREATHER
+
+	trainerclass JUGGLER
+
+	trainerclass BLACKBELT
+
+	trainerclass PSYCHIC_TR
+
+	trainerclass ENGINEER
+
+	trainerclass SAGE
+
+	trainerclass MEDIUM
+
+	trainerclass CHANNELER
+
+	trainerclass KIMONO_GIRL
+
+	trainerclass POKEFANF
+
+	trainerclass POKEFANM
+
+	trainerclass OFFICER
+
+	trainerclass REI
+
+DEF NUM_TRAINERS EQU __trainer_class__ - 1
 
 
-; trainer type constants
+; trainer type trainerclassants
 ; used in data/trainers/parties.asm to define trainer party info
-const_value = 0
+	const_def
 	const TRAINERTYPE_NORMAL
 	const TRAINERTYPE_MOVES
