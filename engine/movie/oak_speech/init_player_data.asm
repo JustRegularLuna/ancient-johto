@@ -32,7 +32,7 @@ START_MONEY EQU $3000
 
 	ld [wMonDataLocation], a
 
-	ld hl, wKantoBadges
+	ld hl, wBadges
 	ld [hli], a ; Kanto Badges
 	ld [hli], a ; Johto Badges
 

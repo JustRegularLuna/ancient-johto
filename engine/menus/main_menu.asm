@@ -407,7 +407,7 @@ PrintSaveScreenText:
 
 PrintNumBadges:
 	push hl
-	ld hl, wKantoBadges
+	ld hl, wBadges
 	ld b, $2 ; count both Kanto and Johto badges
 	call CountSetBits
 	pop hl

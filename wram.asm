@@ -2265,11 +2265,9 @@ wOptions::
 ; 5: Slow
 	ds 1
 
-wKantoBadges::
-	flag_array 8
-
-wJohtoBadges::
-	flag_array 8
+wBadges::
+wKantoBadges:: flag_array NUM_BADGES
+wJohtoBadges:: flag_array NUM_BADGES
 
 wLetterPrintingDelayFlags::
 ; bit 0: If 0, limit the delay to 1 frame. Note that this has no effect if
