@@ -45,9 +45,9 @@ IF DEF(_DEBUG)
 	ld [wTownVisitedFlag], a
 	ld [wTownVisitedFlag + 1], a
 
-	; Get all badges except Earth Badge.
-	ld a, $ff ^ (1 << BIT_EARTHBADGE)
-	ld [wObtainedKantoBadges], a
+	; Get all badges except Rising Badge.
+	ld a, $ff ^ (1 << BIT_RISINGBADGE)
+	ld [wObtainedJohtoBadges], a
 
 	call SetIshiharaTeam
 

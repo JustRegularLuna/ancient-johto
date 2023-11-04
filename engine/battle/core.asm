@@ -3921,18 +3921,21 @@ CheckForDisobedience:
 ; it was traded
 .monIsTraded
 ; what level might disobey?
-	ld hl, wObtainedKantoBadges
-	bit BIT_EARTHBADGE, [hl]
+	ld hl, wObtainedJohtoBadges
+	bit BIT_RISINGBADGE, [hl]
 	ld a, 101
 	jr nz, .next
-	bit BIT_MARSHBADGE, [hl]
+	bit BIT_STORMBADGE, [hl]
 	ld a, 70
 	jr nz, .next
-	bit BIT_RAINBOWBADGE, [hl]
+	bit BIT_FOGBADGE, [hl]
 	ld a, 50
 	jr nz, .next
-	bit BIT_CASCADEBADGE, [hl]
+	bit BIT_HIVEBADGE, [hl]
 	ld a, 30
+	jr nz, .next
+	bit BIT_ZEPHYRBADGE, [hl]
+	ld a, 20
 	jr nz, .next
 	ld a, 10
 .next
@@ -6601,16 +6604,33 @@ ApplyBadgeStatBoosts:
 	ld a, [wLinkState]
 	cp LINK_STATE_BATTLING
 	ret z ; return if link battle
-	ld a, [wObtainedKantoBadges]
+	ld a, [wObtainedJohtoBadges]
+; swap Plain Badge and Mineral Badge.
+; copied from pokegold
+	ld d, a
+	and (1 << BIT_PLAINBADGE)
+	add a
+	add a
 	ld b, a
+	ld a, d
+	and (1 << BIT_MINERALBADGE)
+	rrca
+	rrca
+	ld c, a
+	ld a, d
+	and ((1 << BIT_ZEPHYRBADGE) | (1 << BIT_HIVEBADGE) | (1 << BIT_FOGBADGE) | (1 << BIT_STORMBADGE) | (1 << BIT_GLACIERBADGE) | (1 << BIT_RISINGBADGE))
+	or b
+	or c
+	ld b, a
+; resume pokered badgeboost code
 	ld hl, wBattleMonAttack
 	ld c, $4
 ; the boost is applied for badges whose bit position is even
 ; the order of boosts matches the order they are laid out in RAM
-; Boulder (bit 0) - attack
-; Thunder (bit 2) - defense
-; Soul (bit 4) - speed
-; Volcano (bit 6) - special
+; Zephyr (bit 0) - attack
+; Mineral (bit 2) - defense
+; Plain (bit 4) - speed
+; Glacier (bit 6) - special
 .loop
 	srl b
 	call c, .applyBoostToStat
