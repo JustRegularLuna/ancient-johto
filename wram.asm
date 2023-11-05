@@ -2617,6 +2617,9 @@ wPlayersHouse2FCurScript::
 wNewBarkTownCurScript::
 	ds 1
 
+wCherrygroveCityCurScript::
+	ds 1
+
 wElmsLabCurScript::
 	ds 1
 

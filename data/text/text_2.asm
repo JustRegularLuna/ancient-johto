@@ -895,8 +895,9 @@ _UseNextMonText::
 	done
 
 _Rival1WinText::
-	text "<RIVAL>: Yeah! Am"
-	line "I great or what?"
+	text "<RIVAL>: Look at"
+	line "your wimpy little"
+	cont "#MON!"
 	prompt
 
 _PlayerBlackedOutText2::

@@ -29,6 +29,7 @@ Music:
 	dba Music_KantoGymBattle
 	dba Music_KantoTrainerBattle
 	dba Music_KantoWildBattle
+	dba Music_RivalBattle
 	dba Music_RocketBattle
 	dba Music_TrainerBattle
 	dba Music_ChampionBattle

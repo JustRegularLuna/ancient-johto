@@ -1,7 +1,7 @@
 ; an alternate start for MeetRival which has a different first measure
 Music_RivalAlternateStart::
 	ld c, 0 ; BANK(Music_MeetRival)
-	ld a, MUSIC_MEET_RIVAL
+	ld a, MUSIC_MEET_GARY
 	call PlayMusic
 	ld hl, wChannel1MusicAddress
 	ld de, Music_MeetRival_branch_b1a2
@@ -22,7 +22,7 @@ Audio1_OverwriteChannelPointer:
 ; an alternate tempo for MeetRival which is slightly slower
 Music_RivalAlternateTempo::
 	ld c, 0 ; BANK(Music_MeetRival)
-	ld a, MUSIC_MEET_RIVAL
+	ld a, MUSIC_MEET_GARY
 	call PlayMusic
 	ld hl, wChannel1MusicAddress
 	ld de, Music_MeetRival_branch_b119

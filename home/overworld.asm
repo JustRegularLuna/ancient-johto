@@ -378,12 +378,12 @@ OverworldLoopLessDelay::
 	ld hl, wd72e
 	set 5, [hl]
 	ld a, [wCurRegion]
-	and a
-	jr nz, .notOaksLab
+	cp JOHTO_REGION
+	jr nz, .notCherrygrove
 	ld a, [wCurMap]
-	cp OAKS_LAB
-	jp z, .noFaintCheck ; no blacking out if the player lost to the rival in Oak's lab
-.notOaksLab
+	cp CHERRYGROVE_CITY
+	jr z, .noFaintCheck ; no blacking out if the player lost to the rival in Oak's lab
+.notCherrygrove
 	callfar AnyPartyAlive
 	ld a, d
 	and a

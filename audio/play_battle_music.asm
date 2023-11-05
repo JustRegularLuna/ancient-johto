@@ -14,6 +14,10 @@ PlayBattleMusic::
 	and a
 	jr z, .wildBattle
 	ld a, [wCurOpponent]
+	cp RIVAL1
+	jr z, .rivalBattle
+	cp RIVAL2
+	jr z, .rivalBattle
 	cp CHAMPION
 	jr z, .finalBattle
 	cp GIOVANNI
@@ -55,6 +59,9 @@ PlayBattleMusic::
 	jr z, .playSong
 	; Else Johto
 	ld a, MUSIC_JOHTO_WILD_BATTLE
+	jr .playSong
+.rivalBattle
+	ld a, MUSIC_RIVAL_BATTLE
 	jr .playSong
 .rocketBattle
 	ld a, MUSIC_ROCKET_BATTLE

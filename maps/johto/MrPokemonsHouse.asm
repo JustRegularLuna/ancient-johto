@@ -92,8 +92,6 @@ MrPokemonsHouseGiveEggScript:
 	ld a, MR_POKEMONS_HOUSE_OAK
 	ldh [hSpriteIndex], a
 	call MoveSprite
-	ld a, A_BUTTON | B_BUTTON | SELECT | START | D_RIGHT | D_LEFT | D_UP | D_DOWN
-	ld [wJoyIgnore], a
 	; Trigger next scene
 	ld a, SCRIPT_MR_POKEMONS_HOUSE_RECEIVE_POKEDEX
 	ld [wMrPokemonsHouseCurScript], a
@@ -106,10 +104,17 @@ MrPokemonsHouseGiveEggScript:
 	db -1
 
 MrPokemonsHouseReceivePokedexScript:
+	; Don't do anything stupid
+	ld a, A_BUTTON | B_BUTTON | SELECT | START | D_RIGHT | D_LEFT | D_UP | D_DOWN
+	ld [wJoyIgnore], a
+
 	; Is Oak still walking?
 	ld a, [wd730]
 	bit 0, a
 	ret nz
+
+	ld a, SELECT | START | D_RIGHT | D_LEFT | D_UP | D_DOWN
+	ld [wJoyIgnore], a
 	; Turn to look at Oak
 	xor a
 	ldh [hJoyHeld], a
@@ -179,8 +184,19 @@ MrPokemonsHouse_TextPointers:
 	dw MrPokemonsHouseHaveSomeRestText
 
 MrPokemonsHouseMrPokemonText:
-	text "Safe travels,"
-	line "<PLAYER>."
+	text_asm
+	CheckEvent EVENT_DELIVERED_MYSTERY_EGG
+	ld hl, .talkAfterEggText
+	jr nz, .printText
+	; if none are set, tell you to deliver egg
+	ld hl, .goDeliverItText
+.printText
+	call PrintText
+	jp TextScriptEnd
+
+.goDeliverItText
+	text "MR.#MON: Safe"
+	line "travels, <PLAYER>."
 
 	para "If anyone can"
 	line "figure out what"
@@ -188,8 +204,20 @@ MrPokemonsHouseMrPokemonText:
 	cont "its PROF.ELM!"
 	done
 
+.talkAfterEggText
+	text "MR.#MON: I'm"
+	line "always on the"
+
+	para "lookout for rare"
+	line "and mysterious"
+	cont "things!"
+
+	para "If you find any,"
+	line "show them to me!"
+	done
+
 MrPokemonsHouseOakText:
-	text "!"
+	text "Object event."
 	done
 
 MrPokemonsHousePCText:
@@ -405,6 +433,10 @@ MrPokemonsHouseHaveSomeRestText:
 	ld a, HS_NEWBARK_RIVAL
 	ld [wMissableObjectIndex], a
 	predef HideObject
+	; Show the rival in Cherrygrove
+	ld a, HS_CHERRYGROVE_RIVAL
+	ld [wMissableObjectIndex], a
+	predef ShowObject
 	jp TextScriptEnd
 
 .healPokemonText

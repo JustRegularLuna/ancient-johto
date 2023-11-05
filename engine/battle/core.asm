@@ -1181,13 +1181,13 @@ HandlePlayerBlackOut:
 	call DelayFrames
 	ld hl, Rival1WinText
 	call PrintText
-	; TODO: Switch this around to Elm's Lab if needed
+	; Check for rival battle in Cherrygrove
 	ld a, [wCurRegion]
-	and a ; Kanto?
+	cp JOHTO_REGION
 	jr nz, .notRival1Battle
 	ld a, [wCurMap]
-	cp OAKS_LAB
-	ret z            ; starter battle in oak's lab: don't black out
+	cp CHERRYGROVE_CITY
+	ret z            ; starter battle in Cherrygrove: don't black out
 .notRival1Battle
 	ld b, SET_PAL_BATTLE_BLACK
 	call RunPaletteCommand

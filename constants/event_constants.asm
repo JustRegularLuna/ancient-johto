@@ -29,7 +29,7 @@
 ; Cherrygrove City events
 	const EVENT_GOT_TOWN_MAP
 	const EVENT_GOT_CHERRYGROVE_KINGS_ROCK
-	const_skip
+	const EVENT_BEAT_CHERRYGROVE_RIVAL
 	const_skip
 	const_skip
 	const_skip
