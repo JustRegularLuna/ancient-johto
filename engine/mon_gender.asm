@@ -56,6 +56,7 @@ GetMonGender::
 	ret
 
 MonGenderRatios:
+	table_width 1, MonGenderRatios
 	db MALE_88_PERCENT   ; Bulbasaur
 	db MALE_88_PERCENT   ; Ivysaur
 	db MALE_88_PERCENT   ; Venusaur
@@ -207,3 +208,108 @@ MonGenderRatios:
 	db SAME_BOTH_GENDERS ; Dragonite
 	db NO_GENDER         ; Mewtwo
 	db NO_GENDER         ; Mew
+	db MALE_88_PERCENT   ; Chikorita
+	db MALE_88_PERCENT   ; Bayleef
+	db MALE_88_PERCENT   ; Meganium
+	db MALE_88_PERCENT   ; Cyndaquil
+	db MALE_88_PERCENT   ; Quilava
+	db MALE_88_PERCENT   ; Typhlosion
+	db MALE_88_PERCENT   ; Totodile
+	db MALE_88_PERCENT   ; Croconaw
+	db MALE_88_PERCENT   ; Feraligatr
+	db SAME_BOTH_GENDERS ; Sentret
+	db SAME_BOTH_GENDERS ; Furret
+	db SAME_BOTH_GENDERS ; Hoothoot
+	db SAME_BOTH_GENDERS ; Noctowl
+	db SAME_BOTH_GENDERS ; Ledyba
+	db SAME_BOTH_GENDERS ; Ledian
+	db SAME_BOTH_GENDERS ; Spinarak
+	db SAME_BOTH_GENDERS ; Ariados
+	db SAME_BOTH_GENDERS ; Crobat
+	db SAME_BOTH_GENDERS ; Chinchou
+	db SAME_BOTH_GENDERS ; Lanturn
+	db SAME_BOTH_GENDERS ; Pichu
+	db FEMALE_75_PERCENT ; Cleffa
+	db FEMALE_75_PERCENT ; Igglybuff
+	db MALE_88_PERCENT   ; Togepi
+	db MALE_88_PERCENT   ; Togetic
+	db SAME_BOTH_GENDERS ; Natu
+	db SAME_BOTH_GENDERS ; Xatu
+	db SAME_BOTH_GENDERS ; Mareep
+	db SAME_BOTH_GENDERS ; Flaaffy
+	db SAME_BOTH_GENDERS ; Ampharos
+	db SAME_BOTH_GENDERS ; Bellossom
+	db SAME_BOTH_GENDERS ; Marill
+	db SAME_BOTH_GENDERS ; Azumarill
+	db SAME_BOTH_GENDERS ; Sudowoodo
+	db SAME_BOTH_GENDERS ; Politoed
+	db SAME_BOTH_GENDERS ; Hoppip
+	db SAME_BOTH_GENDERS ; Skiploom
+	db SAME_BOTH_GENDERS ; Jumpluff
+	db SAME_BOTH_GENDERS ; Aipom
+	db SAME_BOTH_GENDERS ; Sunkern
+	db SAME_BOTH_GENDERS ; Sunflora
+	db SAME_BOTH_GENDERS ; Yanma
+	db SAME_BOTH_GENDERS ; Wooper
+	db SAME_BOTH_GENDERS ; Quagsire
+	db MALE_88_PERCENT   ; Espeon
+	db MALE_88_PERCENT   ; Umbreon
+	db SAME_BOTH_GENDERS ; Murkrow
+	db SAME_BOTH_GENDERS ; Slowking
+	db SAME_BOTH_GENDERS ; Misdreavus
+	db NO_GENDER         ; Unown
+	db SAME_BOTH_GENDERS ; Wobbuffet
+	db SAME_BOTH_GENDERS ; Girafarig
+	db SAME_BOTH_GENDERS ; Pineco
+	db SAME_BOTH_GENDERS ; Forretress
+	db SAME_BOTH_GENDERS ; Dunsparce
+	db SAME_BOTH_GENDERS ; Gligar
+	db SAME_BOTH_GENDERS ; Steelix
+	db FEMALE_75_PERCENT ; Snubbull
+	db FEMALE_75_PERCENT ; Granbull
+	db SAME_BOTH_GENDERS ; Qwilfish
+	db SAME_BOTH_GENDERS ; Scizor
+	db SAME_BOTH_GENDERS ; Shuckle
+	db SAME_BOTH_GENDERS ; Heracross
+	db SAME_BOTH_GENDERS ; Sneasel
+	db SAME_BOTH_GENDERS ; Teddiursa
+	db SAME_BOTH_GENDERS ; Ursaring
+	db SAME_BOTH_GENDERS ; Slugma
+	db SAME_BOTH_GENDERS ; Magcargo
+	db SAME_BOTH_GENDERS ; Swinub
+	db SAME_BOTH_GENDERS ; Piloswine
+	db FEMALE_75_PERCENT ; Corsola
+	db SAME_BOTH_GENDERS ; Remoraid
+	db SAME_BOTH_GENDERS ; Octillery
+	db SAME_BOTH_GENDERS ; Delibird
+	db SAME_BOTH_GENDERS ; Mantine
+	db SAME_BOTH_GENDERS ; Skarmory
+	db SAME_BOTH_GENDERS ; Houndour
+	db SAME_BOTH_GENDERS ; Houndoom
+	db SAME_BOTH_GENDERS ; Kingdra
+	db SAME_BOTH_GENDERS ; Phanpy
+	db SAME_BOTH_GENDERS ; Donphan
+	db NO_GENDER         ; Porygon2
+	db SAME_BOTH_GENDERS ; Stantler
+	db SAME_BOTH_GENDERS ; Smeargle
+	db MALE_ONLY         ; Tyrogue
+	db MALE_ONLY         ; Hitmontop
+	db FEMALE_ONLY       ; Smoochum
+	db MALE_75_PERCENT   ; Elekid
+	db MALE_75_PERCENT   ; Magby
+	db FEMALE_ONLY       ; Miltank
+	db FEMALE_ONLY       ; Blissey
+	db NO_GENDER         ; Raikou
+	db NO_GENDER         ; Entei
+	db NO_GENDER         ; Suicune
+	db SAME_BOTH_GENDERS ; Larvitar
+	db SAME_BOTH_GENDERS ; Pupitar
+	db SAME_BOTH_GENDERS ; Tyranitar
+	db NO_GENDER         ; Lugia
+	db NO_GENDER         ; Ho-oh
+	db NO_GENDER         ; Celebi
+
+	db NO_GENDER         ; "Ghost"
+	db NO_GENDER         ; "Kabutops Fossil"
+	db NO_GENDER         ; "Aerodactyl Fossil"
+	assert_table_length NUM_POKEMON_INDEXES
