@@ -230,6 +230,7 @@ wOverworldMap::
 wOverworldMapEnd::
 
 NEXTU
+wTempDVs::
 wTempPic::
 	ds 7 * 7 tiles
 ENDU

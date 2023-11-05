@@ -700,7 +700,6 @@ INCLUDE "data/trainers/encounter_types.asm"
 SECTION "Trainer Party Data", ROMX
 
 INCLUDE "engine/battle/read_trainer_party.asm"
-INCLUDE "data/trainers/parties.asm"
 
 
 SECTION "Mon Party Icons", ROMX

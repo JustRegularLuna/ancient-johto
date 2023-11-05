@@ -75,8 +75,18 @@ _AddPartyMon::
 	push hl
 	ld a, [wMonDataLocation]
 	and $f
-	ld a, ATKDEFDV_TRAINER  ; set enemy trainer mon IVs to fixed average values
-	ld b, SPDSPCDV_TRAINER
+	push hl
+	push de
+	push bc
+	push af
+	farcall GetTrainerMonDVs
+	pop af
+	pop bc
+	pop de
+	ld hl, wTempDVs
+	ld a, [hli]
+	ld b, [hl]
+	pop hl
 	jr nz, .next4
 
 ; If the mon is being added to the player's party, update the pokedex.

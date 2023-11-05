@@ -135,3 +135,23 @@ AddCustomMoves:
 	dec b
 	jr nz, .addMoveLoop
 	ret
+
+; Farcalled from elsewhere, but this keeps it with other trainer data
+GetTrainerMonDVs::
+	ld a, [wTrainerClass]
+	dec a
+	ld c, a
+	ld b, 0
+	ld hl, TrainerClassDVs
+	add hl, bc
+	add hl, bc
+	ld de, wTempDVs
+	ld a, [hli]
+	ld [de], a
+	inc de
+	ld a, [hl]
+	ld [de], a
+	ret
+
+INCLUDE "data/trainers/dvs.asm"
+INCLUDE "data/trainers/parties.asm"
