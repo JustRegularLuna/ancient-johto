@@ -308,10 +308,16 @@ BurglarData:      ; BURGLAR
 	db -1 ; end
 
 YoungsterData:    ; YOUNGSTER
-; 01 - placeholder party
-	db "???@", TRAINERTYPE_NORMAL
+; 01 - Route 30
+	db "JOEY@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
+
+; 02 - Route 30
+	db "ALAN@", TRAINERTYPE_NORMAL
+	db 5, NIDORAN_M
+	db -1 ; end
+
 
 BugCatcherData:   ; BUG_CATCHER
 ; 01 - placeholder party
@@ -338,9 +344,9 @@ TwinsData:        ; TWINS
 	db -1 ; end
 
 LassData:         ; LASS
-; 01 - placeholder party
-	db "???@", TRAINERTYPE_NORMAL
-	db 5, RATTATA
+; 01 - Route 30
+	db "NIKKI@", TRAINERTYPE_NORMAL
+	db 5, MEOWTH
 	db -1 ; end
 
 BeautyData:       ; BEAUTY

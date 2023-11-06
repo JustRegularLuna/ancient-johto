@@ -2620,6 +2620,9 @@ wNewBarkTownCurScript::
 wCherrygroveCityCurScript::
 	ds 1
 
+wRoute30CurScript::
+	ds 1
+
 wElmsLabCurScript::
 	ds 1
 

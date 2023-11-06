@@ -37,10 +37,10 @@
 	const_skip
 
 ; Route 30 events
-	const_skip
-	const_skip
-	const_skip
-	const_skip
+	const EVENT_GOT_ROUTE_30_BERRY_GIFT
+	const EVENT_BEAT_ROUTE_30_TRAINER_0
+	const EVENT_BEAT_ROUTE_30_TRAINER_1
+	const EVENT_BEAT_ROUTE_30_TRAINER_2
 	const_skip
 	const_skip
 	const_skip

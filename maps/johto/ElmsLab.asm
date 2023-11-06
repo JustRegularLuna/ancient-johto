@@ -370,6 +370,20 @@ ElmsLabElmScript:
 	SetEvent EVENT_DELIVERED_MYSTERY_EGG
 	ld hl, ElmTalksAboutResearchingEggText
 	call PrintText
+	; Hide the blockers in Route 30
+	ld a, HS_ROUTE_30_YOUNGSTER_ALAN_BLOCKER
+	ld [wMissableObjectIndex], a
+	predef HideObject
+	ld a, HS_ROUTE_30_RATTATA_BLOCKER_1
+	ld [wMissableObjectIndex], a
+	predef HideObject
+	ld a, HS_ROUTE_30_RATTATA_BLOCKER_2
+	ld [wMissableObjectIndex], a
+	predef HideObject
+	; Show the regular Youngster Alan in Route 30
+	ld a, HS_ROUTE_30_YOUNGSTER_ALAN
+	ld [wMissableObjectIndex], a
+	predef ShowObject
 .done
 	jp TextScriptEnd
 

@@ -93,6 +93,8 @@ ENDM
 	trainerclass BURGLAR
 
 	trainerclass YOUNGSTER
+	const JOEY
+	const ALAN
 
 	trainerclass BUG_CATCHER
 
@@ -103,6 +105,7 @@ ENDM
 	trainerclass TWINS
 
 	trainerclass LASS
+	const NIKKI
 
 	trainerclass BEAUTY
 
