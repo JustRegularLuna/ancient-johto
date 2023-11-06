@@ -99,9 +99,9 @@ pokered_pad        = 0x00
 pokeblue_pad       = 0x00
 pokeblue_debug_pad = 0xff
 
-pokered_opt        = -jsv -n 0 -k 01 -l 0x33 -m 0x13 -r 03 -t "POKEMON GOLD"
-pokeblue_opt       = -jsv -n 0 -k 01 -l 0x33 -m 0x13 -r 03 -t "POKEMON SILVER"
-pokeblue_debug_opt = -jsv -n 0 -k 01 -l 0x33 -m 0x13 -r 03 -t "POKEMON SILVER"
+pokered_opt        = -jsv -n 0 -k 01 -l 0x33 -m 0x13 -r 03 -t "PKMNREDGOLD"
+pokeblue_opt       = -jsv -n 0 -k 01 -l 0x33 -m 0x13 -r 03 -t "PKMNBLUESILVER"
+pokeblue_debug_opt = -jsv -n 0 -k 01 -l 0x33 -m 0x13 -r 03 -t "PKMNBLUESILVER"
 
 %.gbc: $$(%_obj) layout.link
 	$(RGBLINK) -p $($*_pad) -d -m $*.map -n $*.sym -l layout.link -o $@ $(filter %.o,$^)
@@ -128,7 +128,6 @@ gfx/slots/red_slots_1.2bpp: tools/gfx += --trim-whitespace
 gfx/slots/blue_slots_1.2bpp: tools/gfx += --trim-whitespace
 
 gfx/tilesets/%.2bpp: tools/gfx += --trim-whitespace
-gfx/tilesets/reds_house.2bpp: tools/gfx += --preserve=0x48
 
 gfx/trade/game_boy.2bpp: tools/gfx += --remove-duplicates
 
