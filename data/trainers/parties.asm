@@ -310,19 +310,22 @@ BurglarData:      ; BURGLAR
 YoungsterData:    ; YOUNGSTER
 ; 01 - Route 30
 	db "JOEY@", TRAINERTYPE_NORMAL
-	db 5, RATTATA
+	db 4, RATTATA
 	db -1 ; end
 
 ; 02 - Route 30
 	db "ALAN@", TRAINERTYPE_NORMAL
-	db 5, NIDORAN_M
+	db 2, PIDGEY
+	db 4, NIDORAN_M
 	db -1 ; end
 
 
 BugCatcherData:   ; BUG_CATCHER
-; 01 - placeholder party
-	db "???@", TRAINERTYPE_NORMAL
-	db 5, RATTATA
+; 01 - Route 31
+	db "KEN@", TRAINERTYPE_NORMAL
+	db 2, CATERPIE
+	db 2, WEEDLE
+	db 3, SPINARAK
 	db -1 ; end
 
 SchoolboyData:    ; SCHOOLBOY

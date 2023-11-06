@@ -97,6 +97,7 @@ ENDM
 	const ALAN
 
 	trainerclass BUG_CATCHER
+	const KEN
 
 	trainerclass SCHOOLBOY
 

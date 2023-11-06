@@ -2623,6 +2623,9 @@ wCherrygroveCityCurScript::
 wRoute30CurScript::
 	ds 1
 
+wRoute31CurScript::
+	ds 1
+
 wElmsLabCurScript::
 	ds 1
 

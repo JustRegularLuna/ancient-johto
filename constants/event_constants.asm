@@ -46,6 +46,16 @@
 	const_skip
 	const_skip
 
+; Route 31 events
+	const_skip
+	const EVENT_BEAT_ROUTE_31_TRAINER_0
+	const_skip
+	const_skip
+	const_skip
+	const_skip
+	const_skip
+	const_skip
+
 ; Indigo Plateau events
 	const ELITE4_EVENTS_START
 	const EVENT_BEAT_LORELEIS_ROOM_TRAINER_0

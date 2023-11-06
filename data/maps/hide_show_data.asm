@@ -278,7 +278,7 @@ JohtoMapHSPointers:
 	dw CherrygroveHS ; Cherrygrove
 	dw Route29HS ; Route 29
 	dw Route30HS ; Route 30
-	dw JohtoNoHS ; Route 31
+	dw Route31HS ; Route 31
 	dw JohtoNoHS ; Johto Route 27
 	dw JohtoNoHS ; Players House 1F
 	dw JohtoNoHS ; Players House 2f
@@ -313,6 +313,9 @@ Route30HS:
 	db ROUTE_30, ROUTE30_YOUNGSTER_ALAN_BLOCKER, SHOW
 	db ROUTE_30, ROUTE30_RATTATA_BLOCKER_1, SHOW
 	db ROUTE_30, ROUTE30_RATTATA_BLOCKER_2, SHOW
+Route31HS:
+	db ROUTE_31, ROUTE31_ITEMBALL_1, SHOW
+	db ROUTE_31, ROUTE31_ITEMBALL_2, SHOW
 ElmsLabHS:
 	db ELMS_LAB, ELMSLAB_STARTER_BALL_1, SHOW
 	db ELMS_LAB, ELMSLAB_STARTER_BALL_2, SHOW

@@ -4,6 +4,7 @@
 	const_export ROUTE30_YOUNGSTER_JOEY
 	const_export ROUTE30_LASS_NIKKI
 	const_export ROUTE30_YOUNGSTER_ALAN
+	const_export ROUTE30_BUG_CATCHER
 	const_export ROUTE30_YOUNGSTER_ALAN_BLOCKER
 	const_export ROUTE30_RATTATA_BLOCKER_1
 	const_export ROUTE30_RATTATA_BLOCKER_2
@@ -32,6 +33,7 @@ Route30_Object:
 	object SPRITE_YOUNGSTER,  5, 23, STAY, DOWN, ROUTE30_YOUNGSTER_JOEY, YOUNGSTER, JOEY
 	object SPRITE_LASS,  3, 14, STAY, NONE, ROUTE30_LASS_NIKKI, LASS, NIKKI
 	object SPRITE_YOUNGSTER,  6, 28, STAY, LEFT, ROUTE30_YOUNGSTER_ALAN, YOUNGSTER, ALAN
+	object SPRITE_BUG_CATCHER,  5,  6, STAY, NONE, ROUTE30_BUG_CATCHER
 	object SPRITE_YOUNGSTER,  5, 26, STAY, UP, ROUTE30_YOUNGSTER_ALAN_BLOCKER
 	object SPRITE_MONSTER,  5, 24, STAY, DOWN, ROUTE30_RATTATA_BLOCKER_1
 	object SPRITE_MONSTER,  5, 25, STAY, UP, ROUTE30_RATTATA_BLOCKER_2
@@ -60,6 +62,7 @@ Route30_TextPointers:
 	dw Route30YoungsterJoeyText
 	dw Route30LassNikkiText
 	dw Route30YoungsterAlanText
+	dw Route30BugCatcherText
 	dw Route30YoungsterAlanBlockerText
 	dw Route30ObjectEventText
 	dw Route30ObjectEventText
@@ -97,6 +100,17 @@ Route30YoungsterAlanText:
 	ld hl, Route30TrainerHeader2
 	call TalkToTrainer
 	jp TextScriptEnd
+
+Route30BugCatcherText:
+	text "I'm not interested"
+	line "in battling, I"
+
+	para "just like looking"
+	line "for BUG #MON"
+
+	para "to add to my"
+	line "collection!"
+	done
 
 Route30YoungsterAlanBlockerText:
 	text "Hey! This is an"
@@ -193,8 +207,8 @@ Route30YoungsterAlanAfterBattleText:
 Route30SignText:
 	text "ROUTE 30"
 
-	para "VIOLET CITY -"
-	line "CHERRYGROVE CITY"
+	para "CHERRYGROVE CITY -"
+	line "VIOLET CITY"
 	done
 
 Route30TrainerTipsText:
