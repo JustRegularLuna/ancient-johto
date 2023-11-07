@@ -5097,17 +5097,21 @@ MirrorMoveCopyMove:
 	ld a, [wEnemyUsedMove]
 	ld hl, wPlayerSelectedMove
 	ld de, wPlayerMoveNum
+	ld bc, wEnemySelectedMove
 	jr z, .next
 ; values for enemy turn
 	ld a, [wPlayerUsedMove]
 	ld de, wEnemyMoveNum
 	ld hl, wEnemySelectedMove
+	ld bc, wPlayerSelectedMove
 .next
-	ld [hl], a
 	cp MIRROR_MOVE ; did the target Pokemon last use Mirror Move, and miss?
 	jr z, .mirrorMoveFailed
 	and a ; has the target selected any move yet?
-	jr nz, ReloadMoveData
+	jr z, .mirrorMoveFailed
+	ld a, [bc]
+	ld [hl], a
+	jr ReloadMoveData
 .mirrorMoveFailed
 	ld hl, MirrorMoveFailedText
 	call PrintText
@@ -5155,7 +5159,9 @@ MetronomePickMove:
 	call BattleRandom
 	and a
 	jr z, .pickMoveLoop
-	cp NUM_ATTACKS ; max move number (including Struggle)
+	cp STRUGGLE ; not the last move anymore
+	jr z, .pickMoveLoop
+	cp NUM_ATTACKS ; max move number
 	jr nc, .pickMoveLoop
 	cp METRONOME
 	jr z, .pickMoveLoop
