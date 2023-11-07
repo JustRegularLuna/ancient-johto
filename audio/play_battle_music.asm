@@ -35,6 +35,10 @@ PlayBattleMusic::
 	cp SCIENTIST
 	jr z, .rocketBattle
 	cp RED
+	jr z, .finalBattle
+	cp LORELEI
+	jr z, .retroBattle
+	cp AGATHA
 	jr z, .retroBattle
 .normalTrainerBattle
 	ld a, [wCurRegion]
