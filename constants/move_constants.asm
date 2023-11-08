@@ -171,9 +171,76 @@
 	const SLASH        ; a3
 	const SUBSTITUTE   ; a4
 	const STRUGGLE     ; a5
-NUM_ATTACKS EQU const_value - 1
+	const SKETCH       ; a6
+	const AEROBLAST    ; a7
+	const SACRED_FIRE  ; a8
+	const FLAME_WHEEL  ; a9
+	const FLARE_BLITZ  ; aa
+	const OVERHEAT     ; ab
+	const BLAST_BURN   ; ac
+	const HYDRO_CANNON ; ad
+	const FRENZY_PLANT ; ae
+	const HIDDEN_POWER ; af
+	const ANCIENTPOWER ; b0
+	const ROLLOUT      ; b1
+	const ROCK_TOMB    ; b2
+	const BUG_BITE     ; b3
+	const SILVER_WIND  ; b4
+	const MEGAHORN     ; b5
+	const X_SCISSOR    ; b6
+	const SIGNAL_BEAM  ; b7
+	const MUD_SLAP     ; b8
+	const MUD_BOMB     ; b9
+	const EARTH_POWER  ; ba
+	const DYNAMICPUNCH ; bb
+	const GIGA_DRAIN   ; bc
+	const FEINT_ATTACK ; bd
+	const CRUNCH       ; be
+	const DARK_PULSE   ; bf
+	const HONE_CLAWS   ; c0
+	const NIGHT_SLASH  ; c1
+	const SNARL        ; c2
+	const DRAGONBREATH ; c3
+	const TWISTER      ; c4
+	const OUTRAGE      ; c5
+	const DRAGON_CLAW  ; c6
+	const DRAGON_PULSE ; c7
+	const DRACO_METEOR ; c8
+	const METAL_CLAW   ; c9
+	const STEEL_WING   ; ca
+	const IRON_TAIL    ; cb
+	const IRON_HEAD    ; cc
+	const BULLET_PUNCH ; cd
+	const SHADOW_BALL  ; ce
+	const ASTONISH     ; cf
+	const SHADOW_PUNCH ; d0
+	const SHADOW_CLAW  ; d1
+	const HEX          ; d2
+	const SLUDGE_BOMB  ; d3
+	const SLUDGE_WAVE  ; d4
+	const POWDER_SNOW  ; d5
+	const ICY_WIND     ; d6
+	const ICICLE_SPEAR ; d7
+	const WHIRLPOOL    ; d8
+	const OCTAZOOKA    ; d9
+	const SPARK        ; da
+	const SHOCK_WAVE   ; db
+	const ZAP_CANNON   ; dc
+	const ELECTRO_BALL ; dd
+	const FORESIGHT    ; de
+	const ATTRACT      ; df
+	const SWEET_KISS   ; e0
+	const CHARM        ; e1
+	const EXTREMESPEED ; e2
+	const SCARY_FACE   ; e3
+	const MEAN_LOOK    ; e4
+	const SNORE        ; e5
+	const SLEEP_TALK   ; e6
+
+DEF NUM_ATTACKS EQU const_value - 1
 
 	; Moves do double duty as animation identifiers.
+	const_def STRUGGLE + 1
 
 	const SHOWPIC_ANIM
 	const STATUS_AFFECTED_ANIM

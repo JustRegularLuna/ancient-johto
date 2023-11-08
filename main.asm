@@ -737,3 +737,8 @@ ENDC
 SECTION "Wonder Trade", ROMX
 
 INCLUDE "engine/events/wonder_trade.asm"
+
+
+SECTION "New Move Effects", ROMX
+
+INCLUDE "engine/battle/move_effects/hidden_power.asm"

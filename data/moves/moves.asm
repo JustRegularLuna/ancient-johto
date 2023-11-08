@@ -11,7 +11,7 @@ Moves:
 ; Characteristics of each move.
 	table_width MOVE_LENGTH, Moves
 	move POUND,        NO_ADDITIONAL_EFFECT,        40, NORMAL,       100, 35
-	move KARATE_CHOP,  NO_ADDITIONAL_EFFECT,        50, NORMAL,       100, 25
+	move KARATE_CHOP,  NO_ADDITIONAL_EFFECT,        50, FIGHTING,     100, 25
 	move DOUBLESLAP,   TWO_TO_FIVE_ATTACKS_EFFECT,  15, NORMAL,        85, 10
 	move COMET_PUNCH,  TWO_TO_FIVE_ATTACKS_EFFECT,  18, NORMAL,        85, 15
 	move MEGA_PUNCH,   NO_ADDITIONAL_EFFECT,        80, NORMAL,        85, 20
@@ -25,7 +25,7 @@ Moves:
 	move RAZOR_WIND,   CHARGE_EFFECT,               80, NORMAL,        75, 10
 	move SWORDS_DANCE, ATTACK_UP2_EFFECT,            0, NORMAL,       100, 30
 	move CUT,          NO_ADDITIONAL_EFFECT,        50, NORMAL,        95, 30
-	move GUST,         NO_ADDITIONAL_EFFECT,        40, NORMAL,       100, 35
+	move GUST,         NO_ADDITIONAL_EFFECT,        40, FLYING,       100, 35
 	move WING_ATTACK,  NO_ADDITIONAL_EFFECT,        35, FLYING,       100, 35
 	move WHIRLWIND,    SWITCH_AND_TELEPORT_EFFECT,   0, NORMAL,        85, 20
 	move FLY,          FLY_EFFECT,                  70, FLYING,        95, 15
@@ -53,7 +53,7 @@ Moves:
 	move TWINEEDLE,    TWINEEDLE_EFFECT,            25, BUG,          100, 20
 	move PIN_MISSILE,  TWO_TO_FIVE_ATTACKS_EFFECT,  14, BUG,           85, 20
 	move LEER,         DEFENSE_DOWN1_EFFECT,         0, NORMAL,       100, 30
-	move BITE,         FLINCH_SIDE_EFFECT1,         60, NORMAL,       100, 25
+	move BITE,         FLINCH_SIDE_EFFECT1,         60, DARK,         100, 25
 	move GROWL,        ATTACK_DOWN1_EFFECT,          0, NORMAL,       100, 40
 	move ROAR,         SWITCH_AND_TELEPORT_EFFECT,   0, NORMAL,       100, 20
 	move SING,         SLEEP_EFFECT,                 0, NORMAL,        55, 15
@@ -175,4 +175,70 @@ Moves:
 	move SLASH,        NO_ADDITIONAL_EFFECT,        70, NORMAL,       100, 20
 	move SUBSTITUTE,   SUBSTITUTE_EFFECT,            0, NORMAL,       100, 10
 	move STRUGGLE,     RECOIL_EFFECT,               50, NORMAL,       100, 10
+	; moves below this point reuse attack animations from earlier moves
+	move MIMIC,        MIMIC_EFFECT,                 0, NORMAL,       100, 10 ; Sketch *** TODO: Sketch Effect (just a copy of Mimic for now)
+	move AURORA_BEAM,  NO_ADDITIONAL_EFFECT,       100, FLYING,       100,  5 ; Aeroblast
+	move FIRE_BLAST,   BURN_SIDE_EFFECT2,          100, FIRE,         100,  5 ; Sacred Fire *** TODO: Also thaws user
+	move FIRE_SPIN,    BURN_SIDE_EFFECT1,           60, FIRE,         100, 25 ; Flame Wheel *** TODO: Also thaws user
+	move EMBER,        RECOIL_EFFECT,              120, FIRE,         100, 15 ; Flare Blitz *** TODO: Also thaws user
+	move FIRE_BLAST,   NO_ADDITIONAL_EFFECT,       140, FIRE,          90,  5 ; Overheat *** TODO: Lower user's Special
+	move FIRE_BLAST,   HYPER_BEAM_EFFECT,          150, FIRE,          90,  5 ; Blast Burn
+	move HYDRO_PUMP,   HYPER_BEAM_EFFECT,          150, WATER,         90,  5 ; Hydro Cannon
+	move VINE_WHIP,    HYPER_BEAM_EFFECT,          150, GRASS,         90,  5 ; Frenzy Plant
+	move MEDITATE,     NO_ADDITIONAL_EFFECT,        60, NORMAL,       100, 15 ; Hidden Power *** Type varies by IVs
+	move ROCK_THROW,   ANCIENTPOWER_EFFECT,         60, ROCK,         100,  5 ; Ancientpower
+	move TACKLE,       NO_ADDITIONAL_EFFECT,        30, ROCK,          90, 20 ; Rollout *** TODO: Rollout effect
+	move ROCK_SLIDE,   SPEED_DOWN_SIDE_EFFECT,      60, ROCK,          95, 15 ; Rock Tomb
+	move BITE,         NO_ADDITIONAL_EFFECT,        60, BUG,          100, 22 ; Bug Bite *** No Held Items, so no effect
+	move MIST,         ANCIENTPOWER_EFFECT,         60, BUG,          100,  5 ; Silver Wind
+	move HORN_ATTACK,  NO_ADDITIONAL_EFFECT,       120, BUG,           85, 10 ; Megahorn
+	move CUT,          NO_ADDITIONAL_EFFECT,        80, BUG,          100, 15 ; X-Scissor
+	move AURORA_BEAM,  CONFUSION_SIDE_EFFECT,       75, BUG,          100, 15 ; Signal Beam
+	move SAND_ATTACK,  ACCURACY_DOWN_SIDE_EFFECT,   20, GROUND,       100, 10 ; Mud-Slap
+	move SAND_ATTACK,  ACCURACY_DOWN_SIDE_EFFECT,   65, GROUND,        85, 10 ; Mud Bomb
+	move EARTHQUAKE,   SPECIAL_DOWN_SIDE_EFFECT,    90, GROUND,       100, 10 ; Earth Power
+	move MEGA_PUNCH,   DYNAMICPUNCH_EFFECT,        100, FIGHTING,      50,  5 ; Dynamicpunch
+	move MEGA_DRAIN,   DRAIN_HP_EFFECT,             75, GRASS,        100, 10 ; Giga Drain
+	move QUICK_ATTACK, SWIFT_EFFECT,                60, DARK,         100, 20 ; Feint Attack
+	move HYPER_FANG,   SPECIAL_DOWN_SIDE_EFFECT,    80, DARK,         100, 15 ; Crunch
+	move PSYCHIC_M,    FLINCH_SIDE_EFFECT1,         80, DARK,         100, 15 ; Dark Pulse
+	move SWORDS_DANCE, HONE_CLAWS_EFFECT,            0, DARK,         100, 15 ; Hone Claws
+	move CUT,          NO_ADDITIONAL_EFFECT,        70, DARK,         100, 15 ; Night Slash
+	move ROAR,         SPECIAL_DOWN_SIDE_EFFECT,    55, DARK,          95, 15 ; Snarl
+	move FLAMETHROWER, PARALYZE_SIDE_EFFECT1,       60, DRAGON,       100, 20 ; Dragonbreath
+	move SONICBOOM,    FLINCH_SIDE_EFFECT1,         40, DRAGON,       100, 20 ; Twister
+	move RAGE,         THRASH_PETAL_DANCE_EFFECT,  120, DRAGON,       100, 10 ; Outrage
+	move SLASH,        NO_ADDITIONAL_EFFECT,        80, DRAGON,       100, 15 ; Dragon Claw
+	move AURORA_BEAM,  NO_ADDITIONAL_EFFECT,        85, DRAGON,       100, 10 ; Dragon Pulse
+	move SEISMIC_TOSS, SPECIAL_DOWN_SIDE_EFFECT,   130, DRAGON,        90,  5 ; Draco Meteor
+	move SLASH,        ATTACK_UP1_SIDE_EFFECT,      50, STEEL,         95, 35 ; Metal Claw
+	move WING_ATTACK,  DEFENSE_UP1_SIDE_EFFECT,     70, STEEL,         90, 25 ; Steel Wing
+	move CUT,          DEFENSE_DOWN_SIDE_EFFECT,   100, STEEL,         75, 15 ; Iron Tail
+	move QUICK_ATTACK, FLINCH_SIDE_EFFECT2,         80, STEEL,        100, 15 ; Iron Head
+	move COMET_PUNCH,  NO_ADDITIONAL_EFFECT,        40, STEEL,        100, 30 ; Bullet Punch
+	move BARRAGE,      SPECIAL_DOWN_SIDE_EFFECT,    80, GHOST,        100, 15 ; Shadow Ball
+	move CONFUSION,    FLINCH_SIDE_EFFECT2,         30, GHOST,        100, 15 ; Astonish
+	move MEGA_PUNCH,   SWIFT_EFFECT,                60, GHOST,        100, 20 ; Shadow Punch
+	move SLASH,        NO_ADDITIONAL_EFFECT,        70, GHOST,        100, 15 ; Shadow Claw
+	move PSYCHIC_M,    NO_ADDITIONAL_EFFECT,        65, GHOST,        100, 10 ; Hex *** Stronger if foe has status ailment
+	move BARRAGE,      POISON_SIDE_EFFECT2,         90, POISON,       100, 10 ; Sludge Bomb
+	move SURF,         POISON_SIDE_EFFECT1,         95, POISON,       100, 10 ; Sludge Wave
+	move MIST,         FREEZE_SIDE_EFFECT,          40, ICE,          100, 25 ; Powder Snow
+	move GUST,         SPEED_DOWN_SIDE_EFFECT,      55, ICE,           95, 10 ; Icy Wind
+	move FURY_ATTACK,  TWO_TO_FIVE_ATTACKS_EFFECT,  25, ICE,          100, 30 ; Icicle Spear
+	move GUST,         TRAPPING_EFFECT,             35, WATER,         85, 15 ; Whirlpool
+	move SLUDGE,       ACCURACY_DOWN_SIDE_EFFECT,   65, WATER,         85, 10 ; Octazooka
+	move THUNDERSHOCK, PARALYZE_SIDE_EFFECT2,       65, ELECTRIC,     100, 20 ; Spark
+	move THUNDER_WAVE, SWIFT_EFFECT,                60, ELECTRIC,     100, 20 ; Shock Wave
+	move THUNDERBOLT,  PARALYZE_SIDE_EFFECT2,      120, ELECTRIC,      50,  5 ; Zap Cannon
+	move THUNDER,      NO_ADDITIONAL_EFFECT,        80, ELECTRIC,     100, 10 ; Electro Ball *** Base Power depends on difference in speed
+	move MEDITATE,     NO_ADDITIONAL_EFFECT,         0, NORMAL,       100, 40 ; Foresight *** TODO: Foresight effect
+	move LOVELY_KISS,  NO_ADDITIONAL_EFFECT,         0, NORMAL,       100, 15 ; Attract *** TODO: Attract effect
+	move LOVELY_KISS,  CONFUSION_EFFECT,             0, NORMAL,        75, 10 ; Sweet Kiss
+	move LOVELY_KISS,  ATTACK_DOWN2_EFFECT,          0, NORMAL,       100, 20 ; Charm
+	move QUICK_ATTACK, NO_ADDITIONAL_EFFECT,        80, NORMAL,       100,  5 ; Extremespeed *** +2 Priority
+	move GLARE,        SPEED_DOWN2_EFFECT,           0, NORMAL,       100, 10 ; Scary Face
+	move GLARE,        NO_ADDITIONAL_EFFECT,         0, NORMAL,       100,  5 ; Mean Look *** TODO: Mean Look effect
+	move GROWL,        FLINCH_SIDE_EFFECT2,         50, NORMAL,       100, 15 ; Snore *** TODO: Only usable while asleep
+	move GROWL,        NO_ADDITIONAL_EFFECT,         0, NORMAL,       100, 10 ; Sleep Talk *** TODO: Sleep Talk effect
 	assert_table_length NUM_ATTACKS

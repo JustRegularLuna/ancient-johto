@@ -165,7 +165,7 @@ AttackAnimationPointers:
 	dw SlashAnim
 	dw SubstituteAnim
 	dw StruggleAnim
-	assert_table_length NUM_ATTACKS
+	assert_table_length STRUGGLE ; there are more attacks than attack anims
 	dw ShowPicAnim
 	dw EnemyFlashAnim
 	dw PlayerFlashAnim

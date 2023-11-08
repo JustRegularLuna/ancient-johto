@@ -39,7 +39,7 @@
 	const SLEEP_EFFECT               ; $20
 	const POISON_SIDE_EFFECT2        ; $21
 	const BURN_SIDE_EFFECT2          ; $22
-	const_skip                       ; $23
+	const FREEZE_SIDE_EFFECT2        ; $23 ; 30.1% chance to freeze opponent
 	const PARALYZE_SIDE_EFFECT2      ; $24
 	const FLINCH_SIDE_EFFECT2        ; $25
 	const OHKO_EFFECT                ; $26 moves like Horn Drill
@@ -76,8 +76,8 @@
 	const DEFENSE_DOWN_SIDE_EFFECT   ; $45
 	const SPEED_DOWN_SIDE_EFFECT     ; $46
 	const SPECIAL_DOWN_SIDE_EFFECT   ; $47
-	const_skip                       ; $48
-	const_skip                       ; $49
+	const ACCURACY_DOWN_SIDE_EFFECT  ; $48
+	const EVASION_DOWN_SIDE_EFFECT   ; $49
 	const_skip                       ; $4A
 	const_skip                       ; $4B
 	const CONFUSION_SIDE_EFFECT      ; $4C
@@ -91,4 +91,10 @@
 	const LEECH_SEED_EFFECT          ; $54
 	const SPLASH_EFFECT              ; $55
 	const DISABLE_EFFECT             ; $56
+	const ANCIENTPOWER_EFFECT        ; $57
+	const HONE_CLAWS_EFFECT          ; $58
+	const ATTACK_UP1_SIDE_EFFECT     ; $59
+	const ATTACK_UP1_SIDE_EFFECT2    ; $5A
+	const DEFENSE_UP1_SIDE_EFFECT    ; $5B
+	const DYNAMICPUNCH_EFFECT        ; $5C
 NUM_MOVE_EFFECTS EQU const_value - 1

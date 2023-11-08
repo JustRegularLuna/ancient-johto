@@ -35,7 +35,7 @@ MoveEffectPointerTable:
 	dw SleepEffect               ; SLEEP_EFFECT
 	dw PoisonEffect              ; POISON_SIDE_EFFECT2
 	dw FreezeBurnParalyzeEffect  ; BURN_SIDE_EFFECT2
-	dw FreezeBurnParalyzeEffect  ; unused effect
+	dw FreezeBurnParalyzeEffect  ; FREEZE_SIDE_EFFECT2
 	dw FreezeBurnParalyzeEffect  ; PARALYZE_SIDE_EFFECT2
 	dw FlinchSideEffect          ; FLINCH_SIDE_EFFECT2
 	dw OneHitKOEffect            ; OHKO_EFFECT
@@ -72,8 +72,8 @@ MoveEffectPointerTable:
 	dw StatModifierDownEffect    ; DEFENSE_DOWN_SIDE_EFFECT
 	dw StatModifierDownEffect    ; SPEED_DOWN_SIDE_EFFECT
 	dw StatModifierDownEffect    ; SPECIAL_DOWN_SIDE_EFFECT
-	dw StatModifierDownEffect    ; unused effect
-	dw StatModifierDownEffect    ; unused effect
+	dw StatModifierDownEffect    ; ACCURACY_DOWN_SIDE_EFFECT
+	dw StatModifierDownEffect    ; EVASION_DOWN_SIDE_EFFECT
 	dw StatModifierDownEffect    ; unused effect
 	dw StatModifierDownEffect    ; unused effect
 	dw ConfusionSideEffect       ; CONFUSION_SIDE_EFFECT
@@ -87,4 +87,10 @@ MoveEffectPointerTable:
 	dw LeechSeedEffect           ; LEECH_SEED_EFFECT
 	dw SplashEffect              ; SPLASH_EFFECT
 	dw DisableEffect             ; DISABLE_EFFECT
+	dw AncientPowerEffect        ; ANCIENTPOWER_EFFECT
+	dw HoneClawsEffect           ; HONE_CLAWS_EFFECT
+	dw AttackUpSideEffect        ; ATTACK_UP1_SIDE_EFFECT
+	dw AttackUpSideEffect2       ; ATTACK_UP1_SIDE_EFFECT2
+	dw DefenseUpSideEffect       ; DEFENSE_UP1_SIDE_EFFECT
+	dw DynamicPunchEffect        ; DYNAMICPUNCH_EFFECT
 	assert_table_length NUM_MOVE_EFFECTS

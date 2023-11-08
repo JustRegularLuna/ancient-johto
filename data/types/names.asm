@@ -12,9 +12,16 @@ TypeNames:
 	dw .Ghost
 	dw .Steel
 
-REPT FIRE - STEEL - 1
-	dw .Normal
-ENDR
+	dw .Normal ; Unused
+	dw .Normal ; Unused
+	dw .Normal ; Unused
+	dw .Normal ; Unused
+	dw .Normal ; Unused
+	dw .Normal ; Unused
+	dw .Normal ; Unused
+	dw .Normal ; Unused
+	dw .Normal ; Unused
+	dw .Curse  ; Unused
 
 	dw .Fire
 	dw .Water
@@ -45,3 +52,4 @@ ENDR
 .Dragon:   db "DRAGON@"
 .Steel:    db "STEEL@"
 .Dark:     db "DARK@"
+.Curse     db "???@"

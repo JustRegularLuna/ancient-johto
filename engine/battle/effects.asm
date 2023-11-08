@@ -1123,6 +1123,7 @@ ConfusionEffect:
 	and a
 	jr nz, ConfusionEffectFailed
 
+DynamicPunchEffect:
 ConfusionSideEffectSuccess:
 	ldh a, [hWhoseTurn]
 	and a
@@ -1494,4 +1495,201 @@ PlayBattleAnimationGotID:
 	pop bc
 	pop de
 	pop hl
+	ret
+
+AncientPowerEffect:
+; 10% chance to boost all stats
+	call BattleRandom
+	cp $1a
+	ret nc
+	
+	ldh a, [hWhoseTurn]
+	and a
+	jr z, .notEnemyTurn
+; Enemy's turn
+	xor a
+	ld [wEnemyMoveNum], a
+	ld a, ATTACK_UP1_EFFECT
+	ld [wEnemyMoveEffect], a
+	call StatModifierUpEffect
+	ld a, DEFENSE_UP1_EFFECT
+	ld [wEnemyMoveEffect], a
+	call StatModifierUpEffect
+	ld a, SPEED_UP1_EFFECT
+	ld [wEnemyMoveEffect], a
+	call StatModifierUpEffect
+	ld a, SPECIAL_UP1_EFFECT
+	ld [wEnemyMoveEffect], a
+	jp StatModifierUpEffect
+.notEnemyTurn
+	xor a
+	ld [wPlayerMoveNum], a
+	ld a, ATTACK_UP1_EFFECT
+	ld [wPlayerMoveEffect], a
+	call StatModifierUpEffect
+	ld a, DEFENSE_UP1_EFFECT
+	ld [wPlayerMoveEffect], a
+	call StatModifierUpEffect
+	ld a, SPEED_UP1_EFFECT
+	ld [wPlayerMoveEffect], a
+	call StatModifierUpEffect
+	ld a, SPECIAL_UP1_EFFECT
+	ld [wPlayerMoveEffect], a
+	jp StatModifierUpEffect
+
+HoneClawsEffect:
+	ldh a, [hWhoseTurn]
+	and a
+	jr z, .notEnemyTurn
+; Enemy's turn
+	ld a, ATTACK_UP1_EFFECT
+	ld [wEnemyMoveEffect], a
+	call StatModifierUpEffect
+	xor a
+	ld [wEnemyMoveNum], a
+	ld a, ACCURACY_UP1_EFFECT
+	ld [wEnemyMoveEffect], a
+	jp StatModifierUpEffect
+.notEnemyTurn
+	ld a, ATTACK_UP1_EFFECT
+	ld [wPlayerMoveEffect], a
+	call StatModifierUpEffect
+	xor a
+	ld [wPlayerMoveNum], a
+	ld a, ACCURACY_UP1_EFFECT
+	ld [wPlayerMoveEffect], a
+	jp StatModifierUpEffect
+
+AttackUpSideEffect2:
+; 20% chance to boost stat
+	call BattleRandom
+	cp $34
+	ret nc
+	jr AttackUpSideEffectSuccess
+
+AttackUpSideEffect:
+; 10% chance to boost stat
+	call BattleRandom
+	cp $1a
+	ret nc
+	; fallthrough
+
+AttackUpSideEffectSuccess:
+	ldh a, [hWhoseTurn]
+	and a
+	jr z, .notEnemyTurn
+; Enemy's turn
+	xor a
+	ld [wEnemyMoveNum], a
+	ld a, ATTACK_UP1_EFFECT
+	ld [wEnemyMoveEffect], a
+	jp StatModifierUpEffect
+.notEnemyTurn
+	xor a
+	ld [wPlayerMoveNum], a
+	ld a, ATTACK_UP1_EFFECT
+	ld [wPlayerMoveEffect], a
+	jp StatModifierUpEffect
+
+DefenseUpSideEffect:
+; 10% chance to boost stat
+	call BattleRandom
+	cp $1a
+	ret nc
+	; fallthrough
+
+DefenseUpSideEffectSuccess:
+	ldh a, [hWhoseTurn]
+	and a
+	jr z, .notEnemyTurn
+; Enemy's turn
+	xor a
+	ld [wEnemyMoveNum], a
+	ld a, DEFENSE_UP1_EFFECT
+	ld [wEnemyMoveEffect], a
+	jp StatModifierUpEffect
+.notEnemyTurn
+	xor a
+	ld [wPlayerMoveNum], a
+	ld a, DEFENSE_UP1_EFFECT
+	ld [wPlayerMoveEffect], a
+	jp StatModifierUpEffect
+
+CheckForHex:
+	ldh a, [hWhoseTurn]
+	and a
+	jr z, .notEnemyTurn
+	ld a, [wEnemySelectedMove]
+	cp HEX
+	ret nz
+	ld a, [wBattleMonStatus]
+	and a
+	ld hl, wEnemyMovePower
+	ld a, 65
+	jp z, .skip1
+	ld a, 130
+.skip1
+	ld [hl], a
+	ret
+.notEnemyTurn
+	ld a, [wPlayerSelectedMove]
+	cp HEX
+	ret nz
+	ld a, [wEnemyMonStatus]
+	and a
+	ld hl, wPlayerMovePower
+	ld a, 65
+	jp z, .skip2
+	ld a, 130
+.skip2
+	ld [hl], a
+	ret
+
+CheckForElectroBall:
+	ldh a, [hWhoseTurn]
+	and a
+	jr z, .notEnemyTurn
+; Enemy's Turn
+	ld a, [wEnemySelectedMove]
+	cp ELECTRO_BALL
+	ret nz
+	ld de, wBattleMonSpeed ; player speed value
+	ld hl, wEnemyMonSpeed ; enemy speed value
+	ld c, $2
+	call StringCmp ; compare speed values
+	ld hl, wEnemyMovePower
+	jr z, .speedEqual1
+	jr nc, .playerFaster1 ; if player is faster
+; Enemy Faster 1
+	ld a, 120
+	jp .done
+.speedEqual1
+	ld a, 80
+	jp .done
+.playerFaster1
+	ld a, 60
+	jp .done
+.notEnemyTurn
+; Player's turn
+	ld a, [wPlayerSelectedMove]
+	cp ELECTRO_BALL
+	ret nz
+	ld de, wBattleMonSpeed ; player speed value
+	ld hl, wEnemyMonSpeed ; enemy speed value
+	ld c, $2
+	call StringCmp ; compare speed values
+	ld hl, wPlayerMovePower
+	jr z, .speedEqual2
+	jr nc, .playerFaster2 ; if player is faster
+; Enemy Faster 2
+	ld a, 60
+	jp .done
+.speedEqual2
+	ld a, 80
+	jp .done
+.playerFaster2
+	ld a, 120
+; fall through
+.done
+	ld [hl], a
 	ret
