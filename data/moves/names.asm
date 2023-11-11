@@ -239,4 +239,5 @@ MoveNames::
 	li "BUG BUZZ"
 	li "ICE SHARD"
 	li "PETALBLIZARD"
+	li "TIME REND"
 	assert_list_length NUM_ATTACKS

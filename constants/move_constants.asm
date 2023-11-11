@@ -245,6 +245,7 @@
 	const BUG_BUZZ     ; ed
 	const ICE_SHARD    ; ee
 	const PETALBLIZARD ; ef
+	const TIME_REND    ; f0
 
 DEF NUM_ATTACKS EQU const_value - 1
 
