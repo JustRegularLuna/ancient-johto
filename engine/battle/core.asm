@@ -4106,6 +4106,7 @@ GetDamageVarsForPlayerAttack:
 	ld [hl], a
 	call CheckForHex
 	call CheckForElectroBall
+	call CheckForPresent
 	ld hl, wPlayerMovePower
 	ld a, [hli]
 	and a
@@ -4245,6 +4246,7 @@ GetDamageVarsForEnemyAttack:
 	ld [hl], a
 	call CheckForHex
 	call CheckForElectroBall
+	call CheckForPresent
 	ld hl, wEnemyMovePower
 	ld a, [hli]
 	ld d, a ; d = move power

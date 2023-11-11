@@ -230,4 +230,13 @@ MoveNames::
 	li "MEAN LOOK"
 	li "SNORE"
 	li "SLEEP TALK"
+	li "SYNTHESIS"
+	li "MOONLIGHT"
+	li "MILK DRINK"
+	li "SPIDER WEB"
+	li "PRESENT"
+	li "MAGNET BOMB"
+	li "BUG BUZZ"
+	li "ICE SHARD"
+	li "PETALBLIZARD"
 	assert_list_length NUM_ATTACKS

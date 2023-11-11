@@ -241,4 +241,13 @@ Moves:
 	move GLARE,        NO_ADDITIONAL_EFFECT,         0, NORMAL,       100,  5 ; Mean Look *** TODO: Mean Look effect
 	move GROWL,        FLINCH_SIDE_EFFECT2,         50, NORMAL,       100, 15 ; Snore *** TODO: Only usable while asleep
 	move GROWL,        NO_ADDITIONAL_EFFECT,         0, NORMAL,       100, 10 ; Sleep Talk *** TODO: Sleep Talk effect
+	move SOLARBEAM,    HEAL_EFFECT,                  0, GRASS,        100, 10 ; Synthesis
+	move SOLARBEAM,    HEAL_EFFECT,                  0, NORMAL,       100, 10 ; Moonlight
+	move SOFTBOILED,   HEAL_EFFECT,                  0, NORMAL,       100, 10 ; Milk Drink
+	move STRING_SHOT,  NO_ADDITIONAL_EFFECT,         0, BUG,          100, 10 ; Spider Web *** TODO: Mean Look effect
+	move BARRAGE,      SPECIAL_DAMAGE_EFFECT,        1, PSYCHIC_TYPE,  90, 15 ; Present *** Random base power of 120, 80, or 40
+	move BARRAGE,      SWIFT_EFFECT,                60, STEEL,        100, 20 ; Magnet Bomb
+	move GROWL,        SPECIAL_DOWN_SIDE_EFFECT,    90, BUG,          100, 10 ; Bug Buzz
+	move BLIZZARD,     NO_ADDITIONAL_EFFECT,        40, ICE,          100, 30 ; Ice Shard *** Priority +1
+	move PETAL_DANCE,  NO_ADDITIONAL_EFFECT,        90, GRASS,        100, 15 ; Petal Blizzard
 	assert_table_length NUM_ATTACKS

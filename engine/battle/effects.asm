@@ -1693,3 +1693,46 @@ CheckForElectroBall:
 .done
 	ld [hl], a
 	ret
+
+CheckForPresent:
+	ldh a, [hWhoseTurn]
+	and a
+	jr z, .notEnemyTurn
+	ld a, [wEnemySelectedMove]
+	cp PRESENT
+	ret nz
+	call BattleRandom
+	; a holds a random number
+	ld hl, wEnemyMovePower
+	ld b, 120
+	cp 10 percent
+	jr c, .done1
+	ld b, 80
+	cp 40 percent ; 10% for the first one, + 30% for this one
+	jr c, .done1
+	; otherwise its 40 power
+	ld b, 40
+.done1
+	ld a, b
+	ld [hl], a
+	ret
+
+.notEnemyTurn
+	ld a, [wPlayerSelectedMove]
+	cp PRESENT
+	ret nz
+	call BattleRandom
+	; a holds a random number
+	ld hl, wPlayerMovePower
+	ld b, 120
+	cp 10 percent
+	jr c, .done2
+	ld b, 80
+	cp 40 percent ; 10% for the first one, + 30% for this one
+	jr c, .done2
+	; otherwise its 40 power
+	ld b, 40
+.done2
+	ld a, b
+	ld [hl], a
+	ret

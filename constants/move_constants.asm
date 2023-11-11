@@ -236,6 +236,15 @@
 	const MEAN_LOOK    ; e4
 	const SNORE        ; e5
 	const SLEEP_TALK   ; e6
+	const SYNTHESIS    ; e7
+	const MOONLIGHT    ; e8
+	const MILK_DRINK   ; e9
+	const SPIDER_WEB   ; ea
+	const PRESENT      ; eb
+	const MAGNET_BOMB  ; ec
+	const BUG_BUZZ     ; ed
+	const ICE_SHARD    ; ee
+	const PETALBLIZARD ; ef
 
 DEF NUM_ATTACKS EQU const_value - 1
 
