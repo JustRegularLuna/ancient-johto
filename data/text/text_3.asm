@@ -172,6 +172,11 @@ _DugAHoleText::
 	line "dug a hole!"
 	prompt
 
+_OpenedAVortexText::
+	text_start
+	line "opened a vortex!"
+	prompt
+
 _BecameConfusedText::
 	text "<TARGET>"
 	line "became confused!"

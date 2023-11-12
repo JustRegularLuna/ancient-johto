@@ -21,7 +21,7 @@ TypeNames:
 	dw .Normal ; Unused
 	dw .Normal ; Unused
 	dw .Normal ; Unused
-	dw .Curse  ; Unused
+	dw .Normal ; Unused
 
 	dw .Fire
 	dw .Water
@@ -31,6 +31,7 @@ TypeNames:
 	dw .Ice
 	dw .Dragon
 	dw .Dark
+	dw .Curse
 
 	assert_table_length NUM_TYPES
 

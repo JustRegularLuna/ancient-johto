@@ -250,5 +250,5 @@ Moves:
 	move GROWL,        SPECIAL_DOWN_SIDE_EFFECT,    90, BUG,          100, 10 ; Bug Buzz
 	move BLIZZARD,     NO_ADDITIONAL_EFFECT,        40, ICE,          100, 30 ; Ice Shard *** Priority +1
 	move PETAL_DANCE,  NO_ADDITIONAL_EFFECT,        90, GRASS,        100, 15 ; Petal Blizzard
-	move PSYCHIC_M,    SWIFT_EFFECT,               120, CURSE_TYPE,   100, 10 ; Time Rend
+	move PSYCHIC_M,    CHARGE_EFFECT,              140, CURSE_TYPE,   100, 10 ; Time Rend
 	assert_table_length NUM_ATTACKS

@@ -1048,6 +1048,9 @@ ChargeMoveEffectText:
 	jr z, .gotText
 	cp DIG
 	ld hl, DugAHoleText
+	jr z, .gotText
+	cp PSYCHIC_M ; Time Rend reuses Psychic's animation
+	ld hl, OpenedAVortexText
 .gotText
 	ret
 
@@ -1073,6 +1076,10 @@ FlewUpHighText:
 
 DugAHoleText:
 	text_far _DugAHoleText
+	text_end
+
+OpenedAVortexText:
+	text_far _OpenedAVortexText
 	text_end
 
 TrappingEffect:

@@ -14,8 +14,7 @@ DEF PHYSICAL EQU const_value
 	const STEEL        ; $09
 
 DEF UNUSED_TYPES EQU const_value
-	const_next 19
-	const CURSE_TYPE
+	const_next 20
 DEF UNUSED_TYPES_END EQU const_value
 
 DEF SPECIAL EQU const_value
@@ -27,5 +26,6 @@ DEF SPECIAL EQU const_value
 	const ICE          ; $19
 	const DRAGON       ; $1A
 	const DARK         ; $1B
+	const CURSE_TYPE   ; $1C
 
 DEF NUM_TYPES EQU const_value
