@@ -45,6 +45,7 @@ CherrygroveCity_ScriptPointers:
 	dw_const CherrygroveCityDefeatedRivalScript, SCRIPT_CHERRYGROVE_DEFEATED_RIVAL
 	dw_const CherrygroveCityWaitWalkDownScript,  SCRIPT_CHERRYGROVE_WAIT_WALK_DOWN
 	dw_const CherrygroveCityRivalExitsScript,    SCRIPT_CHERRYGROVE_RIVAL_EXITS
+	dw_const CherrygroveCityNoopScript,          SCRIPT_CHERRYGROVE_NOOP
 
 CherrygroveCityDefaultScript:
 	; If you have not been to Mr. Pokemon yet, then no Rival Battle yet
@@ -210,9 +211,11 @@ CherrygroveCityRivalExitsScript:
 	xor a
 	ld [wJoyIgnore], a
 	call PlayDefaultMusic
-	ld a, SCRIPT_CHERRYGROVE_DEFAULT
+	ld a, SCRIPT_CHERRYGROVE_NOOP
 	ld [wCherrygroveCityCurScript], a
 	ld [wCurMapScript], a
+	; fallthrough
+CherrygroveCityNoopScript:
 	ret
 
 CherrygroveCity_TextPointers:
