@@ -59,6 +59,9 @@ NewBarkTownBlockExitScript:
 	cp 1 ; is player trying to leave?
 	ret nz
 
+	; Mark you as having tried to leave town early
+	SetEvent EVENT_TRIED_TO_LEAVE_EARLY
+
 	; have the lady notice  you
 	ld a, NEWBARK_GIRL
 	ldh [hSpriteIndex], a
@@ -226,18 +229,22 @@ NewBarkTown_TextPointers:
 
 NewBarkGirlText:
 	text_asm
+	CheckEvent EVENT_GOT_POKEDEX
+	ld hl, .TalkAfterMrPokemonText
+	jr nz, .done
 	CheckEvent EVENT_GOT_STARTER
-	jr nz, .hasPokemon
-	; no pokemon
-	ld hl, NewBarkGirlText1
-	jr .done
-.hasPokemon
-	ld hl, NewBarkGirlText2
+	ld hl, .CutePokemonText
+	jr nz, .done
+	CheckEvent EVENT_TRIED_TO_LEAVE_EARLY
+	ld hl, .NoLeavingEarlyText
+	jr nz, .done
+	; else
+	ld hl, .TodaysTheDayText
 .done
 	call PrintText
 	jp TextScriptEnd
 
-NewBarkGirlText1:
+.TodaysTheDayText
 	text "Hi, <PLAYER>!"
 
 	para "Isn't today the"
@@ -245,19 +252,86 @@ NewBarkGirlText1:
 	cont "first #MON?"
 	done
 
-NewBarkGirlText2:
-	text "Hi, <PLAYER>!"
+.NoLeavingEarlyText
+	text "You should go see"
+	line "PROF.ELM before"
 
-	para "Aww, your #MON"
+	para "you try to leave"
+	line "town again."
+
+	para "It isn't safe to"
+	line "go out alone!"
+	done
+
+.CutePokemonText
+	text "Aww, your #MON"
 	line "is so cute!"
+
+	para "I wish I had one"
+	line "like that!"
+	done
+
+.TalkAfterMrPokemonText
+	text "Going anywhere"
+	line "feels safer when"
+
+	para "you have #MON"
+	line "by your side!"
 	done
 
 NewBarkFatManText:
+	text_asm
+	CheckEvent EVENT_GOT_POKEDEX
+	ld hl, .TalkAfterMrPokemonText
+	jr nz, .done
+	CheckEvent EVENT_GOT_STARTER
+	jr nz, .gotStarter
+	; else
+	ld hl, .YoPlayerText
+	jr .done
+
+.gotStarter
+	ld a, [wPlayerStarter]
+	ld [wd11e], a
+	call GetMonName
+	ld hl, .TalkAboutStarterText
+.done
+	call PrintText
+	jp TextScriptEnd
+
+.YoPlayerText
 	text "Yo, <PLAYER>!"
 
 	para "I hear PROF.ELM"
 	line "discovered some"
 	cont "new #MON."
+	done
+
+.TalkAboutStarterText
+	text "So, which #MON"
+	line "did you pick,"
+	cont "<PLAYER>?"
+
+	para "Oh, yeah!"
+
+	para "That @"
+	text_ram wcd6d
+	text_start
+	line "aught to be a"
+	cont "good one!"
+	done
+
+.TalkAfterMrPokemonText
+	text "Whoa! Is that a"
+	line "#DEX?"
+
+	para "I wish I had one!"
+
+	para "Then I could learn"
+	line "all about these"
+
+	para "new #MON that"
+	line "they've found!"
 	done
 
 NewBarkRivalText:

@@ -3,6 +3,7 @@
 	const_export BERRYHOUSE_HIKER
 	const_export BERRYHOUSE_POKEMON
 	; Signs
+	const BERRYHOUSE_TV
 
 Route30BerryHouse_Object:
 	db $a ; border block
@@ -12,6 +13,7 @@ Route30BerryHouse_Object:
 	warp  3,  7, 0, LAST_MAP
 
 	def_signs
+	sign  4,  1, BERRYHOUSE_TV
 
 	def_objects
 	object SPRITE_POKEFAN_M,  2,  3, STAY, RIGHT, BERRYHOUSE_HIKER
@@ -26,6 +28,7 @@ Route30BerryHouse_Script:
 Route30BerryHouse_TextPointers:
 	dw Route30BerryHouseText1
 	dw Route30BerryHousePokemonText
+	dw Route30BerryHouseTVText
 
 Route30BerryHouseText1:
 	text_asm
@@ -94,4 +97,33 @@ Route30BerryHouseText1:
 
 Route30BerryHousePokemonText:
 	text "GEODUDE: GEOOOO!"
+	done
+
+Route30BerryHouseTVText:
+	text_asm
+	ld a, [wSpritePlayerStateData1FacingDirection]
+	cp SPRITE_FACING_UP
+	ld hl, .OopsWrongSideText
+	jr nz, .got_text
+	ld hl, .MovieText
+.got_text
+	call PrintText
+	jp TextScriptEnd
+
+.MovieText ; Fast Times
+	text "There's a movie on"
+	line "TV: A girl walks"
+	cont "out of a swimming"
+	cont "pool in a red"
+	cont "swimsuit, while a"
+	cont "New Wave song"
+	cont "plays in the"
+	cont "background."
+
+	para "I'd better get"
+	line "going too!"
+	done
+
+.OopsWrongSideText
+	text "Oops, wrong side."
 	done

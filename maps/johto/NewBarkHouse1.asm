@@ -25,20 +25,67 @@ NewBarkHouse1_TextPointers:
 	dw NewBarkHouse1GirlText
 
 NewBarkHouse1GirlText:
-	text "PIKACHU is an"
-	line "evolved #MON."
+	text_asm
+	CheckEvent EVENT_GOT_STARTER
+	ld hl, .whichStartersText
+	jr z, .done ; jump if you HAVE NOT got your starter yet
+	ld hl, .TalkAboutStarterCommonText
+	call PrintText
+	ld a, [wPlayerStarter]
+	cp STARTER1
+	ld hl, .choseCyndaquilText
+	jr z, .done
+	cp STARTER2
+	ld hl, .choseTotodileText
+	jr z, .done
+	; else you chose Chikorita
+	ld hl, .choseChikoritaText
+.done
+	call PrintText
+	jp TextScriptEnd
 
-	para "I was amazed by"
-	line "PROF.ELM's find-"
-	cont "ings."
+.whichStartersText
+	text "Are you finally"
+	line "getting your own"
+	cont "#MON today?"
 
-	para "He's so famous for"
-	line "his research on"
-	cont "evolution."
+	para "That's awesome!"
 
-	para "…sigh…"
+	para "I wonder which"
+	line "ones PROF.ELM has"
 
-	para "I wish I could be"
-	line "a researcher like"
-	cont "him…"
+	para "picked out for"
+	line "you?"
+	done
+
+.TalkAboutStarterCommonText
+	text "So, which #MON"
+	line "did you choose as"
+	cont "your partner?"
+	prompt
+
+.choseCyndaquilText
+	text "Oh, CYNDAQUIL is"
+	line "cute!"
+
+	para "It's so warm and"
+	line "cuddly!"
+
+	para "I want one, too!"
+	done
+
+.choseTotodileText
+	text "Oh, you picked"
+	line "TOTODILE?"
+
+	para "They're fun! A bit"
+	line "of a handful, but"
+	cont "worth it!"
+	done
+
+.choseChikoritaText
+	text "Ooh, CHIKORITA!"
+
+	para "It's just like a"
+	line "mini dinosaur!"
 	done

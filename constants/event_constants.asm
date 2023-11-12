@@ -19,7 +19,7 @@
 ; New Bark Town events
 	const EVENT_GOT_MYSTERY_EGG
 	const EVENT_DELIVERED_MYSTERY_EGG
-	const_skip
+	const EVENT_TRIED_TO_LEAVE_EARLY
 	const_skip
 	const_skip
 	const_skip
