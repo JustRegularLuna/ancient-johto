@@ -2673,6 +2673,12 @@ wObtainedHiddenItemsFlags::
 wObtainedHiddenCoinsFlags::
 	ds 2
 
+wObtainedJohtoHiddenItemsFlags::
+	ds 14
+
+wObtainedJohtoHiddenCoinsFlags::
+	ds 2
+
 wWalkBikeSurfState::
 ; $00 = walking
 ; $01 = biking

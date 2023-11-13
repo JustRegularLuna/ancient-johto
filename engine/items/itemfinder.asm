@@ -14,7 +14,13 @@ HiddenItemNear:
 	ret nc ; return if current map has no hidden items
 	push bc
 	push hl
+	ld a, [wCurRegion]
+	and a ; Kanto?
 	ld hl, wObtainedHiddenItemsFlags
+	jr z, .gotFlagList
+	; else Johto
+	ld hl, wObtainedJohtoHiddenItemsFlags
+.gotFlagList
 	ld c, b
 	ld b, FLAG_TEST
 	predef FlagActionPredef

@@ -8,7 +8,13 @@ HiddenItems:
 .gotHiddenItemCoordList
 	call FindHiddenItemOrCoinsIndex
 	ld [wHiddenItemOrCoinsIndex], a
+	ld a, [wCurRegion]
+	and a ; Kanto?
 	ld hl, wObtainedHiddenItemsFlags
+	jr z, .gotFlagList
+	; else Johto
+	ld hl, wObtainedJohtoHiddenItemsFlags
+.gotFlagList
 	ld a, [wHiddenItemOrCoinsIndex]
 	ld c, a
 	ld b, FLAG_TEST
@@ -39,7 +45,13 @@ FoundHiddenItemText::
 	ld c, 1
 	call GiveItem
 	jr nc, .bagFull
+	ld a, [wCurRegion]
+	and a ; Kanto?
 	ld hl, wObtainedHiddenItemsFlags
+	jr z, .gotFlagList
+	; else Johto
+	ld hl, wObtainedJohtoHiddenItemsFlags
+.gotFlagList
 	ld a, [wHiddenItemOrCoinsIndex]
 	ld c, a
 	ld b, FLAG_SET
@@ -75,7 +87,13 @@ HiddenCoins:
 .gotHiddenCoinCoordList
 	call FindHiddenItemOrCoinsIndex
 	ld [wHiddenItemOrCoinsIndex], a
+	ld a, [wCurRegion]
+	and a ; Kanto?
 	ld hl, wObtainedHiddenCoinsFlags
+	jr z, .gotFlagList1
+	; else Johto
+	ld hl, wObtainedJohtoHiddenCoinsFlags
+.gotFlagList1
 	ld a, [wHiddenItemOrCoinsIndex]
 	ld c, a
 	ld b, FLAG_TEST
@@ -116,7 +134,13 @@ HiddenCoins:
 	ld hl, hCoins + 1
 	ld c, $2
 	predef AddBCDPredef
+	ld a, [wCurRegion]
+	and a ; Kanto?
 	ld hl, wObtainedHiddenCoinsFlags
+	jr z, .gotFlagList2
+	; else Johto
+	ld hl, wObtainedJohtoHiddenCoinsFlags
+.gotFlagList2
 	ld a, [wHiddenItemOrCoinsIndex]
 	ld c, a
 	ld b, FLAG_SET
