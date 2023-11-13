@@ -141,8 +141,8 @@ Route30YoungsterJoeyBattleText:
 	text "Check out my"
 	line "RATTATA!"
 
-	para "It's so great, I"
-	line "bet it's in the"
+	para "He's so great, I"
+	line "bet he's in the"
 
 	para "top percent of"
 	line "RATTATA!"
