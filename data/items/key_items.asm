@@ -128,6 +128,5 @@ KeyItemBitfield:
 	TRUE,  \ ; GS_BALL
 	TRUE,  \ ; SURFBOARD
 	TRUE,  \ ; SAFARI_BAIT
-	TRUE,  \ ; SAFARI_ROCK
-	TRUE     ; COIN
+	TRUE     ; SAFARI_ROCK
 	assert_table_length (NUM_ITEMS + 7) / 8

@@ -128,7 +128,6 @@ ItemUsePtrTable:
 	dw ItemUseSurfboard  ; SURFBOARD
 	dw ItemUseBait       ; SAFARI_BAIT
 	dw ItemUseRock       ; SAFARI_ROCK
-	dw UnusableItem      ; COIN
 	assert_table_length NUM_ITEMS
 
 ItemUseBall:

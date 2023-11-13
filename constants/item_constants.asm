@@ -130,7 +130,6 @@
 	const SURFBOARD     ; * Part of the SURF field effect, and in your PC in debug rom
 	const SAFARI_BAIT   ; * Used in Safari Battle mode
 	const SAFARI_ROCK   ; * Used in Safari Battle mode
-	const COIN          ; * Used for the Hidden Items that are coins
 
 NUM_ITEMS EQU const_value - 1
 

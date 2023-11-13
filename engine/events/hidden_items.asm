@@ -106,13 +106,13 @@ HiddenCoins:
 	ldh [hCoins], a
 	ldh [hCoins + 1], a
 	ld a, [wHiddenObjectFunctionArgument]
-	sub COIN
 	cp 10
 	jr z, .bcd10
 	cp 20
 	jr z, .bcd20
 	cp 40
 	jr z, .bcd40
+	; else 100 coins
 	jr .bcd100
 .bcd10
 	ld a, $10

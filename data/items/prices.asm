@@ -110,7 +110,6 @@ ItemPrices::
 	money 0     ; SURFBOARD
 	money 0     ; SAFARI_BAIT
 	money 0     ; SAFARI_ROCK
-	money 0     ; COIN
 	assert_table_length NUM_ITEMS
 	money 0     ; FLOOR_B2F
 	money 0     ; FLOOR_B1F

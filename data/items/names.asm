@@ -110,7 +110,6 @@ ItemNames::
 	li "SURFBOARD"
 	li "SAFARI BAIT"
 	li "SAFARI ROCK"
-	li "COIN"
 	assert_list_length NUM_ITEMS
 	li "B2F"
 	li "B1F"
