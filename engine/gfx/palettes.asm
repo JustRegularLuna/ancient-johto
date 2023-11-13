@@ -144,6 +144,8 @@ SetPal_Overworld:
 	jr z, .PokemonTowerOrAgatha
 	cp CAVERN
 	jr z, .caveOrBruno
+	cp JOHTO_CAVE
+	jr z, .johtoCave
 	ld a, [wCurRegion]
 	and a ; Kanto or Johto?
 	jr nz, .johtoChecks
@@ -197,6 +199,9 @@ SetPal_Overworld:
 	jr .town
 .Lorelei
 	xor a
+	jr .town
+.johtoCave
+	ld a, PAL_PEWTER - 1
 	jr .town
 
 ; used when a Pokemon is the only thing on the screen
