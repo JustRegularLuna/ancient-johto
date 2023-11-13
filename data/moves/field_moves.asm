@@ -10,4 +10,5 @@ FieldMoveDisplayData:
 	db DIG,        6, $0C
 	db TELEPORT,   7, $0A
 	db SOFTBOILED, 8, $08
+	db HEADBUTT,   9, $0A
 	db -1 ; end

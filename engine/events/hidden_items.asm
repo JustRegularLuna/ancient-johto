@@ -15,7 +15,7 @@ HiddenItems:
 	predef FlagActionPredef
 	ld a, c
 	and a
-	ret nz
+	jr nz, .nope ; originally ret nz
 	call EnableAutoTextBoxDrawing
 	ld a, 1
 	ld [wDoNotWaitForButtonPressAfterDisplayingText], a
@@ -23,6 +23,11 @@ HiddenItems:
 	ld [wd11e], a
 	call GetItemName
 	tx_pre_jump FoundHiddenItemText
+
+; added for field move hack
+.nope
+	predef TryFieldMove
+	ret
 
 INCLUDE "data/events/hidden_item_coords.asm"
 

@@ -51,6 +51,7 @@ UsedCut:
 	call Delay3
 	xor a
 	ldh [hWY], a
+Cut2:: ; added for Field Move hack
 	ld hl, UsedCutText
 	call PrintText
 	call LoadScreenTilesFromBuffer2

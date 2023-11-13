@@ -16,12 +16,15 @@ PrintBeginningBattleText:
 .notPokemonTower
 	ld a, [wEnemyMonSpecies2]
 	call PlayCry
-	ld hl, WildMonAppearedText
 	ld a, [wMoveMissed]
-	and a
-	jr z, .notFishing
+	cp 1 ; Fishing
 	ld hl, HookedMonAttackedText
-.notFishing
+	jr z, .wildBattle
+	cp 2 ; Headbutt
+	ld hl, FellOutOfTreeText
+	jr z, .wildBattle
+	; else it is a normal wild battle
+	ld hl, WildMonAppearedText
 	jr .wildBattle
 .trainerBattle
 	call .playSFX
@@ -82,6 +85,10 @@ WildMonAppearedText:
 
 HookedMonAttackedText:
 	text_far _HookedMonAttackedText
+	text_end
+
+FellOutOfTreeText:
+	text_far _FellOutOfTreeText
 	text_end
 
 EnemyAppearedText:

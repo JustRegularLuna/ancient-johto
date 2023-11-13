@@ -742,3 +742,9 @@ INCLUDE "engine/events/wonder_trade.asm"
 SECTION "New Move Effects", ROMX
 
 INCLUDE "engine/battle/move_effects/hidden_power.asm"
+
+
+SECTION "Field Move Stuff", ROMX
+
+INCLUDE "engine/overworld/field_moves.asm"
+INCLUDE "engine/overworld/headbutt.asm"

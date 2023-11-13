@@ -129,6 +129,7 @@ StartMenu_Pokemon::
 	dw .dig
 	dw .teleport
 	dw .softboiled
+	dw .headbutt
 .fly
 	bit BIT_STORMBADGE, a
 	jp z, .newBadgeRequired
@@ -272,6 +273,12 @@ StartMenu_Pokemon::
 .notHealthyEnoughText
 	text_far _NotHealthyEnoughText
 	text_end
+.headbutt
+	farcall UseHeadbuttOW
+	ld a, [wActionResultOrTookBattleTurn]
+	and a
+	jp z, .loop
+	jp CloseTextDisplay
 .goBackToMap
 	call RestoreScreenTilesAndReloadTilePatterns
 	jp CloseTextDisplay

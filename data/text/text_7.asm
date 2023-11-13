@@ -198,3 +198,26 @@ _UsedCutText::
 	text " hacked"
 	line "away with CUT!"
 	prompt
+
+_NothingToHeadbuttText::
+	text "There's nothing"
+	line "to HEADBUTT!"
+	prompt
+
+_UsedHeadbuttText::
+	text_ram wcd6d
+	text " did a"
+	line "HEADBUTT!"
+	prompt
+
+_NoHeadbuttMonText::
+	text "Nope, nothing."
+	prompt
+
+_FellOutOfTreeText::
+	text "Wild @"
+	text_ram wEnemyMonNick
+	text_start
+	line "fell out of the"
+	cont "tree!"
+	prompt

@@ -8,3 +8,4 @@ FieldMoveNames:
 	db "DIG@"
 	db "TELEPORT@"
 	db "SOFTBOILED@"
+	db "HEADBUTT@"
