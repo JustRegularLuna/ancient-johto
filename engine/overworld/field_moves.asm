@@ -338,5 +338,5 @@ MightBeHiding:
 	cont "tree."
 
 	para "Want to use"
-	line "HEADBUT?"
+	line "HEADBUTT?"
 	done
