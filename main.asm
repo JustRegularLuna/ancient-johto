@@ -754,4 +754,5 @@ INCLUDE "data/pokemon/base_stats.asm"
 
 SECTION "Move Data", ROMX
 
+INCLUDE "engine/battle/ai_read_move.asm"
 INCLUDE "data/moves/moves.asm"

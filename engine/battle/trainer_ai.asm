@@ -263,11 +263,8 @@ ReadMove:
 	push de
 	push bc
 	dec a
-	ld hl, Moves
-	ld bc, MOVE_LENGTH
-	call AddNTimes
-	ld de, wEnemyMoveNum
-	call CopyData
+	ld e, a
+	farcall _ReadMove
 	pop bc
 	pop de
 	pop hl
