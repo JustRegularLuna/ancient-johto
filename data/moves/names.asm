@@ -240,4 +240,7 @@ MoveNames::
 	li "ICE SHARD"
 	li "PETALBLIZARD"
 	li "TIME REND"
+	li "MAGICAL LEAF"
+	li "WATER PULSE"
+	li "WAVE CRASH"
 	assert_list_length NUM_ATTACKS

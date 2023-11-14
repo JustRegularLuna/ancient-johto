@@ -152,7 +152,7 @@ CherrygroveCityDefeatedRivalScript:
 	; show the after-battle text
 	ld a, FALSE
 	ld [wIsTrainerBattle], a
-	ld a, D_RIGHT | D_LEFT | D_UP | D_DOWN
+	ld a, D_RIGHT | D_LEFT | D_UP | D_DOWN | START | SELECT
 	ld [wJoyIgnore], a
 	SetEvent EVENT_BEAT_CHERRYGROVE_RIVAL
 	ld a, CHERRYGROVE_RIVAL
@@ -178,6 +178,8 @@ CherrygroveCityDefeatedRivalScript:
 	ret
 
 CherrygroveCityWaitWalkDownScript:
+	ld a, A_BUTTON | B_BUTTON | D_UP | D_DOWN | D_LEFT | D_RIGHT | SELECT | START
+	ld [wJoyIgnore], a
 	ld a, [wSimulatedJoypadStatesIndex]
 	and a
 	ret nz
@@ -269,6 +271,8 @@ CherrygroveCityRivalText:
 	ld [wTrainerNo], a
 	ld a, TRUE
 	ld [wIsTrainerBattle], a
+	xor a
+	ld [wJoyIgnore], a
 
 	; Trigger the next map scene
 	ld a, SCRIPT_CHERRYGROVE_DEFEATED_RIVAL

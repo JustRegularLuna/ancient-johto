@@ -46,7 +46,7 @@ Moves:
 	move BODY_SLAM,    PARALYZE_SIDE_EFFECT2,       85, NORMAL,       100, 15
 	move WRAP,         TRAPPING_EFFECT,             15, NORMAL,        85, 20
 	move TAKE_DOWN,    RECOIL_EFFECT,               90, NORMAL,        85, 20
-	move THRASH,       THRASH_PETAL_DANCE_EFFECT,   90, NORMAL,       100, 20
+	move THRASH,       THRASH_PETAL_DANCE_EFFECT,  120, NORMAL,       100, 10
 	move DOUBLE_EDGE,  RECOIL_EFFECT,              100, NORMAL,       100, 15
 	move TAIL_WHIP,    DEFENSE_DOWN1_EFFECT,         0, NORMAL,       100, 30
 	move POISON_STING, POISON_SIDE_EFFECT1,         15, POISON,       100, 35
@@ -89,10 +89,10 @@ Moves:
 	move POISONPOWDER, POISON_EFFECT,                0, POISON,        75, 35
 	move STUN_SPORE,   PARALYZE_EFFECT,              0, GRASS,         75, 30
 	move SLEEP_POWDER, SLEEP_EFFECT,                 0, GRASS,         75, 15
-	move PETAL_DANCE,  THRASH_PETAL_DANCE_EFFECT,   70, GRASS,        100, 20
+	move PETAL_DANCE,  THRASH_PETAL_DANCE_EFFECT,  120, GRASS,        100, 10
 	move STRING_SHOT,  SPEED_DOWN1_EFFECT,           0, BUG,           95, 40
 	move DRAGON_RAGE,  SPECIAL_DAMAGE_EFFECT,        1, DRAGON,       100, 10
-	move FIRE_SPIN,    TRAPPING_EFFECT,             15, FIRE,          70, 15
+	move FIRE_SPIN,    TRAPPING_EFFECT,             35, FIRE,          85, 15
 	move THUNDERSHOCK, PARALYZE_SIDE_EFFECT1,       40, ELECTRIC,     100, 30
 	move THUNDERBOLT,  PARALYZE_SIDE_EFFECT1,       95, ELECTRIC,     100, 15
 	move THUNDER_WAVE, PARALYZE_EFFECT,              0, ELECTRIC,     100, 20
@@ -251,4 +251,7 @@ Moves:
 	move BLIZZARD,     NO_ADDITIONAL_EFFECT,        40, ICE,          100, 30 ; Ice Shard *** Priority +1
 	move PETAL_DANCE,  NO_ADDITIONAL_EFFECT,        90, GRASS,        100, 15 ; Petal Blizzard
 	move PSYCHIC_M,    CHARGE_EFFECT,              140, CURSE_TYPE,   100, 10 ; Time Rend
+	move RAZOR_LEAF,   SWIFT_EFFECT,                60, GRASS,        100, 20 ; Magical Leaf
+	move BUBBLEBEAM,   CONFUSION_SIDE_EFFECT,       60, WATER,        100, 20 ; Water Pulse
+	move SURF,         RECOIL_EFFECT,              120, WATER,        100, 15 ; Wave Crash
 	assert_table_length NUM_ATTACKS

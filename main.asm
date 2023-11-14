@@ -193,9 +193,6 @@ INCLUDE "engine/slots/game_corner_slots.asm"
 
 SECTION "Battle Engine 7", ROMX
 
-INCLUDE "data/moves/moves.asm"
-INCLUDE "data/pokemon/base_stats.asm"
-INCLUDE "engine/battle/unused_stats_functions.asm"
 INCLUDE "engine/battle/scroll_draw_trainer_pic.asm"
 INCLUDE "engine/battle/trainer_ai.asm"
 INCLUDE "engine/battle/draw_hud_pokeball_gfx.asm"
@@ -748,3 +745,13 @@ SECTION "Field Move Stuff", ROMX
 
 INCLUDE "engine/overworld/field_moves.asm"
 INCLUDE "engine/overworld/headbutt.asm"
+
+
+SECTION "Base Stats", ROMX
+
+INCLUDE "data/pokemon/base_stats.asm"
+
+
+SECTION "Move Data", ROMX
+
+INCLUDE "data/moves/moves.asm"

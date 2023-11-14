@@ -246,6 +246,9 @@
 	const ICE_SHARD    ; ee
 	const PETALBLIZARD ; ef
 	const TIME_REND    ; f0
+	const MAGICAL_LEAF ; f1
+	const WATER_PULSE  ; f2
+	const WAVE_CRASH   ; f3
 
 DEF NUM_ATTACKS EQU const_value - 1
 
