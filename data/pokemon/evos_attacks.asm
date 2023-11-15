@@ -1361,7 +1361,15 @@ UmbreonEvosAttacks:
 
 MurkrowEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, TACKLE
+	db 1, PECK
+	db 1, LEER
+	db 9, ASTONISH
+	db 14, MEAN_LOOK
+	db 22, FEINT_ATTACK
+	db 27, HEX
+	db 35, WING_ATTACK
+	db 40, MOONLIGHT
+	db 48, DARK_PULSE
 	db 0 ; no more level-up moves
 
 SlowkingEvosAttacks:
