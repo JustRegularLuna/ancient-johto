@@ -37,4 +37,4 @@ LoadWildData::
 	ld bc, $14
 	jp CopyData
 
-INCLUDE "data/wild/grass_water.asm"
+INCLUDE "data/wild/wildmon_pointers.asm"

@@ -54,7 +54,6 @@ INCLUDE "engine/overworld/daycare_exp.asm"
 INCLUDE "data/maps/hide_show_data.asm"
 INCLUDE "engine/overworld/field_move_messages.asm"
 INCLUDE "engine/items/inventory.asm"
-INCLUDE "engine/overworld/wild_mons.asm"
 INCLUDE "engine/items/item_effects.asm"
 INCLUDE "engine/menus/draw_badges.asm"
 INCLUDE "engine/overworld/update_map.asm"
@@ -756,3 +755,8 @@ SECTION "Move Data", ROMX
 
 INCLUDE "engine/battle/ai_read_move.asm"
 INCLUDE "data/moves/moves.asm"
+
+
+SECTION "Grass/Water/Cave Wildmons", ROMX
+
+INCLUDE "engine/overworld/wild_mons.asm"
