@@ -243,4 +243,5 @@ MoveNames::
 	li "MAGICAL LEAF"
 	li "WATER PULSE"
 	li "WAVE CRASH"
+	li "HURRICANE"
 	assert_list_length NUM_ATTACKS

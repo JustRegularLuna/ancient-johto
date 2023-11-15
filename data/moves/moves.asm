@@ -254,4 +254,5 @@ Moves:
 	move RAZOR_LEAF,   SWIFT_EFFECT,                60, GRASS,        100, 20 ; Magical Leaf
 	move BUBBLEBEAM,   CONFUSION_SIDE_EFFECT,       60, WATER,        100, 20 ; Water Pulse
 	move SURF,         RECOIL_EFFECT,              120, WATER,        100, 15 ; Wave Crash
+	move SONICBOOM,    CONFUSION_SIDE_EFFECT,      110, FLYING,        85, 10 ; Hurricane
 	assert_table_length NUM_ATTACKS
