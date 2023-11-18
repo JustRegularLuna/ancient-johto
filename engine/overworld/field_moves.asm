@@ -218,15 +218,6 @@ IsCutTile:
 	cp JOHTO
 	jr z, .johto
 
-	cp GYM
-	jr z, .gym
-
-	jr .no
-
-.gym
-	ld a, [wTileInFrontOfPlayer]
-	cp $50 ; gym cut tree
-	jr z, .yes
 	jr .no
 
 .overworld
