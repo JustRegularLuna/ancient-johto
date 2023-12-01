@@ -288,8 +288,8 @@ BoyGirlChoice::
 	call SaveScreenTilesToBuffer1
 	ld a, BOY_GIRL_MENU
 	ld [wTwoOptionMenuID], a
-	coord hl, 13, 7
-	lb bc, 8, 14
+	coord hl, 7, 5
+	lb bc, 6, 8
 	ld a, TWO_OPTION_MENU
 	ld [wTextBoxID], a
 	call DisplayTextBoxID
