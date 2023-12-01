@@ -75,6 +75,7 @@ INCLUDE "engine/events/hidden_objects/elevator.asm"
 INCLUDE "engine/events/hidden_objects/town_map.asm"
 INCLUDE "engine/events/hidden_objects/pokemon_stuff.asm"
 INCLUDE "engine/events/hidden_objects/pokecenter_pc.asm"
+INCLUDE "engine/events/hidden_objects/household_objects.asm"
 
 
 SECTION "Font Graphics", ROMX

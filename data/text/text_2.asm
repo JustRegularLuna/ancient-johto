@@ -826,6 +826,16 @@ _PokemonStuffText::
 	line "#MON stuff!"
 	done
 
+_ItsATVText::
+	text "The TV is turned"
+	line "off."
+	done
+
+_MyReflectionText::
+	text "My reflection!"
+	line "Lookin' good!"
+	done
+
 _OutOfSafariBallsText::
 	text "PA: Ding-dong!"
 

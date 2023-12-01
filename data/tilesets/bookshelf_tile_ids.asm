@@ -8,6 +8,8 @@ BookshelfTileIDs:
 	bookshelf_tile PLATEAU,           $30, IndigoPlateauStatues
 	bookshelf_tile HOUSE,             $3D, TownMapText
 	bookshelf_tile HOUSE,             $1E, BookOrSculptureText
+	bookshelf_tile HOUSE,             $16, ItsATVText
+	bookshelf_tile HOUSE,             $34, MyReflectionText
 	bookshelf_tile MANSION,           $32, BookOrSculptureText
 	bookshelf_tile PLAYERS_HOUSE,     $3E, BookOrSculptureText
 	bookshelf_tile PLAYERS_ROOM,      $35, BookOrSculptureText
@@ -15,7 +17,11 @@ BookshelfTileIDs:
 	bookshelf_tile LAB,               $28, BookOrSculptureText
 	bookshelf_tile LOBBY,             $16, ElevatorText
 	bookshelf_tile GYM,               $1D, BookOrSculptureText
+	bookshelf_tile GYM,               $50, MyReflectionText
 	bookshelf_tile GATE,              $22, BookOrSculptureText
+	bookshelf_tile GATE,              $3A, MyReflectionText
+	bookshelf_tile GATE,              $3D, MyReflectionText
+	bookshelf_tile GATE,              $3E, MyReflectionText
 	bookshelf_tile MART,              $3E, PokemonStuffText
 	bookshelf_tile MART,              $50, PokemonStuffText
 	bookshelf_tile MART,              $52, PokemonStuffText
