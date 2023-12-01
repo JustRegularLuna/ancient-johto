@@ -498,7 +498,6 @@ INCLUDE "engine/battle/move_effects/paralyze.asm"
 
 SECTION "Hidden Objects 2", ROMX
 
-INCLUDE "engine/events/card_key.asm"
 INCLUDE "engine/events/prize_menu.asm"
 INCLUDE "engine/events/hidden_objects/school_notebooks.asm"
 INCLUDE "engine/events/hidden_objects/indigo_plateau_hq.asm"

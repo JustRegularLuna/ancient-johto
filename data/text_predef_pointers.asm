@@ -4,8 +4,6 @@ MACRO add_tx_pre
 ENDM
 
 TextPredefs::
-	add_tx_pre CardKeySuccessText                   ; 01
-	add_tx_pre CardKeyFailText                      ; 02
 	add_tx_pre AerodactylFossilText                 ; 09
 	add_tx_pre Route15UpstairsBinocularsText        ; 0A
 	add_tx_pre KabutopsFossilText                   ; 0B
