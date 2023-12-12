@@ -61,7 +61,6 @@ CherrygroveCityDefaultScript:
 	; If you are in the right place at the right time, do the Rival encounter
 	ld a, SFX_STOP_ALL_MUSIC
 	call PlaySound
-	ld c, 0
 	ld a, MUSIC_RIVAL_ENCOUNTER
 	call PlayMusic
 	; make the rival walk up to you

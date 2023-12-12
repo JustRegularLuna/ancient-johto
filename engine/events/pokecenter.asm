@@ -25,11 +25,8 @@ DisplayPokemonCenterDialogue_::
 	farcall AnimateHealingMachine ; do the healing machine animation
 	xor a
 	ld [wMusicFade], a
-;	ld a, [wAudioSavedROMBank]
-;	ld [wAudioROMBank], a
 	ld a, [wMapMusicSoundID]
 	ld [wLastMusicSoundID], a
-;	ld [wNewSoundID], a
 	call PlayMusic
 	ld hl, PokemonFightingFitText
 	call PrintText

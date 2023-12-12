@@ -3,10 +3,8 @@ PlayBattleMusic::
 	ld [wMusicFade], a
 	ld [wLowHealthAlarm], a
 	dec a ; SFX_STOP_ALL_MUSIC
-;	ld [wNewSoundID], a
 	call PlaySound
 	call DelayFrame
-	ld c, 0 ; BANK(Music_GymLeaderBattle)
 	ld a, [wGymLeaderBattle]
 	and a
 	jr nz, .gymLeaderBattle

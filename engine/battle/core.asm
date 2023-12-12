@@ -994,9 +994,7 @@ TrainerDefeatedText:
 PlayBattleVictoryMusic:
 	push af
 	ld a, SFX_STOP_ALL_MUSIC
-;	ld [wNewSoundID], a
 	call PlaySoundWaitForCurrent
-	ld c, 0 ; BANK(Music_DefeatedTrainer)
 	pop af
 	call PlayMusic
 	jp Delay3

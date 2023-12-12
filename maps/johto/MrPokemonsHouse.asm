@@ -83,8 +83,6 @@ MrPokemonsHouseGiveEggScript:
 	; Play Oak's song
 	ld a, SFX_STOP_ALL_MUSIC
 	call PlaySound
-	ld a, 0
-	ld c, a
 	ld a, MUSIC_MEET_PROF_OAK
 	call PlayMusic
 	; Then Prof Oak walks over

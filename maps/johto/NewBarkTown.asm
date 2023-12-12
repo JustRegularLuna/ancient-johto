@@ -76,8 +76,6 @@ NewBarkTownBlockExitScript:
 	ld [wPlayerMovingDirection], a
 	ld a, SFX_STOP_ALL_MUSIC
 	call PlaySound
-	ld a, 0
-	ld c, a
 	ld a, MUSIC_BEAUTY_ENCOUNTER
 	call PlayMusic
 	ld a, SELECT | START | D_RIGHT | D_LEFT | D_UP | D_DOWN
