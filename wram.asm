@@ -2283,7 +2283,7 @@ wPlayerID::
 wMapMusicSoundID::
 	ds 1
 
-wMapMusicROMBank::
+; unused
 	ds 1
 
 wMapPalOffset::

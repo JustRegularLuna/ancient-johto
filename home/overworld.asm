@@ -2401,26 +2401,19 @@ LoadMapHeader::
 	ld b, $00
 	ldh a, [hLoadedROMBank]
 	push af
-	ld a, BANK(MapSongBanks)
+	ld a, BANK(MapSongs)
 	ldh [hLoadedROMBank], a
 	ld [MBC1RomBank], a
 	ld a, [wCurRegion]
 	and a ; Kanto?
-	ld hl, MapSongBanks
+	ld hl, MapSongs
 	jr z, .gotSongTable
 	; else Johto
-	ld hl, JohtoMapSongBanks
+	ld hl, JohtoMapSongs
 .gotSongTable
 	add hl, bc
-	add hl, bc
-	ld a, [hli]
-	ld [wMapMusicSoundID], a ; music 1
 	ld a, [hl]
-
-; give vanilla red a fair shot at running our savs
-	ld a, BANK("Audio Engine 1")
-
-	ld [wMapMusicROMBank], a ; music 2
+	ld [wMapMusicSoundID], a ; music 1
 	pop af
 	ldh [hLoadedROMBank], a
 	ld [MBC1RomBank], a
