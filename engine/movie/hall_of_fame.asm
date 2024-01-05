@@ -240,7 +240,7 @@ HoFDisplayPlayerStats:
 	ld de, wPlayTimeHours
 	lb bc, 1, 3
 	call PrintNumber
-	ld [hl], $6d
+	ld [hl], "<COLON>"
 	inc hl
 	ld de, wPlayTimeMinutes
 	lb bc, LEADING_ZEROES | 1, 2
