@@ -113,12 +113,15 @@ Route30BerryHouseTVText:
 .MovieText ; Fast Times
 	text "There's a movie on"
 	line "TV: A girl walks"
-	cont "out of a swimming"
-	cont "pool in a red"
-	cont "swimsuit, while a"
-	cont "New Wave song"
-	cont "plays in the"
-	cont "background."
+
+	para "out of a swimming"
+	line "pool in a red"
+
+	para "swimsuit, while a"
+	line "New Wave song"
+
+	para "plays in the"
+	line "background."
 
 	para "I'd better get"
 	line "going too!"

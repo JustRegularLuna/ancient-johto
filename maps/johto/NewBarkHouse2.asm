@@ -3,6 +3,8 @@
 	; NPCs
 	const_export ELMSHOUSE_ELMS_WIFE
 	const_export ELMSHOUSE_ELMS_SON
+	; Signs
+	const ELMSHOUSE_TV
 
 NewBarkHouse2_Object:
 	db $a ; border block
@@ -12,6 +14,7 @@ NewBarkHouse2_Object:
 	warp  3,  7, 2, LAST_MAP
 
 	def_signs
+	sign  4,  1, ELMSHOUSE_TV
 
 	def_objects
 	object SPRITE_TEACHER,  2,  4, STAY, RIGHT, ELMSHOUSE_ELMS_WIFE
@@ -26,6 +29,7 @@ NewBarkHouse2_Script:
 NewBarkHouse2_TextPointers:
 	dw ElmsWifeText
 	dw ElmsSonText
+	dw ElmsTVText
 
 ElmsWifeText:
 	text "Hi, <PLAYER>! Did"
@@ -52,4 +56,30 @@ ElmsSonText:
 	para "I'm gonna be just"
 	line "like him when I"
 	cont "grow up!"
+	done
+
+ElmsTVText:
+	text_asm
+	ld a, [wSpritePlayerStateData1FacingDirection]
+	cp SPRITE_FACING_UP
+	ld hl, .OopsWrongSideText
+	jr nz, .got_text
+	ld hl, .TVText
+.got_text
+	call PrintText
+	jp TextScriptEnd
+
+.TVText
+	text "There's a show on"
+	line "TV. A kid with"
+
+	para "black hair and a"
+	line "monkey tail is"
+
+	para "riding a cloud."
+	line "I'd better go too!"
+	done
+
+.OopsWrongSideText
+	text "Oops, wrong side."
 	done
