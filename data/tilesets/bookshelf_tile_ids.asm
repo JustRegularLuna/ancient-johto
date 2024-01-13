@@ -12,7 +12,7 @@ BookshelfTileIDs:
 	bookshelf_tile HOUSE,             $34, MyReflectionText
 	bookshelf_tile MANSION,           $32, BookOrSculptureText
 	bookshelf_tile PLAYERS_HOUSE,     $3E, BookOrSculptureText
-	bookshelf_tile PLAYERS_ROOM,      $35, BookOrSculptureText
+	bookshelf_tile PLAYERS_ROOM,      $35, MagazinesText
 	bookshelf_tile PLAYERS_ROOM,      $54, TownMapText
 	bookshelf_tile LAB,               $28, BookOrSculptureText
 	bookshelf_tile LOBBY,             $16, ElevatorText

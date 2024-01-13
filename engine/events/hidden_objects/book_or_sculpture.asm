@@ -19,3 +19,7 @@ PokemonBooksText:
 DiglettSculptureText:
 	text_far _DiglettSculptureText
 	text_end
+
+MagazinesText::
+	text_far _MagazinesText
+	text_end

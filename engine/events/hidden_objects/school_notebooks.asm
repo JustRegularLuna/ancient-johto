@@ -10,23 +10,23 @@ TMNotebook::
 	text_waitbutton
 	text_end
 
-ViridianSchoolNotebook::
+PokemonSchoolNotebook::
 	text_asm
-	ld hl, ViridianSchoolNotebookText1
+	ld hl, PokemonSchoolNotebookText1
 	call PrintText
 	call TurnPageSchoolNotebook
 	jr nz, .doneReading
-	ld hl, ViridianSchoolNotebookText2
+	ld hl, PokemonSchoolNotebookText2
 	call PrintText
 	call TurnPageSchoolNotebook
 	jr nz, .doneReading
-	ld hl, ViridianSchoolNotebookText3
+	ld hl, PokemonSchoolNotebookText3
 	call PrintText
 	call TurnPageSchoolNotebook
 	jr nz, .doneReading
-	ld hl, ViridianSchoolNotebookText4
+	ld hl, PokemonSchoolNotebookText4
 	call PrintText
-	ld hl, ViridianSchoolNotebookText5
+	ld hl, PokemonSchoolNotebookText5
 	call PrintText
 .doneReading
 	jp TextScriptEnd
@@ -43,23 +43,23 @@ TurnPageText:
 	text_far _TurnPageText
 	text_end
 
-ViridianSchoolNotebookText5:
-	text_far _ViridianSchoolNotebookText5
+PokemonSchoolNotebookText5:
+	text_far _PokemonSchoolNotebookText5
 	text_waitbutton
 	text_end
 
-ViridianSchoolNotebookText1:
-	text_far _ViridianSchoolNotebookText1
+PokemonSchoolNotebookText1:
+	text_far _PokemonSchoolNotebookText1
 	text_end
 
-ViridianSchoolNotebookText2:
-	text_far _ViridianSchoolNotebookText2
+PokemonSchoolNotebookText2:
+	text_far _PokemonSchoolNotebookText2
 	text_end
 
-ViridianSchoolNotebookText3:
-	text_far _ViridianSchoolNotebookText3
+PokemonSchoolNotebookText3:
+	text_far _PokemonSchoolNotebookText3
 	text_end
 
-ViridianSchoolNotebookText4:
-	text_far _ViridianSchoolNotebookText4
+PokemonSchoolNotebookText4:
+	text_far _PokemonSchoolNotebookText4
 	text_end

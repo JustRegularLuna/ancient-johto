@@ -160,158 +160,6 @@ _GymStatueText2::
 	cont "<PLAYER>"
 	done
 
-_ViridianCityPokecenterGuyText::
-	text "#MON CENTERs"
-	line "heal your tired,"
-	cont "hurt or fainted"
-	cont "#MON!"
-	done
-
-_PewterCityPokecenterGuyText::
-	text "Yawn!"
-
-	para "When JIGGLYPUFF"
-	line "sings, #MON"
-	cont "get drowsy…"
-
-	para "…Me too…"
-	line "Snore…"
-	done
-
-_CeruleanPokecenterGuyText::
-	text "BILL has lots of"
-	line "#MON!"
-
-	para "He collects rare"
-	line "ones too!"
-	done
-
-_LavenderPokecenterGuyText::
-	text "CUBONEs wear"
-	line "skulls, right?"
-
-	para "People will pay a"
-	line "lot for one!"
-	done
-
-_MtMoonPokecenterBenchGuyText::
-	text "If you have too"
-	line "many #MON, you"
-	cont "should store them"
-	cont "via PC!"
-	done
-
-_RockTunnelPokecenterGuyText::
-	text "I heard that"
-	line "GHOSTs haunt"
-	cont "LAVENDER TOWN!"
-	done
-
-_UnusedBenchGuyText1::
-	text "I wish I could"
-	line "catch #MON."
-	done
-
-_UnusedBenchGuyText2::
-	text "I'm tired from"
-	line "all the fun…"
-	done
-
-_UnusedBenchGuyText3::
-	text "SILPH's manager"
-	line "is hiding in the"
-	cont "SAFARI ZONE."
-	done
-
-_VermilionPokecenterGuyText::
-	text "It is true that a"
-	line "higher level"
-	cont "#MON will be"
-	cont "more powerful…"
-
-	para "But, all #MON"
-	line "will have weak"
-	cont "points against"
-	cont "specific types."
-
-	para "So, there is no"
-	line "universally"
-	cont "strong #MON."
-	done
-
-_CeladonCityPokecenterGuyText::
-	text "If I had a BIKE,"
-	line "I would go to"
-	cont "CYCLING ROAD!"
-	done
-
-_FuchsiaCityPokecenterGuyText::
-	text "If you're studying "
-	line "#MON, visit"
-	cont "the SAFARI ZONE."
-
-	para "It has all sorts"
-	line "of rare #MON."
-	done
-
-_CinnabarPokecenterGuyText::
-	text "#MON can still"
-	line "learn techniques"
-	cont "after canceling"
-	cont "evolution."
-
-	para "Evolution can wait"
-	line "until new moves"
-	cont "have been learned."
-	done
-
-_SaffronCityPokecenterGuyText1::
-	text "It would be great"
-	line "if the ELITE FOUR"
-	cont "came and stomped"
-	cont "TEAM ROCKET!"
-	done
-
-_SaffronCityPokecenterGuyText2::
-	text "TEAM ROCKET took"
-	line "off! We can go"
-	cont "out safely again!"
-	cont "That's great!"
-	done
-
-_CeladonCityHotelText::
-	text "My sis brought me"
-	line "on this vacation!"
-	done
-
-_BookcaseText::
-	text "Crammed full of"
-	line "#MON books!"
-	done
-
-_NewBicycleText::
-	text "A shiny new"
-	line "BICYCLE!"
-	done
-
-_PushStartText::
-	text "Push START to"
-	line "open the MENU!"
-	done
-
-_SaveOptionText::
-	text "The SAVE option is"
-	line "on the MENU"
-	cont "screen."
-	done
-
-_StrengthsAndWeaknessesText::
-	text "All #MON types"
-	line "have strong and"
-	cont "weak points"
-	cont "against others."
-	done
-
 _TimesUpText::
 	text "PA: Ding-dong!"
 
@@ -321,128 +169,6 @@ _TimesUpText::
 _GameOverText::
 	text "PA: Your SAFARI"
 	line "GAME is over!"
-	done
-
-_CinnabarGymQuizIntroText::
-	text "#MON Quiz!"
-
-	para "Get it right and"
-	line "the door opens to"
-	cont "the next room!"
-
-	para "Get it wrong and"
-	line "face a trainer!"
-
-	para "If you want to"
-	line "conserve your"
-	cont "#MON for the"
-	cont "GYM LEADER…"
-
-	para "Then get it right!"
-	line "Here we go!"
-	prompt
-
-_CinnabarQuizQuestionsText1::
-	text "CATERPIE evolves"
-	line "into BUTTERFREE?"
-	done
-
-_CinnabarQuizQuestionsText2::
-	text "There are 9"
-	line "certified #MON"
-	cont "LEAGUE BADGEs?"
-	done
-
-_CinnabarQuizQuestionsText3::
-	text "POLIWAG evolves 3"
-	line "times?"
-	done
-
-_CinnabarQuizQuestionsText4::
-	text "Are thunder moves"
-	line "effective against"
-	cont "ground element-"
-	cont "type #MON?"
-	done
-
-_CinnabarQuizQuestionsText5::
-	text "#MON of the"
-	line "same kind and"
-	cont "level are not"
-	cont "identical?"
-	done
-
-_CinnabarQuizQuestionsText6::
-	text "TM28 contains"
-	line "TOMBSTONER?"
-	done
-
-_CinnabarGymQuizCorrectText::
-	text "You're absolutely"
-	line "correct!"
-
-	para "Go on through!@"
-	text_end
-
-_CinnabarGymQuizIncorrectText::
-	text "Sorry! Bad call!"
-	prompt
-
-_MagazinesText::
-	text "#MON magazines!"
-
-	para "#MON notebooks!"
-
-	para "#MON graphs!"
-	done
-
-_BillsHouseMonitorText::
-	text "TELEPORTER is"
-	line "displayed on the"
-	cont "PC monitor."
-	done
-
-_BillsHouseInitiatedText::
-	text "<PLAYER> initiated"
-	line "TELEPORTER's Cell"
-	cont "Separator!@"
-	text_end
-
-_BillsHousePokemonListText1::
-	text "BILL's favorite"
-	line "#MON list!"
-	prompt
-
-_BillsHousePokemonListText2::
-	text "Which #MON do"
-	line "you want to see?"
-	done
-
-_OakLabEmailText::
-	text "There's an e-mail"
-	line "message here!"
-
-	para "…"
-
-	para "Calling all"
-	line "#MON trainers!"
-
-	para "The elite trainers"
-	line "of #MON LEAGUE"
-	cont "are ready to take"
-	cont "on all comers!"
-
-	para "Bring your best"
-	line "#MON and see"
-	cont "how you rate as a"
-	cont "trainer!"
-
-	para "#MON LEAGUE HQ"
-	line "INDIGO PLATEAU"
-
-	para "PS: PROF.OAK,"
-	line "please visit us!"
-	cont "…"
 	done
 
 _GameCornerCoinCaseText::
@@ -494,12 +220,12 @@ _TurnPageText::
 	text "Turn the page?"
 	done
 
-_ViridianSchoolNotebookText5::
+_PokemonSchoolNotebookText5::
 	text "GIRL: Hey! Don't"
 	line "look at my notes!@"
 	text_end
 
-_ViridianSchoolNotebookText1::
+_PokemonSchoolNotebookText1::
 	text "Looked at the"
 	line "notebook!"
 
@@ -518,7 +244,7 @@ _ViridianSchoolNotebookText1::
 	cont "#MON trainers."
 	prompt
 
-_ViridianSchoolNotebookText2::
+_PokemonSchoolNotebookText2::
 	text "Second page…"
 
 	para "A healthy #MON"
@@ -531,7 +257,7 @@ _ViridianSchoolNotebookText2::
 	cont "effective!"
 	prompt
 
-_ViridianSchoolNotebookText3::
+_PokemonSchoolNotebookText3::
 	text "Third page…"
 
 	para "#MON trainers"
@@ -544,7 +270,7 @@ _ViridianSchoolNotebookText3::
 	cont "at #MON GYMs."
 	prompt
 
-_ViridianSchoolNotebookText4::
+_PokemonSchoolNotebookText4::
 	text "Fourth page…"
 
 	para "The goal for"
@@ -559,41 +285,6 @@ _ViridianSchoolNotebookText4::
 	para "The ELITE FOUR of"
 	line "#MON LEAGUE!"
 	prompt
-
-_EnemiesOnEverySideText::
-	text "Enemies on every"
-	line "side!"
-	done
-
-_WhatGoesAroundComesAroundText::
-	text "What goes around"
-	line "comes around!"
-	done
-
-_FightingDojoText::
-	text "FIGHTING DOJO"
-	done
-
-_IndigoPlateauHQText::
-	text "INDIGO PLATEAU"
-	line "#MON LEAGUE HQ"
-	done
-
-_RedBedroomSNESText::
-	text "<PLAYER> is"
-	line "playing the SNES!"
-	cont "…Okay!"
-	cont "It's time to go!"
-	done
-
-_Route15UpstairsBinocularsText::
-	text "Looked into the"
-	line "binoculars…"
-
-	para "A large, shining"
-	line "bird is flying"
-	cont "toward the sea."
-	done
 
 _AerodactylFossilText::
 	text "AERODACTYL Fossil"
@@ -641,19 +332,19 @@ _LinkCableInfoText3::
 	cont "#MON."
 	prompt
 
-_ViridianSchoolBlackboardText1::
+_PokemonSchoolBlackboardText1::
 	text "The blackboard"
 	line "describes #MON"
 	cont "STATUS changes"
 	cont "during battles."
 	prompt
 
-_ViridianSchoolBlackboardText2::
+_PokemonSchoolBlackboardText2::
 	text "Which heading do"
 	line "you want to read?"
 	done
 
-_ViridianBlackboardSleepText::
+_PokemonBlackboardSleepText::
 	text "A #MON can't"
 	line "attack if it's"
 	cont "asleep!"
@@ -666,7 +357,7 @@ _ViridianBlackboardSleepText::
 	line "wake them up!"
 	prompt
 
-_ViridianBlackboardPoisonText::
+_PokemonBlackboardPoisonText::
 	text "When poisoned, a"
 	line "#MON's health"
 	cont "steadily drops."
@@ -678,7 +369,7 @@ _ViridianBlackboardPoisonText::
 	line "to cure poison!"
 	prompt
 
-_ViridianBlackboardPrlzText::
+_PokemonBlackboardPrlzText::
 	text "Paralysis could"
 	line "make #MON"
 	cont "moves misfire!"
@@ -690,7 +381,7 @@ _ViridianBlackboardPrlzText::
 	line "for treatment!"
 	prompt
 
-_ViridianBlackboardBurnText::
+_PokemonBlackboardBurnText::
 	text "A burn reduces"
 	line "power and speed."
 	cont "It also causes"
@@ -703,7 +394,7 @@ _ViridianBlackboardBurnText::
 	line "cure a burn!"
 	prompt
 
-_ViridianBlackboardFrozenText::
+_PokemonBlackboardFrozenText::
 	text "If frozen, a"
 	line "#MON becomes"
 	cont "totally immobile!"
@@ -715,43 +406,6 @@ _ViridianBlackboardFrozenText::
 	para "Use ICE HEAL to"
 	line "thaw out #MON!"
 	prompt
-
-_VermilionGymTrashText::
-	text "Nope, there's"
-	line "only trash here."
-	done
-
-_VermilionGymTrashSuccessText1::
-	text "Hey! There's a"
-	line "switch under the"
-	cont "trash!"
-	cont "Turn it on!"
-
-	para "The 1st electric"
-	line "lock opened!@"
-	text_end
-
-_VermilionGymTrashSuccessText2::
-	text "Hey! There's"
-	line "another switch"
-	cont "under the trash!"
-	cont "Turn it on!"
-	prompt
-
-_VermilionGymTrashSuccessText3::
-	text "The 2nd electric"
-	line "lock opened!"
-
-	para "The motorized door"
-	line "opened!@"
-	text_end
-
-_VermilionGymTrashFailText::
-	text "Nope! There's"
-	line "only trash here."
-	cont "Hey! The electric"
-	cont "locks were reset!@"
-	text_end
 
 _FoundHiddenItemText::
 	text "<PLAYER> found"
@@ -812,6 +466,14 @@ _DiglettSculptureText::
 	line "of DIGLETT."
 	done
 
+_MagazinesText::
+	text "#MON magazines!"
+
+	para "#MON notebooks!"
+
+	para "#MON pictures!"
+	done
+
 _ElevatorText::
 	text "This is an"
 	line "elevator."
@@ -827,8 +489,7 @@ _PokemonStuffText::
 	done
 
 _ItsATVText::
-	text "The TV is turned"
-	line "off."
+	text "It's a TV."
 	done
 
 _MyReflectionText::

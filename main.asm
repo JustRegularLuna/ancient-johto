@@ -138,7 +138,6 @@ SECTION "Hidden Objects 1", ROMX
 
 INCLUDE "engine/menus/oaks_pc.asm"
 INCLUDE "engine/events/hidden_objects/safari_game.asm"
-INCLUDE "engine/events/hidden_objects/magazines.asm"
 
 
 SECTION "Bill's PC", ROMX
@@ -501,7 +500,6 @@ SECTION "Hidden Objects 2", ROMX
 
 INCLUDE "engine/events/prize_menu.asm"
 INCLUDE "engine/events/hidden_objects/school_notebooks.asm"
-INCLUDE "engine/events/hidden_objects/indigo_plateau_hq.asm"
 
 HealthBarPal:
 	ld a, HP_BAR_RED
@@ -618,7 +616,6 @@ INCLUDE "engine/events/starter_dex.asm"
 SECTION "Hidden Objects 3", ROMX
 
 INCLUDE "engine/pokemon/set_types.asm"
-INCLUDE "engine/events/hidden_objects/route_15_binoculars.asm"
 INCLUDE "engine/events/hidden_objects/museum_fossils.asm"
 INCLUDE "engine/events/hidden_objects/school_blackboard.asm"
 
@@ -626,7 +623,6 @@ INCLUDE "engine/events/hidden_objects/school_blackboard.asm"
 SECTION "Hidden Objects 4", ROMX
 
 INCLUDE "engine/events/hidden_objects/gym_statues.asm"
-INCLUDE "engine/events/hidden_objects/blues_room.asm"
 
 
 SECTION "Battle Engine 11", ROMX

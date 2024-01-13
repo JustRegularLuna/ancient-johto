@@ -90,10 +90,10 @@ LinkCableInfoText3:
 	text_far _LinkCableInfoText3
 	text_end
 
-ViridianSchoolBlackboard::
+PokemonSchoolBlackboard::
 	text_asm
 	call SaveScreenTilesToBuffer1
-	ld hl, ViridianSchoolBlackboardText1
+	ld hl, PokemonSchoolBlackboardText1
 	call PrintText
 	xor a
 	ld [wMenuItemOffset], a
@@ -119,7 +119,7 @@ ViridianSchoolBlackboard::
 	hlcoord 6, 2
 	ld de, StatusAilmentText2
 	call PlaceString
-	ld hl, ViridianSchoolBlackboardText2
+	ld hl, PokemonSchoolBlackboardText2
 	call PrintText
 	call HandleMenuInput ; pressing up and down is handled in here
 	bit 1, a ; pressed b
@@ -160,7 +160,7 @@ ViridianSchoolBlackboard::
 	; so print the text
 	ld hl, wd730
 	res 6, [hl]
-	ld hl, ViridianBlackboardStatusPointers
+	ld hl, PokemonBlackboardStatusPointers
 	add a
 	ld d, 0
 	ld e, a
@@ -176,12 +176,12 @@ ViridianSchoolBlackboard::
 	call LoadScreenTilesFromBuffer1
 	jp TextScriptEnd
 
-ViridianSchoolBlackboardText1:
-	text_far _ViridianSchoolBlackboardText1
+PokemonSchoolBlackboardText1:
+	text_far _PokemonSchoolBlackboardText1
 	text_end
 
-ViridianSchoolBlackboardText2:
-	text_far _ViridianSchoolBlackboardText2
+PokemonSchoolBlackboardText2:
+	text_far _PokemonSchoolBlackboardText2
 	text_end
 
 StatusAilmentText1:
@@ -194,31 +194,29 @@ StatusAilmentText2:
 	next " FRZ"
 	next " QUIT@"
 
-	db "@" ; unused
+PokemonBlackboardStatusPointers:
+	dw PokemonBlackboardSleepText
+	dw PokemonBlackboardPoisonText
+	dw PokemonBlackboardPrlzText
+	dw PokemonBlackboardBurnText
+	dw PokemonBlackboardFrozenText
 
-ViridianBlackboardStatusPointers:
-	dw ViridianBlackboardSleepText
-	dw ViridianBlackboardPoisonText
-	dw ViridianBlackboardPrlzText
-	dw ViridianBlackboardBurnText
-	dw ViridianBlackboardFrozenText
-
-ViridianBlackboardSleepText:
-	text_far _ViridianBlackboardSleepText
+PokemonBlackboardSleepText:
+	text_far _PokemonBlackboardSleepText
 	text_end
 
-ViridianBlackboardPoisonText:
-	text_far _ViridianBlackboardPoisonText
+PokemonBlackboardPoisonText:
+	text_far _PokemonBlackboardPoisonText
 	text_end
 
-ViridianBlackboardPrlzText:
-	text_far _ViridianBlackboardPrlzText
+PokemonBlackboardPrlzText:
+	text_far _PokemonBlackboardPrlzText
 	text_end
 
-ViridianBlackboardBurnText:
-	text_far _ViridianBlackboardBurnText
+PokemonBlackboardBurnText:
+	text_far _PokemonBlackboardBurnText
 	text_end
 
-ViridianBlackboardFrozenText:
-	text_far _ViridianBlackboardFrozenText
+PokemonBlackboardFrozenText:
+	text_far _PokemonBlackboardFrozenText
 	text_end
