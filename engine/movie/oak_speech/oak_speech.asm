@@ -86,8 +86,8 @@ ENDC
 	ldh [hTileAnimations], a
 	ld a, PAL_MEWMON
 	call GotPaletteID
-	ld de, ProfOakPic
-	lb bc, BANK(ProfOakPic), $00
+	ld de, ProfElmPic
+	lb bc, BANK(ProfElmPic), $00
 	call IntroDisplayPicCenteredOrUpperRight
 	call FadeInIntroPic
 	ld hl, OakSpeechText1

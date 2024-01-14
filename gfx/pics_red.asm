@@ -552,7 +552,7 @@ GhostPic::            INCBIN "gfx/pokemon/other/ghost.pic"
 SECTION "Trainer Pics 1", ROMX
 
 TrainerPics::
-ProfOakPic::           INCBIN "gfx/trainers/prof.oak.pic" ; PROF_OAK
+ProfElmPic::           INCBIN "gfx/trainers/prof.elm.pic" ; PROF_ELM
 Rival1Pic::            INCBIN "gfx/trainers/rival1.pic" ; RIVAL1
 Rival2Pic::            INCBIN "gfx/trainers/rival2.pic" ; RIVAL2
 FalknerPic::           INCBIN "gfx/trainers/falkner.pic" ; FALKNER

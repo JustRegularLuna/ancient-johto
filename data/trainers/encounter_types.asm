@@ -1,6 +1,6 @@
 TrainerEncounterMusicTable::
 	table_width 1, TrainerEncounterMusicTable
-	db MUSIC_HIKER_ENCOUNTER       ; PROF_OAK
+	db MUSIC_HIKER_ENCOUNTER       ; PROF_ELM
 	db MUSIC_RIVAL_ENCOUNTER       ; RIVAL1
 	db MUSIC_RIVAL_ENCOUNTER       ; RIVAL2
 	db MUSIC_YOUNGSTER_ENCOUNTER   ; FALKNER

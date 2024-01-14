@@ -7,7 +7,7 @@ TrainerPicAndMoneyPointers::
 	table_width 6, TrainerPicAndMoneyPointers
 	; pic pointer, base reward money
 	; money received after battle = base money × level of highest-level enemy mon
-	pic_money ProfOakPic,      1500 ; PROF_OAK
+	pic_money ProfElmPic,      1500 ; PROF_ELM
 	pic_money Rival1Pic,       1500 ; RIVAL1
 	pic_money Rival2Pic,       1500 ; RIVAL2
 	pic_money FalknerPic,      1500 ; FALKNER

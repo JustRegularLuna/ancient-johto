@@ -4,7 +4,7 @@ TrainerAIPointers:
 	; first byte, number of times (per Pokémon) it can occur
 	; next two bytes, pointer to AI subroutine for trainer class
 	; subroutines are defined in engine/battle/trainer_ai.asm
-	dbw 3, GenericAI      ;  PROF_OAK
+	dbw 3, GenericAI      ;  PROF_ELM
 	dbw 3, GenericAI      ;  RIVAL1
 	dbw 3, GenericAI      ;  RIVAL2
 	dbw 3, GenericAI      ;  FALKNER

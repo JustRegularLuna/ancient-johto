@@ -2,7 +2,7 @@ TrainerClassDVs:
 ; entries correspond to trainer classes (see constants/trainer_constants.asm)
 	table_width 2, TrainerClassDVs
 	;  atk,def,spd,spc
-	dn  9,  8,  8,  8 ; PROF_OAK
+	dn  9,  8,  8,  8 ; PROF_ELM
 	dn 13, 13, 13, 13 ; RIVAL1
 	dn 13, 13, 13, 13 ; RIVAL2
 	dn  9, 10,  7,  7 ; FALKNER

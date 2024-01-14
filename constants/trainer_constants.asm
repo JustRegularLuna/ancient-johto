@@ -18,8 +18,8 @@ ENDM
 
 	trainerclass TRAINER_NONE ; 0
 
-	trainerclass PROF_OAK
-	const OAK1
+	trainerclass PROF_ELM
+	const ELM1
 
 	trainerclass RIVAL1
 	const RIVAL1_1_TOTODILE

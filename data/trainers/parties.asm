@@ -1,6 +1,6 @@
 TrainerDataPointers:
 	table_width 2, TrainerDataPointers
-	dw ProfOakData      ; PROF_OAK
+	dw ProfElmData      ; PROF_ELM
 	dw Rival1Data       ; RIVAL1
 	dw Rival2Data       ; RIVAL2
 	dw FalknerData      ; FALKNER
@@ -85,14 +85,12 @@ TrainerDataPointers:
 ;    * for TRAINERTYPE_MOVES:   db level, species, 4 moves
 ; - db -1 ; end
 
-ProfOakData:      ; PROF_OAK
-; 01 - (placeholder) unused Gen 1 party
-	db "OAK@", TRAINERTYPE_NORMAL
-	db 66, TAUROS
-	db 67, EXEGGUTOR
-	db 68, ARCANINE
-	db 69, VENUSAUR
-	db 70, GYARADOS
+ProfElmData:      ; PROF_ELM
+; 01 - (placeholder)
+	db "ELM@", TRAINERTYPE_NORMAL
+	db 66, MEGANIUM
+	db 66, FERALIGATR
+	db 66, TYPHLOSION
 	db -1 ; end
 
 Rival1Data:       ; RIVAL1

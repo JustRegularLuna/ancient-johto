@@ -1363,9 +1363,9 @@ _OakSpeechText1::
 	para "Welcome to the"
 	line "world of #MON!"
 
-	para "My name is OAK,"
-	line "I'm a professor"
-	cont "from KANTO."
+	para "My name is ELM,"
+	line "I'm a #MON"
+	cont "professor!"
 	prompt
 
 _OakSpeechText2A::
@@ -1379,20 +1379,18 @@ _OakSpeechText2A::
 _OakSpeechText2B::
 	text_start
 
-	para "People and #MON"
-	line "live together by"
-	cont "supporting each"
-	cont "other."
+	para "Some #MON are"
+	line "well-known, but"
+	cont "there are still"
+	cont "many left to be"
+	cont "discovered."
 
-	para "For some people,"
-	line "#MON are pets."
-	cont "Others use them"
-	cont "for battles."
+	para "That's why I study"
+	line "#MON and the"
+	cont "way they evolve!"
 
-	para "Myself…"
-
-	para "I study #MON"
-	line "as a profession."
+	para "There is still so"
+	line "much to learn."
 	prompt
 
 _IntroducePlayerText::
