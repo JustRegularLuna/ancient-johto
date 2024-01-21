@@ -20,7 +20,7 @@ While this was a passion project, I couldn't have done it all on my own. Several
 * Tommo for the battle sprites for the female Rocket grunts, and Red.
 * Kabocha for the Rei sprite.
 * Myself (Luna) for editing the shading on a few Gen 2 battle sprites to better match the Gen 1/SW97 SGB aesthetic.
-* Rangi42, Jace, and BloodlessNS for the Prof. Elm sprite in the intro.
+* Jace and Myself (Luna) for the Prof. Elm sprite in the intro. (combination of Jace's Gen 2 sprite and the Gen 1 Oak sprite, with edits by both)
 
 
 ## Content
