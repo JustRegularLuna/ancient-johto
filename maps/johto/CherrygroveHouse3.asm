@@ -53,9 +53,17 @@ CherrygroveHouse3GrannyText:
 	done
 
 CherrygroveHouse3HoundourText:
-	text "Houn!"
-	done
+	text "HOUNDOUR: Houn!@"
+	text_asm
+	ld a, HOUNDOUR
+	call PlayCry
+	call WaitForSoundToFinish
+	jp TextScriptEnd
 
 CherrygroveHouse3PikachuText:
-	text "Pikapi!"
-	done
+	text "PIKACHU: Pikapi!@"
+	text_asm
+	ld a, PIKACHU
+	call PlayCry
+	call WaitForSoundToFinish
+	jp TextScriptEnd

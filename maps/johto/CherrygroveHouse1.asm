@@ -38,5 +38,9 @@ CherrygroveHouse1TeacherText:
 	done
 
 CherrygroveHouse1EeveeText:
-	text "EEVEE: Ouii!"
-	done
+	text "EEVEE: Ouii!@"
+	text_asm
+	ld a, EEVEE
+	call PlayCry
+	call WaitForSoundToFinish
+	jp TextScriptEnd

@@ -96,8 +96,12 @@ Route30BerryHouseText1:
 	done
 
 Route30BerryHousePokemonText:
-	text "GEODUDE: GEOOOO!"
-	done
+	text "GEODUDE: GEOOOO!@"
+	text_asm
+	ld a, GEODUDE
+	call PlayCry
+	call WaitForSoundToFinish
+	jp TextScriptEnd
 
 Route30BerryHouseTVText:
 	text_asm
