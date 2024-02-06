@@ -19,9 +19,7 @@ wChannel2:: channel_struct wChannel2
 wChannel3:: channel_struct wChannel3
 wChannel4:: channel_struct wChannel4
 
-; hacky workaround for GSC tileset anims
-; Without this check, it crashes on the main menu if you have a saved game...
-wInOverworld:: db
+	ds 1
 
 wCurTrackDuty:: db
 wCurTrackVolumeEnvelope:: db

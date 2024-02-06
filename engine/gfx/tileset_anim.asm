@@ -32,11 +32,11 @@ _UpdateMovingBgTiles::
 ; Handle animated tiles in the overworld.
 ; Increment [hTileAnimFrame] and run that frame's function
 ; from the array pointed to by wTilesetAnim.
-	ld a, [wInOverworld]
-	and a
-	ret z
-
 	ld a, [wCurMapTileset]
+	; for some reason, reading the sav file in main menu temporarily sets bit 7 here...
+	bit 7, a
+	ret nz
+
 	ld c, a
 	ld b, 0
 	ld hl, TilesetAnimPointers
