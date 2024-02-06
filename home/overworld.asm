@@ -46,6 +46,8 @@ OverworldLoop::
 	call DelayFrame
 OverworldLoopLessDelay::
 	call DelayFrame
+	ld a, TRUE
+	ld [wInOverworld], a
 	call LoadGBPal
 	ld a, [wd736]
 	bit 6, a ; jumping down a ledge?
