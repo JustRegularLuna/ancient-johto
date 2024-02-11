@@ -706,6 +706,11 @@ DoBallTossSpecialEffects:
 	ret
 
 DoBallShakeSpecialEffects:
+; skip this for breaking out with no shakes
+	ld a, [wNumShakes]
+	and a
+	ret z
+
 	ld a, [wSubAnimCounter]
 	cp 4 ; is it the beginning of a shake?
 	jr nz, .skipPlayingSound

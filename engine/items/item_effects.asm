@@ -450,7 +450,7 @@ ItemUseBall:
 ; 70 ≤ Z:      3 shakes
 	ldh a, [hQuotient + 3]
 	cp 10
-	ld b, $20
+	ld b, $60
 	jr c, .setAnimData
 	cp 30
 	ld b, $61
@@ -490,8 +490,8 @@ ItemUseBall:
 	cp $10
 	ld hl, ItemUseBallText00
 	jp z, .printMessage
-	cp $20
-	ld hl, ItemUseBallText01
+	cp $60
+	ld hl, ItemUseBallText02
 	jp z, .printMessage
 	cp $61
 	ld hl, ItemUseBallText02
