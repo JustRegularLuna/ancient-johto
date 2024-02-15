@@ -1,6 +1,8 @@
 ShowMarillTextScreens::
 ; Displays the welcome screen with difficulty and version number info
 ; Start by clearing and turning off the screen
+	xor a
+	ldh [hTileAnimations], a
 	call ClearScreen
 	call DisableLCD
 ; load the graphics for the screen
