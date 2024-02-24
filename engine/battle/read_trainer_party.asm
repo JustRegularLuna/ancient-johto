@@ -15,10 +15,10 @@ ReadTrainer:
 ; get the pointer to trainer data for this class
 	ld a, [wTrainerClass]
 	dec a
-	add a
 	ld hl, TrainerDataPointers
 	ld c, a
 	ld b, 0
+	add hl, bc
 	add hl, bc ; hl points to trainer class
 	ld a, [hli]
 	ld h, [hl]
