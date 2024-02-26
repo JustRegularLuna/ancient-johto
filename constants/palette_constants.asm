@@ -72,6 +72,7 @@ SET_PAL_DEFAULT EQU $ff
 	const PAL_PINKMON   ; $17
 	const PAL_YELLOWMON ; $18
 	const PAL_GREYMON   ; $19
+	const PAL_TEALMON
 	const PAL_SLOTS1    ; $1A
 	const PAL_SLOTS2    ; $1B
 	const PAL_SLOTS3    ; $1C
