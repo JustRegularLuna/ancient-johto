@@ -31,3 +31,4 @@ TextPredefs::
 	add_tx_pre PokemonStuffText
 	add_tx_pre ItsATVText
 	add_tx_pre MyReflectionText
+	add_tx_pre IncenseBurnerText

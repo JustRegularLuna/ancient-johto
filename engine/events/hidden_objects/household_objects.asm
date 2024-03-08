@@ -5,3 +5,7 @@ ItsATVText::
 MyReflectionText::
 	text_far _MyReflectionText
 	text_end
+
+IncenseBurnerText::
+	text_far _IncenseBurnerText
+	text_end

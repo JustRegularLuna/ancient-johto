@@ -146,3 +146,15 @@ SECTION "Traditional House Tileset", ROMX
 
 TraditionalHouse_GFX::   INCBIN "gfx/tilesets/traditional_house.2bpp"
 TraditionalHouse_Block:: INCBIN "gfx/blocksets/traditional_house.bst"
+
+
+SECTION "Elite Four Room Tileset", ROMX
+
+EliteFourRoom_GFX::   INCBIN "gfx/tilesets/elite_four_room.2bpp"
+EliteFourRoom_Block:: INCBIN "gfx/blocksets/elite_four_room.bst"
+
+
+SECTION "Tower Tileset", ROMX
+
+Tower_GFX::           INCBIN "gfx/tilesets/tower.2bpp"
+Tower_Block::         INCBIN "gfx/blocksets/tower.bst"

@@ -497,6 +497,13 @@ _MyReflectionText::
 	line "Lookin' good!"
 	done
 
+_IncenseBurnerText::
+	text "What's this?"
+
+	para "Oh! It's an"
+	line "incense burner!"
+	done
+
 _OutOfSafariBallsText::
 	text "PA: Ding-dong!"
 

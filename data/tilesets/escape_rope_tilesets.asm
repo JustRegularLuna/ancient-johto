@@ -5,4 +5,5 @@ EscapeRopeTilesets:
 	db FACILITY
 	db INTERIOR
 	db JOHTO_CAVE
+	db TOWER
 	db -1 ; end

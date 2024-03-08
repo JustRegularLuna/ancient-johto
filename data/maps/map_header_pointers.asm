@@ -260,9 +260,13 @@ JohtoMapHeaderPointers::
 	table_width 2, JohtoMapHeaderPointers
 	dw NewBarkTown_h
 	dw CherrygroveCity_h
+	dw VioletCity_h
+	dw RuinsOfAlphOutside_h
 	dw Route29_h
 	dw Route30_h
 	dw Route31_h
+	dw Route32_h
+	dw Route36_h
 	dw JohtoRoute27_h
 	dw PlayersHouse1F_h
 	dw PlayersHouse2F_h
@@ -276,4 +280,18 @@ JohtoMapHeaderPointers::
 	dw CherrygroveHouse3_h
 	dw Route30BerryHouse_h
 	dw MrPokemonsHouse_h
+	dw Route31Gate_h
+	dw VioletPokecenter_h
+	dw VioletMart_h
+	dw VioletSchoolHouse_h
+	dw VioletTradeHouse_h
+	dw VioletHouse2_h
+	dw VioletGym_h
+	dw SproutTower1F_h
+	dw SproutTower2F_h
+	dw SproutTower3F_h
+	dw RuinsOfAlphEastGate_h
+	dw RuinsOfAlphNorthGate_h
+	dw RuinsOfAlphNorthGate2F_h
+	dw RuinsOfAlphLab_h
 	assert_table_length NUM_JOHTO_MAPS

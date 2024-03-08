@@ -146,6 +146,8 @@ SetPal_Overworld:
 	jr z, .caveOrBruno
 	cp JOHTO_CAVE
 	jr z, .johtoCave
+	cp GATE
+	jr z, .gate
 	ld a, [wCurRegion]
 	and a ; Kanto or Johto?
 	jr nz, .johtoChecks
@@ -176,7 +178,7 @@ SetPal_Overworld:
 .johtoNormalDungeonOrBuilding
 	ld a, [wLastMap]
 .johtoTownOrRoute
-	cp FIRST_JOHTO_ROUTE_MAP
+	cp NUM_JOHTO_CITY_MAPS
 	jr c, .johtoTown
 	ld a, PAL_ROUTE - 1
 	jr .town
@@ -202,6 +204,9 @@ SetPal_Overworld:
 	jr .town
 .johtoCave
 	ld a, PAL_PEWTER - 1
+	jr .town
+.gate
+	ld a, PAL_ROUTE - 1
 	jr .town
 
 ; used when a Pokemon is the only thing on the screen

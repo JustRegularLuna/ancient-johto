@@ -25,6 +25,8 @@ TilesetAnimPointers::
 	dw TilesetAnimJohto         ; JOHTO
 	dw TilesetAnimJohtoCave     ; JOHTO_CAVE
 	dw TilesetAnimNone          ; TRADITIONAL_HOUSE
+	dw TilesetEliteFourRoomAnim ; ELITE_FOUR_ROOM
+	dw TilesetTowerAnim         ; TOWER
 	assert_table_length NUM_TILESETS
 
 

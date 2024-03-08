@@ -57,5 +57,10 @@ JohtoTownMapOrder:
 	db CHERRYGROVE_CITY
 	db ROUTE_30
 	db ROUTE_31
+	db VIOLET_CITY
+	db SPROUT_TOWER_1F
+	db ROUTE_32
+	db RUINS_OF_ALPH_OUTSIDE
+	db ROUTE_36
 	db JOHTO_ROUTE_27
 JohtoTownMapOrderEnd:

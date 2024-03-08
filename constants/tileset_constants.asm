@@ -26,4 +26,6 @@
 	const JOHTO
 	const JOHTO_CAVE
 	const TRADITIONAL_HOUSE
+	const ELITE_FOUR_ROOM
+	const TOWER
 NUM_TILESETS EQU const_value

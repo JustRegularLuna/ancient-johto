@@ -97,6 +97,7 @@
 	const SPRITE_SEEL
 	const SPRITE_LAPRAS
 	const SPRITE_SURFING_PIKACHU
+	const SPRITE_SUDOWOODO
 
 FIRST_STILL_SPRITE EQU const_value
 	const SPRITE_POKE_BALL
@@ -160,7 +161,7 @@ NUM_SPRITES EQU const_value - 1
 ; wVarSprites indexes (see wram.asm)
 	const_next $f0
 SPRITE_VARS EQU const_value
-	const VAR_SPRITE_1 ; f0
+	const SPRITE_WEIRD_TREE ; f0
 	const VAR_SPRITE_2 ; f1
 	const VAR_SPRITE_3 ; f2
 	const VAR_SPRITE_4 ; f3

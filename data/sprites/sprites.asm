@@ -103,6 +103,7 @@ SpriteSheetPointerTable:
 	overworld_sprite SpriteSeel, 12 ; SPRITE_SEEL
 	overworld_sprite SpriteLapras, 12 ; SPRITE_LAPRAS
 	overworld_sprite SpriteSurfingPikachu, 12 ; SPRITE_SURFING_PIKACHU
+	overworld_sprite SpriteSudowoodo, 12 ; SPRITE_SUDOWOODO
 	; still sprites
 	overworld_sprite SpritePokeBall, 4 ; SPRITE_POKE_BALL
 	overworld_sprite SpriteBook, 4 ; SPRITE_BOOK

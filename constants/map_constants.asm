@@ -286,11 +286,15 @@ DEF JOHTO_REGION EQU 1
 	const_def
 	map_const NEW_BARK_TOWN,                 10,  9
 	map_const CHERRYGROVE_CITY,              20,  9
+	map_const VIOLET_CITY,                   20, 18
 DEF NUM_JOHTO_CITY_MAPS EQU const_value
+	map_const RUINS_OF_ALPH_OUTSIDE,         10, 18
 DEF FIRST_JOHTO_ROUTE_MAP EQU const_value
 	map_const ROUTE_29,                      30,  9
 	map_const ROUTE_30,                      10, 27
 	map_const ROUTE_31,                      20,  9
+	map_const ROUTE_32,                      10, 45
+	map_const ROUTE_36,                      30,  9
 	map_const JOHTO_ROUTE_27,                40,  9
 DEF FIRST_JOHTO_INDOOR_MAP EQU const_value
 	map_const PLAYERS_HOUSE_1F,               5,  4
@@ -305,4 +309,18 @@ DEF FIRST_JOHTO_INDOOR_MAP EQU const_value
 	map_const CHERRYGROVE_HOUSE_3,            4,  4
 	map_const ROUTE_30_BERRY_HOUSE,           4,  4
 	map_const MR_POKEMONS_HOUSE,              4,  4
+	map_const ROUTE_31_GATE,                  5,  4
+	map_const VIOLET_POKECENTER,              5, 10
+	map_const VIOLET_MART,                    6,  4
+	map_const VIOLET_SCHOOL_HOUSE,            4,  8
+	map_const VIOLET_TRADE_HOUSE,             4,  4
+	map_const VIOLET_HOUSE_2,                 4,  4
+	map_const VIOLET_GYM,                     5,  8
+	map_const SPROUT_TOWER_1F,                8,  8
+	map_const SPROUT_TOWER_2F,                8,  8
+	map_const SPROUT_TOWER_3F,                8,  8
+	map_const RUINS_OF_ALPH_EAST_GATE,        5,  4
+	map_const RUINS_OF_ALPH_NORTH_GATE,       5,  4
+	map_const RUINS_OF_ALPH_NORTH_GATE_2F,    4,  4
+	map_const RUINS_OF_ALPH_LAB,              4,  4
 DEF NUM_JOHTO_MAPS EQU const_value

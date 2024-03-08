@@ -15,4 +15,6 @@ DungeonTilesets:
 	db POKECENTER
 	db MART
 	db TRADITIONAL_HOUSE
+	db ELITE_FOUR_ROOM
+	db TOWER
 	db -1 ; end

@@ -34,4 +34,5 @@ BookshelfTileIDs:
 	bookshelf_tile TRADITIONAL_HOUSE, $18, BookOrSculptureText
 	bookshelf_tile TRADITIONAL_HOUSE, $31, PokemonStuffText
 	bookshelf_tile TRADITIONAL_HOUSE, $37, PokemonStuffText
+	bookshelf_tile TRADITIONAL_HOUSE, $52, IncenseBurnerText
 	db -1 ; end

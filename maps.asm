@@ -1006,6 +1006,17 @@ INCLUDE "data/maps/headers/Route31.asm"
 INCLUDE "maps/johto/Route31.asm"
 Route31_Blocks: INCBIN "maps/johto/Route31.blk"
 
+INCLUDE "data/maps/headers/VioletCity.asm"
+INCLUDE "maps/johto/VioletCity.asm"
+VioletCity_Blocks: INCBIN "maps/johto/VioletCity.blk"
+
+INCLUDE "data/maps/headers/Route32.asm"
+INCLUDE "maps/johto/Route32.asm"
+Route32_Blocks: INCBIN "maps/johto/Route32.blk"
+
+INCLUDE "data/maps/headers/Route36.asm"
+INCLUDE "maps/johto/Route36.asm"
+Route36_Blocks: INCBIN "maps/johto/Route36.blk"
 
 
 SECTION "Johto Maps 1", ROMX
@@ -1026,6 +1037,13 @@ INCLUDE "data/maps/headers/MrPokemonsHouse.asm"
 INCLUDE "maps/johto/MrPokemonsHouse.asm"
 MrPokemonsHouse_Blocks: INCBIN "maps/johto/MrPokemonsHouse.blk"
 
+INCLUDE "data/maps/headers/VioletSchoolHouse.asm"
+INCLUDE "maps/johto/VioletSchoolHouse.asm"
+VioletSchoolHouse_Blocks: INCBIN "maps/johto/VioletSchoolHouse.blk"
+
+INCLUDE "data/maps/headers/VioletGym.asm"
+INCLUDE "maps/johto/VioletGym.asm"
+VioletGym_Blocks: INCBIN "maps/johto/VioletGym.blk"
 
 
 SECTION "Johto Generic Houses 1", ROMX
@@ -1057,6 +1075,18 @@ Route30BerryHouse_Blocks:
 	INCBIN "maps/johto/NewBarkHouse1.blk"
 
 
+SECTION "Johto Traditional Houses", ROMX
+
+INCLUDE "data/maps/headers/VioletTradeHouse.asm"
+INCLUDE "maps/johto/VioletTradeHouse.asm"
+
+INCLUDE "data/maps/headers/VioletHouse2.asm"
+INCLUDE "maps/johto/VioletHouse2.asm"
+
+VioletTradeHouse_Blocks:
+VioletHouse2_Blocks:
+	INCBIN "maps/johto/VioletTradeHouse.blk"
+
 
 SECTION "Route 27", ROMX
 ; Johto and Kanto each have a Route 27 map, that reuse the same blk
@@ -1083,7 +1113,11 @@ SECTION "Johto Pokecenters", ROMX
 INCLUDE "data/maps/headers/CherrygrovePokecenter.asm"
 INCLUDE "maps/johto/CherrygrovePokecenter.asm"
 
+INCLUDE "data/maps/headers/VioletPokecenter.asm"
+INCLUDE "maps/johto/VioletPokecenter.asm"
+
 CherrygrovePokecenter_Blocks:
+VioletPokecenter_Blocks:
 	INCBIN "maps/johto/CherrygrovePokecenter.blk"
 
 
@@ -1093,5 +1127,56 @@ SECTION "Johto Marts", ROMX
 INCLUDE "data/maps/headers/CherrygroveMart.asm"
 INCLUDE "maps/johto/CherrygroveMart.asm"
 
+INCLUDE "data/maps/headers/VioletMart.asm"
+INCLUDE "maps/johto/VioletMart.asm"
+
 CherrygroveMart_Blocks:
+VioletMart_Blocks:
 	INCBIN "maps/johto/CherrygroveMart.blk"
+
+
+SECTION "Johto Gates", ROMX
+
+INCLUDE "data/maps/headers/Route31Gate.asm"
+INCLUDE "maps/johto/Route31Gate.asm"
+
+INCLUDE "data/maps/headers/RuinsOfAlphEastGate.asm"
+INCLUDE "maps/johto/RuinsOfAlphEastGate.asm"
+
+Route31Gate_Blocks:
+RuinsOfAlphEastGate_Blocks:
+	INCBIN "maps/johto/Route31Gate.blk"
+
+
+SECTION "Sprout Tower", ROMX
+
+INCLUDE "data/maps/headers/SproutTower1F.asm"
+INCLUDE "maps/johto/SproutTower1F.asm"
+SproutTower1F_Blocks: INCBIN "maps/johto/SproutTower1F.blk"
+
+INCLUDE "data/maps/headers/SproutTower2F.asm"
+INCLUDE "maps/johto/SproutTower2F.asm"
+SproutTower2F_Blocks: INCBIN "maps/johto/SproutTower2F.blk"
+
+INCLUDE "data/maps/headers/SproutTower3F.asm"
+INCLUDE "maps/johto/SproutTower3F.asm"
+SproutTower3F_Blocks: INCBIN "maps/johto/SproutTower3F.blk"
+
+
+SECTION "Ruins of Alph", ROMX
+
+INCLUDE "data/maps/headers/RuinsOfAlphOutside.asm"
+INCLUDE "maps/johto/RuinsOfAlphOutside.asm"
+RuinsOfAlphOutside_Blocks: INCBIN "maps/johto/RuinsOfAlphOutside.blk"
+
+INCLUDE "data/maps/headers/RuinsOfAlphNorthGate.asm"
+INCLUDE "maps/johto/RuinsOfAlphNorthGate.asm"
+RuinsOfAlphNorthGate_Blocks: INCBIN "maps/johto/RuinsOfAlphNorthGate.blk"
+
+INCLUDE "data/maps/headers/RuinsOfAlphNorthGate2F.asm"
+INCLUDE "maps/johto/RuinsOfAlphNorthGate2F.asm"
+RuinsOfAlphNorthGate2F_Blocks: INCBIN "maps/johto/RuinsOfAlphNorthGate2F.blk"
+
+INCLUDE "data/maps/headers/RuinsOfAlphLab.asm"
+INCLUDE "maps/johto/RuinsOfAlphLab.asm"
+RuinsOfAlphLab_Blocks: INCBIN "maps/johto/RuinsOfAlphLab.blk"

@@ -258,9 +258,13 @@ JohtoWildDataPointers:
 	table_width 2, JohtoWildDataPointers
 	dw NoMons      ; NEW_BARK_TOWN
 	dw NoMons      ; CHERRYGROVE_CITY
+	dw NoMons      ; VIOLET_CITY
+	dw NoMons      ; RUINS_OF_ALPH_OUTSIDE
 	dw Route29Mons ; ROUTE_29
 	dw Route30Mons ; ROUTE_30
 	dw Route31Mons ; ROUTE_31
+	dw NoMons      ; ROUTE_32
+	dw NoMons      ; ROUTE_36
 	dw NoMons      ; JOHTO_ROUTE_27
 	dw NoMons      ; PLAYERS_HOUSE_1F
 	dw NoMons      ; PLAYERS_HOUSE_2F
@@ -274,6 +278,20 @@ JohtoWildDataPointers:
 	dw NoMons      ; CHERRYGROVE_HOUSE_3
 	dw NoMons      ; ROUTE_30_BERRY_HOUSE
 	dw NoMons      ; MR_POKEMONS_HOUSE
+	dw NoMons      ; ROUTE_31_GATE
+	dw NoMons      ; VIOLET_POKECENTER
+	dw NoMons      ; VIOLET_MART
+	dw NoMons      ; VIOLET_SCHOOL_HOUSE
+	dw NoMons      ; VIOLET_TRADE_HOUSE
+	dw NoMons      ; VIOLET_HOUSE_2
+	dw NoMons      ; VIOLET_GYM
+	dw NoMons      ; SPROUT_TOWER_1F
+	dw NoMons      ; SPROUT_TOWER_2F
+	dw NoMons      ; SPROUT_TOWER_3F
+	dw NoMons      ; RUINS_OF_ALPH_EAST_GATE
+	dw NoMons      ; RUINS_OF_ALPH_NORTH_GATE
+	dw NoMons      ; RUINS_OF_ALPH_NORTH_GATE_2F
+	dw NoMons      ; RUINS_OF_ALPH_LAB
 	assert_table_length NUM_JOHTO_MAPS
 	dw -1 ; end
 

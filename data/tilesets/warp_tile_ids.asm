@@ -25,6 +25,8 @@ WarpTileIDPointers:
 	dw .JohtoWarpTileIDs
 	dw .JohtoCaveWarpTileIDs
 	dw .TraditionalHouseWarpTileIDs
+	dw .EliteFourRoomWarpTileIDs
+	dw .TowerWarpTileIDs
 	assert_table_length NUM_TILESETS
 
 MACRO warp_tiles
@@ -63,7 +65,7 @@ ENDM
 	warp_tiles $4A
 
 .HouseWarpTileIDs:
-	warp_tiles $54, $5C, $32
+	warp_tiles $54, $32
 
 .ShipWarpTileIDs:
 	warp_tiles $37, $39, $1E, $4A
@@ -107,5 +109,11 @@ ENDM
 .JohtoCaveWarpTileIDs:
 	warp_tiles $1E, $30, $32, $38, $3A
 
-.TraditionalHouseWarpTileIDs
+.TraditionalHouseWarpTileIDs:
 	warp_tiles $5C
+
+.EliteFourRoomWarpTileIDs:
+	warp_tiles $0F, $3C, $42, $4A
+
+.TowerWarpTileIDs:
+	warp_tiles $01, $10, $1C, $1E, $54

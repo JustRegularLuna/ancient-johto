@@ -31,7 +31,7 @@ Forest_Coll::
 	coll_tiles $1e, $20, $2e, $30, $34, $37, $39, $3a, $40, $51, $52, $5a, $5c, $5e, $5f
 
 House_Coll::
-	coll_tiles $01, $12, $14, $28, $32, $37, $44, $54, $5c
+	coll_tiles $01, $12, $14, $32, $54
 
 Museum_Coll::
 	coll_tiles $01, $12, $14, $1a, $1c, $37, $38, $3b, $3c, $5e
@@ -80,3 +80,9 @@ JohtoCave_Coll::
 
 TraditionalHouse_Coll::
 	coll_tiles $01, $12, $14, $50, $54, $55, $5F
+
+EliteFourRoom_Coll::
+	coll_tiles $01, $03, $0F, $14, $15, $1E, $1F, $28, $3C, $42, $46, $4A, $52, $53, $54
+
+Tower_Coll::
+	coll_tiles $01, $02, $10, $17, $18, $1C, $1E, $54

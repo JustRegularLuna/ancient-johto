@@ -25,6 +25,8 @@ DungeonMaps2:
 	; SILPH_CO_[2-8]F, POKEMON_MANSION[2F-B1F], SAFARI_ZONE, and
 	; CERULEAN_CAVE maps, except for SILPH_CO_1F
 	db SILPH_CO_2F, CERULEAN_CAVE_1F
+	; SPROUT_TOWER maps
+	db SPROUT_TOWER_1F, SPROUT_TOWER_3F
 	db -1 ; end
 
 JohtoDungeonMaps1:

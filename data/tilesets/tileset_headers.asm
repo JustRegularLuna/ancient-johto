@@ -36,4 +36,6 @@ Tilesets:
 	tileset Johto_Block,            Johto_GFX,            Johto_Coll,            $FF,$FF,$FF, $04, TILEANIM_LIST
 	tileset JohtoCave_Block,        JohtoCave_GFX,        JohtoCave_Coll,        $FF,$FF,$FF, $FF, TILEANIM_LIST
 	tileset TraditionalHouse_Block, TraditionalHouse_GFX, TraditionalHouse_Coll, $42,$FF,$FF, $FF, TILEANIM_NONE
+	tileset EliteFourRoom_Block,    EliteFourRoom_GFX,    EliteFourRoom_Coll,    $FF,$FF,$FF, $FF, TILEANIM_LIST
+	tileset Tower_Block,            Tower_GFX,            Tower_Coll,            $FF,$FF,$FF, $FF, TILEANIM_LIST
 	assert_table_length NUM_TILESETS

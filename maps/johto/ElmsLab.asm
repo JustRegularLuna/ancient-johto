@@ -481,21 +481,27 @@ ElmsLabAideScript:
 	para "That didn't turn"
 	line "out to be true."
 
-	para "One was an old"
-	line "man who didn't"
+	para "One time, it was"
+	line "just a case of a"
 
-	para "understand how"
-	line "trading worked."
+	para "strangely colored"
+	line "RAICHU, and a man"
 
-	para "The other, though…"
+	para "who didn't quite"
+	line "understand how"
+	cont "trading worked…"
 
-	para "That turned out"
-	line "to be a new, but"
+	para "The other one did"
+	line "look like a blue"
 
-	para "unrelated, kind"
-	line "of #MON!"
+	para "PIKACHU relative,"
+	line "but it turned out"
 
-	para "So you never know!"
+	para "to be a new, un-"
+	line "related kind of"
+
+	para "#MON. So you"
+	line "never know!"
 	done
 
 ElmsLabBinText:
@@ -538,8 +544,8 @@ ElmsLabEnterLabText:
 	line "to choose from."
 
 	para "They're all rare"
-	line "#MON that we"
-	cont "just found."
+	line "#MON that were"
+	cont "just discovered!"
 
 	para "Choose whichever"
 	line "one you like!"

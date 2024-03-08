@@ -123,3 +123,4 @@ SpriteGamblerAsleep::    INCBIN "gfx/sprites/gambler_asleep.2bpp" ; SPRITE_GAMBL
 SpriteBenchGuy::         INCBIN "gfx/sprites/bench_guy.2bpp" ; SPRITE_BENCH_GUY
 SpriteBenchLass::        INCBIN "gfx/sprites/bench_lass.2bpp" ; SPRITE_BENCH_LASS
 SpriteBenchCooltrainer:: INCBIN "gfx/sprites/bench_cooltrainer.2bpp" ; SPRITE_BENCH_COOLTRAINER
+SpriteSudowoodo::        INCBIN "gfx/sprites/sudowoodo.2bpp" ; SPRITE_SUDOWOODO

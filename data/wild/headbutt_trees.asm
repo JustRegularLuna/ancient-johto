@@ -47,9 +47,13 @@ JohtoTreeMonPointerTable:
 	table_width 2, JohtoTreeMonPointerTable
 	dw TreeMons1 ; NEW_BARK_TOWN
 	dw TreeMons1 ; CHERRYGROVE_CITY
+	dw TreeMons1 ; VIOLET_CITY
+	dw TreeMons1 ; RUINS_OF_ALPH_OUTSIDE
 	dw TreeMons1 ; ROUTE_29
 	dw TreeMons1 ; ROUTE_30
 	dw TreeMons1 ; ROUTE_31
+	dw TreeMons1 ; ROUTE_32
+	dw TreeMons1 ; ROUTE_36
 	dw TreeMons1 ; JOHTO_ROUTE_27
 	assert_table_length FIRST_JOHTO_INDOOR_MAP
 	; Any Johto map not in this list defaults to TreeMons1

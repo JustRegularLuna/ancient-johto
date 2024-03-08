@@ -16,6 +16,8 @@ Route31_Object:
 	db $5 ; border block
 
 	def_warps
+	warp  4,  6, 0, ROUTE_31_GATE
+	warp  4,  7, 1, ROUTE_31_GATE
 
 	def_signs
 	sign 31,  5, ROUTE31_DARK_CAVE_SIGN

@@ -276,9 +276,13 @@ JohtoMapHSPointers:
 	table_width 2, JohtoMapHSPointers
 	dw NewBarkTownHS ; New Bark
 	dw CherrygroveHS ; Cherrygrove
+	dw VioletCityHS  ; Violet
+	dw JohtoNoHS ; Ruins Of Alph Outside
 	dw Route29HS ; Route 29
 	dw Route30HS ; Route 30
 	dw Route31HS ; Route 31
+	dw JohtoNoHS ; Route 32
+	dw Route36HS ; Route 36
 	dw JohtoNoHS ; Johto Route 27
 	dw JohtoNoHS ; Players House 1F
 	dw JohtoNoHS ; Players House 2f
@@ -292,6 +296,20 @@ JohtoMapHSPointers:
 	dw JohtoNoHS ; Cherrygrove House 3
 	dw JohtoNoHS ; Route 30 Berry House
 	dw MrPokemonsHouseHS ; Mr. Pokemon's House
+	dw JohtoNoHS ; Route 31 Gate
+	dw JohtoNoHS ; Violet Pokecenter
+	dw JohtoNoHS ; Violet Mart
+	dw JohtoNoHS ; Violet School
+	dw JohtoNoHS ; Violet Trade House
+	dw JohtoNoHS ; Violet House 2
+	dw JohtoNoHS ; Violet Gym
+	dw JohtoNoHS ; Sprout Tower 1F
+	dw JohtoNoHS ; Sprout Tower 2F
+	dw JohtoNoHS ; Sprout Tower 3F
+	dw JohtoNoHS ; Ruins of Alph East Gate
+	dw JohtoNoHS ; Ruins of Alph North Gate
+	dw JohtoNoHS ; Ruins of Alph North Gate 2F
+	dw JohtoNoHS ; Ruins of Alph Lab
 	assert_table_length NUM_JOHTO_MAPS
 	dw -1 ; end
 
@@ -306,6 +324,9 @@ NewBarkTownHS:
 	db NEW_BARK_TOWN, NEWBARK_RIVAL, SHOW
 CherrygroveHS:
 	db CHERRYGROVE_CITY, CHERRYGROVE_RIVAL, HIDE
+VioletCityHS:
+	db VIOLET_CITY, VIOLET_ITEMBALL_1, SHOW
+	db VIOLET_CITY, VIOLET_ITEMBALL_2, SHOW
 Route29HS:
 	db ROUTE_29, ROUTE29_ITEMBALL, SHOW
 Route30HS:
@@ -316,6 +337,8 @@ Route30HS:
 Route31HS:
 	db ROUTE_31, ROUTE31_ITEMBALL_1, SHOW
 	db ROUTE_31, ROUTE31_ITEMBALL_2, SHOW
+Route36HS:
+	db ROUTE_36, ROUTE36_SUDOWOODO, SHOW
 ElmsLabHS:
 	db ELMS_LAB, ELMSLAB_STARTER_BALL_1, SHOW
 	db ELMS_LAB, ELMSLAB_STARTER_BALL_2, SHOW

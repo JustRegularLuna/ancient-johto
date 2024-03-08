@@ -1,21 +1,22 @@
 DoorTileIDPointers:
-	dbw OVERWORLD,     .OverworldDoorTileIDs
-	dbw FOREST,        .ForestDoorTileIDs
-	dbw MART,          .MartDoorTileIDs
-	dbw HOUSE,         .HouseDoorTileIDs
-	dbw MUSEUM,        .MuseumDoorTileIDs
-	dbw GATE,          .GateDoorTileIDs
-	dbw SHIP,          .ShipDoorTileIDs
-	dbw LOBBY,         .LobbyDoorTileIDs
-	dbw MANSION,       .MansionDoorTileIDs
-	dbw LAB,           .LabDoorTileIDs
-	dbw FACILITY,      .FacilityDoorTileIDs
-	dbw PLATEAU,       .PlateauDoorTileIDs
-	dbw JOHTO,         .JohtoDoorTileIDs
-	dbw PLAYERS_HOUSE, .PlayersHouseDoorTileIDs
-	dbw PLAYERS_ROOM,  .PlayersRoomDoorTileIDs
-	dbw POKECENTER,    .PokecenterDoorTileIDs
-	dbw JOHTO_CAVE,    .JohtoCaveDoorTileIDs
+	dbw OVERWORLD,       .OverworldDoorTileIDs
+	dbw FOREST,          .ForestDoorTileIDs
+	dbw MART,            .MartDoorTileIDs
+	dbw HOUSE,           .HouseDoorTileIDs
+	dbw MUSEUM,          .MuseumDoorTileIDs
+	dbw GATE,            .GateDoorTileIDs
+	dbw SHIP,            .ShipDoorTileIDs
+	dbw LOBBY,           .LobbyDoorTileIDs
+	dbw MANSION,         .MansionDoorTileIDs
+	dbw LAB,             .LabDoorTileIDs
+	dbw FACILITY,        .FacilityDoorTileIDs
+	dbw PLATEAU,         .PlateauDoorTileIDs
+	dbw JOHTO,           .JohtoDoorTileIDs
+	dbw PLAYERS_HOUSE,   .PlayersHouseDoorTileIDs
+	dbw PLAYERS_ROOM,    .PlayersRoomDoorTileIDs
+	dbw POKECENTER,      .PokecenterDoorTileIDs
+	dbw JOHTO_CAVE,      .JohtoCaveDoorTileIDs
+	dbw ELITE_FOUR_ROOM, .EliteFourRoomDoorTileIDs
 	db -1 ; end
 
 MACRO door_tiles
@@ -76,3 +77,6 @@ ENDM
 
 .JohtoCaveDoorTileIDs:
 	door_tiles $1E
+
+.EliteFourRoomDoorTileIDs:
+	door_tiles $4A

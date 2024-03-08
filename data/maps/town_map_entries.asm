@@ -128,9 +128,13 @@ JohtoExternalMapEntries:
 	; x, y, name
 	external_map 140, 100, NewBarkTownName
 	external_map 100, 100, CherrygroveCityName
+	external_map  84,  60, VioletCityName
+	external_map  76,  76, RuinsOfAlphName
 	external_map 128, 100, Route29Name
 	external_map 100,  80, Route30Name
 	external_map  96,  60, Route31Name
+	external_map  84,  92, Route32Name
+	external_map  64,  60, Route36Name
 	external_map 148, 100, Route27Name
 	assert_table_length FIRST_JOHTO_INDOOR_MAP
 
@@ -140,4 +144,8 @@ JohtoInternalMapEntries:
 	internal_map ELMS_LAB,                      140, 100, NewBarkTownName
 	internal_map CHERRYGROVE_HOUSE_3,           100, 100, CherrygroveCityName
 	internal_map MR_POKEMONS_HOUSE,             100,  80, Route30Name
+	internal_map ROUTE_31_GATE,                  96,  60, Route31Name
+	internal_map VIOLET_GYM,                     84,  60, VioletCityName
+	internal_map SPROUT_TOWER_3F,                85,  58, SproutTowerName
+	internal_map RUINS_OF_ALPH_LAB,              76,  76, RuinsOfAlphName
 	db -1 ; end
