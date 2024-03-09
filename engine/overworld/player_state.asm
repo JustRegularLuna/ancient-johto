@@ -156,22 +156,26 @@ IsPlayerFacingEdgeOfMap::
 	ret
 
 IsWarpTileInFrontOfPlayer::
+	call IsPlayerFacingEdgeOfMap
+	ret c
+
 	push hl
 	push de
 	push bc
 	call _GetTileAndCoordsInFrontOfPlayer
-	ld a, [wCurRegion]
-	and a
-	jr nz, .notSSAnne
-	ld a, [wCurMap]
-	cp SS_ANNE_BOW
-	jr z, IsSSAnneBowWarpTileInFrontOfPlayer
-.notSSAnne
+	ld a, [wCurMapTileset]
+	ld hl, WarpTileListPointers
+	ld de, $3
+	call IsInArray
+	jr nc, .done
+	inc hl
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
 	ld a, [wSpritePlayerStateData1FacingDirection]
 	srl a
 	ld c, a
 	ld b, 0
-	ld hl, WarpTileListPointers
 	add hl, bc
 	ld a, [hli]
 	ld h, [hl]
@@ -186,16 +190,6 @@ IsWarpTileInFrontOfPlayer::
 	ret
 
 INCLUDE "data/tilesets/warp_carpet_tile_ids.asm"
-
-IsSSAnneBowWarpTileInFrontOfPlayer:
-	ld a, [wTileInFrontOfPlayer]
-	cp $15
-	jr nz, .notSSAnne5Warp
-	scf
-	jr IsWarpTileInFrontOfPlayer.done
-.notSSAnne5Warp
-	and a
-	jr IsWarpTileInFrontOfPlayer.done
 
 IsPlayerStandingOnDoorTileOrWarpTile::
 	push hl

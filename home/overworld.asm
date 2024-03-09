@@ -810,40 +810,7 @@ CheckIfInOutsideMap::
 ; "function 2" passes when the the tile in front of the player is among a certain set
 ; sets carry if the check passes, otherwise clears carry
 ExtraWarpCheck::
-	ld a, [wCurRegion]
-	and a ; Kanto?
-	jr nz, .notKanto
-	ld a, [wCurMap]
-	cp SS_ANNE_3F
-	jr z, .useFunction1
-	cp ROCKET_HIDEOUT_B1F
-	jr z, .useFunction2
-	cp ROCKET_HIDEOUT_B2F
-	jr z, .useFunction2
-	cp ROCKET_HIDEOUT_B4F
-	jr z, .useFunction2
-	cp ROCK_TUNNEL_1F
-	jr z, .useFunction2
-.notKanto
-	ld a, [wCurMapTileset]
-	and a ; outside tileset (OVERWORLD)
-	jr z, .useFunction2
-	cp SHIP ; S.S. Anne tileset
-	jr z, .useFunction2
-	cp SHIP_PORT ; Vermilion Port tileset
-	jr z, .useFunction2
-	cp PLATEAU ; Indigo Plateau tileset
-	jr z, .useFunction2
-	cp JOHTO
-	jr z, .useFunction2
-	cp JOHTO_CAVE
-	jr z, .useFunction2
-.useFunction1
-	ld hl, IsPlayerFacingEdgeOfMap
-	jr .doBankswitch
-.useFunction2
 	ld hl, IsWarpTileInFrontOfPlayer
-.doBankswitch
 	ld b, BANK(IsWarpTileInFrontOfPlayer)
 	jp Bankswitch
 
