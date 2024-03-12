@@ -94,7 +94,7 @@ RuinsOfAlph_Coll::
 	coll_tiles $01, $03, $11, $18, $28, $3A, $3B
 
 JohtoForest_Coll::
-	coll_tiles $02, $05, $13, $17
+	coll_tiles $02, $05, $13, $17, $42
 
 Park_Coll::
 	coll_tiles $01, $02, $04, $06, $1B, $4A, $4F
