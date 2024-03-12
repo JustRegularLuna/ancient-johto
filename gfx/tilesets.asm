@@ -124,6 +124,12 @@ Johto_GFX::         INCBIN "gfx/tilesets/johto.2bpp"
 Johto_Block::       INCBIN "gfx/blocksets/johto.bst"
 
 
+SECTION "Johto Modern Tileset", ROMX
+
+JohtoModern_GFX::   INCBIN "gfx/tilesets/johto_modern.2bpp"
+JohtoModern_Block:: INCBIN "gfx/blocksets/johto_modern.bst"
+
+
 SECTION "Players House Tileset", ROMX
 
 PlayersHouse_GFX::   INCBIN "gfx/tilesets/players_house.2bpp"
@@ -158,3 +164,57 @@ SECTION "Tower Tileset", ROMX
 
 Tower_GFX::           INCBIN "gfx/tilesets/tower.2bpp"
 Tower_Block::         INCBIN "gfx/blocksets/tower.bst"
+
+
+SECTION "Ruins of Alph Tileset", ROMX
+
+RuinsOfAlph_GFX::     INCBIN "gfx/tilesets/ruins_of_alph.2bpp"
+RuinsOfAlph_Block::   INCBIN "gfx/blocksets/ruins_of_alph.bst"
+
+
+SECTION "Johto Forest Tileset", ROMX
+
+JohtoForest_GFX::     INCBIN "gfx/tilesets/johto_forest.2bpp"
+JohtoForest_Block::   INCBIN "gfx/blocksets/johto_forest.bst"
+
+
+SECTION "Park Tileset", ROMX
+
+Park_GFX::            INCBIN "gfx/tilesets/park.2bpp"
+Park_Block::          INCBIN "gfx/blocksets/park.bst"
+
+
+SECTION "Bike Tileset", ROMX ; GS CHAMPIONS_ROOM
+
+BikeTileset_GFX::     INCBIN "gfx/tilesets/bike_tileset.2bpp"
+BikeTileset_Block::   INCBIN "gfx/blocksets/bike_tileset.bst"
+
+
+SECTION "Ice Path Tileset", ROMX
+
+IcePath_GFX::          INCBIN "gfx/tilesets/ice_path.2bpp"
+IcePath_Block::        INCBIN "gfx/blocksets/ice_path.bst"
+
+
+SECTION "Lighthouse Tileset", ROMX
+
+Lighthouse_GFX::       INCBIN "gfx/tilesets/lighthouse.2bpp"
+Lighthouse_Block::     INCBIN "gfx/blocksets/lighthouse.bst"
+
+
+SECTION "Radio Tower Tileset", ROMX
+
+RadioTower_GFX::       INCBIN "gfx/tilesets/radio_tower.2bpp"
+RadioTower_Block::     INCBIN "gfx/blocksets/radio_tower.bst"
+
+
+SECTION "Train Station Tileset", ROMX
+
+TrainStation_GFX::     INCBIN "gfx/tilesets/train_station.2bpp"
+TrainStation_Block::   INCBIN "gfx/blocksets/train_station.bst"
+
+
+SECTION "Hideout Tileset", ROMX
+
+Hideout_GFX::          INCBIN "gfx/tilesets/hideout.2bpp"
+Hideout_Block::        INCBIN "gfx/blocksets/hideout.bst"

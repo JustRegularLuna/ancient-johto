@@ -12,8 +12,14 @@ WarpTileListPointers:
 	dbw PLATEAU, PlateauWarpCarpetTiles
 	dbw SHIP, ShipWarpCarpetTiles
 	dbw SHIP_PORT, ShipPortWarpCarpetTiles
+	dbw GATE, GateWarpCarpetTiles
 	dbw JOHTO, JohtoWarpCarpetTiles
+	dbw JOHTO_MODERN, JohtoModernWarpCarpetTiles
 	dbw JOHTO_CAVE, JohtoCaveWarpCarpetTiles
+	dbw JOHTO_FOREST, JohtoForestWarpCarpetTiles
+	dbw PARK, ParkWarpCarpetTiles
+	dbw ICE_PATH, IcePathWarpCarpetTiles
+	dbw HIDEOUT, HideoutWarpCarpetTiles
 	db -1
 
 
@@ -102,6 +108,23 @@ ShipPortWarpCarpetTiles:
 	warp_carpet_tiles
 
 
+; GATE
+GateWarpCarpetTiles:
+	dw .FacingDown
+	dw .FacingUp
+	dw .FacingLeft
+	dw .FacingRight
+
+.FacingDown
+	warp_carpet_tiles $0A
+.FacingUp
+	warp_carpet_tiles
+.FacingLeft
+	warp_carpet_tiles
+.FacingRight
+	warp_carpet_tiles
+
+
 ; JOHTO
 JohtoWarpCarpetTiles:
 	dw .FacingDown
@@ -113,6 +136,23 @@ JohtoWarpCarpetTiles:
 	warp_carpet_tiles $0E, $48
 .FacingUp
 	warp_carpet_tiles 
+.FacingLeft
+	warp_carpet_tiles $02, $26
+.FacingRight
+	warp_carpet_tiles $01, $1A
+
+
+; JOHTO_MODERN
+JohtoModernWarpCarpetTiles:
+	dw .FacingDown
+	dw .FacingUp
+	dw .FacingLeft
+	dw .FacingRight
+
+.FacingDown
+	warp_carpet_tiles $0E, $46
+.FacingUp
+	warp_carpet_tiles
 .FacingLeft
 	warp_carpet_tiles $02, $26
 .FacingRight
@@ -134,3 +174,71 @@ JohtoCaveWarpCarpetTiles:
 	warp_carpet_tiles
 .FacingRight
 	warp_carpet_tiles
+
+
+; JOHTO_FOREST
+JohtoForestWarpCarpetTiles:
+	dw .FacingDown
+	dw .FacingUp
+	dw .FacingLeft
+	dw .FacingRight
+
+.FacingDown
+	warp_carpet_tiles
+.FacingUp
+	warp_carpet_tiles
+.FacingLeft
+	warp_carpet_tiles
+.FacingRight
+	warp_carpet_tiles $23, $33
+
+
+; PARK
+ParkWarpCarpetTiles:
+	dw .FacingDown
+	dw .FacingUp
+	dw .FacingLeft
+	dw .FacingRight
+
+.FacingDown
+	warp_carpet_tiles $21
+.FacingUp
+	warp_carpet_tiles
+.FacingLeft
+	warp_carpet_tiles
+.FacingRight
+	warp_carpet_tiles $40, $50
+
+
+; ICE_PATH
+IcePathWarpCarpetTiles:
+	dw .FacingDown
+	dw .FacingUp
+	dw .FacingLeft
+	dw .FacingRight
+
+.FacingDown
+	warp_carpet_tiles $44
+.FacingUp
+	warp_carpet_tiles
+.FacingLeft
+	warp_carpet_tiles
+.FacingRight
+	warp_carpet_tiles
+
+
+; HIDEOUT
+HideoutWarpCarpetTiles:
+	dw .FacingDown
+	dw .FacingUp
+	dw .FacingLeft
+	dw .FacingRight
+
+.FacingDown
+	warp_carpet_tiles $01
+.FacingUp
+	warp_carpet_tiles $01
+.FacingLeft
+	warp_carpet_tiles $01
+.FacingRight
+	warp_carpet_tiles $01

@@ -794,13 +794,13 @@ PlayMapChangeSound::
 CheckIfInOutsideMap::
 ; If the player is in an outside map (a town or route), set the z flag
 	ld a, [wCurMapTileset]
-	and a ; most towns/routes have tileset 0 (OVERWORLD)
+	and a ; OVERWORLD aka Kanto
 	ret z
-	cp PLATEAU ; Route 23 / Indigo Plateau
+	cp PLATEAU
 	ret z
 	cp JOHTO
-	;ret z
-	;cp JOHTO_MODERN
+	ret z
+	cp JOHTO_MODERN
 	ret
 
 ; this function is an extra check that sometimes has to pass in order to warp, beyond just standing on a warp

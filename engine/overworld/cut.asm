@@ -6,7 +6,14 @@ UsedCut:
 	jr z, .overworld
 	cp JOHTO
 	jr z, .johto
+	cp JOHTO_FOREST
+	jr z, .johto_forest
 	; if all checks fail
+	jr .nothingToCut
+.johto_forest
+	ld a, [wTileInFrontOfPlayer]
+	cp $38 ; ilex cut tree
+	jr z, .canCut
 	jr .nothingToCut
 .johto
 	ld a, [wTileInFrontOfPlayer]
@@ -16,7 +23,6 @@ UsedCut:
 	jr z, .canCut
 	jr .nothingToCut
 .overworld
-	dec a
 	ld a, [wTileInFrontOfPlayer]
 	cp $3d ; cut tree
 	jr z, .canCut

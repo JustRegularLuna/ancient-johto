@@ -9,5 +9,7 @@ WaterTilesets:
 	db FACILITY
 	db PLATEAU
 	db JOHTO
+	db JOHTO_MODERN
 	db JOHTO_CAVE
+	db JOHTO_FOREST
 	db -1 ; end

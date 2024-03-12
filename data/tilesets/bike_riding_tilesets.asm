@@ -7,5 +7,9 @@ BikeRidingTilesets::
 	db CAVERN
 	db GATE
 	db JOHTO
+	db JOHTO_MODERN
 	db JOHTO_CAVE
+	db JOHTO_FOREST
+	db PARK
+	db ICE_PATH
 	db -1 ; end

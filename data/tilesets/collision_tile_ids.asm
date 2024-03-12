@@ -31,7 +31,7 @@ Forest_Coll::
 	coll_tiles $1e, $20, $2e, $30, $34, $37, $39, $3a, $40, $51, $52, $5a, $5c, $5e, $5f
 
 House_Coll::
-	coll_tiles $01, $12, $14, $32, $54
+	coll_tiles $01, $12, $14, $32, $37, $54
 
 Museum_Coll::
 	coll_tiles $01, $12, $14, $1a, $1c, $37, $38, $3b, $3c, $5e
@@ -75,6 +75,9 @@ Plateau_Coll::
 Johto_Coll::
 	coll_tiles $04, $05, $06, $29, $39, $40, $56, $5b, $64
 
+JohtoModern_Coll::
+	coll_tiles $00, $04, $05, $06, $27, $2F, $35, $39, $40, $5B
+
 JohtoCave_Coll::
 	coll_tiles $01, $04, $16, $18, $1E, $30, $32, $34, $36, $37, $38, $3A, 
 
@@ -86,3 +89,30 @@ EliteFourRoom_Coll::
 
 Tower_Coll::
 	coll_tiles $01, $02, $10, $17, $18, $1C, $1E, $54
+
+RuinsOfAlph_Coll::
+	coll_tiles $01, $03, $11, $18, $28, $3A, $3B
+
+JohtoForest_Coll::
+	coll_tiles $02, $05, $13, $17
+
+Park_Coll::
+	coll_tiles $01, $02, $04, $06, $1B, $4A, $4F
+
+BikeTileset_Coll::
+	coll_tiles $11, $14, $20, $2D, $3B, $3C, $4A, $51, $53, $54, $5A, $5B, $5D
+
+IcePath_Coll::
+	coll_tiles $02, $12, $18, $19, $1A, $1C, $2F, $38, $3A, $3C, $40
+
+Lighthouse_Coll::
+	coll_tiles $04, $17, $1D, $1E, $23, $2F, $34, $37, $39, $4F
+
+RadioTower_Coll::
+	coll_tiles $01, $12, $1C, $1E, $37
+
+TrainStation_Coll::
+	coll_tiles $17, $1E, $33, $3D, $3E, $42, $56, $57
+
+Hideout_Coll::
+	coll_tiles $10, $12, $32, $34, $35, $38, $3A, $3C

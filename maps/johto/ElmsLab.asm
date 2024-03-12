@@ -505,8 +505,8 @@ ElmsLabAideScript:
 	done
 
 ElmsLabBinText:
-	text "The snack from a"
-	line "wrapper PROF.ELM"
+	text "The wrapper from"
+	line "a snack PROF.ELM"
 	cont "ate is in here…"
 	done
 

@@ -39,24 +39,10 @@ TryDoWildEncounter:
 	ld a, [wWaterRate]
 	jr z, .CanEncounter
 ; even if not in grass/water, standing anywhere we can encounter pokemon
-; so long as the map is "indoor" and has wild pokemon defined.
-; ...as long as it's not Viridian Forest or Safari Zone.
-	ld a, [wCurRegion]
-	and a ; Kanto?
-	jr nz, .johtoMapCheck
-	; kanto map checks
-	ld a, [wCurMap]
-	cp FIRST_INDOOR_MAP ; is this an indoor map?
-	jr c, .CantEncounter2
-	jr .checkTileset
-.johtoMapCheck
-	ld a, [wCurMap]
-	cp FIRST_JOHTO_INDOOR_MAP ; is this an indoor map?
-	jr c, .CantEncounter2
-.checkTileset
-	ld a, [wCurMapTileset]
-	cp FOREST ; Viridian Forest/Safari Zone
-	jr z, .CantEncounter2
+; so long as the map has no grass tile, and has wild pokemon defined.
+	ld a, [wGrassTile]
+	cp -1
+	jr nz, .CantEncounter2
 	ld a, [wGrassRate]
 .CanEncounter
 ; compare encounter chance with a random number to determine if there will be an encounter

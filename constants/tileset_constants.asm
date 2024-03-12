@@ -24,8 +24,18 @@
 	const FACILITY
 	const PLATEAU
 	const JOHTO
+	const JOHTO_MODERN
 	const JOHTO_CAVE
 	const TRADITIONAL_HOUSE
 	const ELITE_FOUR_ROOM
 	const TOWER
+	const RUINS_OF_ALPH
+	const JOHTO_FOREST
+	const PARK
+	const BIKE_TILESET
+	const ICE_PATH
+	const LIGHTHOUSE
+	const RADIO_TOWER
+	const TRAIN_STATION
+	const HIDEOUT
 NUM_TILESETS EQU const_value

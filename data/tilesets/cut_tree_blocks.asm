@@ -14,4 +14,6 @@ CutTreeBlockSwaps:
 	db $5F, $3D
 	db $63, $3F
 	db $67, $3E
+; JOHTO_FOREST
+	db $0F, $17
 	db -1 ; end

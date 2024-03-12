@@ -6,4 +6,10 @@ EscapeRopeTilesets:
 	db INTERIOR
 	db JOHTO_CAVE
 	db TOWER
+	db RUINS_OF_ALPH
+	db JOHTO_FOREST
+	db ICE_PATH
+	db LIGHTHOUSE
+	db RADIO_TOWER
+	db HIDEOUT
 	db -1 ; end

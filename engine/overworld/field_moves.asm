@@ -207,8 +207,10 @@ WaterTilesets2: ; Renamed from what Yenatch called it, since that had overlap er
 	db FACILITY
 	db PLATEAU
 	db JOHTO
+	db JOHTO_MODERN
 	db JOHTO_CAVE
-	db -1
+	db JOHTO_FOREST
+	db -1 ; end
 
 IsCutTile:
 	ld a, [wCurMapTileset]
@@ -217,6 +219,9 @@ IsCutTile:
 
 	cp JOHTO
 	jr z, .johto
+
+	cp JOHTO_FOREST
+	jr z, .johto_forest
 
 	jr .no
 
@@ -229,6 +234,12 @@ IsCutTile:
 .johto
 	ld a, [wTileInFrontOfPlayer]
 	cp $45
+	jr z, .yes
+	jr .no
+
+.johto_forest
+	ld a, [wTileInFrontOfPlayer]
+	cp $38
 	jr z, .yes
 	;jr .no
 

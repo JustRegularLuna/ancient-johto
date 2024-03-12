@@ -10,6 +10,7 @@ BookshelfTileIDs:
 	bookshelf_tile HOUSE,             $1E, BookOrSculptureText
 	bookshelf_tile HOUSE,             $16, ItsATVText
 	bookshelf_tile HOUSE,             $34, MyReflectionText
+	bookshelf_tile HOUSE,             $42, PokemonCenterPCText
 	bookshelf_tile MANSION,           $32, BookOrSculptureText
 	bookshelf_tile PLAYERS_HOUSE,     $3E, BookOrSculptureText
 	bookshelf_tile PLAYERS_ROOM,      $35, MagazinesText
@@ -22,6 +23,7 @@ BookshelfTileIDs:
 	bookshelf_tile GATE,              $3A, MyReflectionText
 	bookshelf_tile GATE,              $3D, MyReflectionText
 	bookshelf_tile GATE,              $3E, MyReflectionText
+	bookshelf_tile GATE,              $42, PokemonCenterPCText
 	bookshelf_tile MART,              $3E, PokemonStuffText
 	bookshelf_tile MART,              $50, PokemonStuffText
 	bookshelf_tile MART,              $52, PokemonStuffText
@@ -35,4 +37,6 @@ BookshelfTileIDs:
 	bookshelf_tile TRADITIONAL_HOUSE, $31, PokemonStuffText
 	bookshelf_tile TRADITIONAL_HOUSE, $37, PokemonStuffText
 	bookshelf_tile TRADITIONAL_HOUSE, $52, IncenseBurnerText
+	bookshelf_tile RADIO_TOWER,       $3A, PokemonCenterPCText
+	bookshelf_tile LIGHTHOUSE,        $5C, PokemonCenterPCText
 	db -1 ; end

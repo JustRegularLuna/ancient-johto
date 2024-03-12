@@ -23,10 +23,20 @@ TilesetAnimPointers::
 	dw TilesetAnimWater         ; FACILITY
 	dw TilesetAnimWater         ; PLATEAU
 	dw TilesetAnimJohto         ; JOHTO
+	dw TilesetAnimFlowerWater   ; JOHTO_MODERN
 	dw TilesetAnimJohtoCave     ; JOHTO_CAVE
 	dw TilesetAnimNone          ; TRADITIONAL_HOUSE
 	dw TilesetEliteFourRoomAnim ; ELITE_FOUR_ROOM
 	dw TilesetTowerAnim         ; TOWER
+	dw TilesetAnimNone          ; RUINS_OF_ALPH
+	dw TilesetAnimFlowerWater   ; JOHTO_FOREST
+	dw TilesetAnimFlowerWater   ; PARK
+	dw TilesetAnimNone          ; BIKE_TILESET
+	dw TilesetAnimNone          ; ICE_PATH
+	dw TilesetAnimNone          ; LIGHTHOUSE
+	dw TilesetAnimNone          ; RADIO_TOWER
+	dw TilesetAnimNone          ; TRAIN_STATION
+	dw TilesetAnimNone          ; HIDEOUT
 	assert_table_length NUM_TILESETS
 
 

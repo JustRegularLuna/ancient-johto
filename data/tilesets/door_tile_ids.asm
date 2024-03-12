@@ -12,11 +12,17 @@ DoorTileIDPointers:
 	dbw FACILITY,        .FacilityDoorTileIDs
 	dbw PLATEAU,         .PlateauDoorTileIDs
 	dbw JOHTO,           .JohtoDoorTileIDs
+	dbw JOHTO_MODERN,    .JohtoModernDoorTileIDs
 	dbw PLAYERS_HOUSE,   .PlayersHouseDoorTileIDs
 	dbw PLAYERS_ROOM,    .PlayersRoomDoorTileIDs
 	dbw POKECENTER,      .PokecenterDoorTileIDs
 	dbw JOHTO_CAVE,      .JohtoCaveDoorTileIDs
 	dbw ELITE_FOUR_ROOM, .EliteFourRoomDoorTileIDs
+	dbw JOHTO_FOREST,    .JohtoForestDoorTileIDs
+	dbw BIKE_TILESET,    .BikeTilesetDoorTileIDs
+	dbw LIGHTHOUSE,      .LighthouseDoorTileIDs
+	dbw RADIO_TOWER,     .RadioTowerDoorTileIDs
+	dbw TRAIN_STATION,   .TrainStationDoorTileIDs
 	db -1 ; end
 
 MACRO door_tiles
@@ -69,6 +75,9 @@ ENDM
 .JohtoDoorTileIDs:
 	door_tiles $29, $39, $56
 
+.JohtoModernDoorTileIDs:
+	door_tiles $06, $27, $35, $39
+
 .PlayersHouseDoorTileIDs:
 	door_tiles $5c, $5e
 
@@ -80,3 +89,18 @@ ENDM
 
 .EliteFourRoomDoorTileIDs:
 	door_tiles $4A
+
+.JohtoForestDoorTileIDs:
+	door_tiles $17
+
+.BikeTilesetDoorTileIDs:
+	door_tiles $5B
+
+.LighthouseDoorTileIDs:
+	door_tiles $1E
+
+.RadioTowerDoorTileIDs:
+	door_tiles $1C, $1E
+
+.TrainStationDoorTileIDs:
+	door_tiles $17

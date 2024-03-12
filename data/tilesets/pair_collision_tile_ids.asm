@@ -16,6 +16,11 @@ TilePairCollisionsLand::
 	db FOREST, $5E, $2E
 	db FOREST, $5F, $2E
 	db JOHTO_CAVE, $01, $16
+	db BIKE_TILESET, $51, $53
+	db ICE_PATH, $12, $18
+	db ICE_PATH, $12, $19
+	db ICE_PATH, $12, $1A
+	db ICE_PATH, $12, $3A
 	db -1 ; end
 
 TilePairCollisionsWater::

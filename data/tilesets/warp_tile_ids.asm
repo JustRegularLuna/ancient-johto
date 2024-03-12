@@ -23,10 +23,20 @@ WarpTileIDPointers:
 	dw .FacilityWarpTileIDs
 	dw .PlateauWarpTileIDs
 	dw .JohtoWarpTileIDs
+	dw .JohtoModernWarpTileIDs
 	dw .JohtoCaveWarpTileIDs
 	dw .TraditionalHouseWarpTileIDs
 	dw .EliteFourRoomWarpTileIDs
 	dw .TowerWarpTileIDs
+	dw .RuinsOfAlphWarpTileIDs
+	dw .JohtoForestWarpTileIDs
+	dw .ParkWarpTileIDs
+	dw .BikeTilesetWarpTileIDs
+	dw .IcePathWarpTileIDs
+	dw .LighthouseWarpTileIDs
+	dw .RadioTowerWarpTileIDs
+	dw .TrainStationWarpTileIDs
+	dw .HideoutWarpTileIDs
 	assert_table_length NUM_TILESETS
 
 MACRO warp_tiles
@@ -106,6 +116,9 @@ ENDM
 .JohtoWarpTileIDs:
 	warp_tiles $29, $39, $56
 
+.JohtoModernWarpTileIDs:
+	warp_tiles $06, $27, $35, $39
+
 .JohtoCaveWarpTileIDs:
 	warp_tiles $1E, $30, $32, $38, $3A
 
@@ -117,3 +130,30 @@ ENDM
 
 .TowerWarpTileIDs:
 	warp_tiles $01, $10, $1C, $1E, $54
+
+.RuinsOfAlphWarpTileIDs:
+	warp_tiles $01, $18, $28
+
+.JohtoForestWarpTileIDs:
+	warp_tiles $17
+
+.ParkWarpTileIDs:
+	warp_tiles 
+
+.BikeTilesetWarpTileIDs:
+	warp_tiles $5B
+
+.IcePathWarpTileIDs:
+	warp_tiles $02, $1A, $3A
+
+.LighthouseWarpTileIDs:
+	warp_tiles $1E, $37, $39, $4F
+
+.RadioTowerWarpTileIDs:
+	warp_tiles $1C, $1E
+
+.TrainStationWarpTileIDs:
+	warp_tiles $17
+
+.HideoutWarpTileIDs:
+	warp_tiles $32, $3A, $3C
