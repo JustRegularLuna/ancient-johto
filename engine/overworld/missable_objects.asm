@@ -13,7 +13,7 @@ MarkTownVisitedAndLoadMissableObjects::
 	jr .notInTown
 .Johto
 	ld a, [wCurMap]
-	cp FIRST_JOHTO_ROUTE_MAP
+	cp NUM_JOHTO_CITY_MAPS
 	jr nc, .notInTown
 	ld c, a
 	ld b, FLAG_SET

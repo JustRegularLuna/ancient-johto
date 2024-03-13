@@ -289,7 +289,6 @@ DEF JOHTO_REGION EQU 1
 	map_const VIOLET_CITY,                   20, 18
 DEF NUM_JOHTO_CITY_MAPS EQU const_value
 	map_const RUINS_OF_ALPH_OUTSIDE,         10, 18
-DEF FIRST_JOHTO_ROUTE_MAP EQU const_value
 	map_const ROUTE_29,                      30,  9
 	map_const ROUTE_30,                      10, 27
 	map_const ROUTE_31,                      20,  9
