@@ -30,7 +30,7 @@ TilesetAnimPointers::
 	dw TilesetTowerAnim         ; TOWER
 	dw TilesetAnimNone          ; RUINS_OF_ALPH
 	dw TilesetAnimFlowerWater   ; JOHTO_FOREST
-	dw TilesetAnimFlowerWater   ; PARK
+	dw TilesetParkAnim          ; PARK
 	dw TilesetAnimNone          ; BIKE_TILESET
 	dw TilesetAnimNone          ; ICE_PATH
 	dw TilesetAnimNone          ; LIGHTHOUSE
@@ -183,6 +183,19 @@ TilesetTowerAnim:
 	dw NULL,  WaitTileAnimation
 	dw NULL,  DoneTileAnimation
 
+TilesetParkAnim:
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
+	dw vTileset tile $5f, AnimateFountainTile
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
+	dw NULL,  AnimateFlowerTile
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
+	dw NULL,  StandingTileFrame8
+	dw NULL,  DoneTileAnimation
+
 TilesetAnimNone:
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
@@ -308,6 +321,51 @@ ScrollTileDown:
 	dec a
 	jr nz, .loop
 	ret
+
+AnimateFountainTile:
+; Save the stack pointer in bc for WriteTile to restore
+	ld hl, sp+0
+	ld b, h
+	ld c, l
+
+	ld hl, .FountainTileFramePointers
+
+; A cycle of 8 frames, updating every tick
+	ld a, [wTileAnimationTimer]
+	and %111
+
+; hl = [.FountainTileFramePointers + a * 2]
+	add a
+	add l
+	ld l, a
+	jr nc, .okay
+	inc h
+.okay
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+
+; Write the tile graphic from hl (now sp) to de (now hl)
+	ld sp, hl
+	ld l, e
+	ld h, d
+	jp WriteTile
+
+.FountainTileFramePointers:
+	dw .FountainTile1
+	dw .FountainTile2
+	dw .FountainTile3
+	dw .FountainTile4
+	dw .FountainTile3
+	dw .FountainTile4
+	dw .FountainTile5
+	dw .FountainTile1
+
+.FountainTile1: INCBIN "gfx/tilesets/fountain/1.2bpp"
+.FountainTile2: INCBIN "gfx/tilesets/fountain/2.2bpp"
+.FountainTile3: INCBIN "gfx/tilesets/fountain/3.2bpp"
+.FountainTile4: INCBIN "gfx/tilesets/fountain/4.2bpp"
+.FountainTile5: INCBIN "gfx/tilesets/fountain/5.2bpp"
 
 AnimateFlowerTile:
 ; Save the stack pointer in bc for WriteTile to restore
