@@ -250,6 +250,7 @@
 	const WATER_PULSE  ; f2
 	const WAVE_CRASH   ; f3
 	const HURRICANE    ; f4
+	const MIRROR_COAT  ; f5
 
 DEF NUM_ATTACKS EQU const_value - 1
 

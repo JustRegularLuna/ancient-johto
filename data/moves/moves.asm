@@ -255,4 +255,5 @@ Moves:
 	move BUBBLEBEAM,   CONFUSION_SIDE_EFFECT,       60, WATER,        100, 20 ; Water Pulse
 	move SURF,         RECOIL_EFFECT,              120, WATER,        100, 15 ; Wave Crash
 	move SONICBOOM,    CONFUSION_SIDE_EFFECT,      110, FLYING,        85, 10 ; Hurricane
+	move LIGHT_SCREEN, NO_ADDITIONAL_EFFECT,         1, PSYCHIC_TYPE, 100, 20 ; Mirror Coat *** Effect is special-cased in battle engine, like Counter
 	assert_table_length NUM_ATTACKS

@@ -9,4 +9,5 @@ PriorityMovesList:
 	db QUICK_ATTACK,   PRIORITY + 1
 	db EXTREMESPEED,   PRIORITY + 2
 	db ICE_SHARD,      PRIORITY + 1
+	db MIRROR_COAT,    PRIORITY - 6
 	db -1 ; end

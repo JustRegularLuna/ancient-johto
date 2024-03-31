@@ -244,4 +244,5 @@ MoveNames::
 	li "WATER PULSE"
 	li "WAVE CRASH"
 	li "HURRICANE"
+	li "MIRROR COAT"
 	assert_list_length NUM_ATTACKS
