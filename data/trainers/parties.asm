@@ -346,7 +346,7 @@ TwinsData:        ; TWINS
 
 LassData:         ; LASS
 ; 01 - Route 30
-	db "NIKKI@", TRAINERTYPE_NORMAL
+	db "NICOLE@", TRAINERTYPE_NORMAL
 	db 5, MEOWTH
 	db -1 ; end
 

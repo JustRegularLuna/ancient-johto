@@ -106,7 +106,7 @@ ENDM
 	trainerclass TWINS
 
 	trainerclass LASS
-	const NIKKI
+	const NICOLE
 
 	trainerclass BEAUTY
 

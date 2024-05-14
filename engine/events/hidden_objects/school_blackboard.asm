@@ -1,94 +1,10 @@
-PrintBlackboardLinkCableText:
+PrintBlackboardText:
 	call EnableAutoTextBoxDrawing
 	ld a, $1
 	ld [wDoNotWaitForButtonPressAfterDisplayingText], a
 	ld a, [wHiddenObjectFunctionArgument]
 	call PrintPredefTextID
 	ret
-
-LinkCableHelp::
-	text_asm
-	call SaveScreenTilesToBuffer1
-	ld hl, LinkCableHelpText1
-	call PrintText
-	xor a
-	ld [wMenuItemOffset], a ; not used
-	ld [wCurrentMenuItem], a
-	ld [wLastMenuItem], a
-	ld a, A_BUTTON | B_BUTTON
-	ld [wMenuWatchedKeys], a
-	ld a, 3
-	ld [wMaxMenuItem], a
-	ld a, 2
-	ld [wTopMenuItemY], a
-	ld a, 1
-	ld [wTopMenuItemX], a
-.linkHelpLoop
-	ld hl, wd730
-	set 6, [hl]
-	hlcoord 0, 0
-	ld b, 8
-	ld c, 13
-	call TextBoxBorder
-	hlcoord 2, 2
-	ld de, HowToLinkText
-	call PlaceString
-	ld hl, LinkCableHelpText2
-	call PrintText
-	call HandleMenuInput
-	bit 1, a ; pressed b
-	jr nz, .exit
-	ld a, [wCurrentMenuItem]
-	cp 3 ; pressed a on "STOP READING"
-	jr z, .exit
-	ld hl, wd730
-	res 6, [hl]
-	ld hl, LinkCableInfoTexts
-	add a
-	ld d, 0
-	ld e, a
-	add hl, de
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a
-	call PrintText
-	jp .linkHelpLoop
-.exit
-	ld hl, wd730
-	res 6, [hl]
-	call LoadScreenTilesFromBuffer1
-	jp TextScriptEnd
-
-LinkCableHelpText1:
-	text_far _LinkCableHelpText1
-	text_end
-
-LinkCableHelpText2:
-	text_far _LinkCableHelpText2
-	text_end
-
-HowToLinkText:
-	db   "HOW TO LINK"
-	next "COLOSSEUM"
-	next "TRADE CENTER"
-	next "STOP READING@"
-
-LinkCableInfoTexts:
-	dw LinkCableInfoText1
-	dw LinkCableInfoText2
-	dw LinkCableInfoText3
-
-LinkCableInfoText1:
-	text_far _LinkCableInfoText1
-	text_end
-
-LinkCableInfoText2:
-	text_far _LinkCableInfoText2
-	text_end
-
-LinkCableInfoText3:
-	text_far _LinkCableInfoText3
-	text_end
 
 PokemonSchoolBlackboard::
 	text_asm

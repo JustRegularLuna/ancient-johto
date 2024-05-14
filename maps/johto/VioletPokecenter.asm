@@ -4,7 +4,7 @@
 	const_export VIOLET_POKECENTER_NURSE
 	const_export VIOLET_POKECENTER_LINK_RECEPTIONIST
 	const_export VIOLET_POKECENTER_WONDER_TRADE_RECEPTIONIST
-	const_export VIOLET_POKECENTER_BENCH_LASS
+	const_export VIOLET_POKECENTER_BENCH_COOLTRAINER
 	; signs
 
 VioletPokecenter_Object:
@@ -22,7 +22,7 @@ VioletPokecenter_Object:
 	object SPRITE_NURSE,  3, 13, STAY, DOWN, VIOLET_POKECENTER_NURSE
 	object SPRITE_LINK_RECEPTIONIST,  5,  2, STAY, DOWN, VIOLET_POKECENTER_LINK_RECEPTIONIST
 	object SPRITE_LINK_RECEPTIONIST,  1,  1, STAY, DOWN, VIOLET_POKECENTER_WONDER_TRADE_RECEPTIONIST
-	object SPRITE_BENCH_LASS,  0, 16, STAY, NONE, VIOLET_POKECENTER_BENCH_LASS
+	object SPRITE_BENCH_COOLTRAINER,  0, 16, STAY, NONE, VIOLET_POKECENTER_BENCH_COOLTRAINER
 
 	def_warps_to VIOLET_POKECENTER
 
@@ -34,7 +34,7 @@ VioletPokecenter_TextPointers:
 	dw VioletHealNurseText
 	dw VioletTradeNurseText
 	dw VioletWonderTradeNurseText
-	dw VioletBenchLassText
+	dw VioletBenchGirlText
 
 VioletHealNurseText:
 	script_pokecenter_nurse
@@ -47,11 +47,12 @@ VioletWonderTradeNurseText:
 	farcall DoWonderTradeDialogue
 	jp TextScriptEnd
 
-VioletBenchLassText:
-	text "I was exploring"
-	line "the RUINS OF ALPH"
-	cont "earlier."
+VioletBenchGirlText:
+	text "I tried to take on"
+	line "FALKNER, but my"
+	cont "trusty BULBASAUR"
+	cont "couldn't hack it."
 
-	para "Something weird is"
-	line "going on there…"
+	para "I need to rethink"
+	line "my strategy…"
 	done

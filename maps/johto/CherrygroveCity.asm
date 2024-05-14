@@ -6,6 +6,8 @@
 	const_export CHERRYGROVE_LASS
 	const_export CHERRYGROVE_GUY
 	; Signs
+	const CHERRYGROVE_POKECENTER_SIGN
+	const CHERRYGROVE_MART_SIGN
 	const CHERRYGROVE_CITY_SIGN
 	const CHERRYGROVE_GUIDE_GENT_SIGN
 
@@ -20,6 +22,8 @@ CherrygroveCity_Object:
 	warp 31, 11, 0, CHERRYGROVE_HOUSE_3
 
 	def_signs
+	sign 30,  3, CHERRYGROVE_POKECENTER_SIGN
+	sign 24,  3, CHERRYGROVE_MART_SIGN
 	sign 30,  8, CHERRYGROVE_CITY_SIGN
 	sign 23,  9, CHERRYGROVE_GUIDE_GENT_SIGN
 
@@ -224,6 +228,8 @@ CherrygroveCity_TextPointers:
 	dw CherrygroveIslandGuyText
 	dw CherrygroveLassText
 	dw CherrygroveGuyText
+	dw PokeCenterSignText
+	dw MartSignText
 	dw CherrygroveCitySignText
 	dw CherrygroveGuideGentSignText
 

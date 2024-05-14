@@ -200,92 +200,6 @@ _JustAMomentText::
 	text "Just a moment."
 	done
 
-TMNotebookText::
-	text "It's a pamphlet"
-	line "on TMs."
-
-	para "…"
-
-	para "There are 50 TMs"
-	line "in all."
-
-	para "There are also 5"
-	line "HMs that can be"
-	cont "used repeatedly."
-
-	para "SILPH CO.@"
-	text_end
-
-_TurnPageText::
-	text "Turn the page?"
-	done
-
-_PokemonSchoolNotebookText5::
-	text "GIRL: Hey! Don't"
-	line "look at my notes!@"
-	text_end
-
-_PokemonSchoolNotebookText1::
-	text "Looked at the"
-	line "notebook!"
-
-	para "First page…"
-
-	para "# BALLs are"
-	line "used to catch"
-	cont "#MON."
-
-	para "Up to 6 #MON"
-	line "can be carried."
-
-	para "People who raise"
-	line "and make #MON"
-	cont "fight are called"
-	cont "#MON trainers."
-	prompt
-
-_PokemonSchoolNotebookText2::
-	text "Second page…"
-
-	para "A healthy #MON"
-	line "may be hard to"
-	cont "catch, so weaken"
-	cont "it first!"
-
-	para "Poison, burns and"
-	line "other damage are"
-	cont "effective!"
-	prompt
-
-_PokemonSchoolNotebookText3::
-	text "Third page…"
-
-	para "#MON trainers"
-	line "seek others to"
-	cont "engage in #MON"
-	cont "fights."
-
-	para "Battles are"
-	line "constantly fought"
-	cont "at #MON GYMs."
-	prompt
-
-_PokemonSchoolNotebookText4::
-	text "Fourth page…"
-
-	para "The goal for"
-	line "#MON trainers"
-	cont "is to beat the "
-	cont "top 8 #MON"
-	cont "GYM LEADERs."
-
-	para "Do so to earn the"
-	line "right to face…"
-
-	para "The ELITE FOUR of"
-	line "#MON LEAGUE!"
-	prompt
-
 _AerodactylFossilText::
 	text "AERODACTYL Fossil"
 	line "A primitive and"
@@ -297,40 +211,6 @@ _KabutopsFossilText::
 	line "A primitive and"
 	cont "rare #MON."
 	done
-
-_LinkCableHelpText1::
-	text "TRAINER TIPS"
-
-	para "Using a Game Link"
-	line "Cable"
-	prompt
-
-_LinkCableHelpText2::
-	text "Which heading do"
-	line "you want to read?"
-	done
-
-_LinkCableInfoText1::
-	text "When you have"
-	line "linked your GAME"
-	cont "BOY with another"
-	cont "GAME BOY, talk to"
-	cont "the attendant on"
-	cont "the right in any"
-	cont "#MON CENTER."
-	prompt
-
-_LinkCableInfoText2::
-	text "COLOSSEUM lets"
-	line "you play against"
-	cont "a friend."
-	prompt
-
-_LinkCableInfoText3::
-	text "TRADE CENTER is"
-	line "used for trading"
-	cont "#MON."
-	prompt
 
 _PokemonSchoolBlackboardText1::
 	text "The blackboard"
