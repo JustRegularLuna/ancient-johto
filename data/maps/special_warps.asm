@@ -103,5 +103,5 @@ KansaiFlyWarpDataPtr:
 	fly_warp_spec SILENT_HILLS,     .SilentHills
 	fly_warp_spec SAKURA_TOWN,      .SakuraTown
 
-.SilentHills:     fly_warp SILENT_HILLS,     13, 6
-.SakuraTown:      fly_warp SAKURA_TOWN,      29, 4
+.SilentHills:     fly_warp SILENT_HILLS,     11, 6
+.SakuraTown:      fly_warp SAKURA_TOWN,      31, 22
