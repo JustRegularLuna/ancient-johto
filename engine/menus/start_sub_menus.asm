@@ -118,7 +118,7 @@ StartMenu_Pokemon::
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
-	ld a, [wJohtoBadges] ; badges obtained
+	ld a, [wKansaiBadges] ; badges obtained
 	jp hl
 .outOfBattleMovePointers
 	dw .cut
@@ -468,7 +468,7 @@ StartMenu_TrainerInfo::
 	xor a
 	ldh [hTileAnimations], a
 	call DrawTrainerInfo
-	; draw Johto badges by default
+	; draw Kansai badges by default
 	predef DrawBadges ; draw badges
 	ld b, SET_PAL_TRAINER_CARD
 	call RunPaletteCommand
@@ -536,10 +536,10 @@ DrawTrainerInfo:
 	ld hl, BadgeNumbersTileGraphics  ; badge number tile patterns
 	ld de, vChars1 tile $58
 	call TrainerInfo_FarCopyData
-	ld hl, JohtoGymLeaderFaceAndBadgeTileGraphics  ; gym leader face and badge tile patterns
+	ld hl, KansaiGymLeaderFaceAndBadgeTileGraphics  ; gym leader face and badge tile patterns
 	ld de, vChars2 tile $20
 	ld bc, 8 * 8 tiles
-	ld a, BANK(JohtoGymLeaderFaceAndBadgeTileGraphics)
+	ld a, BANK(KansaiGymLeaderFaceAndBadgeTileGraphics)
 	call FarCopyData2
 	ld hl, TextBoxGraphics
 	ld de, 13 tiles

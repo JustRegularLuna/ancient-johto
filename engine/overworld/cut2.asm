@@ -1,6 +1,6 @@
 AnimCut:
 	ld a, [wCutTile]
-	cp $52 ; OVERWORLD grass
+	cp $52 ; KANTO grass
 	jr z, .grass
 	cp $04 ; JOHTO grass
 	jr z, .grass

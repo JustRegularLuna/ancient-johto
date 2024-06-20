@@ -17,7 +17,7 @@ BoulderText::
 	text_far _BoulderText
 	; expanded for Field Move hack
 	text_asm
-	ld a, [wJohtoBadges]
+	ld a, [wKansaiBadges]
 	bit BIT_PLAINBADGE, a
 	jr z, .done
 

@@ -1,7 +1,7 @@
 ; Original proof-of-concept code by Yenatch.
 ; Expanded by Luna to work more like Gen 2, and to fix a bug with Cut requiring the wrong badge.
 ; Additional comments added by Luna to clarify existing yenatch code and new Luna code for Red++.
-; Edited further for RedGold/BlueSilver to check for all the Johto related stuff.
+; Edited further for RedGold/BlueSilver to check for all the Kansai related stuff.
 
 TryFieldMove:: ; predef
 	call GetPredefRegisters
@@ -34,7 +34,7 @@ TrySurf:
 	call HasPartyMove
 	jr nz, .no
 
-	ld a, [wJohtoBadges]
+	ld a, [wKansaiBadges]
 	bit BIT_FOGBADGE, a
 	jr z, .no
 	
@@ -88,7 +88,7 @@ TryCut: ; yenatch's code originally checked for the SOUL_BADGE like SURF does by
 	call HasPartyMove
 	jr nz, .no2
 
-	ld a, [wJohtoBadges]
+	ld a, [wKansaiBadges]
 	bit BIT_HIVEBADGE, a
 	jr z, .no2
 
@@ -152,14 +152,14 @@ TryHeadbutt:
 
 IsHeadbuttTile:
 	ld a, [wCurMapTileset]
-	cp JOHTO
-	jr z, .johto
+	cp SILENT
+	jr z, .silent
 	; TODO: Checks for Ilex Forest tileset and stuff
 	jr .no
 
-.johto
+.silent
 	ld a, [wTileInFrontOfPlayer]
-	cp $3E
+	cp $34
 	jr z, .yes
 .no
 	and a
@@ -184,6 +184,8 @@ IsSurfTile:
 	jr z, .yes
 	cp $32 ; east shore
 	jr z, .yes
+	cp $07 ; east shore Silent
+	jr z, .yes
 .ok
 	cp $14 ; water
 	jr z, .yes
@@ -198,7 +200,7 @@ IsSurfTile:
 ; originally contained DOJO but that tileset does not exist in Red++
 ; just make sure this has all tilesets you want to surf in listed
 WaterTilesets2: ; Renamed from what Yenatch called it, since that had overlap errors
-	db OVERWORLD
+	db KANTO
 	db FOREST
 	db GYM
 	db SHIP
@@ -206,22 +208,21 @@ WaterTilesets2: ; Renamed from what Yenatch called it, since that had overlap er
 	db CAVERN
 	db FACILITY
 	db PLATEAU
-	db JOHTO
-	db JOHTO_MODERN
-	db JOHTO_CAVE
-	db JOHTO_FOREST
+	db SILENT
+	db KANSAI_CAVE
+	db KANSAI_FOREST
 	db -1 ; end
 
 IsCutTile:
 	ld a, [wCurMapTileset]
-	and a ; OVERWORLD
+	and a ; KANTO
 	jr z, .overworld
 
-	cp JOHTO
-	jr z, .johto
+	cp SILENT
+	jr z, .silent
 
-	cp JOHTO_FOREST
-	jr z, .johto_forest
+	cp KANSAI_FOREST
+	jr z, .silent_forest
 
 	jr .no
 
@@ -231,13 +232,13 @@ IsCutTile:
 	jr z, .yes
 	jr .no
 
-.johto
+.silent
 	ld a, [wTileInFrontOfPlayer]
-	cp $45
+	cp $2E
 	jr z, .yes
 	jr .no
 
-.johto_forest
+.silent_forest
 	ld a, [wTileInFrontOfPlayer]
 	cp $38
 	jr z, .yes

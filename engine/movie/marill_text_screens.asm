@@ -93,6 +93,6 @@ VersionScreenText4:
 	db   "I hope you enjoy"
 	next "this nostalgic"
 	next "adventure in the"
-	next "Johto region and"
-	next "beyond."
+	next "Kansai region"
+	next "and beyond."
 	next "  - Luna@"

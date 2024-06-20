@@ -32,7 +32,7 @@ IsPlayerStandingOnWarp::
 	ret
 
 CheckForceBikeOrSurf::
-; Johto does not have forced biking or surfing
+; Kansai does not have forced biking or surfing
 	ld a, [wCurRegion]
 	and a
 	ret nz

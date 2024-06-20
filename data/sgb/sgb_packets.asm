@@ -170,7 +170,7 @@ BlkPacket_PartyMenu:
 	db $03, 12,10, 18,11, $00
 	db $00
 
-BlkPacket_TrainerCard: ; Johto Badges
+BlkPacket_TrainerCard: ; Kansai Badges
 	ATTR_BLK 8
 	ATTR_BLK_DATA %010, 0,0,0, 03,12, 04,13 ; Zephyr Badge
 	ATTR_BLK_DATA %010, 2,2,0, 07,12, 08,13 ; Hive Badge

@@ -121,7 +121,7 @@ GetBattleTransitionID_CompareLevels:
 GetBattleTransitionID_IsDungeonMap:
 	ld a, [wCurRegion]
 	and a ; Kanto?
-	jr nz, IsJohtoDungeonMap
+	jr nz, IsKansaiDungeonMap
 	ld a, [wCurMap]
 	ld e, a
 	ld hl, DungeonMaps1
@@ -151,10 +151,10 @@ GetBattleTransitionID_IsDungeonMap:
 	res 2, c
 	ret
 
-IsJohtoDungeonMap:
+IsKansaiDungeonMap:
 	ld a, [wCurMap]
 	ld e, a
-	ld hl, JohtoDungeonMaps1
+	ld hl, KansaiDungeonMaps1
 .loop1
 	ld a, [hli]
 	cp $ff
@@ -165,7 +165,7 @@ IsJohtoDungeonMap:
 	set 2, c
 	ret
 .noMatch1
-	ld hl, JohtoDungeonMaps2
+	ld hl, KansaiDungeonMaps2
 .loop2
 	ld a, [hli]
 	cp $ff

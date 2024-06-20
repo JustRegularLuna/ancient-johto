@@ -1179,13 +1179,13 @@ HandlePlayerBlackOut:
 	call DelayFrames
 	ld hl, Rival1WinText
 	call PrintText
-	; Check for rival battle in Cherrygrove
+	; Check for rival battle in Sakura Town
 	ld a, [wCurRegion]
-	cp JOHTO_REGION
+	cp KANSAI_REGION
 	jr nz, .notRival1Battle
 	ld a, [wCurMap]
-	cp CHERRYGROVE_CITY
-	ret z            ; starter battle in Cherrygrove: don't black out
+	cp SAKURA_TOWN
+	ret z            ; starter battle in Sakura Town: don't black out
 .notRival1Battle
 	ld b, SET_PAL_BATTLE_BLACK
 	call RunPaletteCommand
@@ -3346,7 +3346,7 @@ IsGhostBattle:
 	call IsItemInBag
 	ret z
 .johtoChecks
-	; TODO: Johto ghost battle checks here
+	; TODO: Kansai ghost battle checks here
 .next
 	ld a, 1
 	and a
@@ -3920,7 +3920,7 @@ CheckForDisobedience:
 ; it was traded
 .monIsTraded
 ; what level might disobey?
-	ld hl, wJohtoBadges
+	ld hl, wKansaiBadges
 	bit BIT_RISINGBADGE, [hl]
 	ld a, 101
 	jr nz, .next
@@ -6676,7 +6676,7 @@ ApplyBadgeStatBoosts:
 	ld a, [wLinkState]
 	cp LINK_STATE_BATTLING
 	ret z ; return if link battle
-	ld a, [wJohtoBadges]
+	ld a, [wKansaiBadges]
 ; swap Plain Badge and Mineral Badge.
 ; copied from pokegold
 	ld d, a

@@ -40,8 +40,6 @@ MapHSPointers:
 	dw NoHS ; ROUTE_23
 	dw NoHS ; ROUTE_24
 	dw NoHS ; ROUTE_25
-	dw NoHS ; ROUTE_26
-	dw NoHS ; KANTO_ROUTE_27
 	dw NoHS ; REDS_HOUSE_1F
 	dw NoHS ; REDS_HOUSE_2F
 	dw NoHS ; BLUES_HOUSE
@@ -178,7 +176,7 @@ MapHSPointers:
 	dw NoHS ; CINNABAR_LAB_FOSSIL_ROOM
 	dw NoHS ; CINNABAR_POKECENTER
 	dw NoHS ; CINNABAR_MART
-	dw NoHS ; TOHJO_FALLS
+	dw NoHS ; UNUSED_MAP_AD
 	dw NoHS ; INDIGO_PLATEAU_LOBBY
 	dw NoHS ; COPYCATS_HOUSE_1F
 	dw NoHS ; COPYCATS_HOUSE_2F
@@ -271,74 +269,40 @@ ChampionsRoomHS:
 	assert_table_length NUM_HS_OBJECTS + 1
 
 
-JohtoMapHSPointers:
+KansaiMapHSPointers:
 ; entries correspond to map ids
-	table_width 2, JohtoMapHSPointers
-	dw NewBarkTownHS ; New Bark
-	dw CherrygroveHS ; Cherrygrove
-	dw VioletCityHS  ; Violet
-	dw JohtoNoHS ; Ruins Of Alph Outside
-	dw Route29HS ; Route 29
-	dw Route30HS ; Route 30
-	dw Route31HS ; Route 31
-	dw JohtoNoHS ; Route 32
-	dw Route36HS ; Route 36
-	dw JohtoNoHS ; Johto Route 27
-	dw JohtoNoHS ; Players House 1F
-	dw JohtoNoHS ; Players House 2f
-	dw JohtoNoHS ; New Bark House 1
-	dw JohtoNoHS ; New Bark House 2
-	dw ElmsLabHS ; Elm's Lab
-	dw JohtoNoHS ; Cherrygrove Pokecenter
-	dw JohtoNoHS ; Cherrygrove Mart
-	dw JohtoNoHS ; Cherrygrove House 1
-	dw JohtoNoHS ; Cherrygrove House 2
-	dw JohtoNoHS ; Cherrygrove House 3
-	dw JohtoNoHS ; Route 30 Berry House
+	table_width 2, KansaiMapHSPointers
+	dw SilentHillsHS ; Silent Hills
+	dw SakuraHS   ; Sakura Town
+	dw KRoute1HS  ; Kansai Route 1
+	dw KansaiNoHS ; Players House 1F
+	dw KansaiNoHS ; Players House 2f
+	dw KansaiNoHS ; Silent Pokecenter
+	dw KansaiNoHS ; Elm's House
+	dw ElmsLabHS  ; Elm's Lab
+	dw KansaiNoHS ; Sakura Pokecenter
+	dw KansaiNoHS ; Sakura Mart
+	dw KansaiNoHS ; Sakura House 1
+	dw KansaiNoHS ; Sakura House 2
+	dw KansaiNoHS ; Sakura House 3
+	dw KansaiNoHS ; Sakura Secret House
 	dw MrPokemonsHouseHS ; Mr. Pokemon's House
-	dw JohtoNoHS ; Route 31 Gate
-	dw JohtoNoHS ; Violet Pokecenter
-	dw JohtoNoHS ; Violet Mart
-	dw JohtoNoHS ; Violet School
-	dw JohtoNoHS ; Violet Trade House
-	dw JohtoNoHS ; Violet House 2
-	dw JohtoNoHS ; Violet Gym
-	dw JohtoNoHS ; Sprout Tower 1F
-	dw JohtoNoHS ; Sprout Tower 2F
-	dw JohtoNoHS ; Sprout Tower 3F
-	dw JohtoNoHS ; Ruins of Alph East Gate
-	dw JohtoNoHS ; Ruins of Alph North Gate
-	dw JohtoNoHS ; Ruins of Alph North Gate 2F
-	dw JohtoNoHS ; Ruins of Alph Lab
-	assert_table_length NUM_JOHTO_MAPS
+	assert_table_length NUM_KANSAI_MAPS
 	dw -1 ; end
 
-JohtoNoHS:
+KansaiNoHS:
 	db $FF, $FF, $FF
 
-JohtoMissableObjects:
+KansaiMissableObjects:
 ; entries correspond to HS_* constants (see constants/hide_show_constants)
-	table_width 3, JohtoMissableObjects
+	table_width 3, KansaiMissableObjects
 ; format: map id, object id, HIDE/SHOW
-NewBarkTownHS:
-	db NEW_BARK_TOWN, NEWBARK_RIVAL, SHOW
-CherrygroveHS:
-	db CHERRYGROVE_CITY, CHERRYGROVE_RIVAL, HIDE
-VioletCityHS:
-	db VIOLET_CITY, VIOLET_ITEMBALL_1, SHOW
-	db VIOLET_CITY, VIOLET_ITEMBALL_2, SHOW
-Route29HS:
-	db ROUTE_29, ROUTE29_ITEMBALL, SHOW
-Route30HS:
-	db ROUTE_30, ROUTE30_YOUNGSTER_ALAN, HIDE
-	db ROUTE_30, ROUTE30_YOUNGSTER_ALAN_BLOCKER, SHOW
-	db ROUTE_30, ROUTE30_RATTATA_BLOCKER_1, SHOW
-	db ROUTE_30, ROUTE30_RATTATA_BLOCKER_2, SHOW
-Route31HS:
-	db ROUTE_31, ROUTE31_ITEMBALL_1, SHOW
-	db ROUTE_31, ROUTE31_ITEMBALL_2, SHOW
-Route36HS:
-	db ROUTE_36, ROUTE36_SUDOWOODO, SHOW
+SilentHillsHS:
+	db SILENT_HILLS, SILENT_RIVAL, SHOW
+SakuraHS:
+	db SAKURA_TOWN, SAKURA_RIVAL, HIDE
+KRoute1HS:
+	db KANSAI_ROUTE_1, KANSAI_ROUTE_1_ITEMBALL, SHOW
 ElmsLabHS:
 	db ELMS_LAB, ELMSLAB_STARTER_BALL_1, SHOW
 	db ELMS_LAB, ELMSLAB_STARTER_BALL_2, SHOW
@@ -347,4 +311,4 @@ MrPokemonsHouseHS:
 	db MR_POKEMONS_HOUSE, MR_POKEMONS_HOUSE_OAK, SHOW
 ;end of list
 	db $FF, $01, SHOW ; end
-	assert_table_length NUM_JOHTO_HS_OBJECTS + 1
+	assert_table_length NUM_KANSAI_HS_OBJECTS + 1

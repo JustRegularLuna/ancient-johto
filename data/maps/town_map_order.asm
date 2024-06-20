@@ -46,21 +46,10 @@ TownMapOrder:
 	db VICTORY_ROAD_3F
 	db INDIGO_PLATEAU
 	db POWER_PLANT
-	db ROUTE_26
-	db KANTO_ROUTE_27
-	db TOHJO_FALLS
 TownMapOrderEnd:
 
-JohtoTownMapOrder:
-	db NEW_BARK_TOWN
-	db ROUTE_29
-	db CHERRYGROVE_CITY
-	db ROUTE_30
-	db ROUTE_31
-	db VIOLET_CITY
-	db SPROUT_TOWER_1F
-	db ROUTE_32
-	db RUINS_OF_ALPH_OUTSIDE
-	db ROUTE_36
-	db JOHTO_ROUTE_27
-JohtoTownMapOrderEnd:
+KansaiTownMapOrder:
+	db SILENT_HILLS
+	db KANSAI_ROUTE_1
+	db SAKURA_TOWN
+KansaiTownMapOrderEnd:

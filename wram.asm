@@ -2268,7 +2268,7 @@ wOptions::
 
 wBadges::
 wKantoBadges:: flag_array NUM_KANTO_BADGES
-wJohtoBadges:: flag_array NUM_JOHTO_BADGES
+wKansaiBadges:: flag_array NUM_KANSAI_BADGES
 
 wLetterPrintingDelayFlags::
 ; bit 0: If 0, limit the delay to 1 frame. Note that this has no effect if
@@ -2589,10 +2589,10 @@ wMissableObjectFlags::
 	ds 32
 wMissableObjectFlagsEnd::
 
-wJohtoMissableObjectFlags::
+wKansaiMissableObjectFlags::
 ; bit array of missable objects. set = removed
 	ds 32
-wJohtoMissableObjectFlagsEnd::
+wKansaiMissableObjectFlagsEnd::
 
 
 
@@ -2614,16 +2614,10 @@ wGenericTrainersCurScript::
 wPlayersHouse2FCurScript::
 	ds 1
 
-wNewBarkTownCurScript::
+wSilentHillsCurScript::
 	ds 1
 
-wCherrygroveCityCurScript::
-	ds 1
-
-wRoute30CurScript::
-	ds 1
-
-wRoute31CurScript::
+wSakuraTownCurScript::
 	ds 1
 
 wElmsLabCurScript::
@@ -2673,10 +2667,10 @@ wObtainedHiddenItemsFlags::
 wObtainedHiddenCoinsFlags::
 	ds 2
 
-wObtainedJohtoHiddenItemsFlags::
+wObtainedKansaiHiddenItemsFlags::
 	ds 14
 
-wObtainedJohtoHiddenCoinsFlags::
+wObtainedKansaiHiddenCoinsFlags::
 	ds 2
 
 wWalkBikeSurfState::
@@ -2688,7 +2682,7 @@ wWalkBikeSurfState::
 wTownVisitedFlag::
 	flag_array NUM_CITY_MAPS
 
-wJohtoTownVisitedFlag::
+wKansaiTownVisitedFlag::
 	ds 2
 
 wSafariSteps::

@@ -103,9 +103,9 @@ SuperRodData:
 
 
 
-JohtoSuperRodData:
+KansaiSuperRodData:
 	; map, fishing group
-	dbw NEW_BARK_TOWN,       .Group1
+	dbw SILENT_HILLS,         .Group1
 	db -1 ; end
 
 ; fishing groups

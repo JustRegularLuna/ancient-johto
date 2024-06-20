@@ -12,7 +12,7 @@ PrintBeginningBattleText:
 	jr c, .pokemonTower
 	jr .notPokemonTower
 .johtoChecks
-	;TODO: Add checks for any ghost maps in Johto
+	;TODO: Add checks for any ghost maps in Kansai
 .notPokemonTower
 	ld a, [wEnemyMonSpecies2]
 	call PlayCry

@@ -37,26 +37,17 @@ KantoTreeMonPointerTable:
 	dw TreeMons1 ; ROUTE_23
 	dw TreeMons1 ; ROUTE_24
 	dw TreeMons1 ; ROUTE_25
-	dw TreeMons1 ; ROUTE_26
-	dw TreeMons1 ; KANTO_ROUTE_27
 	assert_table_length FIRST_INDOOR_MAP
 	; Any Kanto map not in this list defaults to TreeMons1
 
 
-JohtoTreeMonPointerTable:
-	table_width 2, JohtoTreeMonPointerTable
-	dw TreeMons1 ; NEW_BARK_TOWN
-	dw TreeMons1 ; CHERRYGROVE_CITY
-	dw TreeMons1 ; VIOLET_CITY
-	dw TreeMons1 ; RUINS_OF_ALPH_OUTSIDE
-	dw TreeMons1 ; ROUTE_29
-	dw TreeMons1 ; ROUTE_30
-	dw TreeMons1 ; ROUTE_31
-	dw TreeMons1 ; ROUTE_32
-	dw TreeMons1 ; ROUTE_36
-	dw TreeMons1 ; JOHTO_ROUTE_27
-	assert_table_length FIRST_JOHTO_INDOOR_MAP
-	; Any Johto map not in this list defaults to TreeMons1
+KansaiTreeMonPointerTable:
+	table_width 2, KansaiTreeMonPointerTable
+	dw TreeMons1 ; SILENT_HILLS
+	dw TreeMons1 ; SAKURA_TOWN
+	dw TreeMons1 ; KANSAI_ROUTE_1
+	assert_table_length FIRST_KANSAI_INDOOR_MAP
+	; Any Kansai map not in this list defaults to TreeMons1
 
 
 TreeMons1:

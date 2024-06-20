@@ -74,7 +74,7 @@ IF DEF(_DEBUG)
 	call DebugRegionChoice
 	ld a, [wCurrentMenuItem]
 ELSE
-	ld a, JOHTO_REGION
+	ld a, KANSAI_REGION
 ENDC
 	ld [wCurRegion], a
 	ld [wDestinationRegion], a

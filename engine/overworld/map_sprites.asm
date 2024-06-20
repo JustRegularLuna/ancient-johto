@@ -267,7 +267,7 @@ InitOutsideMapSprites:
 	jr .city
 .johtoCheck
 	ld a, [wCurMap]
-	cp FIRST_JOHTO_INDOOR_MAP
+	cp FIRST_KANSAI_INDOOR_MAP
 	ret nc
 .city
 	push af
@@ -275,7 +275,7 @@ InitOutsideMapSprites:
 	and a ; Kanto?
 	ld hl, MapSpriteSets
 	jr z, .gotSpriteSetList
-	ld hl, JohtoMapSpriteSets
+	ld hl, KansaiMapSpriteSets
 .gotSpriteSetList
 	pop af
 	add l
@@ -309,8 +309,8 @@ InitOutsideMapSprites:
 	and a ; Kanto?
 	ld de, SpriteSets
 	jr z, .gotRegionSpriteSets
-	; else Johto
-	ld de, JohtoSpriteSets
+	; else Kansai
+	ld de, KansaiSpriteSets
 .gotRegionSpriteSets
 	pop af
 ; add a to de to get offset of sprite set
@@ -424,7 +424,7 @@ GetSplitMapSpriteSetID:
 	jr .gotSplitMapSpriteSets
 .johto
 	pop af
-	ld hl, JohtoSplitMapSpriteSets
+	ld hl, KansaiSplitMapSpriteSets
 .gotSplitMapSpriteSets
 	and $0f
 	dec a

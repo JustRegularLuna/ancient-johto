@@ -10,7 +10,6 @@ DungeonMaps1:
 	db ROCK_TUNNEL_1F
 	db SEAFOAM_ISLANDS_1F
 	db ROCK_TUNNEL_B1F
-	db TOHJO_FALLS
 	db -1 ; end
 
 ; GetBattleTransitionID_IsDungeonMap checks if wCurMap
@@ -25,15 +24,13 @@ DungeonMaps2:
 	; SILPH_CO_[2-8]F, POKEMON_MANSION[2F-B1F], SAFARI_ZONE, and
 	; CERULEAN_CAVE maps, except for SILPH_CO_1F
 	db SILPH_CO_2F, CERULEAN_CAVE_1F
-	; SPROUT_TOWER maps
-	db SPROUT_TOWER_1F, SPROUT_TOWER_3F
 	db -1 ; end
 
-JohtoDungeonMaps1:
+KansaiDungeonMaps1:
 	;db ILEX_FOREST
 	db -1 ; end
 
-JohtoDungeonMaps2:
+KansaiDungeonMaps2:
 	; all Union Cave maps
 	;db UNION_CAVE_1F, UNION_CAVE_B2F
 	db -1 ; end

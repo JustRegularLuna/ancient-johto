@@ -1,6 +1,6 @@
 WarpTileIDPointers:
 	table_width 2, WarpTileIDPointers
-	dw .OverworldWarpTileIDs
+	dw .KantoWarpTileIDs
 	dw .PlayersHouseWarpTileIDs
 	dw .MartWarpTileIDs
 	dw .ForestWarpTileIDs
@@ -22,14 +22,13 @@ WarpTileIDPointers:
 	dw .ClubWarpTileIDs
 	dw .FacilityWarpTileIDs
 	dw .PlateauWarpTileIDs
-	dw .JohtoWarpTileIDs
-	dw .JohtoModernWarpTileIDs
-	dw .JohtoCaveWarpTileIDs
+	dw .SilentWarpTileIDs
+	dw .KansaiCaveWarpTileIDs
 	dw .TraditionalHouseWarpTileIDs
 	dw .EliteFourRoomWarpTileIDs
 	dw .TowerWarpTileIDs
-	dw .RuinsOfAlphWarpTileIDs
-	dw .JohtoForestWarpTileIDs
+	dw .RuinsWarpTileIDs
+	dw .KansaiForestWarpTileIDs
 	dw .ParkWarpTileIDs
 	dw .BikeTilesetWarpTileIDs
 	dw .IcePathWarpTileIDs
@@ -47,7 +46,7 @@ ENDR
 	db -1 ; end
 ENDM
 
-.OverworldWarpTileIDs:
+.KantoWarpTileIDs:
 	warp_tiles $1B, $58
 
 .MuseumWarpTileIDs:
@@ -113,13 +112,10 @@ ENDM
 .ClubWarpTileIDs:
 	warp_tiles
 
-.JohtoWarpTileIDs:
-	warp_tiles $29, $39, $56
+.SilentWarpTileIDs:
+	warp_tiles $22, $5E
 
-.JohtoModernWarpTileIDs:
-	warp_tiles $06, $27, $35, $39
-
-.JohtoCaveWarpTileIDs:
+.KansaiCaveWarpTileIDs:
 	warp_tiles $1E, $30, $32, $38, $3A
 
 .TraditionalHouseWarpTileIDs:
@@ -131,10 +127,10 @@ ENDM
 .TowerWarpTileIDs:
 	warp_tiles $01, $10, $1C, $1E, $54
 
-.RuinsOfAlphWarpTileIDs:
+.RuinsWarpTileIDs:
 	warp_tiles $01, $18, $28
 
-.JohtoForestWarpTileIDs:
+.KansaiForestWarpTileIDs:
 	warp_tiles $17
 
 .ParkWarpTileIDs:

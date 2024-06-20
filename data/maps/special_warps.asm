@@ -16,7 +16,7 @@ DungeonWarpList:
 	db POKEMON_MANSION_2F,  3
 	db -1 ; end
 
-JohtoDungeonWarpList:
+KansaiDungeonWarpList:
 	db -1 ; end
 
 
@@ -40,7 +40,7 @@ DungeonWarpData:
 	fly_warp POKEMON_MANSION_1F,  16, 14
 	fly_warp POKEMON_MANSION_2F,  18, 14
 
-JohtoDungeonWarpData:
+KansaiDungeonWarpData:
 	;fly_warp SEAFOAM_ISLANDS_B1F, 18,  7
 
 
@@ -50,7 +50,7 @@ MACRO special_warp_spec
 	db \4
 ENDM
 
-JohtoFirstMapSpec:
+KansaiFirstMapSpec:
 	special_warp_spec PLAYERS_HOUSE_2F, 4, 3, PLAYERS_ROOM
 FirstMapSpec:
 	special_warp_spec REDS_HOUSE_2F, 3, 6, PLAYERS_HOUSE
@@ -99,9 +99,9 @@ FlyWarpDataPtr:
 .Route10:        fly_warp ROUTE_10,        11, 20
 
 
-JohtoFlyWarpDataPtr:
-	fly_warp_spec NEW_BARK_TOWN,    .NewBarkTown
-	fly_warp_spec CHERRYGROVE_CITY, .CherrygroveCity
+KansaiFlyWarpDataPtr:
+	fly_warp_spec SILENT_HILLS,     .SilentHills
+	fly_warp_spec SAKURA_TOWN,      .SakuraTown
 
-.NewBarkTown:     fly_warp NEW_BARK_TOWN,    13, 6
-.CherrygroveCity: fly_warp CHERRYGROVE_CITY, 29, 4
+.SilentHills:     fly_warp SILENT_HILLS,     13, 6
+.SakuraTown:      fly_warp SAKURA_TOWN,      29, 4

@@ -4,12 +4,12 @@ UseHeadbuttOW::
 	xor a
 	ld [wActionResultOrTookBattleTurn], a
 	ld a, [wCurMapTileset]
-	cp JOHTO
-	jr z, .johto
+	cp SILENT
+	jr z, .silent
 	; TODO: More tileset checks
 	jr nz, .noHeadbutt
 
-.johto
+.silent
 	ld a, [wTileInFrontOfPlayer]
 	cp $3E ; Tree corner
 	jr z, .useHeadbutt
@@ -67,14 +67,14 @@ GetHeadbuttMons:
 	ld a, [wCurRegion]
 	cp KANTO_REGION
 	jr z, .kanto
-	; else JOHTO_REGION
-.johto
+	; else KANSAI_REGION
+.silent
 	ld a, [wCurMap]
-	cp FIRST_JOHTO_INDOOR_MAP
+	cp FIRST_KANSAI_INDOOR_MAP
 	ld hl, TreeMons1
 	jr nc, .skipCalc
 
-	ld hl, JohtoTreeMonPointerTable
+	ld hl, KansaiTreeMonPointerTable
 	ld bc, $2
 	call AddNTimes
 	; hl not points to the entry in the table

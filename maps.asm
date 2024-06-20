@@ -984,199 +984,83 @@ AgathasRoom_Blocks: INCBIN "maps/kanto/AgathasRoom.blk"
 
 
 
-SECTION "Johto Cities 1", ROMX
+SECTION "Kansai Cities 1", ROMX
 
-INCLUDE "data/maps/headers/NewBarkTown.asm"
-INCLUDE "maps/johto/NewBarkTown.asm"
-NewBarkTown_Blocks: INCBIN "maps/johto/NewBarkTown.blk"
+INCLUDE "data/maps/headers/SilentHills.asm"
+INCLUDE "maps/kansai/SilentHills.asm"
+SilentHills_Blocks: INCBIN "maps/kansai/SilentHills.blk"
 
-INCLUDE "data/maps/headers/CherrygroveCity.asm"
-INCLUDE "maps/johto/CherrygroveCity.asm"
-CherrygroveCity_Blocks: INCBIN "maps/johto/CherrygroveCity.blk"
+INCLUDE "data/maps/headers/SakuraTown.asm"
+INCLUDE "maps/kansai/SakuraTown.asm"
+SakuraTown_Blocks: INCBIN "maps/kansai/SakuraTown.blk"
 
-INCLUDE "data/maps/headers/Route29.asm"
-INCLUDE "maps/johto/Route29.asm"
-Route29_Blocks: INCBIN "maps/johto/Route29.blk"
-
-INCLUDE "data/maps/headers/Route30.asm"
-INCLUDE "maps/johto/Route30.asm"
-Route30_Blocks: INCBIN "maps/johto/Route30.blk"
-
-INCLUDE "data/maps/headers/Route31.asm"
-INCLUDE "maps/johto/Route31.asm"
-Route31_Blocks: INCBIN "maps/johto/Route31.blk"
-
-INCLUDE "data/maps/headers/VioletCity.asm"
-INCLUDE "maps/johto/VioletCity.asm"
-VioletCity_Blocks: INCBIN "maps/johto/VioletCity.blk"
-
-INCLUDE "data/maps/headers/Route32.asm"
-INCLUDE "maps/johto/Route32.asm"
-Route32_Blocks: INCBIN "maps/johto/Route32.blk"
-
-INCLUDE "data/maps/headers/Route36.asm"
-INCLUDE "maps/johto/Route36.asm"
-Route36_Blocks: INCBIN "maps/johto/Route36.blk"
+INCLUDE "data/maps/headers/KansaiRoute1.asm"
+INCLUDE "maps/kansai/KansaiRoute1.asm"
+KansaiRoute1_Blocks: INCBIN "maps/kansai/KansaiRoute1.blk"
 
 
-SECTION "Johto Maps 1", ROMX
+SECTION "Kansai Maps 1", ROMX
 
 INCLUDE "data/maps/headers/PlayersHouse1F.asm"
-INCLUDE "maps/johto/PlayersHouse1F.asm"
-PlayersHouse1F_Blocks: INCBIN "maps/johto/PlayersHouse1F.blk"
+INCLUDE "maps/kansai/PlayersHouse1F.asm"
+PlayersHouse1F_Blocks: INCBIN "maps/kansai/PlayersHouse1F.blk"
 
 INCLUDE "data/maps/headers/PlayersHouse2F.asm"
-INCLUDE "maps/johto/PlayersHouse2F.asm"
-PlayersHouse2F_Blocks: INCBIN "maps/johto/PlayersHouse2F.blk"
+INCLUDE "maps/kansai/PlayersHouse2F.asm"
+PlayersHouse2F_Blocks: INCBIN "maps/kansai/PlayersHouse2F.blk"
 
 INCLUDE "data/maps/headers/ElmsLab.asm"
-INCLUDE "maps/johto/ElmsLab.asm"
-ElmsLab_Blocks: INCBIN "maps/johto/ElmsLab.blk"
+INCLUDE "maps/kansai/ElmsLab.asm"
+ElmsLab_Blocks: INCBIN "maps/kansai/ElmsLab.blk"
 
 INCLUDE "data/maps/headers/MrPokemonsHouse.asm"
-INCLUDE "maps/johto/MrPokemonsHouse.asm"
-MrPokemonsHouse_Blocks: INCBIN "maps/johto/MrPokemonsHouse.blk"
-
-INCLUDE "data/maps/headers/VioletSchoolHouse.asm"
-INCLUDE "maps/johto/VioletSchoolHouse.asm"
-VioletSchoolHouse_Blocks: INCBIN "maps/johto/VioletSchoolHouse.blk"
-
-INCLUDE "data/maps/headers/VioletGym.asm"
-INCLUDE "maps/johto/VioletGym.asm"
-VioletGym_Blocks: INCBIN "maps/johto/VioletGym.blk"
-
-
-SECTION "Johto Generic Houses 1", ROMX
-
-INCLUDE "data/maps/headers/NewBarkHouse1.asm"
-INCLUDE "maps/johto/NewBarkHouse1.asm"
-
-INCLUDE "data/maps/headers/NewBarkHouse2.asm"
-INCLUDE "maps/johto/NewBarkHouse2.asm"
-
-INCLUDE "data/maps/headers/CherrygroveHouse1.asm"
-INCLUDE "maps/johto/CherrygroveHouse1.asm"
-
-INCLUDE "data/maps/headers/CherrygroveHouse2.asm"
-INCLUDE "maps/johto/CherrygroveHouse2.asm"
-
-INCLUDE "data/maps/headers/CherrygroveHouse3.asm"
-INCLUDE "maps/johto/CherrygroveHouse3.asm"
-
-INCLUDE "data/maps/headers/Route30BerryHouse.asm"
-INCLUDE "maps/johto/Route30BerryHouse.asm"
-
-NewBarkHouse1_Blocks:
-NewBarkHouse2_Blocks:
-CherrygroveHouse1_Blocks:
-CherrygroveHouse2_Blocks:
-CherrygroveHouse3_Blocks:
-Route30BerryHouse_Blocks:
-	INCBIN "maps/johto/NewBarkHouse1.blk"
-
-
-SECTION "Johto Traditional Houses", ROMX
-
-INCLUDE "data/maps/headers/VioletTradeHouse.asm"
-INCLUDE "maps/johto/VioletTradeHouse.asm"
-
-INCLUDE "data/maps/headers/VioletHouse2.asm"
-INCLUDE "maps/johto/VioletHouse2.asm"
-
-VioletTradeHouse_Blocks:
-VioletHouse2_Blocks:
-	INCBIN "maps/johto/VioletTradeHouse.blk"
-
-
-SECTION "Route 27", ROMX
-; Johto and Kanto each have a Route 27 map, that reuse the same blk
-
-INCLUDE "data/maps/headers/KantoRoute27.asm"
-INCLUDE "maps/kanto/KantoRoute27.asm"
-INCLUDE "data/maps/headers/JohtoRoute27.asm"
-INCLUDE "maps/johto/JohtoRoute27.asm"
-KantoRoute27_Blocks: ; INCBIN "maps/kanto/KantoRoute27.blk"
-JohtoRoute27_Blocks: INCBIN "maps/johto/JohtoRoute27.blk"
-
-INCLUDE "data/maps/headers/TohjoFalls.asm"
-INCLUDE "maps/kanto/TohjoFalls.asm"
-TohjoFalls_Blocks: INCBIN "maps/kanto/TohjoFalls.blk"
-
-INCLUDE "data/maps/headers/Route26.asm"
-INCLUDE "maps/kanto/Route26.asm"
-Route26_Blocks : INCBIN "maps/kanto/Route26.blk"
+INCLUDE "maps/kansai/MrPokemonsHouse.asm"
+MrPokemonsHouse_Blocks: INCBIN "maps/kansai/MrPokemonsHouse.blk"
 
 
 
-SECTION "Johto Pokecenters", ROMX
+SECTION "Kansai Generic Houses 1", ROMX
 
-INCLUDE "data/maps/headers/CherrygrovePokecenter.asm"
-INCLUDE "maps/johto/CherrygrovePokecenter.asm"
+INCLUDE "data/maps/headers/ElmsHouse.asm"
+INCLUDE "maps/kansai/ElmsHouse.asm"
 
-INCLUDE "data/maps/headers/VioletPokecenter.asm"
-INCLUDE "maps/johto/VioletPokecenter.asm"
+INCLUDE "data/maps/headers/SakuraHouse1.asm"
+INCLUDE "maps/kansai/SakuraHouse1.asm"
 
-CherrygrovePokecenter_Blocks:
-VioletPokecenter_Blocks:
-	INCBIN "maps/johto/CherrygrovePokecenter.blk"
+INCLUDE "data/maps/headers/SakuraHouse2.asm"
+INCLUDE "maps/kansai/SakuraHouse2.asm"
 
+INCLUDE "data/maps/headers/SakuraHouse3.asm"
+INCLUDE "maps/kansai/SakuraHouse3.asm"
 
+INCLUDE "data/maps/headers/SakuraSecretHouse.asm"
+INCLUDE "maps/kansai/SakuraSecretHouse.asm"
 
-SECTION "Johto Marts", ROMX
-
-INCLUDE "data/maps/headers/CherrygroveMart.asm"
-INCLUDE "maps/johto/CherrygroveMart.asm"
-
-INCLUDE "data/maps/headers/VioletMart.asm"
-INCLUDE "maps/johto/VioletMart.asm"
-
-CherrygroveMart_Blocks:
-VioletMart_Blocks:
-	INCBIN "maps/johto/CherrygroveMart.blk"
+ElmsHouse_Blocks:
+SakuraHouse1_Blocks:
+SakuraHouse2_Blocks:
+SakuraHouse3_Blocks:
+SakuraSecretHouse_Blocks:
+	INCBIN "maps/kansai/ElmsHouse.blk"
 
 
-SECTION "Johto Gates", ROMX
+SECTION "Kansai Pokecenters", ROMX
 
-INCLUDE "data/maps/headers/Route31Gate.asm"
-INCLUDE "maps/johto/Route31Gate.asm"
+INCLUDE "data/maps/headers/SilentPokecenter.asm"
+INCLUDE "maps/kansai/SilentPokecenter.asm"
 
-INCLUDE "data/maps/headers/RuinsOfAlphEastGate.asm"
-INCLUDE "maps/johto/RuinsOfAlphEastGate.asm"
+INCLUDE "data/maps/headers/SakuraPokecenter.asm"
+INCLUDE "maps/kansai/SakuraPokecenter.asm"
 
-Route31Gate_Blocks:
-RuinsOfAlphEastGate_Blocks:
-	INCBIN "maps/johto/Route31Gate.blk"
-
-
-SECTION "Sprout Tower", ROMX
-
-INCLUDE "data/maps/headers/SproutTower1F.asm"
-INCLUDE "maps/johto/SproutTower1F.asm"
-SproutTower1F_Blocks: INCBIN "maps/johto/SproutTower1F.blk"
-
-INCLUDE "data/maps/headers/SproutTower2F.asm"
-INCLUDE "maps/johto/SproutTower2F.asm"
-SproutTower2F_Blocks: INCBIN "maps/johto/SproutTower2F.blk"
-
-INCLUDE "data/maps/headers/SproutTower3F.asm"
-INCLUDE "maps/johto/SproutTower3F.asm"
-SproutTower3F_Blocks: INCBIN "maps/johto/SproutTower3F.blk"
+SilentPokecenter_Blocks:
+SakuraPokecenter_Blocks:
+	INCBIN "maps/kansai/SilentPokecenter.blk"
 
 
-SECTION "Ruins of Alph", ROMX
+SECTION "Kansai Marts", ROMX
 
-INCLUDE "data/maps/headers/RuinsOfAlphOutside.asm"
-INCLUDE "maps/johto/RuinsOfAlphOutside.asm"
-RuinsOfAlphOutside_Blocks: INCBIN "maps/johto/RuinsOfAlphOutside.blk"
+INCLUDE "data/maps/headers/SakuraMart.asm"
+INCLUDE "maps/kansai/SakuraMart.asm"
 
-INCLUDE "data/maps/headers/RuinsOfAlphNorthGate.asm"
-INCLUDE "maps/johto/RuinsOfAlphNorthGate.asm"
-RuinsOfAlphNorthGate_Blocks: INCBIN "maps/johto/RuinsOfAlphNorthGate.blk"
-
-INCLUDE "data/maps/headers/RuinsOfAlphNorthGate2F.asm"
-INCLUDE "maps/johto/RuinsOfAlphNorthGate2F.asm"
-RuinsOfAlphNorthGate2F_Blocks: INCBIN "maps/johto/RuinsOfAlphNorthGate2F.blk"
-
-INCLUDE "data/maps/headers/RuinsOfAlphLab.asm"
-INCLUDE "maps/johto/RuinsOfAlphLab.asm"
-RuinsOfAlphLab_Blocks: INCBIN "maps/johto/RuinsOfAlphLab.blk"
+SakuraMart_Blocks:
+	INCBIN "maps/kansai/SakuraMart.blk"

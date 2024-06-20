@@ -10,8 +10,8 @@ GymStatues:
 	and a ; Kanto?
 	ld hl, MapBadgeFlags
 	jr z, .gotBadgeMaps
-	; else Johto
-	ld hl, JohtoMapBadgeFlags
+	; else Kansai
+	ld hl, KansaiMapBadgeFlags
 .gotBadgeMaps
 	ld a, [wCurMap]
 	ld b, a
@@ -29,8 +29,8 @@ GymStatues:
 	and a ; Kanto?
 	ld a, [wKantoBadges]
 	jr z, .gotRegion
-	; Johto
-	ld a, [wJohtoBadges]
+	; Kansai
+	ld a, [wKansaiBadges]
 .gotRegion
 	and b
 	cp b

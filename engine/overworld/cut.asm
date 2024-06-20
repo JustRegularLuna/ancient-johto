@@ -2,24 +2,24 @@ UsedCut:
 	xor a
 	ld [wActionResultOrTookBattleTurn], a ; initialise to failure value
 	ld a, [wCurMapTileset]
-	and a ; OVERWORLD
+	and a ; KANTO
 	jr z, .overworld
-	cp JOHTO
-	jr z, .johto
-	cp JOHTO_FOREST
-	jr z, .johto_forest
+	cp SILENT
+	jr z, .silent
+	cp KANSAI_FOREST
+	jr z, .kansai_forest
 	; if all checks fail
 	jr .nothingToCut
-.johto_forest
+.kansai_forest
 	ld a, [wTileInFrontOfPlayer]
 	cp $38 ; ilex cut tree
 	jr z, .canCut
 	jr .nothingToCut
-.johto
+.silent
 	ld a, [wTileInFrontOfPlayer]
-	cp $04 ; johto grass
+	cp $04 ; silent grass
 	jr z, .canCut
-	cp $45 ; johto cut tree
+	cp $2E ; silent cut tree
 	jr z, .canCut
 	jr .nothingToCut
 .overworld
@@ -93,13 +93,13 @@ InitCutAnimOAM:
 	cp $52
 	jr z, .grass
 ; tree
-	ld de, Overworld_GFX tile $2d ; cuttable tree sprite top row
+	ld de, Kanto_GFX tile $2d ; cuttable tree sprite top row
 	ld hl, vChars1 tile $7c
-	lb bc, BANK(Overworld_GFX), 2
+	lb bc, BANK(Kanto_GFX), 2
 	call CopyVideoData
-	ld de, Overworld_GFX tile $3d ; cuttable tree sprite bottom row
+	ld de, Kanto_GFX tile $3d ; cuttable tree sprite bottom row
 	ld hl, vChars1 tile $7e
-	lb bc, BANK(Overworld_GFX), 2
+	lb bc, BANK(Kanto_GFX), 2
 	call CopyVideoData
 	jr WriteCutOrBoulderDustAnimationOAMBlock
 .grass

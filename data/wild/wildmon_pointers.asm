@@ -37,8 +37,6 @@ WildDataPointers:
 	dw NoMons      ; ROUTE_23
 	dw NoMons      ; ROUTE_24
 	dw NoMons      ; ROUTE_25
-	dw NoMons      ; ROUTE_26
-	dw NoMons      ; KANTO_ROUTE_27
 	dw NoMons      ; REDS_HOUSE_1F
 	dw NoMons      ; REDS_HOUSE_2F
 	dw NoMons      ; BLUES_HOUSE
@@ -175,7 +173,7 @@ WildDataPointers:
 	dw NoMons      ; CINNABAR_LAB_FOSSIL_ROOM
 	dw NoMons      ; CINNABAR_POKECENTER
 	dw NoMons      ; CINNABAR_MART
-	dw NoMons      ; TOHJO_FALLS
+	dw NoMons      ; UNUSED_MAP_AD
 	dw NoMons      ; INDIGO_PLATEAU_LOBBY
 	dw NoMons      ; COPYCATS_HOUSE_1F
 	dw NoMons      ; COPYCATS_HOUSE_2F
@@ -254,45 +252,24 @@ WildDataPointers:
 	dw -1 ; end
 
 
-JohtoWildDataPointers:
-	table_width 2, JohtoWildDataPointers
-	dw NoMons      ; NEW_BARK_TOWN
-	dw NoMons      ; CHERRYGROVE_CITY
-	dw NoMons      ; VIOLET_CITY
-	dw NoMons      ; RUINS_OF_ALPH_OUTSIDE
-	dw Route29Mons ; ROUTE_29
-	dw Route30Mons ; ROUTE_30
-	dw Route31Mons ; ROUTE_31
-	dw NoMons      ; ROUTE_32
-	dw NoMons      ; ROUTE_36
-	dw NoMons      ; JOHTO_ROUTE_27
+KansaiWildDataPointers:
+	table_width 2, KansaiWildDataPointers
+	dw NoMons      ; SILENT_HILLS
+	dw NoMons      ; SAKURA_TOWN
+	dw KansaiRoute1Mons ; KANSAI_ROUTE_1
 	dw NoMons      ; PLAYERS_HOUSE_1F
 	dw NoMons      ; PLAYERS_HOUSE_2F
-	dw NoMons      ; NEW_BARK_HOUSE_1
-	dw NoMons      ; NEW_BARK_HOUSE_2
+	dw NoMons      ; SILENT_POKECENTER
+	dw NoMons      ; ELMS_HOUSE
 	dw NoMons      ; ELMS_LAB
-	dw NoMons      ; CHERRYGROVE_POKECENTER
-	dw NoMons      ; CHERRYGROVE_MART
-	dw NoMons      ; CHERRYGROVE_HOUSE_1
-	dw NoMons      ; CHERRYGROVE_HOUSE_2
-	dw NoMons      ; CHERRYGROVE_HOUSE_3
-	dw NoMons      ; ROUTE_30_BERRY_HOUSE
+	dw NoMons      ; SAKURA_POKECENTER
+	dw NoMons      ; SAKURA_MART
+	dw NoMons      ; SAKURA_HOUSE_1
+	dw NoMons      ; SAKURA_HOUSE_2
+	dw NoMons      ; SAKURA_HOUSE_3
+	dw NoMons      ; SAKURA_SECRET_HOUSE
 	dw NoMons      ; MR_POKEMONS_HOUSE
-	dw NoMons      ; ROUTE_31_GATE
-	dw NoMons      ; VIOLET_POKECENTER
-	dw NoMons      ; VIOLET_MART
-	dw NoMons      ; VIOLET_SCHOOL_HOUSE
-	dw NoMons      ; VIOLET_TRADE_HOUSE
-	dw NoMons      ; VIOLET_HOUSE_2
-	dw NoMons      ; VIOLET_GYM
-	dw NoMons      ; SPROUT_TOWER_1F
-	dw NoMons      ; SPROUT_TOWER_2F
-	dw NoMons      ; SPROUT_TOWER_3F
-	dw NoMons      ; RUINS_OF_ALPH_EAST_GATE
-	dw NoMons      ; RUINS_OF_ALPH_NORTH_GATE
-	dw NoMons      ; RUINS_OF_ALPH_NORTH_GATE_2F
-	dw NoMons      ; RUINS_OF_ALPH_LAB
-	assert_table_length NUM_JOHTO_MAPS
+	assert_table_length NUM_KANSAI_MAPS
 	dw -1 ; end
 
 INCLUDE "data/wild/wildmons.asm"

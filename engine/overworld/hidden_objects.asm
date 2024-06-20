@@ -27,8 +27,8 @@ CheckForHiddenObject::
 	and a ; Kanto?
 	ld hl, HiddenObjectMaps
 	jr z, .hiddenMapLoop
-	; else Johto
-	ld hl, JohtoHiddenObjectMaps
+	; else Kansai
+	ld hl, KansaiHiddenObjectMaps
 .hiddenMapLoop
 	ld a, [hli]
 	ld b, a
@@ -45,8 +45,8 @@ CheckForHiddenObject::
 	and a ; Kanto?
 	ld hl, HiddenObjectPointers
 	jr z, .gotHiddenObjectPointers
-	; else Johto
-	ld hl, JohtoHiddenObjectPointers
+	; else Kansai
+	ld hl, KansaiHiddenObjectPointers
 .gotHiddenObjectPointers
 	add hl, de
 	ld a, [hli]

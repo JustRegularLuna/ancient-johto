@@ -16,7 +16,7 @@
 	const EVENT_IN_SAFARI_ZONE
 	const_skip
 
-; New Bark Town events
+; Silent Hills events
 	const EVENT_GOT_MYSTERY_EGG
 	const EVENT_DELIVERED_MYSTERY_EGG
 	const EVENT_TRIED_TO_LEAVE_EARLY
@@ -26,31 +26,11 @@
 	const_skip
 	const_skip
 
-; Cherrygrove City events
+; Sakura Town events
 	const EVENT_GOT_TOWN_MAP
-	const EVENT_GOT_CHERRYGROVE_KINGS_ROCK
-	const EVENT_BEAT_CHERRYGROVE_RIVAL
-	const_skip
-	const_skip
-	const_skip
-	const_skip
-	const_skip
-
-; Route 30 events
+	const EVENT_GOT_SAKURA_KINGS_ROCK
+	const EVENT_BEAT_SAKURA_RIVAL
 	const EVENT_GOT_ROUTE_30_BERRY_GIFT
-	const EVENT_BEAT_ROUTE_30_TRAINER_0
-	const EVENT_BEAT_ROUTE_30_TRAINER_1
-	const EVENT_BEAT_ROUTE_30_TRAINER_2
-	const_skip
-	const_skip
-	const_skip
-	const_skip
-
-; Route 31 events
-	const_skip
-	const EVENT_BEAT_ROUTE_31_TRAINER_0
-	const_skip
-	const_skip
 	const_skip
 	const_skip
 	const_skip

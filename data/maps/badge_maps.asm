@@ -9,8 +9,8 @@ MapBadgeFlags:
 	db VIRIDIAN_GYM,  1 << BIT_EARTHBADGE
 	db -1 ; end
 
-JohtoMapBadgeFlags:
-	db VIOLET_GYM,     1 << BIT_ZEPHYRBADGE
+KansaiMapBadgeFlags:
+	;db VIOLET_GYM,     1 << BIT_ZEPHYRBADGE
 	;db AZALEA_GYM,     1 << BIT_HIVEBADGE
 	;db GOLDENROD_GYM,  1 << BIT_PLAINBADGE
 	;db ECRUTEAK_GYM,   1 << BIT_FOGBADGE

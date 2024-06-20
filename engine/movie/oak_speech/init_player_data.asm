@@ -34,7 +34,7 @@ START_MONEY EQU $3000
 
 	ld hl, wBadges
 	ld [hli], a ; Kanto Badges
-	ld [hli], a ; Johto Badges
+	ld [hli], a ; Kansai Badges
 
 	ld [hl], a ; Letter Printing Delay Flags
 

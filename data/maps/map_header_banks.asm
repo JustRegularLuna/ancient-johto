@@ -1,5 +1,5 @@
 ; see also MapHeaderPointers
-; KANTO header banks
+; Kanto header banks
 MapHeaderBanks::
 	table_width 1, MapHeaderBanks
 	db BANK(PalletTown_h)
@@ -39,8 +39,6 @@ MapHeaderBanks::
 	db BANK(Route23_h)
 	db BANK(Route24_h)
 	db BANK(Route25_h)
-	db BANK(Route26_h)
-	db BANK(KantoRoute27_h)
 	db BANK(RedsHouse1F_h)
 	db BANK(RedsHouse2F_h)
 	db BANK(BluesHouse_h)
@@ -177,7 +175,7 @@ MapHeaderBanks::
 	db BANK(CinnabarLabFossilRoom_h)
 	db BANK(CinnabarPokecenter_h)
 	db BANK(CinnabarMart_h)
-	db BANK(TohjoFalls_h)
+	db BANK(CinnabarMart_h)
 	db BANK(IndigoPlateauLobby_h)
 	db BANK(CopycatsHouse1F_h)
 	db BANK(CopycatsHouse2F_h)
@@ -255,43 +253,22 @@ MapHeaderBanks::
 	assert_table_length NUM_MAPS
 
 
-; JOHTO header banks
-JohtoMapHeaderBanks::
-	table_width 1, JohtoMapHeaderBanks
-	db BANK(NewBarkTown_h)
-	db BANK(CherrygroveCity_h)
-	db BANK(VioletCity_h)
-	db BANK(RuinsOfAlphOutside_h)
-	db BANK(Route29_h)
-	db BANK(Route30_h)
-	db BANK(Route31_h)
-	db BANK(Route32_h)
-	db BANK(Route36_h)
-	db BANK(JohtoRoute27_h)
+; Kansai header banks
+KansaiMapHeaderBanks::
+	table_width 1, KansaiMapHeaderBanks
+	db BANK(SilentHills_h)
+	db BANK(SakuraTown_h)
+	db BANK(KansaiRoute1_h)
 	db BANK(PlayersHouse1F_h)
 	db BANK(PlayersHouse2F_h)
-	db BANK(NewBarkHouse1_h)
-	db BANK(NewBarkHouse2_h)
+	db BANK(SilentPokecenter_h)
+	db BANK(ElmsHouse_h)
 	db BANK(ElmsLab_h)
-	db BANK(CherrygrovePokecenter_h)
-	db BANK(CherrygroveMart_h)
-	db BANK(CherrygroveHouse1_h)
-	db BANK(CherrygroveHouse2_h)
-	db BANK(CherrygroveHouse3_h)
-	db BANK(Route30BerryHouse_h)
+	db BANK(SakuraPokecenter_h)
+	db BANK(SakuraMart_h)
+	db BANK(SakuraHouse1_h)
+	db BANK(SakuraHouse2_h)
+	db BANK(SakuraHouse3_h)
+	db BANK(SakuraSecretHouse_h)
 	db BANK(MrPokemonsHouse_h)
-	db BANK(Route31Gate_h)
-	db BANK(VioletPokecenter_h)
-	db BANK(VioletMart_h)
-	db BANK(VioletSchoolHouse_h)
-	db BANK(VioletTradeHouse_h)
-	db BANK(VioletHouse2_h)
-	db BANK(VioletGym_h)
-	db BANK(SproutTower1F_h)
-	db BANK(SproutTower2F_h)
-	db BANK(SproutTower3F_h)
-	db BANK(RuinsOfAlphEastGate_h)
-	db BANK(RuinsOfAlphNorthGate_h)
-	db BANK(RuinsOfAlphNorthGate2F_h)
-	db BANK(RuinsOfAlphLab_h)
-	assert_table_length NUM_JOHTO_MAPS
+	assert_table_length NUM_KANSAI_MAPS

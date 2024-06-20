@@ -1,7 +1,7 @@
 LoadRoofTilePatterns::
 	ld a, [wCurRegion]
 	and a ; Kanto?
-	ret z ; this is only for Johto
+	ret z ; this is only for Kansai
 
 	; This is only for certain tilesets
 	ld a, [wCurMapTileset]
@@ -12,7 +12,7 @@ LoadRoofTilePatterns::
 
 	; If we're in a tileset that loads roof tiles, look up the RoofSet based on map ID
 	ld a, [wCurMap]
-	cp FIRST_JOHTO_INDOOR_MAP
+	cp FIRST_KANSAI_INDOOR_MAP
 	ret nc ; Anything past the Towns and Routes keeps default roof patterns
 
 	; Get the roof ID for this map

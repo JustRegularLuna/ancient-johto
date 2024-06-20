@@ -14,7 +14,7 @@ ENDM
 ; - ExternalMapEntries (see data/maps/town_map_entries.asm)
 ; Each map also has associated data in maps.asm.
 ; Order: towns/cities, then routes, then indoor/dungeon maps
-; Johto and Kanto each have their own tables
+; Kansai and Kanto each have their own tables
 
 DEF KANTO_REGION EQU 0
 
@@ -59,8 +59,6 @@ DEF FIRST_ROUTE_MAP EQU const_value
 	map_const ROUTE_23,                      10, 72 ; $22
 	map_const ROUTE_24,                      10, 18 ; $23
 	map_const ROUTE_25,                      30,  9 ; $24
-	map_const ROUTE_26,                      10, 54
-	map_const KANTO_ROUTE_27,                40,  9
 DEF FIRST_INDOOR_MAP EQU const_value
 	map_const REDS_HOUSE_1F,                  4,  4 ; $25
 	map_const REDS_HOUSE_2F,                  4,  4 ; $26
@@ -198,7 +196,7 @@ DEF FIRST_INDOOR_MAP EQU const_value
 	map_const CINNABAR_LAB_FOSSIL_ROOM,       4,  4 ; $AA
 	map_const CINNABAR_POKECENTER,            7,  4 ; $AB
 	map_const CINNABAR_MART,                  4,  4 ; $AC
-	map_const TOHJO_FALLS,                   15,  9 ; $AD
+	map_const UNUSED_MAP_AD,                  4,  4 ; $AD
 	map_const INDIGO_PLATEAU_LOBBY,           8,  6 ; $AE
 	map_const COPYCATS_HOUSE_1F,              4,  4 ; $AF
 	map_const COPYCATS_HOUSE_2F,              4,  4 ; $B0
@@ -280,46 +278,25 @@ DEF NUM_MAPS EQU const_value
 DEF LAST_MAP EQU -1
 
 
-DEF JOHTO_REGION EQU 1
+DEF KANSAI_REGION EQU 1
 
-; JOHTO Map Constants
+; Kansai Map Constants
 	const_def
-	map_const NEW_BARK_TOWN,                 10,  9
-	map_const CHERRYGROVE_CITY,              20,  9
-	map_const VIOLET_CITY,                   20, 18
-DEF NUM_JOHTO_CITY_MAPS EQU const_value
-	map_const RUINS_OF_ALPH_OUTSIDE,         10, 18
-	map_const ROUTE_29,                      30,  9
-	map_const ROUTE_30,                      10, 27
-	map_const ROUTE_31,                      20,  9
-	map_const ROUTE_32,                      10, 45
-	map_const ROUTE_36,                      30,  9
-	map_const JOHTO_ROUTE_27,                40,  9
-DEF FIRST_JOHTO_INDOOR_MAP EQU const_value
+	map_const SILENT_HILLS,                  10,  9
+	map_const SAKURA_TOWN,                   20, 18
+DEF NUM_KANSAI_CITY_MAPS EQU const_value
+	map_const KANSAI_ROUTE_1,                30,  9
+DEF FIRST_KANSAI_INDOOR_MAP EQU const_value
 	map_const PLAYERS_HOUSE_1F,               5,  4
 	map_const PLAYERS_HOUSE_2F,               4,  3
-	map_const NEW_BARK_HOUSE_1,               4,  4
-	map_const NEW_BARK_HOUSE_2,               4,  4
+	map_const SILENT_POKECENTER,              5, 10
+	map_const ELMS_HOUSE,                     4,  4
 	map_const ELMS_LAB,                       5,  6
-	map_const CHERRYGROVE_POKECENTER,         5, 10
-	map_const CHERRYGROVE_MART,               6,  4
-	map_const CHERRYGROVE_HOUSE_1,            4,  4
-	map_const CHERRYGROVE_HOUSE_2,            4,  4
-	map_const CHERRYGROVE_HOUSE_3,            4,  4
-	map_const ROUTE_30_BERRY_HOUSE,           4,  4
+	map_const SAKURA_POKECENTER,              5, 10
+	map_const SAKURA_MART,                    6,  4
+	map_const SAKURA_HOUSE_1,                 4,  4
+	map_const SAKURA_HOUSE_2,                 4,  4
+	map_const SAKURA_HOUSE_3,                 4,  4
+	map_const SAKURA_SECRET_HOUSE,            4,  4
 	map_const MR_POKEMONS_HOUSE,              4,  4
-	map_const ROUTE_31_GATE,                  5,  4
-	map_const VIOLET_POKECENTER,              5, 10
-	map_const VIOLET_MART,                    6,  4
-	map_const VIOLET_SCHOOL_HOUSE,            4,  8
-	map_const VIOLET_TRADE_HOUSE,             4,  4
-	map_const VIOLET_HOUSE_2,                 4,  4
-	map_const VIOLET_GYM,                     5,  8
-	map_const SPROUT_TOWER_1F,                8,  8
-	map_const SPROUT_TOWER_2F,                8,  8
-	map_const SPROUT_TOWER_3F,                8,  8
-	map_const RUINS_OF_ALPH_EAST_GATE,        5,  4
-	map_const RUINS_OF_ALPH_NORTH_GATE,       5,  4
-	map_const RUINS_OF_ALPH_NORTH_GATE_2F,    4,  4
-	map_const RUINS_OF_ALPH_LAB,              4,  4
-DEF NUM_JOHTO_MAPS EQU const_value
+DEF NUM_KANSAI_MAPS EQU const_value

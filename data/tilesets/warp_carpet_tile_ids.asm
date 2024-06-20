@@ -7,24 +7,23 @@ ENDR
 ENDM
 
 WarpTileListPointers:
-	dbw OVERWORLD, OverworldWarpCarpetTiles
+	dbw KANTO, KantoWarpCarpetTiles
 	dbw FACILITY, FacilityWarpCarpetTiles
 	dbw PLATEAU, PlateauWarpCarpetTiles
 	dbw SHIP, ShipWarpCarpetTiles
 	dbw SHIP_PORT, ShipPortWarpCarpetTiles
 	dbw GATE, GateWarpCarpetTiles
-	dbw JOHTO, JohtoWarpCarpetTiles
-	dbw JOHTO_MODERN, JohtoModernWarpCarpetTiles
-	dbw JOHTO_CAVE, JohtoCaveWarpCarpetTiles
-	dbw JOHTO_FOREST, JohtoForestWarpCarpetTiles
+	dbw SILENT, SilentWarpCarpetTiles
+	dbw KANSAI_CAVE, KansaiCaveWarpCarpetTiles
+	dbw KANSAI_FOREST, KansaiForestWarpCarpetTiles
 	dbw PARK, ParkWarpCarpetTiles
 	dbw ICE_PATH, IcePathWarpCarpetTiles
 	dbw HIDEOUT, HideoutWarpCarpetTiles
 	db -1
 
 
-; OVERWORLD
-OverworldWarpCarpetTiles:
+; KANTO
+KantoWarpCarpetTiles:
 	dw .FacingDown
 	dw .FacingUp
 	dw .FacingLeft
@@ -125,42 +124,25 @@ GateWarpCarpetTiles:
 	warp_carpet_tiles
 
 
-; JOHTO
-JohtoWarpCarpetTiles:
+; SILENT
+SilentWarpCarpetTiles:
 	dw .FacingDown
 	dw .FacingUp
 	dw .FacingLeft
 	dw .FacingRight
 
 .FacingDown
-	warp_carpet_tiles $0E, $48
+	warp_carpet_tiles $0E, $74
 .FacingUp
 	warp_carpet_tiles 
 .FacingLeft
-	warp_carpet_tiles $02, $26
+	warp_carpet_tiles $1A, $2A
 .FacingRight
-	warp_carpet_tiles $01, $1A
+	warp_carpet_tiles $1B, $2B
 
 
-; JOHTO_MODERN
-JohtoModernWarpCarpetTiles:
-	dw .FacingDown
-	dw .FacingUp
-	dw .FacingLeft
-	dw .FacingRight
-
-.FacingDown
-	warp_carpet_tiles $0E, $46
-.FacingUp
-	warp_carpet_tiles
-.FacingLeft
-	warp_carpet_tiles $02, $26
-.FacingRight
-	warp_carpet_tiles $01, $1A
-
-
-; JOHTO_CAVE
-JohtoCaveWarpCarpetTiles:
+; KANSAI_CAVE
+KansaiCaveWarpCarpetTiles:
 	dw .FacingDown
 	dw .FacingUp
 	dw .FacingLeft
@@ -176,8 +158,8 @@ JohtoCaveWarpCarpetTiles:
 	warp_carpet_tiles
 
 
-; JOHTO_FOREST
-JohtoForestWarpCarpetTiles:
+; KANSAI_FOREST
+KansaiForestWarpCarpetTiles:
 	dw .FacingDown
 	dw .FacingUp
 	dw .FacingLeft

@@ -18,9 +18,9 @@ NoMons: ; All maps with no wild encounters use this table
 	end_water_wildmons
 
 
-; Johto Wild Pokémon
+; Kansai Wild Pokémon
 
-Route29Mons: ; ROUTE_29
+KansaiRoute1Mons: ; KANSAI_ROUTE_1
 	def_grass_wildmons 25 ; encounter rate
 	db  2, SENTRET
 	db  3, SENTRET
@@ -37,61 +37,6 @@ Route29Mons: ; ROUTE_29
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-
-Route30Mons: ; ROUTE_30
-	def_grass_wildmons 25 ; encounter rate
-	db  3, WEEDLE
-	db  4, WEEDLE
-	db  5, KAKUNA
-	db  3, LEDYBA
-	db  3, HOOTHOOT
-	db  4, HOOTHOOT
-	db  3, SENTRET
-	db  4, SENTRET
-	db  3, HOPPIP
-	db  3, POLIWAG
-	end_grass_wildmons
-
-	def_water_wildmons 15 ; encounter rate
-	db 15, POLIWAG
-	db 16, POLIWAG
-	db 17, POLIWAG
-	db 19, POLIWAG
-	db 20, POLIWAG
-	db 21, POLIWAG
-	db 23, POLIWAG
-	db 24, POLIWAG
-	db 22, POLIWHIRL
-	db 24, POLIWHIRL
-	end_water_wildmons
-
-
-Route31Mons: ; ROUTE_31
-	def_grass_wildmons 25 ; encounter rate
-	db  4, CATERPIE
-	db  5, METAPOD
-	db  4, SPINARAK
-	db  3, BELLSPROUT
-	db  4, BELLSPROUT
-	db  3, HOOTHOOT
-	db  4, SENTRET
-	db  4, HOPPIP
-	db  5, SPINARAK
-	db  5, MURKROW
-	end_grass_wildmons
-
-	def_water_wildmons 15 ; encounter rate
-	db 15, POLIWAG
-	db 16, POLIWAG
-	db 17, POLIWAG
-	db 19, POLIWAG
-	db 20, POLIWAG
-	db 21, POLIWAG
-	db 23, POLIWAG
-	db 24, POLIWAG
-	db 22, POLIWHIRL
-	db 24, POLIWHIRL
-	end_water_wildmons
 
 
 ; Kanto Wild Pokémon

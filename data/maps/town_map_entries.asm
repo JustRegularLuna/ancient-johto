@@ -44,8 +44,6 @@ ExternalMapEntries:
 	external_map  28,  44, Route23Name
 	external_map 100,  44, Route24Name
 	external_map 108,  36, Route25Name
-	external_map  28,  92, Route26Name
-	external_map  20, 100, Route27Name
 	assert_table_length FIRST_INDOOR_MAP
 
 
@@ -95,7 +93,6 @@ InternalMapEntries:
 	internal_map FUCHSIA_GOOD_ROD_HOUSE,         92, 116, FuchsiaCityName
 	internal_map POKEMON_MANSION_1F,             52, 132, PokemonMansionName
 	internal_map CINNABAR_MART,                  52, 132, CinnabarIslandName
-	internal_map TOHJO_FALLS,                    12, 100, TohjoFallsName
 	internal_map INDIGO_PLATEAU_LOBBY,           28,  36, IndigoPlateauName
 	internal_map MR_PSYCHICS_HOUSE,             100,  68, SaffronCityName
 	internal_map ROUTE_15_GATE_2F,              104, 116, Route15Name
@@ -123,29 +120,17 @@ InternalMapEntries:
 
 
 ; the appearance of towns and routes in the town map
-JohtoExternalMapEntries:
-	table_width 4, JohtoExternalMapEntries
+KansaiExternalMapEntries:
+	table_width 4, KansaiExternalMapEntries
 	; x, y, name
-	external_map 140, 100, NewBarkTownName
-	external_map 100, 100, CherrygroveCityName
-	external_map  84,  60, VioletCityName
-	external_map  76,  76, RuinsOfAlphName
-	external_map 128, 100, Route29Name
-	external_map 100,  80, Route30Name
-	external_map  96,  60, Route31Name
-	external_map  84,  92, Route32Name
-	external_map  64,  60, Route36Name
-	external_map 148, 100, Route27Name
-	assert_table_length FIRST_JOHTO_INDOOR_MAP
+	external_map 140, 100, SilentHillsName
+	external_map 100, 100, SakuraTownName
+	external_map 128, 100, Route1Name
+	assert_table_length FIRST_KANSAI_INDOOR_MAP
 
 ; the appearance of buildings and dungeons in the town map
-JohtoInternalMapEntries:
+KansaiInternalMapEntries:
 	; maximum map id subject to this rule, x, y, name
-	internal_map ELMS_LAB,                      140, 100, NewBarkTownName
-	internal_map CHERRYGROVE_HOUSE_3,           100, 100, CherrygroveCityName
-	internal_map MR_POKEMONS_HOUSE,             100,  80, Route30Name
-	internal_map ROUTE_31_GATE,                  96,  60, Route31Name
-	internal_map VIOLET_GYM,                     84,  60, VioletCityName
-	internal_map SPROUT_TOWER_3F,                85,  58, SproutTowerName
-	internal_map RUINS_OF_ALPH_LAB,              76,  76, RuinsOfAlphName
+	internal_map ELMS_LAB,                      140, 100, SilentHillsName
+	internal_map MR_POKEMONS_HOUSE,             100, 100, SakuraTownName
 	db -1 ; end

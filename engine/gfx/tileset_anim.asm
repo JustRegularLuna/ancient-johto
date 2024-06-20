@@ -1,6 +1,6 @@
 TilesetAnimPointers::
 	table_width 2, TilesetAnimPointers
-	dw TilesetAnimFlowerWater   ; OVERWORLD
+	dw TilesetAnimFlowerWater   ; KANTO
 	dw TilesetAnimNone          ; PLAYERS_HOUSE
 	dw TilesetAnimNone          ; MART
 	dw TilesetAnimWater         ; FOREST
@@ -22,14 +22,13 @@ TilesetAnimPointers::
 	dw TilesetAnimNone          ; CLUB
 	dw TilesetAnimWater         ; FACILITY
 	dw TilesetAnimWater         ; PLATEAU
-	dw TilesetAnimJohto         ; JOHTO
-	dw TilesetAnimFlowerWater   ; JOHTO_MODERN
-	dw TilesetAnimJohtoCave     ; JOHTO_CAVE
+	dw TilesetAnimFlowerWater   ; SILENT
+	dw TilesetAnimKansaiCave    ; KANSAI_CAVE
 	dw TilesetAnimNone          ; TRADITIONAL_HOUSE
 	dw TilesetEliteFourRoomAnim ; ELITE_FOUR_ROOM
 	dw TilesetTowerAnim         ; TOWER
-	dw TilesetAnimNone          ; RUINS_OF_ALPH
-	dw TilesetAnimFlowerWater   ; JOHTO_FOREST
+	dw TilesetAnimNone          ; RUINS
+	dw TilesetAnimFlowerWater   ; KANSAI_FOREST
 	dw TilesetParkAnim          ; PARK
 	dw TilesetAnimNone          ; BIKE_TILESET
 	dw TilesetAnimNone          ; ICE_PATH
@@ -144,7 +143,7 @@ TilesetEliteFourRoomAnim:
 	dw NULL,  StandingTileFrame8
 	dw NULL,  DoneTileAnimation
 
-TilesetAnimJohtoCave:
+TilesetAnimKansaiCave:
 	dw vTileset tile $14, ReadTileToAnimBuffer
 	dw NULL,  WaitTileAnimation
 	dw wTileAnimBuffer, ScrollTileRightLeft

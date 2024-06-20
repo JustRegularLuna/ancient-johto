@@ -8,17 +8,10 @@
 
 MapRoofSets:
 	table_width 1, MapRoofSets
-	db ROOF_NEW_BARK  ; NEW_BARK_TOWN
-	db ROOF_NEW_BARK  ; CHERRYGROVE_CITY
-	db ROOF_VIOLET    ; VIOLET_CITY
-	db ROOF_NEW_BARK  ; RUINS_OF_ALPH_OUTSIDE
-	db ROOF_NEW_BARK  ; ROUTE_29
-	db ROOF_NEW_BARK  ; ROUTE_30
-	db ROOF_NEW_BARK  ; ROUTE_31
-	db ROOF_VIOLET    ; ROUTE_32
-	db ROOF_VIOLET    ; ROUTE_36
-	db ROOF_NEW_BARK  ; JOHTO_ROUTE_27
-	assert_table_length FIRST_JOHTO_INDOOR_MAP
+	db ROOF_NEW_BARK  ; SILENT_HILLS
+	db ROOF_NEW_BARK  ; SAKURA_TOWN
+	db ROOF_NEW_BARK  ; KANSAI_ROUTE_1
+	assert_table_length FIRST_KANSAI_INDOOR_MAP
 
 ; Format:
 ; 00: determines whether the map is split East/West or North/South
@@ -30,7 +23,7 @@ SplitMapRoofSets:
 
 
 TilesetsWithRoofs:
-	db JOHTO
+	db SILENT
 	db -1
 
 

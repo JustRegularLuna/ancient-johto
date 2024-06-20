@@ -3,8 +3,8 @@ HiddenItems:
 	and a ; Kanto?
 	ld hl, HiddenItemCoords
 	jr z, .gotHiddenItemCoordList
-	; else Johto
-	ld hl, JohtoHiddenItemCoords
+	; else Kansai
+	ld hl, KansaiHiddenItemCoords
 .gotHiddenItemCoordList
 	call FindHiddenItemOrCoinsIndex
 	ld [wHiddenItemOrCoinsIndex], a
@@ -12,8 +12,8 @@ HiddenItems:
 	and a ; Kanto?
 	ld hl, wObtainedHiddenItemsFlags
 	jr z, .gotFlagList
-	; else Johto
-	ld hl, wObtainedJohtoHiddenItemsFlags
+	; else Kansai
+	ld hl, wObtainedKansaiHiddenItemsFlags
 .gotFlagList
 	ld a, [wHiddenItemOrCoinsIndex]
 	ld c, a
@@ -49,8 +49,8 @@ FoundHiddenItemText::
 	and a ; Kanto?
 	ld hl, wObtainedHiddenItemsFlags
 	jr z, .gotFlagList
-	; else Johto
-	ld hl, wObtainedJohtoHiddenItemsFlags
+	; else Kansai
+	ld hl, wObtainedKansaiHiddenItemsFlags
 .gotFlagList
 	ld a, [wHiddenItemOrCoinsIndex]
 	ld c, a
@@ -82,8 +82,8 @@ HiddenCoins:
 	and a ; Kanto?
 	ld hl, HiddenCoinCoords
 	jr z, .gotHiddenCoinCoordList
-	; else Johto
-	ld hl, JohtoHiddenCoinCoords
+	; else Kansai
+	ld hl, KansaiHiddenCoinCoords
 .gotHiddenCoinCoordList
 	call FindHiddenItemOrCoinsIndex
 	ld [wHiddenItemOrCoinsIndex], a
@@ -91,8 +91,8 @@ HiddenCoins:
 	and a ; Kanto?
 	ld hl, wObtainedHiddenCoinsFlags
 	jr z, .gotFlagList1
-	; else Johto
-	ld hl, wObtainedJohtoHiddenCoinsFlags
+	; else Kansai
+	ld hl, wObtainedKansaiHiddenCoinsFlags
 .gotFlagList1
 	ld a, [wHiddenItemOrCoinsIndex]
 	ld c, a
@@ -138,8 +138,8 @@ HiddenCoins:
 	and a ; Kanto?
 	ld hl, wObtainedHiddenCoinsFlags
 	jr z, .gotFlagList2
-	; else Johto
-	ld hl, wObtainedJohtoHiddenCoinsFlags
+	; else Kansai
+	ld hl, wObtainedKansaiHiddenCoinsFlags
 .gotFlagList2
 	ld a, [wHiddenItemOrCoinsIndex]
 	ld c, a

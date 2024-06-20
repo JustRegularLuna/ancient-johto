@@ -11,7 +11,7 @@ ENDM
 Tilesets:
 	table_width 12, Tilesets
 	; block, gfx, coll, 3 counter tiles, grass tile, animations
-	tileset Overworld_Block,        Overworld_GFX,        Overworld_Coll,        $FF,$FF,$FF, $52, TILEANIM_LIST
+	tileset Kanto_Block,            Kanto_GFX,            Kanto_Coll,            $FF,$FF,$FF, $52, TILEANIM_LIST
 	tileset PlayersHouse_Block,     PlayersHouse_GFX,     PlayersHouse_Coll,     $FF,$FF,$FF, $FF, TILEANIM_NONE
 	tileset Mart_Block,             Mart_GFX,             Mart_Coll,             $12,$14,$25, $FF, TILEANIM_NONE
 	tileset Forest_Block,           Forest_GFX,           Forest_Coll,           $FF,$FF,$FF, $20, TILEANIM_LIST
@@ -33,14 +33,13 @@ Tilesets:
 	tileset Club_Block,             Club_GFX,             Club_Coll,             $07,$17,$FF, $FF, TILEANIM_NONE
 	tileset Facility_Block,         Facility_GFX,         Facility_Coll,         $12,$FF,$FF, $FF, TILEANIM_LIST
 	tileset Plateau_Block,          Plateau_GFX,          Plateau_Coll,          $FF,$FF,$FF, $45, TILEANIM_LIST
-	tileset Johto_Block,            Johto_GFX,            Johto_Coll,            $FF,$FF,$FF, $04, TILEANIM_LIST
-	tileset JohtoModern_Block,      JohtoModern_GFX,      JohtoModern_Coll,      $FF,$FF,$FF, $04, TILEANIM_LIST
-	tileset JohtoCave_Block,        JohtoCave_GFX,        JohtoCave_Coll,        $FF,$FF,$FF, $FF, TILEANIM_LIST
+	tileset Silent_Block,           Silent_GFX,           Silent_Coll,           $FF,$FF,$FF, $04, TILEANIM_LIST
+	tileset KansaiCave_Block,       KansaiCave_GFX,       KansaiCave_Coll,       $FF,$FF,$FF, $FF, TILEANIM_LIST
 	tileset TraditionalHouse_Block, TraditionalHouse_GFX, TraditionalHouse_Coll, $42,$FF,$FF, $FF, TILEANIM_NONE
 	tileset EliteFourRoom_Block,    EliteFourRoom_GFX,    EliteFourRoom_Coll,    $FF,$FF,$FF, $FF, TILEANIM_LIST
 	tileset Tower_Block,            Tower_GFX,            Tower_Coll,            $FF,$FF,$FF, $FF, TILEANIM_LIST
-	tileset RuinsOfAlph_Block,      RuinsOfAlph_GFX,      RuinsOfAlph_Coll,      $FF,$FF,$FF, $FF, TILEANIM_NONE
-	tileset JohtoForest_Block,      JohtoForest_GFX,      JohtoForest_Coll,      $FF,$FF,$FF, $FF, TILEANIM_LIST
+	tileset Ruins_Block,            Ruins_GFX,            Ruins_Coll,            $FF,$FF,$FF, $FF, TILEANIM_NONE
+	tileset KansaiForest_Block,     KansaiForest_GFX,     KansaiForest_Coll,     $FF,$FF,$FF, $FF, TILEANIM_LIST
 	tileset Park_Block,             Park_GFX,             Park_Coll,             $FF,$FF,$FF, $04, TILEANIM_LIST
 	tileset BikeTileset_Block,      BikeTileset_GFX,      BikeTileset_Coll,      $35,$07,$18, $FF, TILEANIM_NONE
 	tileset IcePath_Block,          IcePath_GFX,          IcePath_Coll,          $FF,$FF,$FF, $FF, TILEANIM_NONE

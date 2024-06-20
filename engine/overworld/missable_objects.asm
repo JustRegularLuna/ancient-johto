@@ -1,7 +1,7 @@
 MarkTownVisitedAndLoadMissableObjects::
 	ld a, [wCurRegion]
 	and a
-	jr nz, .Johto
+	jr nz, .Kansai
 	; kanto
 	ld a, [wCurMap]
 	cp FIRST_ROUTE_MAP
@@ -11,21 +11,21 @@ MarkTownVisitedAndLoadMissableObjects::
 	ld hl, wTownVisitedFlag   ; mark town as visited (for flying)
 	predef FlagActionPredef
 	jr .notInTown
-.Johto
+.Kansai
 	ld a, [wCurMap]
-	cp NUM_JOHTO_CITY_MAPS
+	cp NUM_KANSAI_CITY_MAPS
 	jr nc, .notInTown
 	ld c, a
 	ld b, FLAG_SET
-	ld hl, wJohtoTownVisitedFlag
+	ld hl, wKansaiTownVisitedFlag
 	predef FlagActionPredef
 .notInTown
 	ld a, [wCurRegion]
 	and a ; Kanto?
 	ld hl, MapHSPointers
 	jr z, .gotHSPointers
-	; else Johto
-	ld hl, JohtoMapHSPointers
+	; else Kansai
+	ld hl, KansaiMapHSPointers
 .gotHSPointers
 	ld a, [wCurMap]
 	ld b, $0
@@ -41,11 +41,11 @@ LoadMissableObjects:
 	push hl
 	ld a, [wCurRegion]
 	and a
-	jr nz, .Johto
+	jr nz, .Kansai
 	ld de, MissableObjects     ; calculate difference between out pointer and the base pointer
 	jr .gotList
-.Johto
-	ld de, JohtoMissableObjects
+.Kansai
+	ld de, KansaiMissableObjects
 .gotList
 	ld a, l
 	sub e
@@ -98,8 +98,8 @@ InitializeMissableObjectsFlags:
 	ld bc, wMissableObjectFlagsEnd - wMissableObjectFlags
 	xor a
 	call FillMemory ; clear missable objects flags
-	ld hl, wJohtoMissableObjectFlags
-	ld bc, wJohtoMissableObjectFlagsEnd - wJohtoMissableObjectFlags
+	ld hl, wKansaiMissableObjectFlags
+	ld bc, wKansaiMissableObjectFlagsEnd - wKansaiMissableObjectFlags
 	xor a
 	call FillMemory ; clear missable objects flags
 	ld hl, MissableObjects
@@ -108,7 +108,7 @@ InitializeMissableObjectsFlags:
 .missableObjectsLoop
 	ld a, [hli]
 	cp -1           ; end of list
-	jr z, .JohtoObjects
+	jr z, .KansaiObjects
 	push hl
 	inc hl
 	ld a, [hl]
@@ -127,8 +127,8 @@ InitializeMissableObjectsFlags:
 	inc hl
 	jr .missableObjectsLoop
 
-.JohtoObjects
-	ld hl, JohtoMissableObjects
+.KansaiObjects
+	ld hl, KansaiMissableObjects
 	xor a
 	ld [wMissableObjectCounter], a
 .missableObjectsLoop2
@@ -140,7 +140,7 @@ InitializeMissableObjectsFlags:
 	ld a, [hl]
 	cp HIDE
 	jr nz, .skip2
-	ld hl, wJohtoMissableObjectFlags
+	ld hl, wKansaiMissableObjectFlags
 	ld a, [wMissableObjectCounter]
 	ld c, a
 	ld b, FLAG_SET
@@ -172,7 +172,7 @@ IsObjectHidden:
 	and a ; Kanto?
 	ld hl, wMissableObjectFlags
 	jr z, .gotList
-	ld hl, wJohtoMissableObjectFlags
+	ld hl, wKansaiMissableObjectFlags
 .gotList
 	call MissableObjectFlagAction
 	ld a, c
@@ -192,7 +192,7 @@ ShowObject2:
 	and a ; Kanto?
 	ld hl, wMissableObjectFlags
 	jr z, .gotList
-	ld hl, wJohtoMissableObjectFlags
+	ld hl, wKansaiMissableObjectFlags
 .gotList
 	ld a, [wMissableObjectIndex]
 	ld c, a
@@ -207,7 +207,7 @@ HideObject:
 	and a ; Kanto?
 	ld hl, wMissableObjectFlags
 	jr z, .gotList
-	ld hl, wJohtoMissableObjectFlags
+	ld hl, wKansaiMissableObjectFlags
 .gotList
 	ld a, [wMissableObjectIndex]
 	ld c, a

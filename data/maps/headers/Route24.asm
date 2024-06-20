@@ -1,5 +1,5 @@
 
-	map_header Route24, ROUTE_24, OVERWORLD, SOUTH | EAST
+	map_header Route24, ROUTE_24, KANTO, SOUTH | EAST
 	connection south, CeruleanCity, CERULEAN_CITY, -5
 	connection east, Route25, ROUTE_25, 0
 	end_map_header

@@ -1,6 +1,6 @@
 ; tilesets with water
 WaterTilesets:
-	db OVERWORLD
+	db KANTO
 	db FOREST
 	db GYM
 	db SHIP
@@ -8,8 +8,7 @@ WaterTilesets:
 	db CAVERN
 	db FACILITY
 	db PLATEAU
-	db JOHTO
-	db JOHTO_MODERN
-	db JOHTO_CAVE
-	db JOHTO_FOREST
+	db SILENT
+	db KANSAI_CAVE
+	db KANSAI_FOREST
 	db -1 ; end

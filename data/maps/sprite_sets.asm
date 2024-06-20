@@ -41,8 +41,6 @@ MapSpriteSets:
 	db $01 ; ROUTE_23
 	db $01 ; ROUTE_24
 	db $01 ; ROUTE_25
-	db $01 ; ROUTE_26
-	db $01 ; KANTO_ROUTE_27
 	assert_table_length FIRST_INDOOR_MAP
 
 EAST_WEST   EQU 1
@@ -94,30 +92,23 @@ SPRITE_SET_LENGTH EQU 9 + 2
 ;
 
 
-JohtoMapSpriteSets:
-	table_width 1, JohtoMapSpriteSets
-	db $01 ; NEW_BARK_TOWN
-	db $01 ; CHERRYGROVE_CITY
-	db $02 ; VIOLET_CITY
-	db $03 ; RUINS_OF_ALPH_OUTSIDE
-	db $01 ; ROUTE_29
-	db $01 ; ROUTE_30
-	db $01 ; ROUTE_31
-	db $02 ; ROUTE_32
-	db $02 ; ROUTE_36
-	db $01 ; JOHTO_ROUTE_27
-	assert_table_length FIRST_JOHTO_INDOOR_MAP
+KansaiMapSpriteSets:
+	table_width 1, KansaiMapSpriteSets
+	db $01 ; SILENT_HILLS
+	db $01 ; SAKURA_TOWN
+	db $01 ; KANSAI_ROUTE_1
+	assert_table_length FIRST_KANSAI_INDOOR_MAP
 
 
-JohtoSplitMapSpriteSets:
+KansaiSplitMapSpriteSets:
 	db NORTH_SOUTH, 37, $02, $01 ; $f1 **Placeholder
 
 
-JohtoSpriteSets:
+KansaiSpriteSets:
 
 ; sprite set $01
-; NEW_BARK_TOWN
-; CHERRYGROVE_CITY
+; SILENT_HILLS
+; SAKURA_TOWN
 	table_width 1
 	db SPRITE_RIVAL
 	db SPRITE_GIRL
@@ -130,36 +121,4 @@ JohtoSpriteSets:
 	db SPRITE_LASS
 	db SPRITE_POKE_BALL
 	db SPRITE_FRUIT_TREE
-	assert_table_length SPRITE_SET_LENGTH
-
-; sprite set $02
-; VIOLET_CITY
-	table_width 1
-	db SPRITE_FISHER
-	db SPRITE_LASS
-	db SPRITE_OFFICER
-	db SPRITE_GRAMPS
-	db SPRITE_YOUNGSTER
-	db SPRITE_COOLTRAINER_M
-	db SPRITE_BUG_CATCHER
-	db SPRITE_SUPER_NERD
-	db SPRITE_WEIRD_TREE
-	db SPRITE_POKE_BALL
-	db SPRITE_FRUIT_TREE
-	assert_table_length SPRITE_SET_LENGTH
-
-; sprite set $02
-; RUINS_OF_ALPH_OUTSIDE
-	table_width 1
-	db SPRITE_FISHER
-	db SPRITE_LASS
-	db SPRITE_OFFICER
-	db SPRITE_GRAMPS
-	db SPRITE_YOUNGSTER
-	db SPRITE_COOLTRAINER_M
-	db SPRITE_FROWNING_MAN
-	db SPRITE_SUPER_NERD
-	db SPRITE_SCIENTIST
-	db SPRITE_POKE_BALL
-	db SPRITE_FOSSIL
 	assert_table_length SPRITE_SET_LENGTH

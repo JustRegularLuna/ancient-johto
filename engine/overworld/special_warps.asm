@@ -58,8 +58,8 @@ LoadSpecialWarpData:
 	and a ; Kanto?
 	ld hl, FirstMapSpec
 	jr z, .copyWarpData
-	; else Johto
-	ld hl, JohtoFirstMapSpec
+	; else Kansai
+	ld hl, KansaiFirstMapSpec
 .copyWarpData
 	ld de, wCurMap
 	ld c, $7
@@ -99,8 +99,8 @@ LoadSpecialWarpData:
 	and a ; are we in kanto?
 	ld hl, DungeonWarpList
 	jr z, .gotDungeonWarpList
-	; if not kanto, then Johto
-	ld hl, JohtoDungeonWarpList
+	; if not kanto, then Kansai
+	ld hl, KansaiDungeonWarpList
 .gotDungeonWarpList
 	ld de, 0
 	ld a, 6
@@ -125,8 +125,8 @@ LoadSpecialWarpData:
 	and a
 	ld hl, DungeonWarpData
 	jr z, .gotDungeonWarpData
-	; else Johto
-	ld hl, JohtoDungeonWarpData
+	; else Kansai
+	ld hl, KansaiDungeonWarpData
 .gotDungeonWarpData
 	add hl, de
 	jr .copyWarpData2
@@ -139,8 +139,8 @@ LoadSpecialWarpData:
 	and a ; kanto or johto?
 	ld hl, FlyWarpDataPtr
 	jr z, .flyWarpDataPtrLoop
-	; else Johto
-	ld hl, JohtoFlyWarpDataPtr
+	; else Kansai
+	ld hl, KansaiFlyWarpDataPtr
 .flyWarpDataPtrLoop
 	ld a, [hli]
 	inc hl
@@ -162,7 +162,7 @@ LoadSpecialWarpData:
 	inc de
 	dec c
 	jr nz, .copyWarpDataLoop2
-	xor a ; OVERWORLD
+	xor a ; KANTO
 	ld [wCurMapTileset], a
 .done
 	ld [wYOffsetSinceLastSpecialWarp], a

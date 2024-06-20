@@ -47,14 +47,8 @@ ColosseumHiddenObjects:
 ; JOHTO STUFF
 ; ===========
 
-JohtoHiddenObjectMaps:
-	db VIOLET_SCHOOL_HOUSE
+KansaiHiddenObjectMaps:
 	db -1 ; end
 
-JohtoHiddenObjectPointers:
-	dw VioletSchoolHouseHiddenObjects
-
-VioletSchoolHouseHiddenObjects:
-	hidden_text_predef  3,  0, PokemonSchoolBlackboard, PrintBlackboardText
-	hidden_text_predef  4,  0, PokemonSchoolBlackboard, PrintBlackboardText
-	db -1 ; end
+KansaiHiddenObjectPointers:
+	dw -1

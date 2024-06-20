@@ -144,13 +144,13 @@ SetPal_Overworld:
 	jr z, .PokemonTowerOrAgatha
 	cp CAVERN
 	jr z, .caveOrBruno
-	cp JOHTO_CAVE
-	jr z, .johtoCave
+	cp KANSAI_CAVE
+	jr z, .kansaiCave
 	cp GATE
 	jr z, .gate
 	ld a, [wCurRegion]
-	and a ; Kanto or Johto?
-	jr nz, .johtoChecks
+	and a ; Kanto or Kansai?
+	jr nz, .kansaiChecks
 	; Kanto
 	ld a, [wCurMap]
 	cp FIRST_INDOOR_MAP
@@ -170,20 +170,20 @@ SetPal_Overworld:
 	jr c, .town
 	ld a, PAL_ROUTE - 1
 	jr .town
-.johtoChecks
+.kansaiChecks
 	ld a, [wCurMap]
-	cp FIRST_JOHTO_INDOOR_MAP
-	jr c, .johtoTownOrRoute
+	cp FIRST_KANSAI_INDOOR_MAP
+	jr c, .kansaiTownOrRoute
 	; additional checks go here later
-.johtoNormalDungeonOrBuilding
+.kansaiNormalDungeonOrBuilding
 	ld a, [wLastMap]
-.johtoTownOrRoute
-	cp NUM_JOHTO_CITY_MAPS
-	jr c, .johtoTown
+.kansaiTownOrRoute
+	cp NUM_KANSAI_CITY_MAPS
+	jr c, .kansaiTown
 	ld a, PAL_ROUTE - 1
 	jr .town
-.johtoTown
-	add PAL_NEW_BARK - 1; adjust the city ID to the johto palette block
+.kansaiTown
+	add PAL_NEW_BARK - 1; adjust the city ID to the kansai palette block
 	; fallthrough
 .town
 	inc a ; a town's palette ID is its map ID + 1
@@ -202,7 +202,7 @@ SetPal_Overworld:
 .Lorelei
 	xor a
 	jr .town
-.johtoCave
+.kansaiCave
 	ld a, PAL_PEWTER - 1
 	jr .town
 .gate
@@ -237,8 +237,8 @@ SetPal_TrainerCard:
 	call CopyData
 	ld de, BadgeBlkDataLengths
 	ld hl, wTrainerCardBlkPacket + 2
-	ld a, [wJohtoBadges]
-	ld c, NUM_JOHTO_BADGES
+	ld a, [wKansaiBadges]
+	ld c, NUM_KANSAI_BADGES
 .badgeLoop
 	srl a
 	push af

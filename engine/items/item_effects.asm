@@ -209,7 +209,7 @@ ItemUseBall:
 	jr .loop
 
 .johtoChecks
-	;TODO: If Johto needs any checks like the marowak
+	;TODO: If Kansai needs any checks like the marowak
 	;ld a, [wCurMap]
 	;cp POKEMON_TOWER_6F
 	;jr nz, .loop
@@ -1721,7 +1721,7 @@ ItemUsePokeflute:
 	SetEvent EVENT_FIGHT_ROUTE16_SNORLAX
 	ret
 .notKanto
-	; TODO: Johto Snorlax checks if they are needed
+	; TODO: Kansai Snorlax checks if they are needed
 .noSnorlaxToWakeUp
 	ld hl, PlayedFluteNoEffectText
 	jp PrintText
@@ -2872,8 +2872,8 @@ ReadSuperRodData:
 	and a ; Kanto?
 	ld hl, SuperRodData
 	jr z, .gotSuperRodData
-	; Johto
-	ld hl, JohtoSuperRodData
+	; Kansai
+	ld hl, KansaiSuperRodData
 .gotSuperRodData
 	ld a, [wCurMap]
 	ld de, 3 ; each fishing group is three bytes wide
@@ -2930,7 +2930,7 @@ FindWildLocationsOfMon:
 	and a ; Kanto?
 	ld hl, WildDataPointers
 	jr z, .gotWildDataPointers
-	ld hl, JohtoWildDataPointers
+	ld hl, KansaiWildDataPointers
 .gotWildDataPointers
 	ld de, wBuffer
 	ld c, $0

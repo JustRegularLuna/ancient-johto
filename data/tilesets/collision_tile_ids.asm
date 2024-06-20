@@ -9,7 +9,7 @@ ENDM
 Underground_Coll::
 	coll_tiles $0b, $0c, $13, $15, $18
 
-Overworld_Coll::
+Kanto_Coll::
 	coll_tiles $00, $10, $1b, $20, $21, $23, $2c, $2d, $2e, $30, $31, $33, $39, $3c, $3e, $52, $54, $58, $5b, $5e
 
 PlayersHouse_Coll::
@@ -72,13 +72,10 @@ Facility_Coll::
 Plateau_Coll::
 	coll_tiles $1b, $23, $2c, $2d, $3b, $45, $46
 
-Johto_Coll::
-	coll_tiles $04, $05, $06, $29, $39, $40, $56, $5b, $64
+Silent_Coll::
+	coll_tiles $00, $01, $02, $04, $22, $27, $46, $53, $56, $5E
 
-JohtoModern_Coll::
-	coll_tiles $00, $04, $05, $06, $27, $2F, $35, $39, $40, $5B
-
-JohtoCave_Coll::
+KansaiCave_Coll::
 	coll_tiles $01, $04, $16, $18, $1E, $30, $32, $34, $36, $37, $38, $3A, 
 
 TraditionalHouse_Coll::
@@ -90,10 +87,10 @@ EliteFourRoom_Coll::
 Tower_Coll::
 	coll_tiles $01, $02, $10, $17, $18, $1C, $1E, $54
 
-RuinsOfAlph_Coll::
+Ruins_Coll::
 	coll_tiles $01, $03, $11, $18, $28, $3A, $3B
 
-JohtoForest_Coll::
+KansaiForest_Coll::
 	coll_tiles $02, $05, $13, $17, $42
 
 Park_Coll::

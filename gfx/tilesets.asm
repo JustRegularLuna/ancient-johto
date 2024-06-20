@@ -1,7 +1,7 @@
-SECTION "Overworld Tileset", ROMX
+SECTION "Kanto Tileset", ROMX
 
-Overworld_GFX::     INCBIN "gfx/tilesets/overworld.2bpp"
-Overworld_Block::   INCBIN "gfx/blocksets/overworld.bst"
+Kanto_GFX::         INCBIN "gfx/tilesets/kanto.2bpp"
+Kanto_Block::       INCBIN "gfx/blocksets/kanto.bst"
 
 
 SECTION "House Tileset", ROMX
@@ -118,16 +118,10 @@ Underground_GFX::   INCBIN "gfx/tilesets/underground.2bpp"
 Underground_Block:: INCBIN "gfx/blocksets/underground.bst"
 
 
-SECTION "Johto Tileset", ROMX
+SECTION "Silent Tileset", ROMX
 
-Johto_GFX::         INCBIN "gfx/tilesets/johto.2bpp"
-Johto_Block::       INCBIN "gfx/blocksets/johto.bst"
-
-
-SECTION "Johto Modern Tileset", ROMX
-
-JohtoModern_GFX::   INCBIN "gfx/tilesets/johto_modern.2bpp"
-JohtoModern_Block:: INCBIN "gfx/blocksets/johto_modern.bst"
+Silent_GFX::        INCBIN "gfx/tilesets/silent.2bpp"
+Silent_Block::      INCBIN "gfx/blocksets/silent.bst"
 
 
 SECTION "Players House Tileset", ROMX
@@ -142,10 +136,10 @@ PlayersRoom_GFX::    INCBIN "gfx/tilesets/players_room.2bpp"
 PlayersRoom_Block::  INCBIN "gfx/blocksets/players_room.bst"
 
 
-SECTION "Johto Cave Tileset", ROMX
+SECTION "Kansai Cave Tileset", ROMX
 
-JohtoCave_GFX::    INCBIN "gfx/tilesets/johto_cave.2bpp"
-JohtoCave_Block::  INCBIN "gfx/blocksets/johto_cave.bst"
+KansaiCave_GFX::   INCBIN "gfx/tilesets/kansai_cave.2bpp"
+KansaiCave_Block:: INCBIN "gfx/blocksets/kansai_cave.bst"
 
 
 SECTION "Traditional House Tileset", ROMX
@@ -166,16 +160,16 @@ Tower_GFX::           INCBIN "gfx/tilesets/tower.2bpp"
 Tower_Block::         INCBIN "gfx/blocksets/tower.bst"
 
 
-SECTION "Ruins of Alph Tileset", ROMX
+SECTION "Ruins Tileset", ROMX
 
-RuinsOfAlph_GFX::     INCBIN "gfx/tilesets/ruins_of_alph.2bpp"
-RuinsOfAlph_Block::   INCBIN "gfx/blocksets/ruins_of_alph.bst"
+Ruins_GFX::           INCBIN "gfx/tilesets/ruins.2bpp"
+Ruins_Block::         INCBIN "gfx/blocksets/ruins.bst"
 
 
-SECTION "Johto Forest Tileset", ROMX
+SECTION "Kansai Forest Tileset", ROMX
 
-JohtoForest_GFX::     INCBIN "gfx/tilesets/johto_forest.2bpp"
-JohtoForest_Block::   INCBIN "gfx/blocksets/johto_forest.bst"
+KansaiForest_GFX::     INCBIN "gfx/tilesets/kansai_forest.2bpp"
+KansaiForest_Block::   INCBIN "gfx/blocksets/kansai_forest.bst"
 
 
 SECTION "Park Tileset", ROMX

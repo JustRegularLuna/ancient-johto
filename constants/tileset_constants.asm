@@ -1,7 +1,7 @@
 ; tileset ids
 ; Tilesets indexes (see data/tilesets/tileset_headers.asm)
 	const_def
-	const OVERWORLD
+	const KANTO
 	const PLAYERS_HOUSE
 	const MART
 	const FOREST
@@ -23,14 +23,13 @@
 	const CLUB
 	const FACILITY
 	const PLATEAU
-	const JOHTO
-	const JOHTO_MODERN
-	const JOHTO_CAVE
+	const SILENT
+	const KANSAI_CAVE
 	const TRADITIONAL_HOUSE
 	const ELITE_FOUR_ROOM
 	const TOWER
-	const RUINS_OF_ALPH
-	const JOHTO_FOREST
+	const RUINS
+	const KANSAI_FOREST
 	const PARK
 	const BIKE_TILESET
 	const ICE_PATH

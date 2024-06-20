@@ -37,8 +37,8 @@ DisplayTownMap:
 	and a ; Kanto?
 	ld hl, TownMapOrder
 	jr z, .gotRegionOrder
-	; else Johto
-	ld hl, JohtoTownMapOrder
+	; else Kansai
+	ld hl, KansaiTownMapOrder
 .gotRegionOrder
 	ld a, [wWhichTownMapLocation]
 	ld c, a
@@ -93,17 +93,17 @@ DisplayTownMap:
 .pressedUp
 	ld a, [wCurRegion]
 	and a ; Kanto?
-	jr nz, .pressedUpJohto
+	jr nz, .pressedUpKansai
 	ld a, [wWhichTownMapLocation]
 	inc a
 	cp TownMapOrderEnd - TownMapOrder ; number of list items + 1
 	jr nz, .noOverflow
 	xor a
 	jr .noOverflow
-.pressedUpJohto
+.pressedUpKansai
 	ld a, [wWhichTownMapLocation]
 	inc a
-	cp JohtoTownMapOrderEnd - JohtoTownMapOrder
+	cp KansaiTownMapOrderEnd - KansaiTownMapOrder
 	jr nz, .noOverflow
 	xor a
 .noOverflow
@@ -112,19 +112,19 @@ DisplayTownMap:
 .pressedDown
 	ld a, [wCurRegion]
 	and a ; Kanto?
-	jr nz, .pressedDownJohto
+	jr nz, .pressedDownKansai
 	ld a, [wWhichTownMapLocation]
 	dec a
 	cp -1
 	jr nz, .noUnderflow
 	ld a, TownMapOrderEnd - TownMapOrder - 1 ; number of list items
 	jr .noUnderflow
-.pressedDownJohto
+.pressedDownKansai
 	ld a, [wWhichTownMapLocation]
 	dec a
 	cp -1
 	jr nz, .noUnderflow
-	ld a, JohtoTownMapOrderEnd - JohtoTownMapOrder - 1 ; number of list items
+	ld a, KansaiTownMapOrderEnd - KansaiTownMapOrder - 1 ; number of list items
 .noUnderflow
 	ld [wWhichTownMapLocation], a
 	jp .townMapLoop
@@ -263,8 +263,8 @@ LoadTownMap_Fly::
 	and a ; in Kanto?
 	ld hl, wFlyLocationsList + NUM_CITY_MAPS
 	jr z, .pressedDown
-	; else Johto
-	ld hl, wFlyLocationsList + NUM_JOHTO_CITY_MAPS
+	; else Kansai
+	ld hl, wFlyLocationsList + NUM_KANSAI_CITY_MAPS
 	jr .pressedDown
 
 BuildFlyLocationsList:
@@ -281,11 +281,11 @@ BuildFlyLocationsList:
 	lb bc, 0, NUM_CITY_MAPS
 	jr .loop
 .johto
-	ld a, [wJohtoTownVisitedFlag]
+	ld a, [wKansaiTownVisitedFlag]
 	ld e, a
-	ld a, [wJohtoTownVisitedFlag + 1]
+	ld a, [wKansaiTownVisitedFlag + 1]
 	ld d, a
-	lb bc, 0, NUM_JOHTO_CITY_MAPS
+	lb bc, 0, NUM_KANSAI_CITY_MAPS
 .loop
 	srl d
 	rr e
@@ -329,7 +329,7 @@ LoadTownMap:
 	and a ; Kanto?
 	ld de, CompressedMap
 	jr z, .nextTile
-	ld de, JohtoCompressedMap
+	ld de, KansaiCompressedMap
 .nextTile
 	ld a, [de]
 	and a
@@ -362,7 +362,7 @@ LoadTownMap:
 CompressedMap:
 	INCBIN "gfx/town_map/kanto_map.rle"
 
-JohtoCompressedMap:
+KansaiCompressedMap:
 	INCBIN "gfx/town_map/johto_map.rle"
 
 ExitTownMap:
@@ -611,10 +611,10 @@ LoadTownMapEntry:
 	jr .readEntry
 .johto
 	pop af
-	cp FIRST_JOHTO_INDOOR_MAP
+	cp FIRST_KANSAI_INDOOR_MAP
 	jr c, .johtoExternal
 	ld bc, 5
-	ld hl, JohtoInternalMapEntries
+	ld hl, KansaiInternalMapEntries
 .johtoLoop
 	cp [hl]
 	jr c, .johtoFoundEntry
@@ -624,7 +624,7 @@ LoadTownMapEntry:
 	inc hl
 	jr .readEntry
 .johtoExternal
-	ld hl, JohtoExternalMapEntries
+	ld hl, KansaiExternalMapEntries
 	ld c, a
 	ld b, 0
 	add hl, bc

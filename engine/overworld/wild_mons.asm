@@ -4,8 +4,8 @@ LoadWildData::
 	and a ; Kanto?
 	ld hl, WildDataPointers
 	jr z, .gotWildPointers
-	; else Johto
-	ld hl, JohtoWildDataPointers
+	; else Kansai
+	ld hl, KansaiWildDataPointers
 .gotWildPointers
 	ld a, [wCurMap]
 

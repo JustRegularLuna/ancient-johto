@@ -3,8 +3,8 @@ HiddenItemNear:
 	and a ; Kanto?
 	ld hl, HiddenItemCoords
 	jr z, .gotItemCoordList
-	; else Johto
-	ld hl, JohtoHiddenItemCoords
+	; else Kansai
+	ld hl, KansaiHiddenItemCoords
 .gotItemCoordList
 	ld b, 0
 .loop
@@ -18,8 +18,8 @@ HiddenItemNear:
 	and a ; Kanto?
 	ld hl, wObtainedHiddenItemsFlags
 	jr z, .gotFlagList
-	; else Johto
-	ld hl, wObtainedJohtoHiddenItemsFlags
+	; else Kansai
+	ld hl, wObtainedKansaiHiddenItemsFlags
 .gotFlagList
 	ld c, b
 	ld b, FLAG_TEST

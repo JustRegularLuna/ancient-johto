@@ -382,10 +382,10 @@ OverworldLoopLessDelay::
 	ld hl, wd72e
 	set 5, [hl]
 	ld a, [wCurRegion]
-	cp JOHTO_REGION
+	cp KANSAI_REGION
 	jr nz, .notCherrygrove
 	ld a, [wCurMap]
-	cp CHERRYGROVE_CITY
+	cp SAKURA_TOWN
 	jr z, .noFaintCheck ; no blacking out if the player lost to the rival in Oak's lab
 .notCherrygrove
 	callfar AnyPartyAlive
@@ -540,19 +540,19 @@ WarpFound2::
 	ld [wLastMap], a
 	ld a, [wCurMapWidth]
 	ld [wUnusedD366], a ; not read
-	; check region to know if this is the Johto Route 27 Tohjo Falls entrance
-	ld a, [wCurRegion]
-	and a ; In Kanto?
-	jr z, .notRoute27
-	ld a, [wCurMap]
-	cp JOHTO_ROUTE_27
-	jr nz, .notRoute27
-	ld a, [wYCoord]
-	cp 5
-	jr nz, .notRoute27
-	xor a ; kanto
-	ld [wDestinationRegion], a
-.notRoute27
+	; check region to know if this is the Kanto Route 27 Tohjo Falls entrance
+	;ld a, [wCurRegion]
+	;and a ; In Kanto?
+	;jr z, .notRoute27
+	;ld a, [wCurMap]
+	;cp JOHTO_ROUTE_27
+	;jr nz, .notRoute27
+	;ld a, [wYCoord]
+	;cp 5
+	;jr nz, .notRoute27
+	;xor a ; kanto
+	;ld [wDestinationRegion], a
+;.notRoute27
 	; check region to know if this is Rock Tunnel or not
 	ld a, [wCurRegion]
 	and a ; In Kanto?
@@ -576,24 +576,24 @@ WarpFound2::
 ; for maps that can have the 0xFF destination map, which means to return to the outside map
 ; not all these maps are necessarily indoors, though
 .indoorMaps
-; added check for Tohjo Falls, once it exists
-	ld a, [wCurRegion]
-	and a ; Kanto?
-	jr nz, .continue
-	ld a, [wCurMap]
-	cp TOHJO_FALLS
-	jr nz, .continue
-	ld a, [wXCoord] ; which side of the map are we trying to leave on?
-	cp 16
-	jr c, .JohtoSide
+; added check for Tohjo Falls, if something like it exists
+;	ld a, [wCurRegion]
+;	and a ; Kanto?
+;	jr nz, .continue
+;	ld a, [wCurMap]
+;	cp TOHJO_FALLS
+;	jr nz, .continue
+;	ld a, [wXCoord] ; which side of the map are we trying to leave on?
+;	cp 16
+;	jr c, .KansaiSide
 	; kanto side
-	ld a, KANTO_REGION
-	ld [wDestinationRegion], a
-	jr .continue
-.JohtoSide
-	ld a, JOHTO_REGION
-	ld [wDestinationRegion], a
-.continue
+;	ld a, KANTO_REGION
+;	ld [wDestinationRegion], a
+;	jr .continue
+;.KansaiSide
+;	ld a, KANSAI_REGION
+;	ld [wDestinationRegion], a
+;.continue
 ; original code for following a warp continues here
 	ldh a, [hWarpDestinationMap] ; destination map
 	cp LAST_MAP
@@ -794,13 +794,11 @@ PlayMapChangeSound::
 CheckIfInOutsideMap::
 ; If the player is in an outside map (a town or route), set the z flag
 	ld a, [wCurMapTileset]
-	and a ; OVERWORLD aka Kanto
+	and a ; KANTO
 	ret z
 	cp PLATEAU
 	ret z
-	cp JOHTO
-	ret z
-	cp JOHTO_MODERN
+	cp SILENT
 	ret
 
 ; this function is an extra check that sometimes has to pass in order to warp, beyond just standing on a warp
@@ -1981,7 +1979,7 @@ CollisionCheckOnWater::
 	jr z, .checkIfVermilionDockTileset
 	cp $48 ; tile on right on coast lines in Safari Zone
 	jr z, .noCollision ; keep surfing
-	cp $62 ; shoreline in johto
+	cp $07 ; shoreline in kansai
 	jr z, .noCollision ; keep surfing
 ; check if the [land] tile in front of the player is passable
 .checkIfNextTileIsPassable
@@ -2116,8 +2114,8 @@ LoadMapHeader::
 	and a
 	ld hl, MapHeaderPointers
 	jr z, .gotRegion
-	; if not Kanto, then load Johto
-	ld hl, JohtoMapHeaderPointers
+	; if not Kanto, then load Kansai
+	ld hl, KansaiMapHeaderPointers
 .gotRegion
 	ld a, [wCurMap]
 	sla a
@@ -2375,8 +2373,8 @@ LoadMapHeader::
 	and a ; Kanto?
 	ld hl, MapSongs
 	jr z, .gotSongTable
-	; else Johto
-	ld hl, JohtoMapSongs
+	; else Kansai
+	ld hl, KansaiMapSongs
 .gotSongTable
 	add hl, bc
 	ld a, [hl]
@@ -2472,8 +2470,8 @@ SwitchToMapRomBank::
 	and a
 	ld hl, MapHeaderBanks
 	jr z, .gotRegion
-	; if not Kanto, then Johto
-	ld hl, JohtoMapHeaderBanks
+	; if not Kanto, then Kansai
+	ld hl, KansaiMapHeaderBanks
 .gotRegion
 	add hl, bc
 	ld a, [hl]

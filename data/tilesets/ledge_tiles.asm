@@ -1,16 +1,15 @@
 LedgeTiles:
-	dbw OVERWORLD, .overworld
-	dbw JOHTO, .johto
-	dbw JOHTO_MODERN, .johto_modern
-	dbw JOHTO_CAVE, .johto_cave
+	dbw KANTO, .kanto
+	dbw SILENT, .silent
+	dbw KANSAI_CAVE, .kansai_cave
 	dbw TRADITIONAL_HOUSE, .traditional_house
 	dbw TOWER, .tower
-	dbw JOHTO_FOREST, .johto_forest
+	dbw KANSAI_FOREST, .kansai_forest
 	dbw ICE_PATH, .ice_path
 	db -1
 
 	; player direction, tile player standing on, ledge tile, input required
-.overworld
+.kanto
 	db SPRITE_FACING_DOWN,  $2C, $37, D_DOWN
 	db SPRITE_FACING_DOWN,  $39, $36, D_DOWN
 	db SPRITE_FACING_DOWN,  $39, $37, D_DOWN
@@ -21,17 +20,16 @@ LedgeTiles:
 	db SPRITE_FACING_RIGHT, $39, $0D, D_RIGHT
 	db -1 ; end
 
-.johto
-.johto_modern
-	db SPRITE_FACING_DOWN,  $05, $4C, D_DOWN
-	db SPRITE_FACING_DOWN,  $06, $4C, D_DOWN
-	db SPRITE_FACING_LEFT,  $05, $3B, D_LEFT
-	db SPRITE_FACING_LEFT,  $06, $3B, D_LEFT
-	db SPRITE_FACING_RIGHT, $05, $60, D_RIGHT
-	db SPRITE_FACING_RIGHT, $06, $61, D_RIGHT
+.silent
+	db SPRITE_FACING_DOWN,  $01, $5C, D_DOWN
+	db SPRITE_FACING_DOWN,  $02, $5C, D_DOWN
+	db SPRITE_FACING_LEFT,  $01, $4B, D_LEFT
+	db SPRITE_FACING_LEFT,  $02, $4B, D_LEFT
+	db SPRITE_FACING_RIGHT, $01, $38, D_RIGHT
+	db SPRITE_FACING_RIGHT, $02, $39, D_RIGHT
 	db -1 ; end
 
-.johto_cave
+.kansai_cave
 	db SPRITE_FACING_DOWN,  $01, $26, D_DOWN
 	db SPRITE_FACING_LEFT,  $01, $15, D_LEFT
 	db SPRITE_FACING_RIGHT, $01, $41, D_RIGHT
@@ -47,7 +45,7 @@ LedgeTiles:
 	db SPRITE_FACING_DOWN,  $02, $60, D_DOWN
 	db -1 ; end
 
-.johto_forest
+.kansai_forest
 	db SPRITE_FACING_LEFT,  $05, $19, D_LEFT
 	db SPRITE_FACING_RIGHT, $05, $3B, D_RIGHT
 	db SPRITE_FACING_DOWN,  $05, $2A, D_DOWN

@@ -8,21 +8,21 @@ DrawBadges:
 ; Tile ids for face/badge graphics.
 	ld de, wBadgeOrFaceTiles
 	ld hl, .FaceBadgeTiles
-	ld bc, NUM_JOHTO_BADGES
+	ld bc, NUM_KANSAI_BADGES
 	call CopyData
 
 ; Booleans for each badge.
 	ld hl, wTempObtainedBadgesBooleans
-	ld bc, NUM_JOHTO_BADGES
+	ld bc, NUM_KANSAI_BADGES
 	xor a
 	call FillMemory
 
 ; Alter these based on owned badges.
 	ld de, wTempObtainedBadgesBooleans
 	ld hl, wBadgeOrFaceTiles
-	ld a, [wJohtoBadges]
+	ld a, [wKansaiBadges]
 	ld b, a
-	ld c, NUM_JOHTO_BADGES
+	ld c, NUM_KANSAI_BADGES
 .CheckBadge
 	srl b
 	jr nc, .NextBadge
@@ -91,7 +91,7 @@ DrawBadges:
 	push bc
 	ld hl, wBadgeOrFaceTiles + 1
 	ld de, wBadgeOrFaceTiles
-	ld bc, NUM_JOHTO_BADGES
+	ld bc, NUM_KANSAI_BADGES
 	call CopyData
 	pop bc
 
@@ -232,7 +232,7 @@ DrawKantoBadges:
 .FaceBadgeTiles
 	db $20, $28, $30, $38, $40, $48, $50, $58
 
-JohtoGymLeaderFaceAndBadgeTileGraphics:
+KansaiGymLeaderFaceAndBadgeTileGraphics:
 	INCBIN "gfx/trainer_card/johto_badges.2bpp"
 
 KantoGymLeaderFaceAndBadgeTileGraphics:

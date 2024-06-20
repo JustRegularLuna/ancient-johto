@@ -8,5 +8,5 @@ HiddenItemCoords:
 	db -1 ; end
 
 
-JohtoHiddenItemCoords:
+KansaiHiddenItemCoords:
 	db -1 ; end

@@ -7,5 +7,5 @@ HiddenCoinCoords:
 	;hidden_coin GAME_CORNER,  0,  8
 	db -1 ; end
 
-JohtoHiddenCoinCoords:
+KansaiHiddenCoinCoords:
 	db -1 ; end

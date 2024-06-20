@@ -1,5 +1,5 @@
 DoorTileIDPointers:
-	dbw OVERWORLD,       .OverworldDoorTileIDs
+	dbw KANTO,           .KantoDoorTileIDs
 	dbw FOREST,          .ForestDoorTileIDs
 	dbw MART,            .MartDoorTileIDs
 	dbw HOUSE,           .HouseDoorTileIDs
@@ -11,14 +11,13 @@ DoorTileIDPointers:
 	dbw LAB,             .LabDoorTileIDs
 	dbw FACILITY,        .FacilityDoorTileIDs
 	dbw PLATEAU,         .PlateauDoorTileIDs
-	dbw JOHTO,           .JohtoDoorTileIDs
-	dbw JOHTO_MODERN,    .JohtoModernDoorTileIDs
+	dbw SILENT,          .SilentDoorTileIDs
 	dbw PLAYERS_HOUSE,   .PlayersHouseDoorTileIDs
 	dbw PLAYERS_ROOM,    .PlayersRoomDoorTileIDs
 	dbw POKECENTER,      .PokecenterDoorTileIDs
-	dbw JOHTO_CAVE,      .JohtoCaveDoorTileIDs
+	dbw KANSAI_CAVE,     .KansaiCaveDoorTileIDs
 	dbw ELITE_FOUR_ROOM, .EliteFourRoomDoorTileIDs
-	dbw JOHTO_FOREST,    .JohtoForestDoorTileIDs
+	dbw KANSAI_FOREST,   .KansaiForestDoorTileIDs
 	dbw BIKE_TILESET,    .BikeTilesetDoorTileIDs
 	dbw LIGHTHOUSE,      .LighthouseDoorTileIDs
 	dbw RADIO_TOWER,     .RadioTowerDoorTileIDs
@@ -33,7 +32,7 @@ ENDR
 	db 0 ; end
 ENDM
 
-.OverworldDoorTileIDs:
+.KantoDoorTileIDs:
 	door_tiles $1B, $58
 
 .ForestDoorTileIDs:
@@ -72,11 +71,8 @@ ENDM
 .PlateauDoorTileIDs:
 	door_tiles $3b, $1b
 
-.JohtoDoorTileIDs:
-	door_tiles $29, $39, $56
-
-.JohtoModernDoorTileIDs:
-	door_tiles $06, $27, $35, $39
+.SilentDoorTileIDs:
+	door_tiles $22, $5E
 
 .PlayersHouseDoorTileIDs:
 	door_tiles $5c, $5e
@@ -84,13 +80,13 @@ ENDM
 .PlayersRoomDoorTileIDs:
 	door_tiles $50
 
-.JohtoCaveDoorTileIDs:
+.KansaiCaveDoorTileIDs:
 	door_tiles $1E
 
 .EliteFourRoomDoorTileIDs:
 	door_tiles $4A
 
-.JohtoForestDoorTileIDs:
+.KansaiForestDoorTileIDs:
 	door_tiles $17
 
 .BikeTilesetDoorTileIDs:

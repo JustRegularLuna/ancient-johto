@@ -1,5 +1,5 @@
 ; see also MapHeaderBanks
-; KANTO headers
+; Kanto headers
 MapHeaderPointers::
 	table_width 2, MapHeaderPointers
 	dw PalletTown_h
@@ -39,8 +39,6 @@ MapHeaderPointers::
 	dw Route23_h
 	dw Route24_h
 	dw Route25_h
-	dw Route26_h
-	dw KantoRoute27_h
 	dw RedsHouse1F_h
 	dw RedsHouse2F_h
 	dw BluesHouse_h
@@ -177,7 +175,7 @@ MapHeaderPointers::
 	dw CinnabarLabFossilRoom_h
 	dw CinnabarPokecenter_h
 	dw CinnabarMart_h
-	dw TohjoFalls_h
+	dw CinnabarMart_h
 	dw IndigoPlateauLobby_h
 	dw CopycatsHouse1F_h
 	dw CopycatsHouse2F_h
@@ -255,43 +253,22 @@ MapHeaderPointers::
 	assert_table_length NUM_MAPS
 
 
-; JOHTO headers
-JohtoMapHeaderPointers::
-	table_width 2, JohtoMapHeaderPointers
-	dw NewBarkTown_h
-	dw CherrygroveCity_h
-	dw VioletCity_h
-	dw RuinsOfAlphOutside_h
-	dw Route29_h
-	dw Route30_h
-	dw Route31_h
-	dw Route32_h
-	dw Route36_h
-	dw JohtoRoute27_h
+; Kansai headers
+KansaiMapHeaderPointers::
+	table_width 2, KansaiMapHeaderPointers
+	dw SilentHills_h
+	dw SakuraTown_h
+	dw KansaiRoute1_h
 	dw PlayersHouse1F_h
 	dw PlayersHouse2F_h
-	dw NewBarkHouse1_h
-	dw NewBarkHouse2_h
+	dw SilentPokecenter_h
+	dw ElmsHouse_h
 	dw ElmsLab_h
-	dw CherrygrovePokecenter_h
-	dw CherrygroveMart_h
-	dw CherrygroveHouse1_h
-	dw CherrygroveHouse2_h
-	dw CherrygroveHouse3_h
-	dw Route30BerryHouse_h
+	dw SakuraPokecenter_h
+	dw SakuraMart_h
+	dw SakuraHouse1_h
+	dw SakuraHouse2_h
+	dw SakuraHouse3_h
+	dw SakuraSecretHouse_h
 	dw MrPokemonsHouse_h
-	dw Route31Gate_h
-	dw VioletPokecenter_h
-	dw VioletMart_h
-	dw VioletSchoolHouse_h
-	dw VioletTradeHouse_h
-	dw VioletHouse2_h
-	dw VioletGym_h
-	dw SproutTower1F_h
-	dw SproutTower2F_h
-	dw SproutTower3F_h
-	dw RuinsOfAlphEastGate_h
-	dw RuinsOfAlphNorthGate_h
-	dw RuinsOfAlphNorthGate2F_h
-	dw RuinsOfAlphLab_h
-	assert_table_length NUM_JOHTO_MAPS
+	assert_table_length NUM_KANSAI_MAPS

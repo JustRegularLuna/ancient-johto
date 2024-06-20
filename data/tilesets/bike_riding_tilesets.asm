@@ -1,15 +1,14 @@
 BikeRidingTilesets::
-	db OVERWORLD
+	db KANTO
 	db PLATEAU
 	db FOREST
 	db UNDERGROUND
 	db SHIP_PORT
 	db CAVERN
 	db GATE
-	db JOHTO
-	db JOHTO_MODERN
-	db JOHTO_CAVE
-	db JOHTO_FOREST
+	db SILENT
+	db KANSAI_CAVE
+	db KANSAI_FOREST
 	db PARK
 	db ICE_PATH
 	db -1 ; end
