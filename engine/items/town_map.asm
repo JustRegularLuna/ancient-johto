@@ -315,7 +315,7 @@ LoadTownMap:
 	call TextBoxBorder
 	call DisableLCD
 	ld hl, WorldMapTileGraphics
-	ld de, vChars2 tile $60
+	ld de, vChars2
 	ld bc, WorldMapTileGraphicsEnd - WorldMapTileGraphics
 	ld a, BANK(WorldMapTileGraphics)
 	call FarCopyData2
@@ -327,26 +327,16 @@ LoadTownMap:
 	hlcoord 0, 0
 	ld a, [wCurRegion]
 	and a ; Kanto?
-	ld de, CompressedMap
-	jr z, .nextTile
-	ld de, KansaiCompressedMap
-.nextTile
+	ld de, KantoMap
+	jr z, .loop
+	ld de, KansaiMap
+.loop
 	ld a, [de]
-	and a
+	cp -1
 	jr z, .done
-	ld b, a
-	and $f
-	ld c, a
-	ld a, b
-	swap a
-	and $f
-	add $60
-.writeRunLoop
 	ld [hli], a
-	dec c
-	jr nz, .writeRunLoop
 	inc de
-	jr .nextTile
+	jr .loop
 .done
 	call EnableLCD
 	ld b, SET_PAL_TOWN_MAP
@@ -359,11 +349,11 @@ LoadTownMap:
 	ld [wTownMapSpriteBlinkingEnabled], a
 	ret
 
-CompressedMap:
-	INCBIN "gfx/town_map/kanto_map.rle"
+KantoMap:
+	INCBIN "gfx/town_map/kanto.bin"
 
-KansaiCompressedMap:
-	INCBIN "gfx/town_map/johto_map.rle"
+KansaiMap:
+	INCBIN "gfx/town_map/kansai.bin"
 
 ExitTownMap:
 ; clear town map graphics data and load usual graphics data
