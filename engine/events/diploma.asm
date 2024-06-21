@@ -1,5 +1,3 @@
-CIRCLE_TILE_ID EQU $70
-
 DisplayDiploma::
 	call SaveScreenTilesToBuffer2
 	call GBPalWhiteOutWithDelay3
@@ -9,54 +7,27 @@ DisplayDiploma::
 	ld hl, wd730
 	set 6, [hl]
 	call DisableLCD
-	ld hl, CircleTile
-	ld de, vChars2 tile CIRCLE_TILE_ID
-	ld bc, $10
-	ld a, BANK(CircleTile)
-	call FarCopyData2
-	hlcoord 0, 0
-	lb bc, 16, 18
-	predef Diploma_TextBoxBorder
-	ld hl, DiplomaTextPointersAndCoords
-	ld c, $5
-.asm_56715
-	push bc
-	ld a, [hli]
-	ld e, a
-	ld a, [hli]
-	ld d, a
-	ld a, [hli]
-	push hl
-	ld h, [hl]
-	ld l, a
+	ld hl, DiplomaGFX
+	ld de, vChars2
+	ld bc, DiplomaGFXEnd - DiplomaGFX
+	call CopyData
+	ld hl, DiplomaTilemap
+	decoord 0, 0
+	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
+	call CopyData
+	ld de, .Player
+	hlcoord 2, 5
 	call PlaceString
-	pop hl
-	inc hl
-	pop bc
-	dec c
-	jr nz, .asm_56715
-	hlcoord 10, 4
+	ld de, .EmptyString
+	hlcoord 15, 5
+	call PlaceString
 	ld de, wPlayerName
+	hlcoord 9, 5
 	call PlaceString
-	farcall DrawPlayerCharacter
-
-; Move the player 33 pixels right and set the priority bit so he appears
-; behind the background layer.
-	ld hl, wOAMBuffer + $01
-	lb bc, $80, $28
-.adjustPlayerGfxLoop
-	ld a, [hl] ; X
-	add 33
-	ld [hli], a
-	inc hl
-	ld a, b
-	ld [hli], a ; attributes
-	inc hl
-	dec c
-	jr nz, .adjustPlayerGfxLoop
-
+	ld de, .Certification
+	hlcoord 2, 8
+	call PlaceString
 	call EnableLCD
-	farcall LoadTrainerInfoTextBoxTiles
 	ld b, SET_PAL_GENERIC
 	call RunPaletteCommand
 	call Delay3
@@ -72,46 +43,23 @@ DisplayDiploma::
 	call Delay3
 	jp GBPalNormal
 
-UnusedPlayerNameLengthFunc:
-; Unused function that does a calculation involving the length of the player's
-; name.
-	ld hl, wPlayerName
-	lb bc, $ff, $00
-.loop
-	ld a, [hli]
-	cp "@"
-	ret z
-	dec c
-	jr .loop
+.Player:
+	db "PLAYER@"
 
-MACRO diploma_text
-	dw \3
-	dwcoord \1, \2
-ENDM
-
-DiplomaTextPointersAndCoords:
-	; x, y, text
-	diploma_text  5,  2, DiplomaText
-	diploma_text  3,  4, DiplomaPlayer
-	diploma_text 15,  4, DiplomaEmptyText
-	diploma_text  2,  6, DiplomaCongrats
-	diploma_text  9, 16, DiplomaGameFreak
-
-DiplomaText:
-	db CIRCLE_TILE_ID, "Diploma", CIRCLE_TILE_ID, "@"
-
-DiplomaPlayer:
-	db "Player@"
-
-DiplomaEmptyText:
+.EmptyString:
 	db "@"
 
-DiplomaCongrats:
-	db   "Congrats! This"
-	next "diploma certifies"
+.Certification:
+	db   "This certifies"
 	next "that you have"
-	next "completed your"
-	next "#DEX.@"
+	next "completed the"
+	next "new #DEX."
+	next "Congratulations!"
+	db   "@"
 
-DiplomaGameFreak:
-	db "GAME FREAK@"
+DiplomaGFX:
+INCBIN "gfx/diploma/diploma.2bpp"
+DiplomaGFXEnd:
+
+DiplomaTilemap:
+INCBIN "gfx/diploma/diploma.tilemap"

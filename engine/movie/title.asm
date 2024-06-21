@@ -163,43 +163,6 @@ DrawTitleGraphic:
 	jr nz, .bgrows
 	ret
 
-DrawPlayerCharacter:
-	ld hl, PlayerCharacterTitleGraphics
-	ld de, vSprites
-	ld bc, PlayerCharacterTitleGraphicsEnd - PlayerCharacterTitleGraphics
-	ld a, BANK(PlayerCharacterTitleGraphics)
-	call FarCopyData2
-	call ClearSprites
-	xor a
-	ld [wPlayerCharacterOAMTile], a
-	ld hl, wOAMBuffer
-	lb de, $60, $5a
-	ld b, 7
-.loop
-	push de
-	ld c, 5
-.innerLoop
-	ld a, d
-	ld [hli], a ; Y
-	ld a, e
-	ld [hli], a ; X
-	add 8
-	ld e, a
-	ld a, [wPlayerCharacterOAMTile]
-	ld [hli], a ; tile
-	inc a
-	ld [wPlayerCharacterOAMTile], a
-	inc hl
-	dec c
-	jr nz, .innerLoop
-	pop de
-	ld a, 8
-	add d
-	ld d, a
-	dec b
-	jr nz, .loop
-	ret
-
 TitleScreenCopyTileMapToVRAM:
 	ldh [hAutoBGTransferDest + 1], a
 	jp Delay3
