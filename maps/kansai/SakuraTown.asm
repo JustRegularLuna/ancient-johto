@@ -426,8 +426,8 @@ SakuraGuyText:
 SakuraTownSignText:
 	text "SAKURA TOWN"
 
-	para "The city of cute"
-	line "fragrant flowers."
+	para "A tranquil cherry"
+	line "blossom grove."
 	done
 
 SakuraGuideGentSignText:

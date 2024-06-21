@@ -350,9 +350,8 @@ NewBarkRivalText:
 SilentHillsSignText:
 	text "SILENT HILLS"
 
-	para "The Town Where the"
-	line "Winds of a New"
-	cont "Beginning Blow"
+	para "The quiet town of"
+	line "new beginnings."
 	done
 
 NewBarkPlayerHouseSignText:

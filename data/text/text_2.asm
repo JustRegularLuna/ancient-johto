@@ -1250,17 +1250,17 @@ _OakSpeechText1::
 	para "Welcome to the"
 	line "world of #MON!"
 
-	para "My name is ELM,"
-	line "I'm a #MON"
-	cont "professor!"
+	para "My name is ELM, I"
+	line "research #MON"
+	cont "evolution."
 	prompt
 
 _OakSpeechText2A::
-	text "As you surely"
-	line "already know,"
-	cont "this world is"
-	cont "inhabited far and"
-	cont "wide by #MON.@"
+	text "As I'm sure you"
+	line "already know, our"
+	cont "world is filled"
+	cont "with many types"
+	cont "of #MON.@"
 	text_end
 
 _OakSpeechText2B::
@@ -1272,12 +1272,13 @@ _OakSpeechText2B::
 	cont "many left to be"
 	cont "discovered."
 
-	para "That's why I study"
-	line "#MON and the"
-	cont "way they evolve!"
+	para "That's why I have"
+	line "dedicated my life"
+	cont "to researching"
+	cont "them."
 
 	para "There is still so"
-	line "much to learn."
+	line "much to discover!"
 	prompt
 
 _IntroducePlayerText::
