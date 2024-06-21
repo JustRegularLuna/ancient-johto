@@ -367,27 +367,31 @@ AnimateFountainTile:
 .FountainTile5: INCBIN "gfx/tilesets/fountain/5.2bpp"
 
 AnimateFlowerTile:
-; Save the stack pointer in bc for WriteTile to restore
+; Save sp in bc (see WriteTile).
 	ld hl, sp+0
 	ld b, h
 	ld c, l
+
+; Alternate tile graphic every other frame
 	ld a, [wTileAnimationTimer]
-	cp 2
-	ld hl, FlowerTile1
-	jr c, .copy
-	cp 4
-	ld hl, FlowerTile2
-	jr c, .copy
-	ld hl, FlowerTile3
-.copy
-; Write the tile graphic from hl (now sp) to tile $03 (now hl)
+	and %10
+
+	swap a
+	ld e, a
+	ld d, 0
+	ld hl, FlowerTileFrames
+	add hl, de
 	ld sp, hl
+
 	ld hl, vTileset tile $03
+
 	jp WriteTile
 
-FlowerTile1: INCBIN "gfx/tilesets/flower/flower1.2bpp"
-FlowerTile2: INCBIN "gfx/tilesets/flower/flower2.2bpp"
-FlowerTile3: INCBIN "gfx/tilesets/flower/flower3.2bpp"
+FlowerTileFrames:
+	INCBIN "gfx/tilesets/flower/flower1.2bpp"
+	INCBIN "gfx/tilesets/flower/flower1.2bpp"
+	INCBIN "gfx/tilesets/flower/flower2.2bpp"
+	INCBIN "gfx/tilesets/flower/flower2.2bpp"
 
 AnimateLavaBubbleTile1:
 ; Save the stack pointer in bc for WriteTile to restore
