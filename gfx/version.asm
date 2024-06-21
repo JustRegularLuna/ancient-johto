@@ -1,8 +1,15 @@
-Version_GFX:
+TitleScreenGFX1:
 IF DEF(_RED)
-	INCBIN "gfx/title/red_version.1bpp" ; 10 tiles
+	INCBIN "gfx/title/logo_gold.2bpp"
+ELIF DEF(_BLUE)
+	INCBIN "gfx/title/logo_silver.2bpp"
 ENDC
-IF DEF(_BLUE)
-	INCBIN "gfx/title/blue_version.1bpp" ; 8 tiles
+TitleScreenGFX1End:
+
+TitleScreenGFX2:
+IF DEF(_RED)
+	INCBIN "gfx/title/title_gold.2bpp"
+ELIF DEF(_BLUE)
+	INCBIN "gfx/title/title_silver.2bpp"
 ENDC
-Version_GFXEnd:
+TitleScreenGFX2End:

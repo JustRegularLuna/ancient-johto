@@ -182,7 +182,6 @@ INCLUDE "engine/battle/move_effects/one_hit_ko.asm"
 
 SECTION "Slot Machines", ROMX
 
-INCLUDE "engine/movie/title2.asm"
 INCLUDE "engine/battle/link_battle_versus_text.asm"
 INCLUDE "engine/slots/slot_machine.asm"
 INCLUDE "engine/events/pewter_guys.asm"
@@ -627,7 +626,6 @@ INCLUDE "engine/events/hidden_objects/gym_statues.asm"
 SECTION "Battle Engine 11", ROMX
 
 INCLUDE "engine/battle/decrement_pp.asm"
-INCLUDE "gfx/version.asm"
 
 
 SECTION "bank1C", ROMX
@@ -755,3 +753,8 @@ INCLUDE "data/moves/moves.asm"
 SECTION "Grass/Water/Cave Wildmons", ROMX
 
 INCLUDE "engine/overworld/wild_mons.asm"
+
+
+SECTION "Title Screen GFX", ROMX
+
+INCLUDE "gfx/version.asm"
