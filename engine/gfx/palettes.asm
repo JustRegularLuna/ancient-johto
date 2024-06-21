@@ -183,7 +183,7 @@ SetPal_Overworld:
 	ld a, PAL_ROUTE - 1
 	jr .town
 .kansaiTown
-	add PAL_NEW_BARK - 1; adjust the city ID to the kansai palette block
+	add PAL_SILENT - 1; adjust the city ID to the kansai palette block
 	; fallthrough
 .town
 	inc a ; a town's palette ID is its map ID + 1
