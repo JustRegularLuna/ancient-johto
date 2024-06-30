@@ -22,11 +22,14 @@ TrainerClassMoveChoiceModifications:
 	move_choices 1, 2, 3 ; CHUCK
 	move_choices 1, 2, 3 ; CLAIR
 	move_choices 1, 2, 3 ; WILL
-	move_choices 1, 2, 3 ; KOGA
-	move_choices 1, 2, 3 ; BRUNO
+	move_choices 1, 2, 3 ; MIKAN
+	move_choices 1, 2, 3 ; WALKER
 	move_choices 1, 2, 3 ; KAREN
 	move_choices 1, 2, 3 ; CHAMPION
+	move_choices 1, 2, 3 ; KOGA
 	move_choices 1, 2, 3 ; LORELEI
+	move_choices 1, 2, 3 ; BRUNO
+	move_choices 1, 2, 3 ; LANCE
 	move_choices 1, 2, 3 ; AGATHA
 	move_choices 1, 2, 3 ; RED
 	move_choices 1, 2, 3 ; BLUE
@@ -43,6 +46,8 @@ TrainerClassMoveChoiceModifications:
 	move_choices 1, 2, 3 ; GRUNTM
 	move_choices 1, 2, 3 ; GRUNTF
 	move_choices 1, 2, 3 ; JESSIE_JAMES
+	move_choices 1, 2, 3 ; BUTCH_CASSIDY
+	move_choices 1, 2, 3 ; IMPOSTER
 	move_choices 1, 2, 3 ; SCIENTIST
 	move_choices 1, 2, 3 ; BURGLAR
 	move_choices 1, 2, 3 ; YOUNGSTER
@@ -61,10 +66,12 @@ TrainerClassMoveChoiceModifications:
 	move_choices 1, 2, 3 ; GENTLEMAN
 	move_choices 1, 2, 3 ; SKIER
 	move_choices 1, 2, 3 ; BOARDER
-	move_choices 1, 2, 3 ; TEACHER
+	move_choices 1, 2, 3 ; TEACHERF
+	move_choices 1, 2, 3 ; TEACHERM
 	move_choices 1, 2, 3 ; FISHER
 	move_choices 1, 2, 3 ; SWIMMERM
 	move_choices 1, 2, 3 ; SWIMMERF
+	move_choices 1, 2, 3 ; ATHLETE
 	move_choices 1, 2, 3 ; SAILOR
 	move_choices 1, 2, 3 ; ROCKER
 	move_choices 1, 2, 3 ; GUITARIST
@@ -78,6 +85,7 @@ TrainerClassMoveChoiceModifications:
 	move_choices 1, 2, 3 ; BLACKBELT
 	move_choices 1, 2, 3 ; PSYCHIC_TR
 	move_choices 1, 2, 3 ; ENGINEER
+	move_choices 1, 2, 3 ; SOLDIER
 	move_choices 1, 2, 3 ; SAGE
 	move_choices 1, 2, 3 ; MEDIUM
 	move_choices 1, 2, 3 ; CHANNELER
@@ -86,4 +94,5 @@ TrainerClassMoveChoiceModifications:
 	move_choices 1, 2, 3 ; POKEFANM
 	move_choices 1, 2, 3 ; OFFICER
 	move_choices 1, 2, 3 ; REI
+	move_choices 1, 2, 3 ; KURT
 	assert_list_length NUM_TRAINERS

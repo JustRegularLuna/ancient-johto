@@ -16,11 +16,14 @@ TrainerAIPointers:
 	dbw 3, GenericAI      ;  CHUCK
 	dbw 3, GenericAI      ;  CLAIR
 	dbw 3, GenericAI      ;  WILL
-	dbw 3, KogaAI         ;  KOGA
-	dbw 3, BrunoAI        ;  BRUNO
+	dbw 3, GenericAI      ;  MIKAN
+	dbw 3, GenericAI      ;  WALKER
 	dbw 3, GenericAI      ;  KAREN
-	dbw 3, LanceAI        ;  CHAMPION
+	dbw 3, GenericAI      ;  CHAMPION
+	dbw 3, KogaAI         ;  KOGA
 	dbw 3, LoreleiAI      ;  LORELEI
+	dbw 3, BrunoAI        ;  BRUNO
+	dbw 3, LanceAI        ;  LANCE
 	dbw 3, AgathaAI       ;  AGATHA
 	dbw 3, GenericAI      ;  RED
 	dbw 3, GenericAI      ;  BLUE
@@ -37,6 +40,8 @@ TrainerAIPointers:
 	dbw 3, GenericAI      ;  GRUNTM
 	dbw 3, GenericAI      ;  GRUNTF
 	dbw 3, GenericAI      ;  JESSIE_JAMES
+	dbw 3, GenericAI      ;  BUTCH_CASSIDY
+	dbw 3, GenericAI      ;  IMPOSTER
 	dbw 3, GenericAI      ;  SCIENTIST
 	dbw 3, GenericAI      ;  BURGLAR
 	dbw 3, GenericAI      ;  YOUNGSTER
@@ -55,10 +60,12 @@ TrainerAIPointers:
 	dbw 3, GenericAI      ;  GENTLEMAN
 	dbw 3, GenericAI      ;  SKIER
 	dbw 3, GenericAI      ;  BOARDER
-	dbw 3, GenericAI      ;  TEACHER
+	dbw 3, GenericAI      ;  TEACHERF
+	dbw 3, GenericAI      ;  TEACHERM
 	dbw 3, GenericAI      ;  FISHER
 	dbw 3, GenericAI      ;  SWIMMERM
 	dbw 3, GenericAI      ;  SWIMMERF
+	dbw 3, GenericAI      ;  ATHLETE
 	dbw 3, GenericAI      ;  SAILOR
 	dbw 3, GenericAI      ;  ROCKER
 	dbw 3, GenericAI      ;  GUITARIST
@@ -72,6 +79,7 @@ TrainerAIPointers:
 	dbw 3, BlackbeltAI    ;  BLACKBELT
 	dbw 3, GenericAI      ;  PSYCHIC_TR
 	dbw 3, GenericAI      ;  ENGINEER
+	dbw 3, GenericAI      ;  SOLDIER
 	dbw 3, GenericAI      ;  SAGE
 	dbw 3, GenericAI      ;  MEDIUM
 	dbw 3, GenericAI      ;  CHANNELER
@@ -80,4 +88,5 @@ TrainerAIPointers:
 	dbw 3, GenericAI      ;  POKEFANM
 	dbw 3, GenericAI      ;  OFFICER
 	dbw 3, GenericAI      ;  REI
+	dbw 3, GenericAI      ;  KURT
 	assert_table_length NUM_TRAINERS

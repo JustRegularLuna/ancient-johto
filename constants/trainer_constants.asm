@@ -46,15 +46,21 @@ ENDM
 
 	trainerclass WILL
 
-	trainerclass KOGA
+	trainerclass MIKAN
 
-	trainerclass BRUNO
+	trainerclass WALKER
 
 	trainerclass KAREN
 
 	trainerclass CHAMPION
 
+	trainerclass KOGA
+
 	trainerclass LORELEI
+
+	trainerclass BRUNO
+
+	trainerclass LANCE
 
 	trainerclass AGATHA
 
@@ -88,16 +94,17 @@ ENDM
 
 	trainerclass JESSIE_JAMES
 
+	trainerclass BUTCH_CASSIDY
+
+	trainerclass IMPOSTER
+
 	trainerclass SCIENTIST
 
 	trainerclass BURGLAR
 
 	trainerclass YOUNGSTER
-	const JOEY
-	const ALAN
 
 	trainerclass BUG_CATCHER
-	const KEN
 
 	trainerclass SCHOOLBOY
 
@@ -106,7 +113,6 @@ ENDM
 	trainerclass TWINS
 
 	trainerclass LASS
-	const NICOLE
 
 	trainerclass BEAUTY
 
@@ -128,13 +134,17 @@ ENDM
 
 	trainerclass BOARDER
 
-	trainerclass TEACHER
+	trainerclass TEACHERF
+
+	trainerclass TEACHERM
 
 	trainerclass FISHER
 
 	trainerclass SWIMMERM
 
 	trainerclass SWIMMERF
+
+	trainerclass ATHLETE
 
 	trainerclass SAILOR
 
@@ -162,6 +172,8 @@ ENDM
 
 	trainerclass ENGINEER
 
+	trainerclass SOLDIER
+
 	trainerclass SAGE
 
 	trainerclass MEDIUM
@@ -177,6 +189,8 @@ ENDM
 	trainerclass OFFICER
 
 	trainerclass REI
+
+	trainerclass KURT
 
 DEF NUM_TRAINERS EQU __trainer_class__ - 1
 

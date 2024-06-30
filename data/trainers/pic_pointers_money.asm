@@ -19,11 +19,14 @@ TrainerPicAndMoneyPointers::
 	pic_money ChuckPic,        1500 ; CHUCK
 	pic_money ClairPic,        1500 ; CLAIR
 	pic_money WillPic,         1500 ; WILL
-	pic_money KogaPic,         1500 ; KOGA
-	pic_money BrunoPic,        1500 ; BRUNO
+	pic_money MikanPic,        1500 ; MIKAN
+	pic_money WalkerPic,       1500 ; WALKER
 	pic_money KarenPic,        1500 ; KAREN
 	pic_money ChampionPic,     1500 ; CHAMPION
+	pic_money KogaPic,         1500 ; KOGA
 	pic_money LoreleiPic,      1500 ; LORELEI
+	pic_money BrunoPic,        1500 ; BRUNO
+	pic_money LancePic,        1500 ; LANCE
 	pic_money AgathaPic,       1500 ; AGATHA
 	pic_money RedPic,          1500 ; RED
 	pic_money BluePic,         1500 ; BLUE
@@ -40,6 +43,8 @@ TrainerPicAndMoneyPointers::
 	pic_money GruntMPic,       1500 ; GRUNTM
 	pic_money GruntFPic,       1500 ; GRUNTF
 	pic_money JessieJamesPic,  1500 ; JESSIE_JAMES
+	pic_money ButchCassidyPic, 1500 ; BUTCH_CASSIDY
+	pic_money ImposterPic,     1500 ; IMPOSTER
 	pic_money ScientistPic,    1500 ; SCIENTIST
 	pic_money BurglarPic,      1500 ; BURGLAR
 	pic_money YoungsterPic,    1500 ; YOUNGSTER
@@ -58,10 +63,12 @@ TrainerPicAndMoneyPointers::
 	pic_money GentlemanPic,    1500 ; GENTLEMAN
 	pic_money SkierPic,        1500 ; SKIER
 	pic_money BoarderPic,      1500 ; BOARDER
-	pic_money TeacherPic,      1500 ; TEACHER
+	pic_money TeacherFPic,     1500 ; TEACHERF
+	pic_money TeacherMPic,     1500 ; TEACHERM
 	pic_money FisherPic,       1500 ; FISHER
 	pic_money SwimmerMPic,     1500 ; SWIMMERM
 	pic_money SwimmerFPic,     1500 ; SWIMMERF
+	pic_money AthletePic,      1500 ; ATHLETE
 	pic_money SailorPic,       1500 ; SAILOR
 	pic_money RockerPic,       1500 ; ROCKER
 	pic_money GuitaristPic,    1500 ; GUITARIST
@@ -75,6 +82,7 @@ TrainerPicAndMoneyPointers::
 	pic_money BlackbeltPic,    1500 ; BLACKBELT
 	pic_money PsychicPic,      1500 ; PSYCHIC_TR
 	pic_money EngineerPic,     1500 ; ENGINEER
+	pic_money SoldierPic,      1500 ; SOLDIER
 	pic_money SagePic,         1500 ; SAGE
 	pic_money MediumPic,       1500 ; MEDIUM
 	pic_money ChannelerPic,    1500 ; CHANNELER
@@ -83,4 +91,5 @@ TrainerPicAndMoneyPointers::
 	pic_money PokefanMPic,     1500 ; POKEFANM
 	pic_money OfficerPic,      1500 ; OFFICER
 	pic_money ReiPic,          1500 ; REI
+	pic_money KurtPic,         1500 ; KURT
 	assert_table_length NUM_TRAINERS

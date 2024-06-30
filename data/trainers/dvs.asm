@@ -14,11 +14,14 @@ TrainerClassDVs:
 	dn  9,  8,  8,  8 ; CHUCK
 	dn  7, 12, 13, 13 ; CLAIR
 	dn 13, 12, 13, 13 ; WILL
-	dn 13, 12, 13, 13 ; KOGA
-	dn 13, 12, 13, 13 ; BRUNO
+	dn  7, 15, 13, 15 ; MIKAN
+	dn 13, 12, 13, 13 ; WALKER
 	dn  7, 15, 13, 15 ; KAREN
-	dn 13, 12, 13, 13 ; CHAMPION
+	dn 13, 13, 13, 13 ; CHAMPION
+	dn 13, 12, 13, 13 ; KOGA
 	dn  7, 15, 13, 15 ; LORELEI
+	dn 13, 12, 13, 13 ; BRUNO
+	dn 13, 12, 13, 13 ; LANCE
 	dn  7, 15, 13, 15 ; AGATHA
 	dn 15, 13, 13, 14 ; RED
 	dn  9, 13, 13, 13 ; BLUE
@@ -35,6 +38,8 @@ TrainerClassDVs:
 	dn 13,  8, 10,  8 ; GRUNTM
 	dn  7, 14, 10,  8 ; GRUNTF
 	dn  7, 14, 10,  8 ; JESSIE_JAMES
+	dn  7, 14, 10,  8 ; BUTCH_CASSIDY
+	dn  7, 14, 10,  8 ; IMPOSTER
 	dn  9,  8,  8,  8 ; SCIENTIST
 	dn  9,  8,  8,  8 ; BURGLAR
 	dn  9,  8,  8,  8 ; YOUNGSTER
@@ -53,10 +58,12 @@ TrainerClassDVs:
 	dn  9,  8,  8,  8 ; GENTLEMAN
 	dn  9,  8,  8,  8 ; SKIER
 	dn  9,  8,  8,  8 ; BOARDER
-	dn  6,  8,  8,  8 ; TEACHER
+	dn  6,  8,  8,  8 ; TEACHERF
+	dn  9,  8,  8,  8 ; TEACHERM
 	dn  9,  8,  8,  8 ; FISHER
 	dn  9,  8,  8,  8 ; SWIMMERM
 	dn  7,  8,  8,  8 ; SWIMMERF
+	dn  9,  8,  8,  8 ; ATHLETE
 	dn  9,  8,  8,  8 ; SAILOR
 	dn  9,  8,  8,  8 ; ROCKER
 	dn  9,  8,  8,  8 ; GUITARIST
@@ -70,6 +77,7 @@ TrainerClassDVs:
 	dn  9,  8,  8,  8 ; BLACKBELT
 	dn  9,  8,  8,  8 ; PSYCHIC_TR
 	dn  9,  8,  8,  8 ; ENGINEER
+	dn  9,  8,  8,  8 ; SOLDIER
 	dn  9,  8,  8,  8 ; SAGE
 	dn  7,  8,  8,  8 ; MEDIUM
 	dn  7,  8,  8,  8 ; CHANNELER
@@ -78,4 +86,5 @@ TrainerClassDVs:
 	dn  9,  8,  8,  8 ; POKEFANM
 	dn  9,  8,  8,  8 ; OFFICER
 	dn  7,  8,  8,  8 ; REI
+	dn  9,  8,  8,  8 ; KURT
 	assert_table_length NUM_TRAINERS

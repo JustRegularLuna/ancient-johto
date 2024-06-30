@@ -551,7 +551,6 @@ GhostPic::            INCBIN "gfx/pokemon/other/ghost.pic"
 
 SECTION "Trainer Pics 1", ROMX
 
-TrainerPics::
 ProfElmPic::           INCBIN "gfx/trainers/prof.elm.pic" ; PROF_ELM
 Rival1Pic::            INCBIN "gfx/trainers/rival1.pic" ; RIVAL1
 Rival2Pic::            INCBIN "gfx/trainers/rival2.pic" ; RIVAL2
@@ -564,11 +563,14 @@ JasminePic::           INCBIN "gfx/trainers/jasmine.pic" ; JASMINE
 ChuckPic::             INCBIN "gfx/trainers/chuck.pic" ; CHUCK
 ClairPic::             INCBIN "gfx/trainers/clair.pic" ; CLAIR
 WillPic::              INCBIN "gfx/trainers/will.pic" ; WILL
-KogaPic::              INCBIN "gfx/trainers/koga.pic" ; KOGA
-BrunoPic::             INCBIN "gfx/trainers/bruno.pic" ; BRUNO
+MikanPic::             INCBIN "gfx/trainers/mikan.pic" ; MIKAN
+WalkerPic::            INCBIN "gfx/trainers/walker.pic" ; WALKER
 KarenPic::             INCBIN "gfx/trainers/karen.pic" ; KAREN
 ChampionPic::          INCBIN "gfx/trainers/champion.pic" ; CHAMPION
+KogaPic::              INCBIN "gfx/trainers/koga.pic" ; KOGA
 LoreleiPic::           INCBIN "gfx/trainers/lorelei.pic" ; LORELEI
+BrunoPic::             INCBIN "gfx/trainers/bruno.pic" ; BRUNO
+LancePic::             INCBIN "gfx/trainers/lance.pic" ; LANCE
 AgathaPic::            INCBIN "gfx/trainers/agatha.pic" ; AGATHA
 RedPic::               INCBIN "gfx/trainers/red.pic" ; RED
 BluePic::              INCBIN "gfx/trainers/blue.pic" ; BLUE
@@ -585,6 +587,8 @@ ExecutiveFPic::        INCBIN "gfx/trainers/executivef.pic" ; EXECUTIVEF
 GruntMPic::            INCBIN "gfx/trainers/gruntm.pic" ; GRUNTM
 GruntFPic::            INCBIN "gfx/trainers/gruntf.pic" ; GRUNTF
 JessieJamesPic::       INCBIN "gfx/trainers/jessiejames.pic" ; JESSIE_JAMES
+ButchCassidyPic::      INCBIN "gfx/trainers/butchcassidy.pic" ; BUTCH_CASSIDY
+ImposterPic::          INCBIN "gfx/trainers/imposter.pic" ; IMPOSTER
 ScientistPic::         INCBIN "gfx/trainers/scientist.pic" ; SCIENTIST
 BurglarPic::           INCBIN "gfx/trainers/burglar.pic" ; BURGLAR
 YoungsterPic::         INCBIN "gfx/trainers/youngster.pic" ; YOUNGSTER
@@ -596,21 +600,23 @@ LassPic::              INCBIN "gfx/trainers/lass.pic" ; LASS
 BeautyPic::            INCBIN "gfx/trainers/beauty.pic" ; BEAUTY
 PicnickerPic::         INCBIN "gfx/trainers/picnicker.pic" ; PICNICKER
 CamperPic::            INCBIN "gfx/trainers/camper.pic" ; CAMPER
+
+
+SECTION "Trainer Pics 2", ROMX
+
 CooltrainerMPic::      INCBIN "gfx/trainers/cooltrainerm.pic" ; COOLTRAINERM
 CooltrainerFPic::      INCBIN "gfx/trainers/cooltrainerf.pic" ; COOLTRAINERF
 PokemaniacPic::        INCBIN "gfx/trainers/pokemaniac.pic" ; POKEMANIAC
 SuperNerdPic::         INCBIN "gfx/trainers/supernerd.pic" ; SUPER_NERD
 GentlemanPic::         INCBIN "gfx/trainers/gentleman.pic" ; GENTLEMAN
-
-
-SECTION "Trainer Pics 2", ROMX
-
 SkierPic::             INCBIN "gfx/trainers/skier.pic" ; SKIER
 BoarderPic::           INCBIN "gfx/trainers/boarder.pic" ; BOARDER
-TeacherPic::           INCBIN "gfx/trainers/teacher.pic" ; TEACHER
+TeacherFPic::          INCBIN "gfx/trainers/teacherf.pic" ; TEACHERF
+TeacherMPic::          INCBIN "gfx/trainers/teacherm.pic" ; TEACHERM
 FisherPic::            INCBIN "gfx/trainers/fisher.pic" ; FISHER
 SwimmerMPic::          INCBIN "gfx/trainers/swimmerm.pic" ; SWIMMERM
 SwimmerFPic::          INCBIN "gfx/trainers/swimmerf.pic" ; SWIMMERF
+AthletePic::           INCBIN "gfx/trainers/athlete.pic" ; ATHLETE
 SailorPic::            INCBIN "gfx/trainers/sailor.pic" ; SAILOR
 RockerPic::            INCBIN "gfx/trainers/rocker.pic" ; ROCKER
 GuitaristPic::         INCBIN "gfx/trainers/guitarist.pic" ; GUITARIST
@@ -624,6 +630,7 @@ JugglerPic::           INCBIN "gfx/trainers/juggler.pic" ; JUGGLER
 BlackbeltPic::         INCBIN "gfx/trainers/blackbelt.pic" ; BLACKBELT
 PsychicPic::           INCBIN "gfx/trainers/psychic.pic" ; PSYCHIC_TR
 EngineerPic::          INCBIN "gfx/trainers/engineer.pic" ; ENGINEER
+SoldierPic::           INCBIN "gfx/trainers/soldier.pic" ; SOLDIER
 SagePic::              INCBIN "gfx/trainers/sage.pic" ; SAGE
 MediumPic::            INCBIN "gfx/trainers/medium.pic" ; MEDIUM
 ChannelerPic::         INCBIN "gfx/trainers/channeler.pic" ; CHANNELER
@@ -632,6 +639,7 @@ PokefanFPic::          INCBIN "gfx/trainers/pokefanf.pic" ; POKEFANF
 PokefanMPic::          INCBIN "gfx/trainers/pokefanm.pic" ; POKEFANM
 OfficerPic::           INCBIN "gfx/trainers/officer.pic" ; OFFICER
 ReiPic::               INCBIN "gfx/trainers/rei.pic" ; REI
+KurtPic::              INCBIN "gfx/trainers/kurt.pic" ; KURT
 
 
 SECTION "Player Backs", ROMX

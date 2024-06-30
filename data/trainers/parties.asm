@@ -12,11 +12,14 @@ TrainerDataPointers:
 	dw ChuckData        ; CHUCK
 	dw ClairData        ; CLAIR
 	dw WillData         ; WILL
-	dw KogaData         ; KOGA
-	dw BrunoData        ; BRUNO
+	dw MikanData        ; MIKAN
+	dw WalkerData       ; WALKER
 	dw KarenData        ; KAREN
 	dw ChampionData     ; CHAMPION
+	dw KogaData         ; KOGA
 	dw LoreleiData      ; LORELEI
+	dw BrunoData        ; BRUNO
+	dw LanceData        ; LANCE
 	dw AgathaData       ; AGATHA
 	dw RedData          ; RED
 	dw BlueData         ; BLUE
@@ -33,6 +36,8 @@ TrainerDataPointers:
 	dw GruntMData       ; GRUNTM
 	dw GruntFData       ; GRUNTF
 	dw JessieJamesData  ; JESSIE_JAMES
+	dw ButchCassidyData ; BUTCH_CASSIDY
+	dw ImposterData     ; IMPOSTER
 	dw ScientistData    ; SCIENTIST
 	dw BurglarData      ; BURGLAR
 	dw YoungsterData    ; YOUNGSTER
@@ -51,10 +56,12 @@ TrainerDataPointers:
 	dw GentlemanData    ; GENTLEMAN
 	dw SkierData        ; SKIER
 	dw BoarderData      ; BOARDER
-	dw TeacherData      ; TEACHER
+	dw TeacherFData     ; TEACHERF
+	dw TeacherMData     ; TEACHERM
 	dw FisherData       ; FISHER
 	dw SwimmerMData     ; SWIMMERM
 	dw SwimmerFData     ; SWIMMERF
+	dw AthleteData      ; ATHLETE
 	dw SailorData       ; SAILOR
 	dw RockerData       ; ROCKER
 	dw GuitaristData    ; GUITARIST
@@ -68,6 +75,7 @@ TrainerDataPointers:
 	dw BlackbeltData    ; BLACKBELT
 	dw PsychicData      ; PSYCHIC_TR
 	dw EngineerData     ; ENGINEER
+	dw SoldierData      ; SOLDIER
 	dw SageData         ; SAGE
 	dw MediumData       ; MEDIUM
 	dw ChannelerData    ; CHANNELER
@@ -76,6 +84,7 @@ TrainerDataPointers:
 	dw PokefanMData     ; POKEFANM
 	dw OfficerData      ; OFFICER
 	dw ReiData          ; REI
+	dw KurtData         ; KURT
 	assert_table_length NUM_TRAINERS
 
 ; Trainer data structure:
@@ -167,15 +176,15 @@ WillData:         ; WILL
 	db 5, RATTATA
 	db -1 ; end
 
-KogaData:         ; KOGA
+MikanData:        ; MIKAN
 ; 01 - placeholder party
-	db "KOGA@", TRAINERTYPE_NORMAL
+	db "MIKAN@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
-BrunoData:        ; BRUNO
+WalkerData:       ; WALKER
 ; 01 - placeholder party
-	db "BRUNO@", TRAINERTYPE_NORMAL
+	db "WALKER@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
@@ -187,13 +196,31 @@ KarenData:        ; KAREN
 
 ChampionData:     ; CHAMPION
 ; 01 - placeholder party
-	db "LANCE@", TRAINERTYPE_NORMAL
+	db "<RIVAL>@", TRAINERTYPE_NORMAL
+	db 5, RATTATA
+	db -1 ; end
+
+KogaData:         ; KOGA
+; 01 - placeholder party
+	db "KOGA@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
 LoreleiData:      ; LORELEI
 ; 01 - placeholder party
 	db "LORELEI@", TRAINERTYPE_NORMAL
+	db 5, RATTATA
+	db -1 ; end
+
+BrunoData:        ; BRUNO
+; 01 - placeholder party
+	db "BRUNO@", TRAINERTYPE_NORMAL
+	db 5, RATTATA
+	db -1 ; end
+
+LanceData:        ; LANCE
+; 01 - placeholder party
+	db "LANCE@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
@@ -293,6 +320,18 @@ JessieJamesData:  ; JESSIE_JAMES
 	db 5, RATTATA
 	db -1 ; end
 
+ButchCassidyData: ; BUTCH_CASSIDY
+; 01 - placeholder party
+	db "DUO@", TRAINERTYPE_NORMAL
+	db 5, RATTATA
+	db -1 ; end
+
+ImposterData:     ; IMPOSTER
+; 01 - placeholder party
+	db "OAK@", TRAINERTYPE_NORMAL
+	db 5, RATTATA
+	db -1 ; end
+
 ScientistData:    ; SCIENTIST
 ; 01 - placeholder party
 	db "???@", TRAINERTYPE_NORMAL
@@ -306,24 +345,15 @@ BurglarData:      ; BURGLAR
 	db -1 ; end
 
 YoungsterData:    ; YOUNGSTER
-; 01 - Route 30
+; 01 - placeholder party
 	db "JOEY@", TRAINERTYPE_NORMAL
-	db 4, RATTATA
+	db 5, RATTATA
 	db -1 ; end
-
-; 02 - Route 30
-	db "ALAN@", TRAINERTYPE_NORMAL
-	db 2, PIDGEY
-	db 4, NIDORAN_M
-	db -1 ; end
-
 
 BugCatcherData:   ; BUG_CATCHER
 ; 01 - Route 31
 	db "KEN@", TRAINERTYPE_NORMAL
-	db 2, CATERPIE
-	db 2, WEEDLE
-	db 3, SPINARAK
+	db 5, RATTATA
 	db -1 ; end
 
 SchoolboyData:    ; SCHOOLBOY
@@ -410,7 +440,13 @@ BoarderData:      ; BOARDER
 	db 5, RATTATA
 	db -1 ; end
 
-TeacherData:      ; TEACHER
+TeacherFData:     ; TEACHERF
+; 01 - placeholder party
+	db "???@", TRAINERTYPE_NORMAL
+	db 5, RATTATA
+	db -1 ; end
+
+TeacherMData:     ; TEACHERM
 ; 01 - placeholder party
 	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
@@ -429,6 +465,12 @@ SwimmerMData:     ; SWIMMERM
 	db -1 ; end
 
 SwimmerFData:     ; SWIMMERF
+; 01 - placeholder party
+	db "???@", TRAINERTYPE_NORMAL
+	db 5, RATTATA
+	db -1 ; end
+
+AthleteData:      ; ATHLETE
 ; 01 - placeholder party
 	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
@@ -512,6 +554,12 @@ EngineerData:     ; ENGINEER
 	db 5, RATTATA
 	db -1 ; end
 
+SoldierData:      ; SOLDIER
+; 01 - placeholder party
+	db "???@", TRAINERTYPE_NORMAL
+	db 5, RATTATA
+	db -1 ; end
+
 SageData:         ; SAGE
 ; 01 - placeholder party
 	db "???@", TRAINERTYPE_NORMAL
@@ -557,5 +605,11 @@ OfficerData:      ; OFFICER
 ReiData:          ; REI
 ; 01 - placeholder party
 	db "REI@", TRAINERTYPE_NORMAL
+	db 5, RATTATA
+	db -1 ; end
+
+KurtData:         ; KURT
+; 01 - placeholder party
+	db "KURT@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
