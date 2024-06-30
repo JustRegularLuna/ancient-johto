@@ -5,23 +5,23 @@
 	const SMILE_BUBBLE       ; 2
 
 ; slot symbols
-SLOTS7      EQU $0200
-SLOTSBAR    EQU $0604
-SLOTSCHERRY EQU $0A08
-SLOTSFISH   EQU $0E0C
-SLOTSBIRD   EQU $1210
-SLOTSMOUSE  EQU $1614
+DEF SLOTS7      EQU $0200
+DEF SLOTSBAR    EQU $0604
+DEF SLOTSCHERRY EQU $0A08
+DEF SLOTSFISH   EQU $0E0C
+DEF SLOTSBIRD   EQU $1210
+DEF SLOTSMOUSE  EQU $1614
 
 ; StartSlotMachine dialogs
-SLOTS_OUTOFORDER   EQU $fd
-SLOTS_OUTTOLUNCH   EQU $fe
-SLOTS_SOMEONESKEYS EQU $ff
+DEF SLOTS_OUTOFORDER   EQU $fd
+DEF SLOTS_OUTTOLUNCH   EQU $fe
+DEF SLOTS_SOMEONESKEYS EQU $ff
 
 ; in game trades
 ; TradeMons indexes (see data/events/trades.asm)
 	const_def
 	const TRADE_FOR_ROCKY
-NUM_NPC_TRADES EQU const_value
+DEF NUM_NPC_TRADES EQU const_value
 
 ; in game trade dialog sets
 ; InGameTradeTextPointers indexes (see engine/events/in_game_trades.asm)
@@ -40,7 +40,7 @@ NUM_NPC_TRADES EQU const_value
 	const BIT_MARSHBADGE   ; 5
 	const BIT_VOLCANOBADGE ; 6
 	const BIT_EARTHBADGE   ; 7
-NUM_KANTO_BADGES EQU const_value
+DEF NUM_KANTO_BADGES EQU const_value
 
 ; wKansaiBadges bits
 	const_def
@@ -52,13 +52,13 @@ NUM_KANTO_BADGES EQU const_value
 	const BIT_STORMBADGE   ; 5
 	const BIT_GLACIERBADGE ; 6
 	const BIT_RISINGBADGE  ; 7
-NUM_KANSAI_BADGES EQU const_value
+DEF NUM_KANSAI_BADGES EQU const_value
 
 ; OaksAideScript results
-OAKS_AIDE_BAG_FULL        EQU $00
-OAKS_AIDE_GOT_ITEM        EQU $01
-OAKS_AIDE_NOT_ENOUGH_MONS EQU $80
-OAKS_AIDE_REFUSED         EQU $ff
+DEF OAKS_AIDE_BAG_FULL        EQU $00
+DEF OAKS_AIDE_GOT_ITEM        EQU $01
+DEF OAKS_AIDE_NOT_ENOUGH_MONS EQU $80
+DEF OAKS_AIDE_REFUSED         EQU $ff
 
 ; fruittree arguments
 ; BerryTable indexes (see data/items/fruit_trees.asm)

@@ -97,4 +97,4 @@
 	const ATTACK_UP1_SIDE_EFFECT2    ; $5A
 	const DEFENSE_UP1_SIDE_EFFECT    ; $5B
 	const DYNAMICPUNCH_EFFECT        ; $5C
-NUM_MOVE_EFFECTS EQU const_value - 1
+DEF NUM_MOVE_EFFECTS EQU const_value - 1

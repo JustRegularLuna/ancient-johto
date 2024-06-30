@@ -141,4 +141,4 @@
 
 ; End of events
 	const_next $A00
-NUM_EVENTS EQU const_value
+DEF NUM_EVENTS EQU const_value

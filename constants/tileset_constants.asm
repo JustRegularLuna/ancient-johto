@@ -37,4 +37,4 @@
 	const RADIO_TOWER
 	const TRAIN_STATION
 	const HIDEOUT
-NUM_TILESETS EQU const_value
+DEF NUM_TILESETS EQU const_value

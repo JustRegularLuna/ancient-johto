@@ -158,7 +158,6 @@
 	const DRAGONITE          ; $95
 	const MEWTWO             ; $96
 	const MEW                ; $97
-JOHTO_POKEMON EQU const_value
 	const CHIKORITA          ; $98
 	const BAYLEEF            ; $99
 	const MEGANIUM           ; $9a
@@ -259,16 +258,16 @@ JOHTO_POKEMON EQU const_value
 	const LUGIA              ; $f9
 	const HO_OH              ; $fa
 	const CELEBI             ; $fb
-NUM_POKEMON EQU const_value - 1
+DEF NUM_POKEMON EQU const_value - 1
 	const MON_GHOST
 	const FOSSIL_KABUTOPS
 	const FOSSIL_AERODACTYL
-NUM_POKEMON_INDEXES EQU const_value - 1
+DEF NUM_POKEMON_INDEXES EQU const_value - 1
 
 ; starters
-STARTER1 EQU CYNDAQUIL
-STARTER2 EQU TOTODILE
-STARTER3 EQU CHIKORITA
+DEF STARTER1 EQU CYNDAQUIL
+DEF STARTER2 EQU TOTODILE
+DEF STARTER3 EQU CHIKORITA
 
 ; ghost Marowak in Pokémon Tower
-RESTLESS_SOUL EQU MAROWAK
+DEF RESTLESS_SOUL EQU MAROWAK

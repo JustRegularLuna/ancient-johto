@@ -1,5 +1,5 @@
-HIDE EQU $11
-SHOW EQU $15
+DEF HIDE EQU $11
+DEF SHOW EQU $15
 
 ; MissableObjects indexes (see data/maps/hide_show_data.asm)
 ; this is a list of the sprites that can be enabled/disabled during the game
@@ -11,7 +11,7 @@ SHOW EQU $15
 	const_def
 
 	const HS_CHAMPIONS_ROOM_OAK
-NUM_HS_OBJECTS EQU const_value
+DEF NUM_HS_OBJECTS EQU const_value
 
 
 ; Kansai flags
@@ -24,4 +24,4 @@ NUM_HS_OBJECTS EQU const_value
 	const HS_STARTER_BALL_3
 	const HS_MR_POKEMONS_HOUSE_OAK
 
-NUM_KANSAI_HS_OBJECTS EQU const_value
+DEF NUM_KANSAI_HS_OBJECTS EQU const_value

@@ -295,4 +295,4 @@ DEF NUM_ATTACKS EQU const_value - 1
 	const ROCK_ANIM ; throw rock
 	const BAIT_ANIM ; throw bait
 
-NUM_ATTACK_ANIMS EQU const_value - 1
+DEF NUM_ATTACK_ANIMS EQU const_value - 1
