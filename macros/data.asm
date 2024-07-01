@@ -1,6 +1,6 @@
 ; Value macros
 
-percent EQUS "* $ff / 100"
+DEF percent EQUS "* $ff / 100"
 
 MACRO bcd2
 	dn ((\1) / 1000) % 10, ((\1) / 100) % 10
@@ -13,26 +13,26 @@ MACRO bcd3
 	dn ((\1) / 10) % 10, (\1) % 10
 ENDM
 
-coins EQUS "bcd2"
-money EQUS "bcd3"
+DEF coins EQUS "bcd2"
+DEF money EQUS "bcd3"
 
 ; used in data/pokemon/base_stats/*.asm
 MACRO tmhm
 ; initialize bytes to 0
-n = 0
+DEF n = 0
 REPT (NUM_TM_HM + 7) / 8
-_TM_BYTE EQUS "_tm{d:n}"
-_TM_BYTE = 0
+DEF _TM_BYTE EQUS "_tm{d:n}"
+DEF {_TM_BYTE} = 0
 PURGE _TM_BYTE
-n = n + 1
+DEF n = n + 1
 ENDR
 ; set bits of bytes
 REPT _NARG
 	IF DEF(\1_TMNUM)
-n = (\1_TMNUM - 1) / 8
-i = (\1_TMNUM - 1) % 8
-_TM_BYTE EQUS "_tm{d:n}"
-_TM_BYTE = _TM_BYTE | (1 << i)
+DEF n = (\1_TMNUM - 1) / 8
+DEF i = (\1_TMNUM - 1) % 8
+DEF _TM_BYTE EQUS "_tm{d:n}"
+DEF {_TM_BYTE} = _TM_BYTE | (1 << i)
 PURGE _TM_BYTE
 	ELSE
 		FAIL "\1 is not a TM or HM move"
@@ -40,12 +40,12 @@ PURGE _TM_BYTE
 	SHIFT
 ENDR
 ; output bytes
-n = 0
+DEF n = 0
 REPT (NUM_TM_HM + 7) / 8
-_TM_BYTE EQUS "_tm{d:n}"
+DEF _TM_BYTE EQUS "_tm{d:n}"
 	db _TM_BYTE
 PURGE _TM_BYTE
-n = n + 1
+DEF n = n + 1
 ENDR
 ENDM
 
@@ -85,7 +85,7 @@ ENDM
 
 ; change_var_sprite VAR_SPRITE_ID, SPRITE_TO_STORE
 MACRO change_var_sprite
-var_sprite_number = (\1 - SPRITE_VARS)
+DEF var_sprite_number = (\1 - SPRITE_VARS)
 	ld a, \2
 	ld[wVarSprites + var_sprite_number], a
 ENDM

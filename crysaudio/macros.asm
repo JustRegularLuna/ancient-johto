@@ -24,10 +24,10 @@ MACRO maskbits
 ; 	maskbits 26
 ; 	cp 26
 ; 	jr nc, .loop
-x = 1
+DEF x = 1
 rept 8
 if x + 1 < (\1)
-x = x << 1 | 1
+DEF x = x << 1 | 1
 endc
 endr
 if _NARG == 2
@@ -57,7 +57,7 @@ ENDM
 MACRO channel_count
 	assert 0 < (\1) && (\1) <= NUM_MUSIC_CHANS, \
 		"channel_count must be 1-{d:NUM_MUSIC_CHANS}"
-_num_channels = \1 - 1
+DEF _num_channels = \1 - 1
 ENDM
 
 MACRO channel
@@ -65,7 +65,7 @@ MACRO channel
 		"channel id must be 1-{d:NUM_CHANNELS}"
 	dn (_num_channels << 2), \1 - 1 ; channel id
 	dw \2 ; address
-_num_channels = 0
+DEF _num_channels = 0
 ENDM
 
 MACRO note
@@ -102,7 +102,7 @@ ENDM
 
 ; MusicCommands indexes (see audio/engine.asm)
 	const_def $d0
-FIRST_MUSIC_CMD EQU const_value
+DEF FIRST_MUSIC_CMD EQU const_value
 
 	const octave_cmd ; $d0
 MACRO octave
@@ -178,7 +178,7 @@ ENDM
 MACRO toggle_sfx
 	db toggle_sfx_cmd
 ENDM
-execute_music EQUS "toggle_sfx"
+DEF execute_music EQUS "toggle_sfx"
 
 	const pitch_slide_cmd ; $e0
 MACRO pitch_slide
@@ -233,7 +233,7 @@ MACRO pitch_offset
 	db pitch_offset_cmd
 	bigdw \1 ; pitch offset
 ENDM
-toggle_perfect_pitch EQUS "pitch_offset 1"
+DEF toggle_perfect_pitch EQUS "pitch_offset 1"
 
 	const unknownmusic0xe7_cmd ; $e7
 MACRO unknownmusic0xe7

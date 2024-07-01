@@ -2,9 +2,9 @@ MACRO def_objects
 	IF DEF(_NUM_OBJECTS)
 		PURGE _NUM_OBJECTS
 	ENDC
-_NUM_OBJECTS EQUS "_NUM_OBJECTS_\@"
+DEF _NUM_OBJECTS EQUS "_NUM_OBJECTS_\@"
 	db _NUM_OBJECTS
-_NUM_OBJECTS = 0
+DEF {_NUM_OBJECTS} = 0
 ENDM
 
 ;\1 sprite id
@@ -32,16 +32,16 @@ MACRO object
 	ELSE
 		db \6
 	ENDC
-_NUM_OBJECTS = _NUM_OBJECTS + 1
+DEF {_NUM_OBJECTS} = _NUM_OBJECTS + 1
 ENDM
 
 MACRO def_warps
 	IF DEF(_NUM_WARPS)
 		PURGE _NUM_WARPS
 	ENDC
-_NUM_WARPS EQUS "_NUM_WARPS_\@"
+DEF _NUM_WARPS EQUS "_NUM_WARPS_\@"
 	db _NUM_WARPS
-_NUM_WARPS = 0
+DEF {_NUM_WARPS} = 0
 ENDM
 
 ;\1 x position
@@ -50,19 +50,19 @@ ENDM
 ;\4 destination map (-1 = wLastMap)
 MACRO warp
 	db \2, \1, \3, \4
-_TMP EQUS "\n_WARP_{d:{_NUM_WARPS}}_X = \1\n_WARP_{d:{_NUM_WARPS}}_Y = \2"
+DEF _TMP EQUS "\nDEF _WARP_{d:{_NUM_WARPS}}_X = \1\nDEF _WARP_{d:{_NUM_WARPS}}_Y = \2"
 	_TMP
 	PURGE _TMP
-_NUM_WARPS = _NUM_WARPS + 1
+DEF {_NUM_WARPS} = _NUM_WARPS + 1
 ENDM
 
 MACRO def_signs
 	IF DEF(_NUM_SIGNS)
 		PURGE _NUM_SIGNS
 	ENDC
-_NUM_SIGNS EQUS "_NUM_SIGNS_\@"
+DEF _NUM_SIGNS EQUS "_NUM_SIGNS_\@"
 	db _NUM_SIGNS
-_NUM_SIGNS = 0
+DEF {_NUM_SIGNS} = 0
 ENDM
 
 ;\1 x position
@@ -70,17 +70,17 @@ ENDM
 ;\3 sign id
 MACRO sign
 	db \2, \1, \3
-_NUM_SIGNS = _NUM_SIGNS + 1
+DEF {_NUM_SIGNS} = _NUM_SIGNS + 1
 ENDM
 
 ;\1 source map
 MACRO def_warps_to
-N = 0
+DEF N = 0
 	REPT _NUM_WARPS
-_TMP EQUS "warp_to _WARP_{d:N}_X, _WARP_{d:N}_Y, \1_WIDTH"
+DEF _TMP EQUS "warp_to _WARP_{d:N}_X, _WARP_{d:N}_Y, \1_WIDTH"
 		_TMP
 		PURGE _TMP
-N = N + 1
+DEF N = N + 1
 	ENDR
 ENDM
 
@@ -132,9 +132,9 @@ ENDM
 ;\3 tileset
 ;\4 connections: combo of NORTH, SOUTH, WEST, and/or EAST, or 0 for none
 MACRO map_header
-CURRENT_MAP_WIDTH = \2_WIDTH
-CURRENT_MAP_HEIGHT = \2_HEIGHT
-CURRENT_MAP_OBJECT EQUS "\1_Object"
+DEF CURRENT_MAP_WIDTH = \2_WIDTH
+DEF CURRENT_MAP_HEIGHT = \2_HEIGHT
+DEF CURRENT_MAP_OBJECT EQUS "\1_Object"
 \1_h::
 	db \3
 	db CURRENT_MAP_HEIGHT, CURRENT_MAP_WIDTH
@@ -161,55 +161,55 @@ ENDM
 MACRO connection
 
 ; Calculate tile offsets for source (current) and target maps
-_src = 0
-_tgt = (\4) + 3
+DEF _src = 0
+DEF _tgt = (\4) + 3
 IF _tgt < 2
-_src = -_tgt
-_tgt = 0
+DEF _src = -_tgt
+DEF _tgt = 0
 ENDC
 
 IF !STRCMP("\1", "north")
-_blk = \3_WIDTH * (\3_HEIGHT - 3) + _src
-_map = _tgt
-_win = (\3_WIDTH + 6) * \3_HEIGHT + 1
-_y = \3_HEIGHT * 2 - 1
-_x = (\4) * -2
-_len = CURRENT_MAP_WIDTH + 3 - (\4)
+DEF _blk = \3_WIDTH * (\3_HEIGHT - 3) + _src
+DEF _map = _tgt
+DEF _win = (\3_WIDTH + 6) * \3_HEIGHT + 1
+DEF _y = \3_HEIGHT * 2 - 1
+DEF _x = (\4) * -2
+DEF _len = CURRENT_MAP_WIDTH + 3 - (\4)
 IF _len > \3_WIDTH
-_len = \3_WIDTH
+DEF _len = \3_WIDTH
 ENDC
 
 ELIF !STRCMP("\1", "south")
-_blk = _src
-_map = (CURRENT_MAP_WIDTH + 6) * (CURRENT_MAP_HEIGHT + 3) + _tgt
-_win = \3_WIDTH + 7
-_y = 0
-_x = (\4) * -2
-_len = CURRENT_MAP_WIDTH + 3 - (\4)
+DEF _blk = _src
+DEF _map = (CURRENT_MAP_WIDTH + 6) * (CURRENT_MAP_HEIGHT + 3) + _tgt
+DEF _win = \3_WIDTH + 7
+DEF _y = 0
+DEF _x = (\4) * -2
+DEF _len = CURRENT_MAP_WIDTH + 3 - (\4)
 IF _len > \3_WIDTH
-_len = \3_WIDTH
+DEF _len = \3_WIDTH
 ENDC
 
 ELIF !STRCMP("\1", "west")
-_blk = (\3_WIDTH * _src) + \3_WIDTH - 3
-_map = (CURRENT_MAP_WIDTH + 6) * _tgt
-_win = (\3_WIDTH + 6) * 2 - 6
-_y = (\4) * -2
-_x = \3_WIDTH * 2 - 1
-_len = CURRENT_MAP_HEIGHT + 3 - (\4)
+DEF _blk = (\3_WIDTH * _src) + \3_WIDTH - 3
+DEF _map = (CURRENT_MAP_WIDTH + 6) * _tgt
+DEF _win = (\3_WIDTH + 6) * 2 - 6
+DEF _y = (\4) * -2
+DEF _x = \3_WIDTH * 2 - 1
+DEF _len = CURRENT_MAP_HEIGHT + 3 - (\4)
 IF _len > \3_HEIGHT
-_len = \3_HEIGHT
+DEF _len = \3_HEIGHT
 ENDC
 
 ELIF !STRCMP("\1", "east")
-_blk = (\3_WIDTH * _src)
-_map = (CURRENT_MAP_WIDTH + 6) * _tgt + CURRENT_MAP_WIDTH + 3
-_win = \3_WIDTH + 7
-_y = (\4) * -2
-_x = 0
-_len = CURRENT_MAP_HEIGHT + 3 - (\4)
+DEF _blk = (\3_WIDTH * _src)
+DEF _map = (CURRENT_MAP_WIDTH + 6) * _tgt + CURRENT_MAP_WIDTH + 3
+DEF _win = \3_WIDTH + 7
+DEF _y = (\4) * -2
+DEF _x = 0
+DEF _len = CURRENT_MAP_HEIGHT + 3 - (\4)
 IF _len > \3_HEIGHT
-_len = \3_HEIGHT
+DEF _len = \3_HEIGHT
 ENDC
 
 ELSE
