@@ -1,5 +1,5 @@
 ; pokemon's overworld sprites, taken from GSC
-DEF const_value = 0
+	const_def
 	const ICON_NULL
 	const ICON_POLIWAG
 	const ICON_JIGGLYPUFF
