@@ -1,15 +1,15 @@
 CeladonMart4F_Object:
 	db $0 ; border block
 
-	def_warps
-	warp 12,  1, 0, CELADON_MART_3F
-	warp 16,  1, 1, CELADON_MART_5F
-	warp  1,  1, 0, CELADON_MART_ELEVATOR
+	def_warp_events
+	warp_event 12,  1, CELADON_MART_3F, 1
+	warp_event 16,  1, CELADON_MART_5F, 2
+	warp_event  1,  1, CELADON_MART_ELEVATOR, 1
 
-	def_signs
+	def_bg_events
 
-	def_objects
-	object SPRITE_CLERK, 5, 7, STAY, NONE, 1 ; person
+	def_object_events
+	object_event 5, 7, SPRITE_CLERK, STAY, NONE, 1 ; person
 
 	def_warps_to CELADON_MART_4F
 

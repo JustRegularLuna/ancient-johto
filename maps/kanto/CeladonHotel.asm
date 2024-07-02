@@ -1,13 +1,13 @@
 CeladonHotel_Object:
 	db $0 ; border block
 
-	def_warps
-	warp  3,  7, 12, LAST_MAP
-	warp  4,  7, 12, LAST_MAP
+	def_warp_events
+	warp_event  3,  7, LAST_MAP, 13
+	warp_event  4,  7, LAST_MAP, 13
 
-	def_signs
+	def_bg_events
 
-	def_objects
+	def_object_events
 
 	def_warps_to CELADON_HOTEL
 

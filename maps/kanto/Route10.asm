@@ -1,15 +1,15 @@
 Route10_Object:
 	db $2c ; border block
 
-	def_warps
-	warp 11, 19, 0, ROCK_TUNNEL_POKECENTER
-	warp  8, 17, 0, ROCK_TUNNEL_1F
-	warp  8, 53, 2, ROCK_TUNNEL_1F
-	warp  6, 39, 0, POWER_PLANT
+	def_warp_events
+	warp_event 11, 19, ROCK_TUNNEL_POKECENTER, 1
+	warp_event  8, 17, ROCK_TUNNEL_1F, 1
+	warp_event  8, 53, ROCK_TUNNEL_1F, 3
+	warp_event  6, 39, POWER_PLANT, 1
 
-	def_signs
+	def_bg_events
 
-	def_objects
+	def_object_events
 
 	def_warps_to ROUTE_10
 

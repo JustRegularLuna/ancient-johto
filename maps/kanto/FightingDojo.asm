@@ -1,13 +1,13 @@
 FightingDojo_Object:
 	db $3 ; border block
 
-	def_warps
-	warp  4, 11, 1, LAST_MAP
-	warp  5, 11, 1, LAST_MAP
+	def_warp_events
+	warp_event  4, 11, LAST_MAP, 2
+	warp_event  5, 11, LAST_MAP, 2
 
-	def_signs
+	def_bg_events
 
-	def_objects
+	def_object_events
 
 	def_warps_to FIGHTING_DOJO
 

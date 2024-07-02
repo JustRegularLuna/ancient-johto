@@ -15,23 +15,23 @@
 SilentHills_Object:
 	db $39 ; border block
 
-	def_warps
-	warp  5,  5, 1, PLAYERS_HOUSE_1F
-	warp 11,  5, 0, SILENT_POKECENTER
-	warp  3, 13, 0, ELMS_HOUSE
-	warp 15, 13, 1, ELMS_LAB
-	warp 14, 13, 1, ELMS_LAB
+	def_warp_events
+	warp_event  5,  5, PLAYERS_HOUSE_1F, 2
+	warp_event 11,  5, SILENT_POKECENTER, 1
+	warp_event  3, 13, ELMS_HOUSE, 1
+	warp_event 15, 13, ELMS_LAB, 2
+	warp_event 14, 13, ELMS_LAB, 2
 
-	def_signs
-	sign 12,  8, SILENT_HILLS_SIGN
-	sign  3,  5, SILENT_PLAYERS_HOUSE_SIGN
-	sign  7, 13, SILENT_ELMS_HOUSE_SIGN
-	sign 11, 13, SILENT_ELMS_LAB_SIGN
+	def_bg_events
+	bg_event 12,  8, SILENT_HILLS_SIGN
+	bg_event  3,  5, SILENT_PLAYERS_HOUSE_SIGN
+	bg_event  7, 13, SILENT_ELMS_HOUSE_SIGN
+	bg_event 11, 13, SILENT_ELMS_LAB_SIGN
 
-	def_objects
-	object SPRITE_GIRL,  6,  8, STAY, NONE, SILENT_GIRL
-	object SPRITE_FISHER, 14,  6, STAY, RIGHT, SILENT_FISHER
-	object SPRITE_RIVAL, 11, 12, STAY, RIGHT, SILENT_RIVAL
+	def_object_events
+	object_event  6,  8, SPRITE_GIRL, STAY, NONE, SILENT_GIRL
+	object_event 14,  6, SPRITE_FISHER, STAY, RIGHT, SILENT_FISHER
+	object_event 11, 12, SPRITE_RIVAL, STAY, RIGHT, SILENT_RIVAL
 
 	def_warps_to SILENT_HILLS
 

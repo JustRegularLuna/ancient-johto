@@ -9,16 +9,16 @@
 ElmsHouse_Object:
 	db $a ; border block
 
-	def_warps
-	warp  2,  7, 2, LAST_MAP
-	warp  3,  7, 2, LAST_MAP
+	def_warp_events
+	warp_event  2,  7, LAST_MAP, 3
+	warp_event  3,  7, LAST_MAP, 3
 
-	def_signs
-	sign  4,  1, ELMSHOUSE_TV
+	def_bg_events
+	bg_event  4,  1, ELMSHOUSE_TV
 
-	def_objects
-	object SPRITE_TEACHER,  2,  4, STAY, RIGHT, ELMSHOUSE_ELMS_WIFE
-	object SPRITE_BUG_CATCHER,  5,  3, STAY, UP, ELMSHOUSE_ELMS_SON
+	def_object_events
+	object_event  2,  4, SPRITE_TEACHER, STAY, RIGHT, ELMSHOUSE_ELMS_WIFE
+	object_event  5,  3, SPRITE_BUG_CATCHER, STAY, UP, ELMSHOUSE_ELMS_SON
 
 	def_warps_to ELMS_HOUSE
 

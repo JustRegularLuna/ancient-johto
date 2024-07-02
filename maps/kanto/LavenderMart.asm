@@ -1,14 +1,14 @@
 LavenderMart_Object:
 	db $0 ; border block
 
-	def_warps
-	warp  3,  7, 3, LAST_MAP
-	warp  4,  7, 3, LAST_MAP
+	def_warp_events
+	warp_event  3,  7, LAST_MAP, 4
+	warp_event  4,  7, LAST_MAP, 4
 
-	def_signs
+	def_bg_events
 
-	def_objects
-	object SPRITE_CLERK, 0, 5, STAY, RIGHT, 1 ; person
+	def_object_events
+	object_event 0, 5, SPRITE_CLERK, STAY, RIGHT, 1 ; person
 
 	def_warps_to LAVENDER_MART
 

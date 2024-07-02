@@ -1,12 +1,12 @@
 CeladonMartRoof_Object:
 	db $42 ; border block
 
-	def_warps
-	warp 15,  2, 0, CELADON_MART_5F
+	def_warp_events
+	warp_event 15,  2, CELADON_MART_5F, 1
 
-	def_signs
+	def_bg_events
 
-	def_objects
+	def_object_events
 
 	def_warps_to CELADON_MART_ROOF
 

@@ -9,14 +9,14 @@
 PlayersHouse2F_Object:
 	db $0 ; border block
 
-	def_warps
-	warp  7,  0, 0, PLAYERS_HOUSE_1F
+	def_warp_events
+	warp_event  7,  0, PLAYERS_HOUSE_1F, 1
 
-	def_signs
-	sign  2,  1, PLAYERS_HOUSE_2F_PC
-	sign  4,  2, PLAYERS_HOUSE_2F_N64
+	def_bg_events
+	bg_event  2,  1, PLAYERS_HOUSE_2F_PC
+	bg_event  4,  2, PLAYERS_HOUSE_2F_N64
 
-	def_objects
+	def_object_events
 
 	def_warps_to PLAYERS_HOUSE_2F
 

@@ -1,12 +1,12 @@
 Route22_Object:
 	db $2c ; border block
 
-	def_warps
-	warp  8,  5, 0, ROUTE_22_GATE
+	def_warp_events
+	warp_event  8,  5, ROUTE_22_GATE, 1
 
-	def_signs
+	def_bg_events
 
-	def_objects
+	def_object_events
 
 	def_warps_to ROUTE_22
 

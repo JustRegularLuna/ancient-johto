@@ -8,16 +8,16 @@
 SakuraSecretHouse_Object:
 	db $a ; border block
 
-	def_warps
-	warp  2,  7, 5, LAST_MAP
-	warp  3,  7, 5, LAST_MAP
+	def_warp_events
+	warp_event  2,  7, LAST_MAP, 6
+	warp_event  3,  7, LAST_MAP, 6
 
-	def_signs
-	sign  4,  1, SAKURA_SECRETHOUSE_TV
+	def_bg_events
+	bg_event  4,  1, SAKURA_SECRETHOUSE_TV
 
-	def_objects
-	object SPRITE_POKEFAN_M,  2,  3, STAY, RIGHT, SAKURA_SECRETHOUSE_HIKER
-	object SPRITE_ICON_GEODUDE,  6,  1, STAY, NONE, SAKURA_SECRETHOUSE_POKEMON
+	def_object_events
+	object_event  2,  3, SPRITE_POKEFAN_M, STAY, RIGHT, SAKURA_SECRETHOUSE_HIKER
+	object_event  6,  1, SPRITE_ICON_GEODUDE, STAY, NONE, SAKURA_SECRETHOUSE_POKEMON
 
 	def_warps_to SAKURA_SECRET_HOUSE
 

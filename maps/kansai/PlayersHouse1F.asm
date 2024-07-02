@@ -11,19 +11,19 @@
 PlayersHouse1F_Object:
 	db $0 ; border block
 
-	def_warps
-	warp  9,  0, 0, PLAYERS_HOUSE_2F
-	warp  6,  7, 0, LAST_MAP
-	warp  7,  7, 0, LAST_MAP
+	def_warp_events
+	warp_event  9,  0, PLAYERS_HOUSE_2F, 1
+	warp_event  6,  7, LAST_MAP, 1
+	warp_event  7,  7, LAST_MAP, 1
 
-	def_signs
-	sign  0,  1, PLAYERSHOUSE_STOVE
-	sign  1,  1, PLAYERSHOUSE_SINK
-	sign  2,  1, PLAYERSHOUSE_FRIDGE
-	sign  4,  1, PLAYERSHOUSE_TV
+	def_bg_events
+	bg_event  0,  1, PLAYERSHOUSE_STOVE
+	bg_event  1,  1, PLAYERSHOUSE_SINK
+	bg_event  2,  1, PLAYERSHOUSE_FRIDGE
+	bg_event  4,  1, PLAYERSHOUSE_TV
 
-	def_objects
-	object SPRITE_MOM,  7,  4, STAY, LEFT, PLAYERSHOUSE_MOM
+	def_object_events
+	object_event  7,  4, SPRITE_MOM, STAY, LEFT, PLAYERSHOUSE_MOM
 
 	def_warps_to PLAYERS_HOUSE_1F
 

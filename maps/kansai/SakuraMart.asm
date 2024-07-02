@@ -8,16 +8,16 @@
 SakuraMart_Object:
 	db $0 ; border block
 
-	def_warps
-	warp  3,  7, 1, LAST_MAP
-	warp  2,  7, 1, LAST_MAP
+	def_warp_events
+	warp_event  3,  7, LAST_MAP, 2
+	warp_event  2,  7, LAST_MAP, 2
 
-	def_signs
+	def_bg_events
 
-	def_objects
-	object SPRITE_CLERK,  1,  3, STAY, RIGHT, SAKURA_MART_CLERK
-	object SPRITE_COOLTRAINER_M,  6,  6, STAY, UP, SAKURA_MART_CUSTOMER
-	object SPRITE_COOLTRAINER_F,  8,  2, STAY, NONE, SAKURA_MART_CUSTOMER_2
+	def_object_events
+	object_event  1,  3, SPRITE_CLERK, STAY, RIGHT, SAKURA_MART_CLERK
+	object_event  6,  6, SPRITE_COOLTRAINER_M, STAY, UP, SAKURA_MART_CUSTOMER
+	object_event  8,  2, SPRITE_COOLTRAINER_F, STAY, NONE, SAKURA_MART_CUSTOMER_2
 
 	def_warps_to SAKURA_MART
 

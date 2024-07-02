@@ -1,12 +1,12 @@
 CeruleanCaveB1F_Object:
 	db $7d ; border block
 
-	def_warps
-	warp  3,  6, 8, CERULEAN_CAVE_1F
+	def_warp_events
+	warp_event  3,  6, CERULEAN_CAVE_1F, 9
 
-	def_signs
+	def_bg_events
 
-	def_objects
+	def_object_events
 
 	def_warps_to CERULEAN_CAVE_B1F
 

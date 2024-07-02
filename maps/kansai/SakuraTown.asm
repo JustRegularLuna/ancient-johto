@@ -16,28 +16,28 @@
 SakuraTown_Object:
 	db $5D ; border block
 
-	def_warps
-	warp 31, 21, 0, SAKURA_POKECENTER
-	warp 21, 21, 0, SAKURA_MART
-	warp 21, 15, 0, SAKURA_HOUSE_1
-	warp 21,  9, 0, SAKURA_HOUSE_2
-	warp 33, 15, 0, SAKURA_HOUSE_3
-	warp  5,  9, 0, SAKURA_SECRET_HOUSE
-	warp 37,  7, 1, MR_POKEMONS_HOUSE
+	def_warp_events
+	warp_event 31, 21, SAKURA_POKECENTER, 1
+	warp_event 21, 21, SAKURA_MART, 1
+	warp_event 21, 15, SAKURA_HOUSE_1, 1
+	warp_event 21,  9, SAKURA_HOUSE_2, 1
+	warp_event 33, 15, SAKURA_HOUSE_3, 1
+	warp_event  5,  9, SAKURA_SECRET_HOUSE, 1
+	warp_event 37,  7, MR_POKEMONS_HOUSE, 2
 
-	def_signs
-	sign 32, 21, SAKURA_POKECENTER_SIGN
-	sign 22, 21, SAKURA_MART_SIGN
-	sign 27, 15, SAKURA_TOWN_SIGN
-	sign 20, 10, SAKURA_GUIDE_GENT_SIGN
-	sign 15, 11, SAKURA_SECRET_HOUSE_SIGN
-	sign 35,  7, SAKURA_MR_POKEMON_SIGN
+	def_bg_events
+	bg_event 32, 21, SAKURA_POKECENTER_SIGN
+	bg_event 22, 21, SAKURA_MART_SIGN
+	bg_event 27, 15, SAKURA_TOWN_SIGN
+	bg_event 20, 10, SAKURA_GUIDE_GENT_SIGN
+	bg_event 15, 11, SAKURA_SECRET_HOUSE_SIGN
+	bg_event 35,  7, SAKURA_MR_POKEMON_SIGN
 
-	def_objects
-	object SPRITE_RIVAL, 40, 24, STAY, LEFT, SAKURA_RIVAL
-	object SPRITE_FISHER,  8, 26, STAY, DOWN, SAKURA_ISLAND_GUY
-	object SPRITE_LASS, 22, 17, WALK, LEFT_RIGHT, SAKURA_LASS
-	object SPRITE_YOUNGSTER, 28, 27, STAY, DOWN, SAKURA_GUY
+	def_object_events
+	object_event 40, 24, SPRITE_RIVAL, STAY, LEFT, SAKURA_RIVAL
+	object_event  8, 26, SPRITE_FISHER, STAY, DOWN, SAKURA_ISLAND_GUY
+	object_event 22, 17, SPRITE_LASS, WALK, LEFT_RIGHT, SAKURA_LASS
+	object_event 28, 27, SPRITE_YOUNGSTER, STAY, DOWN, SAKURA_GUY
 
 	def_warps_to SAKURA_TOWN
 

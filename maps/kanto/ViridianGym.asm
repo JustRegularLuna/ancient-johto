@@ -1,13 +1,13 @@
 ViridianGym_Object:
 	db $3 ; border block
 
-	def_warps
-	warp 16, 17, 4, LAST_MAP
-	warp 17, 17, 4, LAST_MAP
+	def_warp_events
+	warp_event 16, 17, LAST_MAP, 5
+	warp_event 17, 17, LAST_MAP, 5
 
-	def_signs
+	def_bg_events
 
-	def_objects
+	def_object_events
 
 	def_warps_to VIRIDIAN_GYM
 

@@ -1,15 +1,15 @@
 Route23_Object:
 	db $f ; border block
 
-	def_warps
-	warp  7, 139, 2, ROUTE_22_GATE
-	warp  8, 139, 3, ROUTE_22_GATE
-	warp  4, 31, 0, VICTORY_ROAD_1F
-	warp 14, 31, 1, VICTORY_ROAD_2F
+	def_warp_events
+	warp_event  7, 139, ROUTE_22_GATE, 3
+	warp_event  8, 139, ROUTE_22_GATE, 4
+	warp_event  4, 31, VICTORY_ROAD_1F, 1
+	warp_event 14, 31, VICTORY_ROAD_2F, 2
 
-	def_signs
+	def_bg_events
 
-	def_objects
+	def_object_events
 
 	def_warps_to ROUTE_23
 

@@ -1,17 +1,17 @@
 SSAnne1FRooms_Object:
 	db $c ; border block
 
-	def_warps
-	warp  0,  0, 2, SS_ANNE_1F
-	warp 10,  0, 3, SS_ANNE_1F
-	warp 20,  0, 4, SS_ANNE_1F
-	warp  0, 10, 5, SS_ANNE_1F
-	warp 10, 10, 6, SS_ANNE_1F
-	warp 20, 10, 7, SS_ANNE_1F
+	def_warp_events
+	warp_event  0,  0, SS_ANNE_1F, 3
+	warp_event 10,  0, SS_ANNE_1F, 4
+	warp_event 20,  0, SS_ANNE_1F, 5
+	warp_event  0, 10, SS_ANNE_1F, 6
+	warp_event 10, 10, SS_ANNE_1F, 7
+	warp_event 20, 10, SS_ANNE_1F, 8
 
-	def_signs
+	def_bg_events
 
-	def_objects
+	def_object_events
 
 	def_warps_to SS_ANNE_1F_ROOMS
 

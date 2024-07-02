@@ -1,17 +1,17 @@
 IndigoPlateauLobby_Object:
 	db $0 ; border block
 
-	def_warps
-	warp  9, 11, 0, LAST_MAP
-	warp 10, 11, 1, LAST_MAP
-	warp  8,  0, 0, LORELEIS_ROOM
+	def_warp_events
+	warp_event  9, 11, LAST_MAP, 1
+	warp_event 10, 11, LAST_MAP, 2
+	warp_event  8,  0, LORELEIS_ROOM, 1
 
-	def_signs
+	def_bg_events
 
-	def_objects
-	object SPRITE_NURSE,  9,  5, STAY, DOWN, 1 ; person
-	object SPRITE_CLERK,  1,  5, STAY, RIGHT, 2 ; person
-	object SPRITE_LINK_RECEPTIONIST, 13, 6, STAY, DOWN, 3 ; person
+	def_object_events
+	object_event  9,  5, SPRITE_NURSE, STAY, DOWN, 1 ; person
+	object_event  1,  5, SPRITE_CLERK, STAY, RIGHT, 2 ; person
+	object_event 13, 6, SPRITE_LINK_RECEPTIONIST, STAY, DOWN, 3 ; person
 
 	def_warps_to INDIGO_PLATEAU_LOBBY
 

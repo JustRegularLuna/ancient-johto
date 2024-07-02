@@ -8,15 +8,15 @@
 SakuraHouse1_Object:
 	db $a ; border block
 
-	def_warps
-	warp  2,  7, 2, LAST_MAP
-	warp  3,  7, 2, LAST_MAP
+	def_warp_events
+	warp_event  2,  7, LAST_MAP, 3
+	warp_event  3,  7, LAST_MAP, 3
 
-	def_signs
+	def_bg_events
 
-	def_objects
-	object SPRITE_TEACHER,  2,  3, STAY, RIGHT, SAKURA_HOUSE1_TEACHER
-	object SPRITE_ICON_FOX,  2,  4, STAY, NONE, SAKURA_HOUSE1_EEVEE
+	def_object_events
+	object_event  2,  3, SPRITE_TEACHER, STAY, RIGHT, SAKURA_HOUSE1_TEACHER
+	object_event  2,  4, SPRITE_ICON_FOX, STAY, NONE, SAKURA_HOUSE1_EEVEE
 
 	def_warps_to SAKURA_HOUSE_1
 

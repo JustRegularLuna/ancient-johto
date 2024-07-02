@@ -1,12 +1,12 @@
 Museum2F_Object:
 	db $a ; border block
 
-	def_warps
-	warp  7,  7, 4, MUSEUM_1F
+	def_warp_events
+	warp_event  7,  7, MUSEUM_1F, 5
 
-	def_signs
+	def_bg_events
 
-	def_objects
+	def_object_events
 
 	def_warps_to MUSEUM_2F
 

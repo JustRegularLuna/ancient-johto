@@ -1,13 +1,13 @@
 RocketHideoutB3F_Object:
 	db $2e ; border block
 
-	def_warps
-	warp 25,  6, 1, ROCKET_HIDEOUT_B2F
-	warp 19, 18, 0, ROCKET_HIDEOUT_B4F
+	def_warp_events
+	warp_event 25,  6, ROCKET_HIDEOUT_B2F, 2
+	warp_event 19, 18, ROCKET_HIDEOUT_B4F, 1
 
-	def_signs
+	def_bg_events
 
-	def_objects
+	def_object_events
 
 	def_warps_to ROCKET_HIDEOUT_B3F
 

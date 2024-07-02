@@ -1,20 +1,20 @@
 Route16_Object:
 	db $f ; border block
 
-	def_warps
-	warp 17, 10, 0, ROUTE_16_GATE_1F
-	warp 17, 11, 1, ROUTE_16_GATE_1F
-	warp 24, 10, 2, ROUTE_16_GATE_1F
-	warp 24, 11, 3, ROUTE_16_GATE_1F
-	warp 17,  4, 4, ROUTE_16_GATE_1F
-	warp 17,  5, 5, ROUTE_16_GATE_1F
-	warp 24,  4, 6, ROUTE_16_GATE_1F
-	warp 24,  5, 7, ROUTE_16_GATE_1F
-	warp  7,  5, 0, ROUTE_16_FLY_HOUSE
+	def_warp_events
+	warp_event 17, 10, ROUTE_16_GATE_1F, 1
+	warp_event 17, 11, ROUTE_16_GATE_1F, 2
+	warp_event 24, 10, ROUTE_16_GATE_1F, 3
+	warp_event 24, 11, ROUTE_16_GATE_1F, 4
+	warp_event 17,  4, ROUTE_16_GATE_1F, 5
+	warp_event 17,  5, ROUTE_16_GATE_1F, 6
+	warp_event 24,  4, ROUTE_16_GATE_1F, 7
+	warp_event 24,  5, ROUTE_16_GATE_1F, 8
+	warp_event  7,  5, ROUTE_16_FLY_HOUSE, 1
 
-	def_signs
+	def_bg_events
 
-	def_objects
+	def_object_events
 
 	def_warps_to ROUTE_16
 

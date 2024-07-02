@@ -17,20 +17,20 @@
 ElmsLab_Object:
 	db $3 ; border block
 
-	def_warps
-	warp  4, 11, 3, LAST_MAP
-	warp  5, 11, 3, LAST_MAP
+	def_warp_events
+	warp_event  4, 11, LAST_MAP, 4
+	warp_event  5, 11, LAST_MAP, 4
 
-	def_signs
-	sign  9,  3, ELMSLAB_BIN
-	sign  0,  1, ELMSLAB_PC
+	def_bg_events
+	bg_event  9,  3, ELMSLAB_BIN
+	bg_event  0,  1, ELMSLAB_PC
 
-	def_objects
-	object SPRITE_POKE_BALL, 6, 3, STAY, NONE, ELMSLAB_STARTER_BALL_1
-	object SPRITE_POKE_BALL, 7, 3, STAY, NONE, ELMSLAB_STARTER_BALL_2
-	object SPRITE_POKE_BALL, 8, 3, STAY, NONE, ELMSLAB_STARTER_BALL_3
-	object SPRITE_ELM, 5, 2, STAY, DOWN, ELMSLAB_ELM
-	object SPRITE_SCIENTIST, 8, 10, STAY, NONE, ELMSLAB_AIDE
+	def_object_events
+	object_event 6, 3, SPRITE_POKE_BALL, STAY, NONE, ELMSLAB_STARTER_BALL_1
+	object_event 7, 3, SPRITE_POKE_BALL, STAY, NONE, ELMSLAB_STARTER_BALL_2
+	object_event 8, 3, SPRITE_POKE_BALL, STAY, NONE, ELMSLAB_STARTER_BALL_3
+	object_event 5, 2, SPRITE_ELM, STAY, DOWN, ELMSLAB_ELM
+	object_event 8, 10, SPRITE_SCIENTIST, STAY, NONE, ELMSLAB_AIDE
 
 	def_warps_to ELMS_LAB
 

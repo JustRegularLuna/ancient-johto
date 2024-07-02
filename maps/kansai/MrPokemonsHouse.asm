@@ -14,16 +14,16 @@
 MrPokemonsHouse_Object:
 	db $17 ; border block
 
-	def_warps
-	warp  2,  7, 6, LAST_MAP
-	warp  3,  7, 6, LAST_MAP
+	def_warp_events
+	warp_event  2,  7, LAST_MAP, 7
+	warp_event  3,  7, LAST_MAP, 7
 
-	def_signs
-	sign  6,  4, MR_POKEMONS_HOUSE_PC
+	def_bg_events
+	bg_event  6,  4, MR_POKEMONS_HOUSE_PC
 
-	def_objects
-	object SPRITE_GENTLEMAN,  3,  5, STAY, RIGHT, MR_POKEMONS_HOUSE_MR_POKEMON
-	object SPRITE_OAK,  6,  5, STAY, UP, MR_POKEMONS_HOUSE_OAK
+	def_object_events
+	object_event  3,  5, SPRITE_GENTLEMAN, STAY, RIGHT, MR_POKEMONS_HOUSE_MR_POKEMON
+	object_event  6,  5, SPRITE_OAK, STAY, UP, MR_POKEMONS_HOUSE_OAK
 
 	def_warps_to MR_POKEMONS_HOUSE
 

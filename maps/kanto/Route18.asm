@@ -1,15 +1,15 @@
 Route18_Object:
 	db $43 ; border block
 
-	def_warps
-	warp 33,  8, 0, ROUTE_18_GATE_1F
-	warp 33,  9, 1, ROUTE_18_GATE_1F
-	warp 40,  8, 2, ROUTE_18_GATE_1F
-	warp 40,  9, 3, ROUTE_18_GATE_1F
+	def_warp_events
+	warp_event 33,  8, ROUTE_18_GATE_1F, 1
+	warp_event 33,  9, ROUTE_18_GATE_1F, 2
+	warp_event 40,  8, ROUTE_18_GATE_1F, 3
+	warp_event 40,  9, ROUTE_18_GATE_1F, 4
 
-	def_signs
+	def_bg_events
 
-	def_objects
+	def_object_events
 
 	def_warps_to ROUTE_18
 

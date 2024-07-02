@@ -1,13 +1,13 @@
 SSAnneBow_Object:
 	db $23 ; border block
 
-	def_warps
-	warp 13,  6, 0, SS_ANNE_3F
-	warp 13,  7, 0, SS_ANNE_3F
+	def_warp_events
+	warp_event 13,  6, SS_ANNE_3F, 1
+	warp_event 13,  7, SS_ANNE_3F, 1
 
-	def_signs
+	def_bg_events
 
-	def_objects
+	def_object_events
 
 	def_warps_to SS_ANNE_BOW
 

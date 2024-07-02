@@ -1,13 +1,13 @@
 FuchsiaMeetingRoom_Object:
 	db $17 ; border block
 
-	def_warps
-	warp  4,  7, 6, LAST_MAP
-	warp  5,  7, 6, LAST_MAP
+	def_warp_events
+	warp_event  4,  7, LAST_MAP, 7
+	warp_event  5,  7, LAST_MAP, 7
 
-	def_signs
+	def_bg_events
 
-	def_objects
+	def_object_events
 
 	def_warps_to FUCHSIA_MEETING_ROOM
 

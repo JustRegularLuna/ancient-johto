@@ -1,14 +1,14 @@
 Route4_Object:
 	db $2c ; border block
 
-	def_warps
-	warp 11,  5, 0, MT_MOON_POKECENTER
-	warp 18,  5, 0, MT_MOON_1F
-	warp 24,  5, 7, MT_MOON_B1F
+	def_warp_events
+	warp_event 11,  5, MT_MOON_POKECENTER, 1
+	warp_event 18,  5, MT_MOON_1F, 1
+	warp_event 24,  5, MT_MOON_B1F, 8
 
-	def_signs
+	def_bg_events
 
-	def_objects
+	def_object_events
 
 	def_warps_to ROUTE_4
 

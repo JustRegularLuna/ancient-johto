@@ -1,19 +1,19 @@
 RockTunnel1F_Object:
 	db $3 ; border block
 
-	def_warps
-	warp 15,  3, 1, LAST_MAP
-	warp 15,  0, 1, LAST_MAP
-	warp 15, 33, 2, LAST_MAP
-	warp 15, 35, 2, LAST_MAP
-	warp 37,  3, 0, ROCK_TUNNEL_B1F
-	warp  5,  3, 1, ROCK_TUNNEL_B1F
-	warp 17, 11, 2, ROCK_TUNNEL_B1F
-	warp 37, 17, 3, ROCK_TUNNEL_B1F
+	def_warp_events
+	warp_event 15,  3, LAST_MAP, 2
+	warp_event 15,  0, LAST_MAP, 2
+	warp_event 15, 33, LAST_MAP, 3
+	warp_event 15, 35, LAST_MAP, 3
+	warp_event 37,  3, ROCK_TUNNEL_B1F, 1
+	warp_event  5,  3, ROCK_TUNNEL_B1F, 2
+	warp_event 17, 11, ROCK_TUNNEL_B1F, 3
+	warp_event 37, 17, ROCK_TUNNEL_B1F, 4
 
-	def_signs
+	def_bg_events
 
-	def_objects
+	def_object_events
 
 	def_warps_to ROCK_TUNNEL_1F
 

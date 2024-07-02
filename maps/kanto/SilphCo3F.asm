@@ -1,21 +1,21 @@
 SilphCo3F_Object:
 	db $2e ; border block
 
-	def_warps
-	warp 26,  0, 1, SILPH_CO_2F
-	warp 24,  0, 0, SILPH_CO_4F
-	warp 20,  0, 0, SILPH_CO_ELEVATOR
-	warp 23, 11, 9, SILPH_CO_3F
-	warp  3,  3, 5, SILPH_CO_5F
-	warp  3, 15, 6, SILPH_CO_5F
-	warp 27,  3, 3, SILPH_CO_2F
-	warp  3, 11, 3, SILPH_CO_9F
-	warp 11, 11, 4, SILPH_CO_7F
-	warp 27, 15, 3, SILPH_CO_3F
+	def_warp_events
+	warp_event 26,  0, SILPH_CO_2F, 2
+	warp_event 24,  0, SILPH_CO_4F, 1
+	warp_event 20,  0, SILPH_CO_ELEVATOR, 1
+	warp_event 23, 11, SILPH_CO_3F, 10
+	warp_event  3,  3, SILPH_CO_5F, 6
+	warp_event  3, 15, SILPH_CO_5F, 7
+	warp_event 27,  3, SILPH_CO_2F, 4
+	warp_event  3, 11, SILPH_CO_9F, 4
+	warp_event 11, 11, SILPH_CO_7F, 5
+	warp_event 27, 15, SILPH_CO_3F, 4
 
-	def_signs
+	def_bg_events
 
-	def_objects
+	def_object_events
 
 	def_warps_to SILPH_CO_3F
 

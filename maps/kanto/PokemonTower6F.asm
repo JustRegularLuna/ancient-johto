@@ -1,13 +1,13 @@
 PokemonTower6F_Object:
 	db $1 ; border block
 
-	def_warps
-	warp 18,  9, 1, POKEMON_TOWER_5F
-	warp  9, 16, 0, POKEMON_TOWER_7F
+	def_warp_events
+	warp_event 18,  9, POKEMON_TOWER_5F, 2
+	warp_event  9, 16, POKEMON_TOWER_7F, 1
 
-	def_signs
+	def_bg_events
 
-	def_objects
+	def_object_events
 
 	def_warps_to POKEMON_TOWER_6F
 

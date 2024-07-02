@@ -10,17 +10,17 @@
 SakuraHouse3_Object:
 	db $a ; border block
 
-	def_warps
-	warp  2,  7, 4, LAST_MAP
-	warp  3,  7, 4, LAST_MAP
+	def_warp_events
+	warp_event  2,  7, LAST_MAP, 5
+	warp_event  3,  7, LAST_MAP, 5
 
-	def_signs
+	def_bg_events
 
-	def_objects
-	object SPRITE_GAMBLER,  2,  3, STAY, RIGHT, SAKURA_HOUSE3_GAMBLER
-	object SPRITE_GRANNY,  5,  3, STAY, LEFT, SAKURA_HOUSE3_GRANNY
-	object SPRITE_ICON_FOX,  5,  1, STAY, NONE, SAKURA_HOUSE3_HOUNDOUR
-	object SPRITE_ICON_PIKACHU,  5,  4, STAY, NONE, SAKURA_HOUSE3_PIKACHU
+	def_object_events
+	object_event  2,  3, SPRITE_GAMBLER, STAY, RIGHT, SAKURA_HOUSE3_GAMBLER
+	object_event  5,  3, SPRITE_GRANNY, STAY, LEFT, SAKURA_HOUSE3_GRANNY
+	object_event  5,  1, SPRITE_ICON_FOX, STAY, NONE, SAKURA_HOUSE3_HOUNDOUR
+	object_event  5,  4, SPRITE_ICON_PIKACHU, STAY, NONE, SAKURA_HOUSE3_PIKACHU
 
 	def_warps_to SAKURA_HOUSE_3
 

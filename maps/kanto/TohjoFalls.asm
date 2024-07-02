@@ -7,13 +7,13 @@
 TohjoFalls_Object:
 	db $9 ; border block
 
-	def_warps
-	warp 13, 15, 0, JOHTO_ROUTE_27
-	warp 25, 15, 0, KANTO_ROUTE_27
+	def_warp_events
+	warp_event 13, 15, JOHTO_ROUTE_27, 1
+	warp_event 25, 15, KANTO_ROUTE_27, 1
 
-	def_signs
+	def_bg_events
 
-	def_objects
+	def_object_events
 
 	def_warps_to TOHJO_FALLS
 

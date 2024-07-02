@@ -1,14 +1,14 @@
 GameCorner_Object:
 	db $f ; border block
 
-	def_warps
-	warp 15, 17, 7, LAST_MAP
-	warp 16, 17, 7, LAST_MAP
-	warp 17,  4, 1, ROCKET_HIDEOUT_B1F
+	def_warp_events
+	warp_event 15, 17, LAST_MAP, 8
+	warp_event 16, 17, LAST_MAP, 8
+	warp_event 17,  4, ROCKET_HIDEOUT_B1F, 2
 
-	def_signs
+	def_bg_events
 
-	def_objects
+	def_object_events
 
 	def_warps_to GAME_CORNER
 

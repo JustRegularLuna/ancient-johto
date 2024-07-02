@@ -1,24 +1,24 @@
 CeladonCity_Object:
 	db $f ; border block
 
-	def_warps
-	warp  8, 13, 0, CELADON_MART_1F
-	warp 10, 13, 2, CELADON_MART_1F
-	warp 24,  9, 0, CELADON_MANSION_1F
-	warp 24,  3, 2, CELADON_MANSION_1F
-	warp 25,  3, 2, CELADON_MANSION_1F
-	warp 41,  9, 0, CELADON_POKECENTER
-	warp 12, 27, 0, CELADON_GYM
-	warp 28, 19, 0, GAME_CORNER
-	warp 39, 19, 0, CELADON_MART_5F ; beta warp! no longer used
-	warp 33, 19, 0, GAME_CORNER_PRIZE_ROOM
-	warp 31, 27, 0, CELADON_DINER
-	warp 35, 27, 0, CELADON_CHIEF_HOUSE
-	warp 43, 27, 0, CELADON_HOTEL
+	def_warp_events
+	warp_event  8, 13, CELADON_MART_1F, 1
+	warp_event 10, 13, CELADON_MART_1F, 3
+	warp_event 24,  9, CELADON_MANSION_1F, 1
+	warp_event 24,  3, CELADON_MANSION_1F, 3
+	warp_event 25,  3, CELADON_MANSION_1F, 3
+	warp_event 41,  9, CELADON_POKECENTER, 1
+	warp_event 12, 27, CELADON_GYM, 1
+	warp_event 28, 19, GAME_CORNER, 1
+	warp_event 39, 19, CELADON_MART_5F, 1 ; beta warp! no longer used
+	warp_event 33, 19, GAME_CORNER_PRIZE_ROOM, 1
+	warp_event 31, 27, CELADON_DINER, 1
+	warp_event 35, 27, CELADON_CHIEF_HOUSE, 1
+	warp_event 43, 27, CELADON_HOTEL, 1
 
-	def_signs
+	def_bg_events
 
-	def_objects
+	def_object_events
 
 	def_warps_to CELADON_CITY
 

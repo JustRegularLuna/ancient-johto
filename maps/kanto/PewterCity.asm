@@ -1,18 +1,18 @@
 PewterCity_Object:
 	db $a ; border block
 
-	def_warps
-	warp 14,  7, 0, MUSEUM_1F
-	warp 19,  5, 2, MUSEUM_1F
-	warp 16, 17, 0, PEWTER_GYM
-	warp 29, 13, 0, PEWTER_NIDORAN_HOUSE
-	warp 23, 17, 0, PEWTER_MART
-	warp  7, 29, 0, PEWTER_SPEECH_HOUSE
-	warp 13, 25, 0, PEWTER_POKECENTER
+	def_warp_events
+	warp_event 14,  7, MUSEUM_1F, 1
+	warp_event 19,  5, MUSEUM_1F, 3
+	warp_event 16, 17, PEWTER_GYM, 1
+	warp_event 29, 13, PEWTER_NIDORAN_HOUSE, 1
+	warp_event 23, 17, PEWTER_MART, 1
+	warp_event  7, 29, PEWTER_SPEECH_HOUSE, 1
+	warp_event 13, 25, PEWTER_POKECENTER, 1
 
-	def_signs
+	def_bg_events
 
-	def_objects
+	def_object_events
 
 	def_warps_to PEWTER_CITY
 

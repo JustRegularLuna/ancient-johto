@@ -8,14 +8,14 @@
 Route26_Object:
 	db $05 ; border block
 
-	def_warps
+	def_warp_events
 	;warp  7,  5, 0, ROUTE_22_GATE
 
-	def_signs
-	;sign 25,  7, KANTO_ROUTE27_SIGN
+	def_bg_events
+	;bg_event 25,  7, KANTO_ROUTE27_SIGN
 
-	def_objects
-	;object SPRITE_FISHER, 20, 10, STAY, LEFT, KANTO_ROUTE27_FISHER
+	def_object_events
+	;object_event 20, 10, SPRITE_FISHER, STAY, LEFT, KANTO_ROUTE27_FISHER
 
 	def_warps_to KANTO_ROUTE_27
 

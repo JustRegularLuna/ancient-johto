@@ -1,13 +1,13 @@
 FuchsiaGym_Object:
 	db $3 ; border block
 
-	def_warps
-	warp  4, 17, 5, LAST_MAP
-	warp  5, 17, 5, LAST_MAP
+	def_warp_events
+	warp_event  4, 17, LAST_MAP, 6
+	warp_event  5, 17, LAST_MAP, 6
 
-	def_signs
+	def_bg_events
 
-	def_objects
+	def_object_events
 
 	def_warps_to FUCHSIA_GYM
 

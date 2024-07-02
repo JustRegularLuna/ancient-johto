@@ -7,14 +7,14 @@
 SakuraHouse2_Object:
 	db $a ; border block
 
-	def_warps
-	warp  2,  7, 3, LAST_MAP
-	warp  3,  7, 3, LAST_MAP
+	def_warp_events
+	warp_event  2,  7, LAST_MAP, 4
+	warp_event  3,  7, LAST_MAP, 4
 
-	def_signs
+	def_bg_events
 
-	def_objects
-	object SPRITE_GRAMPS,  2,  3, STAY, RIGHT, SAKURA_HOUSE2_GENT
+	def_object_events
+	object_event  2,  3, SPRITE_GRAMPS, STAY, RIGHT, SAKURA_HOUSE2_GENT
 
 	def_warps_to SAKURA_HOUSE_2
 

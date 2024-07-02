@@ -1,13 +1,13 @@
 CinnabarGym_Object:
 	db $2e ; border block
 
-	def_warps
-	warp 16, 17, 1, LAST_MAP
-	warp 17, 17, 1, LAST_MAP
+	def_warp_events
+	warp_event 16, 17, LAST_MAP, 2
+	warp_event 17, 17, LAST_MAP, 2
 
-	def_signs
+	def_bg_events
 
-	def_objects
+	def_object_events
 
 	def_warps_to CINNABAR_GYM
 

@@ -1,14 +1,14 @@
 PalletTown_Object:
 	db $b ; border block
 
-	def_warps
-	warp  5,  5, 0, REDS_HOUSE_1F
-	warp 13,  5, 0, BLUES_HOUSE
-	warp 12, 11, 1, OAKS_LAB
+	def_warp_events
+	warp_event  5,  5, REDS_HOUSE_1F, 1
+	warp_event 13,  5, BLUES_HOUSE, 1
+	warp_event 12, 11, OAKS_LAB, 2
 
-	def_signs
+	def_bg_events
 
-	def_objects
+	def_object_events
 
 	def_warps_to PALLET_TOWN
 

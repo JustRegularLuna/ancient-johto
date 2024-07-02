@@ -1,17 +1,17 @@
 Route2_Object:
 	db $f ; border block
 
-	def_warps
-	warp 12,  9, 0, DIGLETTS_CAVE_ROUTE_2
-	warp  3, 11, 1, VIRIDIAN_FOREST_NORTH_GATE
-	warp 15, 19, 0, ROUTE_2_TRADE_HOUSE
-	warp 16, 35, 1, ROUTE_2_GATE
-	warp 15, 39, 2, ROUTE_2_GATE
-	warp  3, 43, 2, VIRIDIAN_FOREST_SOUTH_GATE
+	def_warp_events
+	warp_event 12,  9, DIGLETTS_CAVE_ROUTE_2, 1
+	warp_event  3, 11, VIRIDIAN_FOREST_NORTH_GATE, 2
+	warp_event 15, 19, ROUTE_2_TRADE_HOUSE, 1
+	warp_event 16, 35, ROUTE_2_GATE, 2
+	warp_event 15, 39, ROUTE_2_GATE, 3
+	warp_event  3, 43, VIRIDIAN_FOREST_SOUTH_GATE, 3
 
-	def_signs
+	def_bg_events
 
-	def_objects
+	def_object_events
 
 	def_warps_to ROUTE_2
 

@@ -1,16 +1,16 @@
 Route11_Object:
 	db $f ; border block
 
-	def_warps
-	warp 49,  8, 0, ROUTE_11_GATE_1F
-	warp 49,  9, 1, ROUTE_11_GATE_1F
-	warp 58,  8, 2, ROUTE_11_GATE_1F
-	warp 58,  9, 3, ROUTE_11_GATE_1F
-	warp  4,  5, 0, DIGLETTS_CAVE_ROUTE_11
+	def_warp_events
+	warp_event 49,  8, ROUTE_11_GATE_1F, 1
+	warp_event 49,  9, ROUTE_11_GATE_1F, 2
+	warp_event 58,  8, ROUTE_11_GATE_1F, 3
+	warp_event 58,  9, ROUTE_11_GATE_1F, 4
+	warp_event  4,  5, DIGLETTS_CAVE_ROUTE_11, 1
 
-	def_signs
+	def_bg_events
 
-	def_objects
+	def_object_events
 
 	def_warps_to ROUTE_11
 

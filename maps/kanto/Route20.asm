@@ -1,13 +1,13 @@
 Route20_Object:
 	db $43 ; border block
 
-	def_warps
-	warp 48,  5, 0, SEAFOAM_ISLANDS_1F
-	warp 58,  9, 2, SEAFOAM_ISLANDS_1F
+	def_warp_events
+	warp_event 48,  5, SEAFOAM_ISLANDS_1F, 1
+	warp_event 58,  9, SEAFOAM_ISLANDS_1F, 3
 
-	def_signs
+	def_bg_events
 
-	def_objects
+	def_object_events
 
 	def_warps_to ROUTE_20
 
