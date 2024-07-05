@@ -3,6 +3,7 @@ TrainerClassDVs:
 	table_width 2, TrainerClassDVs
 	;  atk,def,spd,spc
 	dn  9,  8,  8,  8 ; PROF_ELM
+	dn  9,  8,  8,  8 ; PROF_OAK
 	dn 13, 13, 13, 13 ; RIVAL1
 	dn 13, 13, 13, 13 ; RIVAL2
 	dn  9, 10,  7,  7 ; FALKNER

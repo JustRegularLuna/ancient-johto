@@ -552,6 +552,7 @@ GhostPic::            INCBIN "gfx/pokemon/other/ghost.pic"
 SECTION "Trainer Pics 1", ROMX
 
 ProfElmPic::           INCBIN "gfx/trainers/prof.elm.pic" ; PROF_ELM
+ProfOakPic::           INCBIN "gfx/trainers/prof.oak.pic" ; PROF_OAK
 Rival1Pic::            INCBIN "gfx/trainers/rival1.pic" ; RIVAL1
 Rival2Pic::            INCBIN "gfx/trainers/rival2.pic" ; RIVAL2
 FalknerPic::           INCBIN "gfx/trainers/falkner.pic" ; FALKNER
@@ -599,11 +600,11 @@ TwinsPic::             INCBIN "gfx/trainers/twins.pic" ; TWINS
 LassPic::              INCBIN "gfx/trainers/lass.pic" ; LASS
 BeautyPic::            INCBIN "gfx/trainers/beauty.pic" ; BEAUTY
 PicnickerPic::         INCBIN "gfx/trainers/picnicker.pic" ; PICNICKER
-CamperPic::            INCBIN "gfx/trainers/camper.pic" ; CAMPER
 
 
 SECTION "Trainer Pics 2", ROMX
 
+CamperPic::            INCBIN "gfx/trainers/camper.pic" ; CAMPER
 CooltrainerMPic::      INCBIN "gfx/trainers/cooltrainerm.pic" ; COOLTRAINERM
 CooltrainerFPic::      INCBIN "gfx/trainers/cooltrainerf.pic" ; COOLTRAINERF
 PokemaniacPic::        INCBIN "gfx/trainers/pokemaniac.pic" ; POKEMANIAC

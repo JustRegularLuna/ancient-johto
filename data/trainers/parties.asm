@@ -1,6 +1,7 @@
 TrainerDataPointers:
 	table_width 2, TrainerDataPointers
 	dw ProfElmData      ; PROF_ELM
+	dw ProfOakData      ; PROF_OAK
 	dw Rival1Data       ; RIVAL1
 	dw Rival2Data       ; RIVAL2
 	dw FalknerData      ; FALKNER
@@ -100,6 +101,14 @@ ProfElmData:      ; PROF_ELM
 	db 66, MEGANIUM
 	db 66, FERALIGATR
 	db 66, TYPHLOSION
+	db -1 ; end
+
+ProfOakData:      ; PROF_OAK
+; 01 - (placeholder)
+	db "OAK@", TRAINERTYPE_NORMAL
+	db 66, VENUSAUR
+	db 66, BLASTOISE
+	db 66, CHARIZARD
 	db -1 ; end
 
 Rival1Data:       ; RIVAL1

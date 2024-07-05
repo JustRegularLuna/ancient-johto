@@ -11,6 +11,7 @@ ENDM
 TrainerClassMoveChoiceModifications:
 	list_start TrainerClassMoveChoiceModifications
 	move_choices 1, 2, 3 ; PROF_ELM
+	move_choices 1, 2, 3 ; PROF_OAK
 	move_choices 1, 2, 3 ; RIVAL1
 	move_choices 1, 2, 3 ; RIVAL2
 	move_choices 1, 2, 3 ; FALKNER

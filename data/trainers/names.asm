@@ -1,6 +1,7 @@
 TrainerNames::
 	list_start TrainerNames
 	li "PROF."
+	li "PROF."
 	li "RIVAL"
 	li "RIVAL"
 	li "LEADER"

@@ -21,6 +21,9 @@ ENDM
 	trainerclass PROF_ELM
 	const ELM1
 
+	trainerclass PROF_OAK
+	const OAK1
+
 	trainerclass RIVAL1
 	const RIVAL1_1_TOTODILE
 	const RIVAL1_1_CHIKORITA
