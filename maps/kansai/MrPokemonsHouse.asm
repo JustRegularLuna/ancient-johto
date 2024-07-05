@@ -331,21 +331,26 @@ MrPokemonsHouseGivePokedexText:
 	line "of potential in"
 	cont "you, then."
 
-	para "If you don't mind,"
-	line "could I have a"
+	para "Here, I want you"
+	line "to take this with"
 
-	para "quick look at"
-	line "your #DEX?"
+	para "you during your"
+	line "travels."
 
-	para "…"
+	para "It's the latest"
+	line "version of my"
 
-	para "What?! You don't"
-	line "have one?"
+	para "invention, the"
+	line "#DEX MK.II!"
 
-	para "Well, I'll just"
-	line "have to fix that."
+	para "<PLAYER> received"
+	line "a #DEX!@"
+	sound_get_key_item
+	text_waitbutton
+	text_end
 
-	para "A #DEX is an"
+.OutroText
+	text "A #DEX is an"
 	line "invaluable tool"
 	cont "for any trainer."
 
@@ -355,21 +360,12 @@ MrPokemonsHouseGivePokedexText:
 	para "any #MON you"
 	line "see and catch."
 
-	para "<PLAYER> received"
-	line "a #DEX!@"
-	sound_get_key_item
-	text_waitbutton
-	text_end
-
-.OutroText
-	text "Well, I must be"
+	para "Well, I must be"
 	line "going."
 
-	para "I have research of"
-	line "my own to attend"
-
-	para "to, back home in"
-	line "PALLET TOWN."
+	para "I have a meeting"
+	line "to attend, over"
+	cont "in MARIGOLD CITY."
 
 	para "Good luck on your"
 	line "journey, <PLAYER>."

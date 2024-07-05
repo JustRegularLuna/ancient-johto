@@ -463,10 +463,6 @@ INCLUDE "engine/movie/trade.asm"
 INCLUDE "engine/movie/intro.asm"
 INCLUDE "engine/movie/trade2.asm"
 
-DexPalBankswitch:
-	ld hl, SendDexPal
-	jp Bankswitch
-
 
 SECTION "Pokédex Rating", ROMX
 
