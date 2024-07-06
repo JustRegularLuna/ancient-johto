@@ -58,18 +58,52 @@ ENDC
 	farcall ShowMarillTextScreens
 
 	; choose Hiro or Kris
-	ld hl, BoyOrGirlText
+.pickPlayer
+	call ClearScreen
+	ld a, PAL_MEWMON
+	call GotPaletteID
+	ld de, ChrisPicFront
+	lb bc, BANK(ChrisPicFront), $00
+	call IntroDisplayPicLeft
+	ld de, KrisPicFront
+	lb bc, BANK(KrisPicFront), $00
+	call IntroDisplayPicRight
+	call FadeInIntroPic
+	ld hl, WhichCharacterText
 	call PrintText
-	call BoyGirlChoice
+	call CharacterChoice
+	call GBFadeOutToWhite
+	call ClearScreen
+	ld a, PAL_MEWMON
+	call GotPaletteID
+	; show the chosen player
+	ld de, ChrisPicFront
+	lb bc, BANK(ChrisPicFront), $00
+	ld a, [wPlayerGender]
+	and a
+	jr z, .gotPic0
+	ld de, KrisPicFront
+	lb bc, BANK(KrisPicFront), $00
+.gotPic0
+	call IntroDisplayPicCenteredOrUpperRight
+	call FadeInIntroPic
+	ld hl, IsThisYouText
+	call PrintText
+	call YesNoChoice
+	call GBFadeOutToWhite
 	ld a, [wCurrentMenuItem]
-	ld [wPlayerGender], a
+	and a
+	jr nz, .pickPlayer
 	call ClearScreen
 
 	; set starting region
 IF DEF(_DEBUG)
+	call GBFadeInFromWhite
 	ld hl, DebugChooseRegionText
 	call PrintText
 	call DebugRegionChoice
+	call GBFadeOutToWhite
+	call ClearScreen
 	ld a, [wCurrentMenuItem]
 ELSE
 	ld a, KANSAI_REGION
@@ -282,22 +316,6 @@ IntroDisplayPicCenteredOrUpperRight:
 	ldh [hStartTileID], a
 	predef_jump CopyUncompressedPicToTilemap
 
-BoyGirlChoice::
-	call SaveScreenTilesToBuffer1
-	ld a, BOY_GIRL_MENU
-	ld [wTwoOptionMenuID], a
-	coord hl, 7, 5
-	lb bc, 6, 8
-	ld a, TWO_OPTION_MENU
-	ld [wTextBoxID], a
-	call DisplayTextBoxID
-	jp LoadScreenTilesFromBuffer1
-
-BoyOrGirlText:
-	text "Are you a boy,"
-	line "or a girl?"
-	done
-
 IF DEF(_DEBUG)
 DebugRegionChoice::
 	call SaveScreenTilesToBuffer1
@@ -331,3 +349,92 @@ GotPaletteID:
 	ld hl, SendIntroPal
 	ld b, BANK(SendIntroPal)
 	jp Bankswitch
+
+IntroDisplayPicLeft:
+; b = bank
+; de = address of compressed pic
+	ld a, b
+	call UncompressSpriteFromDE
+	ld hl, sSpriteBuffer1
+	ld de, sSpriteBuffer0
+	ld bc, $310
+	call CopyData
+	ld de, vFrontPic
+	call InterlaceMergeSpriteBuffers
+	hlcoord 2, 4
+	xor a
+	ldh [hStartTileID], a
+	predef_jump CopyUncompressedPicToTilemap
+
+IntroDisplayPicRight:
+; b = bank
+; de = address of compressed pic
+	ld a, b
+	call UncompressSpriteFromDE
+	ld hl, sSpriteBuffer1
+	ld de, sSpriteBuffer0
+	ld bc, $310
+	call CopyData
+	ld de, vBackPic
+	call InterlaceMergeSpriteBuffers
+	hlcoord 10, 4
+	ld a, $31
+	ldh [hStartTileID], a
+	predef_jump CopyUncompressedPicToTilemap
+
+WhichCharacterText:
+	text "Which photo is on"
+	line "your Trainer Card?"
+	done
+
+IsThisYouText:
+	text "Is this you?"
+	done
+
+CharacterChoice:
+	; erase previous cursors
+	ld a, " "
+	hlcoord 5, 3
+	ld [hl], a
+	hlcoord 13, 3
+	ld [hl], a
+
+	ld a, [wPlayerGender]
+	and a
+	jr z, .p1
+	; p2
+	ld a, "▼"
+	hlcoord 13, 3
+	ld [hl], a
+	jr .loop
+.p1
+	ld a, "▼"
+	hlcoord 5, 3
+	ld [hl], a
+.loop
+	call DelayFrame
+	call ReadJoypad
+	ldh a, [hJoyInput]
+	bit BIT_A_BUTTON, a
+	ret nz
+	bit BIT_D_RIGHT, a
+	jr nz, .d_right
+	bit BIT_D_LEFT, a
+	jr z, .loop
+	; left
+	ld a, [wPlayerGender]
+	and a
+	; already on Hiro?
+	jr z, .got_player
+	; if not, switch to Hiro
+	dec a
+	jr  .got_player
+.d_right
+	ld a, [wPlayerGender]
+	cp 1
+	; already Kris?
+	jr z, .got_player
+	inc a
+.got_player
+	ld [wPlayerGender], a
+	jr CharacterChoice
