@@ -1,4 +1,8 @@
 MainMenu:
+	ld a, SFX_STOP_ALL_MUSIC
+	call PlaySound
+	ld a, MUSIC_MAIN_MENU
+	call PlayMusic
 ; Check save file
 	call InitOptions
 	xor a

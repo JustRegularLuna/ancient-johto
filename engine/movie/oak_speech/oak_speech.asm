@@ -38,8 +38,6 @@ ENDC
 OakSpeech:
 	ld a, SFX_STOP_ALL_MUSIC
 	call PlaySound
-	ld a, MUSIC_ROUTES2
-	call PlayMusic
 	call ClearScreen
 	call LoadTextBoxTilePatterns
 	call SetDefaultNames
@@ -84,6 +82,8 @@ ENDC
 	call SpecialWarpIn
 	xor a
 	ldh [hTileAnimations], a
+	ld a, MUSIC_ROUTE_30
+	call PlayMusic
 	ld a, PAL_MEWMON
 	call GotPaletteID
 	ld de, ProfElmPic

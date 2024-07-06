@@ -91,6 +91,7 @@
 	const MUSIC_TIN_TOWER
 	const MUSIC_UNION_CAVE
 	const MUSIC_MOBILE_CENTER
+	const MUSIC_MAIN_MENU
 DEF NUM_SONGS EQU const_value - 1
 
 	const_def

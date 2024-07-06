@@ -87,3 +87,4 @@ Music:
 	dba Music_TinTower
 	dba Music_UnionCave
 	dba Music_MobileCenter
+	dba Music_MainMenu
