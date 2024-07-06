@@ -377,7 +377,7 @@ IntroDisplayPicRight:
 	call CopyData
 	ld de, vBackPic
 	call InterlaceMergeSpriteBuffers
-	hlcoord 10, 4
+	hlcoord 11, 4
 	ld a, $31
 	ldh [hStartTileID], a
 	predef_jump CopyUncompressedPicToTilemap
@@ -396,7 +396,7 @@ CharacterChoice:
 	ld a, " "
 	hlcoord 5, 3
 	ld [hl], a
-	hlcoord 13, 3
+	hlcoord 14, 3
 	ld [hl], a
 
 	ld a, [wPlayerGender]
@@ -404,7 +404,7 @@ CharacterChoice:
 	jr z, .p1
 	; p2
 	ld a, "▼"
-	hlcoord 13, 3
+	hlcoord 14, 3
 	ld [hl], a
 	jr .loop
 .p1
