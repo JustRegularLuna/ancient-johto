@@ -72,6 +72,8 @@ ENDC
 	ld hl, WhichCharacterText
 	call PrintText
 	call CharacterChoice
+	ld a, SFX_PRESS_AB
+	call PlaySound
 	call GBFadeOutToWhite
 	call ClearScreen
 	ld a, PAL_MEWMON

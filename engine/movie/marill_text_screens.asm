@@ -22,6 +22,8 @@ ShowMarillTextScreens::
 	call PlaceString
 ; wait for the player to press A
 	call WaitForTextScrollButtonPress
+	ld a, SFX_PRESS_AB
+	call PlaySound
 ; load the tilemap for the screen again
 	call CleanMarillScreen
 ; display the second page
@@ -30,6 +32,8 @@ ShowMarillTextScreens::
 	call PlaceString
 	; wait for the player to press A
 	call WaitForTextScrollButtonPress
+	ld a, SFX_PRESS_AB
+	call PlaySound
 ; load the tilemap for the screen again
 	call CleanMarillScreen
 ; display the third page
@@ -38,6 +42,8 @@ ShowMarillTextScreens::
 	call PlaceString
 	; wait for the player to press A
 	call WaitForTextScrollButtonPress
+	ld a, SFX_PRESS_AB
+	call PlaySound
 ; load the tilemap for the screen again
 	call CleanMarillScreen
 ; display the fourth page
@@ -46,6 +52,8 @@ ShowMarillTextScreens::
 	call PlaceString
 	; wait for the player to press A
 	call WaitForTextScrollButtonPress
+	ld a, SFX_PRESS_AB
+	call PlaySound
 ; wipe the screen and go back
 	call ClearScreen
 	ret
