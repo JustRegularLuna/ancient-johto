@@ -6,7 +6,8 @@ While this was a passion project, I couldn't have done it all on my own. Several
 ## Code
 
 * Sanqui, Dannye for the [pokered-gen-II crysaudio](https://github.com/dannye/pokered-gen-II/tree/crysaudio) codebase that was used as a starting point.
-* Sylvie for originally  designing the SW97 style Pokédex and Trainer Card UI for [Pokémon RedStar/BlueStar](https://github.com/Rangi42/redstarbluestar).
+* Rangi42 for originally designing the SW97 style Pokédex and Trainer Card UI for [Pokémon RedStar/BlueStar](https://github.com/Rangi42/redstarbluestar).
+* Character Select screen code was adapted from how [Polished Crystal](https://github.com/Rangi42/polishedcrystal) handles that.
 * Myself (Luna) for the second region code, porting Gen II roof loading and tileset animations, jump ledges in other tilesets, berry trees, scripting the events, and everything else not listed here.
 
 
