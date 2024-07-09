@@ -310,7 +310,7 @@ IntroDisplayPicCenteredOrUpperRight:
 	pop bc
 	ld a, c
 	and a
-	hlcoord 15, 1
+	hlcoord 14, 2
 	jr nz, .next
 	hlcoord 6, 4
 .next
