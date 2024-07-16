@@ -59,6 +59,7 @@ ENDC
 
 	; choose Hiro or Kris
 .pickPlayer
+	call GBFadeOutToWhite
 	call ClearScreen
 	ld a, PAL_MEWMON
 	call GotPaletteID
@@ -92,10 +93,10 @@ ENDC
 	ld hl, IsThisYouText
 	call PrintText
 	call YesNoChoice
-	call GBFadeOutToWhite
 	ld a, [wCurrentMenuItem]
 	and a
 	jr nz, .pickPlayer
+	call GBFadeOutToWhite
 	call ClearScreen
 
 	; set starting region
@@ -386,7 +387,7 @@ IntroDisplayPicRight:
 
 WhichCharacterText:
 	text "Which photo is on"
-	line "your Trainer Card?"
+	line "your TRAINER CARD?"
 	done
 
 IsThisYouText:

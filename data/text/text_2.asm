@@ -1275,21 +1275,28 @@ _OakSpeechText2B::
 	para "That's why I have"
 	line "dedicated my life"
 	cont "to researching"
-	cont "them."
+	cont "#MON."
 
-	para "There is still so"
-	line "much to discover!"
+	para "But that's enough"
+	line "formality…"
+
+	para "Let's fill out"
+	line "your TRAINER CARD"
+	cont "now."
 	prompt
 
 _IntroducePlayerText::
-	text "First, what is"
-	line "your name?"
+	text "Which name do you"
+	line "prefer to go by?"
 	prompt
 
 _IntroduceRivalText::
-	text "Also, there's this"
-	line "shady guy I've"
-	cont "seen around…"
+	text "Also, before you"
+	line "go…"
+
+	para "There's this shady"
+	line "guy I've seen in"
+	cont "town lately…"
 
 	para "You don't happen"
 	line "to know his name,"
@@ -1333,8 +1340,10 @@ _DoYouWantToNicknameText::
 	done
 
 _YourNameIsText::
-	text "Right! So your"
-	line "name is <PLAYER>!"
+	text "Ok, that's all we"
+	line "needed there."
+
+	para "Thanks, <PLAYER>!"
 	prompt
 
 _HisNameIsText::
