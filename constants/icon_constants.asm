@@ -41,6 +41,7 @@
 	const ICON_BIGMON
 	const ICON_MEWTWO
 	const ICON_MEW
+	const ICON_SEEL
 
 DEF ICON_TRADEBUBBLE EQU $e
 
