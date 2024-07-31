@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 136 ; base exp
 
-	INCBIN "gfx/pokemon/gmon/mr.mime.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/front/mr.mime.pic", 0, 1 ; sprite dimensions
 	dw MrMimePicFront, MrMimePicBack
 
 	ds 4 ; old level 1 learnset

@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 144 ; base exp
 
-	INCBIN "gfx/pokemon/gmon/dragonair.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/front/dragonair.pic", 0, 1 ; sprite dimensions
 	dw DragonairPicFront, DragonairPicBack
 
 	ds 4 ; old level 1 learnset

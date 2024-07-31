@@ -7,7 +7,7 @@
 	db 90 ; catch rate
 	db 116 ; base exp
 
-	INCBIN "gfx/pokemon/gmon/raticate.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/front/raticate.pic", 0, 1 ; sprite dimensions
 	dw RaticatePicFront, RaticatePicBack
 
 	ds 4 ; old level 1 learnset

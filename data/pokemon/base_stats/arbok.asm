@@ -7,7 +7,7 @@
 	db 90 ; catch rate
 	db 147 ; base exp
 
-	INCBIN "gfx/pokemon/gmon/arbok.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/front/arbok.pic", 0, 1 ; sprite dimensions
 	dw ArbokPicFront, ArbokPicBack
 
 	ds 4 ; old level 1 learnset

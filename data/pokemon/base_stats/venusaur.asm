@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 208 ; base exp
 
-	INCBIN "gfx/pokemon/gmon/venusaur.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/front/venusaur.pic", 0, 1 ; sprite dimensions
 	dw VenusaurPicFront, VenusaurPicBack
 
 	ds 4 ; old level 1 learnset

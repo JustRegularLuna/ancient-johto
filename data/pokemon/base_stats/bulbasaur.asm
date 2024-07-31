@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 64 ; base exp
 
-	INCBIN "gfx/pokemon/gmon/bulbasaur.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/front/bulbasaur.pic", 0, 1 ; sprite dimensions
 	dw BulbasaurPicFront, BulbasaurPicBack
 
 	ds 4 ; old level 1 learnset

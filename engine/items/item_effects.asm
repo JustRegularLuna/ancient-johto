@@ -34,7 +34,8 @@ ItemUsePtrTable:
 	dw ItemUseEvoStone   ; UP_GRADE
 	dw ItemUseEvoStone   ; KINGS_ROCK
 	dw ItemUseEvoStone   ; METAL_COAT
-	dw ItemUseEvoStone   ; HAPPY_CHARM
+	dw ItemUseEvoStone   ; HEART_STONE
+	dw ItemUseEvoStone   ; DARK_STONE
 	dw ItemUseEscapeRope ; ESCAPE_ROPE
 	dw ItemUseRepel      ; REPEL
 	dw ItemUseSuperRepel ; SUPER_REPEL

@@ -7,7 +7,7 @@
 	db 255 ; catch rate
 	db 54 ; base exp
 
-	INCBIN "gfx/pokemon/gmon/zubat.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/front/zubat.pic", 0, 1 ; sprite dimensions
 	dw ZubatPicFront, ZubatPicBack
 
 	ds 4 ; old level 1 learnset

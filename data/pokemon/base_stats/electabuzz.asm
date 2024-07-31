@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 156 ; base exp
 
-	INCBIN "gfx/pokemon/gmon/electabuzz.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/front/electabuzz.pic", 0, 1 ; sprite dimensions
 	dw ElectabuzzPicFront, ElectabuzzPicBack
 
 	ds 4 ; old level 1 learnset

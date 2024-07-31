@@ -7,7 +7,7 @@
 	db 255 ; catch rate
 	db 55 ; base exp
 
-	INCBIN "gfx/pokemon/gmon/pidgey.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/front/pidgey.pic", 0, 1 ; sprite dimensions
 	dw PidgeyPicFront, PidgeyPicBack
 
 	ds 4 ; old level 1 learnset

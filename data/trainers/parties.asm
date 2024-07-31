@@ -99,8 +99,8 @@ ProfElmData:      ; PROF_ELM
 ; 01 - (placeholder)
 	db "ELM@", TRAINERTYPE_NORMAL
 	db 66, MEGANIUM
-	db 66, FERALIGATR
-	db 66, TYPHLOSION
+	db 66, AQUARIA
+	db 66, DYNABEAR
 	db -1 ; end
 
 ProfOakData:      ; PROF_OAK
@@ -114,15 +114,15 @@ ProfOakData:      ; PROF_OAK
 Rival1Data:       ; RIVAL1
 ; First Battle Parties (Cherrygrove)
 	db "<RIVAL>@", TRAINERTYPE_NORMAL
-	db 5, STARTER2 ; Totodile (Player chose Cyndaquil)
+	db 5, STARTER2 ; Cruz (Player chose Cubburn)
 	db -1 ; end
 
 	db "<RIVAL>@", TRAINERTYPE_NORMAL
-	db 5, STARTER3 ; Chikorita (Player chose Totodile)
+	db 5, STARTER3 ; Chikorita (Player chose Cruz)
 	db -1 ; end
 
 	db "<RIVAL>@", TRAINERTYPE_NORMAL
-	db 5, STARTER1 ; Cyndaquil (Player chose Chikorita)
+	db 5, STARTER1 ; Cubburn (Player chose Chikorita)
 	db -1 ; end
 
 Rival2Data:       ; RIVAL2

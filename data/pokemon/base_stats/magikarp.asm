@@ -7,7 +7,7 @@
 	db 255 ; catch rate
 	db 20 ; base exp
 
-	INCBIN "gfx/pokemon/gmon/magikarp.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/front/magikarp.pic", 0, 1 ; sprite dimensions
 	dw MagikarpPicFront, MagikarpPicBack
 
 	ds 4 ; old level 1 learnset

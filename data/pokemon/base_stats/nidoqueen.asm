@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 194 ; base exp
 
-	INCBIN "gfx/pokemon/gmon/nidoqueen.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/front/nidoqueen.pic", 0, 1 ; sprite dimensions
 	dw NidoqueenPicFront, NidoqueenPicBack
 
 	ds 4 ; old level 1 learnset

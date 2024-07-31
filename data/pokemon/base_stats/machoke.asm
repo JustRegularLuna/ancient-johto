@@ -7,7 +7,7 @@
 	db 90 ; catch rate
 	db 146 ; base exp
 
-	INCBIN "gfx/pokemon/gmon/machoke.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/front/machoke.pic", 0, 1 ; sprite dimensions
 	dw MachokePicFront, MachokePicBack
 
 	ds 4 ; old level 1 learnset

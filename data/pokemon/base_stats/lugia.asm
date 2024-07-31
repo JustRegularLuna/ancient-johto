@@ -1,13 +1,13 @@
 	db LUGIA ; pokedex id
 
-	db 106, 90, 130, 110, 154
+	db 106,  90, 130, 110, 154
 	;   hp  atk  def  spd  spc
 
 	db PSYCHIC_TYPE, FLYING ; type
 	db 3 ; catch rate
 	db 64 ; base exp
 
-	INCBIN "gfx/pokemon/gmon/lugia.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/front/lugia.pic", 0, 1 ; sprite dimensions
 	dw LugiaPicFront, LugiaPicBack
 
 	ds 4 ; old level 1 learnset

@@ -1,5 +1,5 @@
 AerodactylFossil:
-	ld a, FOSSIL_AERODACTYL
+	ld a, MON_GHOST ; FOSSIL_AERODACTYL
 	ld [wcf91], a
 	call DisplayMonFrontSpriteInBox
 	call EnableAutoTextBoxDrawing
@@ -11,7 +11,7 @@ AerodactylFossilText::
 	text_end
 
 KabutopsFossil:
-	ld a, FOSSIL_KABUTOPS
+	ld a, MON_GHOST ; FOSSIL_KABUTOPS
 	ld [wcf91], a
 	call DisplayMonFrontSpriteInBox
 	call EnableAutoTextBoxDrawing
@@ -45,9 +45,9 @@ DisplayMonFrontSpriteInBox:
 	hlcoord 10, 11
 	predef AnimateSendingOutMon
 	ld a, [wcf91]
-	cp FOSSIL_KABUTOPS
+	cp MON_GHOST ; FOSSIL_KABUTOPS
 	jr z, .skipCry
-	cp FOSSIL_AERODACTYL
+	cp MON_GHOST ; FOSSIL_AERODACTYL
 	jr z, .skipCry
 	call PlayCry
 .skipCry

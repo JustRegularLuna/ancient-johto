@@ -7,7 +7,7 @@
 	db 75 ; catch rate
 	db 213 ; base exp
 
-	INCBIN "gfx/pokemon/gmon/arcanine.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/front/arcanine.pic", 0, 1 ; sprite dimensions
 	dw ArcaninePicFront, ArcaninePicBack
 
 	ds 4 ; old level 1 learnset

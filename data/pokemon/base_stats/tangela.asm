@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 166 ; base exp
 
-	INCBIN "gfx/pokemon/gmon/tangela.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/front/tangela.pic", 0, 1 ; sprite dimensions
 	dw TangelaPicFront, TangelaPicBack
 
 	ds 4 ; old level 1 learnset

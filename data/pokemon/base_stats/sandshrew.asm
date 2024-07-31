@@ -7,7 +7,7 @@
 	db 255 ; catch rate
 	db 93 ; base exp
 
-	INCBIN "gfx/pokemon/gmon/sandshrew.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/front/sandshrew.pic", 0, 1 ; sprite dimensions
 	dw SandshrewPicFront, SandshrewPicBack
 
 	ds 4 ; old level 1 learnset

@@ -7,7 +7,7 @@
 	db 190 ; catch rate
 	db 99 ; base exp
 
-	INCBIN "gfx/pokemon/gmon/slowpoke.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/front/slowpoke.pic", 0, 1 ; sprite dimensions
 	dw SlowpokePicFront, SlowpokePicBack
 
 	ds 4 ; old level 1 learnset

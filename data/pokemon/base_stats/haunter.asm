@@ -7,7 +7,7 @@
 	db 90 ; catch rate
 	db 126 ; base exp
 
-	INCBIN "gfx/pokemon/gmon/haunter.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/front/haunter.pic", 0, 1 ; sprite dimensions
 	dw HaunterPicFront, HaunterPicBack
 
 	ds 4 ; old level 1 learnset

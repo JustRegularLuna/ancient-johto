@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 200 ; base exp
 
-	INCBIN "gfx/pokemon/gmon/pinsir.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/front/pinsir.pic", 0, 1 ; sprite dimensions
 	dw PinsirPicFront, PinsirPicBack
 
 	ds 4 ; old level 1 learnset

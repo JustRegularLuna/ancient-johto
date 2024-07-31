@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 65 ; base exp
 
-	INCBIN "gfx/pokemon/gmon/charmander.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/front/charmander.pic", 0, 1 ; sprite dimensions
 	dw CharmanderPicFront, CharmanderPicBack
 
 	ds 4 ; old level 1 learnset

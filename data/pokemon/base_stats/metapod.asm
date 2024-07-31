@@ -7,7 +7,7 @@
 	db 120 ; catch rate
 	db 72 ; base exp
 
-	INCBIN "gfx/pokemon/gmon/metapod.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/front/metapod.pic", 0, 1 ; sprite dimensions
 	dw MetapodPicFront, MetapodPicBack
 
 	ds 4 ; old level 1 learnset

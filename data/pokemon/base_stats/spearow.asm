@@ -7,7 +7,7 @@
 	db 255 ; catch rate
 	db 58 ; base exp
 
-	INCBIN "gfx/pokemon/gmon/spearow.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/front/spearow.pic", 0, 1 ; sprite dimensions
 	dw SpearowPicFront, SpearowPicBack
 
 	ds 4 ; old level 1 learnset

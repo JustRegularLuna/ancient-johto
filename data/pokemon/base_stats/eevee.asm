@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 92 ; base exp
 
-	INCBIN "gfx/pokemon/gmon/eevee.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/front/eevee.pic", 0, 1 ; sprite dimensions
 	dw EeveePicFront, EeveePicBack
 
 	ds 4 ; old level 1 learnset

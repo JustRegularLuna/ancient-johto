@@ -348,17 +348,17 @@ GetMonHeader::
 	push af
 	ld a, [wd0b5]
 	ld [wd11e], a
-	ld de, FossilKabutopsPic
+	;ld de, FossilKabutopsPic
 	ld b, $66 ; size of Kabutops fossil and Ghost sprites
-	cp FOSSIL_KABUTOPS ; Kabutops fossil
-	jr z, .specialID
+	;cp FOSSIL_KABUTOPS ; Kabutops fossil
+	;jr z, .specialID
 	ld de, GhostPic
 	cp MON_GHOST ; Ghost
 	jr z, .specialID
-	ld de, FossilAerodactylPic
-	ld b, $77 ; size of Aerodactyl fossil sprite
-	cp FOSSIL_AERODACTYL ; Aerodactyl fossil
-	jr z, .specialID
+	;ld de, FossilAerodactylPic
+	;ld b, $77 ; size of Aerodactyl fossil sprite
+	;cp FOSSIL_AERODACTYL ; Aerodactyl fossil
+	;jr z, .specialID
 	;predef IndexToPokedex   ; convert pokemon ID in [wd11e] to pokedex number
 	ld a, [wd11e]
 	dec a

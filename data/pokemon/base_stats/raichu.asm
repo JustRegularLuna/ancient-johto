@@ -7,7 +7,7 @@
 	db 75 ; catch rate
 	db 122 ; base exp
 
-	INCBIN "gfx/pokemon/gmon/raichu.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/front/raichu.pic", 0, 1 ; sprite dimensions
 	dw RaichuPicFront, RaichuPicBack
 
 	ds 4 ; old level 1 learnset

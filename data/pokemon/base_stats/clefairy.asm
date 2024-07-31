@@ -7,7 +7,7 @@
 	db 150 ; catch rate
 	db 68 ; base exp
 
-	INCBIN "gfx/pokemon/gmon/clefairy.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/front/clefairy.pic", 0, 1 ; sprite dimensions
 	dw ClefairyPicFront, ClefairyPicBack
 
 	ds 4 ; old level 1 learnset

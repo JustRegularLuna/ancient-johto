@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 127 ; base exp
 
-	INCBIN "gfx/pokemon/gmon/lickitung.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/front/lickitung.pic", 0, 1 ; sprite dimensions
 	dw LickitungPicFront, LickitungPicBack
 
 	ds 4 ; old level 1 learnset

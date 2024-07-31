@@ -7,7 +7,7 @@
 	db 120 ; catch rate
 	db 131 ; base exp
 
-	INCBIN "gfx/pokemon/gmon/poliwhirl.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/front/poliwhirl.pic", 0, 1 ; sprite dimensions
 	dw PoliwhirlPicFront, PoliwhirlPicBack
 
 	ds 4 ; old level 1 learnset

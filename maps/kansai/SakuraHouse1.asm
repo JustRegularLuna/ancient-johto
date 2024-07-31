@@ -32,7 +32,7 @@ SakuraHouse1TeacherText:
 	text "I can't decide"
 	line "whether to get a"
 
-	para "MOON STONE or a"
+	para "DARK STONE or a"
 	line "SUN STONE to use"
 	cont "on my EEVEE."
 	done

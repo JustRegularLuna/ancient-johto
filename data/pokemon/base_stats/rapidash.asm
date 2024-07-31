@@ -7,7 +7,7 @@
 	db 60 ; catch rate
 	db 192 ; base exp
 
-	INCBIN "gfx/pokemon/gmon/rapidash.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/front/rapidash.pic", 0, 1 ; sprite dimensions
 	dw RapidashPicFront, RapidashPicBack
 
 	ds 4 ; old level 1 learnset

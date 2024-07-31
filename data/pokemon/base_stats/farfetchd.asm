@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 94 ; base exp
 
-	INCBIN "gfx/pokemon/gmon/farfetchd.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/front/farfetchd.pic", 0, 1 ; sprite dimensions
 	dw FarfetchdPicFront, FarfetchdPicBack
 
 	ds 4 ; old level 1 learnset

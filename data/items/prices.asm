@@ -16,7 +16,8 @@ ItemPrices::
 	money 2100  ; UP_GRADE
 	money 2100  ; KINGS_ROCK
 	money 2100  ; METAL_COAT
-	money 2100  ; HAPPY_CHARM
+	money 2100  ; HEART_STONE
+	money 2100  ; DARK_STONE
 	money 550   ; ESCAPE_ROPE
 	money 350   ; REPEL
 	money 500   ; SUPER_REPEL

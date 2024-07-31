@@ -7,7 +7,7 @@
 	db 225 ; catch rate
 	db 83 ; base exp
 
-	INCBIN "gfx/pokemon/gmon/horsea.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/front/horsea.pic", 0, 1 ; sprite dimensions
 	dw HorseaPicFront, HorseaPicBack
 
 	ds 4 ; old level 1 learnset

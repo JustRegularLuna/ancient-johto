@@ -22,16 +22,16 @@ NoMons: ; All maps with no wild encounters use this table
 
 KansaiRoute1Mons: ; KANSAI_ROUTE_1
 	def_grass_wildmons 25 ; encounter rate
-	db  2, SENTRET
-	db  3, SENTRET
+	db  2, RATTATA
+	db  3, RINRING
 	db  2, HOOTHOOT
 	db  3, HOOTHOOT
-	db  4, SENTRET
-	db  4, HOOTHOOT
-	db  2, RATTATA
+	db  4, RATTATA
+	db  5, RINRING
 	db  2, PIDGEY
-	db  3, HOPPIP
-	db  4, HOPPIP
+	db  3, PIDGEY
+	db  3, PURRLEAF
+	db  4, PURRLEAF
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate

@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 193 ; base exp
 
-	INCBIN "gfx/pokemon/gmon/machamp.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/front/machamp.pic", 0, 1 ; sprite dimensions
 	dw MachampPicFront, MachampPicBack
 
 	ds 4 ; old level 1 learnset

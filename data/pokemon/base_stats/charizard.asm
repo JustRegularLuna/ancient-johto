@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 209 ; base exp
 
-	INCBIN "gfx/pokemon/gmon/charizard.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/front/charizard.pic", 0, 1 ; sprite dimensions
 	dw CharizardPicFront, CharizardPicBack
 
 	ds 4 ; old level 1 learnset

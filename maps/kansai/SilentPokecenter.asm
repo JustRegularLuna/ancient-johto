@@ -124,7 +124,7 @@ SilentPokecenterGirlText:
 	prompt
 
 .choseCyndaquilText
-	text "Oh, CYNDAQUIL is"
+	text "Oh, CUBBURN is so"
 	line "cute!"
 
 	para "It's so warm and"
@@ -135,11 +135,10 @@ SilentPokecenterGirlText:
 
 .choseTotodileText
 	text "Oh, you picked"
-	line "TOTODILE?"
+	line "CRUZ?"
 
-	para "They're fun! A bit"
-	line "of a handful, but"
-	cont "worth it!"
+	para "That one is fun,"
+	line "I have one, too!"
 	done
 
 .choseChikoritaText

@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 159 ; base exp
 
-	INCBIN "gfx/pokemon/gmon/beedrill.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/front/beedrill.pic", 0, 1 ; sprite dimensions
 	dw BeedrillPicFront, BeedrillPicBack
 
 	ds 4 ; old level 1 learnset

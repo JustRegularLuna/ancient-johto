@@ -7,7 +7,7 @@
 	db 190 ; catch rate
 	db 82 ; base exp
 
-	INCBIN "gfx/pokemon/gmon/pikachu.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/front/pikachu.pic", 0, 1 ; sprite dimensions
 	dw PikachuPicFront, PikachuPicBack
 
 	ds 4 ; old level 1 learnset

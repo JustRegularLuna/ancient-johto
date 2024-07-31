@@ -602,11 +602,6 @@ SECTION "Saffron Guards", ROMX
 INCLUDE "engine/events/saffron_guards.asm"
 
 
-SECTION "Starter Dex", ROMX
-
-INCLUDE "engine/events/starter_dex.asm"
-
-
 SECTION "Hidden Objects 3", ROMX
 
 INCLUDE "engine/pokemon/set_types.asm"
@@ -712,12 +707,10 @@ SECTION "Custom Splash Screens", ROMX
 INCLUDE "engine/movie/marill_text_screens.asm"
 
 
-; Pic Includes
-IF DEF(_RED)
-	INCLUDE "gfx/pics_red.asm"
-ELSE
-	INCLUDE "gfx/pics_blue.asm"
-ENDC
+SECTION "Pic Includes", ROMX
+
+INCLUDE "gfx/pics.asm"
+
 
 SECTION "Wonder Trade", ROMX
 

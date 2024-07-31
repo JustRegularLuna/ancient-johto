@@ -558,14 +558,14 @@ ElmsLabDontGoAwayText:
 
 TakeCyndaquilText:
 	text "ELM: You'll take"
-	line "CYNDAQUIL, the"
+	line "CUBBURN, the"
 	cont "fire #MON?"
 	done
 
 TakeTotodileText:
 	text "ELM: Do you want"
-	line "TOTODILE, the"
-	cont "water #MON?"
+	line "CRUZ, the water"
+	cont "#MON?"
 	done
 
 TakeChikoritaText:

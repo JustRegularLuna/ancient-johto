@@ -7,7 +7,7 @@
 	db 190 ; catch rate
 	db 63 ; base exp
 
-	INCBIN "gfx/pokemon/gmon/vulpix.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/front/vulpix.pic", 0, 1 ; sprite dimensions
 	dw VulpixPicFront, VulpixPicBack
 
 	ds 4 ; old level 1 learnset

@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 167 ; base exp
 
-	INCBIN "gfx/pokemon/gmon/magmar.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/front/magmar.pic", 0, 1 ; sprite dimensions
 	dw MagmarPicFront, MagmarPicBack
 
 	ds 4 ; old level 1 learnset

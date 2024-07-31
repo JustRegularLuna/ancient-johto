@@ -1,13 +1,13 @@
 	db GIRAFARIG ; pokedex id
 
-	db 70, 80, 65, 85, 90
+	db  70,  80,  65,  85,  90
 	;   hp  atk  def  spd  spc
 
-	db NORMAL, PSYCHIC_TYPE ; type
+	db DARK, PSYCHIC_TYPE ; type
 	db 60 ; catch rate
 	db 149 ; base exp
 
-	INCBIN "gfx/pokemon/gmon/girafarig.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/front/girafarig.pic", 0, 1 ; sprite dimensions
 	dw GirafarigPicFront, GirafarigPicBack
 
 	ds 4 ; old level 1 learnset

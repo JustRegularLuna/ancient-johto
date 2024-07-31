@@ -28,7 +28,8 @@
 	const UP_GRADE      ;
 	const KINGS_ROCK    ;
 	const METAL_COAT    ;
-	const SOOTHE_BELL   ;
+	const HEART_STONE   ;
+	const DARK_STONE    ;
 	const ESCAPE_ROPE   ;
 	const REPEL         ;
 	const SUPER_REPEL   ;

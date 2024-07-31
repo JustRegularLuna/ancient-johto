@@ -7,7 +7,7 @@
 	db 255 ; catch rate
 	db 53 ; base exp
 
-	INCBIN "gfx/pokemon/gmon/caterpie.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/front/caterpie.pic", 0, 1 ; sprite dimensions
 	dw CaterpiePicFront, CaterpiePicBack
 
 	ds 4 ; old level 1 learnset

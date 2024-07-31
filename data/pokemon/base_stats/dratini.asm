@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 67 ; base exp
 
-	INCBIN "gfx/pokemon/gmon/dratini.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/front/dratini.pic", 0, 1 ; sprite dimensions
 	dw DratiniPicFront, DratiniPicBack
 
 	ds 4 ; old level 1 learnset

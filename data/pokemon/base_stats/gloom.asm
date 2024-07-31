@@ -7,7 +7,7 @@
 	db 120 ; catch rate
 	db 132 ; base exp
 
-	INCBIN "gfx/pokemon/gmon/gloom.pic", 0, 1 ; sprite dimensions
+	INCBIN "gfx/pokemon/front/gloom.pic", 0, 1 ; sprite dimensions
 	dw GloomPicFront, GloomPicBack
 
 	ds 4 ; old level 1 learnset
