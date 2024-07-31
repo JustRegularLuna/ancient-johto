@@ -66,12 +66,12 @@ PlayersHouseMomAfterPokemonText:
 	line "by and visit me."
 	done
 
-PlayersHouse1FStoveText: ; Bell Beefer? Sloppy José? VOLCANO BAKEMEAT?
-	text "Spicy sloppy joes,"
-	line "made with taco"
-	cont "meat!"
+PlayersHouse1FStoveText:
+	text "DIABLO SANDWICHES"
+	line "and SODA POP!"
 
-	para "It smells yummy!"
+	para "No time for that,"
+	line "I'm in a hurry!"
 	done
 
 PlayersHouse1FSinkText:

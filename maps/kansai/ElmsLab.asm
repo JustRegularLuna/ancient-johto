@@ -208,7 +208,7 @@ ElmsLabStarter1Script:
 	CheckEvent EVENT_GOT_STARTER
 	jp nz, AlreadyChoseStarter
 	; Show the pokedex entry and ask if you want it
-	call TempFillPokedex
+	call TempSetPokedex
 	ld a, STARTER1
 	call DisplayPokedex
 	ld hl, TakeCyndaquilText
@@ -235,7 +235,7 @@ ElmsLabStarter2Script:
 	CheckEvent EVENT_GOT_STARTER
 	jp nz, AlreadyChoseStarter
 	; Show the pokedex entry and ask if you want it
-	call TempFillPokedex
+	call TempSetPokedex
 	ld a, STARTER2
 	call DisplayPokedex
 	ld hl, TakeTotodileText
@@ -262,7 +262,7 @@ ElmsLabStarter3Script:
 	CheckEvent EVENT_GOT_STARTER
 	jp nz, AlreadyChoseStarter
 	; Show the pokedex entry and ask if you want it
-	call TempFillPokedex
+	call TempSetPokedex
 	ld a, STARTER3
 	call DisplayPokedex
 	ld hl, TakeChikoritaText
@@ -297,11 +297,9 @@ GiveStarterCommon:
 	call GetMonName
 	ld hl, ChoseStarterText
 	call PrintText
-	; Revert temporarily filling the pokedex
-	ld hl, wPokedexOwned
-	ld bc, wPokedexOwnedEnd - wPokedexOwned
+	; Revert temporarily setting the pokedex flags for starters
 	ld a, $00
-	call FillMemory
+	ld [wPokedexOwned], a
 	; Give the starter you chose
 	xor a ; PLAYER_PARTY_DATA
 	ld [wMonDataLocation], a
@@ -321,12 +319,11 @@ AlreadyChoseStarter:
 	call PrintText
 	jp TextScriptEnd
 
-TempFillPokedex:
-	; Temporarily fill the pokedex to show full dex entry on starters
-	ld hl, wPokedexOwned
-	ld bc, wPokedexOwnedEnd - wPokedexOwned
+TempSetPokedex:
+	; Temporarily set the pokedex to show full dex entry on starters
 	ld a, $FF
-	jp FillMemory
+	ld [wPokedexOwned], a
+	ret
 
 ItContainsAPokemonText:
 	text "It contains a"
@@ -465,43 +462,23 @@ ElmsLabAideScript:
 	para "the EGG that you"
 	line "brought us."
 
-	para "Sometimes, things"
-	line "like this aren't"
-	cont "what they seem."
+	para "Hopefully, this is"
+	line "the real deal."
 
-	para "Like a few years"
-	line "ago, some guys in"
+	para "I'd hate for this"
+	line "to be a repeat of"
 
-	para "KANTO claimed to"
-	line "have discovered"
+	para "that time an old"
+	line "man claimed his"
 
-	para "evolved forms of"
-	line "RAICHU…"
+	para "RAICHU went and"
+	line "evolved…"
 
-	para "That didn't turn"
-	line "out to be true."
+	para "Pseudoscientists"
+	line "STILL talk about"
 
-	para "One time, it was"
-	line "just a case of a"
-
-	para "strangely colored"
-	line "RAICHU, and a man"
-
-	para "who didn't quite"
-	line "understand how"
-	cont "trading worked…"
-
-	para "The other one did"
-	line "look like a blue"
-
-	para "PIKACHU relative,"
-	line "but it turned out"
-
-	para "to be a new, un-"
-	line "related kind of"
-
-	para "#MON. So you"
-	line "never know!"
+	para "that like it was"
+	line "a real thing…"
 	done
 
 ElmsLabBinText:
@@ -596,7 +573,18 @@ ChoseStarterText:
 	text_end
 
 ElmsLabTalkAboutPokemonText:
-	text "ELM: I hope you"
+	text "ELM: Take good"
+	line "care of that"
+	cont "#MON, <PLAYER>."
+
+	para "If it gets hurt,"
+	line "you should bring"
+	cont "it to the #MON"
+	cont "CENTER."
+
+	para "…"
+
+	para "Now, I hope you"
 	line "don't mind, but I"
 
 	para "have a small"
@@ -696,26 +684,6 @@ ElmReactsToMysteryEggText:
 
 	para "If so, this is a"
 	line "major discovery…"
-
-	para "But we can't jump"
-	line "to conclusions."
-
-	para "That isn't how"
-	line "science works."
-
-	para "We have to study"
-	line "this seriously to"
-
-	para "make sure it isn't"
-	line "just a hoax."
-
-	para "Yes, unfortunately"
-	line "those happen from"
-	cont "time to time."
-
-	para "Hopefully this"
-	line "won't be one of"
-	cont "those times."
 
 	para "Thank you for"
 	line "bringing this to"
