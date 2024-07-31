@@ -1273,17 +1273,13 @@ _ElmSpeechText2B::
 
 	para "Some #MON are"
 	line "well-known, but"
-	cont "there are still"
-	cont "many left to be"
-	cont "discovered."
+	cont "new #MON are"
+	cont "being discovered"
+	cont "all the time."
 	prompt
 
 _ElmSpeechText3::
-	text "But we don't know"
-	line "everything about"
-	cont "#MON yet."
-
-	para "There are still"
+	text "There are still so"
 	line "many mysteries to"
 	cont "investigate."
 
@@ -1291,15 +1287,17 @@ _ElmSpeechText3::
 	line "in my lab, here"
 	cont "in SILENT HILLS."
 
-	para "If you stop by, I"
-	line "actually need a"
-	cont "bit of help with"
-	cont "something."
+	para "In fact, I could"
+	line "use your help"
+	cont "with something."
+
+	para "Please stop by"
+	line "when you can."
 	prompt
 
 _IntroduceRivalText::
-	text "Also, before you"
-	line "leave…"
+	text "Also…"
+	line "One last thing…"
 
 	para "There's this shady"
 	line "guy I've seen in"
@@ -1350,10 +1348,8 @@ _DoYouWantToNicknameText::
 	done
 
 _YourNameIsText::
-	text "Ok, that's all we"
-	line "needed there."
-
-	para "Thanks, <PLAYER>!"
+	text "Ok, your TRAINER"
+	line "CARD is ready."
 	prompt
 
 _HisNameIsText::
