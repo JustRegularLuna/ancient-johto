@@ -80,7 +80,7 @@ KansaiRoute1PersonText:
 	cont "different areas."
 
 	para "I'm looking for a"
-	line "pink one with"
+	line "cute one with"
 
 	para "little leaves on"
 	line "its head!"
