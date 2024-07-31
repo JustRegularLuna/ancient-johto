@@ -1243,7 +1243,12 @@ _LinkCanceledText::
 	line "canceled."
 	done
 
-_OakSpeechText1::
+_IntroducePlayerText::
+	text "Which name do you"
+	line "prefer to go by?"
+	prompt
+
+_ElmSpeechText1::
 	text "Hello! Sorry to"
 	line "keep you waiting…"
 
@@ -1255,7 +1260,7 @@ _OakSpeechText1::
 	cont "evolution."
 	prompt
 
-_OakSpeechText2A::
+_ElmSpeechText2A::
 	text "As I'm sure you"
 	line "already know, our"
 	cont "world is filled"
@@ -1263,7 +1268,7 @@ _OakSpeechText2A::
 	cont "of #MON.@"
 	text_end
 
-_OakSpeechText2B::
+_ElmSpeechText2B::
 	text_start
 
 	para "Some #MON are"
@@ -1271,28 +1276,30 @@ _OakSpeechText2B::
 	cont "there are still"
 	cont "many left to be"
 	cont "discovered."
-
-	para "That's why I have"
-	line "dedicated my life"
-	cont "to researching"
-	cont "#MON."
-
-	para "But that's enough"
-	line "formality…"
-
-	para "Let's fill out"
-	line "your TRAINER CARD"
-	cont "now."
 	prompt
 
-_IntroducePlayerText::
-	text "Which name do you"
-	line "prefer to go by?"
+_ElmSpeechText3::
+	text "But we don't know"
+	line "everything about"
+	cont "#MON yet."
+
+	para "There are still"
+	line "many mysteries to"
+	cont "investigate."
+
+	para "That's what I do"
+	line "in my lab, here"
+	cont "in SILENT HILLS."
+
+	para "If you stop by, I"
+	line "actually need a"
+	cont "bit of help with"
+	cont "something."
 	prompt
 
 _IntroduceRivalText::
 	text "Also, before you"
-	line "go…"
+	line "leave…"
 
 	para "There's this shady"
 	line "guy I've seen in"
@@ -1310,7 +1317,7 @@ _IntroduceRivalText2::
 	prompt
 
 
-_OakSpeechText3::
+_ElmSpeechText4::
 	text "<PLAYER>!"
 
 	para "Your very own"
@@ -1321,6 +1328,9 @@ _OakSpeechText3::
 	line "and adventures"
 	cont "with #MON"
 	cont "awaits! Let's go!"
+
+	para "I'll be seeing you"
+	line "later!"
 	done
 
 _YourNameIsText2::

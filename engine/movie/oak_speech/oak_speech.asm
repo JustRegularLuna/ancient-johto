@@ -96,6 +96,9 @@ ENDC
 	ld a, [wCurrentMenuItem]
 	and a
 	jr nz, .pickPlayer
+	ld hl, IntroducePlayerText
+	call PrintText
+	call ChoosePlayerName
 	call GBFadeOutToWhite
 	call ClearScreen
 
@@ -127,7 +130,7 @@ ENDC
 	lb bc, BANK(ProfElmPic), $00
 	call IntroDisplayPicCenteredOrUpperRight
 	call FadeInIntroPic
-	ld hl, OakSpeechText1
+	ld hl, ElmSpeechText1
 	call PrintText
 	call GBFadeOutToWhite
 	call ClearScreen
@@ -139,24 +142,20 @@ ENDC
 	hlcoord 6, 4
 	call LoadFlippedFrontSpriteByMonIndex
 	call MovePicLeft
-	ld hl, OakSpeechText2
+	ld hl, ElmSpeechText2
 	call PrintText
 	call GBFadeOutToWhite
-	call GetRedPalID
-	ld de, ChrisPicFront
-	lb bc, BANK(ChrisPicFront), $00
-	ld a, [wPlayerGender]
-	and a
-	jr z, .notKris1
-	ld de, KrisPicFront
-	lb bc, BANK(KrisPicFront), $00
-.notKris1
+	call ClearScreen
+	ld a, PAL_MEWMON
+	call GotPaletteID
+	ld de, ProfElmPic
+	lb bc, BANK(ProfElmPic), $00
 	call IntroDisplayPicCenteredOrUpperRight
-	call MovePicLeft
-	ld hl, IntroducePlayerText
+	call FadeInIntroPic
+	ld hl, ElmSpeechText3
 	call PrintText
-	call ChoosePlayerName
 	call GBFadeOutToWhite
+	call ClearScreen
 	call GetRivalPalID
 	ld de, Rival1Pic
 	lb bc, BANK(Rival1Pic), $00
@@ -181,7 +180,7 @@ ENDC
 	ld a, [wd72d]
 	and a
 	jr nz, .next
-	ld hl, OakSpeechText3
+	ld hl, ElmSpeechText4
 	call PrintText
 .next
 	ldh a, [hLoadedROMBank]
@@ -239,22 +238,31 @@ ENDC
 	call DelayFrames
 	call GBFadeOutToWhite
 	jp ClearScreen
-OakSpeechText1:
-	text_far _OakSpeechText1
-	text_end
-OakSpeechText2:
-	text_far _OakSpeechText2A
-	sound_cry_marill
-	text_far _OakSpeechText2B
-	text_end
+
 IntroducePlayerText:
 	text_far _IntroducePlayerText
 	text_end
+
+ElmSpeechText1:
+	text_far _ElmSpeechText1
+	text_end
+
+ElmSpeechText2:
+	text_far _ElmSpeechText2A
+	sound_cry_marill
+	text_far _ElmSpeechText2B
+	text_end
+
 IntroduceRivalText:
 	text_far _IntroduceRivalText
 	text_end
-OakSpeechText3:
-	text_far _OakSpeechText3
+
+ElmSpeechText3:
+	text_far _ElmSpeechText3
+	text_end
+
+ElmSpeechText4:
+	text_far _ElmSpeechText4
 	text_end
 
 FadeInIntroPic:
