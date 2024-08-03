@@ -10,7 +10,7 @@ DefaultNamesPlayer:
 DefaultNamesGirl:
 	db   "NEW NAME"
 	next "GOLD"
-	next "KRIS"
+	next "HARUKA"
 	next "AMANDA"
 	next "JODI"
 	db   "@"
@@ -36,7 +36,7 @@ DefaultNamesPlayer:
 DefaultNamesGirl:
 	db   "NEW NAME"
 	next "SILVER"
-	next "KRIS"
+	next "HARUKA"
 	next "AMANDA"
 	next "JODI"
 	db   "@"

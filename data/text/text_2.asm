@@ -1244,8 +1244,8 @@ _LinkCanceledText::
 	done
 
 _IntroducePlayerText::
-	text "Which name do you"
-	line "prefer to go by?"
+	text "What name do you"
+	line "want on the card?"
 	prompt
 
 _ElmSpeechText1::
@@ -1296,8 +1296,8 @@ _ElmSpeechText3::
 	prompt
 
 _IntroduceRivalText::
-	text "Also…"
-	line "One last thing…"
+	text "Also, one last"
+	line "thing…"
 
 	para "There's this shady"
 	line "guy I've seen in"

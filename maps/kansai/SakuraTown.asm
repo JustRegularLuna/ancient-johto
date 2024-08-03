@@ -301,7 +301,12 @@ SakuraTownRivalText:
 	jp TextScriptEnd
 
 .WimpLikeYouText
-	text "You got a #MON"
+	text "<RIVAL>: Well, if"
+	line "it isn't the wimp"
+	cont "from SILENT HILLS"
+	cont "again!"
+
+	para "You got a #MON"
 	line "at the LAB?"
 
 	para "What a waste… a"

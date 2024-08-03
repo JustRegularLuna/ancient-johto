@@ -31,7 +31,7 @@ SilentHills_Object:
 	def_object_events
 	object_event  6,  8, SPRITE_GIRL, STAY, NONE, SILENT_GIRL
 	object_event 14,  6, SPRITE_FISHER, STAY, RIGHT, SILENT_FISHER
-	object_event 11, 12, SPRITE_RIVAL, STAY, RIGHT, SILENT_RIVAL
+	object_event  0,  8, SPRITE_RIVAL, STAY, RIGHT, SILENT_RIVAL
 
 	def_warps_to SILENT_HILLS
 
@@ -44,12 +44,103 @@ SilentHills_Script:
 
 SilentHills_ScriptPointers:
 	const_def
-	dw_const SilentHillsBlockExitScript,    SCRIPT_SILENT_DEFAULT
+	dw_const SilentHillsLeaveHouseScript,   SCRIPT_SILENT_LEAVE_HOUSE
+	dw_const SilentHillsMeetRivalScript,    SCRIPT_SILENT_MEET_RIVAL
+	dw_const SilentHillsRivalLeavesScript,  SCRIPT_SILENT_RIVAL_LEAVES
+	dw_const SilentHillsBlockExitScript,    SCRIPT_SILENT_BLOCK_EXIT
 	dw_const SilentHillsHeyWaitScript,      SCRIPT_SILENT_HEY_WAIT
 	dw_const SilentHillsWalkToPlayerScript, SCRIPT_SILENT_WALK_TO_PLAYER
 	dw_const SilentHillsNotSafeScript,      SCRIPT_SILENT_NOT_SAFE
 	dw_const SilentHillsFollowLadyScript,   SCRIPT_SILENT_FOLLOW_LADY
 	dw_const SilentHillsNoopScript,         SCRIPT_SILENT_NOOP
+
+SilentHillsLeaveHouseScript:
+	; wait for you to finish walking out the door
+    call IsPlayerCharacterBeingControlledByGame
+    ret nz
+	; show "!" above player's head
+	xor a
+	ld [wEmotionBubbleSpriteIndex], a ; player's sprite
+	ld [wWhichEmotionBubble], a ; EXCLAMATION_BUBBLE
+	predef EmotionBubble
+	; have rival walk up
+	ld a, SFX_STOP_ALL_MUSIC
+	call PlaySound
+	ld a, MUSIC_RIVAL_ENCOUNTER
+	call PlayMusic
+	ld a, SELECT | START | D_RIGHT | D_LEFT | D_UP | D_DOWN
+	ld [wJoyIgnore], a
+	ld de, .walkToDoor
+	ld a, SILENT_RIVAL
+	ldh [hSpriteIndex], a
+	call MoveSprite
+	ld a, SCRIPT_SILENT_MEET_RIVAL
+	ld [wSilentHillsCurScript], a
+	ret
+
+.walkToDoor
+	db NPC_MOVEMENT_RIGHT
+	db NPC_MOVEMENT_RIGHT
+	db NPC_MOVEMENT_RIGHT
+	db NPC_MOVEMENT_RIGHT
+	db NPC_MOVEMENT_RIGHT
+	db NPC_MOVEMENT_UP
+	db -1
+
+SilentHillsMeetRivalScript:
+	; Is Kamon finished walking?
+	ld a, [wd730]
+	bit 0, a
+	ret nz
+	; Have him bother you
+	ld a, SELECT | START | D_RIGHT | D_LEFT | D_UP | D_DOWN
+	ld [wJoyIgnore], a
+	ld a, SILENT_RIVAL
+	ldh [hSpriteIndexOrTextID], a
+	call DisplayTextID
+	ld a, A_BUTTON | B_BUTTON | SELECT | START | D_RIGHT | D_LEFT | D_UP | D_DOWN
+	ld [wJoyIgnore], a
+	; Walk away after the bothers you
+	ld de, .walkAway
+	ld a, SILENT_RIVAL
+	ldh [hSpriteIndex], a
+	call MoveSprite
+	; trigger the next scene
+	ld a, SCRIPT_SILENT_RIVAL_LEAVES
+	ld [wSilentHillsCurScript], a
+	ret
+
+.walkAway
+	db NPC_MOVEMENT_DOWN
+	db NPC_MOVEMENT_DOWN
+	db NPC_MOVEMENT_RIGHT
+	db NPC_MOVEMENT_RIGHT
+	db NPC_MOVEMENT_RIGHT
+	db NPC_MOVEMENT_RIGHT
+	db NPC_MOVEMENT_RIGHT
+	db NPC_MOVEMENT_RIGHT
+	db -1
+
+SilentHillsRivalLeavesScript:
+	; Is Kamon finished walking?
+	ld a, [wd730]
+	bit 0, a
+	ret nz
+
+	; Hide his NPC
+	ld a, HS_SILENT_RIVAL
+	ld [wMissableObjectIndex], a
+	predef HideObject
+
+	; stop ignoring input once the scene is over
+	xor a
+	ld [wJoyIgnore], a
+	call PlayDefaultMusic
+
+	; trigger the next scene
+	ld a, SCRIPT_SILENT_BLOCK_EXIT
+	ld [wSilentHillsCurScript], a
+	ret
 
 SilentHillsBlockExitScript:
 	ld a, [wXCoord]
@@ -211,7 +302,7 @@ SilentHillsFollowLadyScript:
 	call SetSpritePosition1
 
 	; trigger the next scene
-	ld a, SCRIPT_SILENT_DEFAULT
+	ld a, SCRIPT_SILENT_BLOCK_EXIT
 	ld [wSilentHillsCurScript], a
 	; fallthrough
 
@@ -336,15 +427,18 @@ NewBarkFatManText:
 	done
 
 NewBarkRivalText:
-	text "…"
+	text "<RIVAL>: Well,"
+	line "look what we have"
+	cont "here…"
 
-	para "So, this is PROF."
-	line "ELM's lab…"
+	para "A wimp that still"
+	line "lives with their"
+	cont "MOM!"
 
-	para "…"
+	para "What a loser…"
 
-	para "What are you look-"
-	line "ing at, wimp?"
+	para "Stay out of my"
+	line "way!"
 	done
 
 SilentHillsSignText:

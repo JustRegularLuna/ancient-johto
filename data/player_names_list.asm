@@ -11,7 +11,7 @@ DefaultNamesGirlList:
 	db "NEW NAME@"
 GirlDefaultName:
 	db "GOLD@"
-	db "KRIS@"
+	db "HARUKA@"
 	db "AMANDA@"
 	db "JODI@"
 
@@ -37,7 +37,7 @@ DefaultNamesGirlList:
 	db "NEW NAME@"
 GirlDefaultName:
 	db "SILVER@"
-	db "KRIS@"
+	db "HARUKA@"
 	db "AMANDA@"
 	db "JODI@"
 
