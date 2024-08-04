@@ -32,6 +32,16 @@ ElmsHouse_TextPointers:
 	dw ElmsTVText
 
 ElmsWifeText:
+	text_asm
+	CheckEvent EVENT_GOT_STARTER
+	ld hl, .Text2
+	jr nz, .done
+	ld hl, .Text1
+.done
+	call PrintText
+	jp TextScriptEnd
+
+.Text1
 	text "Hi, <PLAYER>! Did"
 	line "you come here"
 
@@ -44,6 +54,17 @@ ElmsWifeText:
 	para "I wish he would"
 	line "spend more time"
 	cont "here at home…"
+	done
+
+.Text2
+	text "My husband gets so"
+	line "caught up in his"
+	cont "work sometimes."
+
+	para "I know he's only"
+	line "next door, but I"
+	cont "wish he was home"
+	cont "more often…"
 	done
 
 ElmsSonText:
