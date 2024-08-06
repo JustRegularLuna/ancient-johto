@@ -31,7 +31,7 @@ SilentHills_Object:
 	def_object_events
 	object_event  6,  8, SPRITE_GIRL, STAY, NONE, SILENT_GIRL
 	object_event 14,  6, SPRITE_FISHER, STAY, RIGHT, SILENT_FISHER
-	object_event  0,  8, SPRITE_RIVAL, STAY, RIGHT, SILENT_RIVAL
+	object_event  5,  8, SPRITE_RIVAL, STAY, RIGHT, SILENT_RIVAL
 
 	def_warps_to SILENT_HILLS
 
@@ -79,11 +79,6 @@ SilentHillsLeaveHouseScript:
 	ret
 
 .walkToDoor
-	db NPC_MOVEMENT_RIGHT
-	db NPC_MOVEMENT_RIGHT
-	db NPC_MOVEMENT_RIGHT
-	db NPC_MOVEMENT_RIGHT
-	db NPC_MOVEMENT_RIGHT
 	db NPC_MOVEMENT_UP
 	db -1
 
@@ -331,17 +326,17 @@ NewBarkGirlText:
 	ld hl, .NoLeavingEarlyText
 	jr nz, .done
 	; else
-	ld hl, .TodaysTheDayText
+	ld hl, .WhatAJerkText
 .done
 	call PrintText
 	jp TextScriptEnd
 
-.TodaysTheDayText
-	text "Hi, <PLAYER>!"
+.WhatAJerkText
+	text "That guy is such a"
+	line "jerk!"
 
-	para "Isn't today the"
-	line "day you get your"
-	cont "first #MON?"
+	para "I wonder what he's"
+	line "even doing here?"
 	done
 
 .NoLeavingEarlyText
@@ -436,6 +431,9 @@ NewBarkRivalText:
 	cont "MOM!"
 
 	para "What a loser…"
+
+	para "You should just"
+	line "stay home, kid."
 
 	para "Stay out of my"
 	line "way!"

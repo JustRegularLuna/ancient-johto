@@ -4,7 +4,8 @@
 	const_export SAKURA_RIVAL
 	const_export SAKURA_ISLAND_GUY
 	const_export SAKURA_LASS
-	const_export SAKURA_GUY
+	const_export SAKURA_YOUNGSTER
+	const_export SAKURA_GIRL
 	; Signs
 	const SAKURA_POKECENTER_SIGN
 	const SAKURA_MART_SIGN
@@ -36,8 +37,9 @@ SakuraTown_Object:
 	def_object_events
 	object_event 40, 24, SPRITE_RIVAL, STAY, LEFT, SAKURA_RIVAL
 	object_event  8, 26, SPRITE_FISHER, STAY, DOWN, SAKURA_ISLAND_GUY
-	object_event 22, 17, SPRITE_LASS, WALK, LEFT_RIGHT, SAKURA_LASS
-	object_event 28, 27, SPRITE_YOUNGSTER, STAY, DOWN, SAKURA_GUY
+	object_event 24, 12, SPRITE_LASS, WALK, UP_DOWN, SAKURA_LASS
+	object_event 27, 28, SPRITE_YOUNGSTER, STAY, DOWN, SAKURA_YOUNGSTER
+	object_event 27, 22, SPRITE_GIRL, WALK, LEFT_RIGHT, SAKURA_GIRL
 
 	def_warps_to SAKURA_TOWN
 
@@ -75,6 +77,9 @@ SakuraTownDefaultScript:
 	ret nz
 .ok
 	; If you are in the right place at the right time, do the Rival encounter
+	ld a, HS_SAKURA_RIVAL
+	ld [wMissableObjectIndex], a
+	predef ShowObject
 	ld a, SFX_STOP_ALL_MUSIC
 	call PlaySound
 	ld a, MUSIC_RIVAL_ENCOUNTER
@@ -227,6 +232,8 @@ SakuraTownRivalExitsScript:
 	predef HideObject
 	xor a
 	ld [wJoyIgnore], a
+	ld a, SFX_STOP_ALL_MUSIC
+	call PlaySound
 	call PlayDefaultMusic
 	ld a, SCRIPT_SAKURA_NOOP
 	ld [wSakuraTownCurScript], a
@@ -239,7 +246,8 @@ SakuraTown_TextPointers:
 	dw SakuraTownRivalText
 	dw SakuraIslandGuyText
 	dw SakuraLassText
-	dw SakuraGuyText
+	dw SakuraYoungsterText
+	dw SakuraGirlText
 	dw PokeCenterSignText
 	dw MartSignText
 	dw SakuraTownSignText
@@ -309,8 +317,7 @@ SakuraTownRivalText:
 	para "You got a #MON"
 	line "at the LAB?"
 
-	para "What a waste… a"
-	line "wimp like you."
+	para "What a waste…"
 
 	para "You probably don't"
 	line "know anything"
@@ -418,7 +425,7 @@ SakuraLassText:
 	cont "region for free!"
 	done
 
-SakuraGuyText:
+SakuraYoungsterText:
 	text "Sometimes I sit"
 	line "and watch the"
 	cont "ocean like this."
@@ -426,6 +433,19 @@ SakuraGuyText:
 	para "I wonder what all"
 	line "there is to dis-"
 	cont "cover out there?"
+	done
+
+SakuraGirlText:
+	text "I love the quiet"
+	line "atmosphere here."
+
+	para "In the big cities,"
+	line "everyone stays so"
+	cont "busy…"
+
+	para "They never stop to"
+	line "enjoy the little"
+	cont "things."
 	done
 
 SakuraTownSignText:

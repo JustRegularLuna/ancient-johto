@@ -423,10 +423,6 @@ MrPokemonsHouseHaveSomeRestText:
 .hideStarter
 	ld [wMissableObjectIndex], a
 	predef HideObject
-	; Show the rival in Sakura Town
-	ld a, HS_SAKURA_RIVAL
-	ld [wMissableObjectIndex], a
-	predef ShowObject
 	jp TextScriptEnd
 
 .healPokemonText
