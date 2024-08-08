@@ -371,54 +371,35 @@ NewBarkFatManText:
 	CheckEvent EVENT_GOT_POKEDEX
 	ld hl, .TalkAfterMrPokemonText
 	jr nz, .done
-	CheckEvent EVENT_GOT_STARTER
-	jr nz, .gotStarter
 	; else
-	ld hl, .YoPlayerText
-	jr .done
-
-.gotStarter
-	ld a, [wPlayerStarter]
-	ld [wd11e], a
-	call GetMonName
-	ld hl, .TalkAboutStarterText
+	ld hl, .TechnologyIsIncredible
 .done
 	call PrintText
 	jp TextScriptEnd
 
-.YoPlayerText
-	text "Yo, <PLAYER>!"
+.TechnologyIsIncredible
+	text "Technology is"
+	line "incredible!"
 
-	para "I hear PROF.ELM"
-	line "discovered some"
-	cont "new #MON."
-	done
+	para "You can instantly"
+	line "trade #MON all"
 
-.TalkAboutStarterText
-	text "So, which #MON"
-	line "did you pick,"
-	cont "<PLAYER>?"
-
-	para "Oh, yeah!"
-
-	para "That @"
-	text_ram wcd6d
-	text_start
-	line "aught to be a"
-	cont "good one!"
+	para "over the world,"
+	line "like e-mail!"
 	done
 
 .TalkAfterMrPokemonText
-	text "Whoa! Is that a"
-	line "#DEX?"
+	text "Technology is"
+	line "incredible!"
 
-	para "I wish I had one!"
+	para "Wow, is that the"
+	line "new #DEX?"
 
-	para "Then I could learn"
-	line "all about these"
+	para "I'll bet it has"
+	line "information about"
 
-	para "new #MON that"
-	line "they've found!"
+	para "all sorts of new"
+	line "#MON in it!"
 	done
 
 NewBarkRivalText:
