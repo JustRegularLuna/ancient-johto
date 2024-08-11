@@ -365,6 +365,7 @@ ElmsLabElmScript:
 	lb bc, POKE_BALL, 5
 	call GiveItem
 	SetEvent EVENT_DELIVERED_MYSTERY_EGG
+	SetEvent EVENT_WONDER_TRADE_ENABLED
 	ld hl, ElmTalksAboutResearchingEggText
 	call PrintText
 	; Hide the blockers in Route 30

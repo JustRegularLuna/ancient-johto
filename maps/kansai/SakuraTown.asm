@@ -35,7 +35,7 @@ SakuraTown_Object:
 	bg_event 35,  7, SAKURA_MR_POKEMON_SIGN
 
 	def_object_events
-	object_event 40, 24, SPRITE_RIVAL, STAY, LEFT, SAKURA_RIVAL
+	object_event 41, 24, SPRITE_RIVAL, STAY, LEFT, SAKURA_RIVAL
 	object_event  8, 26, SPRITE_FISHER, STAY, DOWN, SAKURA_ISLAND_GUY
 	object_event 24, 12, SPRITE_LASS, WALK, UP_DOWN, SAKURA_LASS
 	object_event 27, 28, SPRITE_YOUNGSTER, STAY, DOWN, SAKURA_YOUNGSTER
@@ -68,7 +68,7 @@ SakuraTownDefaultScript:
 	ret nz
 	; Is the player trying to leave, after getting the Mystery Egg?
 	ld a, [wXCoord]
-	cp 35
+	cp 36
 	ret nz
 	ld a, [wYCoord]
 	cp 24

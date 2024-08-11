@@ -5,6 +5,9 @@
 	const_export SAKURA_POKECENTER_LINK_RECEPTIONIST
 	const_export SAKURA_POKECENTER_WONDER_TRADE_RECEPTIONIST
 	const_export SAKURA_POKECENTER_BENCH_GUY
+	const_export SAKURA_POKECENTER_LASS
+	const_export SAKURA_POKECENTER_YOUNGSTER
+	const_export SAKURA_POKECENTER_POKEFAN
 	; signs
 
 SakuraPokecenter_Object:
@@ -23,6 +26,9 @@ SakuraPokecenter_Object:
 	object_event  5,  2, SPRITE_LINK_RECEPTIONIST, STAY, DOWN, SAKURA_POKECENTER_LINK_RECEPTIONIST
 	object_event  1,  1, SPRITE_LINK_RECEPTIONIST, STAY, DOWN, SAKURA_POKECENTER_WONDER_TRADE_RECEPTIONIST
 	object_event  0, 16, SPRITE_BENCH_GUY, STAY, NONE, SAKURA_POKECENTER_BENCH_GUY
+	object_event  8, 17, SPRITE_LASS, STAY, DOWN, SAKURA_POKECENTER_LASS
+	object_event  6, 13, SPRITE_YOUNGSTER, STAY, DOWN, SAKURA_POKECENTER_YOUNGSTER
+	object_event  4,  6, SPRITE_POKEFAN_M, STAY, UP, SAKURA_POKECENTER_POKEFAN
 
 	def_warps_to SAKURA_POKECENTER
 
@@ -35,6 +41,9 @@ SakuraPokecenter_TextPointers:
 	dw SakuraTradeNurseText
 	dw SakuraWonderTradeNurseText
 	dw SakuraBenchGuyText
+	dw SakuraPokecenterLassText
+	dw SakuraPokecenterYoungsterText
+	dw SakuraPokecenterPokefanText
 
 SakuraHealNurseText:
 	script_pokecenter_nurse
@@ -48,17 +57,60 @@ SakuraWonderTradeNurseText:
 	jp TextScriptEnd
 
 SakuraBenchGuyText:
-	text "Have you ever met"
-	line "BILL? He told me"
+	text_asm
+	CheckEvent EVENT_WONDER_TRADE_ENABLED
+	jr nz, .canWT
+	ld hl, .text1
+	jr .done
+.canWT
+	ld hl, .text2
+.done
+	call PrintText
+	jp TextScriptEnd
 
-	para "he built a TIME"
-	line "MACHINE, like the"
+.text1
+	text "I wonder when the"
+	line "WONDER TRADE"
+	cont "systems will be"
+	cont "back online?"
+	done
 
-	para "one in a film I've"
-	line "seen…"
+.text2
+	text "Have you heard?"
 
-	para "Yeah…"
+	para "The WONDER TRADE"
+	line "systems are back"
+	cont "online now!"
+	done
 
-	para "I don't buy that"
-	line "either…"
+SakuraPokecenterLassText:
+	text "I usually stop to"
+	line "rest inside of a"
+	cont "#MON CENTER"
+	cont "whenever I'm on a"
+	cont "trip."
+
+	para "It makes me feel"
+	line "safer than when I"
+	cont "camp out on a"
+	cont "ROUTE somewhere."
+	done
+
+SakuraPokecenterYoungsterText:
+	text "I like to collect"
+	line "BERRIES from the"
+	cont "little trees you"
+	cont "see all along."
+
+	para "They grow back on"
+	line "their own, so I"
+	cont "don't feel bad"
+	cont "about taking any."
+	done
+
+SakuraPokecenterPokefanText:
+	text "I'm waiting for my"
+	line "friend to call me"
+	cont "and say that he's"
+	cont "ready to trade."
 	done
