@@ -127,9 +127,9 @@ MACRO sound_dex_page_added
 	db TX_SOUND_DEX_PAGE_ADDED
 ENDM
 
-	const TX_SOUND_CRY_MARILL ; $14
-MACRO sound_cry_marill
-	db TX_SOUND_CRY_MARILL
+	const TX_SOUND_CRY_KOTORA ; $14
+MACRO sound_cry_kotora
+	db TX_SOUND_CRY_KOTORA
 ENDM
 
 	const TX_SOUND_CRY_PIDGEOT ; $15

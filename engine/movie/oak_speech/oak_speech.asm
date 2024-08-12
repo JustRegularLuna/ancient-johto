@@ -134,13 +134,13 @@ ENDC
 	call PrintText
 	call GBFadeOutToWhite
 	call ClearScreen
-	call GetMarillPalID
-	ld a, MARILL
+	call GetKotoraPalID
+	ld a, KOTORA
 	ld [wd0b5], a
 	ld [wcf91], a
 	call GetMonHeader
 	hlcoord 6, 4
-	call LoadFlippedFrontSpriteByMonIndex
+	call LoadFrontSpriteByMonIndex
 	call MovePicLeft
 	ld hl, ElmSpeechText2
 	call PrintText
@@ -249,7 +249,7 @@ ElmSpeechText1:
 
 ElmSpeechText2:
 	text_far _ElmSpeechText2A
-	sound_cry_marill
+	sound_cry_kotora
 	text_far _ElmSpeechText2B
 	text_end
 
@@ -345,8 +345,8 @@ DebugChooseRegionText:
 	done
 ENDC
 
-GetMarillPalID:
-	ld a, PAL_BLUEMON
+GetKotoraPalID:
+	ld a, PAL_YELLOWMON
 	jr GotPaletteID
 GetRedPalID:
 	call ClearScreen

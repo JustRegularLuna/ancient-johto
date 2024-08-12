@@ -516,7 +516,7 @@ TextCommand_SOUND::
 	jr .loop
 
 .play
-	cp TX_SOUND_CRY_MARILL
+	cp TX_SOUND_CRY_KOTORA
 	jr z, .pokemonCry
 	cp TX_SOUND_CRY_PIDGEOT
 	jr z, .pokemonCry
@@ -546,7 +546,7 @@ TextCommandSounds::
 	db TX_SOUND_GET_ITEM_2,           SFX_GET_ITEM_2
 	db TX_SOUND_GET_KEY_ITEM,         SFX_GET_KEY_ITEM
 	db TX_SOUND_DEX_PAGE_ADDED,       SFX_DEX_PAGE_ADDED
-	db TX_SOUND_CRY_MARILL,           MARILL   ; used in OakSpeech
+	db TX_SOUND_CRY_KOTORA,           KOTORA   ; used in OakSpeech
 	db TX_SOUND_CRY_PIDGEOT,          PIDGEOT  ; used in SaffronCityText12
 	db TX_SOUND_CRY_DEWGONG,          DEWGONG  ; unused
 
