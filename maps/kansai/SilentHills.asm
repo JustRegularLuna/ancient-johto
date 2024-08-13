@@ -307,17 +307,17 @@ SilentHillsNoopScript:
 	ret
 
 SilentHills_TextPointers:
-	dw NewBarkGirlText
-	dw NewBarkFatManText
-	dw NewBarkRivalText
+	dw SilentGirlText
+	dw SilentFatManText
+	dw SilentRivalText
 	dw SilentHillsSignText
-	dw NewBarkPlayerHouseSignText
-	dw NewBarkElmsHouseSignText
-	dw NewBarkElmsLabSignText
+	dw SilentPlayerHouseSignText
+	dw SilentElmsHouseSignText
+	dw SilentElmsLabSignText
 	dw PokeCenterSignText
-	dw NewBarkHeyWaitText
+	dw SilentHeyWaitText
 
-NewBarkGirlText:
+SilentGirlText:
 	text_asm
 	CheckEvent EVENT_GOT_POKEDEX
 	ld hl, .TalkAfterMrPokemonText
@@ -369,7 +369,7 @@ NewBarkGirlText:
 	line "by your side!"
 	done
 
-NewBarkFatManText:
+SilentFatManText:
 	text_asm
 	CheckEvent EVENT_GOT_POKEDEX
 	ld hl, .TalkAfterMrPokemonText
@@ -405,7 +405,7 @@ NewBarkFatManText:
 	line "#MON in it!"
 	done
 
-NewBarkRivalText:
+SilentRivalText:
 	text "<RIVAL>: Well,"
 	line "look what we have"
 	cont "here…"
@@ -430,19 +430,19 @@ SilentHillsSignText:
 	line "new beginnings."
 	done
 
-NewBarkPlayerHouseSignText:
+SilentPlayerHouseSignText:
 	text "<PLAYER>'s HOUSE"
 	done
 
-NewBarkElmsHouseSignText:
-	text "ELM'S HOUSE"
+SilentElmsHouseSignText:
+	text "ELM's HOUSE"
 	done
 
-NewBarkElmsLabSignText:
+SilentElmsLabSignText:
 	text "ELM #MON LAB"
 	done
 
-NewBarkHeyWaitText:
+SilentHeyWaitText:
 	text_asm
 	ld a, [wcf0d]
 	and a
