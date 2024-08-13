@@ -9,6 +9,7 @@
 	const SILENT_PLAYERS_HOUSE_SIGN
 	const SILENT_ELMS_HOUSE_SIGN
 	const SILENT_ELMS_LAB_SIGN
+	const SILENT_POKECENTER_SIGN
 	; Other
 	const SILENT_HEY_WAIT_TEXT
 
@@ -27,6 +28,7 @@ SilentHills_Object:
 	bg_event  3,  5, SILENT_PLAYERS_HOUSE_SIGN
 	bg_event  7, 13, SILENT_ELMS_HOUSE_SIGN
 	bg_event 11, 13, SILENT_ELMS_LAB_SIGN
+	bg_event 12,  5, SILENT_POKECENTER_SIGN
 
 	def_object_events
 	object_event  6,  8, SPRITE_GIRL, STAY, NONE, SILENT_GIRL
@@ -312,6 +314,7 @@ SilentHills_TextPointers:
 	dw NewBarkPlayerHouseSignText
 	dw NewBarkElmsHouseSignText
 	dw NewBarkElmsLabSignText
+	dw PokeCenterSignText
 	dw NewBarkHeyWaitText
 
 NewBarkGirlText:
