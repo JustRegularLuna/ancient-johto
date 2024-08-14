@@ -24,6 +24,8 @@ SpriteSheetPointerTable:
 	overworld_sprite SpritePryce, 12 ; SPRITE_PRYCE
 	overworld_sprite SpriteClair, 12 ; SPRITE_CLAIR
 	overworld_sprite SpriteWill, 12 ; SPRITE_WILL
+	overworld_sprite SpriteMikan, 12 ; SPRITE_MIKAN
+	overworld_sprite SpriteWalker, 12 ; SPRITE_WALKER
 	overworld_sprite SpriteKoga, 12 ; SPRITE_KOGA
 	overworld_sprite SpriteBruno, 12 ; SPRITE_BRUNO
 	overworld_sprite SpriteKaren, 12 ; SPRITE_KAREN

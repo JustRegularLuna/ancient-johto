@@ -26,6 +26,8 @@ SpriteJasmine::          INCBIN "gfx/sprites/jasmine.2bpp" ; SPRITE_JASMINE
 SpritePryce::            INCBIN "gfx/sprites/pryce.2bpp" ; SPRITE_PRYCE
 SpriteClair::            INCBIN "gfx/sprites/clair.2bpp" ; SPRITE_CLAIR
 SpriteWill::             INCBIN "gfx/sprites/will.2bpp" ; SPRITE_WILL
+SpriteMikan::            INCBIN "gfx/sprites/mikan.2bpp" ; SPRITE_MIKAN
+SpriteWalker::           INCBIN "gfx/sprites/walker.2bpp" ; SPRITE_WALKER
 SpriteKoga::             INCBIN "gfx/sprites/koga.2bpp" ; SPRITE_KOGA
 SpriteBruno::            INCBIN "gfx/sprites/bruno.2bpp" ; SPRITE_BRUNO
 SpriteKaren::            INCBIN "gfx/sprites/karen.2bpp" ; SPRITE_KAREN
@@ -52,12 +54,12 @@ SpriteJames::            INCBIN "gfx/sprites/james.2bpp" ; SPRITE_JAMES
 SpriteCooltrainerM::     INCBIN "gfx/sprites/cooltrainer_m.2bpp" ; SPRITE_COOLTRAINER_M
 SpriteCooltrainerF::     INCBIN "gfx/sprites/cooltrainer_f.2bpp" ; SPRITE_COOLTRAINER_F
 SpriteBugCatcher::       INCBIN "gfx/sprites/bug_catcher.2bpp" ; SPRITE_BUG_CATCHER
-SpriteTwin::             INCBIN "gfx/sprites/twin.2bpp" ; SPRITE_TWIN
-SpriteYoungster::        INCBIN "gfx/sprites/youngster.2bpp" ; SPRITE_YOUNGSTER
 
 
 SECTION "NPC Sprites 2", ROMX
 
+SpriteTwin::             INCBIN "gfx/sprites/twin.2bpp" ; SPRITE_TWIN
+SpriteYoungster::        INCBIN "gfx/sprites/youngster.2bpp" ; SPRITE_YOUNGSTER
 SpriteLass::             INCBIN "gfx/sprites/lass.2bpp" ; SPRITE_LASS
 SpriteTeacher::          INCBIN "gfx/sprites/teacher.2bpp" ; SPRITE_TEACHER
 SpriteBeauty::           INCBIN "gfx/sprites/beauty.2bpp" ; SPRITE_BEAUTY
@@ -102,12 +104,12 @@ SpriteBiker::            INCBIN "gfx/sprites/biker.2bpp" ; SPRITE_BIKER
 SpriteGambler::          INCBIN "gfx/sprites/gambler.2bpp" ; SPRITE_GAMBLER
 SpriteGameboyKid::       INCBIN "gfx/sprites/gameboy_kid.2bpp" ; SPRITE_GAMEBOY_KID
 SpriteMonster::          INCBIN "gfx/sprites/monster.2bpp" ; SPRITE_MONSTER
-SpriteFairy::            INCBIN "gfx/sprites/fairy.2bpp" ; SPRITE_FAIRY
-SpriteBird::             INCBIN "gfx/sprites/bird.2bpp" ; SPRITE_BIRD
 
 
 SECTION "NPC Sprites 3", ROMX
 
+SpriteFairy::            INCBIN "gfx/sprites/fairy.2bpp" ; SPRITE_FAIRY
+SpriteBird::             INCBIN "gfx/sprites/bird.2bpp" ; SPRITE_BIRD
 SpriteDragon::           INCBIN "gfx/sprites/dragon.2bpp" ; SPRITE_DRAGON
 SpriteChansey::          INCBIN "gfx/sprites/chansey.2bpp" ; SPRITE_CHANSEY
 SpritePokeBall::         INCBIN "gfx/sprites/poke_ball.2bpp" ; SPRITE_POKE_BALL
