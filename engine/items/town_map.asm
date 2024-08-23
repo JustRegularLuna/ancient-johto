@@ -1,6 +1,10 @@
 DEF NOT_VISITED EQU $fe
 
 DisplayTownMap:
+	ldh a, [hTileAnimations]
+	push af
+	xor a
+	ldh [hTileAnimations], a
 	call LoadTownMap
 	ld hl, wUpdateSpritesEnabled
 	ld a, [hl]
@@ -89,6 +93,8 @@ DisplayTownMap:
 	pop hl
 	pop af
 	ld [hl], a
+	pop af
+	ldh [hTileAnimations], a
 	ret
 .pressedUp
 	ld a, [wCurRegion]
@@ -155,6 +161,8 @@ LoadTownMap_Nest:
 	pop hl
 	pop af
 	ld [hl], a
+	pop af
+	ldh [hTileAnimations], a
 	ret
 
 MonsNestText:
