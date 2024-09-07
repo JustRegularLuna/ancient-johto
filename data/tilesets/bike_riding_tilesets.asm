@@ -7,6 +7,7 @@ BikeRidingTilesets::
 	db CAVERN
 	db GATE
 	db SILENT
+	db BELLFLOWER
 	db KANSAI_CAVE
 	db KANSAI_FOREST
 	db PARK

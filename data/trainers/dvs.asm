@@ -23,9 +23,9 @@ TrainerClassDVs:
 	dn  7, 15, 13, 15 ; LORELEI
 	dn 13, 12, 13, 13 ; BRUNO
 	dn 13, 12, 13, 13 ; LANCE
-	dn  7, 15, 13, 15 ; AGATHA
 	dn 15, 13, 13, 14 ; RED
 	dn  9, 13, 13, 13 ; BLUE
+	dn  7, 15, 13, 15 ; AGATHA
 	dn  9,  8,  8,  8 ; BROCK
 	dn  7,  8,  8,  8 ; MISTY
 	dn  9,  8,  8,  8 ; LT_SURGE
@@ -77,7 +77,7 @@ TrainerClassDVs:
 	dn  9,  8,  8,  8 ; JUGGLER
 	dn  9,  8,  8,  8 ; BLACKBELT
 	dn  9,  8,  8,  8 ; PSYCHIC_TR
-	dn  9,  8,  8,  8 ; ENGINEER
+	dn  9,  8,  8,  8 ; HANDYMAN
 	dn  9,  8,  8,  8 ; SOLDIER
 	dn  9,  8,  8,  8 ; SAGE
 	dn  7,  8,  8,  8 ; MEDIUM

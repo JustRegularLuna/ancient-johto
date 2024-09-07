@@ -275,6 +275,8 @@ KansaiMapHSPointers:
 	dw SilentHillsHS ; Silent Hills
 	dw SakuraHS   ; Sakura Town
 	dw KRoute1HS  ; Kansai Route 1
+	dw KRoute2HS  ; Kansai Route 2
+	dw KRoute3HS  ; Kansai Route 3
 	dw KansaiNoHS ; Players House 1F
 	dw KansaiNoHS ; Players House 2f
 	dw KansaiNoHS ; Silent Pokecenter
@@ -287,6 +289,10 @@ KansaiMapHSPointers:
 	dw KansaiNoHS ; Sakura House 3
 	dw KansaiNoHS ; Sakura Secret House
 	dw MrPokemonsHouseHS ; Mr. Pokemon's House
+	dw KansaiNoHS ; Evergreen Woods South Gate
+	dw KansaiNoHS ; Evergreen Woods South Gate 2F
+	dw KansaiNoHS ; Evergreen Woods Noth Gate
+	dw EvergreenWoodsHS ; Evergreen Woods
 	assert_table_length NUM_KANSAI_MAPS
 	dw -1 ; end
 
@@ -303,12 +309,20 @@ SakuraHS:
 	db SAKURA_TOWN, SAKURA_RIVAL, HIDE
 KRoute1HS:
 	db KANSAI_ROUTE_1, KANSAI_ROUTE_1_ITEMBALL, SHOW
+KRoute2HS:
+	db KANSAI_ROUTE_2, KANSAI_ROUTE_2_HANDYMAN, SHOW
+KRoute3HS:
+	db KANSAI_ROUTE_3, KANSAI_ROUTE_3_ESCAPE_ROPE, SHOW
 ElmsLabHS:
 	db ELMS_LAB, ELMSLAB_STARTER_BALL_1, SHOW
 	db ELMS_LAB, ELMSLAB_STARTER_BALL_2, SHOW
 	db ELMS_LAB, ELMSLAB_STARTER_BALL_3, SHOW
 MrPokemonsHouseHS:
 	db MR_POKEMONS_HOUSE, MR_POKEMONS_HOUSE_OAK, SHOW
+EvergreenWoodsHS:
+	db EVERGREEN_WOODS, EVERGREEN_WOODS_POTION, SHOW
+	db EVERGREEN_WOODS, EVERGREEN_WOODS_GREAT_BALL, SHOW
+	db EVERGREEN_WOODS, EVERGREEN_WOODS_LEAF_STONE, SHOW
 ;end of list
 	db $FF, $01, SHOW ; end
 	assert_table_length NUM_KANSAI_HS_OBJECTS + 1

@@ -631,7 +631,7 @@ FirebreatherPic::      INCBIN "gfx/trainers/firebreather.pic" ; FIREBREATHER
 JugglerPic::           INCBIN "gfx/trainers/juggler.pic" ; JUGGLER
 BlackbeltPic::         INCBIN "gfx/trainers/blackbelt.pic" ; BLACKBELT
 PsychicPic::           INCBIN "gfx/trainers/psychic.pic" ; PSYCHIC_TR
-EngineerPic::          INCBIN "gfx/trainers/engineer.pic" ; ENGINEER
+HandymanPic::          INCBIN "gfx/trainers/handyman.pic" ; HANDYMAN
 SoldierPic::           INCBIN "gfx/trainers/soldier.pic" ; SOLDIER
 SagePic::              INCBIN "gfx/trainers/sage.pic" ; SAGE
 MediumPic::            INCBIN "gfx/trainers/medium.pic" ; MEDIUM

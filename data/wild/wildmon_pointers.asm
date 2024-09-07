@@ -257,6 +257,8 @@ KansaiWildDataPointers:
 	dw NoMons      ; SILENT_HILLS
 	dw NoMons      ; SAKURA_TOWN
 	dw KansaiRoute1Mons ; KANSAI_ROUTE_1
+	dw KansaiRoute2Mons ; KANSAI_ROUTE_2
+	dw KansaiRoute3Mons ; KANSAI_ROUTE_3
 	dw NoMons      ; PLAYERS_HOUSE_1F
 	dw NoMons      ; PLAYERS_HOUSE_2F
 	dw NoMons      ; SILENT_POKECENTER
@@ -269,6 +271,10 @@ KansaiWildDataPointers:
 	dw NoMons      ; SAKURA_HOUSE_3
 	dw NoMons      ; SAKURA_SECRET_HOUSE
 	dw NoMons      ; MR_POKEMONS_HOUSE
+	dw NoMons      ; EVERGREEN_WOODS_SOUTH_GATE
+	dw NoMons      ; EVERGREEN_WOODS_SOUTH_GATE_2F
+	dw NoMons      ; EVERGREEN_WOODS_NORTH_GATE
+	dw EvergreenWoodsMons ; EVERGREEN_WOODS
 	assert_table_length NUM_KANSAI_MAPS
 	dw -1 ; end
 

@@ -36,6 +36,16 @@
 	const_skip
 	const_skip
 
+; Evergreen Woods events
+	const_skip
+	const EVENT_BEAT_EVERGREEN_WOODS_TRAINER_0
+	const EVENT_BEAT_EVERGREEN_WOODS_TRAINER_1
+	const EVENT_BEAT_EVERGREEN_WOODS_TRAINER_2
+	const EVENT_BEAT_EVERGREEN_WOODS_TRAINER_3
+	const EVENT_BEAT_EVERGREEN_WOODS_TRAINER_4
+	const_skip
+	const_skip
+
 ; Indigo Plateau events
 	const ELITE4_EVENTS_START
 	const EVENT_BEAT_LORELEIS_ROOM_TRAINER_0

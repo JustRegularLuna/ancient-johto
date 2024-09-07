@@ -24,6 +24,7 @@
 	const FACILITY
 	const PLATEAU
 	const SILENT
+	const BELLFLOWER
 	const KANSAI_CAVE
 	const TRADITIONAL_HOUSE
 	const ELITE_FOUR_ROOM

@@ -1,6 +1,7 @@
 LedgeTiles:
 	dbw KANTO, .kanto
 	dbw SILENT, .silent
+	dbw BELLFLOWER, .bellflower
 	dbw KANSAI_CAVE, .kansai_cave
 	dbw TRADITIONAL_HOUSE, .traditional_house
 	dbw TOWER, .tower
@@ -27,6 +28,15 @@ LedgeTiles:
 	db SPRITE_FACING_LEFT,  $02, $4B, D_LEFT
 	db SPRITE_FACING_RIGHT, $01, $38, D_RIGHT
 	db SPRITE_FACING_RIGHT, $02, $39, D_RIGHT
+	db -1 ; end
+
+.bellflower
+	db SPRITE_FACING_DOWN,  $01, $5C, D_DOWN
+	db SPRITE_FACING_DOWN,  $02, $5C, D_DOWN
+	db SPRITE_FACING_LEFT,  $01, $4B, D_LEFT
+	db SPRITE_FACING_LEFT,  $02, $4B, D_LEFT
+	db SPRITE_FACING_RIGHT, $01, $6E, D_RIGHT
+	db SPRITE_FACING_RIGHT, $02, $6F, D_RIGHT
 	db -1 ; end
 
 .kansai_cave

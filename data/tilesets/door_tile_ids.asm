@@ -12,6 +12,7 @@ DoorTileIDPointers:
 	dbw FACILITY,        .FacilityDoorTileIDs
 	dbw PLATEAU,         .PlateauDoorTileIDs
 	dbw SILENT,          .SilentDoorTileIDs
+	dbw BELLFLOWER,      .BellflowerDoorTileIDs
 	dbw PLAYERS_HOUSE,   .PlayersHouseDoorTileIDs
 	dbw PLAYERS_ROOM,    .PlayersRoomDoorTileIDs
 	dbw POKECENTER,      .PokecenterDoorTileIDs
@@ -72,6 +73,9 @@ ENDM
 	door_tiles $3b, $1b
 
 .SilentDoorTileIDs:
+	door_tiles $22, $5E
+
+.BellflowerDoorTileIDs
 	door_tiles $22, $5E
 
 .PlayersHouseDoorTileIDs:

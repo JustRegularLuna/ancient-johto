@@ -34,12 +34,13 @@ Tilesets:
 	tileset Facility_Block,         Facility_GFX,         Facility_Coll,         $12,$FF,$FF, $FF, TILEANIM_LIST
 	tileset Plateau_Block,          Plateau_GFX,          Plateau_Coll,          $FF,$FF,$FF, $45, TILEANIM_LIST
 	tileset Silent_Block,           Silent_GFX,           Silent_Coll,           $FF,$FF,$FF, $04, TILEANIM_LIST
+	tileset Bellflower_Block,       Bellflower_GFX,       Bellflower_Coll,       $FF,$FF,$FF, $04, TILEANIM_LIST
 	tileset KansaiCave_Block,       KansaiCave_GFX,       KansaiCave_Coll,       $FF,$FF,$FF, $FF, TILEANIM_LIST
 	tileset TraditionalHouse_Block, TraditionalHouse_GFX, TraditionalHouse_Coll, $42,$FF,$FF, $FF, TILEANIM_NONE
 	tileset EliteFourRoom_Block,    EliteFourRoom_GFX,    EliteFourRoom_Coll,    $FF,$FF,$FF, $FF, TILEANIM_LIST
 	tileset Tower_Block,            Tower_GFX,            Tower_Coll,            $FF,$FF,$FF, $FF, TILEANIM_LIST
 	tileset Ruins_Block,            Ruins_GFX,            Ruins_Coll,            $FF,$FF,$FF, $FF, TILEANIM_NONE
-	tileset KansaiForest_Block,     KansaiForest_GFX,     KansaiForest_Coll,     $FF,$FF,$FF, $FF, TILEANIM_LIST
+	tileset KansaiForest_Block,     KansaiForest_GFX,     KansaiForest_Coll,     $FF,$FF,$FF, $4F, TILEANIM_LIST
 	tileset Park_Block,             Park_GFX,             Park_Coll,             $FF,$FF,$FF, $04, TILEANIM_LIST
 	tileset BikeTileset_Block,      BikeTileset_GFX,      BikeTileset_Coll,      $35,$07,$18, $FF, TILEANIM_NONE
 	tileset IcePath_Block,          IcePath_GFX,          IcePath_Coll,          $FF,$FF,$FF, $FF, TILEANIM_NONE

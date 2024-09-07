@@ -36,6 +36,7 @@ SakuraTownName:      db "SAKURA TOWN@"
 VioletCityName:      db "VIOLET CITY@"
 
 ; Kansai Landmarks
+EvergreenWoodsName:  db "EVERGREEN WOODS@"
 
 ; Route Names (shared)
 Route1Name:          db "ROUTE 1@"

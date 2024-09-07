@@ -2620,6 +2620,9 @@ wSilentHillsCurScript::
 wSakuraTownCurScript::
 	ds 1
 
+wKansaiRoute2CurScript::
+	ds 1
+
 wElmsLabCurScript::
 	ds 1
 

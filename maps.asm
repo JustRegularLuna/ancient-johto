@@ -998,6 +998,14 @@ INCLUDE "data/maps/headers/KansaiRoute1.asm"
 INCLUDE "maps/kansai/KansaiRoute1.asm"
 KansaiRoute1_Blocks: INCBIN "maps/kansai/KansaiRoute1.blk"
 
+INCLUDE "data/maps/headers/KansaiRoute2.asm"
+INCLUDE "maps/kansai/KansaiRoute2.asm"
+KansaiRoute2_Blocks: INCBIN "maps/kansai/KansaiRoute2.blk"
+
+INCLUDE "data/maps/headers/KansaiRoute3.asm"
+INCLUDE "maps/kansai/KansaiRoute3.asm"
+KansaiRoute3_Blocks: INCBIN "maps/kansai/KansaiRoute3.blk"
+
 
 SECTION "Kansai Maps 1", ROMX
 
@@ -1017,6 +1025,29 @@ INCLUDE "data/maps/headers/MrPokemonsHouse.asm"
 INCLUDE "maps/kansai/MrPokemonsHouse.asm"
 MrPokemonsHouse_Blocks: INCBIN "maps/kansai/MrPokemonsHouse.blk"
 
+
+SECTION "Kansai Dungeons 1", ROMX
+
+INCLUDE "data/maps/headers/EvergreenWoods.asm"
+INCLUDE "maps/kansai/EvergreenWoods.asm"
+EvergreenWoods_Blocks: INCBIN "maps/kansai/EvergreenWoods.blk"
+
+
+SECTION "Kansai Gates 1", ROMX
+
+INCLUDE "data/maps/headers/EvergreenWoodsNorthGate.asm"
+INCLUDE "maps/kansai/EvergreenWoodsNorthGate.asm"
+EvergreenWoodsNorthGate_Blocks: INCBIN "maps/kansai/EvergreenWoodsNorthGate.blk"
+
+INCLUDE "data/maps/headers/EvergreenWoodsSouthGate.asm"
+INCLUDE "maps/kansai/EvergreenWoodsSouthGate.asm"
+; North/South Gate with Upstairs
+EvergreenWoodsSouthGate_Blocks: INCBIN "maps/kansai/EvergreenWoodsSouthGate.blk"
+
+INCLUDE "data/maps/headers/EvergreenWoodsSouthGate2F.asm"
+INCLUDE "maps/kansai/EvergreenWoodsSouthGate2F.asm"
+; Standard Upstairs Layout
+EvergreenWoodsSouthGate2F_Blocks: INCBIN "maps/kansai/EvergreenWoodsSouthGate2F.blk"
 
 
 SECTION "Kansai Generic Houses 1", ROMX

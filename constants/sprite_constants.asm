@@ -163,7 +163,7 @@ DEF NUM_SPRITES EQU const_value - 1
 ; wVarSprites indexes (see wram.asm)
 	const_next $f0
 DEF SPRITE_VARS EQU const_value
-	const SPRITE_WEIRD_TREE ; f0
+	const VAR_SPRITE_1 ; f0
 	const VAR_SPRITE_2 ; f1
 	const VAR_SPRITE_3 ; f2
 	const VAR_SPRITE_4 ; f3

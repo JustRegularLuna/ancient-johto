@@ -36,7 +36,7 @@ SakuraTown_Object:
 
 	def_object_events
 	object_event 41, 24, SPRITE_RIVAL, STAY, LEFT, SAKURA_RIVAL
-	object_event  8, 26, SPRITE_FISHER, STAY, DOWN, SAKURA_ISLAND_GUY
+	object_event  8, 26, SPRITE_FISHING_GURU, STAY, DOWN, SAKURA_ISLAND_GUY
 	object_event 24, 12, SPRITE_LASS, WALK, UP_DOWN, SAKURA_LASS
 	object_event 27, 28, SPRITE_YOUNGSTER, STAY, DOWN, SAKURA_YOUNGSTER
 	object_event 27, 22, SPRITE_GIRL, WALK, LEFT_RIGHT, SAKURA_GIRL
@@ -282,9 +282,9 @@ SakuraTownRivalText:
 
 	; Determind the team based on Rival Starter
 	ld a, [wRivalStarter]
-	cp STARTER2 ; Totodile
+	cp STARTER2 ; Cruz
 	jr nz, .notTotodile
-	ld a, RIVAL1_1_TOTODILE
+	ld a, RIVAL1_1_CRUZ
 	jr .done
 .notTotodile
 	cp STARTER3 ; Chikorita
@@ -292,8 +292,8 @@ SakuraTownRivalText:
 	ld a, RIVAL1_1_CHIKORITA
 	jr .done
 .notChikorita
-	; If it wasn't Totodile or Chikorita, it had to be Cyndaquil
-	ld a, RIVAL1_1_CYNDAQUIL
+	; If it wasn't Cruz or Chikorita, it had to be Cubburn
+	ld a, RIVAL1_1_CUBBURN
 .done
 	ld [wTrainerNo], a
 	ld a, TRUE

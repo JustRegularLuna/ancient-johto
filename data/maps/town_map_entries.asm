@@ -126,6 +126,8 @@ KansaiExternalMapEntries:
 	external_map 132, 100, SilentHillsName
 	external_map 100, 100, SakuraTownName
 	external_map 116, 100, Route1Name
+	external_map 100,  84, Route2Name
+	external_map  92,  60, Route3Name
 	assert_table_length FIRST_KANSAI_INDOOR_MAP
 
 ; the appearance of buildings and dungeons in the town map
@@ -133,4 +135,5 @@ KansaiInternalMapEntries:
 	; maximum map id subject to this rule, x, y, name
 	internal_map ELMS_LAB,                      132, 100, SilentHillsName
 	internal_map MR_POKEMONS_HOUSE,             100, 100, SakuraTownName
+	internal_map EVERGREEN_WOODS,               100,  68, EvergreenWoodsName
 	db -1 ; end

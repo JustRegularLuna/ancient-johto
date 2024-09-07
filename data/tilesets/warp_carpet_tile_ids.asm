@@ -14,6 +14,7 @@ WarpTileListPointers:
 	dbw SHIP_PORT, ShipPortWarpCarpetTiles
 	dbw GATE, GateWarpCarpetTiles
 	dbw SILENT, SilentWarpCarpetTiles
+	dbw BELLFLOWER, BellflowerWarpCarpetTiles
 	dbw KANSAI_CAVE, KansaiCaveWarpCarpetTiles
 	dbw KANSAI_FOREST, KansaiForestWarpCarpetTiles
 	dbw PARK, ParkWarpCarpetTiles
@@ -126,6 +127,8 @@ GateWarpCarpetTiles:
 
 ; SILENT
 SilentWarpCarpetTiles:
+; BELLFLOWER
+BellflowerWarpCarpetTiles:
 	dw .FacingDown
 	dw .FacingUp
 	dw .FacingLeft
@@ -166,11 +169,11 @@ KansaiForestWarpCarpetTiles:
 	dw .FacingRight
 
 .FacingDown
-	warp_carpet_tiles
+	warp_carpet_tiles $21
 .FacingUp
 	warp_carpet_tiles
 .FacingLeft
-	warp_carpet_tiles
+	warp_carpet_tiles $24, $34
 .FacingRight
 	warp_carpet_tiles $23, $33
 

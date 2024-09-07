@@ -23,6 +23,7 @@ TilesetAnimPointers::
 	dw TilesetAnimWater         ; FACILITY
 	dw TilesetAnimWater         ; PLATEAU
 	dw TilesetAnimFlowerWater   ; SILENT
+	dw TilesetAnimFlowerWater   ; BELLFLOWER
 	dw TilesetAnimKansaiCave    ; KANSAI_CAVE
 	dw TilesetAnimNone          ; TRADITIONAL_HOUSE
 	dw TilesetEliteFourRoomAnim ; ELITE_FOUR_ROOM

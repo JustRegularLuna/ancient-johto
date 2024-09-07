@@ -9,6 +9,7 @@ WaterTilesets:
 	db FACILITY
 	db PLATEAU
 	db SILENT
+	db BELLFLOWER
 	db KANSAI_CAVE
 	db KANSAI_FOREST
 	db -1 ; end

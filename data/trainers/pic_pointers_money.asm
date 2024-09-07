@@ -28,9 +28,9 @@ TrainerPicAndMoneyPointers::
 	pic_money LoreleiPic,      1500 ; LORELEI
 	pic_money BrunoPic,        1500 ; BRUNO
 	pic_money LancePic,        1500 ; LANCE
-	pic_money AgathaPic,       1500 ; AGATHA
 	pic_money RedPic,          1500 ; RED
 	pic_money BluePic,         1500 ; BLUE
+	pic_money AgathaPic,       1500 ; AGATHA
 	pic_money BrockPic,        1500 ; BROCK
 	pic_money MistyPic,        1500 ; MISTY
 	pic_money LtSurgePic,      1500 ; LT_SURGE
@@ -82,7 +82,7 @@ TrainerPicAndMoneyPointers::
 	pic_money JugglerPic,      1500 ; JUGGLER
 	pic_money BlackbeltPic,    1500 ; BLACKBELT
 	pic_money PsychicPic,      1500 ; PSYCHIC_TR
-	pic_money EngineerPic,     1500 ; ENGINEER
+	pic_money HandymanPic,     1500 ; HANDYMAN
 	pic_money SoldierPic,      1500 ; SOLDIER
 	pic_money SagePic,         1500 ; SAGE
 	pic_money MediumPic,       1500 ; MEDIUM

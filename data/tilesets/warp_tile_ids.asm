@@ -23,6 +23,7 @@ WarpTileIDPointers:
 	dw .FacilityWarpTileIDs
 	dw .PlateauWarpTileIDs
 	dw .SilentWarpTileIDs
+	dw .BellflowerWarpTileIDs
 	dw .KansaiCaveWarpTileIDs
 	dw .TraditionalHouseWarpTileIDs
 	dw .EliteFourRoomWarpTileIDs
@@ -113,6 +114,9 @@ ENDM
 	warp_tiles
 
 .SilentWarpTileIDs:
+	warp_tiles $22, $5E
+
+.BellflowerWarpTileIDs:
 	warp_tiles $22, $5E
 
 .KansaiCaveWarpTileIDs:

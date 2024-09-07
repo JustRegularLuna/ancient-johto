@@ -25,9 +25,9 @@ TrainerAIPointers:
 	dbw 3, LoreleiAI      ;  LORELEI
 	dbw 3, BrunoAI        ;  BRUNO
 	dbw 3, LanceAI        ;  LANCE
-	dbw 3, AgathaAI       ;  AGATHA
 	dbw 3, GenericAI      ;  RED
 	dbw 3, GenericAI      ;  BLUE
+	dbw 3, AgathaAI       ;  AGATHA
 	dbw 3, BrockAI        ;  BROCK
 	dbw 3, MistyAI        ;  MISTY
 	dbw 3, LtSurgeAI      ;  LT_SURGE
@@ -79,7 +79,7 @@ TrainerAIPointers:
 	dbw 3, JugglerAI      ;  JUGGLER
 	dbw 3, BlackbeltAI    ;  BLACKBELT
 	dbw 3, GenericAI      ;  PSYCHIC_TR
-	dbw 3, GenericAI      ;  ENGINEER
+	dbw 3, GenericAI      ;  HANDYMAN
 	dbw 3, GenericAI      ;  SOLDIER
 	dbw 3, GenericAI      ;  SAGE
 	dbw 3, GenericAI      ;  MEDIUM

@@ -27,7 +27,7 @@ DungeonMaps2:
 	db -1 ; end
 
 KansaiDungeonMaps1:
-	;db ILEX_FOREST
+	db EVERGREEN_WOODS
 	db -1 ; end
 
 KansaiDungeonMaps2:

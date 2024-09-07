@@ -31,9 +31,9 @@ TrainerClassMoveChoiceModifications:
 	move_choices 1, 2, 3 ; LORELEI
 	move_choices 1, 2, 3 ; BRUNO
 	move_choices 1, 2, 3 ; LANCE
-	move_choices 1, 2, 3 ; AGATHA
 	move_choices 1, 2, 3 ; RED
 	move_choices 1, 2, 3 ; BLUE
+	move_choices 1, 2, 3 ; AGATHA
 	move_choices 1, 2, 3 ; BROCK
 	move_choices 1, 2, 3 ; MISTY
 	move_choices 1, 2, 3 ; LT_SURGE
@@ -85,7 +85,7 @@ TrainerClassMoveChoiceModifications:
 	move_choices 1, 2, 3 ; JUGGLER
 	move_choices 1, 2, 3 ; BLACKBELT
 	move_choices 1, 2, 3 ; PSYCHIC_TR
-	move_choices 1, 2, 3 ; ENGINEER
+	move_choices 1, 2, 3 ; HANDYMAN
 	move_choices 1, 2, 3 ; SOLDIER
 	move_choices 1, 2, 3 ; SAGE
 	move_choices 1, 2, 3 ; MEDIUM

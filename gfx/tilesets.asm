@@ -124,6 +124,12 @@ Silent_GFX::        INCBIN "gfx/tilesets/silent.2bpp"
 Silent_Block::      INCBIN "gfx/blocksets/silent.bst"
 
 
+SECTION "Bellflower Tileset", ROMX
+
+Bellflower_GFX::    INCBIN "gfx/tilesets/bellflower.2bpp"
+Bellflower_Block::  INCBIN "gfx/blocksets/bellflower.bst"
+
+
 SECTION "Players House Tileset", ROMX
 
 PlayersHouse_GFX::   INCBIN "gfx/tilesets/players_house.2bpp"

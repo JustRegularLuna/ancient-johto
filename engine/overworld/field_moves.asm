@@ -209,6 +209,7 @@ WaterTilesets2: ; Renamed from what Yenatch called it, since that had overlap er
 	db FACILITY
 	db PLATEAU
 	db SILENT
+	db BELLFLOWER
 	db KANSAI_CAVE
 	db KANSAI_FOREST
 	db -1 ; end

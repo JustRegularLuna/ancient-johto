@@ -25,9 +25,9 @@ ENDM
 	const OAK1
 
 	trainerclass RIVAL1
-	const RIVAL1_1_TOTODILE
+	const RIVAL1_1_CRUZ
 	const RIVAL1_1_CHIKORITA
-	const RIVAL1_1_CYNDAQUIL
+	const RIVAL1_1_CUBBURN
 
 	trainerclass RIVAL2
 
@@ -65,11 +65,11 @@ ENDM
 
 	trainerclass LANCE
 
-	trainerclass AGATHA
-
 	trainerclass RED
 
 	trainerclass BLUE
+
+	trainerclass AGATHA
 
 	trainerclass BROCK
 
@@ -106,8 +106,12 @@ ENDM
 	trainerclass BURGLAR
 
 	trainerclass YOUNGSTER
+	const ALAN
 
 	trainerclass BUG_CATCHER
+	const PETER
+	const WADE
+	const KEN
 
 	trainerclass SCHOOLBOY
 
@@ -116,6 +120,7 @@ ENDM
 	trainerclass TWINS
 
 	trainerclass LASS
+	const CHEYENNE
 
 	trainerclass BEAUTY
 
@@ -173,7 +178,7 @@ ENDM
 
 	trainerclass PSYCHIC_TR
 
-	trainerclass ENGINEER
+	trainerclass HANDYMAN
 
 	trainerclass SOLDIER
 

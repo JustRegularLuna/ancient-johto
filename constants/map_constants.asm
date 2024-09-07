@@ -286,6 +286,8 @@ DEF KANSAI_REGION EQU 1
 	map_const SAKURA_TOWN,                   20, 18
 DEF NUM_KANSAI_CITY_MAPS EQU const_value
 	map_const KANSAI_ROUTE_1,                30,  9
+	map_const KANSAI_ROUTE_2,                10, 18
+	map_const KANSAI_ROUTE_3,                20,  9
 DEF FIRST_KANSAI_INDOOR_MAP EQU const_value
 	map_const PLAYERS_HOUSE_1F,               5,  4
 	map_const PLAYERS_HOUSE_2F,               4,  3
@@ -299,4 +301,8 @@ DEF FIRST_KANSAI_INDOOR_MAP EQU const_value
 	map_const SAKURA_HOUSE_3,                 4,  4
 	map_const SAKURA_SECRET_HOUSE,            4,  4
 	map_const MR_POKEMONS_HOUSE,              4,  4
+	map_const EVERGREEN_WOODS_SOUTH_GATE,     5,  4
+	map_const EVERGREEN_WOODS_SOUTH_GATE_2F,  4,  4
+	map_const EVERGREEN_WOODS_NORTH_GATE,     5,  4
+	map_const EVERGREEN_WOODS,               15, 27
 DEF NUM_KANSAI_MAPS EQU const_value

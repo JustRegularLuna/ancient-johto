@@ -75,6 +75,9 @@ Plateau_Coll::
 Silent_Coll::
 	coll_tiles $00, $01, $02, $04, $22, $27, $46, $53, $56, $5E
 
+Bellflower_Coll::
+	coll_tiles $00, $01, $02, $04, $22, $27, $5E, $60, $6B
+
 KansaiCave_Coll::
 	coll_tiles $01, $04, $16, $18, $1E, $30, $32, $34, $36, $37, $38, $3A, 
 
@@ -91,7 +94,7 @@ Ruins_Coll::
 	coll_tiles $01, $03, $11, $18, $28, $3A, $3B
 
 KansaiForest_Coll::
-	coll_tiles $02, $05, $13, $17, $42
+	coll_tiles $02, $05, $13, $17, $42, $4F, $52
 
 Park_Coll::
 	coll_tiles $01, $02, $04, $06, $1B, $4A, $4F

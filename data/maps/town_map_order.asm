@@ -52,4 +52,7 @@ KansaiTownMapOrder:
 	db SILENT_HILLS
 	db KANSAI_ROUTE_1
 	db SAKURA_TOWN
+	db KANSAI_ROUTE_2
+	db EVERGREEN_WOODS
+	db KANSAI_ROUTE_3
 KansaiTownMapOrderEnd:

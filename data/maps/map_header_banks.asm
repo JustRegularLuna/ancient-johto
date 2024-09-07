@@ -259,6 +259,8 @@ KansaiMapHeaderBanks::
 	db BANK(SilentHills_h)
 	db BANK(SakuraTown_h)
 	db BANK(KansaiRoute1_h)
+	db BANK(KansaiRoute2_h)
+	db BANK(KansaiRoute3_h)
 	db BANK(PlayersHouse1F_h)
 	db BANK(PlayersHouse2F_h)
 	db BANK(SilentPokecenter_h)
@@ -271,4 +273,8 @@ KansaiMapHeaderBanks::
 	db BANK(SakuraHouse3_h)
 	db BANK(SakuraSecretHouse_h)
 	db BANK(MrPokemonsHouse_h)
+	db BANK(EvergreenWoodsSouthGate_h)
+	db BANK(EvergreenWoodsSouthGate2F_h)
+	db BANK(EvergreenWoodsNorthGate_h)
+	db BANK(EvergreenWoods_h)
 	assert_table_length NUM_KANSAI_MAPS

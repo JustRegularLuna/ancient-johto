@@ -133,12 +133,14 @@ TripstarEvosAttacks:
 SpidetteEvosAttacks:
 	db EVOLVE_LEVEL, 18, DUARACH
 	db 0 ; no more evolutions
-	db 1, TACKLE
+	db 1, POISON_STING
+	db 1, STRING_SHOT
 	db 0 ; no more level-up moves
 
 DuarachEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, TACKLE
+	db 1, POISON_STING
+	db 1, STRING_SHOT
 	db 0 ; no more level-up moves
 
 CaterpieEvosAttacks:

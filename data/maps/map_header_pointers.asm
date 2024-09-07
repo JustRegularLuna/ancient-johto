@@ -259,6 +259,8 @@ KansaiMapHeaderPointers::
 	dw SilentHills_h
 	dw SakuraTown_h
 	dw KansaiRoute1_h
+	dw KansaiRoute2_h
+	dw KansaiRoute3_h
 	dw PlayersHouse1F_h
 	dw PlayersHouse2F_h
 	dw SilentPokecenter_h
@@ -271,4 +273,8 @@ KansaiMapHeaderPointers::
 	dw SakuraHouse3_h
 	dw SakuraSecretHouse_h
 	dw MrPokemonsHouse_h
+	dw EvergreenWoodsSouthGate_h
+	dw EvergreenWoodsSouthGate2F_h
+	dw EvergreenWoodsNorthGate_h
+	dw EvergreenWoods_h
 	assert_table_length NUM_KANSAI_MAPS

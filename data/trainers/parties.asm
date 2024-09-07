@@ -21,9 +21,9 @@ TrainerDataPointers:
 	dw LoreleiData      ; LORELEI
 	dw BrunoData        ; BRUNO
 	dw LanceData        ; LANCE
-	dw AgathaData       ; AGATHA
 	dw RedData          ; RED
 	dw BlueData         ; BLUE
+	dw AgathaData       ; AGATHA
 	dw BrockData        ; BROCK
 	dw MistyData        ; MISTY
 	dw LtSurgeData      ; LT_SURGE
@@ -75,7 +75,7 @@ TrainerDataPointers:
 	dw JugglerData      ; JUGGLER
 	dw BlackbeltData    ; BLACKBELT
 	dw PsychicData      ; PSYCHIC_TR
-	dw EngineerData     ; ENGINEER
+	dw HandymanData     ; HANDYMAN
 	dw SoldierData      ; SOLDIER
 	dw SageData         ; SAGE
 	dw MediumData       ; MEDIUM
@@ -112,7 +112,7 @@ ProfOakData:      ; PROF_OAK
 	db -1 ; end
 
 Rival1Data:       ; RIVAL1
-; First Battle Parties (Cherrygrove)
+; First Battle Parties (Sakura Town)
 	db "<RIVAL>@", TRAINERTYPE_NORMAL
 	db 5, STARTER2 ; Cruz (Player chose Cubburn)
 	db -1 ; end
@@ -233,12 +233,6 @@ LanceData:        ; LANCE
 	db 5, RATTATA
 	db -1 ; end
 
-AgathaData:       ; AGATHA
-; 01 - placeholder party
-	db "AGATHA@", TRAINERTYPE_NORMAL
-	db 5, RATTATA
-	db -1 ; end
-
 RedData:          ; RED
 ; 01 - placeholder party
 	db "RED@", TRAINERTYPE_NORMAL
@@ -248,6 +242,12 @@ RedData:          ; RED
 BlueData:         ; BLUE
 ; 01 - placeholder party
 	db "BLUE@", TRAINERTYPE_NORMAL
+	db 5, RATTATA
+	db -1 ; end
+
+AgathaData:       ; AGATHA
+; 01 - placeholder party
+	db "AGATHA@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
 	db -1 ; end
 
@@ -354,15 +354,31 @@ BurglarData:      ; BURGLAR
 	db -1 ; end
 
 YoungsterData:    ; YOUNGSTER
-; 01 - placeholder party
-	db "JOEY@", TRAINERTYPE_NORMAL
-	db 5, RATTATA
+; 01 - Evergreen Woods
+	db "ALAN@", TRAINERTYPE_NORMAL
+	db 9, NIDORAN_M
 	db -1 ; end
 
 BugCatcherData:   ; BUG_CATCHER
-; 01 - Route 31
+; 01 - Evergreen Woods
+	db "PETER@", TRAINERTYPE_NORMAL
+	db 6, SPIDETTE
+	db 7, SPIDETTE
+	db -1 ; end
+
+; 02 - Evergreen Woods
+	db "WADE@", TRAINERTYPE_NORMAL
+	db 6, CATERPIE
+	db 7, METAPOD
+	db 7, KAKUNA
+	db 8, LEDYBA
+	db -1 ; end
+
+; 03 - Evergreen Woods
 	db "KEN@", TRAINERTYPE_NORMAL
-	db 5, RATTATA
+	db 6, WEEDLE
+	db 7, KAKUNA
+	db 7, KAKUNA
 	db -1 ; end
 
 SchoolboyData:    ; SCHOOLBOY
@@ -384,9 +400,10 @@ TwinsData:        ; TWINS
 	db -1 ; end
 
 LassData:         ; LASS
-; 01 - Route 30
-	db "NICOLE@", TRAINERTYPE_NORMAL
-	db 5, MEOWTH
+; 01 - Evergreen Woods
+	db "CHEYENNE@", TRAINERTYPE_NORMAL
+	db 7, RINRING
+	db 7, MEOWTH
 	db -1 ; end
 
 BeautyData:       ; BEAUTY
@@ -557,7 +574,7 @@ PsychicData:      ; PSYCHIC_TR
 	db 5, RATTATA
 	db -1 ; end
 
-EngineerData:     ; ENGINEER
+HandymanData:     ; HANDYMAN
 ; 01 - placeholder party
 	db "???@", TRAINERTYPE_NORMAL
 	db 5, RATTATA
