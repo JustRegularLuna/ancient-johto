@@ -143,9 +143,13 @@ SetPal_Overworld:
 	cp CEMETERY
 	jr z, .PokemonTowerOrAgatha
 	cp CAVERN
-	jr z, .caveOrBruno
+	jr z, .cave
 	cp KANSAI_CAVE
-	jr z, .kansaiCave
+	jr z, .cave
+	cp FOREST
+	jr z, .cave
+	cp KANSAI_FOREST
+	jr z, .cave
 	cp GATE
 	jr z, .gate
 	ld a, [wCurRegion]
@@ -158,11 +162,11 @@ SetPal_Overworld:
 	cp CERULEAN_CAVE_2F
 	jr c, .normalDungeonOrBuilding
 	cp CERULEAN_CAVE_1F + 1
-	jr c, .caveOrBruno
+	jr c, .cave
 	cp LORELEIS_ROOM
 	jr z, .Lorelei
 	cp BRUNOS_ROOM
-	jr z, .caveOrBruno
+	jr z, .bruno
 .normalDungeonOrBuilding
 	ld a, [wLastMap] ; town or route that current dungeon or building is located
 .townOrRoute
@@ -196,14 +200,14 @@ SetPal_Overworld:
 .PokemonTowerOrAgatha
 	ld a, PAL_GREYMON - 1
 	jr .town
-.caveOrBruno
+.cave
 	ld a, PAL_CAVE - 1
+	jr .town
+.bruno
+	ld a, PAL_PEWTER - 1
 	jr .town
 .Lorelei
 	xor a
-	jr .town
-.kansaiCave
-	ld a, PAL_PEWTER - 1
 	jr .town
 .gate
 	ld a, PAL_ROUTE - 1
