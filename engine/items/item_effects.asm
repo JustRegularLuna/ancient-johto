@@ -1264,6 +1264,8 @@ ItemUseMedicine:
 	pop hl
 .skipRemovingItem
 	ld a, [wcf91]
+	cp PSNCUREBERRY
+	jr nc, .playStatusAilmentCuringSound
 	cp FULL_RESTORE
 	jr c, .playStatusAilmentCuringSound
 	cp FULL_HEAL
