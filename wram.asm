@@ -2965,7 +2965,7 @@ wNumSafariBalls::
 
 ; a flag array for the amount of berry trees you have
 wBerryTreeFlags::
-	ds 2
+	ds 4
 
 ; used so we can reset berry trees based on steps, since there is no RTC
 wBerryStepCounter::

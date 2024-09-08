@@ -73,18 +73,20 @@ PackFullText:
 
 BerryReset::
 ; Called to reset berry trees
-; Happens when the berry step counter hits 1024
+; Happens when the berry step counter hits 512
 	ld a, [wBerryStepCounter + 1]
-	cp a, $4
+	cp a, $2
 	ret nz
 	xor a
 	ld hl, wBerryTreeFlags
-	; assumption: only 2 bytes used for flags
-	ld [hli],a
-	ld [hli],a
+	; assumption: only 4 bytes used for flags
+	ld [hli], a
+	ld [hli], a
+	ld [hli], a
+	ld [hli], a
 	; assumption: Step Counter immediately follows Berry Tree Flags
-	ld [hli],a
-	ld [hl],a
+	ld [hli], a
+	ld [hl], a
 	ret
 
 INCLUDE "data/items/fruit_trees.asm"
