@@ -99,8 +99,8 @@ VersionScreenText3:
 
 VersionScreenText4:
 	db   "I hope you enjoy"
-	next "this nostalgic"
-	next "adventure in the"
-	next "Kansai region"
-	next "and beyond."
+	next "my beta-inspired"
+	next "reimagining of"
+	next "what Gen 2 might"
+	next "have been."
 	next "  - Luna@"
