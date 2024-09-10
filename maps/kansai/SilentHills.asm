@@ -58,8 +58,8 @@ SilentHills_ScriptPointers:
 
 SilentHillsLeaveHouseScript:
 	; wait for you to finish walking out the door
-    call IsPlayerCharacterBeingControlledByGame
-    ret nz
+	call IsPlayerCharacterBeingControlledByGame
+	ret nz
 	; show "!" above player's head
 	xor a
 	ld [wEmotionBubbleSpriteIndex], a ; player's sprite
