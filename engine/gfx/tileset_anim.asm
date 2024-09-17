@@ -1,6 +1,9 @@
 TilesetAnimPointers::
 	table_width 2, TilesetAnimPointers
 	dw TilesetAnimFlowerWater   ; KANTO
+	dw TilesetAnimWater         ; PLATEAU
+	dw TilesetAnimFlowerWater   ; SILENT
+	dw TilesetAnimFlowerWater   ; BELLFLOWER
 	dw TilesetAnimNone          ; PLAYERS_HOUSE
 	dw TilesetAnimNone          ; MART
 	dw TilesetAnimWater         ; FOREST
@@ -21,9 +24,6 @@ TilesetAnimPointers::
 	dw TilesetAnimNone          ; LAB
 	dw TilesetAnimNone          ; CLUB
 	dw TilesetAnimWater         ; FACILITY
-	dw TilesetAnimWater         ; PLATEAU
-	dw TilesetAnimFlowerWater   ; SILENT
-	dw TilesetAnimFlowerWater   ; BELLFLOWER
 	dw TilesetAnimKansaiCave    ; KANSAI_CAVE
 	dw TilesetAnimNone          ; TRADITIONAL_HOUSE
 	dw TilesetEliteFourRoomAnim ; ELITE_FOUR_ROOM

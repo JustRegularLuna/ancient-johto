@@ -134,7 +134,7 @@ StartMenu_Pokemon::
 	bit BIT_STORMBADGE, a
 	jp z, .newBadgeRequired
 	call CheckIfInOutsideMap
-	jr z, .canFly
+	jr c, .canFly
 	ld a, [wWhichPokemon]
 	ld hl, wPartyMonNicks
 	call GetPartyMonName
@@ -205,7 +205,7 @@ StartMenu_Pokemon::
 	jp .goBackToMap
 .teleport
 	call CheckIfInOutsideMap
-	jr z, .canTeleport
+	jr c, .canTeleport
 	ld a, [wWhichPokemon]
 	ld hl, wPartyMonNicks
 	call GetPartyMonName

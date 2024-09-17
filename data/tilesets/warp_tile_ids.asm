@@ -1,6 +1,9 @@
 WarpTileIDPointers:
 	table_width 2, WarpTileIDPointers
 	dw .KantoWarpTileIDs
+	dw .PlateauWarpTileIDs
+	dw .SilentWarpTileIDs
+	dw .BellflowerWarpTileIDs
 	dw .PlayersHouseWarpTileIDs
 	dw .MartWarpTileIDs
 	dw .ForestWarpTileIDs
@@ -21,9 +24,6 @@ WarpTileIDPointers:
 	dw .LabWarpTileIDs
 	dw .ClubWarpTileIDs
 	dw .FacilityWarpTileIDs
-	dw .PlateauWarpTileIDs
-	dw .SilentWarpTileIDs
-	dw .BellflowerWarpTileIDs
 	dw .KansaiCaveWarpTileIDs
 	dw .TraditionalHouseWarpTileIDs
 	dw .EliteFourRoomWarpTileIDs

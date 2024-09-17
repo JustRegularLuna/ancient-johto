@@ -1,5 +1,8 @@
 DoorTileIDPointers:
 	dbw KANTO,           .KantoDoorTileIDs
+	dbw PLATEAU,         .PlateauDoorTileIDs
+	dbw SILENT,          .SilentDoorTileIDs
+	dbw BELLFLOWER,      .BellflowerDoorTileIDs
 	dbw FOREST,          .ForestDoorTileIDs
 	dbw MART,            .MartDoorTileIDs
 	dbw HOUSE,           .HouseDoorTileIDs
@@ -10,9 +13,6 @@ DoorTileIDPointers:
 	dbw MANSION,         .MansionDoorTileIDs
 	dbw LAB,             .LabDoorTileIDs
 	dbw FACILITY,        .FacilityDoorTileIDs
-	dbw PLATEAU,         .PlateauDoorTileIDs
-	dbw SILENT,          .SilentDoorTileIDs
-	dbw BELLFLOWER,      .BellflowerDoorTileIDs
 	dbw PLAYERS_HOUSE,   .PlayersHouseDoorTileIDs
 	dbw PLAYERS_ROOM,    .PlayersRoomDoorTileIDs
 	dbw POKECENTER,      .PokecenterDoorTileIDs

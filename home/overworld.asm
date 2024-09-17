@@ -534,7 +534,7 @@ WarpFound2::
 	ld a, [wCurMap]
 	ld [wWarpedFromWhichMap], a
 	call CheckIfInOutsideMap
-	jr nz, .indoorMaps
+	jr nc, .indoorMaps
 ; this is for handling "outside" maps that can't have the 0xFF destination map
 	ld a, [wCurMap]
 	ld [wLastMap], a
@@ -777,12 +777,11 @@ CheckMapConnections::
 
 ; function to play a sound when changing maps
 PlayMapChangeSound::
-	lda_coord 8, 8 ; upper left tile of the 4x4 square the player's sprite is standing on
-	cp $0b ; door tile in tileset 0
-	jr nz, .didNotGoThroughDoor
+	call CheckIfInOutsideMap
+	jr nc, .didNotGoInside
 	ld a, SFX_GO_INSIDE
 	jr .playSound
-.didNotGoThroughDoor
+.didNotGoInside
 	ld a, SFX_GO_OUTSIDE
 .playSound
 	call PlaySound
@@ -792,13 +791,9 @@ PlayMapChangeSound::
 	jp GBFadeOutToBlack
 
 CheckIfInOutsideMap::
-; If the player is in an outside map (a town or route), set the z flag
+; If the player is in an outside map (a town or route), set the c flag
 	ld a, [wCurMapTileset]
-	and a ; KANTO
-	ret z
-	cp PLATEAU
-	ret z
-	cp SILENT
+	cp NUM_CITY_TILESETS
 	ret
 
 ; this function is an extra check that sometimes has to pass in order to warp, beyond just standing on a warp

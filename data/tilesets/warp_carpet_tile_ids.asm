@@ -8,13 +8,13 @@ ENDM
 
 WarpTileListPointers:
 	dbw KANTO, KantoWarpCarpetTiles
-	dbw FACILITY, FacilityWarpCarpetTiles
 	dbw PLATEAU, PlateauWarpCarpetTiles
+	dbw SILENT, SilentWarpCarpetTiles
+	dbw BELLFLOWER, BellflowerWarpCarpetTiles
+	dbw FACILITY, FacilityWarpCarpetTiles
 	dbw SHIP, ShipWarpCarpetTiles
 	dbw SHIP_PORT, ShipPortWarpCarpetTiles
 	dbw GATE, GateWarpCarpetTiles
-	dbw SILENT, SilentWarpCarpetTiles
-	dbw BELLFLOWER, BellflowerWarpCarpetTiles
 	dbw KANSAI_CAVE, KansaiCaveWarpCarpetTiles
 	dbw KANSAI_FOREST, KansaiForestWarpCarpetTiles
 	dbw PARK, ParkWarpCarpetTiles

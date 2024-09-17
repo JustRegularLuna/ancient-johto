@@ -2,6 +2,10 @@
 ; Tilesets indexes (see data/tilesets/tileset_headers.asm)
 	const_def
 	const KANTO
+	const PLATEAU
+	const SILENT
+	const BELLFLOWER
+DEF NUM_CITY_TILESETS EQU const_value
 	const PLAYERS_HOUSE
 	const MART
 	const FOREST
@@ -22,9 +26,6 @@
 	const LAB
 	const CLUB
 	const FACILITY
-	const PLATEAU
-	const SILENT
-	const BELLFLOWER
 	const KANSAI_CAVE
 	const TRADITIONAL_HOUSE
 	const ELITE_FOUR_ROOM
