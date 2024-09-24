@@ -12,28 +12,29 @@
 This ROM Hack is a nostalgic, beta-inspired reimagining of Pokémon Gold & Silver Versions, built from the disassembly of [**Pokémon Red/Blue**][pokered] with a LOT of changes.
 
 It takes inspiration from:
-* Beta content leftover in the final versions of GSC.
+* Beta content found leftover in the released versions of Gold, Silver & Crystal.
 * The Space World '97 demo.
-* Various other leaked information that came out later.
-* The release versions of Gold, Silver, & Crystal.
-* The release versions of Red, Blue, & Yellow. 
+* Various other leaks that came out later.
+* Promotional materials from before the games were released, showing things such as the beta girl player.
+* The released versions of Pokémon Gold, Silver, Crystal, Red, Blue, & Yellow.
 
-Of course, there is a LOT of creative license taken to fill in the massive gaps present in any of those beta sources, as they were all extremely unfinished, but enough was there that it hinted at things being a lot different from the games we got in the end.
+Of course, there is a LOT of creative license taken to fill in the massive gaps present in any of the prototype sources, as they were all in extremely unfinished states -- but they showed us that things would have been a lot different from the games we got in the end.
 
 
 ## What To Expect:
 
-This ROM Hack treats Gen 1 games as canon, but ignores all subsequent vanilla games. It is, after all, a replacement for Gold & Silver, essentially taking the timeline in a different direction. As such, do not expect Pokémon, characters, regions, etc. from Gen 3+ to make an appearance here. Their games have not happened yet, and would probably be very different once they did happen in a world where this was Gen 2.
+Pokémon RedGold & BlueSilver are replacements for vanilla Gold & Silver, taking the timeline in a different direction after the events of Red, Blue, & Yellow. Do not expect vanilla Gen 2 with a different coat of paint. Do not expect Pokémon, characters, regions, etc. from Gen 3+ to make an appearance here.
 
-Things you can expect to see in the "Kansai" (beta Johto) region include:
-* Cities and towns based on the beta cities in final GSC, using the Space World '97 aesthetic.
-* Routes partially based on a later set of leaked maps, along with some fully custom route/area designs (a lot of the leaked routes were very empty and uninspired.)
-* A storyline inspired by SW97's scraps of a storymode, vanilla GSC, and things mentioned or implied by beta NPCs text, placement, etc. with creative license to fill in the gaps.
-* A Pokédex list combining Pokémon from final GSC, SW97, and SW99.
+Things you can expect to see in Pokémon RedGold & BlueSilver include:
+* The Kansai Region, heavily based on beta maps found leftover in the final versions of GSC, remapped in the style of the SW97 demo, with routes and landmarks that are from or inspired by multiple leaked prototype builds, though some areas are invented by me to help flesh out the region.
+* A storyline inspired by SW97's very unfinished storymode, combined with vanilla GSC, and things indicated by beta NPCs text, placement, etc. (with creative license to fill in the gaps.)
+* A Pokédex list combining Pokémon from SW97, SW99, and final GSC.
 * Custom skill sets for Pokémon, not copied from current Gen or vanilla Gen 2.
 * A combination of vanilla Gen 1 and 2 attacks, beta attacks, and custom attacks to suit the Pokémon who are present.
+* Game mechanics that combine aspects of Gen 1, Gen 2, Beta Content, and custom changes.
+* DO NOT EXPECT MODERN GENERATION BATTLE MECHANICS such as Natures, Abilities, IVs and EVs, the Physical/Special Split, Mega Evolution, etc.
 
-I know this hack may not be everyone's cup of tea, and that is ok. But I hope the people who do find this interesting will enjoy it once it is ready.
+I know this hack may not appeal to everyone, and that is ok. I do, however, hope the people that find this interesting will enjoy it once it is ready. Since things are not always going to be vanilla, there will of course be documentation available for people that want it.
 
 
 ## Documentation:
@@ -42,10 +43,12 @@ I know this hack may not be everyone's cup of tea, and that is ok. But I hope th
 * A full list of credits can be found in [**CREDITS.md**](CREDITS.md).
 * To see a list of all Pokémon included, look [**here**](constants/pokemon_constants.asm).
 * To see Pokémon skill sets and evolutions, look [**here**](data/pokemon/evos_attacks.asm).
-* To see Pokémon base stats, which TMs and which Move Tutors they learn, look [**here**](data/pokemon/base_stats/).
+* To see Pokémon base stats and which TMs they learn, look [**here**](data/pokemon/base_stats/).
 * To see which Pokémon are found in the wild in each area, look [**here**](data/wild/wildmons.asm).
 * To see a list of Pokémon you can find via Headbutting trees, look [**here**](data/wild/headbutt_trees.asm).
 * To see all the In-Game Trades and where they are found, look [**here**](data/events/trades.asm).
+
+Additional reference materials will be made once the project is closer to a release, to document some of the new content in a more user-friendly way instead of just digging through the source code.
 
 
 ## F.A.Q.
@@ -57,10 +60,13 @@ A: Vanilla cheat codes do not work anymore, because memory has shifted way too m
 A: Primarily superficial changes, such as the title screen and other graphics. While some will be more common in one version than the other, ALL Pokémon are obtainable in both versions without having to trade. A full list of version differences will be put together once more content is in place.
 
 ### Q: Why is such-and-such different from Super Gold '97?
-A: This hack is not directly related to Super Gold '97, Pokémon October, or any other beta hack. The source material (the beta leaks) have a lot of missing and placeholder data, and have no official English names for Pokémon and the like. While these hacks contain some of the same Pokémon and other things, and draw inspiration from some of the same material, we all had a lot of gaps to fill in, and chose to fill them in differently, in the ways we each liked best. Just appreciate them all for what they are - different fan interpretations of unfinished content that was originally lost.
+A: This hack is not directly related to Super Gold '97, G/S '97 Reforged, Pokémon October, or any other beta hack. The source material (the beta leaks) have a lot of missing and placeholder data, and have no official English names for Pokémon and the like. While these hacks contain some of the same Pokémon and other things, and draw inspiration from some of the same material, we all had a lot of gaps to fill in, and chose to fill them in differently, in the ways we each liked best. Just appreciate them all for what they are - different fan interpretations of unfinished content that was originally lost.
 
 ### Q: Why is such-and-such named this way?
 A: To help emphasize that this is a reimagining, and not just vanilla Johto with a new coat of paint, city names have been replaced with new (but fitting) names. In the case of Pokémon, if a beta design felt "different enough" to me, I chose to give it a different name from the final version to help it stand out. Such as "Purrleaf" for Beta Hoppip, since the beta designs still felt more cat-like with their faces and tails, for example.
+
+### Q: Why does such-and-such not work the same as vanilla games?
+A: Since this is a reimagining, I found it more fun and interesting to come up with a unique blend of gameplay mechanics, combining Gen 1, Gen 2, Beta Content, and custom changes for personal preference or balancing reasons.
 
 ### Q: What tools did you use to make this?
 A: The only tools used were the RGBDS compiler, Notepad++, Polished Map, Tilemap Studio, and a paint program to edit .png files.
