@@ -9,16 +9,7 @@
 
 ## What Is This?
 
-This ROM Hack is a nostalgic, beta-inspired reimagining of Pokémon Gold & Silver Versions, built from the disassembly of [**Pokémon Red/Blue**][pokered] with a LOT of changes.
-
-It takes inspiration from:
-* Beta content found in the released versions of Gold, Silver & Crystal.
-* The Space World '97 demo.
-* Various other leaks that came out later.
-* Promotional materials from before the games were released, showing things such as "beta kris".
-* The released versions of Pokémon Gold, Silver, Crystal, Red, Blue, & Yellow.
-
-Of course, there is a LOT of creative license taken to fill in the massive gaps present in any of the prototype sources, as they were all in extremely unfinished states -- but they showed us that things would have been a lot different from the games we got in the end.
+This ROM Hack is a nostalgic, beta-inspired reimagining of Pokémon Gold & Silver Versions, built from the disassembly of [**Pokémon Red/Blue**][pokered] with a LOT of changes. It takes inspiration from multiple prototype versions, along with the vanilla games, in order to be its own thing. It reboots the timeline after the events of Gen 1, replacing vanilla Gen 2 and ignoring Gen 3+.
 
 
 ## What To Expect (And What Not To):
