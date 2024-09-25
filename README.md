@@ -23,16 +23,15 @@ Of course, there is a LOT of creative license taken to fill in the massive gaps 
 
 ## What To Expect:
 
-Pokémon RedGold & BlueSilver are replacements for vanilla Gold & Silver, taking the timeline in a different direction after the events of Red, Blue, & Yellow. Do not expect vanilla Gen 2 with a different coat of paint. Do not expect Pokémon, characters, regions, etc. from Gen 3+ to make an appearance here.
+Pokémon RedGold & BlueSilver are replacements for vanilla Gold & Silver, taking the timeline in a different direction after the events of Red, Blue, & Yellow. Do not expect vanilla Gen 2 with a different coat of paint. Do not expect Pokémon, characters, regions, etc. from Gen 3+ to make an appearance here. DO NOT EXPECT CURRENT GENERATION BATTLE MECHANICS such as Natures, Abilities, IVs and EVs, the Physical/Special Split, Mega Evolution, etc.
 
 Things you can expect to see in Pokémon RedGold & BlueSilver include:
 * The Kansai Region, heavily based on beta maps found leftover in the final versions of GSC, remapped in the style of the SW97 demo, with routes and landmarks that are from or inspired by multiple leaked prototype builds, though some areas are invented by me to help flesh out the region.
-* A storyline inspired by SW97's very unfinished storymode, combined with vanilla GSC, and things indicated by beta NPCs text, placement, etc. (with creative license to fill in the gaps.)
+* A storyline inspired by SW97 combined with vanilla GSC and things indicated by beta NPCs text, placement, etc. (with creative license to fill in the gaps.)
 * A Pokédex list combining Pokémon from SW97, SW99, and final GSC.
 * Custom skill sets for Pokémon, not copied from current Gen or vanilla Gen 2.
 * A combination of vanilla Gen 1 and 2 attacks, beta attacks, and custom attacks to suit the Pokémon who are present.
 * Game mechanics that combine aspects of Gen 1, Gen 2, Beta Content, and custom changes.
-* DO NOT EXPECT MODERN GENERATION BATTLE MECHANICS such as Natures, Abilities, IVs and EVs, the Physical/Special Split, Mega Evolution, etc.
 
 I know this hack may not appeal to everyone, and that is ok. I do, however, hope the people that find this interesting will enjoy it once it is ready. Since things are not always going to be vanilla, there will of course be documentation available for people that want it.
 
