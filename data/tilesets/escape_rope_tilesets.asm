@@ -12,4 +12,5 @@ EscapeRopeTilesets:
 	db LIGHTHOUSE
 	db RADIO_TOWER
 	db HIDEOUT
+	db GENERATOR
 	db -1 ; end

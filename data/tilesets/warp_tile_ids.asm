@@ -12,7 +12,7 @@ WarpTileIDPointers:
 	dw .GymWarpTileIDs
 	dw .HouseWarpTileIDs
 	dw .MuseumWarpTileIDs
-	dw .UndergroundWarpTileIDs
+	dw .GeneratorWarpTileIDs
 	dw .GateWarpTileIDs
 	dw .ShipWarpTileIDs
 	dw .ShipPortWarpTileIDs
@@ -54,7 +54,7 @@ ENDM
 	warp_tiles $1A, $1C, $3B
 
 .GateWarpTileIDs:
-	warp_tiles $1A, $1C, $3B
+	warp_tiles $1A, $1C, $3B, $76
 
 .PlayersHouseWarpTileIDs:
 	warp_tiles $5C, $5E
@@ -101,8 +101,8 @@ ENDM
 .CemeteryWarpTileIDs:
 	warp_tiles $13, $1B
 
-.UndergroundWarpTileIDs:
-	warp_tiles $13
+.GeneratorWarpTileIDs:
+	warp_tiles $16, $36
 
 .PlateauWarpTileIDs:
 	warp_tiles $1B, $3B

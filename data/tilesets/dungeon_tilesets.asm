@@ -25,4 +25,5 @@ DungeonTilesets:
 	db RADIO_TOWER
 	db TRAIN_STATION
 	db HIDEOUT
+	db GENERATOR
 	db -1 ; end

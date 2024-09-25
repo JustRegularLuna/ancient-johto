@@ -146,8 +146,6 @@ SetPal_Overworld:
 	jr z, .cave
 	cp KANSAI_CAVE
 	jr z, .cave
-	cp FOREST
-	jr z, .cave
 	cp KANSAI_FOREST
 	jr z, .cave
 	cp GATE
@@ -159,6 +157,8 @@ SetPal_Overworld:
 	ld a, [wCurMap]
 	cp FIRST_INDOOR_MAP
 	jr c, .townOrRoute
+	cp VIRIDIAN_FOREST
+	jr z, .cave
 	cp CERULEAN_CAVE_2F
 	jr c, .normalDungeonOrBuilding
 	cp CERULEAN_CAVE_1F + 1

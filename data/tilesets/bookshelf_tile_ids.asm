@@ -20,9 +20,9 @@ BookshelfTileIDs:
 	bookshelf_tile GYM,               $1D, BookOrSculptureText
 	bookshelf_tile GYM,               $50, MyReflectionText
 	bookshelf_tile GATE,              $22, BookOrSculptureText
+	bookshelf_tile GATE,              $2A, MyReflectionText
 	bookshelf_tile GATE,              $3A, MyReflectionText
 	bookshelf_tile GATE,              $3D, MyReflectionText
-	bookshelf_tile GATE,              $3E, MyReflectionText
 	bookshelf_tile GATE,              $42, PokemonCenterPCText
 	bookshelf_tile MART,              $3E, PokemonStuffText
 	bookshelf_tile MART,              $50, PokemonStuffText

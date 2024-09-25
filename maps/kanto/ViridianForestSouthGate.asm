@@ -1,5 +1,5 @@
 ViridianForestSouthGate_Object:
-	db $a ; border block
+	db $0 ; border block
 
 	def_warp_events
 	warp_event  4,  0, VIRIDIAN_FOREST, 4

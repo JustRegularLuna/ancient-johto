@@ -9,7 +9,7 @@
 	const WOODS_SOUTH_GATE_2F_RIGHT_TELESCOPE
 
 EvergreenWoodsSouthGate2F_Object:
-	db $a ; border block
+	db $0 ; border block
 
 	def_warp_events
 	warp_event  7,  7, EVERGREEN_WOODS_SOUTH_GATE, 5

@@ -112,10 +112,10 @@ Club_GFX::          INCBIN "gfx/tilesets/club.2bpp"
 Club_Block::        INCBIN "gfx/blocksets/club.bst"
 
 
-SECTION "Underground Tileset", ROMX
+SECTION "Generator Tileset", ROMX
 
-Underground_GFX::   INCBIN "gfx/tilesets/underground.2bpp"
-Underground_Block:: INCBIN "gfx/blocksets/underground.bst"
+Generator_GFX::     INCBIN "gfx/tilesets/generator.2bpp"
+Generator_Block::   INCBIN "gfx/blocksets/generator.bst"
 
 
 SECTION "Silent Tileset", ROMX

@@ -19,6 +19,7 @@ While this was a passion project, I couldn't have done it all on my own. Several
 ## Graphics
 
 * Gamefreak for sprites and tiles taken from Pokémon Red, Yellow, Gold, Crystal, and the SW97 Gold Demo.
+* SourApple for the Kanto forest/safari zone trees and stumps.
 * Tommo for the battle sprites for the female Rocket grunts, Blue, Imposter Oak, and Red.
 * Kabocha for the Rei sprite.
 * Myself (Luna) for editing the shading on a few Gen 2 battle sprites to better match the Gen 1/SW97 SGB aesthetic.

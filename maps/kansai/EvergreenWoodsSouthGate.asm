@@ -6,7 +6,7 @@
 	; Signs
 
 EvergreenWoodsSouthGate_Object:
-	db $a ; border block
+	db $0 ; border block
 
 	def_warp_events
 	warp_event  4,  7, KANSAI_ROUTE_2, 1

@@ -2,7 +2,6 @@ BikeRidingTilesets::
 	db KANTO
 	db PLATEAU
 	db FOREST
-	db UNDERGROUND
 	db SHIP_PORT
 	db CAVERN
 	db GATE

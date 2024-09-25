@@ -93,21 +93,21 @@ DEF FIRST_INDOOR_MAP EQU const_value
 	map_const CERULEAN_MART,                  4,  4 ; $43
 	map_const MT_MOON_POKECENTER,             7,  4 ; $44
 	map_const CERULEAN_TRASHED_HOUSE_COPY,    4,  4 ; $45
-	map_const ROUTE_5_GATE,                   4,  3 ; $46
+	map_const ROUTE_5_GATE,                   5,  4 ; $46
 	map_const UNDERGROUND_PATH_ROUTE_5,       4,  4 ; $47
 	map_const DAYCARE,                        4,  4 ; $48
-	map_const ROUTE_6_GATE,                   4,  3 ; $49
+	map_const ROUTE_6_GATE,                   5,  4 ; $49
 	map_const UNDERGROUND_PATH_ROUTE_6,       4,  4 ; $4A
 	map_const UNDERGROUND_PATH_ROUTE_6_COPY,  4,  4 ; $4B
-	map_const ROUTE_7_GATE,                   3,  4 ; $4C
+	map_const ROUTE_7_GATE,                   5,  4 ; $4C
 	map_const UNDERGROUND_PATH_ROUTE_7,       4,  4 ; $4D
 	map_const UNDERGROUND_PATH_ROUTE_7_COPY,  4,  4 ; $4E
-	map_const ROUTE_8_GATE,                   3,  4 ; $4F
+	map_const ROUTE_8_GATE,                   5,  4 ; $4F
 	map_const UNDERGROUND_PATH_ROUTE_8,       4,  4 ; $50
 	map_const ROCK_TUNNEL_POKECENTER,         7,  4 ; $51
 	map_const ROCK_TUNNEL_1F,                20, 18 ; $52
 	map_const POWER_PLANT,                   20, 18 ; $53
-	map_const ROUTE_11_GATE_1F,               4,  5 ; $54
+	map_const ROUTE_11_GATE_1F,               5,  4 ; $54
 	map_const DIGLETTS_CAVE_ROUTE_11,         4,  4 ; $55
 	map_const ROUTE_11_GATE_2F,               4,  4 ; $56
 	map_const ROUTE_12_GATE_1F,               5,  4 ; $57
@@ -179,7 +179,7 @@ DEF FIRST_INDOOR_MAP EQU const_value
 	map_const FUCHSIA_BILLS_GRANDPAS_HOUSE,   4,  4 ; $99
 	map_const FUCHSIA_POKECENTER,             7,  4 ; $9A
 	map_const WARDENS_HOUSE,                  5,  4 ; $9B
-	map_const SAFARI_ZONE_GATE,               4,  3 ; $9C
+	map_const SAFARI_ZONE_GATE,               5,  4 ; $9C
 	map_const FUCHSIA_GYM,                    5,  9 ; $9D
 	map_const FUCHSIA_MEETING_ROOM,           7,  4 ; $9E
 	map_const SEAFOAM_ISLANDS_B1F,           15,  9 ; $9F
@@ -207,13 +207,13 @@ DEF FIRST_INDOOR_MAP EQU const_value
 	map_const SILPH_CO_1F,                   15,  9 ; $B5
 	map_const SAFFRON_POKECENTER,             7,  4 ; $B6
 	map_const MR_PSYCHICS_HOUSE,              4,  4 ; $B7
-	map_const ROUTE_15_GATE_1F,               4,  5 ; $B8
+	map_const ROUTE_15_GATE_1F,               5,  4 ; $B8
 	map_const ROUTE_15_GATE_2F,               4,  4 ; $B9
-	map_const ROUTE_16_GATE_1F,               4,  7 ; $BA
+	map_const ROUTE_16_GATE_1F,               5,  7 ; $BA
 	map_const ROUTE_16_GATE_2F,               4,  4 ; $BB
 	map_const ROUTE_16_FLY_HOUSE,             4,  4 ; $BC
 	map_const ROUTE_12_SUPER_ROD_HOUSE,       4,  4 ; $BD
-	map_const ROUTE_18_GATE_1F,               4,  5 ; $BE
+	map_const ROUTE_18_GATE_1F,               5,  4 ; $BE
 	map_const ROUTE_18_GATE_2F,               4,  4 ; $BF
 	map_const SEAFOAM_ISLANDS_1F,            15,  9 ; $C0
 	map_const ROUTE_22_GATE,                  5,  4 ; $C1

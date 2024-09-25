@@ -14,7 +14,7 @@ DEF NUM_CITY_TILESETS EQU const_value
 	const GYM
 	const HOUSE
 	const MUSEUM
-	const UNDERGROUND
+	const GENERATOR
 	const GATE
 	const SHIP
 	const SHIP_PORT

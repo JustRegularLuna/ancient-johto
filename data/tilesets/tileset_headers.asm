@@ -23,7 +23,7 @@ Tilesets:
 	tileset Gym_Block,              Gym_GFX,              Gym_Coll,              $3A,$FF,$FF, $FF, TILEANIM_LIST
 	tileset House_Block,            House_GFX,            House_Coll,            $FF,$FF,$FF, $FF, TILEANIM_NONE
 	tileset Museum_Block,           Museum_GFX,           Museum_Coll,           $17,$32,$FF, $FF, TILEANIM_NONE
-	tileset Underground_Block,      Underground_GFX,      Underground_Coll,      $FF,$FF,$FF, $FF, TILEANIM_NONE
+	tileset Generator_Block,        Generator_GFX,        Generator_Coll,        $FF,$FF,$FF, $FF, TILEANIM_NONE
 	tileset Gate_Block,             Gate_GFX,             Gate_Coll,             $17,$32,$FF, $FF, TILEANIM_NONE
 	tileset Ship_Block,             Ship_GFX,             Ship_Coll,             $FF,$FF,$FF, $FF, TILEANIM_LIST
 	tileset ShipPort_Block,         ShipPort_GFX,         ShipPort_Coll,         $FF,$FF,$FF, $FF, TILEANIM_LIST

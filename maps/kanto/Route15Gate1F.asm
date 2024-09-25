@@ -1,12 +1,12 @@
 Route15Gate1F_Object:
-	db $a ; border block
+	db $0 ; border block
 
 	def_warp_events
 	warp_event  0,  4, LAST_MAP, 1
 	warp_event  0,  5, LAST_MAP, 2
-	warp_event  7,  4, LAST_MAP, 3
-	warp_event  7,  5, LAST_MAP, 4
-	warp_event  7,  9, ROUTE_15_GATE_2F, 1
+	warp_event  9,  4, LAST_MAP, 3
+	warp_event  9,  5, LAST_MAP, 4
+	warp_event  9,  7, ROUTE_15_GATE_2F, 1
 
 	def_bg_events
 

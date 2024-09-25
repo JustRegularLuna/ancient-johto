@@ -6,9 +6,6 @@ ENDR
 	db -1 ; end
 ENDM
 
-Underground_Coll::
-	coll_tiles $0b, $0c, $13, $15, $18
-
 Kanto_Coll::
 	coll_tiles $00, $10, $1b, $20, $21, $23, $2c, $2d, $2e, $30, $31, $33, $39, $3c, $3e, $52, $54, $58, $5b, $5e
 
@@ -36,8 +33,11 @@ House_Coll::
 Museum_Coll::
 	coll_tiles $01, $12, $14, $1a, $1c, $37, $38, $3b, $3c, $5e
 
+Generator_Coll::
+	coll_tiles $02, $13, $16, $1a, $33, $36
+
 Gate_Coll::
-	coll_tiles $01, $12, $14, $1a, $1c, $37, $38, $3b, $3c, $5e
+	coll_tiles $01, $12, $14, $1a, $1c, $37, $38, $3b, $3c, $5e, $76
 
 Ship_Coll::
 	coll_tiles $04, $0d, $17, $1d, $1e, $23, $34, $37, $39, $4a
