@@ -73,10 +73,10 @@ Plateau_Coll::
 	coll_tiles $1b, $23, $2c, $2d, $3b, $45, $46
 
 Silent_Coll::
-	coll_tiles $00, $01, $02, $04, $22, $27, $46, $53, $56, $5E
+	coll_tiles $00, $01, $02, $04, $22, $27, $46, $53, $56, $5E, $60
 
 Bellflower_Coll::
-	coll_tiles $00, $01, $02, $04, $22, $27, $5E, $60, $6B
+	coll_tiles $00, $01, $02, $04, $22, $24, $27, $5E, $60, $6B
 
 KansaiCave_Coll::
 	coll_tiles $01, $04, $16, $18, $1E, $30, $32, $34, $36, $37, $38, $3A, 
