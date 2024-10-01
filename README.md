@@ -14,7 +14,7 @@ This ROM Hack is a nostalgic, beta-inspired reimagining of Pokémon Gold & Silve
 
 ## What To Expect (And What Not To):
 
-Things you SHOULD expect to see in Pokémon RedGold & BlueSilver include:
+Things you **SHOULD** expect to see in **Pokémon RedGold & BlueSilver** include:
 * The Kansai Region, heavily based on beta maps found leftover in the final versions of GSC, remapped in the style of the SW97 demo, with routes and landmarks that are from or inspired by multiple leaked prototype builds, though some areas are invented by me to help flesh out the region.
 * A storyline inspired by a combination of SW97, vanilla GSC, and things indicated by beta NPCs and scripts (with creative license to fill in the gaps.)
 * A Pokédex list combining Pokémon from SW97, SW99, and final GSC.
@@ -22,12 +22,12 @@ Things you SHOULD expect to see in Pokémon RedGold & BlueSilver include:
 * A combination of vanilla Gen 1 and 2 attacks, beta attacks, and custom attacks to suit the Pokémon that are available.
 * Game mechanics that combine aspects of Gen 1, Gen 2, beta content, and custom changes.
 
-Things you SHOULD NOT expect:
+Things you **SHOULD NOT** expect in this game:
 * Vanilla Gen 2 with a different coat of paint.
 * The Region from the SW97 Demo.
 * Pokémon, characters, locations, etc. from Gen 3+.
 * Modern game mechanics such as Natures, Abilities, IVs and EVs, the Physical/Special Split, Mega Evolution, etc.
-* Obnoxious self-insert boss trainers, "Kaizo" difficulty, Nuzlocke mode, or anything like that.
+* Obnoxious self-insert boss trainers, "Kaizo" difficulty, Nuzlocke mode, or anything "overly fan-gamey" like that.
 
 I know this hack may not appeal to everyone, and that is ok, but I hope the people that find this interesting will enjoy it once it is ready. Because not everything will match the vanilla games, there will of course be documentation available for people that want it.
 
@@ -52,7 +52,7 @@ Additional reference materials will be made once the project is closer to a rele
 A: Vanilla cheat codes do not work anymore, because memory has shifted way too much. A list of the most commonly requested Gameshark Codes (such as item/pokemon modifiers and infinite money) will be placed here once there is an actual release, and will indicate which version they are for when the time comes.
 
 ### Q: What are the differences between the two versions?
-A: Primarily superficial changes, such as the title screen and other graphics. While some will be more common in one version than the other, ALL Pokémon are obtainable in both versions without having to trade. A full list of version differences will be put together once more content is in place.
+A: Primarily superficial changes, such as the title screen and other graphics. While some Pokémon will be more common in one version than the other, ALL Pokémon will be obtainable in both versions without having to trade. A full list of version differences will be put together once more content is in place.
 
 ### Q: Why is such-and-such different from Super Gold '97?
 A: This hack is not directly related to Super Gold '97, G/S '97 Reforged, Pokémon October, or any other beta hack. The source material (the beta leaks) have a lot of missing and placeholder data, and have no official English names for Pokémon and the like. While these hacks contain some of the same Pokémon and other things, and draw inspiration from some of the same material, we all had a lot of gaps to fill in, and chose to fill them in differently, in the ways we each liked best. Just appreciate them all for what they are - different fan interpretations of unfinished content that was originally lost.
