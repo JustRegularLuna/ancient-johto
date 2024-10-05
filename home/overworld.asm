@@ -1317,23 +1317,21 @@ CollisionCheckOnLand::
 	ret
 
 ; function that checks if the tile in front of the player is passable
+; moved to another bank, along with the collision data, to save space
 ; clears carry if it is, sets carry if not
 CheckTilePassable::
+; for checking the tile in front of player
 	predef GetTileAndCoordsInFrontOfPlayer ; get tile in front of player
 	ld a, [wTileInFrontOfPlayer] ; tile in front of player
 	ld c, a
-	ld hl, wTilesetCollisionPtr ; pointer to list of passable tiles
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a ; hl now points to passable tiles
-.loop
-	ld a, [hli]
-	cp $ff
-	jr z, .tileNotPassable
-	cp c
-	ret z
-	jr .loop
-.tileNotPassable
+	; fallthrough
+CheckTilePassable2::
+; for checking a tile NOT right in front of player, already loaded in c before calling
+	predef _CheckTilePassable
+	ld a, [wCollisionResult]
+	and a
+	ret z ; no collision
+.collided
 	scf
 	ret
 
@@ -1978,17 +1976,8 @@ CollisionCheckOnWater::
 	jr z, .noCollision ; keep surfing
 ; check if the [land] tile in front of the player is passable
 .checkIfNextTileIsPassable
-	ld hl, wTilesetCollisionPtr ; pointer to list of passable tiles
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a
-.loop
-	ld a, [hli]
-	cp $ff
-	jr z, .collision
-	cp c
-	jr z, .stopSurfing ; stop surfing if the tile is passable
-	jr .loop
+	call CheckTilePassable2
+	jr nc, .stopSurfing
 .collision
 
 ;	ld a, [wChannelSoundIDs + Ch5]

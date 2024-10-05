@@ -397,6 +397,7 @@ wCheckFor180DegreeTurn::
 ; whether to check for 180-degree turn (0 = don't, 1 = do)
 	ds 1
 
+wCollisionResult::
 	ds 1
 
 wMissableObjectIndex::

@@ -596,16 +596,8 @@ CanWalkOntoTile:
 	and a
 	ret
 .notScripted
-	ld a, [wTilesetCollisionPtr]
-	ld l, a
-	ld a, [wTilesetCollisionPtr+1]
-	ld h, a
-.tilePassableLoop
-	ld a, [hli]
-	cp $ff
-	jr z, .impassable
-	cp c
-	jr nz, .tilePassableLoop
+	call CheckTilePassable2
+	jr c, .impassable
 	ld h, HIGH(wSpriteStateData2)
 	ldh a, [hCurrentSpriteOffset]
 	add $6

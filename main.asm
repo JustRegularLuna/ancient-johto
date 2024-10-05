@@ -747,3 +747,8 @@ INCLUDE "engine/overworld/wild_mons.asm"
 SECTION "Title Screen GFX", ROMX
 
 INCLUDE "gfx/version.asm"
+
+
+SECTION "Tileset Collision Data", ROMX
+
+INCLUDE "engine/overworld/collision.asm"

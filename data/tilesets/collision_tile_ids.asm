@@ -6,6 +6,9 @@ ENDR
 	db -1 ; end
 ENDM
 
+Pokecenter_Coll::
+	coll_tiles $01, $11, $32, $50, $52, $54, $58, $5b, $69, $76
+
 Kanto_Coll::
 	coll_tiles $00, $10, $1b, $20, $21, $23, $2c, $2d, $2e, $30, $31, $33, $39, $3c, $3e, $52, $54, $58, $5b, $5e
 
@@ -17,9 +20,6 @@ PlayersRoom_Coll::
 
 Mart_Coll::
 	coll_tiles $11, $1A, $23, $5A, $5C, $5E
-
-Pokecenter_Coll::
-	coll_tiles $01, $11, $32, $50, $52, $54, $58, $5b, $69, $76
 
 Gym_Coll::
 	coll_tiles $11, $16, $19, $2b, $3c, $3d, $3f, $4a, $4c, $4d, $03
