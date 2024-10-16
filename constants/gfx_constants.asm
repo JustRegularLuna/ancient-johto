@@ -38,3 +38,6 @@ DEF REDRAW_ROW EQU 2
 	const TILEMAP_GAME_BOY
 	const TILEMAP_LINK_CABLE
 DEF NUM_TILEMAPS EQU const_value
+
+; number of tiles to load for a map tileset
+DEF MAP_TILESET_SIZE EQU $79

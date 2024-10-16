@@ -928,7 +928,7 @@ LoadTilesetTilePatternData::
 	ld a, [wTilesetGfxPtr + 1]
 	ld h, a
 	ld de, vTileset
-	ld bc, $790
+	ld bc, MAP_TILESET_SIZE tiles ;$790
 	ld a, [wTilesetBank]
 	call FarCopyData2
 	farjp LoadRoofTilePatterns
