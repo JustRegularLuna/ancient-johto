@@ -61,8 +61,11 @@ LoadRoofTilePatterns::
 	ld hl, Roofs
 	ld bc, $90 ; 9 tiles
 	call AddNTimes
-	ld de, vTileset tile $0A
-	ld bc, $90 ; 9 tiles
-	jp CopyData
+	ld d, h
+	ld e, l
+	ld hl, vTileset tile $0A
+	ld b, BANK(Roofs)
+	ld c, $9 ; 9 tiles
+	jp GoodCopyVideoData
 
 INCLUDE "data/maps/map_roofs.asm"

@@ -763,6 +763,7 @@ CheckMapConnections::
 	ld [wCurrentTileBlockMapViewPointer + 1], a
 .loadNewMap ; load the connected map that was entered
 	call LoadMapHeader
+	homecall LoadRoofTilePatterns
 	call PlayDefaultMusicFadeOutCurrent
 	ld b, SET_PAL_OVERWORLD
 	call RunPaletteCommand

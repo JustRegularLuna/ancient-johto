@@ -79,7 +79,7 @@ INCLUDE "home/predef.asm"
 INCLUDE "home/hidden_objects.asm"
 INCLUDE "home/predef_text.asm"
 
-GoodCopyVideoData:
+GoodCopyVideoData::
 	ldh a, [rLCDC]
 	bit 7, a ; is the LCD enabled?
 	jp nz, CopyVideoData ; if LCD is on, transfer during V-blank
