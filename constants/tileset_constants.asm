@@ -39,4 +39,5 @@ DEF NUM_CITY_TILESETS EQU const_value
 	const RADIO_TOWER
 	const TRAIN_STATION
 	const HIDEOUT
+	const KANSAI_MUSEUM
 DEF NUM_TILESETS EQU const_value

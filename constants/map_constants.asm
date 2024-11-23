@@ -284,6 +284,7 @@ DEF KANSAI_REGION EQU 1
 	const_def
 	map_const SILENT_HILLS,                  10,  9
 	map_const SAKURA_TOWN,                   20, 18
+	map_const BELLFLOWER_CITY,               20, 18
 DEF NUM_KANSAI_CITY_MAPS EQU const_value
 	map_const KANSAI_ROUTE_1,                30,  9
 	map_const KANSAI_ROUTE_2,                10, 18
@@ -305,4 +306,11 @@ DEF FIRST_KANSAI_INDOOR_MAP EQU const_value
 	map_const EVERGREEN_WOODS_SOUTH_GATE_2F,  4,  4
 	map_const EVERGREEN_WOODS_NORTH_GATE,     5,  4
 	map_const EVERGREEN_WOODS,               15, 27
+	map_const BELLFLOWER_POKECENTER,          5, 10
+	map_const BELLFLOWER_MART,                6,  4
+	map_const BELLFLOWER_GYM,                 5,  8
+	map_const BELLFLOWER_SCHOOL_HOUSE,        4,  8
+	map_const BELLFLOWER_MUSEUM,              8, 10
+	map_const BELLFLOWER_HOUSE,               4,  4
+	map_const KURTS_HOUSE,                    8,  4
 DEF NUM_KANSAI_MAPS EQU const_value

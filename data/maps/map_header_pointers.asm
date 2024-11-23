@@ -258,6 +258,7 @@ KansaiMapHeaderPointers::
 	table_width 2, KansaiMapHeaderPointers
 	dw SilentHills_h
 	dw SakuraTown_h
+	dw BellflowerCity_h
 	dw KansaiRoute1_h
 	dw KansaiRoute2_h
 	dw KansaiRoute3_h
@@ -277,4 +278,11 @@ KansaiMapHeaderPointers::
 	dw EvergreenWoodsSouthGate2F_h
 	dw EvergreenWoodsNorthGate_h
 	dw EvergreenWoods_h
+	dw BellflowerPokecenter_h
+	dw BellflowerMart_h
+	dw BellflowerGym_h
+	dw BellflowerSchoolHouse_h
+	dw BellflowerMuseum_h
+	dw BellflowerHouse_h
+	dw KurtsHouse_h
 	assert_table_length NUM_KANSAI_MAPS

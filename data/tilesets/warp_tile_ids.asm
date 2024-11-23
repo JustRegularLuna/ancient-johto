@@ -37,6 +37,7 @@ WarpTileIDPointers:
 	dw .RadioTowerWarpTileIDs
 	dw .TrainStationWarpTileIDs
 	dw .HideoutWarpTileIDs
+	dw .KansaiMuseumWarpTileIDs
 	assert_table_length NUM_TILESETS
 
 MACRO warp_tiles
@@ -75,7 +76,7 @@ ENDM
 	warp_tiles $4A
 
 .HouseWarpTileIDs:
-	warp_tiles $54, $32
+	warp_tiles $2A, $54, $32
 
 .ShipWarpTileIDs:
 	warp_tiles $37, $39, $1E, $4A
@@ -157,3 +158,6 @@ ENDM
 
 .HideoutWarpTileIDs:
 	warp_tiles $32, $3A, $3C
+
+.KansaiMuseumWarpTileIDs:
+	warp_tiles $1C, $1E

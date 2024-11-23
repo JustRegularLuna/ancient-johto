@@ -28,7 +28,7 @@ Forest_Coll::
 	coll_tiles $1e, $20, $2e, $30, $34, $37, $39, $3a, $40, $51, $52, $5a, $5c, $5e, $5f
 
 House_Coll::
-	coll_tiles $01, $12, $14, $32, $37, $54
+	coll_tiles $01, $12, $14, $2a, $32, $37, $54
 
 Museum_Coll::
 	coll_tiles $01, $12, $14, $1a, $1c, $37, $38, $3b, $3c, $5e
@@ -76,7 +76,7 @@ Silent_Coll::
 	coll_tiles $00, $01, $02, $04, $22, $27, $46, $53, $56, $5E, $60
 
 Bellflower_Coll::
-	coll_tiles $00, $01, $02, $04, $22, $24, $27, $5E, $60, $6B
+	coll_tiles $00, $01, $02, $04, $22, $24, $27, $5E, $60, $6B, $6D
 
 KansaiCave_Coll::
 	coll_tiles $01, $04, $16, $18, $1E, $30, $32, $34, $36, $37, $38, $3A, 
@@ -116,3 +116,6 @@ TrainStation_Coll::
 
 Hideout_Coll::
 	coll_tiles $10, $12, $32, $34, $35, $38, $3A, $3C
+
+KansaiMuseum_Coll::
+	coll_tiles $10, $1C, $1E, $21, $48, $49

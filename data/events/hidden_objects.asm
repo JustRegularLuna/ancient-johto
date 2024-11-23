@@ -43,12 +43,18 @@ ColosseumHiddenObjects:
 
 
 
-; ===========
-; JOHTO STUFF
-; ===========
+; ============
+; KANSAI STUFF
+; ============
 
 KansaiHiddenObjectMaps:
+	db BELLFLOWER_SCHOOL_HOUSE
 	db -1 ; end
 
 KansaiHiddenObjectPointers:
-	dw -1
+	dw BellflowerSchoolHouseHiddenObjects
+
+BellflowerSchoolHouseHiddenObjects:
+	hidden_text_predef  3,  0, PokemonSchoolBlackboard, PrintBlackboardText
+	hidden_text_predef  4,  0, PokemonSchoolBlackboard, PrintBlackboardText
+	db -1 ; end

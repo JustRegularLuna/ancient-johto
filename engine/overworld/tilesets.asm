@@ -1,19 +1,11 @@
 LoadTilesetHeader:
 	call GetPredefRegisters
 	push hl
-	ld d, 0
 	ld a, [wCurMapTileset]
-	add a
-	add a
-	ld b, a
-	add a
-	add b ; a = tileset * 12
-	jr nc, .noCarry
-	inc d
-.noCarry
-	ld e, a
+	ld b, 0
+	ld c, 12
 	ld hl, Tilesets
-	add hl, de
+	call AddNTimes
 	ld de, wTilesetBank
 	ld c, $b
 .copyTilesetHeaderLoop

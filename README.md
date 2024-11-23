@@ -11,6 +11,8 @@
 
 This ROM Hack is a nostalgic, beta-inspired reimagining of Pokémon Gold & Silver Versions, built from the disassembly of [**Pokémon Red/Blue**][pokered] with a LOT of changes. It takes inspiration from multiple prototype versions, along with the vanilla games, in order to be its own thing. It reboots the timeline after the events of Gen 1, replacing vanilla Gen 2 and ignoring Gen 3+.
 
+Over 20 years ago, when the community discoved the beta Johto cities leftover in Gold & Silver Versions, they were an obvious point of interest for a lot of people, and there were many hacks started (and never finished) over the years attempting to recreate beta Johto. Some of those maps were also used as the basis for cities in Pokémon Brown, as well. But we never had a hack turning those specific beta cities into a proper game of their own. Then, when the Space World '97 demo leaked, I was hoping we would finally get to see what that version of beta Johto was actually like. Of course, we did *not* get that, we got an entirely different region, and a lot of other interesting things. But I was still a little disappointed that in all of the leaks, we still never got an answer for *that* version of Johto that caught my interest all those years ago. So I decided to make my own take on it. There are a lot of gaps to fill in, even taking all of the leaks into consideration and combining them together, so this game will certainly not be faithful to what Gamefreak actually had in mind, as I am not a mind reader. But I hope it will be a fun and interesting journey through a region heavily based on that version of beta Johto.
+
 
 ## What To Expect (And What Not To):
 

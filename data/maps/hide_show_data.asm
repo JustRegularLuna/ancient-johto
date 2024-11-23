@@ -274,6 +274,7 @@ KansaiMapHSPointers:
 	table_width 2, KansaiMapHSPointers
 	dw SilentHillsHS ; Silent Hills
 	dw SakuraHS   ; Sakura Town
+	dw BellflowerHS ; Bellflower City
 	dw KRoute1HS  ; Kansai Route 1
 	dw KRoute2HS  ; Kansai Route 2
 	dw KRoute3HS  ; Kansai Route 3
@@ -293,6 +294,13 @@ KansaiMapHSPointers:
 	dw KansaiNoHS ; Evergreen Woods South Gate 2F
 	dw KansaiNoHS ; Evergreen Woods Noth Gate
 	dw EvergreenWoodsHS ; Evergreen Woods
+	dw BellflowerPokecenterHS ; Bellflower Pokecenter
+	dw KansaiNoHS ; Bellflower Mart
+	dw KansaiNoHS ; Bellflower Gym
+	dw KansaiNoHS ; Bellflower School House
+	dw KansaiNoHS ; Bellflower Museum
+	dw KansaiNoHS ; Bellflower House
+	dw KansaiNoHS ; Kurts House
 	assert_table_length NUM_KANSAI_MAPS
 	dw -1 ; end
 
@@ -307,6 +315,9 @@ SilentHillsHS:
 	db SILENT_HILLS, SILENT_RIVAL, SHOW
 SakuraHS:
 	db SAKURA_TOWN, SAKURA_RIVAL, HIDE
+BellflowerHS:
+	db BELLFLOWER_CITY, BELLFLOWER_PP_UP, SHOW
+	db BELLFLOWER_CITY, BELLFLOWER_RARE_CANDY, SHOW
 KRoute1HS:
 	db KANSAI_ROUTE_1, KANSAI_ROUTE_1_ITEMBALL, SHOW
 KRoute2HS:
@@ -323,6 +334,8 @@ EvergreenWoodsHS:
 	db EVERGREEN_WOODS, EVERGREEN_WOODS_POTION, SHOW
 	db EVERGREEN_WOODS, EVERGREEN_WOODS_GREAT_BALL, SHOW
 	db EVERGREEN_WOODS, EVERGREEN_WOODS_LEAF_STONE, SHOW
+BellflowerPokecenterHS:
+	db BELLFLOWER_POKECENTER, BELLFLOWER_POKECENTER_ELMS_AIDE, HIDE
 ;end of list
 	db $FF, $01, SHOW ; end
 	assert_table_length NUM_KANSAI_HS_OBJECTS + 1

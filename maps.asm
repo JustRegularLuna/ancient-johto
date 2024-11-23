@@ -994,6 +994,10 @@ INCLUDE "data/maps/headers/SakuraTown.asm"
 INCLUDE "maps/kansai/SakuraTown.asm"
 SakuraTown_Blocks: INCBIN "maps/kansai/SakuraTown.blk"
 
+INCLUDE "data/maps/headers/BellflowerCity.asm"
+INCLUDE "maps/kansai/BellflowerCity.asm"
+BellflowerCity_Blocks: INCBIN "maps/kansai/BellflowerCity.blk"
+
 INCLUDE "data/maps/headers/KansaiRoute1.asm"
 INCLUDE "maps/kansai/KansaiRoute1.asm"
 KansaiRoute1_Blocks: INCBIN "maps/kansai/KansaiRoute1.blk"
@@ -1024,6 +1028,18 @@ ElmsLab_Blocks: INCBIN "maps/kansai/ElmsLab.blk"
 INCLUDE "data/maps/headers/MrPokemonsHouse.asm"
 INCLUDE "maps/kansai/MrPokemonsHouse.asm"
 MrPokemonsHouse_Blocks: INCBIN "maps/kansai/MrPokemonsHouse.blk"
+
+INCLUDE "data/maps/headers/BellflowerSchoolHouse.asm"
+INCLUDE "maps/kansai/BellflowerSchoolHouse.asm"
+BellflowerSchoolHouse_Blocks: INCBIN "maps/kansai/BellflowerSchoolHouse.blk"
+
+INCLUDE "data/maps/headers/BellflowerMuseum.asm"
+INCLUDE "maps/kansai/BellflowerMuseum.asm"
+BellflowerMuseum_Blocks: INCBIN "maps/kansai/BellflowerMuseum.blk"
+
+INCLUDE "data/maps/headers/KurtsHouse.asm"
+INCLUDE "maps/kansai/KurtsHouse.asm"
+KurtsHouse_Blocks: INCBIN "maps/kansai/KurtsHouse.blk"
 
 
 SECTION "Kansai Dungeons 1", ROMX
@@ -1075,6 +1091,15 @@ SakuraSecretHouse_Blocks:
 	INCBIN "maps/kansai/ElmsHouse.blk"
 
 
+SECTION "Kansai Traditional Houses", ROMX
+
+INCLUDE "data/maps/headers/BellflowerHouse.asm"
+INCLUDE "maps/kansai/BellflowerHouse.asm"
+
+BellflowerHouse_Blocks:
+	INCBIN "maps/kansai/BellflowerHouse.blk"
+
+
 SECTION "Kansai Pokecenters", ROMX
 
 INCLUDE "data/maps/headers/SilentPokecenter.asm"
@@ -1083,8 +1108,12 @@ INCLUDE "maps/kansai/SilentPokecenter.asm"
 INCLUDE "data/maps/headers/SakuraPokecenter.asm"
 INCLUDE "maps/kansai/SakuraPokecenter.asm"
 
+INCLUDE "data/maps/headers/BellflowerPokecenter.asm"
+INCLUDE "maps/kansai/BellflowerPokecenter.asm"
+
 SilentPokecenter_Blocks:
 SakuraPokecenter_Blocks:
+BellflowerPokecenter_Blocks:
 	INCBIN "maps/kansai/SilentPokecenter.blk"
 
 
@@ -1093,5 +1122,16 @@ SECTION "Kansai Marts", ROMX
 INCLUDE "data/maps/headers/SakuraMart.asm"
 INCLUDE "maps/kansai/SakuraMart.asm"
 
+INCLUDE "data/maps/headers/BellflowerMart.asm"
+INCLUDE "maps/kansai/BellflowerMart.asm"
+
 SakuraMart_Blocks:
+BellflowerMart_Blocks:
 	INCBIN "maps/kansai/SakuraMart.blk"
+
+
+SECTION "Kansai Gyms 1", ROMX
+
+INCLUDE "data/maps/headers/BellflowerGym.asm"
+INCLUDE "maps/kansai/BellflowerGym.asm"
+BellflowerGym_Blocks: INCBIN "maps/kansai/BellflowerGym.blk"

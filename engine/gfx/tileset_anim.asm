@@ -37,6 +37,7 @@ TilesetAnimPointers::
 	dw TilesetAnimNone          ; RADIO_TOWER
 	dw TilesetAnimNone          ; TRAIN_STATION
 	dw TilesetAnimNone          ; HIDEOUT
+	dw TilesetAnimNone          ; KANSAI_MUSEUM
 	assert_table_length NUM_TILESETS
 
 

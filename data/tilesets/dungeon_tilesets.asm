@@ -26,4 +26,6 @@ DungeonTilesets:
 	db TRAIN_STATION
 	db HIDEOUT
 	db GENERATOR
+	db HOUSE
+	db KANSAI_MUSEUM
 	db -1 ; end

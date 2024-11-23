@@ -96,6 +96,7 @@ KansaiMapSpriteSets:
 	table_width 1, KansaiMapSpriteSets
 	db $01 ; SILENT_HILLS
 	db $01 ; SAKURA_TOWN
+	db $02 ; BELLFLOWER_CITY
 	db $01 ; KANSAI_ROUTE_1
 	db $01 ; KANSAI_ROUTE_2
 	db $02 ; KANSAI_ROUTE_3

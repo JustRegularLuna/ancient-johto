@@ -218,3 +218,9 @@ SECTION "Hideout Tileset", ROMX
 
 Hideout_GFX::          INCBIN "gfx/tilesets/hideout.2bpp"
 Hideout_Block::        INCBIN "gfx/blocksets/hideout.bst"
+
+
+SECTION "Kansai Museum Tileset", ROMX
+
+KansaiMuseum_GFX::     INCBIN "gfx/tilesets/kansai_museum.2bpp"
+KansaiMuseum_Block::   INCBIN "gfx/blocksets/kansai_museum.bst"

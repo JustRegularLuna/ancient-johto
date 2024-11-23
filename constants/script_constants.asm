@@ -21,6 +21,7 @@ DEF SLOTS_SOMEONESKEYS EQU $ff
 ; TradeMons indexes (see data/events/trades.asm)
 	const_def
 	const TRADE_FOR_SPARKY
+	const TRADE_FOR_ROCKY
 DEF NUM_NPC_TRADES EQU const_value
 
 ; in game trade dialog sets
@@ -67,4 +68,5 @@ DEF OAKS_AIDE_REFUSED         EQU $ff
 	const FRUITTREE_KANSAI_ROUTE_2     ; 02
 	const FRUITTREE_EVERGREEN_WOODS    ; 03
 	const FRUITTREE_KANSAI_ROUTE_3     ; 04
+	const FRUITTREE_BELLFLOWER_CITY    ; 05
 DEF NUM_FRUIT_TREES EQU const_value - 1

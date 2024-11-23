@@ -33,7 +33,7 @@ PowerPlantName:      db "POWER PLANT@"
 ; Kansai Cities
 SilentHillsName:     db "SILENT HILLS@"
 SakuraTownName:      db "SAKURA TOWN@"
-VioletCityName:      db "VIOLET CITY@"
+BellflowerCityName:  db "BELLFLOWER CITY@"
 
 ; Kansai Landmarks
 EvergreenWoodsName:  db "EVERGREEN WOODS@"

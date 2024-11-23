@@ -55,4 +55,5 @@ KansaiTownMapOrder:
 	db KANSAI_ROUTE_2
 	db EVERGREEN_WOODS
 	db KANSAI_ROUTE_3
+	db BELLFLOWER_CITY
 KansaiTownMapOrderEnd:

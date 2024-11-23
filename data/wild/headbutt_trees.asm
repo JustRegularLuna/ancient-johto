@@ -45,6 +45,7 @@ KansaiTreeMonPointerTable:
 	table_width 2, KansaiTreeMonPointerTable
 	dw TreeMons1 ; SILENT_HILLS
 	dw TreeMons1 ; SAKURA_TOWN
+	dw TreeMons1 ; BELLFLOWER_CITY
 	dw TreeMons1 ; KANSAI_ROUTE_1
 	dw TreeMons1 ; KANSAI_ROUTE_2
 	dw TreeMons1 ; KANSAI_ROUTE_3

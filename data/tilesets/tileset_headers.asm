@@ -48,4 +48,5 @@ Tilesets:
 	tileset RadioTower_Block,       RadioTower_GFX,       RadioTower_Coll,       $FF,$FF,$FF, $FF, TILEANIM_NONE
 	tileset TrainStation_Block,     TrainStation_GFX,     TrainStation_Coll,     $FF,$FF,$FF, $FF, TILEANIM_NONE
 	tileset Hideout_Block,          Hideout_GFX,          Hideout_Coll,          $FF,$FF,$FF, $FF, TILEANIM_NONE
+	tileset KansaiMuseum_Block,     KansaiMuseum_GFX,     KansaiMuseum_Coll,     $FF,$FF,$FF, $FF, TILEANIM_NONE
 	assert_table_length NUM_TILESETS

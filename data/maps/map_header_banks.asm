@@ -258,6 +258,7 @@ KansaiMapHeaderBanks::
 	table_width 1, KansaiMapHeaderBanks
 	db BANK(SilentHills_h)
 	db BANK(SakuraTown_h)
+	db BANK(BellflowerCity_h)
 	db BANK(KansaiRoute1_h)
 	db BANK(KansaiRoute2_h)
 	db BANK(KansaiRoute3_h)
@@ -277,4 +278,11 @@ KansaiMapHeaderBanks::
 	db BANK(EvergreenWoodsSouthGate2F_h)
 	db BANK(EvergreenWoodsNorthGate_h)
 	db BANK(EvergreenWoods_h)
+	db BANK(BellflowerPokecenter_h)
+	db BANK(BellflowerMart_h)
+	db BANK(BellflowerGym_h)
+	db BANK(BellflowerSchoolHouse_h)
+	db BANK(BellflowerMuseum_h)
+	db BANK(BellflowerHouse_h)
+	db BANK(KurtsHouse_h)
 	assert_table_length NUM_KANSAI_MAPS

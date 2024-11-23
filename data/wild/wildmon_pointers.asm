@@ -256,6 +256,7 @@ KansaiWildDataPointers:
 	table_width 2, KansaiWildDataPointers
 	dw NoMons      ; SILENT_HILLS
 	dw NoMons      ; SAKURA_TOWN
+	dw NoMons      ; BELLFLOWER_CITY
 	dw KansaiRoute1Mons ; KANSAI_ROUTE_1
 	dw KansaiRoute2Mons ; KANSAI_ROUTE_2
 	dw KansaiRoute3Mons ; KANSAI_ROUTE_3
@@ -275,6 +276,13 @@ KansaiWildDataPointers:
 	dw NoMons      ; EVERGREEN_WOODS_SOUTH_GATE_2F
 	dw NoMons      ; EVERGREEN_WOODS_NORTH_GATE
 	dw EvergreenWoodsMons ; EVERGREEN_WOODS
+	dw NoMons      ; BELLFLOWER_POKECENTER
+	dw NoMons      ; BELLFLOWER_MART
+	dw NoMons      ; BELLFLOWER_GYM
+	dw NoMons      ; BELLFLOWER_SCHOOL_HOUSE
+	dw NoMons      ; BELLFLOWER_MUSEUM
+	dw NoMons      ; BELLFLOWER_HOUSE
+	dw NoMons      ; KURTS_HOUSE
 	assert_table_length NUM_KANSAI_MAPS
 	dw -1 ; end
 
