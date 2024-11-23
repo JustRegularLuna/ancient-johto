@@ -54,9 +54,9 @@ DisplayTitleScreen:
 	call DrawTitleGraphic
 
 ; Draw Ho-oh/Lugia
-	hlcoord 6, 8
-	lb bc, 8, 8
-	lb de, $1E, $08
+	hlcoord 7, 8
+	lb bc, 7, 7
+	lb de, $1E, $07
 	call DrawTitleGraphic
 
 ; Draw the dust

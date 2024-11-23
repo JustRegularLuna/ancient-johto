@@ -19,6 +19,7 @@ While this was a passion project, I couldn't have done it all on my own. Several
 ## Graphics
 
 * Gamefreak for sprites and tiles taken from Pokémon Red, Yellow, Gold, Crystal, and the SW97 Gold Demo.
+* Scarlax for the Lugia sprite on Silver's title screen.
 * SourApple for the Kanto forest/safari zone trees and stumps.
 * Tommo for the battle sprites for the female Rocket grunts, Blue, Imposter Oak, and Red.
 * Kabocha for the Rei sprite.
