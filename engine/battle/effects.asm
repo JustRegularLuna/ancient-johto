@@ -1626,8 +1626,8 @@ CheckForHex:
 	ldh a, [hWhoseTurn]
 	and a
 	jr z, .notEnemyTurn
-	ld a, [wEnemySelectedMove]
-	cp HEX
+	ld a, [wEnemyMoveEffect]
+	cp HEX_EFFECT
 	ret nz
 	ld a, [wBattleMonStatus]
 	and a
@@ -1639,8 +1639,8 @@ CheckForHex:
 	ld [hl], a
 	ret
 .notEnemyTurn
-	ld a, [wPlayerSelectedMove]
-	cp HEX
+	ld a, [wPlayerMoveEffect]
+	cp HEX_EFFECT
 	ret nz
 	ld a, [wEnemyMonStatus]
 	and a
@@ -1657,8 +1657,8 @@ CheckForElectroBall:
 	and a
 	jr z, .notEnemyTurn
 ; Enemy's Turn
-	ld a, [wEnemySelectedMove]
-	cp ELECTRO_BALL
+	ld a, [wEnemyMoveEffect]
+	cp ELECTRO_BALL_EFFECT
 	ret nz
 	ld de, wBattleMonSpeed ; player speed value
 	ld hl, wEnemyMonSpeed ; enemy speed value
@@ -1678,8 +1678,8 @@ CheckForElectroBall:
 	jp .done
 .notEnemyTurn
 ; Player's turn
-	ld a, [wPlayerSelectedMove]
-	cp ELECTRO_BALL
+	ld a, [wPlayerMoveEffect]
+	cp ELECTRO_BALL_EFFECT
 	ret nz
 	ld de, wBattleMonSpeed ; player speed value
 	ld hl, wEnemyMonSpeed ; enemy speed value
@@ -1705,8 +1705,8 @@ CheckForPresent:
 	ldh a, [hWhoseTurn]
 	and a
 	jr z, .notEnemyTurn
-	ld a, [wEnemySelectedMove]
-	cp PRESENT
+	ld a, [wEnemyMoveEffect]
+	cp PRESENT_EFFECT
 	ret nz
 	call BattleRandom
 	; a holds a random number
@@ -1725,8 +1725,8 @@ CheckForPresent:
 	ret
 
 .notEnemyTurn
-	ld a, [wPlayerSelectedMove]
-	cp PRESENT
+	ld a, [wPlayerMoveEffect]
+	cp PRESENT_EFFECT
 	ret nz
 	call BattleRandom
 	; a holds a random number

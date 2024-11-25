@@ -220,7 +220,7 @@ Moves:
 	move CONFUSION,    FLINCH_SIDE_EFFECT2,         30, GHOST,        100, 15 ; Astonish
 	move MEGA_PUNCH,   SWIFT_EFFECT,                60, GHOST,        100, 20 ; Shadow Punch
 	move SLASH,        NO_ADDITIONAL_EFFECT,        70, GHOST,        100, 15 ; Shadow Claw
-	move PSYCHIC_M,    NO_ADDITIONAL_EFFECT,        65, GHOST,        100, 10 ; Hex *** Stronger if foe has status ailment
+	move PSYCHIC_M,    HEX_EFFECT,                  65, GHOST,        100, 10 ; Hex
 	move BARRAGE,      POISON_SIDE_EFFECT2,         90, POISON,       100, 10 ; Sludge Bomb
 	move SURF,         POISON_SIDE_EFFECT1,         95, POISON,       100, 10 ; Sludge Wave
 	move MIST,         FREEZE_SIDE_EFFECT,          40, ICE,          100, 25 ; Powder Snow
@@ -231,7 +231,7 @@ Moves:
 	move THUNDERSHOCK, PARALYZE_SIDE_EFFECT2,       65, ELECTRIC,     100, 20 ; Spark
 	move THUNDER_WAVE, SWIFT_EFFECT,                60, ELECTRIC,     100, 20 ; Shock Wave
 	move THUNDERBOLT,  PARALYZE_SIDE_EFFECT2,      120, ELECTRIC,      50,  5 ; Zap Cannon
-	move THUNDER,      NO_ADDITIONAL_EFFECT,        80, ELECTRIC,     100, 10 ; Electro Ball *** Base Power depends on difference in speed
+	move THUNDER,      ELECTRO_BALL_EFFECT,         80, ELECTRIC,     100, 10 ; Electro Ball
 	move MEDITATE,     NO_ADDITIONAL_EFFECT,         0, NORMAL,       100, 40 ; Foresight *** TODO: Foresight effect
 	move LOVELY_KISS,  NO_ADDITIONAL_EFFECT,         0, NORMAL,       100, 15 ; Attract *** TODO: Attract effect
 	move LOVELY_KISS,  CONFUSION_EFFECT,             0, NORMAL,        75, 10 ; Sweet Kiss
@@ -245,7 +245,7 @@ Moves:
 	move SOLARBEAM,    HEAL_EFFECT,                  0, NORMAL,       100, 10 ; Moonlight
 	move SOFTBOILED,   HEAL_EFFECT,                  0, NORMAL,       100, 10 ; Milk Drink
 	move STRING_SHOT,  NO_ADDITIONAL_EFFECT,         0, BUG,          100, 10 ; Spider Web *** TODO: Mean Look effect
-	move BARRAGE,      SPECIAL_DAMAGE_EFFECT,        1, PSYCHIC_TYPE,  90, 15 ; Present *** Random base power of 120, 80, or 40
+	move BARRAGE,      PRESENT_EFFECT,               1, PSYCHIC_TYPE,  90, 15 ; Present
 	move BARRAGE,      SWIFT_EFFECT,                60, STEEL,        100, 20 ; Magnet Bomb
 	move GROWL,        SPECIAL_DOWN_SIDE_EFFECT,    90, BUG,          100, 10 ; Bug Buzz
 	move BLIZZARD,     NO_ADDITIONAL_EFFECT,        40, ICE,          100, 30 ; Ice Shard *** Priority +1
