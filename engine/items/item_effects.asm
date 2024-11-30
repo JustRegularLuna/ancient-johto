@@ -2855,7 +2855,8 @@ IsNextTileShoreOrWater:
 	and a
 	ret
 
-INCLUDE "data/tilesets/water_tilesets.asm"
+WaterTilesets:
+	INCLUDE "data/tilesets/water_tilesets.asm"
 
 ReadSuperRodData:
 ; return e = 2 if no fish on this map

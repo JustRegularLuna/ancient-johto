@@ -200,19 +200,7 @@ IsSurfTile:
 ; originally contained DOJO but that tileset does not exist in Red++
 ; just make sure this has all tilesets you want to surf in listed
 WaterTilesets2: ; Renamed from what Yenatch called it, since that had overlap errors
-	db KANTO
-	db FOREST
-	db GYM
-	db SHIP
-	db SHIP_PORT
-	db CAVERN
-	db FACILITY
-	db PLATEAU
-	db SILENT
-	db BELLFLOWER
-	db KANSAI_CAVE
-	db KANSAI_FOREST
-	db -1 ; end
+	INCLUDE "data/tilesets/water_tilesets.asm"
 
 IsCutTile:
 	ld a, [wCurMapTileset]

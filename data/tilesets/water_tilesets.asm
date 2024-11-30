@@ -1,5 +1,8 @@
-; tilesets with water
-WaterTilesets:
+; A list of all tilesets with water
+; This file is INCLUDEd twice:
+; - for WaterTilesets in engine/items/item_effects.asm
+; - for WaterTilesets2 in engine/overworld/field_moves.asm
+
 	db KANTO
 	db FOREST
 	db GYM
