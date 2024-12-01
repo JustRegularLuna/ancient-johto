@@ -493,7 +493,7 @@ HandleMovePriority:
 .noEnemyPriorityMove
 	ret
 
-INCLUDE "data/battle/priority_moves.asm"
+INCLUDE "data/moves/priority_moves.asm"
 
 HandlePoisonBurnLeechSeed:
 	ld hl, wBattleMonHP
