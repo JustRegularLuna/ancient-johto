@@ -1043,6 +1043,9 @@ ChargeMoveEffectText:
 	cp SKY_ATTACK
 	ld hl, SkyAttackGlowingText
 	jr z, .gotText
+	cp AURORA_BEAM ; Moon Beam reuses Aurora Beam's animation
+	ld hl, SkyAttackGlowingText
+	jr z, .gotText
 	cp FLY
 	ld hl, FlewUpHighText
 	jr z, .gotText
