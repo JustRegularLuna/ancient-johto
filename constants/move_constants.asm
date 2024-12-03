@@ -182,8 +182,8 @@
 	const MUD_SLAP     ; ae
 	const DYNAMICPUNCH ; af
 	const GIGA_DRAIN   ; b0
-	const FEINT_ATTACK ; b1
-	const MOON_BEAM    ; b2
+	const SHURIKEN     ; b1
+	const DARK_ENERGY  ; b2
 	const DRAGONBREATH ; b3
 	const TWISTER      ; b4
 	const OUTRAGE      ; b5
@@ -197,14 +197,14 @@
 	const WHIRLPOOL    ; bd
 	const OCTAZOOKA    ; be
 	const SPARK        ; bf
-	const ZAP_CANNON   ; c0
+	const POWER_SURGE  ; c0
 	const FORESIGHT    ; c1
 	const ATTRACT      ; c2
 	const SWEET_KISS   ; c3
 	const CHARM        ; c4
 	const EXTREMESPEED ; c5
 	const SCARY_FACE   ; c6
-	const MEAN_LOOK    ; c7
+	const STING_BLADE  ; c7
 	const SNORE        ; c8
 	const SLEEP_TALK   ; c9
 	const SYNTHESIS    ; ca

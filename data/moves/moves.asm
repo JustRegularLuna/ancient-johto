@@ -187,8 +187,8 @@ Moves:
 	move SAND_ATTACK,  ACCURACY_DOWN_SIDE_EFFECT,   20, GROUND,       100, 10 ; Mud-Slap
 	move MEGA_PUNCH,   DYNAMICPUNCH_EFFECT,        100, FIGHTING,      50,  5 ; Dynamicpunch
 	move MEGA_DRAIN,   DRAIN_HP_EFFECT,             75, GRASS,        100, 10 ; Giga Drain
-	move QUICK_ATTACK, SWIFT_EFFECT,                60, DARK,         100, 20 ; Feint Attack
-	move AURORA_BEAM,  CHARGE_EFFECT,              120, DARK,         100, 10 ; Moon Beam
+	move SWIFT,        SWIFT_EFFECT,                60, DARK,         100, 20 ; Shuriken
+	move AURORA_BEAM,  CHARGE_EFFECT,              120, DARK,         100, 10 ; Dark Energy
 	move FLAMETHROWER, PARALYZE_SIDE_EFFECT1,       60, DRAGON,       100, 20 ; Dragonbreath
 	move SONICBOOM,    FLINCH_SIDE_EFFECT1,         40, DRAGON,       100, 20 ; Twister
 	move RAGE,         THRASH_PETAL_DANCE_EFFECT,  120, DRAGON,       100, 10 ; Outrage
@@ -202,14 +202,14 @@ Moves:
 	move GUST,         TRAPPING_EFFECT,             35, WATER,         85, 15 ; Whirlpool
 	move SLUDGE,       ACCURACY_DOWN_SIDE_EFFECT,   65, WATER,         85, 10 ; Octazooka
 	move THUNDERSHOCK, PARALYZE_SIDE_EFFECT2,       65, ELECTRIC,     100, 20 ; Spark
-	move THUNDERBOLT,  PARALYZE_SIDE_EFFECT2,      120, ELECTRIC,      50,  5 ; Zap Cannon
+	move THUNDER,      HYPER_BEAM_EFFECT,          150, ELECTRIC,      90,  5 ; Power Surge
 	move MEDITATE,     NO_ADDITIONAL_EFFECT,         0, NORMAL,       100, 40 ; Foresight *** TODO: Foresight effect
 	move LOVELY_KISS,  NO_ADDITIONAL_EFFECT,         0, NORMAL,       100, 15 ; Attract *** TODO: Attract effect
 	move LOVELY_KISS,  CONFUSION_EFFECT,             0, NORMAL,        75, 10 ; Sweet Kiss
 	move LOVELY_KISS,  ATTACK_DOWN2_EFFECT,          0, NORMAL,       100, 20 ; Charm
 	move QUICK_ATTACK, NO_ADDITIONAL_EFFECT,        80, NORMAL,       100,  5 ; Extremespeed *** +2 Priority
 	move GLARE,        SPEED_DOWN2_EFFECT,           0, NORMAL,       100, 10 ; Scary Face
-	move GLARE,        NO_ADDITIONAL_EFFECT,         0, NORMAL,       100,  5 ; Mean Look *** TODO: Mean Look effect
+	move CUT,          POISON_SIDE_EFFECT2,         95, POISON,       100, 15 ; Sting Blade
 	move GROWL,        FLINCH_SIDE_EFFECT2,         50, NORMAL,       100, 15 ; Snore *** TODO: Only usable while asleep
 	move GROWL,        NO_ADDITIONAL_EFFECT,         0, NORMAL,       100, 10 ; Sleep Talk *** TODO: Sleep Talk effect
 	move RECOVER,      HEAL_EFFECT,                  0, GRASS,        100, 10 ; Synthesis
