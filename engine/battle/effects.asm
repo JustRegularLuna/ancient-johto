@@ -1570,6 +1570,52 @@ HoneClawsEffect:
 	ld [wPlayerMoveEffect], a
 	jp StatModifierUpEffect
 
+BulkUpEffect:
+	ldh a, [hWhoseTurn]
+	and a
+	jr z, .notEnemyTurn
+; Enemy's turn
+	ld a, ATTACK_UP1_EFFECT
+	ld [wEnemyMoveEffect], a
+	call StatModifierUpEffect
+	xor a
+	ld [wEnemyMoveNum], a
+	ld a, DEFENSE_UP1_EFFECT
+	ld [wEnemyMoveEffect], a
+	jp StatModifierUpEffect
+.notEnemyTurn
+	ld a, ATTACK_UP1_EFFECT
+	ld [wPlayerMoveEffect], a
+	call StatModifierUpEffect
+	xor a
+	ld [wPlayerMoveNum], a
+	ld a, DEFENSE_UP1_EFFECT
+	ld [wPlayerMoveEffect], a
+	jp StatModifierUpEffect
+
+GrowthEffect:
+	ldh a, [hWhoseTurn]
+	and a
+	jr z, .notEnemyTurn
+; Enemy's turn
+	ld a, ATTACK_UP1_EFFECT
+	ld [wEnemyMoveEffect], a
+	call StatModifierUpEffect
+	xor a
+	ld [wEnemyMoveNum], a
+	ld a, SPECIAL_UP1_EFFECT
+	ld [wEnemyMoveEffect], a
+	jp StatModifierUpEffect
+.notEnemyTurn
+	ld a, ATTACK_UP1_EFFECT
+	ld [wPlayerMoveEffect], a
+	call StatModifierUpEffect
+	xor a
+	ld [wPlayerMoveNum], a
+	ld a, SPECIAL_UP1_EFFECT
+	ld [wPlayerMoveEffect], a
+	jp StatModifierUpEffect
+
 AttackUpSideEffect2:
 ; 20% chance to boost stat
 	call BattleRandom

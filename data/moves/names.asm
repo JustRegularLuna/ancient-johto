@@ -225,4 +225,11 @@ MoveNames::
 	li "BANSHEE WAIL"
 	li "HAIL BARRAGE"
 	li "LAVA SURGE"
+	li "ROCK CANNON"
+	li "ROCK HEAD"
+	li "SHADOWSTRIKE"
+	li "SNEAK ATTACK"
+	li "NOBLE SPIRIT"
+	li "INVIGORATE"
+	li "MACH PUNCH"
 	assert_list_length NUM_ATTACKS

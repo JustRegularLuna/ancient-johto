@@ -83,7 +83,7 @@ Moves:
 	move ABSORB,       DRAIN_HP_EFFECT,             20, GRASS,        100, 20
 	move MEGA_DRAIN,   DRAIN_HP_EFFECT,             40, GRASS,        100, 10
 	move LEECH_SEED,   LEECH_SEED_EFFECT,            0, GRASS,         90, 10
-	move GROWTH,       SPECIAL_UP1_EFFECT,           0, NORMAL,       100, 40
+	move GROWTH,       ATTACK_SPECIAL_UP_EFFECT,     0, NORMAL,       100, 40
 	move RAZOR_LEAF,   NO_ADDITIONAL_EFFECT,        55, GRASS,         95, 25
 	move SOLARBEAM,    CHARGE_EFFECT,              120, GRASS,        100, 10
 	move POISONPOWDER, POISON_EFFECT,                0, POISON,        75, 35
@@ -222,7 +222,7 @@ Moves:
 	move BARRAGE,      TWO_TO_FIVE_ATTACKS_EFFECT,  20, FIRE,         100, 15 ; Fireball
 	move PSYCHIC_M,    HEX_EFFECT,                  65, DARK,         100, 10 ; Dark Mind
 	move SLASH,        NO_ADDITIONAL_EFFECT,        70, GHOST,        100, 20 ; Phantom Claw *** Increased Crit Chance
-	move CUT,          HEX_EFFECT,                  65, GHOST,        100, 10 ; Nail Down
+	move PIN_MISSILE,  HEX_EFFECT,                  65, GHOST,        100, 10 ; Nail Down
 	move THUNDER,      ELECTRO_BALL_EFFECT,         60, ELECTRIC,     100, 10 ; Surprise Zap
 	move BITE,         TWO_TO_FIVE_ATTACKS_EFFECT,  20, DARK,         100, 15 ; Gnaw
 	move MEDITATE,     HONE_CLAWS_EFFECT,            0, NORMAL,       100, 15 ; Hyper Focus
@@ -236,4 +236,11 @@ Moves:
 	move SCREECH,      FLINCH_SIDE_EFFECT2,         30, GHOST,        100, 15 ; Banshee Wail
 	move MIST,         TWO_TO_FIVE_ATTACKS_EFFECT,  25, ICE,          100, 30 ; Hail Barrage
 	move SURF,         BURN_SIDE_EFFECT2,           80, FIRE,         100, 15 ; Lava Surge
+	move ROCK_THROW,   TWO_TO_FIVE_ATTACKS_EFFECT,  25, ROCK,         100, 30 ; Rock Cannon
+	move HEADBUTT,     FLINCH_SIDE_EFFECT2,         70, ROCK,         100, 15 ; Rock Head
+	move QUICK_ATTACK, NO_ADDITIONAL_EFFECT,        40, GHOST,        100, 30 ; Shadowstrike *** +1 Priority
+	move QUICK_ATTACK, NO_ADDITIONAL_EFFECT,        40, DARK,         100, 30 ; Sneak Attack *** +1 Priority
+	move MEDITATE,     ATTACK_DEFENSE_UP_EFFECT,     0, NORMAL,       100, 20 ; Noble Spirit
+	move GROWTH,       ATTACK_SPECIAL_UP_EFFECT,     0, NORMAL,       100, 40 ; Invigorate
+	move MEGA_PUNCH,   NO_ADDITIONAL_EFFECT,        40, FIGHTING,     100, 30 ; Mach Punch *** +1 Priority
 	assert_table_length NUM_ATTACKS

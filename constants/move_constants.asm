@@ -231,6 +231,13 @@
 	const BANSHEE_WAIL ; df
 	const HAIL_BARRAGE ; e0
 	const LAVA_SURGE   ; e1
+	const ROCK_CANNON  ; e2
+	const ROCK_HEAD    ; e3
+	const SHADOWSTRIKE ; e4
+	const SNEAK_ATTACK ; e5
+	const NOBLE_SPIRIT ; e6
+	const INVIGORATE   ; e7
+	const MACH_PUNCH   ; e8
 DEF NUM_ATTACKS EQU const_value - 1
 
 	; Moves do double duty as animation identifiers.

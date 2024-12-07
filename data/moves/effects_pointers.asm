@@ -74,8 +74,8 @@ MoveEffectPointerTable:
 	dw StatModifierDownEffect    ; SPECIAL_DOWN_SIDE_EFFECT
 	dw StatModifierDownEffect    ; ACCURACY_DOWN_SIDE_EFFECT
 	dw StatModifierDownEffect    ; EVASION_DOWN_SIDE_EFFECT
-	dw StatModifierDownEffect    ; unused effect
-	dw StatModifierDownEffect    ; unused effect
+	dw BulkUpEffect              ; BULK_UP_EFFECT
+	dw GrowthEffect              ; GROWTH_EFFECT
 	dw ConfusionSideEffect       ; CONFUSION_SIDE_EFFECT
 	dw TwoToFiveAttacksEffect    ; TWINEEDLE_EFFECT
 	dw NULL                      ; PRESENT_EFFECT * handled elsewhere
