@@ -222,7 +222,7 @@ MoveNames::
 	li "SPIN KICK"
 	li "FLOWER DANCE"
 	li "DIGITIZE"
-	li "BANSHEE WAIL"
+	li "BANSHEE CRY"
 	li "HAIL BARRAGE"
 	li "LAVA SURGE"
 	li "ROCK CANNON"
@@ -232,4 +232,5 @@ MoveNames::
 	li "NOBLE SPIRIT"
 	li "INVIGORATE"
 	li "MACH PUNCH"
+	li "WINDSTORM"
 	assert_list_length NUM_ATTACKS

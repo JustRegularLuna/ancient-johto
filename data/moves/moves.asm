@@ -219,28 +219,29 @@ Moves:
 	move PSYCHIC_M,    CHARGE_EFFECT,              140, CURSE_TYPE,   100, 10 ; Time Rend
 	move LIGHT_SCREEN, NO_ADDITIONAL_EFFECT,         1, PSYCHIC_TYPE, 100, 20 ; Mirror Coat *** Effect is special-cased in battle engine, like Counter
 	move STRING_SHOT,  TRAPPING_EFFECT,             35, BUG,           85, 15 ; Web Trap
-	move BARRAGE,      TWO_TO_FIVE_ATTACKS_EFFECT,  20, FIRE,         100, 15 ; Fireball
+	move BARRAGE,      TWO_TO_FIVE_ATTACKS_EFFECT,  25, FIRE,         100, 15 ; Fireball
 	move PSYCHIC_M,    HEX_EFFECT,                  65, DARK,         100, 10 ; Dark Mind
 	move SLASH,        NO_ADDITIONAL_EFFECT,        70, GHOST,        100, 20 ; Phantom Claw *** Increased Crit Chance
 	move PIN_MISSILE,  HEX_EFFECT,                  65, GHOST,        100, 10 ; Nail Down
 	move THUNDER,      ELECTRO_BALL_EFFECT,         60, ELECTRIC,     100, 10 ; Surprise Zap
-	move BITE,         TWO_TO_FIVE_ATTACKS_EFFECT,  20, DARK,         100, 15 ; Gnaw
+	move BITE,         TWO_TO_FIVE_ATTACKS_EFFECT,  25, DARK,         100, 15 ; Gnaw
 	move MEDITATE,     HONE_CLAWS_EFFECT,            0, NORMAL,       100, 15 ; Hyper Focus
 	move CUT,          NO_ADDITIONAL_EFFECT,        20, BUG,           95, 20 ; Fury Cutter *** TODO: Fury Cutter Effect
-	move BONE_CLUB,    TWO_TO_FIVE_ATTACKS_EFFECT,  25, GROUND,        90, 10 ; Bone Rush
+	move BONE_CLUB,    TWO_TO_FIVE_ATTACKS_EFFECT,  25, GROUND,       100, 15 ; Bone Rush
 	move BITE,         POISON_SIDE_EFFECT2,         60, POISON,       100, 25 ; Venom Bite
 	move SPORE,        SPEED_DOWN2_EFFECT,           0, GRASS,        100, 40 ; Cotton Spore
-	move DOUBLE_KICK,  TWO_TO_FIVE_ATTACKS_EFFECT,  20, FIGHTING,     100, 15 ; Spin Kick
+	move DOUBLE_KICK,  TWO_TO_FIVE_ATTACKS_EFFECT,  25, FIGHTING,     100, 15 ; Spin Kick
 	move PETAL_DANCE,  ANCIENTPOWER_EFFECT,         60, GRASS,        100,  5 ; Flower Dance
 	move CONVERSION,   ANCIENTPOWER_EFFECT,         60, NORMAL,       100,  5 ; Digitize
-	move SCREECH,      FLINCH_SIDE_EFFECT2,         30, GHOST,        100, 15 ; Banshee Wail
-	move MIST,         TWO_TO_FIVE_ATTACKS_EFFECT,  25, ICE,          100, 30 ; Hail Barrage
-	move SURF,         BURN_SIDE_EFFECT2,           80, FIRE,         100, 15 ; Lava Surge
-	move ROCK_THROW,   TWO_TO_FIVE_ATTACKS_EFFECT,  25, ROCK,         100, 30 ; Rock Cannon
+	move SCREECH,      FLINCH_SIDE_EFFECT2,         40, GHOST,        100, 15 ; Banshee Cry
+	move MIST,         TWO_TO_FIVE_ATTACKS_EFFECT,  25, ICE,          100, 15 ; Hail Barrage
+	move SURF,         BURN_SIDE_EFFECT2,           95, FIRE,         100, 15 ; Lava Surge
+	move ROCK_THROW,   TWO_TO_FIVE_ATTACKS_EFFECT,  25, ROCK,         100, 15 ; Rock Cannon
 	move HEADBUTT,     FLINCH_SIDE_EFFECT2,         70, ROCK,         100, 15 ; Rock Head
 	move QUICK_ATTACK, NO_ADDITIONAL_EFFECT,        40, GHOST,        100, 30 ; Shadowstrike *** +1 Priority
 	move QUICK_ATTACK, NO_ADDITIONAL_EFFECT,        40, DARK,         100, 30 ; Sneak Attack *** +1 Priority
 	move MEDITATE,     ATTACK_DEFENSE_UP_EFFECT,     0, NORMAL,       100, 20 ; Noble Spirit
 	move GROWTH,       ATTACK_SPECIAL_UP_EFFECT,     0, NORMAL,       100, 40 ; Invigorate
 	move MEGA_PUNCH,   NO_ADDITIONAL_EFFECT,        40, FIGHTING,     100, 30 ; Mach Punch *** +1 Priority
+	move WHIRLWIND,    CONFUSION_SIDE_EFFECT,      120, FLYING,        70, 10 ; Windstorm
 	assert_table_length NUM_ATTACKS

@@ -228,7 +228,7 @@
 	const SPIN_KICK    ; dc
 	const FLOWER_DANCE ; dd
 	const DIGITIZE     ; de
-	const BANSHEE_WAIL ; df
+	const BANSHEE_CRY  ; df
 	const HAIL_BARRAGE ; e0
 	const LAVA_SURGE   ; e1
 	const ROCK_CANNON  ; e2
@@ -238,6 +238,7 @@
 	const NOBLE_SPIRIT ; e6
 	const INVIGORATE   ; e7
 	const MACH_PUNCH   ; e8
+	const WINDSTORM    ; e9
 DEF NUM_ATTACKS EQU const_value - 1
 
 	; Moves do double duty as animation identifiers.
