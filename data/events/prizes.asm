@@ -55,13 +55,13 @@ ENDC
 	db "@"
 
 PrizeMenuTMsEntries:
-	db TM_DRAGON_RAGE
-	db TM_HYPER_BEAM
-	db TM_SUBSTITUTE
+	db TM_FIRE_PUNCH
+	db TM_ICE_PUNCH
+	db TM_THUNDERPUNCH
 	db "@"
 
 PrizeMenuTMsCost:
 	coins 3300
-	coins 5500
-	coins 7700
+	coins 3300
+	coins 3300
 	db "@"

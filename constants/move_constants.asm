@@ -239,6 +239,7 @@
 	const INVIGORATE   ; e7
 	const MACH_PUNCH   ; e8
 	const WINDSTORM    ; e9
+	const IRON_FIST    ; ea
 DEF NUM_ATTACKS EQU const_value - 1
 
 	; Moves do double duty as animation identifiers.

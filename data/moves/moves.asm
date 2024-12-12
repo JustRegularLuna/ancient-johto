@@ -238,10 +238,11 @@ Moves:
 	move SURF,         BURN_SIDE_EFFECT2,           95, FIRE,         100, 15 ; Lava Surge
 	move ROCK_THROW,   TWO_TO_FIVE_ATTACKS_EFFECT,  25, ROCK,         100, 15 ; Rock Cannon
 	move HEADBUTT,     FLINCH_SIDE_EFFECT2,         70, ROCK,         100, 15 ; Rock Head
-	move QUICK_ATTACK, NO_ADDITIONAL_EFFECT,        40, GHOST,        100, 30 ; Shadowstrike *** +1 Priority
-	move QUICK_ATTACK, NO_ADDITIONAL_EFFECT,        40, DARK,         100, 30 ; Sneak Attack *** +1 Priority
+	move QUICK_ATTACK, NO_ADDITIONAL_EFFECT,        60, GHOST,        100, 20 ; Shadowstrike *** +1 Priority
+	move QUICK_ATTACK, NO_ADDITIONAL_EFFECT,        60, DARK,         100, 20 ; Sneak Attack *** +1 Priority
 	move MEDITATE,     ATTACK_DEFENSE_UP_EFFECT,     0, NORMAL,       100, 20 ; Noble Spirit
 	move GROWTH,       ATTACK_SPECIAL_UP_EFFECT,     0, NORMAL,       100, 40 ; Invigorate
 	move MEGA_PUNCH,   NO_ADDITIONAL_EFFECT,        40, FIGHTING,     100, 30 ; Mach Punch *** +1 Priority
 	move WHIRLWIND,    CONFUSION_SIDE_EFFECT,      120, FLYING,        70, 10 ; Windstorm
+	move MEGA_PUNCH,   NO_ADDITIONAL_EFFECT,        60, STEEL,        100, 20 ; Iron Fist
 	assert_table_length NUM_ATTACKS

@@ -233,4 +233,5 @@ MoveNames::
 	li "INVIGORATE"
 	li "MACH PUNCH"
 	li "WINDSTORM"
+	li "IRON FIST"
 	assert_list_length NUM_ATTACKS
