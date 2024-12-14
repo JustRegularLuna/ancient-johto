@@ -202,18 +202,18 @@ ShowMoveInfo:
 	lb bc, 5, 18
 	call TextBoxBorder
 	; show the move's name on the top
-	hlcoord 1, 1
+	hlcoord 4, 0
 	ld de, wcf4b
 	call PlaceString
 	; move info labels
-	hlcoord 1, 3
+	hlcoord 1, 1
 	ld de, MoveInfoLabels
 	call PlaceString
 	; place the move's type
-	hlcoord 7, 3
+	hlcoord 7, 1
 	predef PrintBufferedMoveType
 	; place the move's power
-	hlcoord 6, 5
+	hlcoord 6, 2
 	ld de, wBuffer + 2
 	ld a, [de]
 	cp 1
@@ -234,9 +234,10 @@ ShowMoveInfo:
 	call ConvertPercentages
 	ld [wBuffer + 6], a ; after the actual move data
 	ld de, wBuffer + 6
-	hlcoord 15, 5
+	hlcoord 15, 2
 	lb bc, 1, 3
 	call PrintNumber
+	farcall PrintMoveDescription
 	ret
 
 ; This converts values out of 256 into a value
@@ -333,7 +334,7 @@ HMCantDeleteText:
 
 MoveInfoLabels:
 	db   "TYPE:"
-	next "PWR:     ACC:"
+	feed "PWR:     ACC:    %"
 	db "@"
 
 NullMoveInfoLabel:

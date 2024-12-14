@@ -752,3 +752,8 @@ INCLUDE "gfx/version.asm"
 SECTION "Tileset Collision Data", ROMX
 
 INCLUDE "engine/overworld/collision.asm"
+
+
+SECTION "Move Descriptions", ROMX
+
+INCLUDE "engine/pokemon/move_descriptions.asm"
