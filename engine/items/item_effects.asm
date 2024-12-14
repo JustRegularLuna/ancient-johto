@@ -892,18 +892,16 @@ ItemUseMedicine:
 	ld a, [wcf91]
 	cp PSNCUREBERRY
 	jr nc, .cureStatusAilment
-	cp BERRY
+	cp FRESH_WATER
 	jp nc, .healHP
-	cp REVIVE
-	jp nc, .healHP ; if it's a Revive or Max Revive
-	cp FULL_HEAL
-	jr z, .cureStatusAilment ; if it's a Full Heal
-	cp MIRACLEBERRY
-	jr z, .cureStatusAilment
 	cp HP_UP
 	jp nc, .useVitamin ; if it's a vitamin or Rare Candy
+	cp REVIVE
+	jp nc, .healHP ; if it's a Revive or Max Revive
 	cp FULL_RESTORE
 	jp nc, .healHP ; if it's a Full Restore or one of the potions
+	cp ANTIDOTE
+	jr nc, .cureStatusAilment ; if it's a Full Heal
 ; fall through if it's one of the status-specific healing items
 .cureStatusAilment
 	ld bc, wPartyMon1Status - wPartyMon1
