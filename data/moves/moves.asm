@@ -177,7 +177,7 @@ Moves:
 	move STRUGGLE,     RECOIL_EFFECT,               50, CURSE_TYPE,   100, 10
 	; moves below this point reuse attack animations from earlier moves
 	move MIMIC,        MIMIC_EFFECT,                 0, NORMAL,       100, 10 ; Sketch *** TODO: Sketch Effect (just a copy of Mimic for now)
-	move AURORA_BEAM,  NO_ADDITIONAL_EFFECT,       100, FLYING,       100,  5 ; Aeroblast
+	move AURORA_BEAM,  NO_ADDITIONAL_EFFECT,       100, FLYING,       100,  5 ; Aeroblast *** Increased Crit Chance
 	move FIRE_BLAST,   BURN_SIDE_EFFECT2,          100, FIRE,         100,  5 ; Sacred Fire *** TODO: Also thaws user
 	move FIRE_SPIN,    BURN_SIDE_EFFECT1,           60, FIRE,         100, 25 ; Flame Wheel *** TODO: Also thaws user
 	move MEDITATE,     NO_ADDITIONAL_EFFECT,        60, CURSE_TYPE,   100, 15 ; Hidden Power *** Type varies by IVs

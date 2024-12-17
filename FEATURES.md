@@ -10,7 +10,8 @@ These are notable features which have been added
 * Running Shoes (2x faster than walking)
 * Faster Surfing(2x faster than walking)
 * Faster Bicycle(4x faster than walking)
-* Dark & Steel types added, type chart updated.
+* Dark & Steel types added, type chart updated
+* Added an Attack Info pop-up when learning a new attack
 * New evolution methods added when needed
 * Berry Trees (working off of a step counter)
 * New trainer classes added (all classes from Gen 1, 2, and SW97 are represented)
