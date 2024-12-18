@@ -167,8 +167,8 @@ MoveDescriptions::
 	dw SubstituteDescription
 	dw StruggleDescription
 	dw SketchDescription
-	dw AeroblastDescription
-	dw SacredFireDescription
+	dw TidalScreamDescription
+	dw FirestormDescription
 	dw FlameWheelDescription
 	dw HiddenPowerDescription
 	dw AncientpowerDescription
@@ -235,6 +235,7 @@ MoveDescriptions::
 	dw MachPunchDescription
 	dw WindstormDescription
 	dw IronFistDescription
+	dw JigOWattsDescription
 	assert_table_length NUM_ATTACKS
 
 
@@ -902,11 +903,11 @@ SketchDescription:
 	db   "Copies the foe's"
 	feed "move permanently.@"
 
-AeroblastDescription:
+TidalScreamDescription:
 	db   "Has a high criti-"
 	feed "cal hit ratio.@"
 
-SacredFireDescription:
+FirestormDescription:
 	db   "An attack that may"
 	feed "inflict a burn.@"
 
@@ -1173,3 +1174,7 @@ WindstormDescription:
 IronFistDescription:
 	db   "A powerful first-"
 	feed "strike move.@"
+
+JigOWattsDescription:
+	db   "Works 2-3 turns"
+	feed "and confuses user.@"

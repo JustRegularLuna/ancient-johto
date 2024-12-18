@@ -177,8 +177,8 @@ Moves:
 	move STRUGGLE,     RECOIL_EFFECT,               50, CURSE_TYPE,   100, 10
 	; moves below this point reuse attack animations from earlier moves
 	move MIMIC,        MIMIC_EFFECT,                 0, NORMAL,       100, 10 ; Sketch *** TODO: Sketch Effect (just a copy of Mimic for now)
-	move AURORA_BEAM,  NO_ADDITIONAL_EFFECT,       100, FLYING,       100,  5 ; Aeroblast *** Increased Crit Chance
-	move FIRE_BLAST,   BURN_SIDE_EFFECT2,          100, FIRE,         100,  5 ; Sacred Fire *** TODO: Also thaws user
+	move ROAR,         NO_ADDITIONAL_EFFECT,       140, WATER,        100, 10 ; Tidal Scream *** Increased Crit Chance
+	move HAZE,         BURN_SIDE_EFFECT2,          140, FIRE,         100, 10 ; Firestorm *** TODO: Also thaws user
 	move FIRE_SPIN,    BURN_SIDE_EFFECT1,           60, FIRE,         100, 25 ; Flame Wheel *** TODO: Also thaws user
 	move MEDITATE,     NO_ADDITIONAL_EFFECT,        60, CURSE_TYPE,   100, 15 ; Hidden Power *** Type varies by IVs
 	move ROCK_THROW,   ANCIENTPOWER_EFFECT,         60, ROCK,         100,  5 ; Ancientpower
@@ -245,4 +245,5 @@ Moves:
 	move MEGA_PUNCH,   NO_ADDITIONAL_EFFECT,        40, FIGHTING,     100, 30 ; Mach Punch *** +1 Priority
 	move WHIRLWIND,    CONFUSION_SIDE_EFFECT,      120, FLYING,        70, 10 ; Windstorm
 	move MEGA_PUNCH,   NO_ADDITIONAL_EFFECT,        60, STEEL,        100, 20 ; Iron Fist *** +2 Priority
+	move TAIL_WHIP,    THRASH_PETAL_DANCE_EFFECT,  120, ELECTRIC,     100, 10 ; Jig-o-Watts
 	assert_table_length NUM_ATTACKS

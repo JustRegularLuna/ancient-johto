@@ -173,8 +173,8 @@
 	const SUBSTITUTE   ; a4
 	const STRUGGLE     ; a5
 	const SKETCH       ; a6
-	const AEROBLAST    ; a7
-	const SACRED_FIRE  ; a8
+	const TIDAL_SCREAM ; a7
+	const FIRESTORM    ; a8
 	const FLAME_WHEEL  ; a9
 	const HIDDEN_POWER ; aa
 	const ANCIENTPOWER ; ab
@@ -241,6 +241,7 @@
 	const MACH_PUNCH   ; e8
 	const WINDSTORM    ; e9
 	const IRON_FIST    ; ea
+	const JIG_O_WATTS  ; eb
 DEF NUM_ATTACKS EQU const_value - 1
 
 	; Moves do double duty as animation identifiers.

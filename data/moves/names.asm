@@ -166,8 +166,8 @@ MoveNames::
 	li "SUBSTITUTE"
 	li "STRUGGLE"
 	li "SKETCH"
-	li "AEROBLAST"
-	li "SACRED FIRE"
+	li "TIDAL SCREAM"
+	li "FIRESTORM"
 	li "FLAME WHEEL"
 	li "HIDDEN POWER"
 	li "ANCIENTPOWER"
@@ -234,4 +234,5 @@ MoveNames::
 	li "MACH PUNCH"
 	li "WINDSTORM"
 	li "IRON FIST"
+	li "JIG-O-WATTS"
 	assert_list_length NUM_ATTACKS

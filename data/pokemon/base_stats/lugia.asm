@@ -3,7 +3,7 @@
 	db 106,  90, 130, 110, 154
 	;   hp  atk  def  spd  spc
 
-	db PSYCHIC_TYPE, FLYING ; type
+	db WATER, FLYING ; type
 	db 3 ; catch rate
 	db 64 ; base exp
 
