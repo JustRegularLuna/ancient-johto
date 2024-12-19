@@ -2629,7 +2629,7 @@ SelectMenuItem:
 	jr z, .battleselect
 	dec a
 	jr nz, .select
-	hlcoord 1, 14
+	hlcoord 1, 6
 	ld de, WhichTechniqueString
 	call PlaceString
 	jr .select
@@ -2727,7 +2727,7 @@ MoveDisabledText:
 	text_end
 
 WhichTechniqueString:
-	db "WHICH TECHNIQUE?@"
+	db "WHICH MOVE?@"
 
 SelectMenuItem_CursorUp:
 	ld a, [wCurrentMenuItem]

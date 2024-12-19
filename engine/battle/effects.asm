@@ -1265,6 +1265,7 @@ MimicEffect:
 	ld b, $0
 	add hl, bc
 	ld d, [hl]
+	call TrySketchingMove
 	pop af
 	ld hl, wBattleMonMoves
 .playerTurn
@@ -1280,6 +1281,32 @@ MimicEffect:
 	jp PrintText
 .mimicMissed
 	jp PrintButItFailedText_
+
+TrySketchingMove:
+	; Not in link battles
+	ld a, [wLinkState]
+	cp LINK_STATE_BATTLING
+	ret z
+	; Only needed for the player, not the enemy
+	ldh a, [hWhoseTurn]
+	and a
+	ret nz
+	; Only for SKETCH, not MIMIC
+	ld a, [wPlayerSelectedMove]
+	cp SKETCH
+	ret nz
+	; Permanently learn the move, don't just mimic it
+	ld a, [wPlayerMonNumber]
+	ld hl, wPartyMon1Moves
+	ld bc, wPartyMon2 - wPartyMon1
+	call AddNTimes
+	ld a, [wPlayerMoveListIndex]
+	ld c, a
+	ld b, 0
+	add hl, bc
+	ld a, d
+	ld [hl], d
+	ret
 
 MimicLearnedMoveText:
 	text_far _MimicLearnedMoveText
