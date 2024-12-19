@@ -167,7 +167,7 @@ MoveNames::
 	li "STRUGGLE"
 	li "SKETCH"
 	li "TIDAL SCREAM"
-	li "FIRESTORM"
+	li "FIRE STORM"
 	li "FLAME WHEEL"
 	li "HIDDEN POWER"
 	li "ANCIENTPOWER"

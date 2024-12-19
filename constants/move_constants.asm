@@ -174,7 +174,7 @@
 	const STRUGGLE     ; a5
 	const SKETCH       ; a6
 	const TIDAL_SCREAM ; a7
-	const FIRESTORM    ; a8
+	const FIRE_STORM   ; a8
 	const FLAME_WHEEL  ; a9
 	const HIDDEN_POWER ; aa
 	const ANCIENTPOWER ; ab

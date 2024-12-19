@@ -178,8 +178,8 @@ Moves:
 	; moves below this point reuse attack animations from earlier moves
 	move MIMIC,        MIMIC_EFFECT,                 0, NORMAL,       100, 10 ; Sketch *** TODO: Sketch Effect (just a copy of Mimic for now)
 	move ROAR,         NO_ADDITIONAL_EFFECT,       140, WATER,        100, 10 ; Tidal Scream *** Increased Crit Chance
-	move HAZE,         BURN_SIDE_EFFECT2,          140, FIRE,         100, 10 ; Firestorm *** TODO: Also thaws user
-	move FIRE_SPIN,    BURN_SIDE_EFFECT1,           60, FIRE,         100, 25 ; Flame Wheel *** TODO: Also thaws user
+	move HAZE,         BURN_SIDE_EFFECT2,          140, FIRE,         100, 10 ; Fire Storm *** Also thaws user
+	move FIRE_SPIN,    BURN_SIDE_EFFECT1,           60, FIRE,         100, 25 ; Flame Wheel *** Also thaws user
 	move MEDITATE,     NO_ADDITIONAL_EFFECT,        60, CURSE_TYPE,   100, 15 ; Hidden Power *** Type varies by IVs
 	move ROCK_THROW,   ANCIENTPOWER_EFFECT,         60, ROCK,         100,  5 ; Ancientpower
 	move TACKLE,       NO_ADDITIONAL_EFFECT,        30, ROCK,          90, 20 ; Rollout *** TODO: Rollout effect

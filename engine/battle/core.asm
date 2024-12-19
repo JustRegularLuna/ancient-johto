@@ -3335,18 +3335,22 @@ IsGhostBattle:
 	ret nz
 	ld a, [wCurRegion]
 	and a ; Kanto?
-	jr nz, .johtoChecks
+	jr nz, .kansaiChecks
 	; Kanto checks
 	ld a, [wCurMap]
 	cp POKEMON_TOWER_1F
 	jr c, .next
 	cp MR_FUJIS_HOUSE
 	jr nc, .next
+	jr .scopeCheck
+.kansaiChecks
+	; TODO: Add map checks for the ruins here, once they are mapped
+	; For now, just jump to .next for no ghost battles
+	jr .next
+.scopeCheck
 	ld b, SILPH_SCOPE
 	call IsItemInBag
 	ret z
-.johtoChecks
-	; TODO: Kansai ghost battle checks here
 .next
 	ld a, 1
 	and a
@@ -3385,12 +3389,35 @@ CheckPlayerStatusConditions:
 .FrozenCheck
 	bit FRZ, [hl] ; frozen?
 	jr z, .HeldInPlaceCheck
+	; check for moves that thaw the user
+	ld a, [wPlayerSelectedMove]
+	cp FLAME_WHEEL
+	jr z, .DefrostMon
+	cp FIRE_STORM
+	jr z, .DefrostMon
+	; chance to defrost naturally
+	call BattleRandom
+	cp 10 percent
+	jr c, .DefrostMon
+	; if none of those work, stay frozen
 	ld hl, IsFrozenText
 	call PrintText
 	xor a
 	ld [wPlayerUsedMove], a
 	ld hl, ExecutePlayerMoveDone ; player can't move this turn
 	jp .returnToHL
+
+.DefrostMon
+	; reset the frozen flag
+	ld hl, wBattleMonStatus
+	res FRZ, [hl]
+	; swap turn values so the right mon is displayed, then swap back
+	ld a, 1
+	ldh [hWhoseTurn], a
+	ld hl, FireDefrostedText
+	call PrintText
+	xor a
+	ldh [hWhoseTurn],a
 
 .HeldInPlaceCheck
 	ld a, [wEnemyBattleStatus1]
@@ -4672,6 +4699,20 @@ CriticalHitTest:
 
 INCLUDE "data/moves/critical_hit_moves.asm"
 
+GetCounterVars:
+	ldh a, [hWhoseTurn] ; whose turn
+	and a
+; player's turn
+	ld hl, wEnemySelectedMove
+	ld de, wEnemyMovePower
+	ld a, [wPlayerSelectedMove]
+	ret z
+; enemy's turn
+	ld hl, wPlayerSelectedMove
+	ld de, wPlayerMovePower
+	ld a, [wEnemySelectedMove]
+	ret
+
 ; function to determine if Counter hits and if so, how much damage it does
 HandleCounterMove:
 ; The variables checked by Counter are updated whenever the cursor points to a new move in the battle selection menu.
@@ -4679,19 +4720,7 @@ HandleCounterMove:
 ; However, in the scenario where the player switches out and the opponent uses Counter,
 ; the outcome may be affected by the player's actions in the move selection menu prior to switching the Pokemon.
 ; This might also lead to desync glitches in link battles.
-
-	ldh a, [hWhoseTurn] ; whose turn
-	and a
-; player's turn
-	ld hl, wEnemySelectedMove
-	ld de, wEnemyMovePower
-	ld a, [wPlayerSelectedMove]
-	jr z, .next
-; enemy's turn
-	ld hl, wPlayerSelectedMove
-	ld de, wPlayerMovePower
-	ld a, [wEnemySelectedMove]
-.next
+	call GetCounterVars
 	cp COUNTER
 	ret nz ; return if not using Counter
 	ld a, $01
@@ -4707,51 +4736,15 @@ HandleCounterMove:
 	ld a, [de]
 	; types < SPECIAL are all physical
 	cp SPECIAL
-	jr c, .counterableType
+	jr c, CounterableType
 ; if the move wasn't Physical, miss
-	xor a
-	ret
-.counterableType
-	ld hl, wDamage
-	ld a, [hli]
-	or [hl]
-	ret z ; If we made it here, Counter still misses if the last move used in battle did no damage to its target.
-	      ; wDamage is shared by both players, so Counter may strike back damage dealt by the Counter user itself
-	      ; if the conditions meet, even though 99% of the times damage will come from the target.
-; if it did damage, double it
-	ld a, [hl]
-	add a
-	ldd [hl], a
-	ld a, [hl]
-	adc a
-	ld [hl], a
-	jr nc, .noCarry
-; damage is capped at 0xFFFF
-	ld a, $ff
-	ld [hli], a
-	ld [hl], a
-.noCarry
-	xor a
-	ld [wMoveMissed], a
-	call MoveHitTest ; do the normal move hit test in addition to Counter's special rules
 	xor a
 	ret
 
 ; function to determine if Mirror Coat hits and if so, how much damage it does
 ; this is just a copy of Counter, that works on Special moves instead of Physical
 HandleMirrorCoatMove:
-	ldh a, [hWhoseTurn] ; whose turn
-	and a
-; player's turn
-	ld hl, wEnemySelectedMove
-	ld de, wEnemyMovePower
-	ld a, [wPlayerSelectedMove]
-	jr z, .next
-; enemy's turn
-	ld hl, wPlayerSelectedMove
-	ld de, wPlayerMovePower
-	ld a, [wEnemySelectedMove]
-.next
+	call GetCounterVars
 	cp MIRROR_COAT
 	ret nz ; return if not using Mirror Coat
 	ld a, $01
@@ -4767,11 +4760,12 @@ HandleMirrorCoatMove:
 	ld a, [de]
 	; types < SPECIAL are all physical
 	cp SPECIAL
-	jr nc, .counterableType
+	jr nc, CounterableType
 ; if the move wasn't Special, miss
 	xor a
 	ret
-.counterableType
+
+CounterableType:
 	ld hl, wDamage
 	ld a, [hli]
 	or [hl]
@@ -5918,12 +5912,34 @@ CheckEnemyStatusConditions:
 .checkIfFrozen
 	bit FRZ, [hl]
 	jr z, .checkIfTrapped
+	; check for moves that thaw the user
+	ld a, [wEnemySelectedMove]
+	cp FLAME_WHEEL
+	jr z, .DefrostMon
+	cp FIRE_STORM
+	jr z, .DefrostMon
+	; chance to defrost naturally
+	call BattleRandom
+	cp 10 percent
+	jr c, .DefrostMon
+	; if none of those work, stay frozen
 	ld hl, IsFrozenText
 	call PrintText
 	xor a
 	ld [wEnemyUsedMove], a
 	ld hl, ExecuteEnemyMoveDone ; enemy can't move this turn
 	jp .enemyReturnToHL
+.DefrostMon
+	; reset the frozen flag
+	ld hl, wEnemyMonStatus
+	res FRZ, [hl]
+	; swap turn values so the right mon is displayed, then swap back
+	xor a
+	ldh [hWhoseTurn],a
+	ld hl, FireDefrostedText
+	call PrintText
+	ld a, 1
+	ldh [hWhoseTurn],a
 .checkIfTrapped
 	ld a, [wPlayerBattleStatus1]
 	bit USING_TRAPPING_MOVE, a ; is the player using a multi-turn attack like warp
@@ -6430,8 +6446,6 @@ LoadPlayerBackPic:
 	ld a, BANK(ChrisPicBack)
 	call UncompressSpriteFromDE
 	call LoadBackSpriteUnzoomed
-	nop
-	nop
 	ld hl, wOAMBuffer
 	xor a
 	ldh [hOAMTile], a ; initial tile number
@@ -6463,12 +6477,6 @@ LoadPlayerBackPic:
 	ld e, a
 	dec b
 	jr nz, .loop
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
 	ld a, $a
 	ld [MBC1SRamEnable], a
 	xor a
@@ -6939,17 +6947,8 @@ InitWildBattle:
 	ld [hli], a   ; write front sprite pointer
 	ld [hl], b
 	ld hl, wEnemyMonNick  ; set name to "GHOST"
-	ld a, "G"
-	ld [hli], a
-	ld a, "H"
-	ld [hli], a
-	ld a, "O"
-	ld [hli], a
-	ld a, "S"
-	ld [hli], a
-	ld a, "T"
-	ld [hli], a
-	ld [hl], "@"
+	ld de, GhostString
+	call CopyString
 	ld a, [wcf91]
 	push af
 	ld a, MON_GHOST
@@ -6968,6 +6967,9 @@ InitWildBattle:
 	ldh [hStartTileID], a
 	hlcoord 12, 0
 	predef CopyUncompressedPicToTilemap
+
+GhostString:
+	db "GHOST@"
 
 ; common code that executes after init battle code specific to trainer or wild battles
 _InitBattleCommon:
@@ -7136,5 +7138,3 @@ LoadMonBackPic:
 	ldh a, [hLoadedROMBank]
 	ld b, a
 	jp CopyVideoData
-
-	ds $8

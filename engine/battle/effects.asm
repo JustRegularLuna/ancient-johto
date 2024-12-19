@@ -11,10 +11,10 @@ _JumpMoveEffect:
 	ld a, [wEnemyMoveEffect]
 .next1
 	dec a ; subtract 1, there is no special effect for 00
-	add a ; x2, 16bit pointers
 	ld hl, MoveEffectPointerTable
 	ld b, 0
 	ld c, a
+	add hl, bc
 	add hl, bc
 	ld a, [hli]
 	ld h, [hl]
