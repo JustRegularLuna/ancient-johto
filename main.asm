@@ -720,6 +720,7 @@ INCLUDE "engine/events/wonder_trade.asm"
 SECTION "New Move Effects", ROMX
 
 INCLUDE "engine/battle/move_effects/hidden_power.asm"
+INCLUDE "engine/battle/move_effects/variable_power_moves.asm"
 
 
 SECTION "Field Move Stuff", ROMX

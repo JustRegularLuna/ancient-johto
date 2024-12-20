@@ -1288,6 +1288,10 @@ wNPCMovementScriptSpriteOffset::
 wScriptedNPCWalkCounter::
 	ds 1
 
+wBattleRand::
+; stores the result of Random or BattleRandom
+; because sometimes BattleRandom is farcall'd now
+; and BattleRandom just calls Random in non-linked battles
 	ds 1
 
 wGBC::

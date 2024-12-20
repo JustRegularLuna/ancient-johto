@@ -4134,9 +4134,7 @@ GetDamageVarsForPlayerAttack:
 	ld hl, wDamage ; damage to eventually inflict, initialise to zero
 	ldi [hl], a
 	ld [hl], a
-	call CheckForHex
-	call CheckForElectroBall
-	call CheckForPresent
+	farcall CheckVariablePowerMoves
 	ld hl, wPlayerMovePower
 	ld a, [hli]
 	and a
@@ -4274,9 +4272,7 @@ GetDamageVarsForEnemyAttack:
 	xor a
 	ld [hli], a
 	ld [hl], a
-	call CheckForHex
-	call CheckForElectroBall
-	call CheckForPresent
+	farcall CheckVariablePowerMoves
 	ld hl, wEnemyMovePower
 	ld a, [hli]
 	ld d, a ; d = move power
@@ -6808,6 +6804,7 @@ BattleRandom:
 	ld [wLinkBattleRandomNumberListIndex], a
 	cp 9
 	ld a, [hl]
+	ld [wBattleRand], a ; sometimes BattleRandom is farcall'd
 	pop bc
 	pop hl
 	ret c
