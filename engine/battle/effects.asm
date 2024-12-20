@@ -62,6 +62,7 @@ SleepEffect:
 	jr z, .setSleepCounter
 	cp $7
 	jr z, .setSleepCounter
+	set 1, a ; always at least 2, since 1 is now functionally 0 turns of sleep
 	ld [de], a
 	call PlayCurrentMoveAnimation2
 	ld hl, FellAsleepText

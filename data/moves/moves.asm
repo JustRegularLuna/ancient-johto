@@ -210,7 +210,7 @@ Moves:
 	move QUICK_ATTACK, NO_ADDITIONAL_EFFECT,        80, NORMAL,       100,  5 ; Extremespeed *** +2 Priority
 	move GLARE,        SPEED_DOWN2_EFFECT,           0, NORMAL,       100, 10 ; Scary Face
 	move CUT,          POISON_SIDE_EFFECT2,         95, POISON,       100, 15 ; Sting Blade
-	move GROWL,        FLINCH_SIDE_EFFECT2,         50, NORMAL,       100, 15 ; Snore *** TODO: Only usable while asleep
+	move GROWL,        FLINCH_SIDE_EFFECT2,         50, NORMAL,       100, 15 ; Snore *** Only usable while asleep
 	move GROWL,        NO_ADDITIONAL_EFFECT,         0, NORMAL,       100, 10 ; Sleep Talk *** TODO: Sleep Talk effect
 	move RECOVER,      HEAL_EFFECT,                  0, GRASS,        100, 10 ; Synthesis
 	move RECOVER,      HEAL_EFFECT,                  0, NORMAL,       100, 10 ; Moonlight

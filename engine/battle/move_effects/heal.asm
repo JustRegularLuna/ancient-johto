@@ -35,7 +35,7 @@ HealEffect_:
 .restEffect
 	ld a, [hl]
 	and a
-	ld [hl], 2 ; clear status and set number of turns asleep to 2
+	ld [hl], 3 ; clear status and set number of turns asleep to 3
 	ld hl, StartedSleepingEffect ; if mon didn't have an status
 	jr z, .printRestText
 	ld hl, FellAsleepBecameHealthyText ; if mon had an status

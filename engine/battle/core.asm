@@ -307,9 +307,6 @@ MainInBattleLoop:
 	ld a, [wEscapedFromBattle]
 	and a
 	ret nz ; return if pokedoll was used to escape from battle
-	ld a, [wBattleMonStatus]
-	and (1 << FRZ) ; is mon frozen?
-	jr nz, .selectEnemyMove ; if so, jump
 	ld a, [wPlayerBattleStatus1]
 	and (1 << STORING_ENERGY) | (1 << USING_TRAPPING_MOVE) ; check player is using Bide or using a multi-turn attack like wrap
 	jr nz, .selectEnemyMove ; if so, jump
@@ -2982,9 +2979,6 @@ SelectEnemyMove:
 	ld a, [hl]
 	and (1 << CHARGING_UP) | (1 << THRASHING_ABOUT) ; using a charging move or thrash/petal dance
 	ret nz
-	ld a, [wEnemyMonStatus]
-	and SLP | 1 << FRZ ; sleeping or frozen
-	ret nz
 	ld a, [wEnemyBattleStatus1]
 	and (1 << USING_TRAPPING_MOVE) | (1 << STORING_ENERGY) ; using a trapping move like wrap or bide
 	ret nz
@@ -3308,9 +3302,6 @@ PrintGhostText:
 	ldh a, [hWhoseTurn]
 	and a
 	jr nz, .Ghost
-	ld a, [wBattleMonStatus] ; player's turn
-	and SLP | (1 << FRZ)
-	ret nz
 	ld hl, ScaredText
 	call PrintText
 	xor a
@@ -3373,6 +3364,9 @@ CheckPlayerStatusConditions:
 	and a
 	jr z, .WakeUp ; if the number of turns hit 0, wake up
 ; fast asleep
+	ld a, [wPlayerSelectedMove]
+	cp SNORE
+	jr z, .FrozenCheck
 	xor a
 	ld [wAnimationType], a
 	ld a, SLP_ANIM - 1
@@ -3383,6 +3377,7 @@ CheckPlayerStatusConditions:
 .WakeUp
 	ld hl, WokeUpText
 	call PrintText
+	call DrawHUDsAndHPBars
 	jr .FrozenCheck
 .sleepDone
 	xor a
@@ -5431,6 +5426,25 @@ INCLUDE "data/types/type_matchups.asm"
 
 ; some tests that need to pass for a move to hit
 MoveHitTest:
+; Check for Snore
+; player's turn
+	ld hl, wBattleMonStatus
+	ld de, wPlayerSelectedMove
+	ldh a, [hWhoseTurn]
+	and a
+	jr z, .gotSnoreTurn
+; enemy's turn
+	ld hl, wEnemyMonStatus
+	ld de, wEnemySelectedMove
+.gotSnoreTurn
+	ld a, [de]
+	cp SNORE
+	jr nz, .notSnoreMove
+	ld a, [hl]
+	and SLP
+	jp z, .moveMissed
+.notSnoreMove
+; Original checks here
 ; player's turn
 	ld hl, wEnemyBattleStatus1
 	ld de, wPlayerMoveEffect
@@ -5893,6 +5907,9 @@ CheckEnemyStatusConditions:
 	ld [wEnemyMonStatus], a
 	and a
 	jr z, .wokeUp ; if the number of turns hit 0, wake up
+	ld a, [wEnemySelectedMove]
+	cp SNORE
+	jr z, .checkIfFrozen
 	ld hl, FastAsleepText
 	call PrintText
 	xor a
@@ -5903,6 +5920,7 @@ CheckEnemyStatusConditions:
 .wokeUp
 	ld hl, WokeUpText
 	call PrintText
+	call DrawHUDsAndHPBars
 	jr .checkIfFrozen
 .sleepDone
 	xor a
