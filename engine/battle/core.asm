@@ -3344,9 +3344,13 @@ IsGhostBattle:
 	jr nc, .next
 	jr .scopeCheck
 .kansaiChecks
-	; TODO: Add map checks for the ruins here, once they are mapped
-	; For now, just jump to .next for no ghost battles
-	jr .next
+	; TODO: Ruins map range instead of Silent Hill houses
+	; These are just placeholders
+	ld a, [wCurMap]
+	cp PLAYERS_HOUSE_1F
+	jr c, .next
+	cp ELMS_LAB
+	jr nc, .next
 .scopeCheck
 	ld b, SILPH_SCOPE
 	call IsItemInBag
