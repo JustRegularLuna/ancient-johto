@@ -176,7 +176,7 @@ Moves:
 	move SUBSTITUTE,   SUBSTITUTE_EFFECT,            0, NORMAL,       100, 10
 	move STRUGGLE,     RECOIL_EFFECT,               50, CURSE_TYPE,   100, 10
 	; moves below this point reuse attack animations from earlier moves
-	move MIMIC,        MIMIC_EFFECT,                 0, NORMAL,       100, 10 ; Sketch *** TODO: Sketch Effect (just a copy of Mimic for now)
+	move MIMIC,        MIMIC_EFFECT,                 0, NORMAL,       100, 10 ; Sketch *** Keeps move permanently, unlike Mimic
 	move ROAR,         NO_ADDITIONAL_EFFECT,       140, WATER,        100, 10 ; Tidal Scream *** Increased Crit Chance
 	move HAZE,         BURN_SIDE_EFFECT2,          140, FIRE,         100, 10 ; Fire Storm *** Also thaws user
 	move FIRE_SPIN,    BURN_SIDE_EFFECT1,           60, FIRE,         100, 25 ; Flame Wheel *** Also thaws user
@@ -222,7 +222,7 @@ Moves:
 	move BARRAGE,      TWO_TO_FIVE_ATTACKS_EFFECT,  25, FIRE,         100, 15 ; Fireball
 	move PSYCHIC_M,    HEX_EFFECT,                  65, DARK,         100, 10 ; Dark Mind
 	move SLASH,        NO_ADDITIONAL_EFFECT,        70, GHOST,        100, 20 ; Phantom Claw *** Increased Crit Chance
-	move PIN_MISSILE,  HEX_EFFECT,                  65, GHOST,        100, 10 ; Nail Down
+	move PIN_MISSILE,  RECOIL_EFFECT,              100, CURSE_TYPE,   100, 10 ; Nail Down
 	move THUNDER,      ELECTRO_BALL_EFFECT,         60, ELECTRIC,     100, 10 ; Surprise Zap
 	move BITE,         TWO_TO_FIVE_ATTACKS_EFFECT,  25, DARK,         100, 15 ; Gnaw
 	move MEDITATE,     HONE_CLAWS_EFFECT,            0, NORMAL,       100, 15 ; Hyper Focus
