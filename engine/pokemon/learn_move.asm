@@ -71,7 +71,6 @@ DontAbandonLearning:
 	ld de, wBattleMonPP
 	ld bc, NUM_MOVES
 	call CopyData
-	call LoadScreenTilesFromBuffer1
 	jp PrintLearnedMove
 
 AbandonLearning:
@@ -92,6 +91,7 @@ AbandonLearning:
 	ret
 
 PrintLearnedMove:
+	call LoadScreenTilesFromBuffer1
 	ld hl, LearnedMove1Text
 	call PrintText
 	ld b, 1
