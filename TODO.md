@@ -1,0 +1,25 @@
+- SGB colors for everything in GBC mode
+  - Maps
+  - Pokemon and Trainers
+  - Menu UIs
+- Expanded tilesets (up to 0x7F)
+- New Collision Data types
+  - Spinner Tile collision type
+  - Splashing in puddle collision type?
+- Allow tall grass in forests tutorial
+- Player Select in intro
+- Name Rival in intro
+- Able to show Pokedex info like Gen 1
+- Ghost battle mode
+- Safari battle mode
+- Change Pokedex UI to be more retro
+- Gen 1 HP Bar graphics
+- Gen 1 textbox border as default textbox style
+- Maybe the tutorial for more trainer types
+- Town Map item
+- Possibly clock instead of Menu Account on Start Menu
+- Fix effects of Apricorn balls
+- Add Evolve-While-Holding-Item evo method?
+- Add Running Shoes
+- Remove vanilla maps, tilesets, and pokemon 
+- Fossil lab, (but that's just an event script mostly)
