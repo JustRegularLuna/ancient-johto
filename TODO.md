@@ -2,7 +2,7 @@
   - ~~Maps~~
   - ~~Pokemon and Trainers~~
   - ~~Menu UIs~~
-- Expanded tilesets (up to 0x7F)
+- ~~Expanded tilesets (up to 0x7F)~~
 - ~~Fix tilesets not being able to go above 128 blocks~~
 - New Collision Data types
   - Spinner Tile collision type
@@ -21,6 +21,6 @@
 - ~~Fix effects of Apricorn balls~~
 - ~~Fix surfing onto water that is across a map connection~~
 - Add Evolve-While-Holding-Item evo method?
-- Add Running Shoes
+- ~~Add Running Shoes~~
 - Remove vanilla maps, tilesets, and pokemon 
 - Fossil lab, (but that's just an event script mostly)
