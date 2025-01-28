@@ -467,7 +467,12 @@ _CGB_MapPals:
 	dec b
 	jr nz, .bg_loop
 ; Copy PAL_BG_TEXT and 6 OB palettes
-	ld b, 7
+	push hl
+	ld a, PAL_SHINY_GRAYMON
+	call GetPredefPal
+	call LoadHLPaletteIntoDE
+	pop hl
+	ld b, 6
 .ob_loop
 	call .LoadHLOBPaletteIntoDE
 	dec b
@@ -787,7 +792,7 @@ _CGB_Pokepic:
 	sub c
 	inc a
 	ld c, a
-	ld a, PAL_BG_GRAY
+	ld a, PAL_BG_TEXT
 	call FillBoxCGB
 	call ApplyAttrmap
 	ret
