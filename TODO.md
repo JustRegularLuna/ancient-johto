@@ -1,7 +1,7 @@
-- SGB colors for everything in GBC mode
-  - Maps
-  - Pokemon and Trainers
-  - Menu UIs
+- ~~SGB colors for everything in GBC mode~~
+  - ~~Maps~~
+  - ~~Pokemon and Trainers~~
+  - ~~Menu UIs~~
 - Expanded tilesets (up to 0x7F)
 - New Collision Data types
   - Spinner Tile collision type
@@ -14,7 +14,7 @@
 - Safari battle mode
 - Change Pokedex UI to be more retro
 - Gen 1 HP Bar graphics
-- Gen 1 textbox border as default textbox style
+- ~~Gen 1 textbox border as default textbox style~~
 - Maybe the tutorial for more trainer types
 - Town Map item
 - Possibly clock instead of Menu Account on Start Menu
