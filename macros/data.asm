@@ -90,35 +90,6 @@ MACRO dab ; dwb address, bank
 	endr
 ENDM
 
-; Reverses FixPicBank in engine/gfx/load_pics.asm
-;
-; Takes the actual bank of the pic in the ROM and returns the "defined" bank:
-;     BANK("Pics 12") -> $13
-;     BANK("Pics 13") -> $14
-;     BANK("Pics 14") -> $1f
-;
-; Otherwise, the ROM bank will match the defined bank.
-MACRO dba_pic ; dbw bank, address
-	db (BANK(\1) == BANK("Pics 12")) * ($13 - BANK("Pics 12")) \
-		+ (BANK(\1) == BANK("Pics 13")) * ($14 - BANK("Pics 13")) \
-		+ (BANK(\1) == BANK("Pics 14")) * ($1f - BANK("Pics 14")) \
-		+ (BANK(\1))
-	dw \1
-ENDM
-
-MACRO dba_pics ; front, back
-	if _NARG == 2
-		dba_pic \1 ; front
-		dba_pic \2 ; back
-	elif _NARG == 1
-		dba_pic \1 ; front
-		dbw -1, -1 ; unused
-	else
-		dbw -1, -1 ; unused
-		dbw -1, -1 ; unused
-	endc
-ENDM
-
 MACRO bcd
 	rept _NARG
 		dn ((\1) % 100) / 10, (\1) % 10
