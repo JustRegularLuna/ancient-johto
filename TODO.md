@@ -13,10 +13,9 @@
 - Ghost battle mode
 - Safari battle mode
 - Change Pokedex UI to be more retro
-- Gen 1 HP Bar graphics
 - ~~Gen 1 textbox border as default textbox style~~
 - Maybe the tutorial for more trainer types
-- Town Map item
+- ~~Town Map item~~
 - Possibly clock instead of Menu Account on Start Menu
 - Fix effects of Apricorn balls
 - Add Evolve-While-Holding-Item evo method?
