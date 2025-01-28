@@ -496,6 +496,14 @@ Continue_DisplayGameTime:
 	jp PrintNum
 
 OakSpeech:
+	; Silently add 1 Potion to the player's PC like RBY
+	ld a, POTION
+	ld [wCurItem], a
+	ld a, 1
+	ld [wItemQuantityChange], a
+	ld hl, wNumPCItems
+	call ReceiveItem
+
 	farcall InitClock
 	call RotateFourPalettesLeft
 	call ClearTilemap
