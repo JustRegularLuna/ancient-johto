@@ -354,6 +354,8 @@ SurfFunction:
 	jr nz, .cannotsurf
 	call CheckDirection
 	jr c, .cannotsurf
+	farcall CheckFacingObject
+	jr c, .cannotsurf
 	ld a, $1
 	ret
 .nofogbadge
@@ -391,7 +393,6 @@ SurfFromMenuScript:
 	special UpdateTimePals
 
 UsedSurfScript:
-; BUG: Surfing directly across a map connection does not load the new map (see docs/bugs_and_glitches.md)
 	writetext UsedSurfText ; "used SURF!"
 	waitbutton
 	closetext
@@ -401,9 +402,7 @@ UsedSurfScript:
 
 	special UpdatePlayerSprite
 	special PlayMapMusic
-; step into the water (slow_step DIR, step_end)
 	special SurfStartStep
-	applymovement PLAYER, wMovementBuffer
 	end
 
 UsedSurfText:

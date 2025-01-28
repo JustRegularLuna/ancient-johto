@@ -331,14 +331,11 @@ Text_PlayedPokeFlute::
 	text_promptbutton
 	text_end
 
-	text_end ; unreferenced
-
 _CoinCaseCountText::
-; BUG: Using the Coin Case can cause arbitrary code execution (see docs/bugs_and_glitches.md)
 	text "Coins:"
 	line "@"
 	text_decimal wCoins, 2, 4
-	done
+	text_end
 
 _RaiseThePPOfWhichMoveText::
 	text "Raise the PP of"

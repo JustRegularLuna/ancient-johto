@@ -1072,9 +1072,8 @@ BeatUpAttackText:
 	done
 
 PresentFailedText:
-; BUG: Present's text overflows when it fails to heal an enemy Pokémon with a long name (see docs/bugs_and_glitches.md)
-	text "<TARGET> can't"
-	line "receive the gift!"
+	text "<TARGET>"
+	line "refused the gift!"
 	prompt
 
 IgnoredOrders2Text:

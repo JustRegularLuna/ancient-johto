@@ -707,12 +707,6 @@ EnemyWithdrewText:
 	text_far _EnemyWithdrewText
 	text_end
 
-EnemyUsedFullHealRed: ; unreferenced
-	call AIUsedItemSound
-	call AI_HealStatus
-	ld a, FULL_HEAL_RED ; X_SPEED
-	jp PrintText_UsedItemOn_AND_AIUpdateHUD
-
 AI_HealStatus:
 ; BUG: AI use of Full Heal or Full Restore does not cure Nightmare status (see docs/bugs_and_glitches.md)
 	ld a, [wCurOTMon]
