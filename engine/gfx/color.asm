@@ -141,32 +141,6 @@ SGB_ApplyPartyMenuHPPals:
 	ld [hl], e
 	ret
 
-Intro_LoadMagikarpPalettes:
-	call CheckCGB
-	ret z
-
-; CGB only
-	ld hl, .MagikarpBGPal
-	ld de, wBGPals1
-	ld bc, 1 palettes
-	call CopyBytes
-
-	ld hl, .MagikarpOBPal
-	ld de, wOBPals1
-	ld bc, 1 palettes
-	call CopyBytes
-
-	call ApplyPals
-	ld a, TRUE
-	ldh [hCGBPalUpdate], a
-	ret
-
-.MagikarpBGPal:
-INCLUDE "gfx/intro/magikarp_bg.pal"
-
-.MagikarpOBPal:
-INCLUDE "gfx/intro/magikarp_ob.pal"
-
 Intro_LoadAllPal0:
 	call CheckCGB
 	ret nz
@@ -187,7 +161,7 @@ Intro_LoadBetaIntroVenusaurPalettes: ; unreferenced
 
 .cgb
 	ld de, wOBPals1
-	ld a, PREDEFPAL_BETA_INTRO_VENUSAUR
+	ld a, PAL_BETA_INTRO_VENUSAUR
 	call GetPredefPal
 	jp LoadHLPaletteIntoDE
 
@@ -202,7 +176,7 @@ Intro_LoadPackPalettes: ; unreferenced
 
 .cgb
 	ld de, wOBPals1
-	ld a, PREDEFPAL_PACK
+	ld a, PAL_PACK
 	call GetPredefPal
 	jp LoadHLPaletteIntoDE
 
@@ -220,6 +194,9 @@ Intro_LoadMonPalette:
 	call CopyBytes
 	pop af
 	call GetMonPalettePointer
+	; only load middle colors
+	inc hl
+	inc hl
 	ld a, [hli]
 	ld [wSGBPals + 3], a
 	ld a, [hli]
@@ -235,7 +212,7 @@ Intro_LoadMonPalette:
 	ld de, wOBPals1
 	ld a, c
 	call GetMonPalettePointer
-	call LoadPalette_White_Col1_Col2_Black
+	call LoadHLPaletteIntoDE
 	ret
 
 LoadBetaPokerPalettes: ; unreferenced
@@ -284,7 +261,7 @@ ApplyMonOrTrainerPals:
 
 .load_palettes
 	ld de, wBGPals1
-	call LoadPalette_White_Col1_Col2_Black
+	call LoadHLPaletteIntoDE
 	call WipeAttrmap
 	call ApplyAttrmap
 	call ApplyPals
@@ -308,14 +285,10 @@ ApplyHPBarPals:
 	ld de, wBGPals2 palette PAL_BATTLE_BG_PLAYER_HP color 1
 
 .okay
-	ld l, c
-	ld h, $0
-	add hl, hl
-	add hl, hl
-	ld bc, HPBarPals
-	add hl, bc
-	ld bc, 4
-	call CopyBytes
+	ld a, c
+	add PAL_HP_GREEN
+	call GetPredefPal
+	call LoadHLPaletteIntoDE
 	ld a, TRUE
 	ldh [hCGBPalUpdate], a
 	ret
@@ -339,33 +312,13 @@ ApplyHPBarPals:
 	call FillBoxCGB
 	ret
 
-LoadStatsScreenPals:
-	call CheckCGB
-	ret z
-	ld hl, StatsScreenPals
-	ld b, 0
-	dec c
-	add hl, bc
-	add hl, bc
-	ld a, [hli]
-	ld [wBGPals1 palette 0], a
-	ld [wBGPals1 palette 2], a
-	ld a, [hl]
-	ld [wBGPals1 palette 0 + 1], a
-	ld [wBGPals1 palette 2 + 1], a
-	call ApplyPals
-	ld a, TRUE
-	ldh [hCGBPalUpdate], a
-	ret
-
 LoadMailPalettes:
 	ld l, e
 	ld h, 0
-	add hl, hl
-	add hl, hl
-	add hl, hl
 	ld de, .MailPals
 	add hl, de
+	ld a, [hl]
+	call GetPredefPal
 	call CheckCGB
 	jr nz, .cgb
 	push hl
@@ -400,7 +353,7 @@ LoadMailPalettes:
 	ret
 
 .MailPals:
-INCLUDE "gfx/mail/mail.pal"
+INCLUDE "data/items/mail_palettes.asm"
 
 INCLUDE "engine/gfx/cgb_layouts.asm"
 
@@ -591,11 +544,13 @@ CGB_ApplyPartyMenuHPPals:
 	ret
 
 InitPartyMenuOBPals:
-	ld hl, PartyMenuOBPals
 	ld de, wOBPals1
-	ld bc, 2 palettes
-	call CopyBytes
-	ret
+	ld a, PAL_SHINY_GRAYMON
+	call GetPredefPal
+	push hl
+	call _CGB_MapPals.LoadHLOBPaletteIntoDE
+	pop hl
+	jp _CGB_MapPals.LoadHLOBPaletteIntoDE
 
 GetBattlemonBackpicPalettePointer:
 	push de
@@ -620,81 +575,28 @@ GetEnemyFrontpicPalettePointer:
 GetPlayerOrMonPalettePointer:
 	and a
 	jp nz, GetMonNormalOrShinyPalettePointer
-	ld hl, PlayerPalette
-	ret
+	jr GetTrainerPalettePointer
 
 GetFrontpicPalettePointer:
 	and a
 	jp nz, GetMonNormalOrShinyPalettePointer
-	ld a, [wTrainerClass]
+	; fallthrough
 
 GetTrainerPalettePointer:
-	ld l, a
-	ld h, 0
-	add hl, hl
-	add hl, hl
-	ld bc, TrainerPalettes
-	add hl, bc
-	ret
+	ld a, PAL_MEWMON
+	jp GetPredefPal
 
 GetMonPalettePointer:
 	call _GetMonPalettePointer
 	ret
 
-CGBCopyBattleObjectPals: ; unreferenced
-; dummied out
-	ret
-	call CheckCGB
-	ret z
-	ld hl, BattleObjectPals
-	ld a, (1 << rOBPI_AUTO_INCREMENT) | $10
-	ldh [rOBPI], a
-	ld c, 6 palettes
-.loop
-	ld a, [hli]
-	ldh [rOBPD], a
-	dec c
-	jr nz, .loop
-	ld hl, BattleObjectPals
-	ld de, wOBPals1 palette PAL_BATTLE_OB_GRAY
-	ld bc, 2 palettes
-	call CopyBytes
-	ret
-
-BattleObjectPals:
-INCLUDE "gfx/battle_anims/battle_anims.pal"
-
-CGBCopyTwoPredefObjectPals: ; unreferenced
-	call CheckCGB
-	ret z
-	ld a, (1 << rOBPI_AUTO_INCREMENT) | $10
-	ldh [rOBPI], a
-	ld a, PREDEFPAL_TRADE_TUBE
-	call GetPredefPal
-	call .PushPalette
-	ld a, PREDEFPAL_RB_GREENMON
-	call GetPredefPal
-	call .PushPalette
-	ret
-
-.PushPalette:
-	ld c, 1 palettes
-.loop
-	ld a, [hli]
-	ldh [rOBPD], a
-	dec c
-	jr nz, .loop
-	ret
-
 _GetMonPalettePointer:
-	ld l, a
-	ld h, 0
-	add hl, hl
-	add hl, hl
-	add hl, hl
-	ld bc, PokemonPalettes
+	ld hl, PokemonPalettes
+	ld c, a
+	ld b, 0
 	add hl, bc
-	ret
+	ld a, [hl]
+	jp GetPredefPal
 
 GetMonNormalOrShinyPalettePointer:
 	push bc
@@ -704,9 +606,11 @@ GetMonNormalOrShinyPalettePointer:
 	call CheckShininess
 	pop hl
 	ret nc
-rept 4
-	inc hl
-endr
+	; all shiny mons of the same color use the same shiny palette, offset from the normal palette
+	push bc
+	ld bc, (PAL_SHINY_MEWMON - PAL_MEWMON) * 4
+	add hl, bc
+	pop bc
 	ret
 
 PushSGBPals:
@@ -1113,123 +1017,7 @@ ELIF DEF(_SILVER)
 INCBIN "gfx/sgb/silver_border.2bpp"
 ENDC
 
-HPBarPals:
-INCLUDE "gfx/battle/hp_bar.pal"
-
-ExpBarPalette:
-INCLUDE "gfx/battle/exp_bar.pal"
-
 INCLUDE "data/pokemon/palettes.asm"
-
-INCLUDE "data/trainers/palettes.asm"
-
-LoadMapPals:
-	; Which palette group is based on whether we're outside or inside
-	ld a, [wEnvironment]
-	maskbits NUM_ENVIRONMENTS + 1
-	ld e, a
-	ld d, 0
-	ld hl, EnvironmentColorsPointers
-	add hl, de
-	add hl, de
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a
-	; Futher refine by time of day
-	ld a, [wTimeOfDayPal]
-	maskbits NUM_DAYTIMES
-	add a
-	add a
-	add a
-	ld e, a
-	ld d, 0
-	add hl, de
-	ld e, l
-	ld d, h
-	ld hl, wBGPals1
-	ld b, 8
-.outer_loop
-	ld a, [de] ; lookup index for TilesetBGPalette
-	push de
-	push hl
-	ld l, a
-	ld h, 0
-	add hl, hl
-	add hl, hl
-	add hl, hl
-	ld de, TilesetBGPalette
-	add hl, de
-	ld e, l
-	ld d, h
-	pop hl
-	ld c, 1 palettes
-.inner_loop
-	ld a, [de]
-	inc de
-	ld [hli], a
-	dec c
-	jr nz, .inner_loop
-	pop de
-	inc de
-	dec b
-	jr nz, .outer_loop
-	ld a, [wTimeOfDayPal]
-	maskbits NUM_DAYTIMES
-	ld bc, 8 palettes
-	ld hl, MapObjectPals
-	call AddNTimes
-	ld de, wOBPals1
-	ld bc, 8 palettes
-	call CopyBytes
-
-	ld a, [wEnvironment]
-	cp TOWN
-	jr z, .outside
-	cp ROUTE
-	ret nz
-.outside
-	ld a, [wMapGroup]
-	ld l, a
-	ld h, 0
-	add hl, hl
-	add hl, hl
-	add hl, hl
-	ld de, RoofPals
-	add hl, de
-	ld a, [wTimeOfDayPal]
-	maskbits NUM_DAYTIMES
-	cp NITE_F
-	jr c, .morn_day
-rept 4
-	inc hl
-endr
-.morn_day
-	ld de, wBGPals1 palette PAL_BG_ROOF color 1
-	ld bc, 4
-	call CopyBytes
-	ret
-
-INCLUDE "data/maps/environment_colors.asm"
-
-TilesetBGPalette:
-INCLUDE "gfx/tilesets/bg_tiles.pal"
-
-MapObjectPals::
-INCLUDE "gfx/overworld/npc_sprites.pal"
-
-RoofPals:
-	table_width PAL_COLOR_SIZE * 2 * 2
-INCLUDE "gfx/tilesets/roofs.pal"
-	assert_table_length NUM_MAP_GROUPS + 1
-
-DiplomaPalettes:
-INCLUDE "gfx/diploma/diploma.pal"
-
-PartyMenuOBPals:
-INCLUDE "gfx/stats/party_menu_ob.pal"
-
-UnusedBattleObjectPals: ; unreferenced
-INCLUDE "gfx/battle_anims/unused_battle_anims.pal"
 
 GSTitleBGPals:
 IF DEF(_GOLD)
@@ -1241,15 +1029,5 @@ ENDC
 GSTitleOBPals:
 INCLUDE "gfx/title/title_fg.pal"
 
-PokegearPals:
-INCLUDE "gfx/pokegear/pokegear.pal"
-
 BetaPokerPals:
 INCLUDE "gfx/beta_poker/beta_poker.pal"
-
-SlotMachinePals:
-IF DEF(_GOLD)
-INCLUDE "gfx/slots/slots_gold.pal"
-ELIF DEF(_SILVER)
-INCLUDE "gfx/slots/slots_silver.pal"
-ENDC

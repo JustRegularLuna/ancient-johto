@@ -19,7 +19,6 @@ INCLUDE "engine/events/haircut.asm"
 SECTION "bank2", ROMX
 
 INCLUDE "engine/tilesets/map_palettes.asm"
-INCLUDE "gfx/tileset_palette_maps.asm"
 INCLUDE "engine/overworld/player_object.asm"
 INCLUDE "engine/math/sine.asm"
 INCLUDE "engine/predef.asm"
@@ -318,7 +317,6 @@ INCLUDE "engine/tilesets/tileset_anims.asm"
 INCLUDE "engine/events/npc_trade.asm"
 INCLUDE "engine/events/mom_phone.asm"
 INCLUDE "engine/link/mystery_gift_3.asm"
-INCLUDE "engine/debug/color_picker.asm"
 
 
 SECTION "Standard Scripts", ROMX

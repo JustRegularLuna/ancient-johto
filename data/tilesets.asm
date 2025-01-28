@@ -2,7 +2,7 @@ MACRO tileset
 	dba \1GFX, \1Meta, \1Coll
 	dw \1Anim
 	dw NULL
-	dw \1PalMap
+	dw NULL ; formerly palette map
 ENDM
 
 ; Associated data:

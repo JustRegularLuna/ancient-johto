@@ -52,7 +52,7 @@ TilesetForestAnim::
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
-	dw NULL,  AnimateWaterPalette
+	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
 	dw NULL,  AnimateFlowerTile
 	dw NULL,  WaitTileAnimation
@@ -64,7 +64,7 @@ TilesetJohtoAnim:
 	dw vTiles2 tile $14, AnimateWaterTile
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
-	dw NULL,  AnimateWaterPalette
+	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
 	dw NULL,  AnimateFlowerTile
 	dw WhirlpoolFrames1, AnimateWhirlpoolTile
@@ -109,7 +109,7 @@ TilesetPortAnim:
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
-	dw NULL,  AnimateWaterPalette
+	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
@@ -162,44 +162,44 @@ UnusedTilesetAnim4: ; unreferenced
 TilesetCaveAnim:
 TilesetDarkCaveAnim:
 	dw vTiles2 tile $14, ReadTileToAnimBuffer
-	dw NULL,  FlickeringCaveEntrancePalette
+	dw NULL,  WaitTileAnimation
 	dw wTileAnimBuffer, ScrollTileRightLeft
-	dw NULL,  FlickeringCaveEntrancePalette
+	dw NULL,  WaitTileAnimation
 	dw vTiles2 tile $14, WriteTileFromAnimBuffer
-	dw NULL,  FlickeringCaveEntrancePalette
-	dw NULL,  AnimateWaterPalette
-	dw NULL,  FlickeringCaveEntrancePalette
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
 	dw vTiles2 tile $40, ReadTileToAnimBuffer
-	dw NULL,  FlickeringCaveEntrancePalette
+	dw NULL,  WaitTileAnimation
 	dw wTileAnimBuffer, ScrollTileDown
-	dw NULL,  FlickeringCaveEntrancePalette
+	dw NULL,  WaitTileAnimation
 	dw wTileAnimBuffer, ScrollTileDown
-	dw NULL,  FlickeringCaveEntrancePalette
+	dw NULL,  WaitTileAnimation
 	dw wTileAnimBuffer, ScrollTileDown
-	dw NULL,  FlickeringCaveEntrancePalette
+	dw NULL,  WaitTileAnimation
 	dw vTiles2 tile $40, WriteTileFromAnimBuffer
-	dw NULL,  FlickeringCaveEntrancePalette
+	dw NULL,  WaitTileAnimation
 	dw NULL,  DoneTileAnimation
 
 TilesetIcePathAnim:
 	dw vTiles2 tile $35, ReadTileToAnimBuffer
-	dw NULL,  FlickeringCaveEntrancePalette
+	dw NULL,  WaitTileAnimation
 	dw wTileAnimBuffer, ScrollTileRightLeft
-	dw NULL,  FlickeringCaveEntrancePalette
+	dw NULL,  WaitTileAnimation
 	dw vTiles2 tile $35, WriteTileFromAnimBuffer
-	dw NULL,  FlickeringCaveEntrancePalette
-	dw NULL,  AnimateWaterPalette
-	dw NULL,  FlickeringCaveEntrancePalette
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
 	dw vTiles2 tile $31, ReadTileToAnimBuffer
-	dw NULL,  FlickeringCaveEntrancePalette
+	dw NULL,  WaitTileAnimation
 	dw wTileAnimBuffer, ScrollTileDown
-	dw NULL,  FlickeringCaveEntrancePalette
+	dw NULL,  WaitTileAnimation
 	dw wTileAnimBuffer, ScrollTileDown
-	dw NULL,  FlickeringCaveEntrancePalette
+	dw NULL,  WaitTileAnimation
 	dw wTileAnimBuffer, ScrollTileDown
-	dw NULL,  FlickeringCaveEntrancePalette
+	dw NULL,  WaitTileAnimation
 	dw vTiles2 tile $31, WriteTileFromAnimBuffer
-	dw NULL,  FlickeringCaveEntrancePalette
+	dw NULL,  WaitTileAnimation
 	dw NULL,  DoneTileAnimation
 
 TilesetTowerAnim:
@@ -415,12 +415,6 @@ AnimateFlowerTile:
 	ld a, [wTileAnimationTimer]
 	and %10
 
-; CGB has different tile graphics for flowers
-	ld e, a
-	ldh a, [hCGB]
-	and 1
-	add e
-
 ; hl = .FlowerTileFrames + a * 16
 	swap a
 	ld e, a
@@ -434,10 +428,10 @@ AnimateFlowerTile:
 	jp WriteTile
 
 .FlowerTileFrames:
-	INCBIN "gfx/tilesets/flower/dmg_1.2bpp"
-	INCBIN "gfx/tilesets/flower/cgb_1.2bpp"
-	INCBIN "gfx/tilesets/flower/dmg_2.2bpp"
-	INCBIN "gfx/tilesets/flower/cgb_2.2bpp"
+	INCBIN "gfx/tilesets/flower/flower1.2bpp"
+	INCBIN "gfx/tilesets/flower/flower1.2bpp"
+	INCBIN "gfx/tilesets/flower/flower2.2bpp"
+	INCBIN "gfx/tilesets/flower/flower2.2bpp"
 
 AnimateLavaBubbleTile1:
 ; Save the stack pointer in bc for WriteTile to restore
@@ -644,103 +638,6 @@ endr
 	ld h, b
 	ld l, c
 	ld sp, hl
-	ret
-
-AnimateWaterPalette:
-; Transition between color values 0-2 for color 0 in palette 3.
-
-; Don't update the palette on DMG
-	ldh a, [hCGB]
-	and a
-	ret z
-
-; Don't update a non-standard palette order
-	ldh a, [rBGP]
-	cp %11100100
-	ret nz
-
-; Only update on even ticks
-	ld a, [wTileAnimationTimer]
-	ld l, a
-	and 1 ; odd
-	ret nz
-
-; Ready for BGPD input
-	ld a, (1 << rBGPI_AUTO_INCREMENT) palette PAL_BG_WATER color 0
-	ldh [rBGPI], a
-
-; A cycle of 4 colors (0 1 2 1), updating every other tick
-	ld a, l
-	and %110
-	jr z, .color0
-	cp %100
-	jr z, .color2
-
-; Copy one color from hl to rBGPI via rBGPD
-
-; color1
-	ld hl, wBGPals1 palette PAL_BG_WATER color 1
-	ld a, [hli]
-	ldh [rBGPD], a
-	ld a, [hli]
-	ldh [rBGPD], a
-	ret
-
-.color0
-	ld hl, wBGPals1 palette PAL_BG_WATER color 0
-	ld a, [hli]
-	ldh [rBGPD], a
-	ld a, [hli]
-	ldh [rBGPD], a
-	ret
-
-.color2
-	ld hl, wBGPals1 palette PAL_BG_WATER color 2
-	ld a, [hli]
-	ldh [rBGPD], a
-	ld a, [hli]
-	ldh [rBGPD], a
-	ret
-
-FlickeringCaveEntrancePalette:
-; Don't update the palette on DMG
-	ldh a, [hCGB]
-	and a
-	ret z
-
-; Don't update a non-standard palette order
-	ldh a, [rBGP]
-	cp %11100100
-	ret nz
-
-; We only want to be here if we're in a dark cave.
-	ld a, [wTimeOfDayPalset]
-	cp DARKNESS_PALSET
-	ret nz
-
-; Ready for BGPD input
-	ld a, (1 << rBGPI_AUTO_INCREMENT) palette PAL_BG_YELLOW color 0
-	ldh [rBGPI], a
-
-; A cycle of 2 colors (0 2), updating every other vblank
-	ldh a, [hVBlankCounter]
-	and %10
-	jr nz, .color1
-
-; Copy one color from hl to rBGPI via rBGPD
-
-; color0
-	ld hl, wBGPals1 palette PAL_BG_YELLOW color 0
-	jr .okay
-
-.color1
-	ld hl, wBGPals1 palette PAL_BG_YELLOW color 1
-
-.okay
-	ld a, [hli]
-	ldh [rBGPD], a
-	ld a, [hli]
-	ldh [rBGPD], a
 	ret
 
 TowerPillarTilePointer1:  dw vTiles2 tile $2d, TowerPillarTile1

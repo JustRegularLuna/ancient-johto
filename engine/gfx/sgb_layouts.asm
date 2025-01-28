@@ -73,13 +73,11 @@ SGBLayoutJumptable:
 	call CopyBytes
 
 	ld a, [wPlayerHPPal]
-	ld l, a
-	ld h, 0
-	add hl, hl
-	add hl, hl
-	ld de, HPBarPals
-	add hl, de
-
+	add PAL_HP_GREEN
+	call GetPredefPal
+	; middle colors
+	inc hl
+	inc hl
 	ld a, [hli]
 	ld [wSGBPals + 3], a
 	ld a, [hli]
@@ -90,13 +88,11 @@ SGBLayoutJumptable:
 	ld [wSGBPals + 6], a
 
 	ld a, [wEnemyHPPal]
-	ld l, a
-	ld h, 0
-	add hl, hl
-	add hl, hl
-
-	ld de, HPBarPals
-	add hl, de
+	add PAL_HP_GREEN
+	call GetPredefPal
+	; middle colors
+	inc hl
+	inc hl
 	ld a, [hli]
 	ld [wSGBPals + 9], a
 	ld a, [hli]
@@ -112,7 +108,9 @@ SGBLayoutJumptable:
 	call CopyBytes
 
 	call GetBattlemonBackpicPalettePointer
-
+	; only load middle colors
+	inc hl
+	inc hl
 	ld a, [hli]
 	ld [wSGBPals + 19], a
 	ld a, [hli]
@@ -122,6 +120,9 @@ SGBLayoutJumptable:
 	ld a, [hl]
 	ld [wSGBPals + 22], a
 	call GetEnemyFrontpicPalettePointer
+	; only load middle colors
+	inc hl
+	inc hl
 	ld a, [hli]
 	ld [wSGBPals + 25], a
 	ld a, [hli]
@@ -149,7 +150,7 @@ SGBLayoutJumptable:
 	inc hl
 
 	ld a, [wPlayerHPPal]
-	add PREDEFPAL_HP_GREEN
+	add PAL_HP_GREEN
 	ld [hl], a
 	ld hl, wSGBPals
 	ld de, BlkPacket_MoveList
@@ -166,12 +167,11 @@ SGBLayoutJumptable:
 	ld bc, PALPACKET_LENGTH
 	call CopyBytes
 	ld a, [wCurHPPal]
-	ld l, a
-	ld h, 0
-	add hl, hl
-	add hl, hl
-	ld de, HPBarPals
-	add hl, de
+	add PAL_HP_GREEN
+	call GetPredefPal
+	; middle colors
+	inc hl
+	inc hl
 	ld a, [hli]
 	ld [wSGBPals + 3], a
 	ld a, [hli]
@@ -183,6 +183,9 @@ SGBLayoutJumptable:
 	ld a, [wCurPartySpecies]
 	ld bc, wTempMonDVs
 	call GetPlayerOrMonPalettePointer
+	; only load middle colors
+	inc hl
+	inc hl
 	ld a, [hli]
 	ld [wSGBPals + 9], a
 	ld a, [hli]
@@ -214,7 +217,22 @@ SGBLayoutJumptable:
 	inc hl
 	ld [hl], HIGH(palred 26 + palgreen 10 + palblue 6)
 	ld a, [wCurPartySpecies]
+	cp $ff
+	jr nz, .isPokemon
+
+	; load gray palette if we're in list view
+	ld a, PAL_GRAYMON
+	call GetPredefPal
+	jr .gotPalette
+
+.isPokemon
+	; load the pal for the mon only on dex page, not list view
 	call GetMonPalettePointer
+
+.gotPalette
+	; only load middle colors
+	inc hl
+	inc hl
 	ld a, [hli]
 	ld [wSGBPals + 9], a
 	ld a, [hli]
@@ -248,6 +266,9 @@ SGBLayoutJumptable:
 	ld a, [wCurPartySpecies]
 	ld bc, wTempMonDVs
 	call GetPlayerOrMonPalettePointer
+	; only load middle colors
+	inc hl
+	inc hl
 	ld a, [hli]
 	ld [wSGBPals + 9], a
 	ld a, [hli]
@@ -392,6 +413,9 @@ endr
 	ld b, h
 	ld a, [wPlayerHPPal]
 	call GetPlayerOrMonPalettePointer
+	; only load middle colors
+	inc hl
+	inc hl
 	ld a, [hli]
 	ld [wSGBPals + 3], a
 	ld a, [hli]
@@ -491,6 +515,9 @@ endr
 	ld a, [wCurPartySpecies]
 	ld bc, wTempMonDVs
 	call GetPlayerOrMonPalettePointer
+	; only load middle colors
+	inc hl
+	inc hl
 	ld a, [hli]
 	ld [wSGBPals + 3], a
 	ld a, [hli]
@@ -516,6 +543,9 @@ endr
 	ld a, [wCurPartySpecies]
 	ld bc, wTempMonDVs
 	call GetFrontpicPalettePointer
+	; only load middle colors
+	inc hl
+	inc hl
 	ld a, [hli]
 	ld [wSGBPals + 3], a
 	ld a, [hli]
@@ -532,7 +562,7 @@ endr
 	ld a, [wTimeOfDayPal]
 	cp NITE_F
 	jr c, .morn_day
-	ld a, PREDEFPAL_NITE
+	ld a, PAL_NITE
 	ret
 
 .morn_day
@@ -556,19 +586,19 @@ endr
 	ret
 
 .route
-	ld a, PREDEFPAL_ROUTES
+	ld a, PAL_ROUTES
 	ret
 
 .cave
-	ld a, PREDEFPAL_DUNGEONS
+	ld a, PAL_DUNGEONS
 	ret
 
 .env5
-	ld a, PREDEFPAL_VERMILION
+	ld a, PAL_VERMILION
 	ret
 
 .gate
-	ld a, PREDEFPAL_PEWTER
+	ld a, PAL_PEWTER
 	ret
 
 INCLUDE "data/maps/sgb_roof_pal_inds.asm"

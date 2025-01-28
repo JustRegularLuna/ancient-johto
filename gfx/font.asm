@@ -51,7 +51,5 @@ FontsExtra_SolidBlackAndUpArrowGFX:
 INCBIN "gfx/font/black.1bpp"
 INCBIN "gfx/font/up_arrow.1bpp"
 
-INCLUDE "gfx/footprints.asm"
-
 UnownFont:
 INCBIN "gfx/font/unown_font.2bpp"

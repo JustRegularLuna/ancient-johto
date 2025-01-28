@@ -2595,58 +2595,8 @@ FillTownMap:
 	jr .loop
 
 TownMapPals:
-; Assign palettes based on tile ids
-	hlcoord 0, 0
-	decoord 0, 0, wAttrmap
-	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
-.loop
-; Current tile
-	ld a, [hli]
-	push hl
-; The palette map covers tiles $00 to $5f; $60 and above use palette 0
-	cp $60
-	jr nc, .pal0
-
-; The palette data is condensed to nybbles, least-significant first.
-	ld hl, .PalMap
-	srl a
-	jr c, .odd
-; Even-numbered tile ids take the bottom nybble...
-	add l
-	ld l, a
-	ld a, h
-	adc 0
-	ld h, a
-	ld a, [hl]
-	and PALETTE_MASK
-	jr .update
-
-.odd
-; ...and odd ids take the top.
-	add l
-	ld l, a
-	ld a, h
-	adc 0
-	ld h, a
-	ld a, [hl]
-	swap a
-	and PALETTE_MASK
-	jr .update
-
-.pal0
-	xor a
-.update
-	pop hl
-	ld [de], a
-	inc de
-	dec bc
-	ld a, b
-	or c
-	jr nz, .loop
+	; dummy func now
 	ret
-
-.PalMap:
-INCLUDE "gfx/pokegear/town_map_palette_map.asm"
 
 TownMapMon:
 ; Draw the FlyMon icon at town map location
