@@ -441,6 +441,7 @@ _CGB_BetaPoker:
 	ret
 
 _CGB_Diploma:
+_CGB_MysteryGift:
 ; Start by loading PAL_MEWMON for 2 object pals
 	ld de, wOBPals1
 	ld a, PAL_MEWMON
@@ -873,14 +874,4 @@ _CGB_TrainerOrMonFrontpicPals:
 	call WipeAttrmap
 	call ApplyAttrmap
 	call ApplyPals
-	ret
-
-_CGB_MysteryGift:
-	ld de, wBGPals1
-	ld a, PAL_MEWMON
-	call GetPredefPal
-	call LoadHLPaletteIntoDE
-	call ApplyPals
-	call WipeAttrmap
-	call ApplyAttrmap
 	ret
