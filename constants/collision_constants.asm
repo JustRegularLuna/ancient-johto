@@ -83,6 +83,11 @@ DEF COLL_WARP_PANEL        EQU $7c
 DEF COLL_DOOR_7D           EQU $7d ; unused
 DEF COLL_WARP_CARPET_RIGHT EQU $7e
 DEF COLL_WARP_7F           EQU $7f ; unused
+DEF COLL_STOP_SPIN         EQU $80
+DEF COLL_SPIN_UP           EQU $81
+DEF COLL_SPIN_DOWN         EQU $82
+DEF COLL_SPIN_LEFT         EQU $83
+DEF COLL_SPIN_RIGHT        EQU $84
 DEF COLL_88                EQU $88 ; garbage
 DEF COLL_89                EQU $89 ; garbage
 DEF COLL_COUNTER           EQU $90

@@ -5,7 +5,7 @@
 - ~~Expanded tilesets (up to 0x7F)~~
 - ~~Fix tilesets not being able to go above 128 blocks~~
 - New Collision Data types
-  - Spinner Tile collision type
+  - ~~Spinner Tile collision type~~
   - Splashing in puddle collision type?
 - Allow tall grass in forests tutorial
 - Player Select in intro
@@ -24,3 +24,4 @@
 - ~~Add Running Shoes~~
 - Remove vanilla maps, tilesets, and pokemon 
 - Fossil lab, (but that's just an event script mostly)
+- Gen 6 EXP Share system (because it is more like Gen 1)

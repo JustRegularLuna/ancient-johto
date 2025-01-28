@@ -1244,7 +1244,9 @@ wPlayerStepDirection:: db
 wPlayerNextMovement:: db
 wPlayerMovement:: db
 
-	ds 2
+wSpinning:: db
+
+	ds 1
 
 wMovementObject:: db
 wMovementDataBank:: db
