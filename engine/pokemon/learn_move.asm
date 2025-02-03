@@ -1,5 +1,9 @@
 LearnMove:
+	ld a, [wIsInBattle]
+	and a
+	jr z, .skip
 	call SaveScreenTilesToBuffer1
+.skip
 	ld a, [wWhichPokemon]
 	ld hl, wPartyMonNicks
 	call GetPartyMonName
@@ -86,12 +90,20 @@ AbandonLearning:
 	jp nz, DontAbandonLearning
 	ld hl, DidNotLearnText
 	call PrintText
+	ld a, [wIsInBattle]
+	and a
+	jr z, .skip
 	call LoadScreenTilesFromBuffer1
+.skip
 	ld b, 0
 	ret
 
 PrintLearnedMove:
+	ld a, [wIsInBattle]
+	and a
+	jr z, .skip
 	call LoadScreenTilesFromBuffer1
+.skip
 	ld hl, LearnedMove1Text
 	call PrintText
 	ld b, 1
