@@ -188,4 +188,5 @@
 	const SFX_TRAIN_ARRIVED               ; b9
 	const SFX_STOP_SLOT                   ; ba
 	const SFX_2_BOOPS                     ; bb
+	const SFX_PUDDLE                      ; bc
 DEF NUM_SFX EQU const_value

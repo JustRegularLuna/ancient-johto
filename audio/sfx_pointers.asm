@@ -189,4 +189,5 @@ SFX:
 	dba Sfx_TrainArrived
 	dba Sfx_StopSlot
 	dba Sfx_2Boops
+	dba Sfx_Puddle
 	assert_table_length NUM_SFX

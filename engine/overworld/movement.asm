@@ -667,11 +667,19 @@ NormalStep:
 	call CheckSuperTallGrassTile
 	jr z, .shake_grass
 
+	cp COLL_PUDDLE
+	jr z, .splash_puddle
+
 	call CheckGrassTile
 	jr c, .skip_grass
 
 .shake_grass
 	call ShakeGrass
+	jr .skip_grass
+
+.splash_puddle
+	call SplashPuddle
+	; fallthrough
 
 .skip_grass
 	ld hl, wCenteredObject

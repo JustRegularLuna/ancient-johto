@@ -5182,3 +5182,14 @@ Sfx_StopSlot_Ch5:
 	square_note 1, 15, 8, 1888
 	square_note 4, 8, 2, 1888
 	sound_ret
+
+Sfx_Puddle:
+	channel_count 1
+	channel 5, Sfx_Puddle_Ch5
+
+Sfx_Puddle_Ch5:
+	duty_cycle $1
+	pitch_sweep 9, 7
+	square_note 15, 9, 8, 1792
+	pitch_sweep 0, 8
+	sound_ret

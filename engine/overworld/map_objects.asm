@@ -553,6 +553,7 @@ StepFunction_FromMovement:
 	dw MovementFunction_SpinCounterclockwise ; 19
 	dw MovementFunction_BoulderDust          ; 1a
 	dw MovementFunction_ShakingGrass         ; 1b
+	dw MovementFunction_SplashingPuddle
 	assert_table_length NUM_SPRITEMOVEFN
 
 MovementFunction_Null:
@@ -962,12 +963,21 @@ MovementFunction_BoulderDust:
 	db  6,  2
 	db -6,  2
 
+MovementFunction_SplashingPuddle:
+	call EndSpriteMovement
+	call InitMovementField1dField1e
+	ld hl, OBJECT_ACTION
+	add hl, bc
+	ld [hl], OBJECT_ACTION_PUDDLE_SPLASH
+	jr ContinueMovement_Grass_Puddle
+
 MovementFunction_ShakingGrass:
 	call EndSpriteMovement
 	call InitMovementField1dField1e
 	ld hl, OBJECT_ACTION
 	add hl, bc
 	ld [hl], OBJECT_ACTION_GRASS_SHAKE
+ContinueMovement_Grass_Puddle:
 	ld hl, OBJECT_STEP_DURATION
 	add hl, de
 	ld a, [hl]
@@ -2039,6 +2049,19 @@ ShakeGrass:
 .GrassObject:
 	; vtile, palette, movement
 	db $fe, PAL_OW_TREE, SPRITEMOVEDATA_GRASS
+
+SplashPuddle:
+	push bc
+	ld de, .PuddleObject
+	call CopyTempObjectData
+	call InitTempObject
+	pop bc
+	ld de, SFX_PUDDLE
+	jp PlaySFX
+
+.PuddleObject
+	; vtile, palette, movement
+	db $00, PAL_OW_BLUE, SPRITEMOVEDATA_PUDDLE
 
 ShakeScreen:
 	push bc
