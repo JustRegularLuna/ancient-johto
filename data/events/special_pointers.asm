@@ -73,6 +73,7 @@ SpecialsPointers::
 	add_special UpdateSprites
 	add_special UpdatePlayerSprite
 	add_special GameCornerPrizeMonCheckDex
+	add_special ShowPokedexEntry
 	add_special UnusedSetSeenMon ; unused
 	add_special WaitSFX, 3
 	add_special PlayMapMusic

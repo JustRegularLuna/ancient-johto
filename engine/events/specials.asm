@@ -33,6 +33,17 @@ GameCornerPrizeMonCheckDex:
 	call ExitAllMenus
 	ret
 
+ShowPokedexEntry:
+	ld a, [wScriptVar]
+	dec a
+	call SetSeenMon
+	call FadeToMenu
+	ld a, [wScriptVar]
+	ld [wNamedObjectIndex], a
+	farcall NewPokedexEntry
+	call ExitAllMenus
+	ret
+
 UnusedSetSeenMon:
 	ld a, [wScriptVar]
 	dec a

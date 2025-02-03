@@ -121,10 +121,10 @@ CyndaquilPokeBallScript:
 	iftrue LookAtElmPokeBallScript
 	turnobject ELMSLAB_ELM, DOWN
 	reanchormap
-	pokepic CYNDAQUIL
-	cry CYNDAQUIL
-	waitbutton
-	closepokepic
+	setval CYNDAQUIL
+	callasm ElmsLabTempSetOwned
+	special ShowPokedexEntry
+	callasm ElmsLabUnsetOwned
 	opentext
 	writetext TakeCyndaquilText
 	yesorno
@@ -151,10 +151,10 @@ TotodilePokeBallScript:
 	iftrue LookAtElmPokeBallScript
 	turnobject ELMSLAB_ELM, DOWN
 	reanchormap
-	pokepic TOTODILE
-	cry TOTODILE
-	waitbutton
-	closepokepic
+	setval TOTODILE
+	callasm ElmsLabTempSetOwned
+	special ShowPokedexEntry
+	callasm ElmsLabUnsetOwned
 	opentext
 	writetext TakeTotodileText
 	yesorno
@@ -179,10 +179,10 @@ ChikoritaPokeBallScript:
 	iftrue LookAtElmPokeBallScript
 	turnobject ELMSLAB_ELM, DOWN
 	reanchormap
-	pokepic CHIKORITA
-	cry CHIKORITA
-	waitbutton
-	closepokepic
+	setval CHIKORITA
+	callasm ElmsLabTempSetOwned
+	special ShowPokedexEntry
+	callasm ElmsLabUnsetOwned
 	opentext
 	writetext TakeChikoritaText
 	yesorno
@@ -664,6 +664,24 @@ AfterChikoritaMovement:
 	step LEFT
 	step UP
 	step_end
+
+ElmsLabTempSetOwned:
+; temporarily mark the starters as owned, to show pokedex info
+	ld a, [wScriptVar]
+	dec a
+	ld c, a
+	ld hl, wPokedexCaught
+	ld b, SET_FLAG
+	jp PokedexFlagAction
+
+ElmsLabUnsetOwned:
+; undo temporarily setting them as owned after showing the pokedex info
+	ld a, [wScriptVar]
+	dec a
+	ld c, a
+	ld hl, wPokedexCaught
+	ld b, RESET_FLAG
+	jp PokedexFlagAction
 
 ElmText_Intro:
 	text "ELM: <PLAYER>!"
