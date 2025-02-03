@@ -38,6 +38,7 @@ CloseText::
 	ldh [hWY], a
 	farcall LoadWalkingSpritesGFX
 	call UpdatePlayerSprite
+	farcall ReloadSpriteIndex
 	ld hl, wUnusedReanchorBGMapFlags
 	res UNUSED_REANCHOR_BG_MAP_7, [hl]
 	call ResetBGWindow
@@ -90,8 +91,4 @@ SafeUpdateSprites::
 	ldh [hBGMapMode], a
 	pop af
 	ldh [hOAMUpdate], a
-	ret
-
-SetCarryFlag:: ; unreferenced
-	scf
 	ret

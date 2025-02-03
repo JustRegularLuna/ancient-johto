@@ -29,20 +29,6 @@ LoadWalkingSpritesGFX::
 	ld [wSpriteFlags], a
 	ret
 
-RefreshSprites::
-	call .Refresh
-	call LoadUsedSpritesGFX
-	ret
-
-.Refresh:
-	xor a
-	ld bc, wUsedSpritesEnd - wUsedSprites
-	ld hl, wUsedSprites
-	call ByteFill
-	call GetPlayerSprite
-	call AddMapSprites
-	ret
-
 GetPlayerSprite:
 ; Get Chris's sprite.
 	ld a, [wPlayerState]
@@ -73,54 +59,54 @@ GetPlayerSprite:
 
 INCLUDE "data/sprites/player_sprites.asm"
 
-AddMapSprites:
-	call GetMapEnvironment
-	call CheckOutdoorMap
-	jr z, .outdoor
-	call AddIndoorSprites
-	ret
-
-.outdoor
-	call AddOutdoorSprites
-	ret
-
-AddIndoorSprites:
-	ld hl, wMap2ObjectSprite
-	ld a, 2
-.loop
-	push af
-	ld a, [hl]
-	call AddSpriteGFX
-	ld de, MAPOBJECT_LENGTH
-	add hl, de
-	pop af
-	inc a
-	cp NUM_OBJECTS
-	jr nz, .loop
-	ret
-
-AddOutdoorSprites:
-	ld a, [wMapGroup]
-	dec a
-	ld c, a
-	ld b, 0
-	ld hl, OutdoorSprites
-	add hl, bc
-	add hl, bc
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a
-	ld c, MAX_OUTDOOR_SPRITES
-.loop
+RefreshSprites::
+	push hl
+	push de
 	push bc
-	ld a, [hli]
-	call AddSpriteGFX
+	call GetPlayerSprite
+	xor a
+	ld [hUsedSpriteIndex], a
+	call ReloadSpriteIndex
+	call LoadMiscTiles ; LunaAdded
 	pop bc
-	dec c
-	jr nz, .loop
+	pop de
+	pop hl
+	ret
 
-	ld a, [wUnusedAddOutdoorSpritesReturnValue]
-	ld c, a
+ReloadSpriteIndex::
+; Reloads sprites using hUsedSpriteIndex.
+; Used to reload variable sprites
+	ld hl, wObjectStructs
+	ld de, OBJECT_LENGTH
+	push bc
+	ld a, [hUsedSpriteIndex]
+	ld b, a
+	xor a
+.loop
+	ld [hObjectStructIndex], a
+	ld a, [hl]
+	and a
+	jr z, .done
+	bit 7, b
+	jr z, .continue
+	cp b
+	jr nz, .done
+.continue
+	push hl
+	call GetSpriteVTile
+	pop hl
+	push hl
+	inc hl
+	inc hl
+	ld [hl], a
+	pop hl
+.done
+	add hl, de
+	ld a, [hObjectStructIndex]
+	inc a
+	cp NUM_OBJECT_STRUCTS
+	jr nz, .loop
+	pop bc
 	ret
 
 AddSpriteGFX:
@@ -251,7 +237,13 @@ LoadMiscTiles:
 	farcall LoadEmote
 	ret
 
-GetSprite:
+SafeGetSprite:
+	push hl
+	call GetSprite
+	pop hl
+	ret
+
+GetSprite::
 	call GetMonSprite
 	ret c
 
@@ -447,14 +439,58 @@ GetUsedSpriteSecond: ; unreferenced
 	ld b, $0c
 	jr GetUsedSprite
 
-GetUsedSprite:
-; Input: b = tile id, c = index
+GetUsedSprite::
+	ldh a, [hUsedSpriteIndex]
+	call SafeGetSprite
+	ldh a, [hUsedSpriteTile]
+	call .GetTileAddr
+	push hl
+	push de
 	push bc
-	ld a, c
-	ldh [hUsedSpriteIndex], a
-	call GetSprite
-	pop af
-	call CopyToVram
+	ld a, [wSpriteFlags]
+	bit 7, a
+	jr nz, .skip
+	call Get2bpp
+.skip
+	pop bc
+	ld l, c
+	ld h, $0
+rept 4
+	add hl, hl
+endr
+	pop de
+	add hl, de
+	ld d, h
+	ld e, l
+	pop hl
+	ld a, [wSpriteFlags]
+	bit 5, a
+	jr nz, .done
+	bit 6, a
+	jr nz, .done
+	ldh a, [hUsedSpriteIndex]
+	call _DoesSpriteHaveFacings
+	jr c, .done
+	ld a, h
+	add HIGH(vTiles1 - vTiles0)
+	ld h, a
+	call Get2bpp
+.done
+	ret
+.GetTileAddr:
+; Return the address of tile (a) in (hl).
+	and $7f
+	ld l, a
+	ld h, 0
+rept 4
+	add hl, hl
+endr
+	ld a, l
+	add LOW(vTiles0)
+	ld l, a
+	ld a, h
+	adc HIGH(vTiles0)
+	ld h, a
 	ret
 
 LoadEmote::
@@ -491,7 +527,5 @@ INCLUDE "data/sprites/emotes.asm"
 INCLUDE "gfx/emotes.asm"
 
 INCLUDE "data/sprites/sprite_mons.asm"
-
-INCLUDE "data/maps/outdoor_sprites.asm"
 
 INCLUDE "data/sprites/sprites.asm"
