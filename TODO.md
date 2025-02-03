@@ -4,9 +4,9 @@
   - ~~Menu UIs~~
 - ~~Expanded tilesets (up to 0x7F)~~
 - ~~Fix tilesets not being able to go above 128 blocks~~
-- New Collision Data types
+- ~~New Collision Data types~~
   - ~~Spinner Tile collision type~~
-  - Splashing in puddle collision type?
+  - ~~Splashing in puddle collision type~~
 - Allow tall grass in forests tutorial
 - Player Select in intro
 - Name Rival in intro
