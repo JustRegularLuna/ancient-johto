@@ -42,7 +42,6 @@ ShowPokedexEntry:
 	ld [wNamedObjectIndex], a
 	farcall NewPokedexEntry
 	call ExitAllMenus
-	farcall ReloadSpriteIndex
 	ret
 
 UnusedSetSeenMon:
