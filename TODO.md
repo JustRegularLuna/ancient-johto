@@ -7,7 +7,7 @@
 - ~~New Collision Data types~~
   - ~~Spinner Tile collision type~~
   - ~~Splashing in puddle collision type~~
-- Allow tall grass in forests tutorial
+- ~~Allow tall grass in forests tutorial~~
 - Player Select in intro
 - Name Rival in intro
 - ~~Able to show Pokedex info like Gen 1~~

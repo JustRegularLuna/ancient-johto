@@ -730,14 +730,8 @@ CheckIndoorMap::
 	cp DUNGEON
 	ret z
 	cp GATE
-	ret
-
-CheckUnknownMap:: ; unreferenced
-	cp INDOOR
 	ret z
-	cp GATE
-	ret z
-	cp ENVIRONMENT_5
+	cp FOREST
 	ret
 
 LoadMapAttributes::
