@@ -534,7 +534,6 @@ OakSpeech:
 	call GetBaseData
 
 	hlcoord 6, 4
-	hlcoord 6, 4 ; redundant
 	call PrepMonFrontpic
 
 	xor a
@@ -582,6 +581,38 @@ OakSpeech:
 	call NamePlayer
 	ld hl, OakText7
 	call PrintText
+	call RotateThreePalettesRight
+	call ClearTilemap
+
+	xor a
+	ld [wCurPartySpecies], a
+	ld a, RIVAL1
+	ld [wTrainerClass], a
+	call Intro_PrepTrainerPic
+
+	ld b, SCGB_TRAINER_OR_MON_FRONTPIC_PALS
+	call GetSGBLayout
+	call Intro_RotatePalettesLeftFrontpic
+
+	ld hl, OakText8
+	call PrintText
+	call NameRivalIntro
+	ld hl, OakText9
+	call PrintText
+	call RotateThreePalettesRight
+	call ClearTilemap
+
+	xor a
+	ld [wCurPartySpecies], a
+	ld a, CAL
+	ld [wTrainerClass], a
+	call Intro_PrepTrainerPic
+
+	ld b, SCGB_TRAINER_OR_MON_FRONTPIC_PALS
+	call GetSGBLayout
+	call Intro_RotatePalettesLeftFrontpic
+	ld hl, OakText10
+	call PrintText
 	ret
 
 OakText1:
@@ -615,6 +646,18 @@ OakText6:
 
 OakText7:
 	text_far _OakText7
+	text_end
+
+OakText8:
+	text_far _OakText8
+	text_end
+
+OakText9:
+	text_far _OakText9
+	text_end
+
+OakText10:
+	text_far _OakText10
 	text_end
 
 NamePlayer:
@@ -671,6 +714,63 @@ StorePlayerName:
 	ld hl, wStringBuffer2
 	ld bc, NAME_LENGTH
 	call CopyBytes
+	ret
+
+StoreRivalName:
+	ld a, "@"
+	ld bc, NAME_LENGTH
+	ld hl, wRivalName
+	call ByteFill
+	ld hl, wRivalName
+	ld de, wStringBuffer2
+	call CopyName2
+	ret
+
+NameRivalIntro:
+	farcall MovePlayerPicRight
+	call ShowRivalNamingChoices
+	ld a, [wMenuCursorY]
+	dec a
+	jr z, .NewName
+	call StoreRivalName
+	farcall ApplyMonOrTrainerPals
+	farcall MovePlayerPicLeft
+	ret
+
+.NewName:
+	ld b, NAME_RIVAL
+	ld de, wRivalName
+	farcall NamingScreen
+
+	call RotateThreePalettesRight
+	call ClearTilemap
+
+	call LoadFontsExtra
+	call WaitBGMap
+
+	xor a
+	ld [wCurPartySpecies], a
+	ld a, RIVAL1
+	ld [wTrainerClass], a
+	call Intro_PrepTrainerPic
+
+	ld b, SCGB_TRAINER_OR_MON_FRONTPIC_PALS
+	call GetSGBLayout
+	call RotateThreePalettesLeft
+
+	ld hl, wRivalName
+	ld de, RivalNames
+	call InitName
+	ret
+
+ShowRivalNamingChoices:
+	ld hl, RivalNameMenuHeaderIntro
+	call LoadMenuHeader
+	call VerticalMenu
+	ld a, [wMenuCursorY]
+	dec a
+	call CopyNameFromMenu
+	call CloseWindow
 	ret
 
 ShrinkPlayer:
@@ -734,6 +834,8 @@ MovePlayerPicLeft:
 	hlcoord 13, 4
 	ld de, -1
 MovePlayerPic:
+; Modified to erase the old pic too, not just draw the new one
+; This prevents Kamon's hand from artifacting across the screen
 	ld c, 7 + 1
 .loop
 	push bc
@@ -752,8 +854,22 @@ MovePlayerPic:
 	add hl, de
 	pop bc
 	dec c
-	jr nz, .loop
-	ret
+	ret z
+	push hl
+	push bc
+	push de
+	ld a, l
+	sub e
+	ld l, a
+	ld a, h
+	sbc d
+	ld h, a
+	lb bc, 7, 7
+	call ClearBox
+	pop de
+	pop bc
+	pop hl
+	jr .loop
 
 Intro_RotatePalettesLeftFrontpic:
 	ld hl, IntroFadePalettes

@@ -89,21 +89,17 @@ FoundNone:
 	ld [wScriptVar], a
 	ret
 
-NameRival:
-	ld b, NAME_RIVAL
-	ld de, wRivalName
+NameMom:
+	ld b, NAME_MOM
+	ld de, wMomsName
 	farcall _NamingScreen
-	ld hl, wRivalName
+	ld hl, wMomsName
 	ld de, .DefaultName
 	call InitName
 	ret
 
 .DefaultName:
-IF DEF(_GOLD)
-	db "SILVER@"
-ELIF DEF(_SILVER)
-	db "GOLD@"
-ENDC
+	db "MOM@"
 
 NameRater:
 	farcall _NameRater

@@ -459,7 +459,7 @@ RivalCherrygroveWinText:
 CherrygroveRivalText_YouLost:
 	text "…"
 
-	para "My name's ???."
+	para "My name's <RIVAL>."
 
 	para "I'm going to be"
 	line "the world's great-"
@@ -475,7 +475,7 @@ RivalCherrygroveLossText:
 CherrygroveRivalText_YouWon:
 	text "…"
 
-	para "My name's ???."
+	para "My name's <RIVAL>."
 
 	para "I'm going to be"
 	line "the world's great-"

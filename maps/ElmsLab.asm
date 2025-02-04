@@ -511,9 +511,6 @@ CopScript:
 	turnobject ELMSLAB_OFFICER, LEFT
 	opentext
 	writetext ElmsLabOfficerText1
-	promptbutton
-	special NameRival
-	writetext ElmsLabOfficerText2
 	waitbutton
 	closetext
 	applymovement ELMSLAB_OFFICER, OfficerLeavesMovement
@@ -1161,10 +1158,10 @@ ElmsLabOfficerText1:
 
 	para "Did you happen to"
 	line "get his name?"
-	done
 
-ElmsLabOfficerText2:
-	text "OK! So <RIVAL>"
+	para "… … …"
+
+	para "OK! So <RIVAL>"
 	line "was his name."
 
 	para "Thanks for helping"

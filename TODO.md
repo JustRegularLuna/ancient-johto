@@ -9,7 +9,7 @@
   - ~~Splashing in puddle collision type~~
 - ~~Allow tall grass in forests tutorial~~
 - Player Select in intro
-- Name Rival in intro
+- ~~Name Rival in intro~~
 - ~~Able to show Pokedex info like Gen 1~~
 - Ghost battle mode
 - Safari battle mode
