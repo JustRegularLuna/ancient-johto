@@ -245,6 +245,14 @@ PokeBallEffect:
 	ld a, [wBattleType]
 	cp BATTLETYPE_TUTORIAL
 	jp z, .catch_without_fail
+IF DEF(_DEBUG)
+	; Hold B + Down cheat in Debug Mode
+	call GetJoypad
+	ld a, [hJoyDown]
+	and D_DOWN + B_BUTTON
+	cp D_DOWN + B_BUTTON
+	jp z, .catch_without_fail
+ENDC
 	ld a, [wCurItem]
 	cp MASTER_BALL
 	jp z, .catch_without_fail
