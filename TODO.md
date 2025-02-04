@@ -17,6 +17,7 @@
 - ~~Gen 1 textbox border as default textbox style~~
 - Maybe the tutorial for more trainer types
 - ~~Town Map item~~
+- ~~Remove password for resetting the clock~~
 - Possibly clock instead of Menu Account on Start Menu
 - ~~Fix effects of Apricorn balls~~
 - ~~Fix surfing onto water that is across a map connection~~

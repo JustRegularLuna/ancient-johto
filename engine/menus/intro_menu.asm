@@ -1000,10 +1000,10 @@ TitleScreenMain:
 	cp  D_UP + B_BUTTON + SELECT
 	jr z, .delete_save_data
 
-; Clock can be reset by pressing Down + B + Select.
+; Clock can be reset by pressing Down + B.
 	ld a, [hl]
-	and D_DOWN + B_BUTTON + SELECT
-	cp  D_DOWN + B_BUTTON + SELECT
+	and D_DOWN + B_BUTTON
+	cp  D_DOWN + B_BUTTON
 	jr z, .reset_clock
 
 ; Press Start or A to start the game.
