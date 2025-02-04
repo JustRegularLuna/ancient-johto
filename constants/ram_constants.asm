@@ -332,6 +332,9 @@ DEF DAYCARELADY_HAS_MON_F        EQU 0
 ; shared flag between wDayCareMan and wDayCareLady
 DEF DAYCARE_INTRO_SEEN_F         EQU 7
 
+; wPlayerGender::
+DEF PLAYERGENDER_FEMALE_F        EQU 0
+
 ; sRTCStatusFlags::
 	const_def 5
 	shift_const RTC_DAYS_EXCEED_139 ; 5

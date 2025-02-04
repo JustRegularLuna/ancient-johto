@@ -379,6 +379,19 @@ SECTION "Credits Strings", ROMX
 INCLUDE "data/credits_strings.asm"
 
 
+SECTION "Player Pics", ROMX
+
+ChrisPic::     INCBIN "gfx/player/chris.2bpp.lz"
+ChrisBackpic:: INCBIN "gfx/player/chris_back.2bpp.lz"
+KrisPic::      INCBIN "gfx/player/kris.2bpp.lz"
+KrisBackpic::  INCBIN "gfx/player/kris_back.2bpp.lz"
+DudeBackpic::  INCBIN "gfx/battle/dude.2bpp.lz"
+
+PackGFX:   INCBIN "gfx/pack/pack.2bpp"
+PackGFX_F: INCBIN "gfx/pack/pack_f.2bpp"
+
+
+
 SECTION "Stadium 2 Checksums", ROMX[$7DF8], BANK[$7F]
 
 ; The end of the ROM is taken up by checksums of the content, apparently used

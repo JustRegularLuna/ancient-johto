@@ -112,14 +112,28 @@ MagnetTrain_LoadGFX_PlayMusic:
 	ldh [hSCX], a
 	ldh [hSCY], a
 
+; load the first frame of the player's walking animation
+	ld a, [wPlayerGender]
+	bit PLAYERGENDER_FEMALE_F, a
 	ld de, ChrisSpriteGFX
+	jr z, .gotPlayerSprite1
+	ld de, KrisSpriteGFX
+.gotPlayerSprite1
 	ld hl, vTiles0
 	lb bc, BANK(ChrisSpriteGFX), 4
+	assert BANK(ChrisSpriteGFX) == BANK(KrisSpriteGFX)
 	call Request2bpp
 
+; load the second frame of the player's walking animation
+	ld a, [wPlayerGender]
+	bit PLAYERGENDER_FEMALE_F, a
 	ld de, ChrisSpriteGFX + 12 tiles
+	jr z, .gotPlayerSprite2
+	ld de, KrisSpriteGFX + 12 tiles
+.gotPlayerSprite2
 	ld hl, vTiles0 tile $04
 	lb bc, BANK(ChrisSpriteGFX), 4
+	assert BANK(ChrisSpriteGFX) == BANK(KrisSpriteGFX)
 	call Request2bpp
 
 	call MagnetTrain_InitLYOverrides

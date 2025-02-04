@@ -2,6 +2,8 @@ SECTION "Sprites 1", ROMX
 
 ChrisSpriteGFX::               INCBIN "gfx/sprites/chris.2bpp"
 ChrisBikeSpriteGFX::           INCBIN "gfx/sprites/chris_bike.2bpp"
+KrisSpriteGFX::                INCBIN "gfx/sprites/kris.2bpp"
+KrisBikeSpriteGFX::            INCBIN "gfx/sprites/kris_bike.2bpp"
 GameboyKidSpriteGFX::          INCBIN "gfx/sprites/gameboy_kid.2bpp"
 RivalSpriteGFX::               INCBIN "gfx/sprites/rival.2bpp"
 OakSpriteGFX::                 INCBIN "gfx/sprites/oak.2bpp"
@@ -42,12 +44,12 @@ YoungsterSpriteGFX::           INCBIN "gfx/sprites/youngster.2bpp"
 LassSpriteGFX::                INCBIN "gfx/sprites/lass.2bpp"
 TeacherSpriteGFX::             INCBIN "gfx/sprites/teacher.2bpp"
 BeautySpriteGFX::              INCBIN "gfx/sprites/beauty.2bpp"
-SuperNerdSpriteGFX::           INCBIN "gfx/sprites/super_nerd.2bpp"
-RockerSpriteGFX::              INCBIN "gfx/sprites/rocker.2bpp"
 
 
 SECTION "Sprites 2", ROMX
 
+SuperNerdSpriteGFX::           INCBIN "gfx/sprites/super_nerd.2bpp"
+RockerSpriteGFX::              INCBIN "gfx/sprites/rocker.2bpp"
 PokefanMSpriteGFX::            INCBIN "gfx/sprites/pokefan_m.2bpp"
 PokefanFSpriteGFX::            INCBIN "gfx/sprites/pokefan_f.2bpp"
 GrampsSpriteGFX::              INCBIN "gfx/sprites/gramps.2bpp"

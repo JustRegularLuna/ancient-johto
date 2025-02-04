@@ -1141,6 +1141,11 @@ _MainMenuTimeUnknownText::
 	text "Clock time unknown"
 	done
 
+_PlayerSelectText::
+	text "Play as a boy, or"
+	line "as a girl?"
+	done
+
 _OakText1::
 	text "Hello! Sorry to"
 	line "keep you waiting!"

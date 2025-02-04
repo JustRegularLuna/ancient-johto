@@ -522,9 +522,16 @@ HOF_AnimatePlayerPic:
 	ld a, " "
 	call ByteFill
 
+; determine player back sprite and load it
+	ld a, [wPlayerGender]
+	bit PLAYERGENDER_FEMALE_F, a
 	ld hl, ChrisBackpic
+	jr z, .gotBackpic
+	ld hl, KrisBackpic
+.gotBackpic
 	ld de, vTiles2 tile $31
 	ld b, BANK(ChrisBackpic)
+	assert BANK(ChrisBackpic) == BANK(KrisBackpic)
 	ld c, 7 * 7
 	predef DecompressGet2bpp
 
@@ -551,10 +558,19 @@ HOF_AnimatePlayerPic:
 	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
 	ld a, " "
 	call ByteFill
-	ld a, CAL
-	ld [wTrainerClass], a
+
+; determine player front sprite and load it
 	ld de, vTiles2
-	farcall GetTrainerPic
+	ld a, [wPlayerGender]
+	bit PLAYERGENDER_FEMALE_F, a
+	ld hl, ChrisPic
+	jr z, .gotPic
+	ld hl, KrisPic
+.gotPic
+	lb bc, BANK(ChrisPic), 7 * 7
+	assert BANK(ChrisPic) == BANK(KrisPic)
+	predef DecompressGet2bpp
+
 	xor a
 	ldh [hGraphicStartTile], a
 	hlcoord 12, 5

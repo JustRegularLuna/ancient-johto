@@ -320,10 +320,13 @@ gfx/battle_anims/status.2bpp: tools/gfx += --remove-whitespace
 
 gfx/player/chris.2bpp: rgbgfx += --columns
 gfx/player/chris_back.2bpp: rgbgfx += --columns
+gfx/player/kris.2bpp: rgbgfx += --columns
+gfx/player/kris_back.2bpp: rgbgfx += --columns
 
 gfx/trainer_card/leaders.2bpp: tools/gfx += --trim-whitespace
 
 gfx/overworld/chris_fish.2bpp: tools/gfx += --trim-whitespace
+gfx/overworld/kris_fish.2bpp: tools/gfx += --trim-whitespace
 
 gfx/sprites/big_onix.2bpp: tools/gfx += --remove-whitespace --remove-xflip
 
