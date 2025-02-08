@@ -81,3 +81,24 @@ CheckForHiddenItems:
 	call GetFarByte
 	inc hl
 	ret
+
+RockItemEncounter:
+	ld hl, RockItems
+	call Random
+.loop
+	sub [hl]
+	jr c, .ok
+	inc hl
+	inc hl
+	jr .loop
+.ok
+	ld a, [hli]
+	cp -1
+	ld a, NO_ITEM
+	jr z, .done
+	ld a, [hl]
+.done
+	ld [wScriptVar], a
+	ret
+
+INCLUDE "data/items/rock_smash_rewards.asm"
