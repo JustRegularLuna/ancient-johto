@@ -36,4 +36,10 @@ SpriteMons:
 	db GYARADOS
 	db LUGIA
 	db HO_OH
+	db MEWTWO
+	db MEW
+	db CELEBI
+	db VILEPLUME
+	db SEEL
+	db OMANYTE
 	assert_table_length NUM_POKEMON_SPRITES

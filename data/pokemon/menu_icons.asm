@@ -46,7 +46,7 @@ MonMenuIcons:
 	db ICON_BAT         ; GOLBAT
 	db ICON_ODDISH      ; ODDISH
 	db ICON_ODDISH      ; GLOOM
-	db ICON_ODDISH      ; VILEPLUME
+	db ICON_PLANT       ; VILEPLUME
 	db ICON_BUG         ; PARAS
 	db ICON_BUG         ; PARASECT
 	db ICON_CATERPILLAR ; VENONAT
@@ -87,8 +87,8 @@ MonMenuIcons:
 	db ICON_BIRD        ; FARFETCH_D
 	db ICON_BIRD        ; DODUO
 	db ICON_BIRD        ; DODRIO
-	db ICON_LAPRAS      ; SEEL
-	db ICON_LAPRAS      ; DEWGONG
+	db ICON_SEEL        ; SEEL
+	db ICON_SEEL        ; DEWGONG
 	db ICON_BLOB        ; GRIMER
 	db ICON_BLOB        ; MUK
 	db ICON_SHELL       ; SHELLDER
@@ -139,10 +139,10 @@ MonMenuIcons:
 	db ICON_FOX         ; JOLTEON
 	db ICON_FOX         ; FLAREON
 	db ICON_VOLTORB     ; PORYGON
-	db ICON_SHELL       ; OMANYTE
-	db ICON_SHELL       ; OMASTAR
-	db ICON_SHELL       ; KABUTO
-	db ICON_SHELL       ; KABUTOPS
+	db ICON_FOSSIL      ; OMANYTE
+	db ICON_FOSSIL      ; OMASTAR
+	db ICON_FOSSIL      ; KABUTO
+	db ICON_FOSSIL      ; KABUTOPS
 	db ICON_BIRD        ; AERODACTYL
 	db ICON_SNORLAX     ; SNORLAX
 	db ICON_BIRD        ; ARTICUNO
@@ -151,11 +151,11 @@ MonMenuIcons:
 	db ICON_SERPENT     ; DRATINI
 	db ICON_SERPENT     ; DRAGONAIR
 	db ICON_BIGMON      ; DRAGONITE
-	db ICON_HUMANSHAPE  ; MEWTWO
-	db ICON_HUMANSHAPE  ; MEW
-	db ICON_ODDISH      ; CHIKORITA
-	db ICON_ODDISH      ; BAYLEEF
-	db ICON_ODDISH      ; MEGANIUM
+	db ICON_MEWTWO      ; MEWTWO
+	db ICON_MEW         ; MEW
+	db ICON_PLANT       ; CHIKORITA
+	db ICON_PLANT       ; BAYLEEF
+	db ICON_PLANT       ; MEGANIUM
 	db ICON_FOX         ; CYNDAQUIL
 	db ICON_FOX         ; QUILAVA
 	db ICON_FOX         ; TYPHLOSION
@@ -252,5 +252,5 @@ MonMenuIcons:
 	db ICON_MONSTER     ; TYRANITAR
 	db ICON_LUGIA       ; LUGIA
 	db ICON_HO_OH       ; HO_OH
-	db ICON_HUMANSHAPE  ; CELEBI
+	db ICON_CELEBI      ; CELEBI
 	assert_table_length NUM_POKEMON
