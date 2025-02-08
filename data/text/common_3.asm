@@ -420,19 +420,14 @@ _ItemUsedText::
 	text "."
 	done
 
-_ItemGotOnText::
-	text "<PLAYER> got on the@"
-	text_low
-	text_ram wStringBuffer2
-	text "."
+_ExpAllToggleOn::
+	text "The EXP.ALL was"
+	line "turned on."
 	prompt
 
-_ItemGotOffText::
-	text "<PLAYER> got off@"
-	text_low
-	text "the @"
-	text_ram wStringBuffer2
-	text "."
+_ExpAllToggleOff::
+	text "The EXP.ALL was"
+	line "turned off."
 	prompt
 
 _KnowsMoveText::

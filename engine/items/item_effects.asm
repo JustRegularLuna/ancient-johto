@@ -70,7 +70,7 @@ ItemEffects:
 	dw CoinCaseEffect      ; COIN_CASE
 	dw ItemfinderEffect    ; ITEMFINDER
 	dw PokeFluteEffect     ; POKE_FLUTE
-	dw NoEffect            ; EXP_SHARE
+	dw ExpAllEffect        ; EXP_ALL
 	dw OldRodEffect        ; OLD_ROD
 	dw GoodRodEffect       ; GOOD_ROD
 	dw NoEffect            ; SILVER_LEAF
@@ -1109,6 +1109,25 @@ BicycleEffect:
 	farcall BikeFunction
 	ret
 
+ExpAllEffect:
+	ld a, [wExpAllToggle]
+	xor 1
+	ld [wExpAllToggle], a
+	and a
+	ld hl, ExpAllToggleOn
+	jp nz, PrintText
+
+	ld hl, ExpAllToggleOff
+	jp PrintText
+
+ExpAllToggleOff:
+	text_far _ExpAllToggleOff
+	text_end
+ 
+ExpAllToggleOn:
+	text_far _ExpAllToggleOn
+	text_end
+
 EvoStoneEffect:
 	ld b, PARTYMENUACTION_EVO_STONE
 	call UseItem_SelectMon
@@ -1872,20 +1891,6 @@ LoadCurHPIntoBuffer3:
 	ld [wHPBuffer3 + 1], a
 	ld a, [hl]
 	ld [wHPBuffer3], a
-	ret
-
-LoadHPIntoBuffer3: ; unreferenced
-	ld a, d
-	ld [wHPBuffer3 + 1], a
-	ld a, e
-	ld [wHPBuffer3], a
-	ret
-
-LoadHPFromBuffer3: ; unreferenced
-	ld a, [wHPBuffer3 + 1]
-	ld d, a
-	ld a, [wHPBuffer3]
-	ld e, a
 	ret
 
 LoadCurHPIntoBuffer2:
@@ -2682,14 +2687,6 @@ BallBoxFullText:
 
 ItemUsedText:
 	text_far _ItemUsedText
-	text_end
-
-ItemGotOnText: ; unreferenced
-	text_far _ItemGotOnText
-	text_end
-
-ItemGotOffText: ; unreferenced
-	text_far _ItemGotOffText
 	text_end
 
 ApplyPPUp:

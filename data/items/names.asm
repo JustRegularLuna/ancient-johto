@@ -56,7 +56,7 @@ ItemNames::
 	li "COIN CASE"
 	li "ITEMFINDER"
 	li "TERU-SAMA"
-	li "EXP.SHARE"
+	li "EXP.ALL"
 	li "OLD ROD"
 	li "GOOD ROD"
 	li "SILVER LEAF"
