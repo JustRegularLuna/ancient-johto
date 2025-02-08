@@ -16,7 +16,6 @@
 - Safari battle mode
 - Change Pokedex UI to be more retro
 - ~~Gen 1 textbox border as default textbox style~~
-- Maybe the tutorial for more trainer types
 - ~~Town Map item~~
 - ~~Remove password for resetting the clock~~
 - Possibly clock instead of Menu Account on Start Menu
