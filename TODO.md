@@ -25,4 +25,4 @@
 - Add Evolve-While-Holding-Item evo method?
 - ~~Add Running Shoes~~
 - Fossil lab, (but that's just an event script mostly)
-- Gen 6 EXP Share system (because it is more like Gen 1)
+- ~~Gen 6 EXP Share system (because it is more like Gen 1)~~
