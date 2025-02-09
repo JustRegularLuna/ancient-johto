@@ -1,6 +1,9 @@
 ; Items that can be found via Rock Smash
 ; chance, item
 RockItems:
+	db 1, OLD_AMBER
+	db 1, DOME_FOSSIL
+	db 1, HELIX_FOSSIL
 	db 1, MAX_REVIVE
 	db 2, THICK_CLUB
 	db 4, NUGGET

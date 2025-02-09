@@ -253,6 +253,12 @@ DEF NUM_DECODESCS EQU const_value
 	const FISHSWARM_QWILFISH ; 1
 	const FISHSWARM_REMORAID ; 2
 
+; FossilScientist setval arguments
+	const_def 1
+	const REVIVE_OLD_AMBER    ; 1
+	const REVIVE_DOME_FOSSIL  ; 2
+	const REVIVE_HELIX_FOSSIL ; 3
+
 ; SpecialGameboyCheck return values
 	const_def
 	const GBCHECK_GB  ; 0
