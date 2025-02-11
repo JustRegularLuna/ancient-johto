@@ -4,11 +4,11 @@ Notes and info for future reference.
 
 ## Ghost Battles
 
-Near the bottom of `ChooseWildEncounter:` in `engine/overworld/wildmons.asm` has a commented-out map check. The commented-out check would make all Wild Pokemon on Route 29 be treated as ghosts, IF the player doesn't have a Silph Scope.
+An item for the `SILPH_SCOPE` from Gen 1 has been added, and is functional, but no event has been added to give one to the player. Near the bottom of `ChooseWildEncounter:` in `engine/overworld/wildmons.asm` there is a commented-out map check. The commented-out check would make all Wild Pokemon on `ROUTE_29` be treated as ghosts, IF the player doesn't have a `SILPH_SCOPE`. If the player has as `SILPH_SCOPE`, they will be normal encounters instead.
 
 These checks could be expanded to account for a range of maps, adjusted to check for a specific Landmark, etc.
 
-If the player is forced into a battle using `BATTLETYPE_GHOST` while they have a Silph Scope, it will say that the Silph Scope identified the ghost, update it's sprite and name, and switch to a normal Wild Pokemon encounter.
+If the player is forced into a battle using `BATTLETYPE_GHOST` via an event, while they have a `SILPH_SCOPE` in their pack, it will first say that the Silph Scope identified the ghost, update it's sprite and name, and switch to a normal Wild Pokemon encounter.
 
 
 ## Fossil Reviving
