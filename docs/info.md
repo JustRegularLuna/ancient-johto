@@ -1,0 +1,63 @@
+# Useful Info
+
+Notes and info for future reference.
+
+## Ghost Battles
+
+Near the bottom of `ChooseWildEncounter:` in `engine/overworld/wildmons.asm` has a commented-out map check. The commented-out check would make all Wild Pokemon on Route 29 be treated as ghosts, IF the player doesn't have a Silph Scope.
+
+These checks could be expanded to account for a range of maps, adjusted to check for a specific Landmark, etc.
+
+If the player is forced into a battle using `BATTLETYPE_GHOST` while they have a Silph Scope, it will say that the Silph Scope identified the ghost, update it's sprite and name, and switch to a normal Wild Pokemon encounter.
+
+
+## Fossil Reviving
+
+As an example, there is a Fossil Lab script added to the file `maps/RuinsOfAlphResearchCenter.asm`. This script (along with its text) could be easily cut and pasted to a different map to move the fossil lab there.
+
+The fossils are currently only obtainable via Rock Smash (see `data/items/rock_smash_rewards.asm`) but they can be made available in any way you wish via new events.
+
+
+## Town Map Item
+
+While it is not made available by any new or changed event, the item called `TOWN_MAP` has been made fully functional as a key item, just like it was in Gen 1. It can be given via any new or changed event that you see fit.
+
+
+## Forests with Tall Grass
+
+The environment type `FOREST` has been added, for maps that work like Viridian Forest in Gen 1, instead of like Ilex Forest in Gen 2. It is not currently assigned to any maps.
+
+
+## Puddles that splash when you walk
+
+The collision type `COLL_PUDDLE` has been added, but is not assigned to any map blocks. If you want to use it in new tilesets, just give them the `PUDDLE` collision type in Polished Map when setting up the blocks.
+
+
+## Spinner Tiles
+
+The functionality for spinner tiles from the Gen 1 Team Rocket base have been added. They have not been added to any existing tilesets, but can be used. Their collision types are:
+```
+	COLL_STOP_SPIN
+	COLL_SPIN_UP
+	COLL_SPIN_DOWN
+	COLL_SPIN_LEFT
+	COLL_SPIN_RIGHT
+```
+Just make the appropriate blocks in whatever tileset you want, and set their collision using Polished Map. Remember that you do not add the `COLL_` prefix in Polished Map.
+
+
+## Tileset Expansion
+
+Tilesets have been expanded to allow up to 0x7F tiles now (Tile 0x7F itself still needs to be a blank tile for the space character). They have also been corrected so that block IDs do not wrap around with higher block IDs like they did in vanilla.
+
+
+## Splash Pokedex Info on Screen
+
+Just like in Gen 1, you are able to show a Pokemon's dex info on the screen now using a new Special. This has been added to Elm's Lab instead of the standard pokepic when choosing a starter. To do it via an event script, just use:
+```
+	reanchormap
+	setval CYNDAQUIL
+	special ShowPokedexEntry
+```
+The version in Elm's Lab has an added routine called via `callasm` to temporarily mark the starters as owned before giving them. In normal usage, it will only display the basic info and mark the Pokemon as "seen" when you use this from an event.
+

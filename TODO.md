@@ -12,7 +12,7 @@
   - Make it more like Polished Crystal's player select instead of Crystal's
 - ~~Name Rival in intro~~
 - ~~Able to show Pokedex info like Gen 1~~
-- Ghost battle mode
+- ~~Ghost battle mode~~
 - Safari battle mode
 - Change Pokedex UI to be more retro
 - ~~Gen 1 textbox border as default textbox style~~
