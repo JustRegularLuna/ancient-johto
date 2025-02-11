@@ -387,9 +387,10 @@ KrisPic::      INCBIN "gfx/player/kris.2bpp.lz"
 KrisBackpic::  INCBIN "gfx/player/kris_back.2bpp.lz"
 DudeBackpic::  INCBIN "gfx/battle/dude.2bpp.lz"
 
-PackGFX:   INCBIN "gfx/pack/pack.2bpp"
-PackGFX_F: INCBIN "gfx/pack/pack_f.2bpp"
+PackGFX::   INCBIN "gfx/pack/pack.2bpp"
+PackGFX_F:: INCBIN "gfx/pack/pack_f.2bpp"
 
+GhostPic:: INCBIN "gfx/battle/ghost.2bpp.lz"
 
 
 SECTION "Stadium 2 Checksums", ROMX[$7DF8], BANK[$7F]

@@ -110,6 +110,10 @@ DoBattle:
 	call SpikesDamage
 
 .not_linked_2
+	ld a, [wBattleType]
+	cp BATTLETYPE_GHOST
+	jp z, GhostBattleTurn
+	; else
 	jp BattleTurn
 
 .tutorial_debug
@@ -201,6 +205,39 @@ BattleTurn:
 
 .quit
 	ret
+
+GhostBattleTurn:
+.loop
+	xor a
+	ld [wBattlePlayerAction], a
+
+	call BattleMenu
+	ret c
+
+	ld a, [wBattleEnded]
+	and a
+	ret nz
+
+	call ParsePlayerAction
+	jr nz, .loop
+
+	call HandleGhostBehavior
+
+	jr .loop
+
+HandleGhostBehavior:
+	; The ghost always says "Get Out... Get Out..."
+	ld hl, BattleText_GhostGetOut
+	call StdBattleTextbox
+
+	; Did the player try to attack the ghost?
+	ld a, [wBattlePlayerAction]
+	and a
+	ret nz
+
+	; If you tried to attack, your Pokemon is "too scared to move"
+	ld hl, BattleText_TooScared
+	jp StdBattleTextbox
 
 HandleBetweenTurnEffects:
 	ldh a, [hSerialConnectionStatus]
@@ -3402,6 +3439,8 @@ TryToRunAwayFromBattle:
 	jp z, .can_escape
 	cp BATTLETYPE_CONTEST
 	jp z, .can_escape
+	cp BATTLETYPE_GHOST
+	jp z, .can_escape
 	cp BATTLETYPE_TRAP
 	jp z, .cant_escape
 	cp BATTLETYPE_FORCESHINY
@@ -4451,6 +4490,13 @@ DrawEnemyHUD:
 	ld a, [hl]
 	ld [de], a
 
+	ld a, [wBattleType]
+	cp BATTLETYPE_GHOST
+	jr nz, .notGhost
+	ld a, " "
+	jr .got_gender
+
+.notGhost
 	ld a, TEMPMON
 	ld [wMonType], a
 	callfar GetGender
@@ -6123,11 +6169,19 @@ LoadEnemyMon:
 
 ; Update enemy nickname
 	ld hl, wStringBuffer1
+	ld a, [wBattleType]
+	cp BATTLETYPE_GHOST
+	jr nz, .notGhost
+	ld hl, GhostName
+.notGhost
 	ld de, wEnemyMonNickname
 	ld bc, MON_NAME_LENGTH
 	call CopyBytes
 
 ; Saw this mon
+	ld a, [wBattleType]
+	cp BATTLETYPE_GHOST
+	jr z, .skip_seen
 	ld a, [wTempEnemyMonSpecies]
 	dec a
 	ld c, a
@@ -6135,6 +6189,7 @@ LoadEnemyMon:
 	ld hl, wPokedexSeen
 	predef SmallFarFlagAction
 
+.skip_seen
 	ld hl, wEnemyMonStats
 	ld de, wEnemyStats
 	ld bc, NUM_BATTLE_STATS * 2
@@ -6142,6 +6197,9 @@ LoadEnemyMon:
 
 ; BUG: PRZ and BRN stat debuffs sometimes don't apply to switched mons (see docs/bugs_and_glitches.md)
 	ret
+
+GhostName:
+	db "GHOST@@@@@"
 
 CheckUnownLetter:
 ; Return carry if the Unown letter hasn't been unlocked yet
@@ -7629,7 +7687,7 @@ DropEnemySub:
 	ld hl, wEnemyMonDVs
 	predef GetUnownLetter
 	ld de, vTiles2
-	predef GetMonFrontpic
+	predef GetMonFrontpic2
 	pop af
 	ld [wCurPartySpecies], a
 	ret
@@ -7692,6 +7750,41 @@ StartBattle:
 	res SPRITE_UPDATES_DISABLED_F, [hl]
 	call InitBattleDisplay
 	call BattleStartMessage
+	; check for ghost reveal
+	ld a, [wBattleType]
+	cp BATTLETYPE_GHOST
+	jr nz, .skip_ghost_reveal
+	ld a, SILPH_SCOPE
+	ld [wCurItem], a
+	ld hl, wNumItems
+	call CheckItem
+	jr c, .ghost_reveal
+	ld hl, GhostCantBeIDdText
+	call StdBattleTextbox
+	jr .skip_ghost_reveal
+.ghost_reveal
+	ld hl, UnveiledGhostText
+	call StdBattleTextbox
+	ld de, vTiles2
+	predef GetMonFrontpic
+	ld a, [wTempEnemyMonSpecies]
+	ld [wNamedObjectIndex], a
+	call GetPokemonName
+	ld hl, wStringBuffer1
+	ld de, wEnemyMonNickname
+	ld bc, MON_NAME_LENGTH
+	call CopyBytes
+	ld hl, WildPokemonAppearedText
+	call StdBattleTextbox
+	ld a, BATTLETYPE_NORMAL
+	ld [wBattleType], a
+	ld a, [wTempEnemyMonSpecies]
+	dec a
+	ld c, a
+	ld b, SET_FLAG
+	ld hl, wPokedexSeen
+	predef SmallFarFlagAction
+.skip_ghost_reveal
 	xor a
 	ldh [hBGMapMode], a
 	ld hl, rLCDC
@@ -7794,7 +7887,7 @@ InitEnemyWildmon:
 	ld [wFirstUnownSeen], a
 .skip_unown
 	ld de, vTiles2
-	predef GetMonFrontpic
+	predef GetMonFrontpic2
 	xor a
 	ld [wTrainerClass], a
 	ldh [hGraphicStartTile], a
@@ -8619,6 +8712,9 @@ BattleStartMessage:
 	jr z, .PrintBattleStartText
 	ld hl, PokemonFellFromTreeText
 	cp BATTLETYPE_TREE
+	jr z, .PrintBattleStartText
+	ld hl, GhostAppearedText
+	cp BATTLETYPE_GHOST
 	jr z, .PrintBattleStartText
 	ld hl, WildPokemonAppearedText
 

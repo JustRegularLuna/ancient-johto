@@ -357,6 +357,23 @@ ChooseWildEncounter:
 	ld a, b
 	ld [wTempWildMonSpecies], a
 
+	; check for haunted areas
+	;ld a, [wMapGroup]
+	;cp GROUP_ROUTE_29
+	;jr nz, .not_ghost
+	;ld a, [wMapNumber]
+	;cp MAP_ROUTE_29
+	;jr nz, .not_ghost
+	; check for silph scope
+	;ld a, SILPH_SCOPE
+	;ld [wCurItem], a
+	;ld hl, wNumItems
+	;call CheckItem
+	;jr c, .not_ghost
+	;ld a, BATTLETYPE_GHOST
+	;ld [wBattleType], a
+;.not_ghost
+
 .startwildbattle
 	xor a
 	ret

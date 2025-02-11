@@ -70,7 +70,7 @@ ItemDescriptions:
 	dw SecretPotionDesc
 	dw SSTicketDesc
 	dw MysteryEggDesc
-	dw TeruSama6Desc
+	dw SilphScopeDesc
 	dw SilverWingDesc
 	dw MoomooMilkDesc
 	dw QuickClawDesc
@@ -532,8 +532,9 @@ MysteryEggDesc:
 	db   "An EGG obtained"
 	next "from MR.#MON.@"
 
-TeruSama6Desc:
-	db   "?@"
+SilphScopeDesc:
+	db   "Can identify any"
+	next "invisible #MON.@"
 
 SilverWingDesc:
 	db   "A strange, silver-"
