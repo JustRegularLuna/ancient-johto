@@ -8,13 +8,12 @@
   - ~~Spinner Tile collision type~~
   - ~~Splashing in puddle collision type~~
 - ~~Allow tall grass in forests tutorial~~
-- ~~Player Select in intro~~
-  - Make it more like Polished Crystal's player select instead of Crystal's
+- ~~Gender Select in intro~~
 - ~~Name Rival in intro~~
 - ~~Able to show Pokedex info like Gen 1~~
 - ~~Ghost battle mode~~
 - Safari battle mode
-- Change Pokedex UI to be more retro
+- ~~Make Pokedex light-mode like Gen 1~~
 - ~~Gen 1 textbox border as default textbox style~~
 - ~~Town Map item~~
 - ~~Remove password for resetting the clock~~
