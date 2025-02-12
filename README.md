@@ -1,7 +1,7 @@
 # Pokémon Gold and Silver, Retro Base
 This is based on the pret disassembly of Pokémon Gold and Pokémon Silver.
 
-This repository is intended as a base for other hacks, not as a "real" hack in its own right. It is not focused on adding or significantly changing the base game's content, but instead focuses on adding and changing features.
+This repository is intended as a base for other hacks, not as a "real" hack in its own right. It is not focused on adding or significantly changing the base game's content, but instead focuses on adding and changing features. My motivation for making this was to make it easier to work on my more retro/nostalgic project ideas without having to wade through the spaghetti that Gen 1 is made of. For example, Gen 1 does not even have an event scripting system, and requires custom events to all the be written in ASM code, and has a lot of hidden "gotchas" to work around, while Gen 2 is overall a nicer base to use, but was lacking some of the iconic aspects of Gen 1 that those retro projects would want. I started making this base to combine the best of both worlds, and I'm keeping it as its own separate repo to make it easier for others to use as well, if they are so inclined.
 
 More detailed information about using some of these features is inside the `docs/` folder, but a brief summary of what this currently provides is:
 - The entire game uses SGB monochrome palettes in both GBC and SGB mode, like Gen 1.
