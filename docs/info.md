@@ -2,6 +2,25 @@
 
 Notes and info for future reference.
 
+## Item in Player's PC at start of a new game
+
+In Gen 1, at the start of a new game, there was a `POTION` already in the Player's PC item storage. This was not the case in Gen 2, but the functionality was added to this base. If you want to change the item, add others, or remove that function all together, it is simple enough to do.
+
+In `engine/menus/intro_menu.asm`, look for the `OakSpeech:` label. A little code block to add the item was added at the start of this routine, identical to the one in Gen 1.
+
+If you want to remove the item all together, just delete this block of code:
+```
+	; Silently add 1 Potion to the player's PC like RBY
+	ld a, POTION
+	ld [wCurItem], a
+	ld a, 1
+	ld [wItemQuantityChange], a
+	ld hl, wNumPCItems
+	call ReceiveItem
+```
+If you want to change the item to something else, just change the `POTION` constant to a different item's constant. Similarly, you can change the `1` to a different amount, if you want to add more than one of that item. If you want to add more than one type of item at the start of the game, you can just copy/paste that code block again directly below it, and change the Item ID and Amount as you see fit.
+
+
 ## Ghost Battles
 
 An item for the `SILPH_SCOPE` from Gen 1 has been added, and is functional, but no event has been added to give one to the player. Near the bottom of `ChooseWildEncounter:` in `engine/overworld/wildmons.asm` there is a commented-out map check. The commented-out check would make all Wild Pokemon on `ROUTE_29` be treated as ghosts, IF the player doesn't have a `SILPH_SCOPE`. If the player has as `SILPH_SCOPE`, they will be normal encounters instead.
@@ -25,7 +44,7 @@ While it is not made available by any new or changed event, the item called `TOW
 
 ## Forests with Tall Grass
 
-The environment type `FOREST` has been added, for maps that work like Viridian Forest in Gen 1, instead of like Ilex Forest in Gen 2. It is not currently assigned to any maps.
+The environment type `FOREST` has been added, for maps that work like Viridian Forest in Gen 1, instead of like Ilex Forest in Gen 2 (which was treated as a cave). It is not currently assigned to any maps.
 
 
 ## Puddles that splash when you walk
