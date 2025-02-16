@@ -371,6 +371,16 @@ BattleText_WildMonIsAngry:
 	line "is angry!"
 	prompt
 
+BattleText_ThrewRock:
+	text "<PLAYER> threw a"
+	line "rock."
+	done
+
+BattleText_ThrewBait:
+	text "<PLAYER> threw"
+	line "some bait."
+	done
+
 BattleText_GhostGetOut:
 	text "GHOST: Get out…"
 	line "Get out…"

@@ -38,7 +38,7 @@ ItemEffects:
 	dw EvoStoneEffect      ; FIRE_STONE
 	dw EvoStoneEffect      ; THUNDERSTONE
 	dw EvoStoneEffect      ; WATER_STONE
-	dw NoEffect            ; ITEM_19
+	dw PokeBallEffect      ; SAFARI_BALL
 	dw VitaminEffect       ; HP_UP
 	dw VitaminEffect       ; PROTEIN
 	dw VitaminEffect       ; IRON
@@ -236,8 +236,12 @@ PokeBallEffect:
 	ld [wWildMon], a
 	ld a, [wCurItem]
 	cp PARK_BALL
-	call nz, ReturnToBattle_UseBall
+	jr z, .skip_return_to_battle
+	cp SAFARI_BALL
+	jr z, .skip_return_to_battle
+	call ReturnToBattle_UseBall
 
+.skip_return_to_battle
 	ld hl, wOptions
 	res NO_TEXT_SCROLL, [hl]
 	ld hl, ItemUsedText
@@ -700,6 +704,8 @@ ENDC
 	ret z
 	cp BATTLETYPE_CONTEST
 	jr z, .used_park_ball
+	cp BATTLETYPE_SAFARI
+	jr z, .used_safari_ball
 
 	ld a, [wWildMon]
 	and a
@@ -719,12 +725,17 @@ ENDC
 	dec [hl]
 	ret
 
+.used_safari_ball
+	ld hl, wSafariBallsRemaining
+	dec [hl]
+	ret
+
 BallMultiplierFunctionTable:
 ; table of routines that increase or decrease the catch rate based on
 ; which ball is used in a certain situation.
 	dbw ULTRA_BALL,  UltraBallMultiplier
 	dbw GREAT_BALL,  GreatBallMultiplier
-	dbw SAFARI_BALL, SafariBallMultiplier ; Safari Ball, leftover from RBY
+	dbw SAFARI_BALL, SafariBallMultiplier
 	dbw HEAVY_BALL,  HeavyBallMultiplier
 	dbw LEVEL_BALL,  LevelBallMultiplier
 	dbw LURE_BALL,   LureBallMultiplier

@@ -49,3 +49,4 @@ While I (JustRegularLuna) applied this stuff and came up with some of it myself,
 - Gamefreak, of course.
 - Contributors to the wiki tutorials for pokecrystal, where some of these improvements were adapted from.
 - Ghost Battle mode ported from Gen 1 using code by JustRegularLuna, Rangi42, and Vulcandth (Polished Crystal).
+- Safari Battle mode ported from Gen 1 using code by JustRegularLuna, SourApple, and leftover code by Gamefreak.

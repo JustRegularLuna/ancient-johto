@@ -25,7 +25,7 @@ ItemDescriptions:
 	dw FireStoneDesc
 	dw ThunderStoneDesc
 	dw WaterStoneDesc
-	dw TeruSama2Desc
+	dw SafariBallDesc
 	dw HPUpDesc
 	dw ProteinDesc
 	dw IronDesc
@@ -356,8 +356,9 @@ WaterStoneDesc:
 	db   "Evolves certain"
 	next "kinds of #MON.@"
 
-TeruSama2Desc:
-	db   "?@"
+SafariBallDesc:
+	db   "The BALL used in"
+	next "the SAFARI ZONE.@"
 
 HPUpDesc:
 	db   "Raises the HP of"

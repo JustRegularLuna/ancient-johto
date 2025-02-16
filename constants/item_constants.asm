@@ -30,7 +30,7 @@
 	const FIRE_STONE   ; 16
 	const THUNDERSTONE ; 17
 	const WATER_STONE  ; 18
-	const ITEM_19      ; 19
+	const SAFARI_BALL  ; 19
 	const HP_UP        ; 1a
 	const PROTEIN      ; 1b
 	const IRON         ; 1c
@@ -298,6 +298,3 @@ DEF NUM_TM_HM EQU NUM_TMS + NUM_HMS
 
 DEF USE_SCRIPT_VAR EQU $00
 DEF ITEM_FROM_MEM  EQU $ff
-
-; leftover from red
-DEF SAFARI_BALL    EQU $08 ; MOON_STONE

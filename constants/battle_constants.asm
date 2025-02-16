@@ -100,6 +100,7 @@ DEF SPDSPCDV_SHINY EQU $AA
 	const BATTLETYPE_TRAP
 	const BATTLETYPE_FORCEITEM
 	const BATTLETYPE_GHOST
+	const BATTLETYPE_SAFARI
 
 ; BattleVarPairs indexes (see home/battle_vars.asm)
 	const_def
