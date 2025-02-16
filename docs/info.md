@@ -23,11 +23,18 @@ If you want to change the item to something else, just change the `POTION` const
 
 ## Ghost Battles
 
-An item for the `SILPH_SCOPE` from Gen 1 has been added, and is functional, but no event has been added to give one to the player. Near the bottom of `ChooseWildEncounter:` in `engine/overworld/wildmons.asm` there is a commented-out map check. The commented-out check would make all Wild Pokemon on `ROUTE_29` be treated as ghosts, IF the player doesn't have a `SILPH_SCOPE`. If the player has as `SILPH_SCOPE`, they will be normal encounters instead.
+An item for the `SILPH_SCOPE` from Gen 1 has been added, and is functional, but no event has been added to give one to the player.
 
-These checks could be expanded to account for a range of maps, adjusted to check for a specific Landmark, etc.
+No maps are currently assigned to use unidentified ghost functionality. However, the list in `data/maps/ghost_maps.asm` determines which maps should function like Pokemon Tower did in RBY. By default, it has a single commented-out example entry, which would make Route 29 function that way, loading either unidentified ghost encounters, or normal wild encounters, depending on whether or not the player has a `SILPH_SCOPE` in their pack.
 
-If the player is forced into a battle using `BATTLETYPE_GHOST` via an event, while they have a `SILPH_SCOPE` in their pack, it will first say that the Silph Scope identified the ghost, update it's sprite and name along with a short animation (a beta send-out animation, with the pokéball poof commented out), and switch to a normal Wild Pokemon encounter.
+If the player is forced into a battle using `BATTLETYPE_GHOST` via an event while they have a `SILPH_SCOPE` in their pack, It will function similarly to the Ghost Marowak in RBY. It will first show a ghost, say that the Silph Scope identified the ghost, update it's sprite and name along with a short animation (a beta send-out animation, with the pokéball poof commented out), and switch to a normal Wild Pokemon encounter. This means that, once identified, it will become a normal Wild Pokemon battle, and the ghost could be caught normally.
+
+If you want to change the battle type that it switches to, you would need to look in `engine/battle/core.asm` and look for the `.ghost_reveal` label. A handful of lines below that, you will see:
+```
+	ld a, BATTLETYPE_NORMAL
+	ld [wBattleType], a
+```
+If you want to change that to a different type of battle for ghosts that are indentified in the cinematic way like this, you could change that `BATTLETYPE_` ID to a different one.
 
 
 ## Fossil Reviving

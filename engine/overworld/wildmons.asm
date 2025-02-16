@@ -358,27 +358,38 @@ ChooseWildEncounter:
 	ld [wTempWildMonSpecies], a
 
 	; check for haunted areas
-	;ld a, [wMapGroup]
-	;cp GROUP_ROUTE_29
-	;jr nz, .not_ghost
-	;ld a, [wMapNumber]
-	;cp MAP_ROUTE_29
-	;jr nz, .not_ghost
+	call CopyCurrMapDE
+	ld hl, GhostMaps
+.ghost_loop
+	ld a, [hli]
+	cp -1 ; end of the list?
+	jr z, .not_ghost
+	cp d ; is it the current map's group?
+	jr z, .ghost_loop2
+	inc hl
+	jr .ghost_loop
+.ghost_loop2
+	ld a, [hl]
+	cp e ; is it the current map?
+	jr z, .scope_check
+	jr .not_ghost
+.scope_check
 	; check for silph scope
-	;ld a, SILPH_SCOPE
-	;ld [wCurItem], a
-	;ld hl, wNumItems
-	;call CheckItem
-	;jr c, .not_ghost
-	;ld a, BATTLETYPE_GHOST
-	;ld [wBattleType], a
-;.not_ghost
+	ld a, SILPH_SCOPE
+	ld [wCurItem], a
+	ld hl, wNumItems
+	call CheckItem
+	jr c, .not_ghost
+	ld a, BATTLETYPE_GHOST
+	ld [wBattleType], a
+.not_ghost
 
 .startwildbattle
 	xor a
 	ret
 
 INCLUDE "data/wild/probabilities.asm"
+INCLUDE "data/maps/ghost_maps.asm"
 
 CheckRepelEffect::
 ; If there is no active Repel, there's no need to be here.
