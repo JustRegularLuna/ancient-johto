@@ -8,7 +8,7 @@ An item for the `SILPH_SCOPE` from Gen 1 has been added, and is functional, but 
 
 These checks could be expanded to account for a range of maps, adjusted to check for a specific Landmark, etc.
 
-If the player is forced into a battle using `BATTLETYPE_GHOST` via an event, while they have a `SILPH_SCOPE` in their pack, it will first say that the Silph Scope identified the ghost, update it's sprite and name, and switch to a normal Wild Pokemon encounter.
+If the player is forced into a battle using `BATTLETYPE_GHOST` via an event, while they have a `SILPH_SCOPE` in their pack, it will first say that the Silph Scope identified the ghost, update it's sprite and name along with a short animation (a beta send-out animation, with the pokéball poof commented out), and switch to a normal Wild Pokemon encounter.
 
 
 ## Fossil Reviving
@@ -61,3 +61,13 @@ Just like in Gen 1, you are able to show a Pokemon's dex info on the screen now 
 ```
 The version in Elm's Lab has an added routine called via `callasm` to temporarily mark the starters as owned before giving them. In normal usage, it will only display the basic info and mark the Pokemon as "seen" when you use this from an event.
 
+
+## Make a Pokemon evolve by holding an item
+
+If you want to remove the trading requirement for certain Pokemon such as Steelix, but still want to keep it more similar to the vanilla method, there is a new evolution type added. An example would be editing `data/pokemon/evos_attacks.asm` and changing Onix's data to use:
+```
+OnixEvosAttacks:
+	db EVOLVE_HELD, METAL_COAT, STEELIX
+	db 0 ; no more evolutions
+```
+As you can see, it does not require a specific level (since `EVOLVE_TRADE` did not, either), and the Pokemon will try to evolve if they level up while holding the specified item.
