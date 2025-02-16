@@ -418,8 +418,8 @@ BattleAnim_SendOutMon:
 	anim_1gfx BATTLE_ANIM_GFX_SMOKE
 	anim_call BattleAnim_TargetObj_1Row
 	anim_bgeffect BATTLE_BG_EFFECT_BETA_SEND_OUT_MON2, $0, BG_EFFECT_USER, $0
-	anim_sound 0, 0, SFX_BALL_POOF
-	anim_obj BATTLE_ANIM_OBJ_BETA_BALL_POOF, 48, 96, $0
+	;anim_sound 0, 0, SFX_BALL_POOF
+	;anim_obj BATTLE_ANIM_OBJ_BETA_BALL_POOF, 48, 96, $0
 	anim_bgeffect BATTLE_BG_EFFECT_ENTER_MON, $0, BG_EFFECT_USER, $0
 	anim_wait 128
 	anim_wait 4

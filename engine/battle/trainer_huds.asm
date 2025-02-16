@@ -1,4 +1,7 @@
 BattleStart_TrainerHuds:
+	ld a, [wBattleType]
+	cp BATTLETYPE_GHOST
+	ret z
 	ld a, $e4
 	ldh [rOBP0], a
 	call LoadBallIconGFX

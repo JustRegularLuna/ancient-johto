@@ -7765,8 +7765,17 @@ StartBattle:
 .ghost_reveal
 	ld hl, UnveiledGhostText
 	call StdBattleTextbox
+	call EnemyMonFaintedAnimation
 	ld de, vTiles2
 	predef GetMonFrontpic
+	xor a
+	ld [wNumHits], a
+	ld a, 1
+	ldh [hBattleTurn], a
+	ld a, 3
+	ld [wBattleAnimParam], a
+	ld de, ANIM_SEND_OUT_MON
+	call Call_PlayBattleAnim
 	ld a, [wTempEnemyMonSpecies]
 	ld [wNamedObjectIndex], a
 	call GetPokemonName
