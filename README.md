@@ -46,8 +46,7 @@ For other pret projects, see [pret.github.io](https://pret.github.io/).
 
 ## Credits
 
-While I (JustRegularLuna) applied this stuff and came up with some of it myself, not all of it was made by me originally. Additional credit goes to:
-- Gamefreak, of course.
+Not everything in this base was made by me (JustRegularLuna) originally. Additional credit goes to:
 - Contributors to the wiki tutorials for pokecrystal, where some of these improvements were adapted from.
 - Ghost Battle mode ported from Gen 1 using code by JustRegularLuna, Rangi42, Vulcandth, and leftover code by Gamefreak (Polished Crystal).
 - Safari Battle mode ported from Gen 1 using code by JustRegularLuna, SourApple, and leftover code by Gamefreak (Sour Crystal).
