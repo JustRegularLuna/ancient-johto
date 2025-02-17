@@ -161,11 +161,6 @@ DragonShrineRisingBadgeExplanationText:
 	line "have this TM."
 	done
 
-Text_ReceivedTM24: ; unreferenced
-	text "<PLAYER> received"
-	line "TM24."
-	done
-
 ClairText_DescribeDragonbreathDragonDen:
 	text "That contains"
 	line "DRAGONBREATH."

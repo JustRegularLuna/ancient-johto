@@ -547,7 +547,7 @@ MenuHeader_Buy:
 	db 4, 8 ; rows, columns
 	db SCROLLINGMENU_ITEMS_NORMAL ; item format
 	dbw 0, wCurMartCount
-	dba PlaceMenuItemName
+	dba PlaceMartMenuItemName
 	dba .PrintBCDPrices
 	dba UpdateItemDescription
 

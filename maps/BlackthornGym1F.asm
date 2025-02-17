@@ -251,11 +251,6 @@ BlackthornGymClairText_YouKeptMeWaiting:
 	line "this TM."
 	done
 
-BlackthornGymText_ReceivedTM24: ; unreferenced
-	text "<PLAYER> received"
-	line "TM24."
-	done
-
 BlackthornGymClairText_DescribeTM24:
 	text "That contains"
 	line "DRAGONBREATH."
