@@ -18,10 +18,11 @@
 - ~~Gen 1 textbox border as default textbox style~~
 - ~~Town Map item~~
 - ~~Remove password for resetting the clock~~
-- Possibly clock instead of Menu Account on Start Menu
 - ~~Fix effects of Apricorn balls~~
 - ~~Fix surfing onto water that is across a map connection~~
 - ~~Add Evolve-While-Holding-Item evo method~~
+- Add support for evolution moves
 - ~~Add Running Shoes~~
 - ~~Fossil lab, (but that's just an event script mostly)~~
 - ~~Gen 6 EXP Share system (because it is more like Gen 1)~~
+- ~~Add Gen 1 party menu sprites in addition to the Gen 2 menu sprites~~

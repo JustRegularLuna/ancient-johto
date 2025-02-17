@@ -369,10 +369,10 @@ ChooseWildEncounter:
 	inc hl
 	jr .ghost_loop
 .ghost_loop2
-	ld a, [hl]
+	ld a, [hli]
 	cp e ; is it the current map?
 	jr z, .scope_check
-	jr .not_ghost
+	jr .ghost_loop
 .scope_check
 	; check for silph scope
 	ld a, SILPH_SCOPE
