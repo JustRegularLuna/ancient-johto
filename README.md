@@ -22,6 +22,7 @@ More detailed information about using some of these features is inside the `docs
 - Pokémon Crystal style gender selection was added to the Oak Intro. By default, they use the sprites from pokecrystal.
 - A new `special` was added for showing Pokédex info via an event, like in Gen 1. By default, Elm's Lab was switched to use these instead of the original pokepic boxes.
 - A new evolution method called `EVOLVE_HELD` was added, if someone wants to use it instead of `EVOLVE_TRADE` for Pokémon such as Steelix.
+- A table of `EvolutionMoves` was added in `data/pokemon/evolution_moves.asm`, though it has not been utilized in this base by default.
 - A few oversights were corrected, allowing the Apricorn balls to work as intended, or the beta item effect `HELD_CATCH_CHANCE` to function as intended, and `DRAGON_FANG` to have its intended effect.
 - Removed the FixPicBank design flaw mentioned in the docs, and a few other minor issues.
 - Removed the password requirement for resetting the clock, and simplified the key combo to just `B + Down`.
