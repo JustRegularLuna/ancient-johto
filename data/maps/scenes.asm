@@ -38,7 +38,7 @@ MapScenes::
 	scene_var GOLDENROD_GYM,                               wGoldenrodGymSceneID
 	scene_var GOLDENROD_MAGNET_TRAIN_STATION,              wGoldenrodMagnetTrainStationSceneID
 	scene_var OLIVINE_CITY,                                wOlivineCitySceneID
-	scene_var ROUTE_34,                                    wRoute34SceneID ; unused
+	scene_var SAFARI_ZONE_ENTRANCE,                        wSafariZoneEntranceSceneID
 	scene_var ECRUTEAK_TIN_TOWER_ENTRANCE,                 wEcruteakTinTowerEntranceSceneID
 	scene_var ECRUTEAK_POKECENTER_1F,                      wEcruteakPokecenter1FSceneID
 	scene_var MAHOGANY_TOWN,                               wMahoganyTownSceneID

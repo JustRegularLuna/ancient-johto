@@ -11,6 +11,7 @@ More detailed information about using some of these features is inside the `docs
 - "Spinner Tile" collision types from the Gen 1 Team Rocket bases are supported, though no tilesets have been given them by default.
 - While not a Gen 1 feature, there is a collision type for splashing puddles when you walk in them, `COLL_PUDDLE`.
 - The `SILPH_SCOPE` item was added, as well as `BATTLETYPE_GHOST`. While no maps are setup to have ghost battles by default, the docs explain how to enable them for an area, or in an event.
+- The Safari Zone gameplay has been ported from RBY and made functional. (Bait/Rock/Safari Ball battle mode, step counter, the PA telling your Safari Game is over, the whole shebang) By default, it uses the tiny Beta Safari Zone and Gate attached to Fuchsia City for the example scripts. See `docs/info.md` for information on moving it.
 - The `TOWN_MAP` item was made properly functional. You can give it to the player as normal, and it will work as expected, if you want to use it instead of the Pokégear card.
 - The `OLD_AMBER`, `DOME_FOSSIL`, and `HELIX_FOSSIL` from Gen 1 have been added, and an example script for the Fossil Revive lab NPC was added to the Ruins of Alph lab. As a placeholder, the fossils are currently found via Rock Smash, but that can be changed to whatever you prefer.
 - The Gen 2 `EXP_SHARE` has been reworked into a more Gen 1 style `EXP_ALL` Key Item, which lets you toggle it on or off.
@@ -50,4 +51,4 @@ For other pret projects, see [pret.github.io](https://pret.github.io/).
 Not everything in this base was made by me (JustRegularLuna) originally. Additional credit goes to:
 - Contributors to the wiki tutorials for pokecrystal, where some of these improvements were adapted from.
 - Ghost Battle mode ported from Gen 1 using code by JustRegularLuna, Rangi42, Vulcandth, and leftover code by Gamefreak (Polished Crystal).
-- Safari Battle mode ported from Gen 1 using code by JustRegularLuna, SourApple, and leftover code by Gamefreak (Sour Crystal).
+- Safari Battle mode ported from Gen 1 using code by JustRegularLuna, SourApple, Zumi, and leftover code by Gamefreak (Sour Crystal).

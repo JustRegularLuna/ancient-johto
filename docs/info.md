@@ -37,6 +37,22 @@ If you want to change the battle type that it switches to, you would need to loo
 If you want to change that to a different type of battle for ghosts that are indentified in the cinematic way like this, you could change that `BATTLETYPE_` ID to a different one.
 
 
+## Safari Zone Game
+
+The Safari Zone game mode from Gen 1 is fully functional. By default, the `SAFARI_ZONE_ENTRANCE` map is where the example script for starting/stopping the Safari game is located, AND where the scripts will take you back to, should you run out of steps or `SAFARI_BALL`s while in the Safari Zone.
+
+You can easily edit the warps associated with entering and leaving the `SAFARI_ZONE_ENTRANCE` map (and its Landmark ID) to have the Safari Zone be anywhere you like. By default, you access it via Fuchsia City as expected, and the warps into the zone take you to the `SAFARI_ZONE_BETA` map. If you want to make new maps for a larger Safari Zone (I assume you will), you can just edit the warps in the gate to take you to your new maps, and it should work as expected.
+
+If for some reason you want to move the Safari Zone entrance scripts to a completely different map, and not just use the existing `SAFARI_ZONE_ENTRANCE` map, you will need to:
+- Move the example scripts from `SAFARI_ZONE_ENTRANCE` over to your new map for the entrance gate.
+- Make sure the new map is set up to use a scene_var in `data/maps/scenes.asm` (You will need to edit `ram/wram.asm` as well to add a label for a new scene var.)
+- Look for `SafariZoneOverWarpScript::` in the example scripts you copied over from the original `SAFARI_ZONE_ENTRANCE` map, and edit that script's `warpfacing` command accordingly.
+  - You would need to change the Map ID, and potentially the coordinates and movement data, to match the map you are moving it to.
+- If you want to change how many `SAFARI_BALL`s and/or how many steps they are given at the start of a Safari game, edit `GiveSafariBalls:` at the top of `engine/events/safari_zone/safari.asm`. By default, they are set to 30 balls and 500 steps, like in RBY.
+
+While the little example Safari Zone map (a slightly edited version of the vanilla beta safari zone from GSC) does not actually have headbutt encounters added in, those are also accounted for by the Safari game mode, if you chose to design your own Safari Zone with headbutt trees included. The headbutt encounters would use the Safari mode as expected.
+
+
 ## Fossil Reviving
 
 As an example, there is a Fossil Lab script added to the file `maps/RuinsOfAlphResearchCenter.asm`. This script (along with its text) could be easily cut and pasted to a different map to move the fossil lab there.

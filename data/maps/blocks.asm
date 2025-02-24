@@ -200,7 +200,6 @@ CherrygroveEvolutionSpeechHouse_Blocks:
 Route30BerryHouse_Blocks:
 	INCBIN "maps/House1.blk"
 
-SafariZoneFuchsiaGateBeta_Blocks:
 Route19FuchsiaGate_Blocks:
 Route43MahoganyGate_Blocks:
 Route43Gate_Blocks:
@@ -213,6 +212,9 @@ Route2Gate_Blocks:
 Route29Route46Gate_Blocks:
 Route5SaffronGate_Blocks:
 	INCBIN "maps/NorthSouthGate.blk"
+
+SafariZoneEntrance_Blocks:
+	INCBIN "maps/SafariZoneEntrance.blk"
 
 BetaEcruteakCity_Blocks: ; unreferenced
 	INCBIN "maps/unused/BetaEcruteakCity.blk"

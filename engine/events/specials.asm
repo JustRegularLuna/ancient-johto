@@ -15,9 +15,6 @@ Special::
 
 INCLUDE "data/events/special_pointers.asm"
 
-UnusedDummySpecial:
-	ret
-
 GameCornerPrizeMonCheckDex:
 	ld a, [wScriptVar]
 	dec a

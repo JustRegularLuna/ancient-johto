@@ -50,6 +50,7 @@ StdScripts::
 	add_stdscript PCScript
 	add_stdscript GameCornerCoinVendorScript
 	add_stdscript HappinessCheckScript
+	add_stdscript SafariZoneOverWarpScript
 
 PokecenterNurseScript:
 	opentext

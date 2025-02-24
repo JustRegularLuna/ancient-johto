@@ -13,7 +13,12 @@ TreeMonEncounter:
 	call GetTreeMon
 	jr nc, .no_battle
 
+	ld a, [wStatusFlags2]
+	bit STATUSFLAGS2_SAFARI_GAME_F, a
+	ld a, BATTLETYPE_SAFARI_TREE
+	jr nz, .safari
 	ld a, BATTLETYPE_TREE
+.safari
 	ld [wBattleType], a
 	ld a, 1
 	ld [wScriptVar], a

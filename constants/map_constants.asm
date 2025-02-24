@@ -142,7 +142,7 @@ ENDM
 	map_const UNDERGROUND_PATH,                             3, 14 ; 77
 	map_const ROCK_TUNNEL_1F,                              15, 18 ; 78
 	map_const ROCK_TUNNEL_B1F,                             15, 18 ; 79
-	map_const SAFARI_ZONE_FUCHSIA_GATE_BETA,                5,  4 ; 80
+	map_const SAFARI_ZONE_ENTRANCE,                         5,  4 ; 80
 	map_const SAFARI_ZONE_BETA,                            10, 18 ; 81
 	map_const VICTORY_ROAD,                                10, 36 ; 82
 	endgroup

@@ -1279,4 +1279,32 @@ KantoGrassWildMons:
 	ENDC
 	end_grass_wildmons
 
+	def_grass_wildmons SAFARI_ZONE_BETA
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 39, TAUROS
+	db 40, EXEGGCUTE
+	db 40, RHYHORN
+	db 42, SCYTHER
+	db 41, PINSIR
+	db 43, KANGASKHAN
+	db 43, CHANSEY
+	; day
+	db 39, TAUROS
+	db 40, EXEGGCUTE
+	db 40, RHYHORN
+	db 42, SCYTHER
+	db 41, PINSIR
+	db 43, KANGASKHAN
+	db 43, CHANSEY
+	; nite
+	db 39, TAUROS
+	db 40, EXEGGCUTE
+	db 40, RHYHORN
+	db 42, SCYTHER
+	db 41, PINSIR
+	db 43, KANGASKHAN
+	db 43, CHANSEY
+	end_grass_wildmons
+
 	db -1 ; end

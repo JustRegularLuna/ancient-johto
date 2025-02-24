@@ -544,6 +544,9 @@ FlyFunction:
 	ld de, ENGINE_STORMBADGE
 	call CheckBadge
 	jr c, .nostormbadge
+	ld a, [wStatusFlags2]
+	bit STATUSFLAGS2_SAFARI_GAME_F, a
+	jr nz, .indoors ; no flying in Safari game
 	call GetMapEnvironment
 	call CheckOutdoorMap
 	jr z, .outdoors
@@ -745,6 +748,9 @@ EscapeRopeOrDig:
 	dw .FailDig
 
 .CheckCanDig:
+	ld a, [wStatusFlags2]
+	bit STATUSFLAGS2_SAFARI_GAME_F, a
+	jr nz, .fail ; no dig or escape rope in Safari game
 	call GetMapEnvironment
 	cp CAVE
 	jr z, .incave
@@ -865,6 +871,9 @@ TeleportFunction:
 	dw .FailTeleport
 
 .TryTeleport:
+	ld a, [wStatusFlags2]
+	bit STATUSFLAGS2_SAFARI_GAME_F, a
+	jr nz, .nope ; no teleporting in Safari game
 	call GetMapEnvironment
 	call CheckOutdoorMap
 	jr z, .CheckIfSpawnPoint
@@ -1252,6 +1261,11 @@ HeadbuttScript:
 	randomwildmon
 	startbattle
 	reloadmapafterbattle
+	checkflag ENGINE_SAFARI_ZONE
+	iffalse .nosafarigame
+	copybytetovar wSafariBallsRemaining
+	iffalse .no_safari_balls
+.nosafarigame
 	end
 
 .no_battle
@@ -1259,6 +1273,9 @@ HeadbuttScript:
 	waitbutton
 	closetext
 	end
+
+.no_safari_balls
+	farjump SafariZoneGameOverScript
 
 TryHeadbuttOW::
 	ld d, HEADBUTT
@@ -1460,7 +1477,12 @@ FishFunction:
 	ld [wTempWildMonSpecies], a
 	ld a, e
 	ld [wCurPartyLevel], a
+	ld a, [wStatusFlags2]
+	bit STATUSFLAGS2_SAFARI_GAME_F, a
+	ld a, BATTLETYPE_SAFARI_FISH
+	jr nz, .safari
 	ld a, BATTLETYPE_FISH
+.safari
 	ld [wBattleType], a
 	ld a, $2
 	ret
@@ -1530,7 +1552,15 @@ Script_GotABite:
 	randomwildmon
 	startbattle
 	reloadmapafterbattle
+	checkflag ENGINE_SAFARI_ZONE
+	iffalse .nosafarigame
+	copybytetovar wSafariBallsRemaining
+	iffalse .no_safari_balls
+.nosafarigame
 	end
+
+.no_safari_balls
+	farjump SafariZoneGameOverScript
 
 .Movement_NotFacingUp:
 	fish_got_bite

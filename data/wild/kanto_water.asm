@@ -170,4 +170,11 @@ KantoWaterWildMons:
 	db 35, TENTACRUEL
 	end_water_wildmons
 
+	def_water_wildmons SAFARI_ZONE_BETA
+	db 2 percent ; encounter rate
+	db 35, SLOWPOKE
+	db 30, GYARADOS
+	db 35, DRATINI
+	end_water_wildmons
+
 	db -1 ; end

@@ -59,6 +59,10 @@ DoBattle:
 	jp z, BattleMenu
 	cp BATTLETYPE_SAFARI
 	jp z, SafariBattleTurn
+	cp BATTLETYPE_SAFARI_FISH
+	jp z, SafariBattleTurn
+	cp BATTLETYPE_SAFARI_TREE
+	jp z, SafariBattleTurn
 	xor a
 	ld [wCurPartyMon], a
 .loop2
@@ -3480,6 +3484,10 @@ TryToRunAwayFromBattle:
 	jp z, .can_escape
 	cp BATTLETYPE_SAFARI
 	jp z, .can_escape
+	cp BATTLETYPE_SAFARI_FISH
+	jp z, .can_escape
+	cp BATTLETYPE_SAFARI_TREE
+	jp z, .can_escape
 	cp BATTLETYPE_TRAP
 	jp z, .cant_escape
 	cp BATTLETYPE_FORCESHINY
@@ -4662,6 +4670,10 @@ BattleMenu:
 	jr z, .ok
 	cp BATTLETYPE_SAFARI
 	jr z, .ok
+	cp BATTLETYPE_SAFARI_FISH
+	jr z, .ok
+	cp BATTLETYPE_SAFARI_TREE
+	jr z, .ok
 	call UpdateBattleHuds
 	call EmptyBattleTextbox
 	call LoadTilemapToTempTilemap
@@ -4670,6 +4682,10 @@ BattleMenu:
 .loop
 	ld a, [wBattleType]
 	cp BATTLETYPE_SAFARI
+	jr z, .safari
+	cp BATTLETYPE_SAFARI_FISH
+	jr z, .safari
+	cp BATTLETYPE_SAFARI_TREE
 	jr z, .safari
 	cp BATTLETYPE_CONTEST
 	jr nz, .not_contest
@@ -4815,6 +4831,10 @@ BattleMenu_Pack:
 	jr z, .contest
 	cp BATTLETYPE_SAFARI
 	jr z, .safari
+	cp BATTLETYPE_SAFARI_FISH
+	jr z, .safari
+	cp BATTLETYPE_SAFARI_TREE
+	jr z, .safari
 
 	farcall BattlePack
 	ld a, [wBattlePlayerAction]
@@ -4881,6 +4901,10 @@ BattleMenu_Pack:
 	jr z, .tutorial2
 	cp BATTLETYPE_SAFARI
 	jr z, .tutorial2
+	cp BATTLETYPE_SAFARI_FISH
+	jr z, .tutorial2
+	cp BATTLETYPE_SAFARI_TREE
+	jr z, .tutorial2
 	call GetBattleMonBackpic
 
 .tutorial2
@@ -4890,6 +4914,10 @@ BattleMenu_Pack:
 	call ExitMenu
 	ld a, [wBattleType]
 	cp BATTLETYPE_SAFARI
+	jr z, .skipUpdateBattleHUDs
+	cp BATTLETYPE_SAFARI_FISH
+	jr z, .skipUpdateBattleHUDs
+	cp BATTLETYPE_SAFARI_TREE
 	jr z, .skipUpdateBattleHUDs
 	call UpdateBattleHUDs
 .skipUpdateBattleHUDs
@@ -8863,8 +8891,12 @@ BattleStartMessage:
 	ld a, [wBattleType]
 	cp BATTLETYPE_FISH
 	jr z, .PrintBattleStartText
+	cp BATTLETYPE_SAFARI_FISH
+	jr z, .PrintBattleStartText
 	ld hl, PokemonFellFromTreeText
 	cp BATTLETYPE_TREE
+	jr z, .PrintBattleStartText
+	cp BATTLETYPE_SAFARI_TREE
 	jr z, .PrintBattleStartText
 	ld hl, GhostAppearedText
 	cp BATTLETYPE_GHOST

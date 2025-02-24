@@ -602,10 +602,18 @@ ENDC
 	ld b, NAME_MON
 	farcall NamingScreen
 
-	call RotateThreePalettesRight
+	ld a, [wBattleType]
+	cp BATTLETYPE_SAFARI
+	jr z, .skip_fade1
+	cp BATTLETYPE_SAFARI_FISH
+	jr z, .skip_fade1
+	cp BATTLETYPE_SAFARI_TREE
+	jr z, .skip_fade1
 
+	call RotateThreePalettesRight
 	call LoadStandardFont
 
+.skip_fade1
 	pop hl
 	ld de, wStringBuffer1
 	call InitName
@@ -681,8 +689,18 @@ ENDC
 	ld hl, BallSentToPCText
 	call PrintText
 
+	ld a, [wBattleType]
+	cp BATTLETYPE_SAFARI
+	jr z, .skip_fade
+	cp BATTLETYPE_SAFARI_FISH
+	jr z, .skip_fade
+	cp BATTLETYPE_SAFARI_TREE
+	jr z, .skip_fade
+
 	call RotateThreePalettesRight
 	call LoadStandardFont
+
+.skip_fade
 	jr .return_from_capture
 
 .catch_bug_contest_mon
@@ -705,6 +723,10 @@ ENDC
 	cp BATTLETYPE_CONTEST
 	jr z, .used_park_ball
 	cp BATTLETYPE_SAFARI
+	jr z, .used_safari_ball
+	cp BATTLETYPE_SAFARI_FISH
+	jr z, .used_safari_ball
+	cp BATTLETYPE_SAFARI_TREE
 	jr z, .used_safari_ball
 
 	ld a, [wWildMon]

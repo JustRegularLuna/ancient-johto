@@ -19,7 +19,7 @@ INCLUDE "maps/MountMoon.asm"
 INCLUDE "maps/UndergroundPath.asm"
 INCLUDE "maps/RockTunnel1F.asm"
 INCLUDE "maps/RockTunnelB1F.asm"
-INCLUDE "maps/SafariZoneFuchsiaGateBeta.asm"
+INCLUDE "maps/SafariZoneEntrance.asm"
 INCLUDE "maps/SafariZoneBeta.asm"
 INCLUDE "maps/VictoryRoad.asm"
 
