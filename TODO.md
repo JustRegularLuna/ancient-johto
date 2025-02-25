@@ -13,7 +13,7 @@
 - ~~Able to show Pokedex info like Gen 1~~
 - ~~Ghost battle mode~~
 - ~~Safari battle mode~~
-  - Step Counter, other scripts for the Safari Game attached to Beta Safari zone as reference
+  - ~~Step Counter, other scripts for the Safari Game attached to Beta Safari zone as reference~~
 - ~~Make Pokedex light-mode like Gen 1~~
 - ~~Gen 1 textbox border as default textbox style~~
 - ~~Town Map item~~
