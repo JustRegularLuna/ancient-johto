@@ -458,7 +458,18 @@ _CGB_MysteryGift:
 
 _CGB_MapPals:
 ; Get SGB palette
+	ld a, [wMapTimeOfDay]
+	cp PALETTE_DARK
+	jr nz, .skip_flash1
+	ld a, [wStatusFlags]
+	bit STATUSFLAGS_FLASH_F, a
+	ld a, PAL_DUNGEONS
+	jr nz, .got_map_pal
+	ld a, PAL_FLASH
+	jr .got_map_pal
+.skip_flash1
 	call SGBLayoutJumptable.GetMapPalsIndex
+.got_map_pal
 	call GetPredefPal
 	ld de, wBGPals1
 ; Copy 7 BG palettes
@@ -473,40 +484,48 @@ _CGB_MapPals:
 	call GetPredefPal
 	call LoadHLPaletteIntoDE
 	pop hl
+; check for flash again
+	ld a, [wMapTimeOfDay]
+	cp PALETTE_DARK
+	jr nz, .skip_flash2
+	ld a, [wStatusFlags]
+	bit STATUSFLAGS_FLASH_F, a
+	jr nz, .skip_flash2
+	ld a, PAL_DUNGEONS
+	call GetPredefPal
+.skip_flash2
 	ld b, 6
 .ob_loop
 	call .LoadHLOBPaletteIntoDE
 	dec b
 	jr nz, .ob_loop
 ; Copy PAL_OW_TREE and PAL_OW_ROCK
+; check for flash one last time
+	ld a, [wMapTimeOfDay]
+	cp PALETTE_DARK
+	jr nz, .skip_flash3
+	ld a, [wStatusFlags]
+	bit STATUSFLAGS_FLASH_F, a
+	jr nz, .skip_flash3
+	ld a, PAL_FLASH
+	call GetPredefPal
 	call .LoadHLBGPaletteIntoDE
 	call .LoadHLBGPaletteIntoDE
+	jr .ow_done
+.skip_flash3
+	call .LoadHLOBPaletteIntoDE
+	call .LoadHLOBPaletteIntoDE
+.ow_done
 	ld a, SCGB_MAPPALS
 	ld [wDefaultSGBLayout], a
 	ret
 
 .LoadHLBGPaletteIntoDE:
-; morn/day: shades 0, 1, 2, 3 -> 0, 1, 2, 3
-; nite: shades 0, 1, 2, 3 -> 1, 2, 2, 3
+; copy palette normally, don't lose the pal address
 	push hl
-	ld a, [wTimeOfDayPal]
-	cp NITE_F
-	jr c, .bg_morn_day
-	inc hl
-	inc hl
-	call .LoadHLColorIntoDE
-	call .LoadHLColorIntoDE
-	dec hl
-	dec hl
-	call .LoadHLColorIntoDE
-	call .LoadHLColorIntoDE
-.bg_done
+	call LoadHLPaletteIntoDE
 	pop hl
 	ret
-
-.bg_morn_day
-	call LoadHLPaletteIntoDE
-	jr .bg_done
 
 .LoadHLOBPaletteIntoDE:
 ; shades 0, 1, 2, 3 -> 0, 0, 1, 3

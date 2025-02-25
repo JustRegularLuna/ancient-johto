@@ -562,7 +562,7 @@ endr
 	ld a, [wTimeOfDayPal]
 	cp NITE_F
 	jr c, .morn_day
-	ld a, PAL_NITE
+	ld a, PAL_DUNGEONS
 	ret
 
 .morn_day
@@ -574,7 +574,7 @@ endr
 	cp DUNGEON
 	jr z, .cave
 	cp FOREST
-	jr z, .forest
+	jr z, .cave
 	cp GATE
 	jr z, .gate
 	ld a, [wMapGroup]
@@ -590,10 +590,6 @@ endr
 	ret
 
 .cave
-	ld a, PAL_DUNGEONS
-	ret
-
-.forest
 	ld a, PAL_DUNGEONS
 	ret
 
