@@ -19,6 +19,7 @@ More detailed information about using some of these features is inside the `docs
 - The default Gen 2 issue with "trying to surf onto water across a map connection" was fixed, allowing things like the Gen 1 Cinnabar/Route 20 connection to function as they did in Gen 1.
 - The party menu sprites from both Gen 1 and Gen 2 are available for use.
 - Naming the Rival has been moved to the Oak Intro.
+- Replaced the now-unused "NameRival" `special` with one for the leftover "NameMom" functionality, and made the Catch Tutorial stop overwriting Mom's name, so it is actually usable if you wish.
 - A single `POTION` is silently added to the Player's PC storage when beginning a new game, like Gen 1.
 - Pokémon Crystal style gender selection was added to the Oak Intro. By default, they use the sprites from pokecrystal.
 - A new `special` was added for showing Pokédex info via an event, like in Gen 1. By default, Elm's Lab was switched to use these instead of the original pokepic boxes.
