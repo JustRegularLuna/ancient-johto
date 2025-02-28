@@ -562,21 +562,20 @@ endr
 	ld a, [wTimeOfDayPal]
 	cp NITE_F
 	jr c, .morn_day
-	ld a, PAL_DUNGEONS
+	; outside at night time, or anything with the PALETTE_NITE lighting byte uses PAL_NITE
+	ld a, PAL_NITE
 	ret
 
 .morn_day
+	; check for routes
 	ld a, [wEnvironment]
 	cp ROUTE
 	jr z, .route
-	cp CAVE
-	jr z, .cave
-	cp DUNGEON
-	jr z, .cave
-	cp FOREST
-	jr z, .cave
-	cp GATE
+	; check for specific tilesets
+	ld a, [wMapTileset]
+	cp TILESET_GATE
 	jr z, .gate
+	; otherwise, use the map group's palette
 	ld a, [wMapGroup]
 	ld e, a
 	ld d, 0
@@ -587,10 +586,6 @@ endr
 
 .route
 	ld a, PAL_ROUTES
-	ret
-
-.cave
-	ld a, PAL_DUNGEONS
 	ret
 
 .gate

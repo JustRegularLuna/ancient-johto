@@ -463,7 +463,7 @@ _CGB_MapPals:
 	jr nz, .skip_flash1
 	ld a, [wStatusFlags]
 	bit STATUSFLAGS_FLASH_F, a
-	ld a, PAL_DUNGEONS
+	ld a, PAL_NITE
 	jr nz, .got_map_pal
 	ld a, PAL_FLASH
 	jr .got_map_pal
@@ -491,7 +491,7 @@ _CGB_MapPals:
 	ld a, [wStatusFlags]
 	bit STATUSFLAGS_FLASH_F, a
 	jr nz, .skip_flash2
-	ld a, PAL_DUNGEONS
+	ld a, PAL_NITE
 	call GetPredefPal
 .skip_flash2
 	ld b, 6
