@@ -185,11 +185,23 @@ TilesetLighthouseAnim:
 TilesetPlayersRoomAnim:
 TilesetRuinsOfAlphAnim:
 TilesetRadioTowerAnim:
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
+	dw NULL,  DoneTileAnimation
+
 TilesetUndergroundAnim:
+	dw vTiles2 tile $22, TopLeftSpinnerAnimation
+	dw vTiles2 tile $23, TopRightSpinnerAnimation
+	dw vTiles2 tile $32, BottomLeftSpinnerAnimation
+	dw vTiles2 tile $33, BottomRightSpinnerAnimation
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
+	dw NULL,  StandingTileFrame8
 	dw NULL,  DoneTileAnimation
 
 DoneTileAnimation:
@@ -608,5 +620,126 @@ WhirlpoolTiles2: INCBIN "gfx/tilesets/whirlpool/2.2bpp"
 WhirlpoolTiles3: INCBIN "gfx/tilesets/whirlpool/3.2bpp"
 WhirlpoolTiles4: INCBIN "gfx/tilesets/whirlpool/4.2bpp"
 
-TilesetAnims_DummyFunction: ; unreferenced
-	ret
+TopLeftSpinnerAnimation:
+	ld hl, sp + 0
+	ld b, h
+	ld c, l
+
+	ld a, [wSpinning]
+	and a
+	jr z, .ok
+
+	; period 2, every 2 frames, offset to 1 tile (16 bytes)
+	ld a, [wTileAnimationTimer]
+	maskbits 2, 1
+	add a
+	add a
+	add a
+
+.ok
+	add LOW(.SpinnerTileFrames)
+	ld l, a
+	adc HIGH(.SpinnerTileFrames)
+	sub l
+	ld h, a
+
+	ld sp, hl
+	ld l, e
+	ld h, d
+	jp WriteTile
+
+.SpinnerTileFrames:
+INCBIN "gfx/tilesets/spinners/top_left.2bpp"
+
+TopRightSpinnerAnimation:
+	ld hl, sp + 0
+	ld b, h
+	ld c, l
+
+	ld a, [wSpinning]
+	and a
+	jr z, .ok
+
+	; period 2, every 2 frames, offset to 1 tile (16 bytes)
+	ld a, [wTileAnimationTimer]
+	maskbits 2, 1
+	add a
+	add a
+	add a
+
+.ok
+	add LOW(.SpinnerTileFrames)
+	ld l, a
+	adc HIGH(.SpinnerTileFrames)
+	sub l
+	ld h, a
+
+	ld sp, hl
+	ld l, e
+	ld h, d
+	jp WriteTile
+
+.SpinnerTileFrames:
+INCBIN "gfx/tilesets/spinners/top_right.2bpp"
+
+BottomLeftSpinnerAnimation:
+	ld hl, sp + 0
+	ld b, h
+	ld c, l
+
+	ld a, [wSpinning]
+	and a
+	jr z, .ok
+
+	; period 2, every 2 frames, offset to 1 tile (16 bytes)
+	ld a, [wTileAnimationTimer]
+	maskbits 2, 1
+	add a
+	add a
+	add a
+
+.ok
+	add LOW(.SpinnerTileFrames)
+	ld l, a
+	adc HIGH(.SpinnerTileFrames)
+	sub l
+	ld h, a
+
+	ld sp, hl
+	ld l, e
+	ld h, d
+	jp WriteTile
+
+.SpinnerTileFrames:
+INCBIN "gfx/tilesets/spinners/bottom_left.2bpp"
+
+BottomRightSpinnerAnimation:
+	ld hl, sp + 0
+	ld b, h
+	ld c, l
+
+	ld a, [wSpinning]
+	and a
+	jr z, .ok
+
+	; period 2, every 2 frames, offset to 1 tile (16 bytes)
+	ld a, [wTileAnimationTimer]
+	maskbits 2, 1
+	add a
+	add a
+	add a
+
+.ok
+	add LOW(.SpinnerTileFrames)
+	ld l, a
+	adc HIGH(.SpinnerTileFrames)
+	sub l
+	ld h, a
+
+	ld sp, hl
+	ld l, e
+	ld h, d
+	jp WriteTile
+
+.SpinnerTileFrames:
+INCBIN "gfx/tilesets/spinners/bottom_right.2bpp"
