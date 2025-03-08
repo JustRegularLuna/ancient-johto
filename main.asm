@@ -394,6 +394,13 @@ PackGFX_F:: INCBIN "gfx/pack/pack_f.2bpp"
 GhostPic:: INCBIN "gfx/battle/ghost.2bpp.lz"
 
 
+SECTION "Museum Pics", ROMX
+
+INCLUDE "data/events/museum_pic_pointers.asm"
+FossilAerodactylPic:: INCBIN "gfx/museum_pics/fossil_aerodactyl.2bpp.lz"
+FossilKabutopsPic::   INCBIN "gfx/museum_pics/fossil_kabutops.2bpp.lz"
+
+
 SECTION "Stadium 2 Checksums", ROMX[$7DF8], BANK[$7F]
 
 ; The end of the ROM is taken up by checksums of the content, apparently used

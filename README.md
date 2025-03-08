@@ -27,6 +27,7 @@ This repository is intended as a base for other hacks, not as a "real" hack in i
 More detailed information about using some of these features is inside the `docs/` folder, but a brief summary of what this currently provides is:
 - The entire game uses SGB monochrome palettes in both GBC and SGB mode, like Gen 1.
 - Pokémon use shared `PAL_REDMON`, `PAL_BLUEMON`, etc. palettes, and trainers all use `PAL_MEWMON`, like Gen 1.
+- Added a `MuseumPic` special for showing arbitrary pictures inside of a box, for things such as the fossil displays in Pewter Museum. More details in `docs/info.md` about how to use this in a script.
 - Flowers and Water are set to use the Gen 1 animations by default.
 - Textboxes use the Gen 1 border as the default option.
 - "Spinner Tile" collision types from the Gen 1 Team Rocket bases are supported, though no tilesets have been given them by default.

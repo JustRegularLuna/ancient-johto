@@ -323,6 +323,8 @@ gfx/player/chris_back.2bpp: rgbgfx += --columns
 gfx/player/kris.2bpp: rgbgfx += --columns
 gfx/player/kris_back.2bpp: rgbgfx += --columns
 
+gfx/museum_pics/%.2bpp: rgbgfx += --columns
+
 gfx/trainer_card/leaders.2bpp: tools/gfx += --trim-whitespace
 
 gfx/overworld/chris_fish.2bpp: tools/gfx += --trim-whitespace

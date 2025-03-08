@@ -104,6 +104,25 @@ Just like in Gen 1, you are able to show a Pokemon's dex info on the screen now 
 The version in Elm's Lab has an added routine called via `callasm` to temporarily mark the starters as owned before giving them. In normal usage, it will only display the basic info and mark the Pokemon as "seen" when you use this from an event.
 
 
+## Show a Museum Pic
+
+Gen 1 just used its version of `pokepic` to display the museum fossils, since it had a lot of Pokemon IDs to spare. However, that isn't really the case now that there are a lot more than 151 Pokemon you might want to use. To get around this, I added a new `special` you can use in your event scripts, for displaying any 56x56 sprite you want inside a pokepic box, with their own IDs that do not waste Pokemon or Trainer ID slots.
+
+The list of constants for these new pics are defined at the bottom of `constants/script_constants.asm`. By default, I have added the two Museum Fossils from Pokemon Red. The constants in that list correspond to the table in `data/events/museum_pic_pointers.asm`. The images themselves are INCBIN'd near the end of `main.asm` in the SECTION "Museum Pics", and any new ones you add should be in the same section as the two that are there already. The code assumes all of the Museum Pics are in the same Bank and Section as one another, since that should be plenty of space for a lot of museum pics. The code for loading museum pics would need a small adjustment, and the table converting from `dw` to `dba` if for some reason you wanted to add a very large amount of museum pics.
+
+In order to use one of these in an event, it is very similar to using the existing `pokepic` command. All you have to do in order to show one is:
+
+```
+	reanchormap
+	setval FOSSIL_AERODACTYL
+	special MuseumPic
+	waitbutton
+	closepokepic
+```
+
+It should be usable in exactly the same instances as you would use the `pokepic` command, except this new `special` doesn't require you to waste Pokemon IDs for your museum displays.
+
+
 ## Make a Pokemon evolve by holding an item
 
 If you want to remove the trading requirement for certain Pokemon such as Steelix, but still want to keep it more similar to the vanilla method, there is a new evolution type added. An example would be editing `data/pokemon/evos_attacks.asm` and changing Onix's data to use:

@@ -13,6 +13,9 @@ Pokepic::
 	call GetBaseData
 	ld de, vTiles1
 	predef GetMonFrontpic
+	; fallthrough
+
+_ShowPokepic:
 	ld a, [wMenuBorderTopCoord]
 	inc a
 	ld b, a
@@ -26,6 +29,20 @@ Pokepic::
 	predef PlaceGraphic
 	call WaitBGMap
 	ret
+
+MuseumPic::
+	ld hl, PokepicMenuHeader
+	call CopyMenuHeader
+	call MenuBox
+	call UpdateSprites
+	call ApplyTilemap
+	ld b, SCGB_POKEPIC
+	call GetSGBLayout
+	xor a
+	ldh [hBGMapMode], a
+	ld de, vTiles1
+	predef GetMuseumPic
+	jr _ShowPokepic
 
 ClosePokepic::
 	ld hl, PokepicMenuHeader

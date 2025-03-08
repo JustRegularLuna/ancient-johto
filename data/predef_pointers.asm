@@ -76,4 +76,5 @@ PredefPointers::
 	add_predef NewPokedexEntry
 	add_predef GetMonFrontpic2
 	add_predef UpdateTimePredef
+	add_predef GetMuseumPic
 	dbw -1, DummyEndPredef ; pointless

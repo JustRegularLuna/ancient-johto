@@ -56,6 +56,25 @@ GetMonFrontpic2:
 	call GetFrontpic2
 	jp Load2bppToSRAM
 
+GetMuseumPic::
+	call _GetMuseumPic
+	jp Load2bppToSRAM
+
+_GetMuseumPic:
+	push de
+	ld b, $7
+	push bc
+	ld a, BANK(sDecompressBuffer)
+	call OpenSRAM
+	ld a, [wScriptVar]
+	ld hl, MuseumPicPointers
+	ld bc, 2
+	call AddNTimes
+	ld a, BANK(MuseumPicPointers)
+	call GetFarWord
+	ld a, BANK("Museum Pics")
+	jr GetFrontpic.ok
+
 GetFrontpic2:
 	ld a, [wBattleType]
 	cp BATTLETYPE_GHOST

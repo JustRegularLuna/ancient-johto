@@ -129,3 +129,4 @@ SpecialsPointers::
 	add_special InitialClearDSTFlag
 	add_special MrChrono
 	add_special GiveSafariBalls
+	add_special MuseumPic

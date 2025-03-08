@@ -309,3 +309,11 @@ DEF BUG_CONTESTANT_SIZE EQU 4
 	const UNOWNPUZZLE_AERODACTYL ; 2
 	const UNOWNPUZZLE_HO_OH      ; 3
 DEF NUM_UNOWN_PUZZLES EQU const_value
+
+; Museum Pic constants
+; MuseumPicPointers indexes
+; used with special MuseumPic
+	const_def
+	const FOSSIL_AERODACTYL ; 0
+	const FOSSIL_KABUTOPS   ; 1
+DEF NUM_MUSEUM_PICS EQU const_value
