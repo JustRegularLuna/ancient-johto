@@ -1,77 +1,70 @@
-# Pokémon Gold and Silver, Retro Base
-This is based on the pret disassembly of Pokémon Gold and Pokémon Silver.
-
-This repository is intended as a base for other hacks, not as a "real" hack in its own right. It is not focused on adding or significantly changing the base game's content, but instead focuses on adding and changing features. My motivation for making this was to make it easier to work on my more retro/nostalgic project ideas without having to wade through the spaghetti that Gen 1 is made of. For example, Gen 1 does not even have an event scripting system, and requires custom events to all the be written in ASM code, and has a lot of hidden "gotchas" to work around, while Gen 2 is overall a nicer base to use, but was lacking some of the iconic aspects of Gen 1 that those retro projects would want. I started making this base to combine the best of both worlds, and I'm keeping it as its own separate repo to make it easier for others to use as well, if they are so inclined.
+### THIS IS STILL UNDER DEVELOPMENT, AND IS NOT CURRENTLY A RELEASE CANDIDATE
 
 
-## Screenshots
-
-![gender](screenshots/gender.png)
-![name_rival](screenshots/name_rival.png)
-![trainers](screenshots/trainers.png)
-![battle](screenshots/battle.png)
-
-![pokedex](screenshots/pokedex.png)
-![party](screenshots/party.png)
-![violet](screenshots/violet.png)
-![night](screenshots/night.png)
-
-![ghost](screenshots/ghost.png)
-![safari_gate](screenshots/safari_gate.png)
-![safari_battle](screenshots/safari_battle.png)
-![fossil](screenshots/fossil.png)
+# Pokémon RedGold & BlueSilver
 
 
-## Info
-
-More detailed information about using some of these features is inside the `docs/` folder, but a brief summary of what this currently provides is:
-- The entire game uses SGB monochrome palettes in both GBC and SGB mode, like Gen 1.
-- Pokémon use shared `PAL_REDMON`, `PAL_BLUEMON`, etc. palettes, and trainers all use `PAL_MEWMON`, like Gen 1.
-- Added a `MuseumPic` special for showing arbitrary pictures inside of a box, for things such as the fossil displays in Pewter Museum. More details in `docs/info.md` about how to use this in a script.
-- Flowers and Water are set to use the Gen 1 animations by default.
-- Textboxes use the Gen 1 border as the default option.
-- "Spinner Tile" collision types from the Gen 1 Team Rocket bases are supported, though no tilesets have been given them by default.
-- While not a Gen 1 feature, there is a collision type for splashing puddles when you walk in them, `COLL_PUDDLE`.
-- The `SILPH_SCOPE` item was added, as well as `BATTLETYPE_GHOST`. While no maps are setup to have ghost battles by default, the docs explain how to enable them for an area, or in an event.
-- The Safari Zone gameplay has been ported from RBY and made functional. (Bait/Rock/Safari Ball battle mode, step counter, the PA telling your Safari Game is over, the whole shebang) By default, it uses the tiny Beta Safari Zone and Gate attached to Fuchsia City for the example scripts. See `docs/info.md` for information on moving it.
-- The `TOWN_MAP` item was made properly functional. You can give it to the player as normal, and it will work as expected, if you want to use it instead of the Pokégear card.
-- The `OLD_AMBER`, `DOME_FOSSIL`, and `HELIX_FOSSIL` from Gen 1 have been added, and an example script for the Fossil Revive lab NPC was added to the Ruins of Alph lab. As a placeholder, the fossils are currently found via Rock Smash, but that can be changed to whatever you prefer.
-- The Gen 2 `EXP_SHARE` has been reworked into a more Gen 1 style `EXP_ALL` Key Item, which lets you toggle it on or off.
-- An environment type called `FOREST` was setup, allowing for areas like Viridian Forest with tall grass, instead of treating forests like caves. (Not assigned to any map by default)
-- The default Gen 2 issue with "trying to surf onto water across a map connection" was fixed, allowing things like the Gen 1 Cinnabar/Route 20 connection to function as they did in Gen 1.
-- The party menu sprites from both Gen 1 and Gen 2 are available for use.
-- Naming the Rival has been moved to the Oak Intro.
-- Replaced the now-unused "NameRival" `special` with one for the leftover "NameMom" functionality, and made the Catch Tutorial stop overwriting Mom's name, so it is actually usable if you wish.
-- A single `POTION` is silently added to the Player's PC storage when beginning a new game, like Gen 1.
-- Pokémon Crystal style gender selection was added to the Oak Intro. By default, they use the sprites from pokecrystal.
-- A new `special` was added for showing Pokédex info via an event, like in Gen 1. By default, Elm's Lab was switched to use these instead of the original pokepic boxes.
-- A new evolution method called `EVOLVE_HELD` was added, if someone wants to use it instead of `EVOLVE_TRADE` for Pokémon such as Steelix.
-- A table of `EvolutionMoves` was added in `data/pokemon/evolution_moves.asm`, though it has not been utilized in this base by default.
-- A few oversights were corrected, allowing the Apricorn balls to work as intended, or the beta item effect `HELD_CATCH_CHANCE` to function as intended, and `DRAGON_FANG` to have its intended effect.
-- Removed the FixPicBank design flaw mentioned in the docs, and a few other minor issues.
-- Removed the password requirement for resetting the clock, and simplified the key combo to just `B + Down`.
-- The "Loss" part of Win/Loss text on trainers is able to actually be used for more than just the initial Rival battle.
-- Running Shoes while holding B was added.
-
-I will try to keep this list, as well as the info in the `docs/` folder updated as things are added. There is not much left that is intended, but see `TODO.md` for more info.
+### First things first: This IS NOT a lost beta, a recreation of any one specific beta, or a faithful demake of Gold & Silver onto Red & Blue's engine.
 
 
-## See also
+## What Is This?
 
-- [**Symbols**][symbols]
-- [**Tools**][tools]
+This ROM Hack is a nostalgic, beta-inspired reimagining of Pokémon Gold & Silver Versions. It takes inspiration from multiple prototype versions, along with the vanilla games, in order to be its own thing. It reboots the timeline after the events of Gen 1, replacing vanilla Gen 2 and ignoring Gen 3+.
 
-You can find us on [Discord (pret, #pokecrystal)](https://discord.gg/d5dubZ3).
-
-For other pret projects, see [pret.github.io](https://pret.github.io/).
-
-[symbols]: https://github.com/pret/pokegold/tree/symbols
-[tools]: https://github.com/pret/gb-asm-tools
+Over 20 years ago, when the community discoved the beta Johto cities leftover in Gold & Silver Versions, they were an obvious point of interest for a lot of people, and there were many hacks started (and never finished) over the years attempting to recreate beta Johto. Some of those maps were also used as the basis for cities in Pokémon Brown, as well. But we never had a hack turning those specific beta cities into a proper game of their own. Then, when the Space World '97 demo leaked, I was hoping we would finally get to see what that version of beta Johto was actually like. Of course, we did *not* get that, we got an entirely different region, and a lot of other interesting things. But I was still a little disappointed that in all of the leaks, we still never got an answer for *that* version of Johto that caught my interest all those years ago. So I decided to make my own take on it. There are a lot of gaps to fill in, even taking all of the leaks into consideration and combining them together, so this game will certainly not be faithful to what Gamefreak actually had in mind, as I am not a mind reader. But I hope it will be a fun and interesting journey through a region heavily based on that version of beta Johto.
 
 
-## Credits
+## What To Expect (And What Not To):
 
-Not everything in this base was made by me (JustRegularLuna) originally. Additional credit goes to:
-- Contributors to the wiki tutorials for pokecrystal, where some of these improvements were adapted from.
-- Ghost Battle mode ported from Gen 1 using code by JustRegularLuna, Rangi42, Vulcandth, and leftover code by Gamefreak (Polished Crystal).
-- Safari Battle mode ported from Gen 1 using code by JustRegularLuna, SourApple, Zumi, and leftover code by Gamefreak (Sour Crystal).
+Things you **SHOULD** expect to see in **Pokémon RedGold & BlueSilver** include:
+* The Kansai Region, heavily based on beta maps found leftover in the final versions of GSC, remapped in the style of the SW97 demo, with routes and landmarks that are from or inspired by multiple leaked prototype builds, though some areas are invented by me to help flesh out the region.
+* A storyline inspired by a combination of SW97, vanilla GSC, and things indicated by beta NPCs and scripts (with creative license to fill in the gaps.)
+* A Pokédex list combining Pokémon from SW97, SW99, and final GSC.
+* Custom skill sets for Pokémon, not copied from current Gen or vanilla Gen 2.
+* A combination of vanilla Gen 1 and 2 attacks, beta attacks, and custom attacks to suit the Pokémon that are available.
+* Game mechanics that combine aspects of Gen 1, Gen 2, beta content, and custom changes.
+
+Things you **SHOULD NOT** expect in this game:
+* Vanilla Gen 2 with a different coat of paint.
+* The Region from the SW97 Demo.
+* Pokémon, characters, locations, etc. from Gen 3+.
+* Modern game mechanics such as Natures, Abilities, IVs and EVs, the Physical/Special Split, Mega Evolution, etc.
+* Obnoxious self-insert boss trainers, "Kaizo" difficulty, Nuzlocke mode, or anything "overly fan-gamey" like that.
+
+I know this hack may not appeal to everyone, and that is ok, but I hope the people that find this interesting will enjoy it once it is ready. Because not everything will match the vanilla games, there will of course be documentation available for people that want it.
+
+
+## Documentation:
+
+Additional reference materials will be made once the project is closer to a release, to document some of the new content in a more user-friendly way instead of just digging through the source code.
+
+
+## F.A.Q.
+
+### Q: Are there working Gameshark Codes for this?
+A: Vanilla cheat codes do not work anymore, because memory has shifted way too much. A list of the most commonly requested Gameshark Codes (such as item/pokemon modifiers and infinite money) will be placed here once there is an actual release, and will indicate which version they are for when the time comes.
+
+### Q: What are the differences between the two versions?
+A: Primarily superficial changes, such as the title screen and other graphics. While some Pokémon will be more common in one version than the other, ALL Pokémon will be obtainable in both versions without having to trade. A full list of version differences will be put together once more content is in place.
+
+### Q: Why is such-and-such different from Super Gold '97?
+A: This hack is not directly related to Super Gold '97, G/S '97 Reforged, Pokémon October, or any other beta hack. The source material (the beta leaks) have a lot of missing and placeholder data, and have no official English names for Pokémon and the like. While these hacks contain some of the same Pokémon and other things, and draw inspiration from some of the same material, we all had a lot of gaps to fill in, and chose to fill them in differently, in the ways we each liked best. Just appreciate them all for what they are - different fan interpretations of unfinished content that was originally lost.
+
+### Q: Why is such-and-such named this way?
+A: To help emphasize that this is a reimagining, and not just vanilla Johto with a new coat of paint, city names have been replaced with new (but fitting) names. In the case of Pokémon, if a beta design felt "different enough" to me, I chose to give it a different name from the final version to help it stand out. Such as "Purrleaf" for Beta Hoppip, since the beta designs still felt more cat-like with their faces and tails, for example.
+
+### Q: Why does such-and-such not work the same as vanilla games?
+A: Since this is a reimagining, I found it more fun and interesting to come up with a unique blend of gameplay mechanics, combining Gen 1, Gen 2, Beta Content, and custom changes for personal preference or balancing reasons.
+
+### Q: What tools did you use to make this?
+A: The only tools used were the RGBDS compiler, Notepad++, Polished Map, Tilemap Studio, and a paint program to edit .png files.
+
+### Q: Will you add, remove, or change such-and-such?
+A: Maybe, maybe not. Suggestions will be taken into consideration, but it is impossible to please everyone, or to include everything that is ever suggested. Do not be upset if you suggest a change, and the answer ends up being "no".
+
+
+## More Info:
+
+To set up the repository, see [**INSTALL.md**](INSTALL.md).
+
+For pret's disassembly projects, see [pret.github.io](https://pret.github.io/).
