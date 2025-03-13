@@ -2467,62 +2467,64 @@ wPokecenter2FSceneID::                            db
 wTradeCenterSceneID::                             db
 wColosseumSceneID::                               db
 wTimeCapsuleSceneID::                             db
-wPowerPlantSceneID::                              db
-wCeruleanGymSceneID::                             db
-wRoute25SceneID::                                 db
-wTrainerHouseB1FSceneID::                         db
-wVictoryRoadGateSceneID::                         db
-wSaffronMagnetTrainStationSceneID::               db
-wRoute16GateSceneID::                             db
-wRoute17Route18GateSceneID::                      db
-wIndigoPlateauPokecenter1FSceneID::               db
-wWillsRoomSceneID::                               db
-wKogasRoomSceneID::                               db
-wBrunosRoomSceneID::                              db
-wKarensRoomSceneID::                              db
-wLancesRoomSceneID::                              db
-wHallOfFameSceneID::                              db
-wRoute27SceneID::                                 db
+wNationalParkGateSceneID::                        db
+wSafariZoneEntranceSceneID::                      db
 wNewBarkTownSceneID::                             db
 wElmsLabSceneID::                                 db
 wPlayersHouse1FSceneID::                          db
-wRoute29SceneID::                                 db
-wCherrygroveCitySceneID::                         db
-wMrPokemonsHouseSceneID::                         db
-wRoute32SceneID::                                 db
-wRoute35NationalParkGateSceneID::                 db
-wRoute36NationalParkGateSceneID::                 db
-wAzaleaTownSceneID::                              db
-wGoldenrodGymSceneID::                            db
-wGoldenrodMagnetTrainStationSceneID::             db
-wOlivineCitySceneID::                             db
-wSafariZoneEntranceSceneID::                      db
-wEcruteakTinTowerEntranceSceneID::                db
-wEcruteakPokecenter1FSceneID::                    db
-wMahoganyTownSceneID::                            db
-wRoute43GateSceneID::                             db
-wMountMoonSceneID::                               db
-wSproutTower3FSceneID::                           db
-wBurnedTower1FSceneID::                           db
-wBurnedTowerB1FSceneID::                          db
-wRadioTower5FSceneID::                            db
-wRuinsOfAlphOutsideSceneID::                      db
-wRuinsOfAlphResearchCenterSceneID::               db
-wRuinsOfAlphInnerChamberSceneID::                 db
-wMahoganyMart1FSceneID::                          db
-wTeamRocketBaseB1FSceneID::                       db
-wTeamRocketBaseB2FSceneID::                       db
-wTeamRocketBaseB3FSceneID::                       db
-wGoldenrodUndergroundSwitchRoomEntrancesSceneID:: db
-wSilverCaveRoom3SceneID::                         db
-wVictoryRoadSceneID::                             db
-wDragonsDenB1FSceneID::                           db
-wOlivinePortSceneID::                             db
-wVermilionPortSceneID::                           db
-wFastShip1FSceneID::                              db
-wFastShipB1FSceneID::                             db
-wMountMoonSquareSceneID::                         db
+; Individually Marked placeholders from vanilla Scene ID addresses
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
+	ds 1 ; placeholder
 
+; already unused space after vanilla map scene IDs
 	ds 197
 
 wEventFlags:: flag_array NUM_EVENTS

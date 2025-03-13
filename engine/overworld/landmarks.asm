@@ -71,8 +71,8 @@ RegionCheck:
 	jr c, .johto
 
 ; Victory Road area is considered to be Johto.
-	cp LANDMARK_VICTORY_ROAD
-	jr c, .kanto
+	;cp LANDMARK_VICTORY_ROAD
+	;jr c, .kanto
 
 .johto
 	ld e, JOHTO_REGION

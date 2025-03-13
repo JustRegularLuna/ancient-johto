@@ -9,8 +9,6 @@
 	const NATIONALPARKBUGCONTEST_YOUNGSTER5
 	const NATIONALPARKBUGCONTEST_YOUNGSTER6
 	const NATIONALPARKBUGCONTEST_YOUNGSTER7
-	const NATIONALPARKBUGCONTEST_POKE_BALL1
-	const NATIONALPARKBUGCONTEST_POKE_BALL2
 
 NationalParkBugContest_MapScripts:
 	def_scene_scripts
@@ -97,24 +95,6 @@ BugCatchingContestant10AScript:
 	closetext
 	end
 
-NationalParkBugContestRelaxationSquareSign:
-	jumptext NationalParkBugContestRelaxationSquareText
-
-NationalParkBugContestBattleNoticeSign:
-	jumptext NationalParkBugContestBattleNoticeText
-
-NationalParkBugContestTrainerTipsSign:
-	jumptext NationalParkBugContestTrainerTipsText
-
-NationalParkBugContestParlyzHeal:
-	itemball PARLYZ_HEAL
-
-NationalParkBugContestTMDig:
-	itemball TM_DIG
-
-NationalParkBugContestHiddenFullHeal:
-	hiddenitem FULL_HEAL, EVENT_NATIONAL_PARK_HIDDEN_FULL_HEAL
-
 BugCatchingContestant1AText:
 	text "DON: I'm going to"
 	line "win! Don't bother"
@@ -196,46 +176,16 @@ BugCatchingContestant10AText:
 	line "for sure."
 	done
 
-NationalParkBugContestRelaxationSquareText:
-	text "RELAXATION SQUARE"
-	line "NATIONAL PARK"
-	done
-
-NationalParkBugContestBattleNoticeText:
-	text "What is this"
-	line "notice?"
-
-	para "Please battle only"
-	line "in the grass."
-
-	para "NATIONAL PARK"
-	line "WARDEN'S OFFICE"
-	done
-
-NationalParkBugContestTrainerTipsText:
-	text "TRAINER TIPS"
-
-	para "Print out MAIL by"
-	line "opening it then"
-	cont "pressing START."
-	done
-
 NationalParkBugContest_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 33, 18, ROUTE_36_NATIONAL_PARK_GATE, 1
-	warp_event 33, 19, ROUTE_36_NATIONAL_PARK_GATE, 1
-	warp_event 10, 47, ROUTE_35_NATIONAL_PARK_GATE, 1
-	warp_event 11, 47, ROUTE_35_NATIONAL_PARK_GATE, 1
+	warp_event 33, 18, NATIONAL_PARK_GATE, 1
+	warp_event 33, 19, NATIONAL_PARK_GATE, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event 14, 44, BGEVENT_READ, NationalParkBugContestRelaxationSquareSign
-	bg_event 27, 31, BGEVENT_READ, NationalParkBugContestBattleNoticeSign
-	bg_event  6, 47, BGEVENT_ITEM, NationalParkBugContestHiddenFullHeal
-	bg_event 12,  4, BGEVENT_READ, NationalParkBugContestTrainerTipsSign
 
 	def_object_events
 	object_event 19, 29, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BugCatchingContestant1AScript, EVENT_BUG_CATCHING_CONTESTANT_1A
@@ -248,5 +198,3 @@ NationalParkBugContest_MapEvents:
 	object_event 11, 27, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BugCatchingContestant8AScript, EVENT_BUG_CATCHING_CONTESTANT_8A
 	object_event 16,  8, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, BugCatchingContestant9AScript, EVENT_BUG_CATCHING_CONTESTANT_9A
 	object_event 17, 34, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 3, 3, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BugCatchingContestant10AScript, EVENT_BUG_CATCHING_CONTESTANT_10A
-	object_event 35, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, NationalParkBugContestParlyzHeal, EVENT_NATIONAL_PARK_PARLYZ_HEAL
-	object_event  1, 43, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, NationalParkBugContestTMDig, EVENT_NATIONAL_PARK_TM_DIG

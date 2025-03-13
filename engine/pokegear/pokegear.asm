@@ -567,8 +567,8 @@ PokegearMap_KantoMap:
 	jr PokegearMap_ContinueMap
 
 PokegearMap_JohtoMap:
-	ld d, LANDMARK_SILVER_CAVE
-	ld e, LANDMARK_NEW_BARK_TOWN
+	ld d, KANTO_LANDMARK - 1
+	ld e, JOHTO_LANDMARK
 PokegearMap_ContinueMap:
 	ld hl, hJoyLast
 	ld a, [hl]
@@ -721,17 +721,17 @@ PokegearMap_UpdateCursorPosition:
 	ret
 
 TownMap_GetKantoLandmarkLimits:
-	ld a, [wStatusFlags]
-	bit STATUSFLAGS_HALL_OF_FAME_F, a
-	jr z, .not_hof
-	ld d, LANDMARK_ROUTE_28
-	ld e, LANDMARK_PALLET_TOWN
+	;ld a, [wStatusFlags]
+	;bit STATUSFLAGS_HALL_OF_FAME_F, a
+	;jr z, .not_hof
+	ld d, NUM_LANDMARKS - 1
+	ld e, KANTO_LANDMARK
 	ret
 
 .not_hof
-	ld d, LANDMARK_ROUTE_28
-	ld e, LANDMARK_VICTORY_ROAD
-	ret
+	;ld d, LANDMARK_ROUTE_28
+	;ld e, LANDMARK_VICTORY_ROAD
+	;ret
 
 PokegearRadio_Init:
 	call InitPokegearTilemap
@@ -1479,7 +1479,7 @@ RadioChannels:
 
 .RuinsOfAlphRadio:
 	ld a, [wPokegearMapPlayerIconLandmark]
-	cp LANDMARK_RUINS_OF_ALPH
+	cp LANDMARK_SPECIAL ; TODO: LANDMARK_RUINS_OF_ALPH
 	jr nz, .NoSignal
 	jp LoadStation_UnownRadio
 
@@ -1507,11 +1507,11 @@ RadioChannels:
 	bit STATUSFLAGS_ROCKET_SIGNAL_F, a
 	jr z, .NoSignal
 	ld a, [wPokegearMapPlayerIconLandmark]
-	cp LANDMARK_MAHOGANY_TOWN
+	cp LANDMARK_SPECIAL ; TODO: LANDMARK_MAHOGANY_TOWN
 	jr z, .ok
-	cp LANDMARK_ROUTE_43
+	cp LANDMARK_SPECIAL ; TODO: LANDMARK_ROUTE_43
 	jr z, .ok
-	cp LANDMARK_LAKE_OF_RAGE
+	cp LANDMARK_SPECIAL ; TODO: LANDMARK_LAKE_OF_RAGE
 	jr nz, .NoSignal
 .ok
 	jp LoadStation_EvolutionRadio
@@ -2253,7 +2253,7 @@ FlyMap:
 ; enters Kanto, fly access is restricted until Indigo Plateau is
 ; visited and its flypoint enabled.
 	push af
-	ld c, SPAWN_INDIGO
+	ld c, NUM_SPAWNS ; TODO: First Kanto Spawn Point
 	call HasVisitedSpawn
 	and a
 	jr z, .NoKanto

@@ -303,20 +303,22 @@ DEF PLAYER_SURF_PIKA EQU 8
 	const DAILYFLAGS1_KURT_MAKING_BALLS_F             ; 0
 	const DAILYFLAGS1_BUG_CONTEST_F                   ; 1
 	const DAILYFLAGS1_SWARM_F                         ; 2
-	const DAILYFLAGS1_TIME_CAPSULE_F                  ; 3
+	const DAILYFLAGS1_BARGAIN_SHOP_F                  ; 3
 	const DAILYFLAGS1_ALL_FRUIT_TREES_F               ; 4
-	const DAILYFLAGS1_GOT_SHUCKIE_TODAY_F             ; 5
-	const DAILYFLAGS1_GOLDENROD_UNDERGROUND_BARGAIN_F ; 6
+	const_skip                                        ; 5
+	const_skip                                        ; 6
 	const DAILYFLAGS1_TRAINER_HOUSE_F                 ; 7
 
-; wDailyFlags2::
+; wDailyFlags2:: (reserved)
 	const_def
-	const DAILYFLAGS2_MT_MOON_SQUARE_CLEFAIRY_F           ; 0
-	const DAILYFLAGS2_UNION_CAVE_LAPRAS_F                 ; 1
-	const DAILYFLAGS2_GOLDENROD_UNDERGROUND_GOT_HAIRCUT_F ; 2
-	const DAILYFLAGS2_GOLDENROD_DEPT_STORE_TM27_RETURN_F  ; 3
-	const DAILYFLAGS2_DAISYS_GROOMING_F                   ; 4
-	const DAILYFLAGS2_INDIGO_PLATEAU_RIVAL_FIGHT_F        ; 5
+	const_skip                                            ; 0
+	const_skip                                            ; 1
+	const_skip                                            ; 2
+	const_skip                                            ; 3
+	const_skip                                            ; 4
+	const_skip                                            ; 5
+	const_skip                                            ; 6
+	const_skip                                            ; 7
 
 ; wLuckyNumberShowFlag::
 DEF LUCKYNUMBERSHOW_GAME_OVER_F EQU 0

@@ -287,8 +287,8 @@ SafariZoneEntrance_MapEvents:
 	def_warp_events
 	warp_event  4,  0, SAFARI_ZONE_BETA, 1
 	warp_event  5,  0, SAFARI_ZONE_BETA, 2
-	warp_event  4,  7, FUCHSIA_CITY, 7
-	warp_event  5,  7, FUCHSIA_CITY, 7
+	warp_event  4,  7, NEW_BARK_TOWN, 3 ; placeholder
+	warp_event  5,  7, NEW_BARK_TOWN, 3 ; placeholder
 
 	def_coord_events
 	coord_event  4,  2, SCENE_SAFARIZONEENTRANCE_DEFAULT, SafariZoneEntrance_LeftTriggerScene

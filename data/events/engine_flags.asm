@@ -74,31 +74,7 @@ EngineFlags:
 	; fly
 	engine_flag wVisitedSpawns, SPAWN_HOME
 	engine_flag wVisitedSpawns, SPAWN_DEBUG
-	engine_flag wVisitedSpawns, SPAWN_PALLET
-	engine_flag wVisitedSpawns, SPAWN_VIRIDIAN
-	engine_flag wVisitedSpawns, SPAWN_PEWTER
-	engine_flag wVisitedSpawns, SPAWN_CERULEAN
-	engine_flag wVisitedSpawns, SPAWN_ROCK_TUNNEL
-	engine_flag wVisitedSpawns, SPAWN_VERMILION
-	engine_flag wVisitedSpawns, SPAWN_LAVENDER
-	engine_flag wVisitedSpawns, SPAWN_SAFFRON
-	engine_flag wVisitedSpawns, SPAWN_CELADON
-	engine_flag wVisitedSpawns, SPAWN_FUCHSIA
-	engine_flag wVisitedSpawns, SPAWN_CINNABAR
-	engine_flag wVisitedSpawns, SPAWN_INDIGO
 	engine_flag wVisitedSpawns, SPAWN_NEW_BARK
-	engine_flag wVisitedSpawns, SPAWN_CHERRYGROVE
-	engine_flag wVisitedSpawns, SPAWN_VIOLET
-	engine_flag wVisitedSpawns, SPAWN_AZALEA
-	engine_flag wVisitedSpawns, SPAWN_CIANWOOD
-	engine_flag wVisitedSpawns, SPAWN_GOLDENROD
-	engine_flag wVisitedSpawns, SPAWN_OLIVINE
-	engine_flag wVisitedSpawns, SPAWN_ECRUTEAK
-	engine_flag wVisitedSpawns, SPAWN_MAHOGANY
-	engine_flag wVisitedSpawns, SPAWN_LAKE_OF_RAGE
-	engine_flag wVisitedSpawns, SPAWN_BLACKTHORN
-	engine_flag wVisitedSpawns, SPAWN_MT_SILVER
-	engine_flag wVisitedSpawns, NUM_SPAWNS ; unused
 
 	engine_flag wLuckyNumberShowFlag, LUCKYNUMBERSHOW_GAME_OVER_F
 
@@ -107,18 +83,20 @@ EngineFlags:
 	engine_flag wDailyFlags1, DAILYFLAGS1_KURT_MAKING_BALLS_F
 	engine_flag wDailyFlags1, DAILYFLAGS1_BUG_CONTEST_F
 	engine_flag wDailyFlags1, DAILYFLAGS1_SWARM_F
-	engine_flag wDailyFlags1, DAILYFLAGS1_TIME_CAPSULE_F
+	engine_flag wDailyFlags1, 3 ; reserved
 	engine_flag wDailyFlags1, DAILYFLAGS1_ALL_FRUIT_TREES_F
-	engine_flag wDailyFlags1, DAILYFLAGS1_GOT_SHUCKIE_TODAY_F
-	engine_flag wDailyFlags1, DAILYFLAGS1_GOLDENROD_UNDERGROUND_BARGAIN_F
+	engine_flag wDailyFlags1, 5 ; reserved
+	engine_flag wDailyFlags1, 6 ; reserved
 	engine_flag wDailyFlags1, DAILYFLAGS1_TRAINER_HOUSE_F
 
-	engine_flag wDailyFlags2, DAILYFLAGS2_MT_MOON_SQUARE_CLEFAIRY_F
-	engine_flag wDailyFlags2, DAILYFLAGS2_UNION_CAVE_LAPRAS_F
-	engine_flag wDailyFlags2, DAILYFLAGS2_GOLDENROD_UNDERGROUND_GOT_HAIRCUT_F
-	engine_flag wDailyFlags2, DAILYFLAGS2_GOLDENROD_DEPT_STORE_TM27_RETURN_F
-	engine_flag wDailyFlags2, DAILYFLAGS2_DAISYS_GROOMING_F
-	engine_flag wDailyFlags2, DAILYFLAGS2_INDIGO_PLATEAU_RIVAL_FIGHT_F
+	engine_flag wDailyFlags2, 0 ; reserved
+	engine_flag wDailyFlags2, 1 ; reserved
+	engine_flag wDailyFlags2, 2 ; reserved
+	engine_flag wDailyFlags2, 3 ; reserved
+	engine_flag wDailyFlags2, 4 ; reserved
+	engine_flag wDailyFlags2, 5 ; reserved
+	engine_flag wDailyFlags2, 6 ; reserved
+	engine_flag wDailyFlags2, 7 ; reserved
 
 	engine_flag wPlayerGender, PLAYERGENDER_FEMALE_F
 	assert_table_length NUM_ENGINE_FLAGS

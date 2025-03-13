@@ -6109,32 +6109,20 @@ LoadEnemyMon:
 	jr nc, .GenerateDVs
 
 .CheckMagikarpArea:
-; The "jr z" checks are supposed to be "jr nz".
-
-; Instead, all maps in GROUP_LAKE_OF_RAGE (Mahogany area)
-; and Routes 20 and 44 are treated as Lake of Rage.
-
-; This also means Lake of Rage Magikarp can be smaller than ones
-; caught elsewhere rather than the other way around.
-
-; Intended behavior enforces a minimum size at Lake of Rage.
-; The real behavior prevents a minimum size in the Lake of Rage area.
-
-; Moreover, due to the check not being translated to feet+inches, all Magikarp
-; smaller than 4'0" may be caught by the filter, a lot more than intended.
+; TODO: Actual map checks
 	ld a, [wMapGroup]
-	cp GROUP_LAKE_OF_RAGE
-	jr z, .Happiness
+	cp GROUP_N_A
+	jr nz, .Happiness
 	ld a, [wMapNumber]
-	cp MAP_LAKE_OF_RAGE
-	jr z, .Happiness
+	cp MAP_N_A
+	jr nz, .Happiness
 ; 40% chance of not flooring
 	call Random
 	cp 39 percent + 1
 	jr c, .Happiness
 ; Try again if length < 1024 mm (i.e. if HIGH(length) < 3 feet)
 	ld a, [wMagikarpLength]
-	cp HIGH(1024) ; should be "cp 3", since 1024 mm = 3'4", but HIGH(1024) = 4
+	cp 3
 	jr c, .GenerateDVs ; try again
 
 ; Finally done with DVs

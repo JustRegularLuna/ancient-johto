@@ -93,19 +93,6 @@ GetRemainingSpaceInPhoneList:
 
 INCLUDE "data/phone/permanent_numbers.asm"
 
-BrokenPlaceFarString:
-; This routine is not in bank 0 and will fail or crash if called.
-	ldh a, [hROMBank]
-	push af
-	ld a, b
-	rst Bankswitch
-
-	call PlaceString
-
-	pop af
-	rst Bankswitch
-	ret
-
 CheckPhoneCall::
 ; Check if the phone is ringing in the overworld.
 
@@ -499,14 +486,12 @@ PhoneCall::
 	ld [hl], "☎"
 	inc hl
 	inc hl
-; BUG: The unused phonecall script command may crash (see docs/bugs_and_glitches.md)
-	ld a, [wPhoneScriptBank]
-	ld b, a
 	ld a, [wPhoneCaller]
 	ld e, a
 	ld a, [wPhoneCaller + 1]
 	ld d, a
-	call BrokenPlaceFarString
+	ld a, [wPhoneScriptBank]
+	call PlaceFarString
 	ret
 
 Phone_NoSignal:
@@ -530,11 +515,6 @@ Phone_CallEnd:
 	call HangUp_Wait20Frames
 	call HangUp_BoopOff
 	call HangUp_Wait20Frames
-	ret
-
-HangUp_ShutDown: ; unreferenced
-	ld de, SFX_SHUT_DOWN_PC
-	call PlaySFX
 	ret
 
 HangUp_Beep:

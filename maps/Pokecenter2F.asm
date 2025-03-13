@@ -57,7 +57,7 @@ Script_BattleRoomClosed:
 	end
 
 LinkReceptionistScript_Trade:
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
+	checkevent EVENT_ENABLED_CABLE_CLUB
 	iffalse Script_TradeCenterClosed
 	special SetBitsForLinkTradeRequest
 	opentext
@@ -118,7 +118,7 @@ LinkReceptionistScript_Trade:
 	end
 
 LinkReceptionistScript_Battle:
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
+	checkevent EVENT_ENABLED_CABLE_CLUB
 	iffalse Script_BattleRoomClosed
 	special SetBitsForBattleRequest
 	opentext
@@ -187,10 +187,8 @@ Script_TimeCapsuleClosed:
 	end
 
 LinkReceptionistScript_TimeCapsule:
-	checkevent EVENT_MET_BILL
-	iftrue Script_TimeCapsuleClosed
-	checkflag ENGINE_TIME_CAPSULE
-	iftrue Script_TimeCapsuleClosed
+	checkevent EVENT_ENABLED_TIME_CAPSULE
+	iffalse Script_TimeCapsuleClosed
 	special SetBitsForTimeCapsuleRequest
 	faceplayer
 	opentext

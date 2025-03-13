@@ -3,7 +3,7 @@
 SwarmWaterWildMons:
 
 ; Marill swarm
-	def_water_wildmons MOUNT_MORTAR_1F_OUTSIDE
+	def_water_wildmons NEW_BARK_TOWN
 	db 4 percent ; encounter rate
 	db 20, GOLDEEN
 	db 20, MARILL
