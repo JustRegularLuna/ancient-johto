@@ -43,6 +43,10 @@ ENDM
 	endgroup
 
 	newgroup DUNGEONS
+	map_const EVERGREEN_WOODS_SOUTH_GATE_1F,                5,  4
+	map_const EVERGREEN_WOODS_SOUTH_GATE_2F,                4,  4
+	map_const EVERGREEN_WOODS_NORTH_GATE,                   5,  4
+	map_const EVERGREEN_WOODS,                             15, 27
 	map_const NATIONAL_PARK_GATE,                           5,  4
 	map_const NATIONAL_PARK,                               20, 27
 	map_const NATIONAL_PARK_BUG_CONTEST,                   20, 27
@@ -50,12 +54,40 @@ ENDM
 	map_const SAFARI_ZONE_BETA,                            10, 18
 	endgroup
 
-	newgroup NEW_BARK
-	map_const ROUTE_29,                                    30,  9
-	map_const NEW_BARK_TOWN,                               10,  9
-	map_const ELMS_LAB,                                     5,  6
+	newgroup SILENT
+	map_const SILENT_HILLS,                                10,  9
+	map_const KANSAI_ROUTE_1,                              30,  9
+	map_const SILENT_POKECENTER_1F,                         5,  4
 	map_const PLAYERS_HOUSE_1F,                             5,  4
 	map_const PLAYERS_HOUSE_2F,                             4,  3
+	map_const RIVALS_HOUSE,                                 5,  4
+	map_const ELMS_LAB,                                     5,  6
+	map_const ELMS_HOUSE,                                   4,  4
+	endgroup
+
+	newgroup SAKURA
+	map_const SAKURA_TOWN,                                 20, 18
+	map_const KANSAI_ROUTE_2,                              10, 18
+	map_const SAKURA_POKECENTER_1F,                         5,  4
+	map_const SAKURA_MART,                                  6,  4
+	map_const SAKURA_HOUSE_1,                               4,  4
+	map_const SAKURA_HOUSE_2,                               4,  4
+	map_const SAKURA_HOUSE_3,                               4,  4
+	map_const SAKURA_SECRET_HOUSE,                          4,  4
+	map_const MR_POKEMONS_HOUSE,                            4,  4
+	endgroup
+
+	newgroup BELLFLOWER
+	map_const BELLFLOWER_CITY,                             20, 18
+	map_const KANSAI_ROUTE_3,                              20,  9
+	map_const BELLFLOWER_POKECENTER_1F,                     5,  4
+	map_const BELLFLOWER_MART,                              6,  4
+	map_const BELLFLOWER_GYM,                               5,  8
+	map_const BELLFLOWER_SCHOOL_HOUSE,                      4,  8
+	map_const BELLFLOWER_HOUSE,                             4,  4
+	map_const KURTS_HOUSE,                                  8,  4
+	map_const BELLFLOWER_MUSEUM_1F,                         8,  4
+	map_const BELLFLOWER_MUSEUM_2F,                         8,  4
 	endgroup
 
 DEF NUM_MAP_GROUPS EQU const_value

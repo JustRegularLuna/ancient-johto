@@ -247,17 +247,17 @@ DEF MOM_ACTIVE_F            EQU 7
 
 DEF MOM_SAVING_MONEY_MASK EQU (1 << MOM_SAVING_SOME_MONEY_F) | (1 << MOM_SAVING_HALF_MONEY_F) | (1 << MOM_SAVING_ALL_MONEY_F)
 
-; wJohtoBadges::
+; wKansaiBadges::
 	const_def
-	const ZEPHYRBADGE
-	const HIVEBADGE
-	const PLAINBADGE
-	const FOGBADGE
-	const MINERALBADGE
-	const STORMBADGE
-	const GLACIERBADGE
-	const RISINGBADGE
-DEF NUM_JOHTO_BADGES EQU const_value
+	const ZEPHYRBADGE  ; Bellflower
+	const HIVEBADGE    ; Cypress
+	const PLAINBADGE   ; Marigold
+	const FOGBADGE     ; Maple
+	const MINERALBADGE ; Azure Mist
+	const STORMBADGE   ; Redwood
+	const GLACIERBADGE ; Cedar
+	const RISINGBADGE  ; Ebongrove
+DEF NUM_KANSAI_BADGES EQU const_value
 
 ; wKantoBadges::
 	const_def
@@ -270,7 +270,7 @@ DEF NUM_JOHTO_BADGES EQU const_value
 	const VOLCANOBADGE
 	const EARTHBADGE
 DEF NUM_KANTO_BADGES EQU const_value
-DEF NUM_BADGES       EQU NUM_JOHTO_BADGES + NUM_KANTO_BADGES
+DEF NUM_BADGES       EQU NUM_KANSAI_BADGES + NUM_KANTO_BADGES
 
 ; wPokegearFlags::
 	const_def

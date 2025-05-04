@@ -91,7 +91,7 @@ PokeGear:
 	xor a
 	ld [wJumptableIndex], a ; POKEGEARSTATE_CLOCKINIT
 	ld [wPokegearCard], a ; POKEGEARCARD_CLOCK
-	ld [wPokegearMapRegion], a ; JOHTO_REGION
+	ld [wPokegearMapRegion], a ; KANSAI_REGION
 	ld [wUnusedPokegearByte], a
 	ld [wPokegearPhoneScrollPosition], a
 	ld [wPokegearPhoneCursorPosition], a
@@ -228,7 +228,7 @@ TownMap_InitCursorAndPlayerIconPositions:
 
 .FastShip:
 	ld [wPokegearMapPlayerIconLandmark], a
-	ld a, LANDMARK_NEW_BARK_TOWN
+	ld a, LANDMARK_SILENT_HILLS
 	ld [wPokegearMapCursorLandmark], a
 	ret
 
@@ -442,7 +442,7 @@ PokegearJumptable:
 	dw PokegearClock_Joypad
 	dw PokegearMap_CheckRegion
 	dw PokegearMap_Init
-	dw PokegearMap_JohtoMap
+	dw PokegearMap_KansaiMap
 	dw PokegearMap_Init
 	dw PokegearMap_KantoMap
 	dw PokegearPhone_Init
@@ -566,9 +566,9 @@ PokegearMap_KantoMap:
 	call TownMap_GetKantoLandmarkLimits
 	jr PokegearMap_ContinueMap
 
-PokegearMap_JohtoMap:
+PokegearMap_KansaiMap:
 	ld d, KANTO_LANDMARK - 1
-	ld e, JOHTO_LANDMARK
+	ld e, KANSAI_LANDMARK
 PokegearMap_ContinueMap:
 	ld hl, hJoyLast
 	ld a, [hl]
@@ -1265,20 +1265,6 @@ PokegearPhoneContactSubmenu:
 	dw .Call
 	dw .Cancel
 
-GetAMPMHours: ; unreferenced
-	ldh a, [hHours]
-	cp NOON_HOUR
-	jr c, .am
-	sub NOON_HOUR
-	ld [wTempByteValue], a
-	scf
-	ret
-
-.am
-	ld [wTempByteValue], a
-	and a
-	ret
-
 Pokegear_SwitchPage:
 	ld de, SFX_READ_TEXT_2
 	call PlaySFX
@@ -1434,14 +1420,6 @@ UpdateRadioStation:
 	call PlaceString
 	ld a, $1
 	ldh [hBGMapMode], a
-	ret
-
-LoadPokegearRadioChannelPointer: ; unreferenced
-	ld [wPokegearRadioChannelBank], a
-	ld a, [hli]
-	ld [wPokegearRadioChannelAddr], a
-	ld a, [hli]
-	ld [wPokegearRadioChannelAddr + 1], a
 	ret
 
 RadioChannels:
@@ -1643,9 +1621,6 @@ LoadStation_EvolutionRadio:
 	ld hl, PlayRadioShow
 	call Radio_BackUpFarCallParams
 	ld de, UnownStationName
-	ret
-
-DummyLoadStation: ; unreferenced
 	ret
 
 RadioMusicRestartDE:
@@ -1853,7 +1828,7 @@ _TownMap:
 	ld a, [wTownMapPlayerIconLandmark]
 	cp KANTO_LANDMARK
 	jr nc, .kanto2
-	ld e, JOHTO_REGION
+	ld e, KANSAI_REGION
 	jr .okay_tilemap
 
 .kanto2
@@ -1976,7 +1951,7 @@ PokegearMap:
 	and a
 	jr nz, .kanto
 	call LoadTownMapGFX
-	call FillJohtoMap
+	call FillKansaiMap
 	ret
 
 .kanto
@@ -2231,13 +2206,13 @@ FlyMap:
 ; Johto fly map
 ; Note that .NoKanto should be modified in tandem with this branch
 	push af
-	ld a, JOHTO_FLYPOINT ; first Johto flypoint
+	ld a, KANSAI_FLYPOINT ; first Johto flypoint
 	ld [wTownMapPlayerIconLandmark], a ; first one is default (New Bark Town)
 	ld [wStartFlypoint], a
 	ld a, KANTO_FLYPOINT - 1 ; last Johto flypoint
 	ld [wEndFlypoint], a
 ; Fill out the map
-	call FillJohtoMap
+	call FillKansaiMap
 	call .MapHud
 	pop af
 	call TownMapPlayerIcon
@@ -2272,12 +2247,12 @@ FlyMap:
 
 .NoKanto:
 ; If Indigo Plateau hasn't been visited, we use Johto's map instead
-	ld a, JOHTO_FLYPOINT ; first Johto flypoint
+	ld a, KANSAI_FLYPOINT ; first Johto flypoint
 	ld [wTownMapPlayerIconLandmark], a ; first one is default (New Bark Town)
 	ld [wStartFlypoint], a
 	ld a, KANTO_FLYPOINT - 1 ; last Johto flypoint
 	ld [wEndFlypoint], a
-	call FillJohtoMap
+	call FillKansaiMap
 	pop af
 .MapHud:
 	call TownMapBubble
@@ -2318,7 +2293,7 @@ Pokedex_GetArea:
 	call TownMapPals
 	hlbgcoord 0, 0, vBGMap1
 	call TownMapBGUpdate
-	call FillJohtoMap
+	call FillKansaiMap
 	call .PlaceString_MonsNest
 	call TownMapPals
 	hlbgcoord 0, 0
@@ -2328,7 +2303,7 @@ Pokedex_GetArea:
 	call SetDefaultBGPAndOBP
 	xor a
 	ldh [hBGMapMode], a
-	xor a ; JOHTO_REGION
+	xor a ; KANSAI_REGION
 	call .GetAndPlaceNest
 .loop
 	call JoyTextDelay
@@ -2373,7 +2348,7 @@ Pokedex_GetArea:
 	call ClearSprites
 	ld a, SCREEN_HEIGHT_PX
 	ldh [hWY], a
-	xor a ; JOHTO_REGION
+	xor a ; KANSAI_REGION
 	call .GetAndPlaceNest
 	ret
 
@@ -2592,8 +2567,8 @@ TownMapBGUpdate:
 	ldh [hBGMapMode], a
 	ret
 
-FillJohtoMap:
-	ld de, JohtoMap
+FillKansaiMap:
+	ld de, KansaiMap
 	jr FillTownMap
 
 FillKantoMap:
@@ -2689,8 +2664,8 @@ LoadTownMapGFX:
 	call DecompressRequest2bpp
 	ret
 
-JohtoMap:
-INCBIN "gfx/pokegear/johto.bin"
+KansaiMap:
+INCBIN "gfx/pokegear/kansai.bin"
 
 KantoMap:
 INCBIN "gfx/pokegear/kanto.bin"
@@ -2699,134 +2674,3 @@ PokedexNestIconGFX:
 INCBIN "gfx/pokegear/dexmap_nest_icon.2bpp"
 FlyMapLabelBorderGFX:
 INCBIN "gfx/pokegear/flymap_label_border.1bpp"
-
-EntireFlyMap: ; unreferenced
-; Similar to _FlyMap, but scrolls through the entire
-; Flypoints data of both regions. A debug function?
-	xor a
-	ld [wTownMapPlayerIconLandmark], a
-	call ClearBGPalettes
-	call ClearTilemap
-	call ClearSprites
-	ld hl, hInMenu
-	ld a, [hl]
-	push af
-	ld [hl], $1
-	xor a
-	ldh [hBGMapMode], a
-	farcall ClearSpriteAnims
-	call LoadTownMapGFX
-	ld de, FlyMapLabelBorderGFX
-	ld hl, vTiles2 tile $30
-	lb bc, BANK(FlyMapLabelBorderGFX), 6
-	call Request1bpp
-	call FillKantoMap
-	call TownMapBubble
-	call TownMapPals
-	hlbgcoord 0, 0, vBGMap1
-	call TownMapBGUpdate
-	call FillJohtoMap
-	call TownMapBubble
-	call TownMapPals
-	hlbgcoord 0, 0
-	call TownMapBGUpdate
-	call TownMapMon
-	ld a, c
-	ld [wTownMapCursorCoordinates], a
-	ld a, b
-	ld [wTownMapCursorCoordinates + 1], a
-	ld b, SCGB_POKEGEAR_PALS
-	call GetSGBLayout
-	call SetDefaultBGPAndOBP
-.loop
-	call JoyTextDelay
-	ld hl, hJoyPressed
-	ld a, [hl]
-	and B_BUTTON
-	jr nz, .pressedB
-	ld a, [hl]
-	and A_BUTTON
-	jr nz, .pressedA
-	call .HandleDPad
-	call GetMapCursorCoordinates
-	farcall PlaySpriteAnimations
-	call DelayFrame
-	jr .loop
-
-.pressedB
-	ld a, -1
-	jr .exit
-
-.pressedA
-	ld a, [wTownMapPlayerIconLandmark]
-	ld l, a
-	ld h, 0
-	add hl, hl
-	ld de, Flypoints + 1
-	add hl, de
-	ld a, [hl]
-.exit
-	ld [wTownMapPlayerIconLandmark], a
-	pop af
-	ldh [hInMenu], a
-	call ClearBGPalettes
-	ld a, SCREEN_HEIGHT_PX
-	ldh [hWY], a
-	xor a ; LOW(vBGMap0)
-	ldh [hBGMapAddress], a
-	ld a, HIGH(vBGMap0)
-	ldh [hBGMapAddress + 1], a
-	ld a, [wTownMapPlayerIconLandmark]
-	ld e, a
-	ret
-
-.HandleDPad:
-	ld hl, hJoyLast
-	ld a, [hl]
-	and D_DOWN | D_RIGHT
-	jr nz, .ScrollNext
-	ld a, [hl]
-	and D_UP | D_LEFT
-	jr nz, .ScrollPrev
-	ret
-
-.ScrollNext:
-	ld hl, wTownMapPlayerIconLandmark
-	ld a, [hl]
-	cp NUM_FLYPOINTS - 1
-	jr c, .NotAtEndYet
-	ld [hl], -1
-.NotAtEndYet:
-	inc [hl]
-	jr .FillMap
-
-.ScrollPrev:
-	ld hl, wTownMapPlayerIconLandmark
-	ld a, [hl]
-	and a
-	jr nz, .NotAtStartYet
-	ld [hl], NUM_FLYPOINTS
-.NotAtStartYet:
-	dec [hl]
-.FillMap:
-	ld a, [wTownMapPlayerIconLandmark]
-	cp KANTO_FLYPOINT
-	jr c, .InJohto
-	call FillKantoMap
-	xor a
-	ld b, HIGH(vBGMap1)
-	jr .Finally
-
-.InJohto:
-	call FillJohtoMap
-	ld a, SCREEN_HEIGHT_PX
-	ld b, HIGH(vBGMap0)
-.Finally:
-	ldh [hWY], a
-	ld a, b
-	ldh [hBGMapAddress + 1], a
-	call TownMapBubble
-	call WaitBGMap
-	xor a
-	ldh [hBGMapMode], a
-	ret

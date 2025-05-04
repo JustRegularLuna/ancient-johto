@@ -1,5 +1,5 @@
 BadgeTypeBoosts:
-; entries correspond to wJohtoBadges constants
+; entries correspond to wKansaiBadges constants
 	db FLYING       ; ZEPHYRBADGE
 	db BUG          ; HIVEBADGE
 	db NORMAL       ; PLAINBADGE

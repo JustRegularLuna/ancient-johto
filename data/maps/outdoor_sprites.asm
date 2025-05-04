@@ -6,22 +6,12 @@ OutdoorSprites:
 	table_width 2
 	dw CableClubGroupSprites
 	dw DungeonsGroupSprites
-	dw NewBarkGroupSprites
+	dw SilentGroupSprites
+	dw SakuraGroupSprites
+	dw BellflowerGroupSprites
 	assert_table_length NUM_MAP_GROUPS
 
 CableClubGroupSprites:
-	db SPRITE_OAK
-	db SPRITE_FISHER
-	db SPRITE_TEACHER
-	db SPRITE_TWIN
-	db SPRITE_POKEFAN_M
-	db SPRITE_GRAMPS
-	db SPRITE_FAIRY
-	db SPRITE_RIVAL
-	db SPRITE_FISHING_GURU
-	db SPRITE_POKE_BALL
-	db SPRITE_POKEDEX
-
 DungeonsGroupSprites:
 	db SPRITE_LASS
 	db SPRITE_POKEFAN_F
@@ -35,15 +25,29 @@ DungeonsGroupSprites:
 	db SPRITE_POKE_BALL
 	db SPRITE_BOULDER
 
-NewBarkGroupSprites:
+SilentGroupSprites:
+SakuraGroupSprites:
 	db SPRITE_RIVAL
+	db SPRITE_GIRL
+	db SPRITE_FISHER
+	db SPRITE_COOLTRAINER_M
+	db SPRITE_YOUNGSTER
+	db SPRITE_FISHING_GURU
+	db SPRITE_POKEFAN_M
+	db SPRITE_BUG_CATCHER
+	db SPRITE_LASS
+	db SPRITE_POKE_BALL
+	db SPRITE_FRUIT_TREE
+
+BellflowerGroupSprites:
+	db SPRITE_TWIN
 	db SPRITE_TEACHER
 	db SPRITE_FISHER
 	db SPRITE_COOLTRAINER_M
 	db SPRITE_YOUNGSTER
-	db SPRITE_MONSTER
+	db SPRITE_CHANNELER
 	db SPRITE_GRAMPS
 	db SPRITE_BUG_CATCHER
-	db SPRITE_COOLTRAINER_F
+	db SPRITE_LASS
 	db SPRITE_POKE_BALL
 	db SPRITE_FRUIT_TREE

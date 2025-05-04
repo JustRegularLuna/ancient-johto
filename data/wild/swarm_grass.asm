@@ -3,7 +3,7 @@
 SwarmGrassWildMons:
 
 ; Yanma swarm
-	def_grass_wildmons ROUTE_29
+	def_grass_wildmons KANSAI_ROUTE_1
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 12, NIDORAN_M

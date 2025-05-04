@@ -495,7 +495,7 @@ TrainerCard_Page2_3_OAMUpdate:
 	ld a, [de]
 	ld c, a
 	ld de, wShadowOAMSprite00
-	ld b, NUM_JOHTO_BADGES
+	ld b, NUM_KANSAI_BADGES
 .loop
 	srl c
 	push bc
@@ -582,7 +582,7 @@ TrainerCard_JohtoBadgesOAM:
 	; cycle 1: face tile, in1 tile, in2 tile, in3 tile
 	; cycle 2: face tile, in1 tile, in2 tile, in3 tile
 
-	dw wJohtoBadges
+	dw wKansaiBadges
 
 	; Zephyrbadge
 	db $68, $18, 0

@@ -69,16 +69,20 @@ DEF NUM_FISHGROUPS EQU const_value - 1
 	const SPAWN_HOME
 	const SPAWN_DEBUG
 ; johto
-	const SPAWN_NEW_BARK
+	const SPAWN_SILENT
+	const SPAWN_SAKURA
+	const SPAWN_BELLFLOWER
 DEF NUM_SPAWNS EQU const_value
 
 DEF SPAWN_N_A EQU -1
 
 ; Flypoints indexes (see data/maps/flypoints.asm)
 	const_def
-; johto
-DEF JOHTO_FLYPOINT EQU const_value
-	const FLY_NEW_BARK
+; kansai
+DEF KANSAI_FLYPOINT EQU const_value
+	const FLY_SILENT
+	const FLY_SAKURA
+	const FLY_BELLFLOWER
 ; kanto
 DEF KANTO_FLYPOINT EQU const_value
 

@@ -2,7 +2,7 @@
 
 JohtoWaterWildMons:
 
-	def_water_wildmons NEW_BARK_TOWN
+	def_water_wildmons SILENT_HILLS
 	db 6 percent ; encounter rate
 	db 20, TENTACOOL
 	db 15, TENTACOOL

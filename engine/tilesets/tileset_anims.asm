@@ -44,10 +44,14 @@ _AnimateTileset::
 	jp hl
 
 Tileset0Anim::
-TilesetJohtoModernAnim::
+TilesetSilentAnim::
+TilesetBellflowerAnim::
 TilesetKantoAnim::
-TilesetParkAnim::
-TilesetForestAnim::
+TilesetPlateauAnim::
+TilesetKansaiParkAnim::
+TilesetKansaiForestAnim::
+TilesetKantoParkAnim::
+TilesetKantoForestAnim::
 	dw vTiles2 tile $14, ReadTileToAnimBuffer
 	dw NULL,  WaitTileAnimation
 	dw wTileAnimBuffer, ScrollTileRightLeft
@@ -63,7 +67,7 @@ TilesetForestAnim::
 	dw NULL,  WaitTileAnimation
 	dw NULL,  DoneTileAnimation
 
-TilesetJohtoAnim:
+TilesetAzureAnim:
 	dw vTiles2 tile $14, ReadTileToAnimBuffer
 	dw NULL,  WaitTileAnimation
 	dw wTileAnimBuffer, ScrollTileRightLeft
@@ -82,6 +86,7 @@ TilesetJohtoAnim:
 	dw NULL,  DoneTileAnimation
 
 TilesetPortAnim:
+TilesetKantoCaveAnim:
 	dw vTiles2 tile $14, ReadTileToAnimBuffer
 	dw NULL,  WaitTileAnimation
 	dw wTileAnimBuffer, ScrollTileRightLeft
@@ -108,8 +113,8 @@ TilesetEliteFourRoomAnim:
 	dw NULL,  StandingTileFrame8
 	dw NULL,  DoneTileAnimation
 
-TilesetCaveAnim:
-TilesetDarkCaveAnim:
+TilesetKansaiCaveAnim:
+TilesetKansaiDarkCaveAnim:
 	dw vTiles2 tile $14, ReadTileToAnimBuffer
 	dw NULL,  WaitTileAnimation
 	dw wTileAnimBuffer, ScrollTileRightLeft
@@ -130,7 +135,7 @@ TilesetDarkCaveAnim:
 	dw NULL,  WaitTileAnimation
 	dw NULL,  DoneTileAnimation
 
-TilesetIcePathAnim:
+TilesetIceCaveAnim:
 	dw vTiles2 tile $35, ReadTileToAnimBuffer
 	dw NULL,  WaitTileAnimation
 	dw wTileAnimBuffer, ScrollTileRightLeft
@@ -173,25 +178,31 @@ TilesetHouseAnim:
 TilesetPlayersHouseAnim:
 TilesetPokecenterAnim:
 TilesetGateAnim:
+TilesetClubAnim:
+TilesetSchoolAnim:
 TilesetLabAnim:
-TilesetFacilityAnim:
 TilesetMartAnim:
 TilesetMansionAnim:
 TilesetGameCornerAnim:
 TilesetTraditionalHouseAnim:
 TilesetTrainStationAnim:
 TilesetChampionsRoomAnim:
-TilesetLighthouseAnim:
+TilesetShipAnim:
 TilesetPlayersRoomAnim:
-TilesetRuinsOfAlphAnim:
+TilesetRuinsAnim:
 TilesetRadioTowerAnim:
+TilesetKansaiMuseumAnim:
+TilesetKantoMuseumAnim:
+TilesetCemeteryAnim:
+TilesetGeneratorAnim:
+TilesetInteriorAnim:
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
 	dw NULL,  DoneTileAnimation
 
-TilesetUndergroundAnim:
+TilesetWarehouseAnim:
 	dw vTiles2 tile $22, TopLeftSpinnerAnimation
 	dw vTiles2 tile $23, TopRightSpinnerAnimation
 	dw vTiles2 tile $32, BottomLeftSpinnerAnimation
@@ -202,6 +213,23 @@ TilesetUndergroundAnim:
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
 	dw NULL,  StandingTileFrame8
+	dw NULL,  DoneTileAnimation
+
+TilesetFacilityAnim:
+	dw vTiles2 tile $14, ReadTileToAnimBuffer
+	dw NULL,  WaitTileAnimation
+	dw wTileAnimBuffer, ScrollTileRightLeft
+	dw NULL,  WaitTileAnimation
+	dw vTiles2 tile $14, WriteTileFromAnimBuffer
+	dw vTiles2 tile $21, TopLeftSpinnerAnimation
+	dw vTiles2 tile $31, TopRightSpinnerAnimation
+	dw vTiles2 tile $20, BottomLeftSpinnerAnimation
+	dw vTiles2 tile $30, BottomRightSpinnerAnimation
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
 	dw NULL,  DoneTileAnimation
 
 DoneTileAnimation:
@@ -322,36 +350,6 @@ ScrollTileDown:
 	dec a
 	jr nz, .loop
 	ret
-
-AnimateWaterTile:
-; Save the stack pointer in bc for WriteTile to restore
-	ld hl, sp+0
-	ld b, h
-	ld c, l
-
-; A cycle of 4 frames, updating every other tick
-	ld a, [wTileAnimationTimer]
-	and %110
-
-; hl = .WaterTileFrames + a * 8
-; (a was pre-multiplied by 2 from 'and %110')
-	add a
-	add a
-	add a
-	add LOW(.WaterTileFrames)
-	ld l, a
-	ld a, 0
-	adc HIGH(.WaterTileFrames)
-	ld h, a
-
-; Write the tile graphic from hl (now sp) to de (now hl)
-	ld sp, hl
-	ld l, e
-	ld h, d
-	jp WriteTile
-
-.WaterTileFrames:
-	INCBIN "gfx/tilesets/water/water.2bpp"
 
 AnimateFlowerTile:
 ; Save the stack pointer in bc for WriteTile to restore

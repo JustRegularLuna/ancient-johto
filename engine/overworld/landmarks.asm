@@ -55,7 +55,7 @@ RegionCheck:
 	ld c, a
 	call GetWorldMapLocation
 	cp LANDMARK_FAST_SHIP ; S.S. Aqua
-	jr z, .johto
+	jr z, .kansai
 	cp LANDMARK_SPECIAL
 	jr nz, .checkagain
 
@@ -68,14 +68,10 @@ RegionCheck:
 
 .checkagain
 	cp KANTO_LANDMARK
-	jr c, .johto
+	jr c, .kansai
 
-; Victory Road area is considered to be Johto.
-	;cp LANDMARK_VICTORY_ROAD
-	;jr c, .kanto
-
-.johto
-	ld e, JOHTO_REGION
+.kansai
+	ld e, KANSAI_REGION
 	ret
 .kanto
 	ld e, KANTO_REGION

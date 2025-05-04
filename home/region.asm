@@ -1,5 +1,5 @@
 IsInJohto::
-; Return 0 if the player is in Johto, and 1 in Kanto.
+; Return 0 if the player is in Kansai, and 1 in Kanto.
 
 	ld a, [wMapGroup]
 	ld b, a
@@ -8,7 +8,7 @@ IsInJohto::
 	call GetWorldMapLocation
 
 	cp LANDMARK_FAST_SHIP
-	jr z, .Johto
+	jr z, .Kansai
 
 	cp LANDMARK_SPECIAL
 	jr nz, .CheckRegion
@@ -23,8 +23,8 @@ IsInJohto::
 	cp KANTO_LANDMARK
 	jr nc, .Kanto
 
-.Johto:
-	xor a ; JOHTO_REGION
+.Kansai:
+	xor a ; KANSAI_REGION
 	ret
 
 .Kanto:

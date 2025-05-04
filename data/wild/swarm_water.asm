@@ -3,7 +3,7 @@
 SwarmWaterWildMons:
 
 ; Marill swarm
-	def_water_wildmons NEW_BARK_TOWN
+	def_water_wildmons SILENT_HILLS
 	db 4 percent ; encounter rate
 	db 20, GOLDEEN
 	db 20, MARILL

@@ -14,7 +14,9 @@ MapGroupRoofs:
 	db -1             ;  0
 	db -1             ;  1 (Cable Club)
 	db -1             ;  2 (Dungeons)
-	db ROOF_NEW_BARK  ; 24 (New Bark)
+	db ROOF_NEW_BARK  ;  3 (Silent Hills)
+	db ROOF_NEW_BARK  ;  4 (Sakura Town)
+	db ROOF_NEW_BARK  ;  5 (Bellflower City)
 	assert_table_length NUM_MAP_GROUPS + 1
 
 Roofs:

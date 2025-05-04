@@ -681,12 +681,6 @@ _CGB_UnownPuzzle:
 _CGB_TrainerCard:
 	; Palettes for border and trainers
 	ld de, wBGPals1
-	ld a, PAL_CYANMON
-	call GetPredefPal
-	call LoadHLPaletteIntoDE
-	ld a, PAL_REDMON
-	call GetPredefPal
-	call LoadHLPaletteIntoDE
 	ld a, PAL_MEWMON
 	call GetPredefPal
 	call LoadHLPaletteIntoDE
@@ -696,32 +690,11 @@ _CGB_TrainerCard:
 	call GetPredefPal
 	call LoadHLPaletteIntoDE
 
-	; fill screen with gender-specific palette for the card border
+	; fill screen with palette for the card border and trainer
 	hlcoord 0, 0, wAttrmap
 	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
-	; TODO: Player Gender, gender-specific trainer card pal
-	;ld a, [wPlayerGender]
-	;and a
-	ld a, $1 ; red
-	;jr z, .got_gender
-	;xor a ; cyan
-;.got_gender
+	xor a
 	call ByteFill
-	; fill trainer sprite area with trainer palette
-	hlcoord 14, 1, wAttrmap
-	lb bc, 7, 5
-	ld a, $2 ; trainers
-	call FillBoxCGB
-	; top-right corner still uses the border's palette
-	hlcoord 0, 0, wAttrmap
-	ld a, [hl]
-	hlcoord 18, 1, wAttrmap
-	ld [hl], a
-	; fill the gym leader faces' area with the shared trainer palette
-	hlcoord 2, 10, wAttrmap
-	lb bc, 6, 16
-	ld a, $2 ; trainers
-	call FillBoxCGB
 	call ApplyAttrmap
 	call ApplyPals
 	ld a, TRUE
@@ -730,7 +703,7 @@ _CGB_TrainerCard:
 
 _CGB_MoveList:
 	ld de, wBGPals1
-	ld a, PAL_GOLDENROD
+	ld a, PAL_MARIGOLD
 	call GetPredefPal
 	call LoadHLPaletteIntoDE
 	ld a, [wPlayerHPPal]

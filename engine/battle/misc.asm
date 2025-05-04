@@ -159,7 +159,7 @@ DoBadgeTypeBoosts:
 
 	ld a, [wKantoBadges]
 	ld b, a
-	ld a, [wJohtoBadges]
+	ld a, [wKansaiBadges]
 	ld c, a
 
 .CheckBadge:

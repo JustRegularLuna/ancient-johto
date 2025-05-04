@@ -1159,7 +1159,7 @@ _OakText1::
 	para "Welcome to the"
 	line "world of #MON!"
 
-	para "My name is OAK."
+	para "My name is ELM."
 
 	para "People call me the"
 	line "#MON PROF."

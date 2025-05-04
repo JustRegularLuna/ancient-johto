@@ -2,6 +2,26 @@
 	const SAFARIZONEENTRANCE_GAME_CLERK
 	const SAFARIZONEENTRANCE_OFFICER
 
+SafariZoneEntrance_MapEvents:
+	db 0, 0 ; filler
+
+	def_warp_events
+	warp_event  4,  0, SAFARI_ZONE_BETA, 1
+	warp_event  5,  0, SAFARI_ZONE_BETA, 2
+	warp_event  4,  7, SILENT_HILLS, 3 ; placeholder
+	warp_event  5,  7, SILENT_HILLS, 3 ; placeholder
+
+	def_coord_events
+	coord_event  4,  2, SCENE_SAFARIZONEENTRANCE_DEFAULT, SafariZoneEntrance_LeftTriggerScene
+	coord_event  5,  2, SCENE_SAFARIZONEENTRANCE_DEFAULT, SafariZoneEntrance_RightTriggerScene
+
+	def_bg_events
+
+	def_object_events
+	object_event  2,  2, SPRITE_SAFARI_ZONE_WORKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
+	object_event  7,  3, SPRITE_SAFARI_ZONE_WORKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SafariZoneEntranceOfficerScript, -1
+
+
 SafariZoneEntrance_MapScripts:
 	def_scene_scripts
 	scene_script SafariZoneEntranceNoopScene,       SCENE_SAFARIZONEENTRANCE_DEFAULT
@@ -280,22 +300,3 @@ SafariZoneEntranceSorryRegularText:
 	text "Sorry, you're a"
 	line "regular here!"
 	done
-
-SafariZoneEntrance_MapEvents:
-	db 0, 0 ; filler
-
-	def_warp_events
-	warp_event  4,  0, SAFARI_ZONE_BETA, 1
-	warp_event  5,  0, SAFARI_ZONE_BETA, 2
-	warp_event  4,  7, NEW_BARK_TOWN, 3 ; placeholder
-	warp_event  5,  7, NEW_BARK_TOWN, 3 ; placeholder
-
-	def_coord_events
-	coord_event  4,  2, SCENE_SAFARIZONEENTRANCE_DEFAULT, SafariZoneEntrance_LeftTriggerScene
-	coord_event  5,  2, SCENE_SAFARIZONEENTRANCE_DEFAULT, SafariZoneEntrance_RightTriggerScene
-
-	def_bg_events
-
-	def_object_events
-	object_event  2,  2, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
-	object_event  7,  3, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SafariZoneEntranceOfficerScript, -1

@@ -4,8 +4,8 @@ MACRO treemon_map
 ENDM
 
 TreeMonMaps:
-	treemon_map ROUTE_29,                  TREEMON_SET_CANYON
-	treemon_map NEW_BARK_TOWN,             TREEMON_SET_CITY
+	treemon_map KANSAI_ROUTE_1,            TREEMON_SET_CANYON
+	treemon_map SILENT_HILLS,              TREEMON_SET_CITY
 	db -1
 
 RockMonMaps:

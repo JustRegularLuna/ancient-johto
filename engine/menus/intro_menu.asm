@@ -104,7 +104,7 @@ _ResetWRAM:
 	xor a
 	ld [wMonType], a
 
-	ld [wJohtoBadges], a
+	ld [wKansaiBadges], a
 	ld [wKantoBadges], a
 
 	ld [wCoins], a
@@ -295,13 +295,13 @@ Continue:
 	ret
 
 .SpawnAfterE4:
-	ld a, SPAWN_NEW_BARK
+	ld a, SPAWN_SILENT
 	ld [wDefaultSpawnpoint], a
 	call PostCreditsSpawn
 	jp FinishContinueFunction
 
 SpawnAfterRed:
-	ld a, SPAWN_NEW_BARK
+	ld a, SPAWN_SILENT
 	ld [wDefaultSpawnpoint], a
 
 PostCreditsSpawn:
@@ -461,7 +461,7 @@ Continue_UnknownGameTime:
 
 Continue_DisplayBadgeCount:
 	push hl
-	ld hl, wJohtoBadges
+	ld hl, wKansaiBadges
 	ld b, 2
 	call CountSetBits
 	pop hl

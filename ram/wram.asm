@@ -2418,7 +2418,7 @@ wMomSavingMoney::
 wCoins:: dw
 
 wBadges::
-wJohtoBadges:: flag_array NUM_JOHTO_BADGES
+wKansaiBadges:: flag_array NUM_KANSAI_BADGES
 wKantoBadges:: flag_array NUM_KANTO_BADGES
 
 wTMsHMs:: ds NUM_TMS + NUM_HMS
@@ -2469,7 +2469,7 @@ wColosseumSceneID::                               db
 wTimeCapsuleSceneID::                             db
 wNationalParkGateSceneID::                        db
 wSafariZoneEntranceSceneID::                      db
-wNewBarkTownSceneID::                             db
+wSilentHillsSceneID::                             db
 wElmsLabSceneID::                                 db
 wPlayersHouse1FSceneID::                          db
 ; Individually Marked placeholders from vanilla Scene ID addresses

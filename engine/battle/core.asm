@@ -6702,7 +6702,7 @@ BadgeStatBoosts:
 	and a
 	ret nz
 
-	ld a, [wJohtoBadges]
+	ld a, [wKansaiBadges]
 
 ; Swap badges 3 (PlainBadge) and 5 (MineralBadge).
 	ld d, a

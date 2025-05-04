@@ -43,14 +43,14 @@ EngineFlags:
 	engine_flag wBikeFlags, BIKEFLAGS_ALWAYS_ON_BIKE_F
 	engine_flag wBikeFlags, BIKEFLAGS_DOWNHILL_F
 
-	engine_flag wJohtoBadges, ZEPHYRBADGE
-	engine_flag wJohtoBadges, HIVEBADGE
-	engine_flag wJohtoBadges, PLAINBADGE
-	engine_flag wJohtoBadges, FOGBADGE
-	engine_flag wJohtoBadges, MINERALBADGE
-	engine_flag wJohtoBadges, STORMBADGE
-	engine_flag wJohtoBadges, GLACIERBADGE
-	engine_flag wJohtoBadges, RISINGBADGE
+	engine_flag wKansaiBadges, ZEPHYRBADGE
+	engine_flag wKansaiBadges, HIVEBADGE
+	engine_flag wKansaiBadges, PLAINBADGE
+	engine_flag wKansaiBadges, FOGBADGE
+	engine_flag wKansaiBadges, MINERALBADGE
+	engine_flag wKansaiBadges, STORMBADGE
+	engine_flag wKansaiBadges, GLACIERBADGE
+	engine_flag wKansaiBadges, RISINGBADGE
 
 	engine_flag wKantoBadges, BOULDERBADGE
 	engine_flag wKantoBadges, CASCADEBADGE
@@ -74,7 +74,9 @@ EngineFlags:
 	; fly
 	engine_flag wVisitedSpawns, SPAWN_HOME
 	engine_flag wVisitedSpawns, SPAWN_DEBUG
-	engine_flag wVisitedSpawns, SPAWN_NEW_BARK
+	engine_flag wVisitedSpawns, SPAWN_SILENT
+	engine_flag wVisitedSpawns, SPAWN_SAKURA
+	engine_flag wVisitedSpawns, SPAWN_BELLFLOWER
 
 	engine_flag wLuckyNumberShowFlag, LUCKYNUMBERSHOW_GAME_OVER_F
 

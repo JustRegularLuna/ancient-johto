@@ -1982,7 +1982,7 @@ CheckTimeCapsuleCompatibility:
 	ld a, [hli]
 	cp -1
 	jr z, .checkitem
-	cp JOHTO_POKEMON
+	cp KANSAI_POKEMON
 	jr nc, .mon_too_new
 	dec b
 	jr nz, .loop

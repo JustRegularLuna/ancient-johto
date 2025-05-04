@@ -1,10 +1,5 @@
 	object_const_def
 
-NationalPark_MapScripts:
-	def_scene_scripts
-
-	def_callbacks
-
 NationalPark_MapEvents:
 	db 0, 0 ; filler
 
@@ -17,3 +12,9 @@ NationalPark_MapEvents:
 	def_bg_events
 
 	def_object_events
+
+
+NationalPark_MapScripts:
+	def_scene_scripts
+
+	def_callbacks

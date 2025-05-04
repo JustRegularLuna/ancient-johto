@@ -1,25 +1,19 @@
 ; these blocks all use COLL_CUT_TREE in one quadrant
 CutTreeBlockPointers:
 ; tileset, block list pointer
-	dbw TILESET_JOHTO,        .johto
-	dbw TILESET_JOHTO_MODERN, .johto_modern
-	dbw TILESET_KANTO,        .kanto
-	dbw TILESET_PARK,         .park
-	dbw TILESET_FOREST,       .forest
+	dbw TILESET_SILENT,        .silent
+	dbw TILESET_KANTO,         .kanto
+	dbw TILESET_KANSAI_PARK,   .kansai_park
+	dbw TILESET_KANSAI_FOREST, .kansai_forest
 	db -1 ; end
 
-.johto:
+.silent:
 ; facing block, replacement block, animation
 	db $03, $02, 1 ; grass
-	db $5b, $3c, 0 ; tree
-	db $5f, $3d, 0 ; tree
-	db $63, $3f, 0 ; tree
-	db $67, $3e, 0 ; tree
-	db -1 ; end
-
-.johto_modern:
-; facing block, replacement block, animation
-	db $03, $02, $01 ; grass
+	db $66, $64, 0 ; tree
+	db $67, $65, 0 ; tree
+	db $6A, $68, 0 ; tree
+	db $6B, $69, 0 ; tree
 	db -1 ; end
 
 .kanto:
@@ -32,13 +26,13 @@ CutTreeBlockPointers:
 	db $60, $6e, 0 ; tree
 	db -1 ; end
 
-.park:
+.kansai_park:
 ; facing block, replacement block, animation
 	db $13, $03, 1 ; grass
 	db $03, $04, 1 ; grass
 	db -1 ; end
 
-.forest:
+.kansai_forest:
 ; facing block, replacement block, animation
 	db $0f, $17, 0
 	db -1 ; end
@@ -46,10 +40,10 @@ CutTreeBlockPointers:
 
 ; these blocks all use COLL_WHIRLPOOL in one quadrant
 WhirlpoolBlockPointers:
-	dbw TILESET_JOHTO, .johto
+	;dbw TILESET_JOHTO, .johto
 	db -1 ; end
 
 .johto:
 ; facing block, replacement block, animation
-	db $07, $36, 0
+	;db $07, $36, 0
 	db -1 ; end

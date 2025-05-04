@@ -571,10 +571,12 @@ endr
 	ld a, [wEnvironment]
 	cp ROUTE
 	jr z, .route
+	cp GATE
+	jr z, .route
 	; check for specific tilesets
 	ld a, [wMapTileset]
-	cp TILESET_GATE
-	jr z, .gate
+	cp TILESET_CLUB
+	jr z, .club
 	; otherwise, use the map group's palette
 	ld a, [wMapGroup]
 	ld e, a
@@ -588,7 +590,7 @@ endr
 	ld a, PAL_ROUTES
 	ret
 
-.gate
+.club
 	ld a, PAL_PEWTER
 	ret
 

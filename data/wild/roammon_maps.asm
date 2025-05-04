@@ -16,7 +16,7 @@ ENDM
 RoamMaps:
 	list_start
 	; start map, ...other maps
-	roam_map ROUTE_29, ROUTE_29, ROUTE_29
+	roam_map KANSAI_ROUTE_1, KANSAI_ROUTE_1, KANSAI_ROUTE_1
 	;roam_map ROUTE_30, ROUTE_29, ROUTE_31
 	;roam_map ROUTE_31, ROUTE_30, ROUTE_32, ROUTE_36
 	;roam_map ROUTE_32, ROUTE_36, ROUTE_31, ROUTE_33

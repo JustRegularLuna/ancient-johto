@@ -1,7 +1,3 @@
-SafariZoneBeta_MapScripts:
-	def_scene_scripts
-
-	def_callbacks
 
 SafariZoneBeta_MapEvents:
 	db 0, 0 ; filler
@@ -15,3 +11,9 @@ SafariZoneBeta_MapEvents:
 	def_bg_events
 
 	def_object_events
+
+
+SafariZoneBeta_MapScripts:
+	def_scene_scripts
+
+	def_callbacks

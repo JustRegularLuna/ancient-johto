@@ -104,4 +104,32 @@ OverworldSprites:
 	overworld_sprite FruitTreeSpriteGFX, 4, STILL_SPRITE, PAL_OW_TREE
 	overworld_sprite GoldTrophySpriteGFX, 4, STILL_SPRITE, PAL_OW_BROWN
 	overworld_sprite SilverTrophySpriteGFX, 4, STILL_SPRITE, PAL_OW_EMOTE
+	overworld_sprite AgathaSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite BaldingGuySpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite BenchCooltrainerSpriteGFX, 4, STILL_SPRITE, PAL_OW_RED
+	overworld_sprite BenchGuySpriteGFX, 4, STILL_SPRITE, PAL_OW_RED
+	overworld_sprite BenchLassSpriteGFX, 4, STILL_SPRITE, PAL_OW_RED
+	overworld_sprite ChannelerSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite ChanseySpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite CookSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite FossilSpriteGFX, 4, STILL_SPRITE, PAL_OW_ROCK
+	overworld_sprite FrowningManSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite GamblerSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite GiovanniSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite GirlSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite InnKeeperSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite JamesSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite JessieSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite LoreleiSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite MediumSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite MikanSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite OfficerJennySpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite OldAmberSpriteGFX, 4, STILL_SPRITE, PAL_OW_RED
+	overworld_sprite RivalsMomSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite SafariZoneWorkerSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite SilphGirlSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite SilphGuySpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite SilphPresidentSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite SurfingLaprasSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite WalkerSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
 	assert_table_length NUM_OVERWORLD_SPRITES
